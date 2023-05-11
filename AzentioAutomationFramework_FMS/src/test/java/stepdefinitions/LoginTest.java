@@ -22,7 +22,7 @@ public class LoginTest extends BaseClass {
     public void navigate_to_fms_application_and_login_with_valid_credentials() throws Throwable {
 		driver.get(configFileReader.getFMSApplicationUrl());
 		System.out.println(configFileReader.getFMSApplicationUserType());
-		FMSLogin.loginIntoFmsApplication(configFileReader.getFMSApplicationUserType());
+		FMSLogin.loginIntoFmsApplication2(configFileReader.getFMSApplicationUserType());
     }
 
 	@Given("^navigate to FMS param application and login with valid credentials$")
