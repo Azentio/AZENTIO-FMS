@@ -92,7 +92,45 @@ public class FMSLogin {
 		 * driver.quit();
 		 */
 	}
-
+	public void loginIntoFmsParamApplication2(String userType) {
+		fmsLoginTestData = fmsParamLoginTestData.getTestdata(userType);
+		fmsCommonWebElements = new FMSCommonWebElements(driver);
+		clicksAndActionHelper = new ClicksAndActionsHelper(driver);
+		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsUserName());
+		fmsCommonWebElements.fmsUserName().click();
+		fmsCommonWebElements.fmsUserName().sendKeys(fmsLoginTestData.get("UserName"));
+		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsPassword());
+		fmsCommonWebElements.fmsPassword().click();
+		fmsCommonWebElements.fmsPassword().sendKeys(fmsLoginTestData.get("Password"));
+		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsLoginButon());
+		fmsCommonWebElements.fmsLoginButon().click();
+		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsContinueButton());
+		fmsCommonWebElements.fmsContinueButton().click();
+		for (int i = 0; i <200; i++) {
+			try {
+				if (fmsCommonWebElements.fms_UserAlreadyLoginPopUp().isDisplayed()) {
+					fmsCommonWebElements.fms_UserAlreadyLoginYes().click();
+					break;
+				}
+			} catch (Exception e) {
+				
+			}
+		}
+		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsContinueButton());
+		fmsCommonWebElements.fmsContinueButton().click();
+		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsLoginValidation());
+		Assert.assertTrue(fmsCommonWebElements.fmsLoginValidation().isDisplayed());
+		/*
+		 * waitHelper.waitForElementwithFluentwait(driver,
+		 * fmsCommonWebElements.fmsLogoutButton());
+		 * clicksAndActionHelper.moveToElement(fmsCommonWebElements.fmsLogoutButton());
+		 * clicksAndActionHelper.clickOnElement(fmsCommonWebElements.fmsLogoutButton());
+		 * waitHelper.waitForElementwithFluentwait(driver,
+		 * fmsCommonWebElements.fmsUserName());
+		 * Assert.assertTrue(fmsCommonWebElements.fmsUserName().isDisplayed());
+		 * driver.quit();
+		 */
+	}
 	public void loginIntoFmsApplication(String userType) {
 		fmsLoginTestData = fmsLoginExceldata.getTestdata(userType);
 		fmsCommonWebElements = new FMSCommonWebElements(driver);
@@ -134,6 +172,43 @@ public class FMSLogin {
 
 		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsContinueButton());
 		fmsCommonWebElements.fmsContinueButton().click();
+		for (int i = 0; i <200; i++) {
+			try {
+				if (fmsCommonWebElements.fms_UserAlreadyLoginPopUp().isDisplayed()) {
+					fmsCommonWebElements.fms_UserAlreadyLoginYes().click();
+					break;
+				}
+			} catch (Exception e) {
+				
+			}
+		}
+		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsContinueButton());
+		fmsCommonWebElements.fmsContinueButton().click();
+		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsLoginValidation());
+		Assert.assertTrue(fmsCommonWebElements.fmsLoginValidation().isDisplayed());
+		/*
+		 * waitHelper.waitForElementwithFluentwait(driver,
+		 * fmsCommonWebElements.fmsLogoutButton());
+		 * clicksAndActionHelper.moveToElement(fmsCommonWebElements.fmsLogoutButton());
+		 * clicksAndActionHelper.clickOnElement(fmsCommonWebElements.fmsLogoutButton());
+		 * waitHelper.waitForElementwithFluentwait(driver,
+		 * fmsCommonWebElements.fmsUserName());
+		 * Assert.assertTrue(fmsCommonWebElements.fmsUserName().isDisplayed());
+		 * driver.quit();
+		 */
+	}
+	public void loginIntoFmsApplication2(String userType) {
+		fmsLoginTestData = fmsLoginExceldata.getTestdata(userType);
+		fmsCommonWebElements = new FMSCommonWebElements(driver);
+		clicksAndActionHelper = new ClicksAndActionsHelper(driver);
+		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsUserName());
+		fmsCommonWebElements.fmsUserName().click();
+		fmsCommonWebElements.fmsUserName().sendKeys(fmsLoginTestData.get("UserName"));
+		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsPassword());
+		fmsCommonWebElements.fmsPassword().click();
+		fmsCommonWebElements.fmsPassword().sendKeys(fmsLoginTestData.get("Password"));
+		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsLoginButon());
+		fmsCommonWebElements.fmsLoginButon().click();
 		for (int i = 0; i <200; i++) {
 			try {
 				if (fmsCommonWebElements.fms_UserAlreadyLoginPopUp().isDisplayed()) {
