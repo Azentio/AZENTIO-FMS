@@ -8,7 +8,7 @@ import io.cucumber.testng.CucumberOptions;
 import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
-@CucumberOptions(features = {"src/test/java/features/Linking_Fixed_AssetTo_Application.feature"},
+@CucumberOptions(features = {"src/test/java/features/Application_for_Financial_Facility.feature"},
                 glue = "stepdefinitions",
                 //monochrome=false, //to make steps in color
                 plugin = { "pretty",

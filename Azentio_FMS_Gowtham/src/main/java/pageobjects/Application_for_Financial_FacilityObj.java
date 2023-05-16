@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Linking_FixedAsset_to_Application {
+public class Application_for_Financial_FacilityObj {
 	WebDriver driver;
 
-	public Linking_FixedAsset_to_Application(WebDriver driver) {
+	public Application_for_Financial_FacilityObj(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -362,6 +362,13 @@ public class Linking_FixedAsset_to_Application {
 
 	public WebElement getClickOk_saveOn_Draft_WarrningScreen() {
 		return ClickOk_saveOn_Draft_WarrningScreen;
+	}
+
+	@FindBy(xpath = "//div[text()='Success']")
+	private WebElement SuccessScreen_Validate;
+
+	public WebElement SuccessScreen_Validate() {
+		return SuccessScreen_Validate;
 	}
 
 	@FindBy(xpath = "//input[@id='_popup_path_sol_ok']")

@@ -15,13 +15,13 @@ import helper.WaitHelper;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import pageobjects.Linking_FixedAsset_to_Application;
+import pageobjects.Application_for_Financial_FacilityObj;
 import resources.BaseClass;
 
-public class Linking_Fixed_AssetTo_Application_Steps {
+public class Application_for_Financial_Facility {
 	WebDriver driver = BaseClass.driver;
 	ConfigFileReader configFileReader = new ConfigFileReader();
-	Linking_FixedAsset_to_Application WIFAKapplicationObj = new Linking_FixedAsset_to_Application(driver);
+	Application_for_Financial_FacilityObj WIFAKapplicationObj = new Application_for_Financial_FacilityObj(driver);
 	WaitHelper waitHelper = new WaitHelper(driver);
 	ClicksAndActionsHelper clicksAndActionsHelper = new ClicksAndActionsHelper(driver);
 	Selenium_Actions selenium_Actions = new Selenium_Actions(driver);
@@ -461,6 +461,8 @@ public class Linking_Fixed_AssetTo_Application_Steps {
 
 	@Then("^Click Ok OnSuccess Screen$")
 	public void click_ok_onsuccess_screen() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.SuccessScreen_Validate());
+		Assert.assertTrue( WIFAKapplicationObj.SuccessScreen_Validate().isDisplayed());
 		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.getClickOk_OnSuccess_Screen());
 		clicksAndActionsHelper.moveToElement(WIFAKapplicationObj.getClickOk_OnSuccess_Screen());
 		for (int i = 0; i < 300; i++) {
