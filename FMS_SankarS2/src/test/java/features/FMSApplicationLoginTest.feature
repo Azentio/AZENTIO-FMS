@@ -11,3 +11,8 @@ And logout from the application
 Scenario: To Test the login functionality of FMS sads application
 Given navigate to FMS sads application and login with valid credentials
 And logout from the application
+
+@LOGINCSM
+Scenario: To Test the login functionality of CSM application
+Given navigate to CSM application and login with valid credentials
+And logout from the application

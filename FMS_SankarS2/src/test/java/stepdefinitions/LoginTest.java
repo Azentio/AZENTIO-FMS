@@ -14,6 +14,7 @@ import resources.BaseClass;
 public class LoginTest extends BaseClass {
 	WebDriver driver = BaseClass.driver;
 	FMSLogin FMSLogin = new FMSLogin(driver);
+	CSMLogin csmLogin = new CSMLogin(driver);
 	WaitHelper waitHelper = new WaitHelper(driver);
 	ClicksAndActionsHelper clicksAndActionHelper = new ClicksAndActionsHelper(driver);
 	FMSCommonWebElements fmsCommonWebElements = new FMSCommonWebElements(driver);
@@ -36,6 +37,20 @@ public class LoginTest extends BaseClass {
 		driver.get(configFileReader.getSADSApplicationUrl());
 		FMSLogin.loginIntoSadsApplication(configFileReader.getSADSApplicationUserType());
     }
+	
+	// CSM_India
+		@Given("^navigate to CSM application and login with valid credentials$")
+		public void navigate_to_csm_application_and_login_with_valid_credentials() throws Throwable {
+
+			driver.get(configFileReader.getCSMApplicationUrl());
+			csmLogin.loginIntoCSMApplication(configFileReader.getCSMApplicationUserType());
+		}
+//		@Given("^navigate to CSM param application and login with valid credentials$")
+//		public void navigate_to_csm_param_application_and_login_with_valid_credentials() throws Throwable {
+//			driver.get(configFileReader.getCSMparamsUrl());
+//			csmLogin.loginIntoCSMParamApplication("CSMParamUser1");
+//		}
+		
 	
 	@And("^logout from the application$")
 	public void logout_from_the_application() throws Throwable {

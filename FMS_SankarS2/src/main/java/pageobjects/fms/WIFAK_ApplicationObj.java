@@ -75,23 +75,10 @@ public class WIFAK_ApplicationObj {
 		return main_cif_no;
 	}
 	
-	// Touch the screen once
-	@FindBy(xpath = "//label[@id='applicationfacilityFormId_WIFT001MT_CIF_No_key']")
-	private WebElement cif_touch;
-	public WebElement cifTouch() {
-		return cif_touch;
-	}
-	
 	@FindBy(xpath = "//input[@id='lookuptxt_applicationFacilityFacilityType_WIFT001MT']")
 	private WebElement main_facility_type;
 	public WebElement mainFacilityType() {
 		return main_facility_type;
-	}
-	
-	@FindBy(xpath = "//label[@id='applicationfacilityFormId_WIFT001MT_FacilityType_key']")
-	private WebElement facility_touch;
-	public WebElement facilityTouch() {
-		return facility_touch;
 	}
 	
 	@FindBy(xpath = "//input[@id='lookuptxt_applicationFacilityCountry_WIFT001MT']")
@@ -123,8 +110,13 @@ public class WIFAK_ApplicationObj {
 	public WebElement mainAdditionalTabTotalValue() {
 		return main_additional_tab_total_value;
 	}
+	@FindBy(xpath = "//*[@id=\"applicationFacilityDateDetailssection_WIFT001MT\"]/table/tbody/tr[3]/td[2]/div/img")
+	private WebElement additional_tab_expire_calender;
+	public WebElement additionalTabExpireCalender() {
+		return additional_tab_expire_calender;
+	}
 	
-	@FindBy(xpath = "//input[@id='applicationFacilityofferexpirydate_WIFT001MT']")
+	@FindBy(xpath = "//*[@id=\"ui-datepicker-div\"]/table/tbody/tr[5]/td[4]")
 	private WebElement additional_tab_expire_date;
 	public WebElement additionalTabExpireDate() {
 		return additional_tab_expire_date;
@@ -146,12 +138,6 @@ public class WIFAK_ApplicationObj {
 	private WebElement limit_details_new_record_product_class;
 	public WebElement limitDetailsNewRecordProductClass() {
 		return limit_details_new_record_product_class;
-	}
-	
-	@FindBy(xpath = "//label[@id='applicationfacilityLimitPopupFormId_WIFT001MT_ProductClass_key']")
-	private WebElement limit_details_new_record_screen;
-	public WebElement limitDetailsNewRecordScreenTouch() {
-		return limit_details_new_record_screen;
 	}
 	
 	@FindBy(xpath="//input[@id='lookuptxt_applicationfacilityLimitDetailsFLOATING_RATE_WIFT001MT']")
@@ -186,7 +172,7 @@ public class WIFAK_ApplicationObj {
 		return ServerRequestNotComplete_OKButton;
 	 }
 	
-	@FindBy(xpath = "//button[@id='limitDetails_add_btn_WIFT001MT']")
+	@FindBy(xpath = "//*[@id=\"limitDetails_add_btn_WIFT001MT\"]")
 	private WebElement clicks_add_btn;
 	public WebElement clickAddBtn() {
 		return clicks_add_btn;
@@ -198,19 +184,19 @@ public class WIFAK_ApplicationObj {
 		return limit_details_charges_details_btn;
 	}
 	
-	@FindBy(id = "add_FacilityChargesGrid_WIFT001MT")
+	@FindBy(xpath = "//*[@id=\"add_FacilityChargesGrid_WIFT001MT\"]")
 	private WebElement charges_details_add_new_btn;
 	public WebElement chargesDetailsAddNewBtn() {
 		return charges_details_add_new_btn;
 	}
 	
-	@FindBy(id = "td_FacilityChargesGrid_WIFT001MT_1_rn")
+	@FindBy(xpath = "//td[@id='td_FacilityChargesGrid_WIFT001MT_1_rn']")
 	private WebElement charge_details_first_row;
 	public WebElement chargeDetailsFirstRow() {
 		return charge_details_first_row;
 	}
 	
-	@FindBy(id = "td_FacilityChargesGrid_WIFT001MT_1_fmsapplchargesVO.CHARGES_CODE")
+	@FindBy(xpath = "//*[@id=\"td_FacilityChargesGrid_WIFT001MT_1_fmsapplchargesVO.CHARGES_CODE\"]")
 	private WebElement charges_details_code_label;
 	public WebElement chargesDetailsCodeLabel() {
 		return charges_details_code_label;
@@ -222,8 +208,7 @@ public class WIFAK_ApplicationObj {
 		return charges_details_code;
 	}
 	
-	// //*[@id="new_1684222270072_fmsapplchargesVO.COLLECT_AT_FAC_APPROVAL"]
-	@FindBy(xpath = "//*[@id=\"new_1684222270072_fmsapplchargesVO.COLLECT_AT_FAC_APPROVAL\"]")
+	@FindBy(xpath = "(//input[@editrowid='new_1684479425550'])[8]")
 	private WebElement charges_details_check_fac_approval;
 	public WebElement chargesDetailsCheckFacApproval() {
 		return charges_details_check_fac_approval;
@@ -241,25 +226,13 @@ public class WIFAK_ApplicationObj {
 		return main_document_details_tab;
 	}
 	
-	@FindBy(xpath = "//span[@id='spanLookup_applicationFacilitysolicitor_WIFT001AP1']")
-	private WebElement document_details_solicitor_search;
-	public WebElement documentDetailsSolicitorSearch() {
-		return document_details_solicitor_search;
-	}	
-	
-	@FindBy(xpath = "//td[text()='teste']")
+	@FindBy(xpath = "//input[@id='lookuptxt_applicationFacilitysolicitor_WIFT001MT']")
 	private WebElement document_details_solicitor_name;
 	public WebElement documentDetailsSolicitorName() {
 		return document_details_solicitor_name;
 	}
 	
-	@FindBy(xpath = "//span[@id='spanLookup_applicationFacilityEstimator_WIFT001AP1']")
-	private WebElement document_details_estimator_search;
-	public WebElement documentDetailsEstimatorSearch() {
-		return document_details_estimator_search;
-	}
-	
-	@FindBy(xpath = "//td[text()='RAK']")
+	@FindBy(xpath = "//input[@id='lookuptxt_applicationFacilityEstimator_WIFT001MT']")
 	private WebElement document_details_estimator_name;
 	public WebElement documentDetailsEstimatorName() {
 		return document_details_estimator_name;
@@ -288,6 +261,15 @@ public class WIFAK_ApplicationObj {
 	public WebElement limitDetailsValidateBtn() {
 		return limit_details_validate_btn;
 	}
+	
+	@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
+	private WebElement facility_already_created_popup;
+	public WebElement facilityAlreadyCreatedPopup() {
+		return facility_already_created_popup;
+	}
+	
+//	_popup_path_sol_confirm_ok
+	
 	
 	@FindBy(xpath = "//a[@id='WIFT001AP2']")
 	private WebElement application_financial_facility_approve2;
@@ -325,7 +307,7 @@ public class WIFAK_ApplicationObj {
 		return approve_level1_submit_btn;
 	}
 	
-	@FindBy(xpath = "(//td[text()='Clear'])[3]")
+	@FindBy(xpath = "//*[@id=\"applicationFacilityGridTbl_Id_WIFT001AP2_pager_left\"]/table/tbody/tr/td[7]")
 	private WebElement approve2_clear_btn;
 	public WebElement approve2ClearBtn() {
 		return approve2_clear_btn;
@@ -349,7 +331,7 @@ public class WIFAK_ApplicationObj {
 		return approve_level2_submit_btn;
 	}	
 	
-	@FindBy(xpath = "(//td[text()='Clear'])[4]")
+	@FindBy(xpath = "//*[@id=\"applicationFacilityGridTbl_Id_WIFT001AP3_pager_left\"]/table/tbody/tr/td[7]")
 	private WebElement approve3_clear_btn;
 	public WebElement approve3ClearBtn() {
 		return approve3_clear_btn;

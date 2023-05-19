@@ -110,45 +110,48 @@ public class WIFAK_Application_Steps {
 	@And("^User select the application for dropdown as new facility$")
 	public void user_select_the_application_for_dropdown_as_new_facility() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.mainApplicationForDropdown());
-		dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj.mainApplicationForDropdown(), testData.get("Application For"));
+		dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj.mainApplicationForDropdown(), "New Facility");
+//		dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj.mainApplicationForDropdown(), testData.get("Application For"));
 	}
 
 	@And("^User enter the CIF No in main info tab$")
 	public void user_enter_the_cif_no_in_main_info_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.mainCIFNo());
-//		WIFAKapplicationObj.mainCIFNo().sendKeys("727");
-		WIFAKapplicationObj.mainCIFNo().sendKeys(testData.get(testData.get("CIF No")));
-
-		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.cifTouch());
-		WIFAKapplicationObj.cifTouch().click();
+		WIFAKapplicationObj.mainCIFNo().sendKeys("727");
+//		WIFAKapplicationObj.mainCIFNo().sendKeys(testData.get(testData.get("CIF No")));
+		WIFAKapplicationObj.mainCIFNo().sendKeys(Keys.TAB);
+//		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.cifTouch());
+//		WIFAKapplicationObj.cifTouch().click();
 	}
 
 	@And("^User enter the facility type in main info tab$")
 	public void user_enter_the_facility_type_in_main_info_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.mainFacilityType());
-//		WIFAKapplicationObj.mainFacilityType().sendKeys("369");
-		WIFAKapplicationObj.mainFacilityType().sendKeys(testData.get(testData.get("Facility Type")));
-
-		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityTouch());
-		WIFAKapplicationObj.facilityTouch().click();
+		WIFAKapplicationObj.mainFacilityType().sendKeys("369");
+//		WIFAKapplicationObj.mainFacilityType().sendKeys(testData.get(testData.get("Facility Type")));
+		WIFAKapplicationObj.mainFacilityType().sendKeys(Keys.TAB);
+//		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityTouch());
+//		WIFAKapplicationObj.facilityTouch().click();
 	}
 
 	@And("^User enter the country of financing in main info tab$")
 	public void user_enter_the_country_of_financing_in_main_info_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.mainCountryOfFinancing());
-//		WIFAKapplicationObj.mainCountryOfFinancing().sendKeys("320");
-		WIFAKapplicationObj.mainCountryOfFinancing().sendKeys(testData.get("Country of Financing"));
-
-		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityTouch());
-		WIFAKapplicationObj.facilityTouch().click();
+		WIFAKapplicationObj.mainCountryOfFinancing().sendKeys("320");
+//		WIFAKapplicationObj.mainCountryOfFinancing().sendKeys(testData.get("Country of Financing"));
+		WIFAKapplicationObj.mainCountryOfFinancing().sendKeys(Keys.TAB);
+		
+//		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityTouch());
+//		WIFAKapplicationObj.facilityTouch().click();
 	}
 
 	@And("^User enter the facility rating in main info tab$")
 	public void user_enter_the_facility_rating_in_main_info_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.mainFacilityRating());
-//		WIFAKapplicationObj.mainFacilityRating().sendKeys("2");
-		WIFAKapplicationObj.mainFacilityRating().sendKeys(testData.get("Facility Rating"));
-		WIFAKapplicationObj.facilityTouch().click();
+		WIFAKapplicationObj.mainFacilityRating().sendKeys("2");
+//		WIFAKapplicationObj.mainFacilityRating().sendKeys(testData.get("Facility Rating"));
+		WIFAKapplicationObj.mainFacilityRating().sendKeys(Keys.TAB);
+//		WIFAKapplicationObj.facilityTouch().click();
 	}
 
 	@And("^User clicks on the additional details tab$")
@@ -160,21 +163,23 @@ public class WIFAK_Application_Steps {
 	@And("^User enter the total value in additional info tab$")
 	public void user_enter_the_total_value_in_additional_info_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.mainAdditionalTabTotalValue());
-//		WIFAKapplicationObj.mainAdditionalTabTotalValue().sendKeys("1000");
-		WIFAKapplicationObj.mainAdditionalTabTotalValue().sendKeys(testData.get("Total value"));
+		WIFAKapplicationObj.mainAdditionalTabTotalValue().sendKeys("1000");
+//		WIFAKapplicationObj.mainAdditionalTabTotalValue().sendKeys(testData.get("Total value"));
 		WIFAKapplicationObj.mainAdditionalTabScreen().click();;
 	}
 
 	@And("^User enter the expire date in additional info tab$")
 	public void user_enter_the_expire_date_in_additional_info_tab() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.additionalTabExpireCalender());
+		WIFAKapplicationObj.additionalTabExpireCalender().click();
+		
 		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.additionalTabExpireDate());
-//		WIFAKapplicationObj.additionalTabExpireDate().sendKeys("31/5/2023");
-		WIFAKapplicationObj.additionalTabExpireDate().sendKeys(testData.get("Expire Date"));
-		WIFAKapplicationObj.mainAdditionalTabScreen().click();
+		WIFAKapplicationObj.additionalTabExpireDate().click();
 	}
 
 	@And("^User clicks the limit details tab$")
 	public void user_clicks_the_limit_details_tab() throws Throwable {
+		Thread.sleep(5000);
 		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.mainLimitDetailsTab());
 		WIFAKapplicationObj.mainLimitDetailsTab().click();
 	}
@@ -188,9 +193,9 @@ public class WIFAK_Application_Steps {
 	@And("^User enter the product class$")
 	public void user_enter_the_product_class() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsNewRecordProductClass());
-//		WIFAKapplicationObj.limitDetailsNewRecordProductClass().sendKeys("600");
-		WIFAKapplicationObj.limitDetailsNewRecordProductClass().sendKeys(testData.get("Product Class"));
-		WIFAKapplicationObj.limitDetailsNewRecordScreenTouch().click();
+		WIFAKapplicationObj.limitDetailsNewRecordProductClass().sendKeys("600");
+//		WIFAKapplicationObj.limitDetailsNewRecordProductClass().sendKeys(testData.get("Product Class"));
+		WIFAKapplicationObj.limitDetailsNewRecordProductClass().sendKeys(Keys.TAB);
 	}
 
 	@Then("^Validate the floating rate with yield details$")
@@ -224,10 +229,9 @@ public class WIFAK_Application_Steps {
 	@And("^User enter the product class details$")
     public void user_enter_the_product_class_details() throws Throwable {
         waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsNewRecordProductClass());
-//        WIFAKapplicationObj.limitDetailsNewRecordProductClass().sendKeys("1");
-        WIFAKapplicationObj.limitDetailsNewRecordProductClass().sendKeys(testData.get("Product Class"));
-        
-        WIFAKapplicationObj.limitDetailsNewRecordScreenTouch();
+        WIFAKapplicationObj.limitDetailsNewRecordProductClass().sendKeys("1");
+//        WIFAKapplicationObj.limitDetailsNewRecordProductClass().sendKeys(testData.get("Product Class"));        
+        WIFAKapplicationObj.limitDetailsNewRecordProductClass().sendKeys(Keys.TAB);
     }
 
     @And("^User retrive the one account number$")
@@ -241,6 +245,16 @@ public class WIFAK_Application_Steps {
 
     @And("^User clicks on the add button$")
     public void user_clicks_on_the_add_button() throws Throwable {
+    	for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(WIFAKapplicationObj.clickAddBtn());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.clickAddBtn());
     	WIFAKapplicationObj.clickAddBtn().click();
     	
@@ -256,6 +270,7 @@ public class WIFAK_Application_Steps {
 
     @And("^User clicks on the Charges details button$")
     public void user_clicks_on_the_charges_details_button() throws Throwable {
+    	Thread.sleep(3000);
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsChargesDetailsBtn());
     	WIFAKapplicationObj.limitDetailsChargesDetailsBtn().click();
     }
@@ -274,7 +289,7 @@ public class WIFAK_Application_Steps {
 				}
 			}
     	}
-    	
+    	Thread.sleep(3000);
 //    	WIFAKapplicationObj.chargesDetailsAddNewBtn().click();
     	
     	for (int i = 0; i <= 300; i++) {
@@ -287,56 +302,73 @@ public class WIFAK_Application_Steps {
 					Assert.fail(e.getMessage());
 				}
 			}
-		}
-    	
+		}    	
     	
     }
 
     @And("^User enter the code and check the collect at facility approval$")
     public void user_enter_the_code_and_check_the_collect_at_facility_approval() throws Throwable {
+    	Thread.sleep(3000);
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.chargeDetailsFirstRow());
-    	WIFAKapplicationObj.chargesDetailsCodeLabel().click();    	
-//    	WIFAKapplicationObj.chargesDetailsCode().sendKeys("1");
-    	WIFAKapplicationObj.chargesDetailsCode().sendKeys(testData.get("Charges Details Code"));
+    	WIFAKapplicationObj.chargesDetailsCodeLabel().click();
+    	WIFAKapplicationObj.chargesDetailsCode().sendKeys("1");
+    	WIFAKapplicationObj.chargesDetailsCode().sendKeys(Keys.TAB);
+//    	WIFAKapplicationObj.chargesDetailsCode().sendKeys(testData.get("Charges Details Code"));
     	
-    	WIFAKapplicationObj.chargesDetailsCheckFacApproval().click();
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.chargesDetailsCheckFacApproval());
-    	WIFAKapplicationObj.chargesDetailsCheckFacApproval().click();
+//    	Thread.sleep(3000);
+//    	for (int i = 0; i <= 300; i++) {
+//			try {
+//				clicksAndActionsHelper.clickUsingActionClass(WIFAKapplicationObj.chargesDetailsCheckFacApproval(),
+//						WIFAKapplicationObj.chargesDetailsCheckFacApproval());
+//				break;
+//			} catch (Exception e) {
+//				if (i == 300) {
+//					Assert.fail(e.getMessage());
+//				}
+//			}
+//		}
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.chargesDetailsCheckFacApproval());
+//    	WIFAKapplicationObj.chargesDetailsCheckFacApproval().click();
     }
 
     @And("^User click the Ok button$")
     public void user_click_the_ok_button() throws Throwable {
+    	Thread.sleep(3000);
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.chargesDetailsOkBtn());
     	WIFAKapplicationObj.chargesDetailsOkBtn().click();
     }
 
     @And("^User move to the Document details tab$")
     public void user_move_to_the_document_details_tab() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.mainDocumentDetailsTab());
+    	WIFAKapplicationObj.mainDocumentDetailsTab().click();
+    	
+    }
+
+    @And("^User enter the Solicitor Name$")
+    public void user_enter_the_solicitor_name() throws Throwable {
     	for (int i = 0; i <= 300; i++) {
 			try {
-				clicksAndActionsHelper.clickUsingActionClass(WIFAKapplicationObj.mainDocumentDetailsTab(),
-						WIFAKapplicationObj.mainDocumentDetailsTab());
+				javaScriptHelper.scrollIntoView(WIFAKapplicationObj.documentDetailsSolicitorName());
 				break;
 			} catch (Exception e) {
 				if (i == 300) {
 					Assert.fail(e.getMessage());
 				}
 			}
-		}
-    }
-
-    @And("^User enter the Solicitor Name$")
-    public void user_enter_the_solicitor_name() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.documentDetailsSolicitorSearch());
-    	WIFAKapplicationObj.documentDetailsSolicitorSearch().click();
-    	clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.documentDetailsSolicitorName());
+    	}
+//    	Thread.sleep(5000);
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.documentDetailsSolicitorName());
+    	WIFAKapplicationObj.documentDetailsSolicitorName().sendKeys("1");;
+    	WIFAKapplicationObj.documentDetailsSolicitorName().sendKeys(Keys.TAB);
     }
 
     @And("^User enter the Estimator Name$")
     public void user_enter_the_estimator_name() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.documentDetailsEstimatorSearch());
-    	WIFAKapplicationObj.documentDetailsEstimatorSearch().click();
-    	clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.documentDetailsEstimatorName());
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.documentDetailsEstimatorName());
+    	WIFAKapplicationObj.documentDetailsEstimatorName().sendKeys("1");
+    	WIFAKapplicationObj.documentDetailsEstimatorName().sendKeys(Keys.TAB);
+    	
     }
 
     @And("^User clicks the save button$")
@@ -356,11 +388,31 @@ public class WIFAK_Application_Steps {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsValidateBtn());
     	WIFAKapplicationObj.limitDetailsValidateBtn().click();
     	
+    	Thread.sleep(3000);
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ButtonConfirmOk());
     	WIFAKapplicationObj.ButtonConfirmOk().click();
     	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ButtonSuccessOk());
-    	WIFAKapplicationObj.ButtonSuccessOk().click();
+    	Thread.sleep(3000);
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityAlreadyCreatedPopup());
+		WIFAKapplicationObj.facilityAlreadyCreatedPopup().click();
+		
+		for (int i = 0; i <= 300; i++) {
+			try {
+				clicksAndActionsHelper.clickUsingActionClass(WIFAKapplicationObj.ButtonSuccessOk(),
+						WIFAKapplicationObj.ButtonSuccessOk());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+//		
+//		Thread.sleep(5000);
+//		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ButtonSuccessOk());
+//		WIFAKapplicationObj.ButtonSuccessOk().click();
+
     }
 
     @And("^User clicks the Approve Level1 link$")
@@ -372,7 +424,7 @@ public class WIFAK_Application_Steps {
     @And("^User retrive the first data in approve level1$")
     public void user_retrive_the_first_data_in_approve_level1() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approve1ClearBtn());
-    	WIFAKapplicationObj.approve1ClearBtn();
+    	WIFAKapplicationObj.approve1ClearBtn().click();
     	
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approveLevel1RetriveData());
     	clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.approveLevel1RetriveData());
@@ -381,13 +433,20 @@ public class WIFAK_Application_Steps {
     @And("^User select the level1 devision as approve$")
     public void user_select_the_level1_decision_as_approve() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approveLevel1SelectDevision());
-    	dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj.approveLevel1SelectDevision(), testData.get("Decision1"));
+    	dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj.approveLevel1SelectDevision(), "Approve");
+//    	dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj.approveLevel1SelectDevision(), testData.get("Decision1"));
     }
 
     @And("^User clicks on the level1 submit button$")
     public void user_clicks_on_the_level1_submit_button() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approveLevel1SubmitBtn());
     	WIFAKapplicationObj.approveLevel1SubmitBtn().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ButtonConfirmOk());
+    	WIFAKapplicationObj.ButtonConfirmOk().click();
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ButtonSuccessOk());
+    	WIFAKapplicationObj.ButtonSuccessOk().click();
+    	
     }
 
     @And("^User clicks the Approve Level2 link$")
@@ -399,7 +458,7 @@ public class WIFAK_Application_Steps {
     @And("^User retrive the first data in approve level2$")
     public void user_retrive_the_first_data_in_approve_level2() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approve2ClearBtn());
-    	WIFAKapplicationObj.approve2ClearBtn();
+    	WIFAKapplicationObj.approve2ClearBtn().click();
     	
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approveLevel2RetriveData());
     	clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.approveLevel2RetriveData());
@@ -408,25 +467,31 @@ public class WIFAK_Application_Steps {
     @And("^User select the level2 devision as approve$")
     public void user_select_the_level2_decision_as_approve() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approveLevel2SelectDevision());
-    	dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj.approveLevel2SelectDevision(), testData.get("Decision2"));
+    	dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj.approveLevel2SelectDevision(), "Approve");
+//    	dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj.approveLevel2SelectDevision(), testData.get("Decision2"));
     }
 
     @And("^User clicks on the level2 submit button$")
     public void user_clicks_on_the_level2_submit_button() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approveLevel2SubmitBtn());
-    	WIFAKapplicationObj.approveLevel2SubmitBtn();
+    	WIFAKapplicationObj.approveLevel2SubmitBtn().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ButtonConfirmOk());
+    	WIFAKapplicationObj.ButtonConfirmOk().click();
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ButtonSuccessOk());
+    	WIFAKapplicationObj.ButtonSuccessOk().click();
     }
 
     @And("^User clicks the Approve Level3 link$")
     public void user_clicks_the_approve_level3_link() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.applicationFinancialFacilityApproveLevel3());
-    	WIFAKapplicationObj.applicationFinancialFacilityApproveLevel3();
+    	WIFAKapplicationObj.applicationFinancialFacilityApproveLevel3().click();
     }
     
     @And("^User retrive the first data in approve level3$")
     public void user_retrive_the_first_data_in_approve_level3() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approve3ClearBtn());
-    	WIFAKapplicationObj.approve3ClearBtn();
+    	WIFAKapplicationObj.approve3ClearBtn().click();
     	
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approveLevel3RetriveData());
     	clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.approveLevel3RetriveData());
@@ -435,13 +500,20 @@ public class WIFAK_Application_Steps {
     @And("^User select the level3 devision as approve$")
     public void user_select_the_level3_decision_as_approve() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approveLevel3SelectDevision());
-    	dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj.approveLevel3SelectDevision(), testData.get("Decision3"));
+    	dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj.approveLevel3SelectDevision(), "Approve");
+//    	dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj.approveLevel3SelectDevision(), testData.get("Decision3"));
+    
     }
     
     @When("^User clicks on the level3 submit button$")
     public void user_clicks_on_the_level3_submit_button() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approveLevel3SubmitBtn());
     	WIFAKapplicationObj.approveLevel3SubmitBtn().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ButtonConfirmOk());
+    	WIFAKapplicationObj.ButtonConfirmOk().click();
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ButtonSuccessOk());
+    	WIFAKapplicationObj.ButtonSuccessOk().click();
     }
     
     
