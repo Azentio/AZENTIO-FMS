@@ -51,7 +51,7 @@ And User Enter value for Long Description in Maintenance screen under Collateral
 #And User Click Ok button in Confirm pop up menu
 And User Search Collateral Currency in Maintenance screen under Collateral Management
 Then User Validate Additional Details Tab is Disable in Maintenance screen under Collateral Management
-#pre req define min and max in facility details in params
+#pre req define min and max in facility details in params use facility code/
 @831806
 Scenario: Not able to create application with value more than 9 digits
 Given navigate to FMS application and login with valid credentials
@@ -63,8 +63,9 @@ And User Select Application For field in Maintenace Screen under WIRAK Applicati
 And User enter the CIF No in main info tab under WIRAK Application
 And User enter the facility type in main info tab under WIRAK Application
 And User enter the country of financing in main info tab under WIRAK Application
-And User enter the facility rating in main info tab under WIRAK Application
+#And User enter the facility rating in main info tab under WIRAK Application
 And User clicks on the additional details tab under WIRAK Application
-And User enter the total value in additional info tab under WIRAK Application
-
+#And User enter the total value in additional info tab under WIRAK Application
+And User Validate Min value configured in fms param facility type
+And User Validate Max value configured in fms param facility type
 

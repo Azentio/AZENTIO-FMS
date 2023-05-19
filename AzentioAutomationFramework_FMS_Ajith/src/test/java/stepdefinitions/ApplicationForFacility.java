@@ -434,18 +434,9 @@ public class ApplicationForFacility extends BaseClass {
 
     @And("^User Select Application For field in Maintenace Screen under WIRAK Application$")
     public void user_select_application_for_field_in_maintenace_screen_under_wirak_application() throws Throwable {
-    	for (int i = 0; i <200; i++) {
-			try {
+    	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.mainApplicationForDropdown());
 				seleniumActions.getDropDownHelper()
-				.SelectUsingVisibleText(applicationForFinancialFacilityObj.mainApplicationForDropdown(),"New Request");
-				break;
-				
-			} catch (Exception e) {
-				if (i==199) {
-					Assert.fail(e.getMessage());
-				}
-			}
-		}
+				.SelectUsingVisibleText(applicationForFinancialFacilityObj.mainApplicationForDropdown(),"New Facility");
 		
     }
 
@@ -462,10 +453,19 @@ public class ApplicationForFacility extends BaseClass {
 
     @And("^User enter the facility type in main info tab under WIRAK Application$")
     public void user_enter_the_facility_type_in_main_info_tab_under_wirak_application() throws Throwable {
-    	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.mainFacilityType());
-		seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.mainFacilityType());
-		seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.mainFacilityType());
-		applicationForFinancialFacilityObj.mainFacilityType().sendKeys("369");
+    	for (int i = 0; i <200; i++) {
+			try {
+				seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.mainFacilityType());
+				seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.mainFacilityType());
+				applicationForFinancialFacilityObj.mainFacilityType().sendKeys("369");
+				break;
+			} catch (Exception e) {
+				if (i==199) {
+				Assert.fail(e.getMessage());	
+				}
+			}
+		}
+		
 		seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.facilityTouch());
 		seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.facilityTouch());
 		seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.facilityTouch());
@@ -476,7 +476,10 @@ public class ApplicationForFacility extends BaseClass {
     	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.mainCountryOfFinancing());
 		seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.mainCountryOfFinancing());
 		seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.mainCountryOfFinancing());
-		applicationForFinancialFacilityObj.mainCountryOfFinancing().sendKeys("369");
+		applicationForFinancialFacilityObj.mainCountryOfFinancing().sendKeys("320");
+		seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.facilityTouch());
+		seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.facilityTouch());
+		seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.facilityTouch());
     }
 
     @And("^User enter the facility rating in main info tab under WIRAK Application$")
@@ -489,9 +492,8 @@ public class ApplicationForFacility extends BaseClass {
 
     @And("^User clicks on the additional details tab under WIRAK Application$")
     public void user_clicks_on_the_additional_details_tab_under_wirak_application() throws Throwable {
-    	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.mainAdditionalTab());
-		seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.mainAdditionalTab());
-		seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.mainAdditionalTab());
+    	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver, applicationForFinancialFacilityObj.mainAdditionalTab());
+    	seleniumActions.getJavascriptHelper().JSEClick(applicationForFinancialFacilityObj.mainAdditionalTab());
     }
 
     @And("^User enter the total value in additional info tab under WIRAK Application$")
@@ -500,6 +502,40 @@ public class ApplicationForFacility extends BaseClass {
 		seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.mainAdditionalTabTotalValue());
 		seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.mainAdditionalTabTotalValue());
 		applicationForFinancialFacilityObj.mainAdditionalTabTotalValue().sendKeys("2");
+    }
+    @And("^User Validate Min value configured in fms param facility type$")
+    public void user_validate_min_value_configured_in_fms_param_facility_type() throws Throwable {
+    	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.mainAdditionalTabTotalValue());
+		seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.mainAdditionalTabTotalValue());
+		seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.mainAdditionalTabTotalValue());
+		applicationForFinancialFacilityObj.mainAdditionalTabTotalValue().sendKeys("2");
+		seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.financeAmountRandomClick());
+		seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.financeAmountRandomClick());
+		seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.financeAmountRandomClick());
+		seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.minValueValidation());
+		Assert.assertTrue(applicationForFinancialFacilityObj.minValueValidation().isDisplayed());
+		seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.okbuttonInFacilityValuePopUp());
+		seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.okbuttonInFacilityValuePopUp());
+		seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.okbuttonInFacilityValuePopUp());
+		seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.okbuttonInFacilityValuePopUp());
+    }
+
+    @And("^User Validate Max value configured in fms param facility type$")
+    public void user_validate_max_value_configured_in_fms_param_facility_type() throws Throwable {
+    	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.mainAdditionalTabTotalValue());
+		seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.mainAdditionalTabTotalValue());
+		seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.mainAdditionalTabTotalValue());
+		applicationForFinancialFacilityObj.mainAdditionalTabTotalValue().clear();
+		applicationForFinancialFacilityObj.mainAdditionalTabTotalValue().sendKeys("9999999999999999");
+		seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.financeAmountRandomClick());
+		seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.financeAmountRandomClick());
+		seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.maxValueValidation());
+		seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.maxValueValidation());
+		Assert.assertTrue(applicationForFinancialFacilityObj.maxValueValidation().isDisplayed());
+		seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.okbuttonInFacilityValuePopUp());
+		seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.okbuttonInFacilityValuePopUp());
+		seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.okbuttonInFacilityValuePopUp());
+		seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.okbuttonInFacilityValuePopUp());
     }
 	
 }

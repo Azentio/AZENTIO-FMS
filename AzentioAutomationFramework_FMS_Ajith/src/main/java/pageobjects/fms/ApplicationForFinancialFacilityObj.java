@@ -372,7 +372,7 @@ public class ApplicationForFinancialFacilityObj {
 		return main_facility_rating;
 	}
 	
-	@FindBy(xpath = "//span[text()='Additional Details']")
+	@FindBy(xpath ="//span[text()='Additional Details']/parent::a")
 	private WebElement main_additional_tab;
 	public WebElement mainAdditionalTab() {
 		return main_additional_tab;
@@ -388,6 +388,30 @@ public class ApplicationForFinancialFacilityObj {
 	private WebElement main_additional_tab_total_value;
 	public WebElement mainAdditionalTabTotalValue() {
 		return main_additional_tab_total_value;
+	}
+	
+	@FindBy(xpath = "//div[text()='[1904] Value Should Be Between Facility Type Values']")
+	private WebElement minValueValidation;
+	public WebElement minValueValidation() {
+		return minValueValidation;
+	}
+	
+	@FindBy(xpath = "//div[text()='[20191] Value should be between 0.01 and 999999999999.99']")
+	private WebElement maxValueValidation;
+	public WebElement maxValueValidation() {
+		return maxValueValidation;
+	}
+	
+	@FindBy(id ="popup_path_sol_ok")
+	private WebElement okbuttonInFacilityValuePopUp;
+	public WebElement okbuttonInFacilityValuePopUp() {
+		return okbuttonInFacilityValuePopUp;
+	}
+	
+	@FindBy(id ="applicationFacilityfinancedamount_WIFT001MT")
+	private WebElement financeAmountRandomClick;
+	public WebElement financeAmountRandomClick() {
+		return financeAmountRandomClick;
 	}
 
 }
