@@ -21,28 +21,29 @@ import io.cucumber.java.Scenario;
 import resources.BaseClass;
 import utilities.ExtentTestManager;
 
-
-
 public class HooksClass extends BaseClass {
 	WebDriver driver;
-	String path = System.getProperty("user.dir")+"\\Testdata\\FMSTestData.xlsx";
-	ExcelData testExecution = new ExcelData(path,"TestExecution","TestCaseID");
+	String path = System.getProperty("user.dir") + "\\Testdata\\FMSTestData.xlsx";
+	ExcelData testExecution = new ExcelData(path, "TestExecution", "TestCaseID");
 	Map<String, String> testExecutionData;
 	ExcelTest excelTest = new ExcelTest(path, "TestExecution", "TestCaseID");
 	List<String> testCaseTagsFromExcel = excelTest.getTestCaseTagsfromExcel();
-	
+
 	ScreenshotHelper screenshotHelper = new ScreenshotHelper(driver);
+
 	@Before
 	public void browserSetup(Scenario scenario) throws IOException {
 		// get flag status from excel and skip the test cases
-	/*	if (testExecution.getTestdata(NewExcelTestRunner.getCurrentExecutionTag()).get("ExecuteYes/No").equalsIgnoreCase("No")) {
-			Assume.assumeTrue(false);
-		}*/
-		
+		/*
+		 * if
+		 * (testExecution.getTestdata(NewExcelTestRunner.getCurrentExecutionTag()).get(
+		 * "ExecuteYes/No").equalsIgnoreCase("No")) { Assume.assumeTrue(false); }
+		 */
+
 		driver = initializeDriver();
 		System.out.println("Driver Initiated");
-		String name=scenario.getName();
-		System.out.println("Scenario : **"+ name + "** Started executing");
+		String name = scenario.getName();
+		System.out.println("Scenario : **" + name + "** Started executing");
 		ExtentTestManager.startTest(name);
 	}
 
@@ -61,27 +62,29 @@ public class HooksClass extends BaseClass {
 		driver = BaseClass.driver;
 		driver.quit();
 		System.out.println("Browser closed");
-		String name=scenario.getName();
-		System.out.println("Scenario : **"+ name + "** Stopped executing");
-		 io.cucumber.java.Status status=scenario.getStatus();
-		 String currentExecutionStatus = status.toString();
-		 
-		 
+		String name = scenario.getName();
+		System.out.println("Scenario : **" + name + "** Stopped executing");
+		io.cucumber.java.Status status = scenario.getStatus();
+		String currentExecutionStatus = status.toString();
+
 		ExtentTestManager.getTest().log(Status.FAIL, "Test Failed");
 		if (currentExecutionStatus.equalsIgnoreCase("FAILED")) {
-			
-			// change flag to "No" for dependent scenarios in excel when main Scenario got failed
-		/*		for (int i = 1; i <testCaseTagsFromExcel.size(); i++) {
-					 testExecutionData = testExecution.getTestdata(NewExcelTestRunner.getCurrentExecutionTag());
-					 Collection<String> values = testExecutionData.values();
-					 values.remove(NewExcelTestRunner.getCurrentExecutionTag());
-					 if (values.contains(testCaseTagsFromExcel.get(i))) {
-						 testExecution.updateTestData(testCaseTagsFromExcel.get(i),"ExecuteYes/No", "No");
-					}
-					 
-				}*/
-			
+
+			// change flag to "No" for dependent scenarios in excel when main Scenario got
+			// failed
+			/*
+			 * for (int i = 1; i <testCaseTagsFromExcel.size(); i++) { testExecutionData =
+			 * testExecution.getTestdata(NewExcelTestRunner.getCurrentExecutionTag());
+			 * Collection<String> values = testExecutionData.values();
+			 * values.remove(NewExcelTestRunner.getCurrentExecutionTag()); if
+			 * (values.contains(testCaseTagsFromExcel.get(i))) {
+			 * testExecution.updateTestData(testCaseTagsFromExcel.get(i),"ExecuteYes/No",
+			 * "No"); }
+			 * 
+			 * }
+			 */
+
 		}
 	}
-			
+
 }

@@ -378,4 +378,166 @@ public class Application_for_Financial_FacilityObj {
 		return ClickOk_OnSuccess_Screen;
 	}
 
+	// *********TestCase no - 917005
+	
+	@FindBy(xpath = "//td[text()='Parameters']")
+	private WebElement FmsParametersMenu;
+	public WebElement Fms_ParametersMenu() {
+		return FmsParametersMenu;
+	}
+
+	@FindBy(xpath = "//span[text()='Main Information']")
+	private WebElement goto_MainInformation_Tab;
+
+	public WebElement goto_MainInformation_Tab() {
+		return goto_MainInformation_Tab;
+	}
+
+	@FindBy(xpath = "//input[@id='lookuptxt_applicationFacilitycreditrating_WIFT001MT']")
+	private WebElement ClickOn_CreditRating;
+
+	public WebElement ClickOn_CreditRating() {
+		return ClickOn_CreditRating;
+	}
+
+	@FindBy(xpath = "//button[@id='applicationfacility_documentchecklist_btn_WIFT001MT']")
+	private WebElement ClickOn_Document_Checklist;
+
+	public WebElement ClickOn_Document_Checklist() {
+		return ClickOn_Document_Checklist;
+	}
+
+	@FindBy(xpath = "//td[@id='td_FacilityDocumentCheckListGrid_WIFT001MT_0_rn']")
+	private WebElement Click_forSelect_row_on_Document_Checklist;
+
+	public WebElement Click_forSelect_row_on_Document_Checklist() {
+		return Click_forSelect_row_on_Document_Checklist;
+	}
+
+	@FindBy(xpath = "//input[@id='documentFile_WIFT001MT']")
+	private WebElement In_Document_Checklist_Click_Choose_File;
+
+	public WebElement In_Document_Checklist_Click_Choose_File() {
+		return In_Document_Checklist_Click_Choose_File;
+	}
+
+	@FindBy(xpath = "//a[@id='document_UploadBtn_WIFT001MT']//span[2]")
+	private WebElement In_Document_Checklist_Click_UploadDocs;
+
+	public WebElement In_Document_Checklist_Click_UploadDocs() {
+		return In_Document_Checklist_Click_UploadDocs;
+	}
+
+	@FindBy(xpath = "//div[text()='Success']")
+	private WebElement Click_ok_Sucess_screen_after_docUpload;
+
+	public WebElement Click_ok_Sucess_screen_after_docUpload() {
+		return Click_ok_Sucess_screen_after_docUpload;
+	}
+
+	// ****127787
+	@FindBy(xpath = "//td[text()='Facility Type']")
+	private WebElement ParametersFacilityType;
+
+	public WebElement Parameters_FacilityType() {
+		return ParametersFacilityType;
+	}
+
+	@FindBy(id = "P008UP")
+	private WebElement FacilityType_UpdateAfterApprove;
+
+	public WebElement FacilityType_UpdateAfterApprove() {
+		return FacilityType_UpdateAfterApprove;
+	}
+
+	@FindBy(id = "fmsFacilityTypeListGridTbl_Id_P008UP_gs_CODE")
+	private WebElement FacilityTypeUpdateAfterApproveCode;
+
+	public WebElement FacilityType_UpdateAfterApprove_Code() {
+		return FacilityTypeUpdateAfterApproveCode;
+	}
+
+	@FindBy(xpath = "//td[@id='td_fmsFacilityTypeListGridTbl_Id_P008UP_2_CODE' and text()='221']")
+	private WebElement FacilityTypeUpdateAfterApproveSelectCode;
+
+	public WebElement FacilityType_UpdateAfterApprove_SelectCode() {
+		return FacilityTypeUpdateAfterApproveSelectCode;
+	}
+
+	@FindBy(xpath = "//li[@id='fmsFacilityTypeDetailsTab_P008UP']/a/span[text()='Facility Details']")
+	private WebElement FacilityTypeUpdateAfterApproveFacilityDetails;
+
+	public WebElement FacilityType_UpdateAfterApprove_FacilityDetails() {
+		return FacilityTypeUpdateAfterApproveFacilityDetails;
+	}
+
+	@FindBy(xpath = "//span[text()='Application Requirements And Details']")
+	private WebElement FacilityTypeUpdateAfterApproveFacilityDetailsApplicationRequirementsandDetails;
+
+	public WebElement FacilityType_UpdateAfterApprove_FacilityDetails_ApplicationRequirementsandDetails() {
+		return FacilityTypeUpdateAfterApproveFacilityDetailsApplicationRequirementsandDetails;
+	}
+
+	@FindBy(id = "fmsFacilityType_apply_corp_pkg_P008UP")
+	private WebElement FacilityTypeUpdateAfterApproveFacilityDetailsApplicationRequirementsandDetailsApplyCorporatePackage;
+
+	public WebElement FacilityType_UpdateAfterApprove_FacilityDetails_ApplicationRequirementsandDetails_ApplyCorporatePackage() {
+		return FacilityTypeUpdateAfterApproveFacilityDetailsApplicationRequirementsandDetailsApplyCorporatePackage;
+	}
+
+	@FindBy(id = "fmsFacilityType_corp_pkg_allow_edit_at_app_P008UP")
+	private WebElement FacilityTypeUpdateAfterApproveFacilityDetailsApplicationRequirementsandDetailsAllowtoEditApplication;
+
+	public WebElement FacilityType_UpdateAfterApprove_FacilityDetails_ApplicationRequirementsandDetails_AllowtoEditApplication() {
+		return FacilityTypeUpdateAfterApproveFacilityDetailsApplicationRequirementsandDetailsAllowtoEditApplication;
+	}
+
+	@FindBy(id = "fmsFacilityType_corp_pkg_allow_edit_rate_csm_P008UP")
+	private WebElement FacilityTypeUpdateAfterApproveFacilityDetailsApplicationRequirementsandDetailsAllowtoeditCorporatePackageRate;
+
+	public WebElement FacilityType_UpdateAfterApprove_FacilityDetails_ApplicationRequirementsandDetails_AllowtoeditCorporatePackageRate() {
+		return FacilityTypeUpdateAfterApproveFacilityDetailsApplicationRequirementsandDetailsAllowtoeditCorporatePackageRate;
+	}
+
+	@FindBy(xpath = "//label[text()='Update ']")
+	private WebElement ScrolltoUpdate;
+
+	public WebElement ScrolltoUpdate() {
+		return ScrolltoUpdate;
+	}
+	
+	//***299886
+	
+	@FindBy(xpath = "//input[@id='applicationFacilitydownpayment_WIFT001MT']")
+	private WebElement enter_valueOn_downPayment_inAdditionalDetails;
+
+	public WebElement enter_valueOn_downPayment_inAdditionalDetails() {
+		return enter_valueOn_downPayment_inAdditionalDetails;
+	}
+	
+	@FindBy(xpath = "//input[@id='applicationFacilitydownpaymentperc_WIFT001MT']")
+	private WebElement checkValue_visibleOn_downPayment_inAdditionalDetails;
+
+	public WebElement checkValue_visibleOn_downPayment_inAdditionalDetails() {
+		return checkValue_visibleOn_downPayment_inAdditionalDetails;
+	}
+	
+	@FindBy(xpath = "//div[text()='Down Payment']")
+	private WebElement down_payment_popup;
+
+	public WebElement down_payment_popup() {
+		return down_payment_popup;
+	}
+	@FindBy(xpath = "//a[@id='WIFAK APPLICATION / WIFAK APPLICATION / Application For Financial Facilities / Maintenance']")
+	private WebElement clickOut_after_enterValueOn_down_payment;
+
+	public WebElement clickOut_after_enterValueOn_down_payment() {
+		return clickOut_after_enterValueOn_down_payment;
+	}
+	
+	
+	
+	
+	
+	
 }

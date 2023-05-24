@@ -104,8 +104,8 @@ public class FMSLogin {
 		fmsCommonWebElements.fmsPassword().sendKeys(fmsLoginTestData.get("Password"));
 		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsLoginButon());
 		fmsCommonWebElements.fmsLoginButon().click();
-		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsContinueButton());
-		fmsCommonWebElements.fmsContinueButton().click();
+		//waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsContinueButton());
+	//	fmsCommonWebElements.fmsContinueButton().click();
 		for (int i = 0; i <200; i++) {
 			try {
 				if (fmsCommonWebElements.fms_UserAlreadyLoginPopUp().isDisplayed()) {
