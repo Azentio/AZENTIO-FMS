@@ -13,6 +13,8 @@ public class Facility_TypeObj {
 		PageFactory.initElements(driver, this);
 	}
 	
+//	@834966_FMS_Param
+	
 	@FindBy(xpath = "//td[text()='Parameters']")
 	private WebElement fms_param_parameter;
 	public WebElement fmsParamParameter() {
@@ -164,7 +166,7 @@ public class Facility_TypeObj {
 	}
 	
 	
-	// FMS Core
+	// @834966_FMS_Core
 	@FindBy(xpath = "//span[@id='spanLookup_applicationFacilityMarketedBy_WIFT001MT']")
 	private WebElement marketed_by_field_search;
 	public WebElement marketedByFieldSearch() {
@@ -178,7 +180,7 @@ public class Facility_TypeObj {
 	}
 	
 	
-	// CSM_Core
+	// @834966_CSM_Core
 	@FindBy(xpath = "//td[text()='Transfer Of Entities']")
 	private WebElement transfer_of_entities_module;
 	public WebElement transferOfEntitiesModule() {
@@ -192,6 +194,58 @@ public class Facility_TypeObj {
 		/// now blocked after unblock some steps needed
 	}
 	
+	
+	
+	
+//	@681303_FMSParam
+	@FindBy(xpath = "//li[@id='fmsFacilityTypeReportTab_P008UP']")
+	private WebElement facility_type_facility_reports;
+	public WebElement facilityTypeFacilityReports() {
+		return facility_type_facility_reports;
+	}
+	
+	@FindBy(xpath = "//span[@id='spanLookup_fmsFacilityType_issue_facility_off_report_id_P008UP']")
+	private WebElement facility_reports_issue_facility_offer_lookup;
+	public WebElement facilityReportsIssueFacilityOfferLookup() {
+		return facility_reports_issue_facility_offer_lookup;
+	}
+	
+	@FindBy(xpath = "(//*[@id='4'])[2]")
+	private WebElement facility_reports_issue_facility_offer_lookup_data;
+	public WebElement facilityReportsIssueFacilityOfferLookupData() {
+		return facility_reports_issue_facility_offer_lookup_data;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmsFacilityType_issue_facility_off_auto_print_P008UP']")
+	private WebElement facility_reports_issue_facility_offer_auto_print_flag;
+	public WebElement facilityReportsIssueFacilityOfferAutoPrintFlag() {
+		return facility_reports_issue_facility_offer_auto_print_flag;
+	}
+	
+//	@681303_FMSCore
+	@FindBy(xpath = "//a[@id='WIFT005MT']")
+	private WebElement WIFAK_app_issue_facility_offer;
+	public WebElement WIFAKAppIssueFacilityOffer() {
+		return WIFAK_app_issue_facility_offer;
+	}
+	
+	@FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT005MT_gs_fmsApplVO.CODE']")
+	private WebElement issue_facility_offer_search_code;
+	public WebElement issueFacilityOfferSearchCode() {
+		return issue_facility_offer_search_code;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT005MT_1_fmsApplVO.CODE']")
+	private WebElement issue_facility_offer_search_result;
+	public WebElement issueFacilityOfferSearchResult() {
+		return issue_facility_offer_search_result;
+	}
+	
+	@FindBy(xpath = "//button[@id='applicationfacility_issueoffer_btn_WIFT005MT']")
+	private WebElement issue_facility_offer_issue_offer_btn;
+	public WebElement issueFacilityOfferIssueOfferBtn() {
+		return issue_facility_offer_issue_offer_btn;
+	}
 
-		
+	
 }

@@ -59,7 +59,7 @@ And User enter the product class details
 And User retrive the one account number
 And User clicks on the add button
 And User clicks on the Charges details button
-And User clicks the add new record button
+#And User clicks the add new record button
 And User enter the code and check the collect at facility approval
 And User click the Ok button
 And User move to the Document details tab

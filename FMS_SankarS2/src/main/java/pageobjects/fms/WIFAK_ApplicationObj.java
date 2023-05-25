@@ -93,16 +93,10 @@ public class WIFAK_ApplicationObj {
 		return main_facility_rating;
 	}
 	
-	@FindBy(xpath = "//span[text()='Additional Details']")
+	@FindBy(xpath = "//li[@id='applicationFacilityAdditionDetailsTabs_WIFT001MT']")
 	private WebElement main_additional_tab;
 	public WebElement mainAdditionalTab() {
 		return main_additional_tab;
-	}
-	
-	@FindBy(xpath = "//label[@id='applicationfacilityFormId_WIFT001MT_total_value_key']")
-	private WebElement main_additional_tab_screen;
-	public WebElement mainAdditionalTabScreen() {
-		return main_additional_tab_screen;
 	}
 	
 	@FindBy(xpath = "//input[@id='applicationFacilitytotalvalue_WIFT001MT']")
@@ -138,6 +132,12 @@ public class WIFAK_ApplicationObj {
 	private WebElement limit_details_new_record_product_class;
 	public WebElement limitDetailsNewRecordProductClass() {
 		return limit_details_new_record_product_class;
+	}
+	
+	@FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsCLEAN_FLAG_WIFT001MT']")
+	private WebElement limit_details_new_record_clean_flag;
+	public WebElement limitDetailsNewRecordCleanFlag() {
+		return limit_details_new_record_clean_flag;
 	}
 	
 	@FindBy(xpath="//input[@id='lookuptxt_applicationfacilityLimitDetailsFLOATING_RATE_WIFT001MT']")
@@ -250,7 +250,7 @@ public class WIFAK_ApplicationObj {
 		return button_confirm_ok;
 	}
 	
-	@FindBy(xpath = "//input[@id='_popup_path_sol_ok']")
+	@FindBy(xpath = "//*[@id='_popup_path_sol_ok']")
 	private WebElement button_success_ok;
 	public WebElement ButtonSuccessOk() {
 		return button_success_ok;
@@ -268,8 +268,11 @@ public class WIFAK_ApplicationObj {
 		return facility_already_created_popup;
 	}
 	
-//	_popup_path_sol_confirm_ok
-	
+	@FindBy(xpath = "//*[@id=\"div__popup_path_sol_ok\"]/div[2]/div")
+	private WebElement limit_details_validate_success_msg;
+	public WebElement limitDetailsValidateSuccessMsg() {
+		return limit_details_validate_success_msg;
+	}
 	
 	@FindBy(xpath = "//a[@id='WIFT001AP2']")
 	private WebElement application_financial_facility_approve2;
@@ -283,7 +286,7 @@ public class WIFAK_ApplicationObj {
 		return application_financial_facility_approve3;
 	}
 	
-	@FindBy(xpath = "(//td[text()='Clear'])[1]")
+	@FindBy(xpath = "//*[@id=\"applicationFacilityGridTbl_Id_WIFT001AP1_pager_left\"]/table/tbody/tr/td[7]")
 	private WebElement approve1_clear_btn;
 	public WebElement approve1ClearBtn() {
 		return approve1_clear_btn;
