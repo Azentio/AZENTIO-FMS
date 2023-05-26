@@ -33,6 +33,7 @@ When User clicks on the Approve button
 Scenario: Check by default the option “Application From & To” is selected and user can choose the Facility No from the lookup
 
 Given navigate to FMS application and login with valid credentials
+And get the test data for test case 834966_FMS_Core
 And User clicks on the WIFAK_Application first link
 And User clicks on the WIFAK_Application second link
 And User clicks on the Application for financial facility link
@@ -90,7 +91,7 @@ And User clicks on the transfer of entities maintanance menu
 Scenario: TSR - CDMI180093
 
 Given navigate to FMS param application and login with valid credentials
-And get the test data for test case 834966_FMS_Param
+And get the test data for test case 681303_FMSParam
 And User clicks on the parameter module
 And User clicks on the Facility Type feature
 And User clicks on the update after approve menu in Facility type
@@ -123,6 +124,7 @@ When User clicks on the Approve button
 Scenario: TSR - CDMI180093
 
 Given navigate to FMS application and login with valid credentials
+And get the test data for test case 681303_FMSCore
 And User clicks on the WIFAK_Application first link
 And User clicks on the WIFAK_Application second link
 And User clicks on the Application for financial facility link

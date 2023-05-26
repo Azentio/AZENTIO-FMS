@@ -15,6 +15,7 @@ public class LoginTest extends BaseClass {
 	WebDriver driver = BaseClass.driver;
 	FMSLogin FMSLogin = new FMSLogin(driver);
 	CSMLogin csmLogin = new CSMLogin(driver);
+	IISLogin iisLogin = new IISLogin(driver);
 	WaitHelper waitHelper = new WaitHelper(driver);
 	ClicksAndActionsHelper clicksAndActionHelper = new ClicksAndActionsHelper(driver);
 	FMSCommonWebElements fmsCommonWebElements = new FMSCommonWebElements(driver);
@@ -50,6 +51,14 @@ public class LoginTest extends BaseClass {
 //			driver.get(configFileReader.getCSMparamsUrl());
 //			csmLogin.loginIntoCSMParamApplication("CSMParamUser1");
 //		}
+		
+		
+//		IIS_Param
+		@Given("^navigate to IIS param application and login with valid credentials$")
+	    public void navigate_to_iis_param_application_and_login_with_valid_credentials() throws Throwable {
+			driver.get(configFileReader.getIISParamUrl());
+			iisLogin.loginIntoIISParamApplication(configFileReader.getIISParamApplicationUserType());
+	    }
 		
 	
 	@And("^logout from the application$")

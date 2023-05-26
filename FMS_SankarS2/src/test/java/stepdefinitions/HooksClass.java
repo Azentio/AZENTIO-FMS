@@ -5,12 +5,14 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
+import org.junit.Assume;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import com.aventstack.extentreports.Status;
 
+import Runner.NewExcelTestRunner;
 import dataProvider.ExcelData;
 import dataProvider.ExcelTest;
 import helper.ScreenshotHelper;
@@ -35,9 +37,11 @@ public class HooksClass extends BaseClass {
 	@Before
 	public void browserSetup(Scenario scenario) throws IOException {
 		// get flag status from excel and skip the test cases
-	/*	if (testExecution.getTestdata(NewExcelTestRunner.getCurrentExecutionTag()).get("ExecuteYes/No").equalsIgnoreCase("No")) {
-			Assume.assumeTrue(false);
-		}*/
+		/*
+		 * if
+		 * (testExecution.getTestdata(NewExcelTestRunner.getCurrentExecutionTag()).get(
+		 * "ExecuteYes/No").equalsIgnoreCase("No")) { Assume.assumeTrue(false); }
+		 */
 		
 		driver = initializeDriver();
 		System.out.println("Driver Initiated");

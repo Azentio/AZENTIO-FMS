@@ -16,3 +16,13 @@ And logout from the application
 Scenario: To Test the login functionality of CSM application
 Given navigate to CSM application and login with valid credentials
 And logout from the application
+
+#@LoginCSMparam
+#Scenario: To Test the login functionality of CSM param application
+#Given navigate to CSM param application and login with valid credentials
+#And logout from the application
+
+@LoginIISParam
+Scenario: To Test the login functionality of IIS param application
+Given navigate to IIS param application and login with valid credentials
+And logout from the application

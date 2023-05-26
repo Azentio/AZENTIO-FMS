@@ -153,7 +153,7 @@ public class Facility_TypeObj {
 		return approve_search_code;
 	}
 	
-	@FindBy(id = "td_fmsFacilityTypeListGridTbl_Id_P008P_1_CODE")
+	@FindBy(xpath = "//td[@id='td_fmsFacilityTypeListGridTbl_Id_P008P_1_CODE']")
 	private WebElement approve_code;
 	public WebElement approveCode() {
 		return approve_code;

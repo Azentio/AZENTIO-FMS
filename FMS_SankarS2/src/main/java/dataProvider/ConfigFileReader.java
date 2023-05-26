@@ -71,6 +71,13 @@ public String getCSMApplicationUrl() {
 	else
 		throw new RuntimeException("url not specified in the Configuration.properties file.");
 }
+public String getIISParamUrl() {
+	String url = properties.getProperty("IISparamUrl");
+	if (url != null)
+		return url;
+	else
+		throw new RuntimeException("url not specified in the Configuration.properties file.");
+}
 	public String getBrowser() {
 		String browser = properties.getProperty("browser");
 		if (browser != null)
@@ -137,5 +144,12 @@ public String getCSMApplicationUrl() {
 			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
 	}
 	
+	public String getIISParamApplicationUserType() {
+		String userType = properties.getProperty("IIS_ParamApplication_UserType");
+		if (userType != null)
+			return userType;
+		else
+			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
+	}
 	
 	}

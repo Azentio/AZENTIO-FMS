@@ -74,7 +74,7 @@ public class WIFAK_Application2_Steps {
     public void user_enter_the_code_value_in_update_after_approve_menu() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.facilityTypeSearchCode());
 //   	 	facilityTypeObj.facilityTypeSearchCode().sendKeys("369");
-    	facilityTypeObj.facilityTypeSearchCode().sendKeys(testData.get("Search Code"));
+    	facilityTypeObj.facilityTypeSearchCode().sendKeys(testData.get("Search Code"));    	
    	 	facilityTypeObj.facilityTypeSearchCode().sendKeys(Keys.ENTER);
     }
     
@@ -249,8 +249,7 @@ public class WIFAK_Application2_Steps {
         
     }
     
-//    @834966_FMS_Core
-    
+//  @834966_FMS_Core
     @And("^User define the marketed by field$")
     public void user_define_the_marketed_by_field() throws Throwable {
 //    	Thread.sleep(5000);
@@ -280,6 +279,12 @@ public class WIFAK_Application2_Steps {
     
     
 //    @681303_FMSParam
+    
+    @And("^get the test data for test case 681303_FMSParam$")
+    public void get_the_test_data_for_test_case_681303fmsparam() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS01_681303");
+    }
+   
     @And("^User uncheck the Issue Facility Offer flag$")
     public void user_uncheck_the_issue_facility_offer_flag() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.issueFacilityOfferFlag());
@@ -329,7 +334,6 @@ public class WIFAK_Application2_Steps {
     }
  
 //  @681303_FMSCore
-    
     @And("^User clicks on the validate button$")
     public void user_clicks_on_the_validate_button() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsValidateBtn());
@@ -369,9 +373,8 @@ public class WIFAK_Application2_Steps {
 			}
 		}   	
     	
-    }
-
-    
+    } 
+   
     @And("^User clicks the issue facility offer under WIFAK Application$")
     public void user_clicks_the_issue_facility_offer_under_wifak_application() throws Throwable {    	
     	System.out.println("Ref No: "+refID);
