@@ -1,9 +1,5 @@
 package stepdefinitions;
 
-import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
 import java.util.Map;
 
 import org.openqa.selenium.Keys;
@@ -233,6 +229,20 @@ public class Application_for_Financial_Facility {
 				}
 			}
 		}
+		
+		
+		try {
+			for (int i = 0; i < 200; i++) {
+				if(applicationFinancialObj.ServerLoding_pop().isDisplayed()) {
+					applicationFinancialObj.ServerLoding_pop().click();
+					break;
+				}
+			}
+		} catch (Exception e) {
+			
+		}
+		
+		
 
 	}
 
@@ -737,6 +747,23 @@ public class Application_for_Financial_Facility {
 	}
 
 	// ***299886
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	@And("^In AdditionalDetails enter value On  downPayment more than total value and check$")
 	public void in_additionaldetails_enter_value_on_downpayment_more_than_total_value_and_check() throws Throwable {
@@ -766,5 +793,205 @@ public class Application_for_Financial_Facility {
 		clicksAndActionsHelper.moveToElement(applicationFinancialObj.down_payment_popup());
 		Assert.assertEquals(true, applicationFinancialObj.down_payment_popup().isDisplayed());
 	}
+	
+	
+	
+	/////@929306
+//	@Given("^navigate to FMS param application and login with valid credentials$")
+//    public void navigate to FMS param application and login with valid credentials() throws Throwable {
+//		driver.get(configFileReader.getFMSparamsUrl());
+//		FMSLogin.loginIntoFmsParamApplication2(configFileReader.getFMSParamApplicationUserType());
+//    }
+//
+//	@Given("^navigate to FMS application and login with valid credentials2$")
+//	public void navigate_to_fms_application_and_login_with_valid_credentials2() throws Throwable {
+//		driver.get(configFileReader.getFMSApplicationUrl());
+//		FMSLogin.loginIntoFmsApplication2(configFileReader.getFMSApplicationUserType());;
+//	}
+//	@And("^Click on the Parameters menu$")
+//	public void click_on_the_parameters_menu1() throws Throwable {
+//		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Fms_ParametersMenu());
+//		clicksAndActionsHelper.moveToElement(applicationFinancialObj.Fms_ParametersMenu());
+//		clicksAndActionsHelper.clickOnElement(applicationFinancialObj.Fms_ParametersMenu());
+		//applicationFinancialObj.Fms_Parameters().click();
+
+	//}
+//	  @And("^Click on the parameters menu$")
+//	    public void click_on_the_parameters_menu() throws Throwable {
+//	       
+//	    }
+	
+	@Then("^Click on the facility type under parameters menu$")
+	public void click_on_the_facility_type_under_parameters_menu() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.FacilityType_Submenu());
+//		clicksAndActionsHelper.moveToElement(applicationFinancialObj.FacilityType_Submenu());
+//		clicksAndActionsHelper.clickOnElement(applicationFinancialObj.FacilityType_Submenu());
+		applicationFinancialObj.FacilityType_Submenu().click();
+	}
+	@And("^Click on update after approve under facility type$")
+	public void click_on_update_after_approve_under_facility_type() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.FacilityType_UpdateAfterApprove());
+		clicksAndActionsHelper.moveToElement(applicationFinancialObj.FacilityType_UpdateAfterApprove());
+		clicksAndActionsHelper.clickOnElement(applicationFinancialObj.FacilityType_UpdateAfterApprove());
+	}
+
+	@Then("^search for the reference code in update after approve$")
+	public void search_for_the_reference_code_in_update_after_approve() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.FacilityType_Code());
+		clicksAndActionsHelper.moveToElement(applicationFinancialObj.FacilityType_Code());
+		clicksAndActionsHelper.clickOnElement(applicationFinancialObj.FacilityType_Code());
+		applicationFinancialObj.FacilityType_Code().sendKeys("369");
+		applicationFinancialObj.FacilityType_Code().sendKeys(Keys.ENTER);
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.DoubleClick_aftersearchCode_Onupdateafterapprove_on_params());
+		clicksAndActionsHelper.doubleClick(applicationFinancialObj.DoubleClick_aftersearchCode_Onupdateafterapprove_on_params());
+		
+	}
+	
+
+	@Then("^Click on the Facility Details$")
+	public void click_on_the_facility_details() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.FacilityType_Facilitydetails());
+		clicksAndActionsHelper.moveToElement(applicationFinancialObj.FacilityType_Facilitydetails());
+		clicksAndActionsHelper.clickOnElement(applicationFinancialObj.FacilityType_Facilitydetails());
+	}
+	@And("^Click on the STP Facility Requirements$")
+    public void click_on_the_stp_facility_requirements() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Click_STP_Facility_Requirements_under_facilityDetails());
+		 applicationFinancialObj.Click_STP_Facility_Requirements_under_facilityDetails().click();
+    }
+
+
+	
+	
+	
+	
+	 @And("^Enter first Value On Product Class$")
+	    public void enter_first_value_on_product_class() throws Throwable {
+		 waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.getEnter_ValueOn_Product_Class());
+		 applicationFinancialObj.getEnter_ValueOn_Product_Class().click();
+		 applicationFinancialObj.getEnter_ValueOn_Product_Class().sendKeys("1");
+		 
+	    }
+
+
+	    @And("^Split total value and add on facility value$")
+	    public void split_total_value_and_add_on_facility_value() throws Throwable {
+			 waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Add_facilityValue_OnLimitDetails());
+			 
+			 for (int i = 0; i < 300; i++) {
+					try {
+						applicationFinancialObj.Add_facilityValue_OnLimitDetails().click();
+						clicksAndActionsHelper.doubleClick(applicationFinancialObj.Add_facilityValue_OnLimitDetails());
+						applicationFinancialObj.Add_facilityValue_OnLimitDetails().sendKeys(Keys.DELETE);
+						break;
+					} catch (Exception e) {
+						if (i == 299) {
+							Assert.fail(e.getMessage());
+						}
+					}
+				}
+			// applicationFinancialObj.Add_facilityValue_OnLimitDetails().click();
+			 applicationFinancialObj.Add_facilityValue_OnLimitDetails().sendKeys("5000");
+	    }
+
+	    @And("^Enter second ValueOn Product Class$")
+	    public void enter_second_valueon_product_class() throws Throwable {
+	    	 waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.getEnter_ValueOn_Product_Class());
+			 applicationFinancialObj.getEnter_ValueOn_Product_Class().click();
+			 applicationFinancialObj.getEnter_ValueOn_Product_Class().sendKeys("2");
+	    }
+
+	    @And("^Click save button on limit details$")
+	    public void click_save_button_on_limit_details() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Click_saveButtonOn_Limitdetails());
+	    	applicationFinancialObj.Click_saveButtonOn_Limitdetails().click();
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Click_ok_saveOn_draft());
+	    	applicationFinancialObj.Click_ok_saveOn_draft().click();
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Click_ok_onScuccessWarnning_for_applicationFacility());
+	    	applicationFinancialObj.Click_ok_onScuccessWarnning_for_applicationFacility().click();
+
+	    }
+
+	    @And("^After save click validate button$")
+	    public void after_save_click_validate_button() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Click_ValidateButtonOn_Limitdetails());
+	    	applicationFinancialObj.Click_ValidateButtonOn_Limitdetails().click();
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Click_ok_saveOn_draft());
+	    	applicationFinancialObj.Click_ok_saveOn_draft().click();
+	    }
+
+	    @And("^Click on document details$")
+	    public void click_on_document_details() throws Throwable {
+	    	//waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Click_Document_details());
+	    	
+	    	 for (int i = 0; i < 300; i++) {
+					try {
+						applicationFinancialObj.Click_Document_details().click();
+						break;
+					} catch (Exception e) {
+						if (i == 299) {
+							Assert.fail(e.getMessage());
+						}
+					}
+				}
+	    	
+	    }
+
+	    @And("^Scroll to save and validate button$")
+	    public void scroll_to_save_and_validate_button() throws Throwable {
+	       JavascriptHelper.scrollIntoView(applicationFinancialObj.Scroll_downTo_SaveValiate_button_ONDocomentDetails());
+	       
+	    }
+
+	    @And("^Enter Solicitor Name in document details$")
+	    public void enter_solicitor_name_in_document_details() throws Throwable {
+	    	//waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Entervalue_On_Solicitor_Name_InDocomentDetails());
+	    	
+	    	 for (int i = 0; i < 300; i++) {
+					try {
+						applicationFinancialObj.Entervalue_On_Solicitor_Name_InDocomentDetails().click();
+				    	applicationFinancialObj.Entervalue_On_Solicitor_Name_InDocomentDetails().sendKeys("1");
+				    	applicationFinancialObj.ClickSearchAfter_Entervalue_On_Solicitor_Name_InDocomentDetails().click();
+						break;
+					} catch (Exception e) {
+						if (i == 299) {
+							Assert.fail(e.getMessage());
+						}
+					}
+				}
+	    	
+	    }
+
+	    @And("^Enter Estimator Name in document details$")
+	    public void enter_estimator_name_in_document_details() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Entervalue_On_Estimator_Name_InDocomentDetails());
+	    	applicationFinancialObj.Entervalue_On_Estimator_Name_InDocomentDetails().click();
+	    	applicationFinancialObj.Entervalue_On_Estimator_Name_InDocomentDetails().sendKeys("1");
+	    	applicationFinancialObj.ClickSearchAfter_Entervalue_On_Estimator_Name_InDocomentDetails().click();
+	    	
+	    }
+
+	    @And("^Click validate button on document details$")
+	    public void click_validate_button_on_document_details() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Click_validate_button_on_docomentDetails());
+	    	applicationFinancialObj.Click_validate_button_on_docomentDetails().click();
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Click_ok_onScuccessWarnning_for_applicationFacility());
+	    	applicationFinancialObj.Click_ok_onScuccessWarnning_for_applicationFacility().click();
+	    }
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

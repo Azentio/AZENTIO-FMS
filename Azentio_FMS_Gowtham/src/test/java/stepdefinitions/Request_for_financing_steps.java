@@ -211,12 +211,66 @@ public class Request_for_financing_steps {
 	    
 	    //////////@664435
 	    
-	    @Given("^Login into FMS Application$")
+	    @Given("^Login into CSM Application$")
 	    public void login_into_fms_application() throws Throwable {
 	    	driver.get(configFileReader.getCSMApplicationUrl());
 	    	CSMLogin.loginIntoCSMApplication(configFileReader.getCSMApplicationUserType());
 	    }
+	    @And("^Click Request on FMS Core$")
+	    public void click_request_on_fms_core() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_request_OnCSM());
+	    	Request_for_financing_Obj.Click_request_OnCSM().click();
+	    }
+
+//	    @And("^Click Request Application under Request$")
+//	    public void click_request_application_under_request() throws Throwable {
+//	    	
+//	    }
+
+	    @And("^Click request management under request$")
+	    public void click_request_management_under_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Request_management_under_request());
+	    	Request_for_financing_Obj.Request_management_under_request().click();
+	    }
+
+	    @And("^Click management process branch under request management$")
+	    public void click_management_process_branch_under_request_management() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_Management_Process_Branch_under_Request_management());
+	    	Request_for_financing_Obj.Click_Management_Process_Branch_under_Request_management().click();
+
+	    }
+	    String RequestNo;
+	    @And("^Select first approve status detail$")
+	    public void select_first_approve_status_detail() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.DoubleClickOne_Approve_status());
+	    	
+	    	
+	    	for (int i = 0; i < 300; i++) {
+				try {
+					clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.DoubleClickOne_Approve_status());		
+					break;
+				} catch (Exception e) {
+					if (i == 299) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}
+	    	
+	    	//waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.get_approved_reqNo());
+	    	
+	    	
 	    
+	    }
+
+	    @And("^Click process button in management process branch tab$")
+	    public void click_process_button_in_management_process_branch_tab() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.get_approved_reqNo());
+	    	RequestNo = Request_for_financing_Obj.get_approved_reqNo().getAttribute("value");
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_ProcessButton_OnManagement_process_branch());
+	    	Request_for_financing_Obj.Click_ProcessButton_OnManagement_process_branch().click();
+	    	System.out.println(RequestNo);
+	    }
 	    
 	    
 	    
@@ -260,9 +314,8 @@ public class Request_for_financing_steps {
 	    	JavascriptHelper.scrollIntoView(Request_for_financing_Obj.Scroll_into_reqNo());
 	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Enter_req_no());
 	    	Request_for_financing_Obj.Enter_req_no().click();
-	    	Request_for_financing_Obj.Enter_req_no().sendKeys("128");
+	    	Request_for_financing_Obj.Enter_req_no().sendKeys(RequestNo);
 	    	Request_for_financing_Obj.Enter_req_no().sendKeys(Keys.ENTER);
-	    	
 	    }
 
 	    @And("^Double ClickOn Request no$")
@@ -275,7 +328,7 @@ public class Request_for_financing_steps {
 	    @And("^Enter anything on Additional Reference$")
 	    public void enter_anything_on_additional_reference() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.AddAny_AdditionalReference());
-	    	Request_for_financing_Obj.AddAny_AdditionalReference().sendKeys("1123567");
+	    	Request_for_financing_Obj.AddAny_AdditionalReference().sendKeys("11235");
 	    }
 
 	    @And("^Click validate button on down$")

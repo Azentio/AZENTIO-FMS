@@ -199,9 +199,9 @@ public class Request_for_financing_Obj {
 	}
 	
 	@FindBy(xpath = "//td[text()='Request']")
-	private WebElement Click_request;
-	public WebElement Click_request() {
-		return Click_request;
+	private WebElement Click_request_OnCSM;
+	public WebElement Click_request_OnCSM() {
+		return Click_request_OnCSM;
 	}
 	
 	@FindBy(xpath = "//td[text()='Baj Application']")
@@ -235,14 +235,24 @@ public class Request_for_financing_Obj {
 	public WebElement Click_Management_Process_Branch_under_Request_management() {
 		return Click_Management_Process_Branch_under_Request_management;
 	}
+		
+	@FindBy(xpath = "//td[text()='Approved']")
+	private WebElement DoubleClickOne_Approve_status;
+	public WebElement DoubleClickOne_Approve_status() {
+		return DoubleClickOne_Approve_status;
+	}
 	
+	@FindBy(xpath = "//label[text()='Process ']")
+	private WebElement Click_ProcessButton_OnManagement_process_branch;
+	public WebElement Click_ProcessButton_OnManagement_process_branch() {
+		return Click_ProcessButton_OnManagement_process_branch;
+	}
 	
-	
-	
-	
-	
-	
-	
+	@FindBy(xpath = "//input[@id='requestNoProcessDet_RP002MT']")
+	private WebElement get_approved_reqNo;
+	public WebElement get_approved_reqNo() {
+		return get_approved_reqNo;
+	}
 	
 	
 	

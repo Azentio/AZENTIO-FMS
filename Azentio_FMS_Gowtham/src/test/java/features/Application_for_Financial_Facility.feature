@@ -130,5 +130,62 @@ Feature: Linking Fixed Asset to Application in FMS
     And Click Application for financial facilities
     And Click Maintenance
     
+    @929306
+    Scenario: Exception error in Production
+    #Given navigate to FMS param application and login with valid credentials
+    #And Click on the Parameters menu
+#		Then Click on the facility type under parameters menu
+#		And Click on update after approve under facility type
+#		Then search for the reference code in update after approve
+#		Then Click the Facility Details tab in update after approve screen
+#		And Click the reference code 
+#		Then Click on the Facility Details  
+#		And Click on the STP Facility Requirements
+#		And Check customer grading under STP Facility Requirements
+ Given navigate to FMS application2 and login with valid credentials
+    And Click Wifak Application first
+    And Click Wifak Application Second
+    And User update test data for test case no 949677
+    And Click Application for financial facilities
+    And Click Maintenance
+    And Click and Select Application for
+    And Search CIF No
+    And Enter codeOn Facility Type
+    And Enter Code In Country of Financing
+    And Enter line Code On Facility Rating
+    And Click on additional Details
+    And Enter the Total Value
+    And Click Offer Expiration SelectDate
+    And Select limit Details
+    And Click Add button on limit Detail
+    And Enter first Value On Product Class
+    And AfterEnter ValueOn Product Class Search
+    And Split total value and add on facility value
+    And Click Add button AfterEnter Value On Product Class
+    And Click Add button on limit Detail
+    And Enter second ValueOn Product Class
+    And AfterEnter ValueOn Product Class Search
+ 
+    And Click Add button AfterEnter Value On Product Class
+    And Click save button on limit details
+    And After save click validate button
+    And Click on document details
+    And Scroll to save and validate button
+    And Enter Solicitor Name in document details
+    And Enter Estimator Name in document details
+    And Click validate button on document details
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
   
   

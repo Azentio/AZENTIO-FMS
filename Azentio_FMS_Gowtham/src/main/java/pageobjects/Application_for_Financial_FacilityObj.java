@@ -538,6 +538,153 @@ public class Application_for_Financial_FacilityObj {
 	
 	
 	
+	@FindBy(xpath = "//td[text()='Parameters']")
+	private WebElement Fms_ParametersMenu;
+	public WebElement Fms_ParametersMenu1() {
+		return Fms_ParametersMenu;
+	}
+	
+	@FindBy(xpath = "//td[text()='Facility Type']")
+	private WebElement FacilityTypeSubmenu;
+	public WebElement FacilityType_Submenu() {
+		return FacilityTypeSubmenu;
+	}
+	
+	/*
+	 * @FindBy(id = "P008UP") private WebElement FacilityTypeUpdateafterapprove;
+	 * public WebElement FacilityType_Updateafterapprove() { return
+	 * FacilityTypeUpdateafterapprove; }
+	 */
+	
+	@FindBy(id =  "fmsFacilityTypeListGridTbl_Id_P008UP_gs_CODE")
+	private WebElement FacilityTypeCode;
+	public WebElement FacilityType_Code() {
+		return FacilityTypeCode;
+	}
+	
+	@FindBy(id =  "td_fmsFacilityTypeListGridTbl_Id_P008UP_1_CODE and")
+	private WebElement FacilityTypeSelectCode;
+	public WebElement FacilityType_SelectCode() {
+		return FacilityTypeSelectCode;
+	}
+	
+	@FindBy(xpath = "//span[text()='Facility Details']//ancestor::li[@id='fmsFacilityTypeDetailsTab_P008UP']")
+	private WebElement FacilityTypeFacilitydetails;
+	public WebElement FacilityType_Facilitydetails() {
+		return FacilityTypeFacilitydetails;
+	}
+	
+	@FindBy(xpath = "//span[text()='STP Facility Requirements']")
+	private WebElement FacilityTypeFacilitydetailsSTPFacilityRequirements;
+	public WebElement FacilityType_Facilitydetails_STPFacilityRequirements() {
+		return FacilityTypeFacilitydetailsSTPFacilityRequirements;
+	}
+	
+	@FindBy(xpath = "//span[text()='STP Facility Requirements']")
+	private WebElement DoubleClick_aftersearchCode_Onupdateafterapprove_on_params;
+	public WebElement DoubleClick_aftersearchCode_Onupdateafterapprove_on_params() {
+		return DoubleClick_aftersearchCode_Onupdateafterapprove_on_params;
+	}
+	
+	@FindBy(xpath = "//span[text()='STP Facility Requirements']")
+	private WebElement Click_STP_Facility_Requirements_under_facilityDetails;
+	public WebElement Click_STP_Facility_Requirements_under_facilityDetails() {
+		return Click_STP_Facility_Requirements_under_facilityDetails;
+	}
+	
+	@FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsFACILITY_VALUE_WIFT001MT']")
+	private WebElement Add_facilityValue_OnLimitDetails;
+	public WebElement Add_facilityValue_OnLimitDetails() {
+		return Add_facilityValue_OnLimitDetails;
+	}
+	
+	@FindBy(xpath = "//span[contains(text(),' Save ')]")
+	private WebElement Click_saveButtonOn_Limitdetails;
+	public WebElement Click_saveButtonOn_Limitdetails() {
+		return Click_saveButtonOn_Limitdetails;
+	}
+	
+	@FindBy(xpath = "//span[contains(text(),' Validate ')]")
+	private WebElement Click_ValidateButtonOn_Limitdetails;
+	public WebElement Click_ValidateButtonOn_Limitdetails() {
+		return Click_ValidateButtonOn_Limitdetails;
+	}
+	
+	@FindBy(xpath = "//span[contains(text(),'Document Details')]")
+	private WebElement Click_Document_details;
+	public WebElement Click_Document_details() {
+		return Click_Document_details;
+	}
+	
+	@FindBy(xpath = "//span[contains(text(),' Save ')]")
+	private WebElement Scroll_downTo_SaveValiate_button_ONDocomentDetails;
+	public WebElement Scroll_downTo_SaveValiate_button_ONDocomentDetails() {
+		return Scroll_downTo_SaveValiate_button_ONDocomentDetails;
+	}
+	
+	@FindBy(xpath = "//input[@id='lookuptxt_applicationFacilitysolicitor_WIFT001MT']")
+	private WebElement Entervalue_On_Solicitor_Name_InDocomentDetails;
+	public WebElement Entervalue_On_Solicitor_Name_InDocomentDetails() {
+		return Entervalue_On_Solicitor_Name_InDocomentDetails;
+	}
+	
+	@FindBy(xpath = "//span[@id='spanLookup_applicationFacilitysolicitor_WIFT001MT']")
+	private WebElement ClickSearchAfter_Entervalue_On_Solicitor_Name_InDocomentDetails;
+	public WebElement ClickSearchAfter_Entervalue_On_Solicitor_Name_InDocomentDetails() {
+		return ClickSearchAfter_Entervalue_On_Solicitor_Name_InDocomentDetails;
+	}
+	
+	
+	
+	@FindBy(xpath = "//input[@id='lookuptxt_applicationFacilityEstimator_WIFT001MT']")
+	private WebElement Entervalue_On_Estimator_Name_InDocomentDetails;
+	public WebElement Entervalue_On_Estimator_Name_InDocomentDetails() {
+		return Entervalue_On_Estimator_Name_InDocomentDetails;
+	}
+	
+	@FindBy(xpath = "//span[@id='spanLookup_applicationFacilityEstimator_WIFT001MT']")
+	private WebElement ClickSearchAfter_Entervalue_On_Estimator_Name_InDocomentDetails;
+	public WebElement ClickSearchAfter_Entervalue_On_Estimator_Name_InDocomentDetails() {
+		return ClickSearchAfter_Entervalue_On_Estimator_Name_InDocomentDetails;
+	}
+	
+	
+	@FindBy(xpath = "//span[contains(text(),' Validate ')]")
+	private WebElement Click_validate_button_on_docomentDetails;
+	public WebElement Click_validate_button_on_docomentDetails() {
+		return Click_validate_button_on_docomentDetails;
+	}
+	
+	
+	@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
+	private WebElement Click_ok_saveOn_draft;
+	public WebElement Click_ok_saveOn_draft() {
+		return Click_ok_saveOn_draft;
+	}
+	
+	
+
+	@FindBy(xpath = "//input[@id='_popup_path_sol_ok']")
+	private WebElement Click_ok_onScuccessWarnning_for_applicationFacility;
+	public WebElement Click_ok_onScuccessWarnning_for_applicationFacility() {
+		return Click_ok_onScuccessWarnning_for_applicationFacility;
+	}
+	
+	
+	//*[@id="_popup_path_sol_ok"]
+	
+	@FindBy(xpath = "//input[@id='_popup_path_sol_ok']")
+	private WebElement ServerLoding_pop;
+	public WebElement ServerLoding_pop() {
+		return ServerLoding_pop;
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }
