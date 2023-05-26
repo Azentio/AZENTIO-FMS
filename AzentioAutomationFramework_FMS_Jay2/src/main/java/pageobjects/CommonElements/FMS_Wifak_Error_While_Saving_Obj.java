@@ -195,7 +195,22 @@ public class FMS_Wifak_Error_While_Saving_Obj {
 	public WebElement getAfterEnter_ValueOn_Product_Class_Search() {
 		return AfterEnter_ValueOn_Product_Class_Search;
 	}
-	@FindBy(xpath =  "//button[@id='limitDetails_add_btn_WIFT001MT']")
+	
+	
+	@FindBy(xpath =  "//span[@id='spanLookup_applicationfacilityLimitDetailsACC_SL_NO_WIFT001MT']/span")
+	private WebElement Click_Search_Button_Account_No;
+	public WebElement Click_Search_Button_Account_No() {
+		return Click_Search_Button_Account_No;
+	}
+	
+	@FindBy(xpath =  "//tr[@id='3']")
+	private WebElement Double_Click_Search_Account_No;
+	public WebElement Double_Click_Search_Account_No() {
+		return Double_Click_Search_Account_No;
+	}
+	
+	
+	@FindBy(xpath ="//button[@id='limitDetails_add_btn_WIFT001MT']")
 	private WebElement AfterEnter_ValueOn_Product_Class_Search_Scroll;
 	public WebElement getAfterEnter_ValueOn_Product_Class_Scroll_ToAdd() {
 		return AfterEnter_ValueOn_Product_Class_Search_Scroll;
@@ -241,6 +256,14 @@ public class FMS_Wifak_Error_While_Saving_Obj {
 	public WebElement getClick_AddButton_OnFixedAssert_screen() {
 		return Click_AddButton_OnFixedAssert_screen;
 	}
+
+	//td[@id='td_FmsIjaraFixedAssetsGrid_WIFT001MT_1_rn']
+	@FindBy(xpath =  "//td[@id='td_FmsIjaraFixedAssetsGrid_WIFT001MT_1_rn']")
+	private WebElement Click_value_1_on_Catagory;
+	public WebElement Click_value_1_on_Catagory() {
+		return Click_value_1_on_Catagory;
+	}
+	
 	
 	@FindBy(xpath =  "//input[@name='lookupTxt_fmsFacilityAssetVO.CATEGORY_CODE']")
 	private WebElement Enter_value_on_Catagory;
@@ -282,7 +305,16 @@ public class FMS_Wifak_Error_While_Saving_Obj {
 	private WebElement Enter_value_on_UnitCost;
 	public WebElement getEnter_value_on_UnitCost() {
 		return Enter_value_on_UnitCost;
+	}   
+	
+	@FindBy(xpath =  "//input[@name='lookupTxt_fmsFacilityAssetVO.VAT_CODE']")
+	private WebElement Enter_value_on_Vat_Code;
+	public WebElement Enter_value_on_Vat_Code() {
+		return Enter_value_on_Vat_Code;
 	}
+	
+	
+	
 	
 	
 	
@@ -330,10 +362,126 @@ public class FMS_Wifak_Error_While_Saving_Obj {
 		return FxSettlementExperyDate_Below;
 	}
 	
+	//-----------------------------@
+	
+	@FindBy(xpath =  "//span[@id='spanLookup_applicationfacilityLimitDetailsACC_SL_NO_WIFT001MT']")
+	private WebElement Search_Button_In_Account_No;
+	public WebElement Search_Button_In_Account_No() {
+		return Search_Button_In_Account_No;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitDetailsACC_CY_WIFT001MT")
+	private WebElement Currency__Button_In_Account_No;
+	public WebElement Currency__Button_In_Account_No() {
+		return Currency__Button_In_Account_No;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitDetailsACC_GL_WIFT001MT")
+	private WebElement GLCode__Button_In_Account_No;
+	public WebElement GLCode__Button_In_Account_No() {
+		return GLCode__Button_In_Account_No;
+	}
+	
+	@FindBy(id =  "lookuptxt_applicationfacilityLimitDetailsACC_SL_NO_WIFT001MT")
+	private WebElement Serial__Button_In_Account_No;
+	public WebElement Serial__Button_In_Account_No() {
+		return Serial__Button_In_Account_No;
+	}
+	
+	@FindBy(id =  "lookuptxt_applicationfacilityLimitDetailsACC_Add_Det_WIFT001MT")
+	private WebElement Enter_Account_Number;
+	public WebElement Enter_Account_Number() {
+		return Enter_Account_Number;
+	}
+	
+	
+	
+//	@FindBy(xpath =  "(//*[@id=\"3\"])[5]")
+//	private WebElement Search_Button_In_Account_No_DoubleClick;
+//	public WebElement Search_Button_In_Account_No_DoubleClick() {
+//		return Search_Button_In_Account_No_DoubleClick;
+//	}
+	
+//	@FindBy(xpath =  "//span[@id='spanLookup_applicationfacilityLimitDetailsACC_SL_NO_WIFT001MT']")
+//	private WebElement Search_Button_In_Account_No;
+//	public WebElement Search_Button_In_Account_No() {
+//		return Search_Button_In_Account_No;
+//	}
+	
+	@FindBy(id =  "applicationfacility_chargesdtls_btn_WIFT001MT")
+	private WebElement Click_Charges_Details;
+	public WebElement Click_Charges_Details() {
+		return Click_Charges_Details;
+	}
+	
+
+	@FindBy(id =  "td_FacilityChargesGrid_WIFT001MT_0_rn")
+	private WebElement Click_1_In_Charges_Details;
+	public WebElement Click_1_In_Charges_Details() {
+		return Click_1_In_Charges_Details;
+	}
+	
+	@FindBy(id =  "1_fmsapplchargesVO.COLLECT_AT_FAC_APPROVAL_FacilityChargesGrid_WIFT001MT")
+	private WebElement Check_Flag_In_Collect_At_Fac_Approvel;
+	public WebElement Check_Flag_In_Collect_At_Fac_Approvel() {
+		return Check_Flag_In_Collect_At_Fac_Approvel;
+	}
+	
+	@FindBy(xpath =  "//span[text()='Ok']")
+	private WebElement Click_Ok_Button_In_Collect_At_Fac_Approvel;
+	public WebElement Click_Ok_Button_In_Collect_At_Fac_Approvel() {
+		return Click_Ok_Button_In_Collect_At_Fac_Approvel;
+	}
+	
+	@FindBy(id =  "_popup_path_sol_confirm_ok")
+	private WebElement Ok_Button_In_Waring_Screen;
+	public WebElement Ok_Button_In_Waring_Screen() {
+		return Ok_Button_In_Waring_Screen;
+	}
+	
+	@FindBy(id =  "_popup_path_sol_confirm_ok")
+	private WebElement Ok_Button_In_Confirm_Screen;
+	public WebElement Ok_Button_In_Confirm_Screen() {
+		return Ok_Button_In_Confirm_Screen;
+	}
+	
+	@FindBy(id =  "_popup_path_sol_confirm_ok")
+	private WebElement Ok_Button_In_Sucess_Screen;
+	public WebElement Ok_Button_In_Sucess_Screen() {
+		return Ok_Button_In_Sucess_Screen;
+	}
+	
+	@FindBy(id =  "applicationFacilityDocumentDetailsTabs_WIFT001AP1")
+	private WebElement Click_Document_Details;
+	public WebElement Click_Document_Details() {
+		return Click_Document_Details;
+	}
+	
+	@FindBy(id =  "applicationFacilityDocumentDetailsTabs_WIFT001AP1")
+	private WebElement EnterTheValue_Solicitor_Name;
+	public WebElement EnterTheValue_Solicitor_Name() {
+		return EnterTheValue_Solicitor_Name;
+	}
+	
+	@FindBy(id =  "applicationFacilityDocumentDetailsTabs_WIFT001AP1")
+	private WebElement EnterTheValue_Estimator_Name;
+	public WebElement EnterTheValue_Estimator_Name() {
+		return EnterTheValue_Estimator_Name;
+	}
 	
 	
 	
 	
+	
+	
+	@FindBy(id =  "_popup_path_sol_confirm_ok")
+	private WebElement Informatio_Refresh_page_Cancel;
+	public WebElement Informatio_Refresh_page_Cancel() {
+		return Informatio_Refresh_page_Cancel;
+	}
+	
+	
+		
 	
 	
 }

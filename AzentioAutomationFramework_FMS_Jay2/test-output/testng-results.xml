@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-24T12:06:44 IST" name="Default suite" finished-at="2023-05-24T12:09:03 IST" duration-ms="138361">
+  <suite started-at="2023-05-26T15:51:14 IST" name="Default suite" finished-at="2023-05-26T15:59:59 IST" duration-ms="524740">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@795509d9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-05-24T12:06:44 IST" name="Default test" finished-at="2023-05-24T12:09:03 IST" duration-ms="138361">
+    <test started-at="2023-05-26T15:51:14 IST" name="Default test" finished-at="2023-05-26T15:59:59 IST" duration-ms="524740">
       <class name="Runner.TestApplication">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@795509d9]" started-at="2023-05-24T12:06:44 IST" name="setUpClass" finished-at="2023-05-24T12:06:47 IST" duration-ms="2512" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@795509d9]" started-at="2023-05-26T15:51:14 IST" name="setUpClass" finished-at="2023-05-26T15:51:17 IST" duration-ms="2237" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@795509d9]" started-at="2023-05-24T12:06:47 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-05-24T12:08:37 IST" duration-ms="109633" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@795509d9]" started-at="2023-05-26T15:51:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-05-26T15:59:23 IST" duration-ms="486529" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -27,30 +27,29 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[element click intercepted: Element <input type="text" autocomplete="off" id="lookuptxt_applicationFacilityRating_WIFT001MT" beforedepevent="onChangeFacilityRatingPrevValue()" afterdepevent="onChangeFacilityRatingMain()" class="path-theme-cust-input liveSearchText liveSearchCompSize ui-state-focus liveSearchInputCorner" name="applicationFacilityCO.fmsApplVO.FACILITY_RATING_GRADE" value="" required="true" gridcolsortright="true" maxlength="6" mode="text" zeronotallowed="true" initialvalue="" prevvalue=""> is not clickable at point (543, 588). Other element would receive the click: <div class="jMsgbox-background" style="position: fixed; width: 1920px; height: 924px; z-index: 999999; opacity: 0.6; top: 0px; left: 0px;"></div>
-  (Session info: chrome=113.0.5672.93)
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#_popup_path_sol_confirm_ok"}
+  (Session info: chrome=113.0.5672.127)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.8.1', revision: '8ebccac989'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a63388ccf51e1c1c54d8a6d3da43b693, clickElement {id=51731530BB8343246F8480A70013B16A_element_241}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\ININDC~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51149}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51149/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (a63388ccf51e1c1c54d8a6d3da43b693)] -> xpath: //input[@name='applicationFacilityCO.fmsApplVO.FACILITY_RATING_GRADE']]
-Session ID: a63388ccf51e1c1c54d8a6d3da43b693]]>
+Command: [1328a9fab16234675cf8d191cbc6931d, findElement {using=id, value=_popup_path_sol_confirm_ok}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\ININDC~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59552}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59552/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1328a9fab16234675cf8d191cbc6931d]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input type="text" autocomplete="off" id="lookuptxt_applicationFacilityRating_WIFT001MT" beforedepevent="onChangeFacilityRatingPrevValue()" afterdepevent="onChangeFacilityRatingMain()" class="path-theme-cust-input liveSearchText liveSearchCompSize ui-state-focus liveSearchInputCorner" name="applicationFacilityCO.fmsApplVO.FACILITY_RATING_GRADE" value="" required="true" gridcolsortright="true" maxlength="6" mode="text" zeronotallowed="true" initialvalue="" prevvalue=""> is not clickable at point (543, 588). Other element would receive the click: <div class="jMsgbox-background" style="position: fixed; width: 1920px; height: 924px; z-index: 999999; opacity: 0.6; top: 0px; left: 0px;"></div>
-  (Session info: chrome=113.0.5672.93)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#_popup_path_sol_confirm_ok"}
+  (Session info: chrome=113.0.5672.127)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.8.1', revision: '8ebccac989'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a63388ccf51e1c1c54d8a6d3da43b693, clickElement {id=51731530BB8343246F8480A70013B16A_element_241}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\ININDC~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51149}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51149/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (a63388ccf51e1c1c54d8a6d3da43b693)] -> xpath: //input[@name='applicationFacilityCO.fmsApplVO.FACILITY_RATING_GRADE']]
-Session ID: a63388ccf51e1c1c54d8a6d3da43b693
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+Command: [1328a9fab16234675cf8d191cbc6931d, findElement {using=id, value=_popup_path_sol_confirm_ok}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\ININDC~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59552}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59552/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1328a9fab16234675cf8d191cbc6931d
+at jdk.internal.reflect.GeneratedConstructorAccessor41.newInstance(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
@@ -61,24 +60,23 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
 at jdk.proxy2/jdk.proxy2.$Proxy45.click(Unknown Source)
 at helper.ClicksAndActionsHelper.clickOnElement(ClicksAndActionsHelper.java:22)
-at stepdefinitions.FMS_Wifak_Error_While_Saving_Steps.enter_line_code_on_facility_rating(FMS_Wifak_Error_While_Saving_Steps.java:112)
-at ✽.Enter line Code On Facility Rating(file:///C:/Users/inindc00610/eclipse-workspace/AzentioAutomationFramework_FMS_Jay/src/test/java/features/Wifak_Application.feature:75)
+at stepdefinitions.FMS_Wifak_Error_While_Saving_Steps.click_ok_in_button_sucess_screen(FMS_Wifak_Error_While_Saving_Steps.java:512)
+at ✽.Click OK In Button Sucess Screen(file:///C:/Users/inindc00610/git/repository/FMS_Jay/AzentioAutomationFramework_FMS_Jay2/src/test/java/features/Wifak_Application.feature:130)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@795509d9]" started-at="2023-05-24T12:08:37 IST" name="tearDownClass" finished-at="2023-05-24T12:09:03 IST" duration-ms="26103" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@795509d9]" started-at="2023-05-26T15:59:23 IST" name="tearDownClass" finished-at="2023-05-26T15:59:59 IST" duration-ms="35883" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
