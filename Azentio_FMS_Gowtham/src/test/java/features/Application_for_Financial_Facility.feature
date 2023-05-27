@@ -101,10 +101,9 @@ Feature: Linking Fixed Asset to Application in FMS
     And Check the Allow to Edit @ Application is displayed
     Then Check the Allow to edit Corporate Package Rate is displayed
 
-    
   @299886
   Scenario: FMS cannot accept down paymetn with decimal points
-  Given navigate to FMS application2 and login with valid credentials
+    Given navigate to FMS application2 and login with valid credentials
     And Click Wifak Application first
     And Click Wifak Application Second
     And User update test data for test case no 949677
@@ -117,32 +116,30 @@ Feature: Linking Fixed Asset to Application in FMS
     And Enter line Code On Facility Rating
     And Click on additional Details
     And Enter the Total Value
-    And In AdditionalDetails enter value On  downPayment more than total value and check 
-    Then In AdditionalDetails enter value On  downPayment less than total value and check 
-    
-  
-    
-    @802912
-    Scenario: Modification in Application for Financial Facilities
+    And In AdditionalDetails enter value On  downPayment more than total value and check
+    Then In AdditionalDetails enter value On  downPayment less than total value and check
+
+  @802912
+  Scenario: Modification in Application for Financial Facilities
     Given navigate to FMS application2 and login with valid credentials
     And Click Wifak Application first
     And Click Wifak Application Second
     And Click Application for financial facilities
     And Click Maintenance
-    
-    @929306
-    Scenario: Exception error in Production
+
+  @929306
+  Scenario: Exception error in Production
     #Given navigate to FMS param application and login with valid credentials
     #And Click on the Parameters menu
-#		Then Click on the facility type under parameters menu
-#		And Click on update after approve under facility type
-#		Then search for the reference code in update after approve
-#		Then Click the Facility Details tab in update after approve screen
-#		And Click the reference code 
-#		Then Click on the Facility Details  
-#		And Click on the STP Facility Requirements
-#		And Check customer grading under STP Facility Requirements
- Given navigate to FMS application2 and login with valid credentials
+    #		Then Click on the facility type under parameters menu
+    #		And Click on update after approve under facility type
+    #		Then search for the reference code in update after approve
+    #		Then Click the Facility Details tab in update after approve screen
+    #		And Click the reference code
+    #		Then Click on the Facility Details
+    #		And Click on the STP Facility Requirements
+    #		And Check customer grading under STP Facility Requirements
+    Given navigate to FMS application2 and login with valid credentials
     And Click Wifak Application first
     And Click Wifak Application Second
     And User update test data for test case no 949677
@@ -165,27 +162,42 @@ Feature: Linking Fixed Asset to Application in FMS
     And Click Add button on limit Detail
     And Enter second ValueOn Product Class
     And AfterEnter ValueOn Product Class Search
- 
     And Click Add button AfterEnter Value On Product Class
     And Click save button on limit details
     And After save click validate button
-    And Click on document details
-    And Scroll to save and validate button
-    And Enter Solicitor Name in document details
-    And Enter Estimator Name in document details
-    And Click validate button on document details
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  
-  
+    And User move to the Document details tab
+    And User enter the Solicitor Name
+    And User enter the Estimator Name
+    And User clicks the save button
+    And User clicks the validate button
+    And User clicks the Approve Level1 link
+		And User retrive the first data in approve level1
+		And User select the level1 devision as approve
+		And User clicks on the level1 submit button
+		And User clicks the Approve Level2 link
+		And User retrive the first data in approve level2
+		And User select the level2 devision as approve
+		And User clicks on the level2 submit button
+		And User clicks the Approve Level3 link
+		And User retrive the first data in approve level3
+		And User select the level3 devision as approve
+		And User clicks on the level3 submit button
+#		And Click Application for financial facilities
+#		And Click Maintenance
+#		And Click and Select Modification in Application for
+		
+		
+		@11
+		 Scenario: check alpabhate
+		 Given navigate to FMS application2 and login with valid credentials
+		  And Click Collateral Management
+      And Click maintenance under Collateral Management
+      And Click search on maintenance screen
+      And Click and enter CIF 
+      And After enter CIF find if any alphabetic in ID number
+		 	
+		
+		
+		
+		
+		

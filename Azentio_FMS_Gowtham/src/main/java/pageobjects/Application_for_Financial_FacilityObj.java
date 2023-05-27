@@ -679,12 +679,186 @@ public class Application_for_Financial_FacilityObj {
 		return ServerLoding_pop;
 	}
 	
+	//clp
+	@FindBy(xpath = "//li[@id='applicationFacilityDocumentDetailsTabs_WIFT001MT']")
+	private WebElement main_document_details_tab;
+	public WebElement mainDocumentDetailsTab() {
+		return main_document_details_tab;
+	}
 	
+	@FindBy(xpath = "//input[@id='lookuptxt_applicationFacilitysolicitor_WIFT001MT']")
+	private WebElement document_details_solicitor_name;
+	public WebElement documentDetailsSolicitorName() {
+		return document_details_solicitor_name;
+	}
 	
+	@FindBy(xpath = "//input[@id='lookuptxt_applicationFacilityEstimator_WIFT001MT']")
+	private WebElement document_details_estimator_name;
+	public WebElement documentDetailsEstimatorName() {
+		return document_details_estimator_name;
+	}	
 	
+	@FindBy(xpath = "//button[@id='applicationfacility_save_as_draft_btn_WIFT001MT']")
+	private WebElement limit_details_save_btn;
+	public WebElement limitDetailsSaveBtn() {
+		return limit_details_save_btn;
+	}
 	
+	@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
+	private WebElement button_confirm_ok;
+	public WebElement ButtonConfirmOk() {
+		return button_confirm_ok;
+	}
 	
+	@FindBy(xpath = "//*[@id='_popup_path_sol_ok']")
+	private WebElement button_success_ok;
+	public WebElement ButtonSuccessOk() {
+		return button_success_ok;
+	}
 	
+	@FindBy(xpath = "//button[@id='applicationfacility_save_btn_WIFT001MT']")
+	private WebElement limit_details_validate_btn;
+	public WebElement limitDetailsValidateBtn() {
+		return limit_details_validate_btn;
+	}
 	
+	@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
+	private WebElement facility_already_created_popup;
+	public WebElement facilityAlreadyCreatedPopup() {
+		return facility_already_created_popup;
+	}
+	
+	@FindBy(xpath = "//*[@id=\"div__popup_path_sol_ok\"]/div[2]/div")
+	private WebElement limit_details_validate_success_msg;
+	public WebElement limitDetailsValidateSuccessMsg() {
+		return limit_details_validate_success_msg;
+	}
+	
+	@FindBy(xpath = "//a[@id='WIFT001AP1']")
+	private WebElement application_financial_facility_approve1;
+	public WebElement applicationFinancialFacilityApproveLevel1() {
+		return application_financial_facility_approve1;
+	}
+	
+	@FindBy(xpath = "//*[@id=\"applicationFacilityGridTbl_Id_WIFT001AP1_pager_left\"]/table/tbody/tr/td[7]")
+	private WebElement approve1_clear_btn;
+	public WebElement approve1ClearBtn() {
+		return approve1_clear_btn;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT001AP1_1_fmsApplVO.CODE']")
+	private WebElement approve_level1_retrive_data;
+	public WebElement approveLevel1RetriveData() {
+		return approve_level1_retrive_data;
+	}
+	
+	@FindBy(xpath = "//select[@id='applicationFacilityDecision_1_WIFT001AP1']")
+	private WebElement approve_level1_select_devision;
+	public WebElement approveLevel1SelectDevision() {
+		return approve_level1_select_devision;
+	}
+	
+	@FindBy(xpath = "//button[@id='applicationfacility_approvelevel1_btn_WIFT001AP1']")
+	private WebElement approve_level1_submit_btn;
+	public WebElement approveLevel1SubmitBtn() {
+		return approve_level1_submit_btn;
+	}
+	
+	@FindBy(xpath = "//a[@id='WIFT001AP2']")
+	private WebElement application_financial_facility_approve2;
+	public WebElement applicationFinancialFacilityApproveLevel2() {
+		return application_financial_facility_approve2;
+	}
+	
+	@FindBy(xpath = "//*[@id=\"applicationFacilityGridTbl_Id_WIFT001AP2_pager_left\"]/table/tbody/tr/td[7]")
+	private WebElement approve2_clear_btn;
+	public WebElement approve2ClearBtn() {
+		return approve2_clear_btn;
+	} 
+	
+	@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT001AP2_1_fmsApplVO.CODE']")
+	private WebElement approve_level2_retrive_data;
+	public WebElement approveLevel2RetriveData() {
+		return approve_level2_retrive_data;
+	}
+	
+	@FindBy(xpath = "//select[@id='applicationFacilityDecision2_WIFT001AP2']")
+	private WebElement approve_level2_select_devision;
+	public WebElement approveLevel2SelectDevision() {
+		return approve_level2_select_devision;
+	}
+	
+	@FindBy(xpath = "//button[@id='applicationfacility_approvelevel2_btn_WIFT001AP2']")
+	private WebElement approve_level2_submit_btn;
+	public WebElement approveLevel2SubmitBtn() {
+		return approve_level2_submit_btn;
+	}	
+	
+	@FindBy(xpath = "//a[@id='WIFT001AP3']")
+	private WebElement application_financial_facility_approve3;
+	public WebElement applicationFinancialFacilityApproveLevel3() {
+		return application_financial_facility_approve3;
+	}
+	
+	@FindBy(xpath = "//*[@id=\"applicationFacilityGridTbl_Id_WIFT001AP3_pager_left\"]/table/tbody/tr/td[7]")
+	private WebElement approve3_clear_btn;
+	public WebElement approve3ClearBtn() {
+		return approve3_clear_btn;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT001AP3_1_fmsApplVO.CODE']")
+	private WebElement approve_level3_retrive_data;
+	public WebElement approveLevel3RetriveData() {
+		return approve_level3_retrive_data;
+	}
+	
+	@FindBy(xpath = "//select[@id='applicationFacilityDecision3_WIFT001AP3']")
+	private WebElement approve_level3_select_devision;
+	public WebElement approveLevel3SelectDevision() {
+		return approve_level3_select_devision;
+	}
+	
+	@FindBy(xpath = "//button[@id='applicationfacility_approvelevel3_btn_WIFT001AP3']")
+	private WebElement approve_level3_submit_btn;
+	public WebElement approveLevel3SubmitBtn() {
+		return approve_level3_submit_btn;
+	}	
+	
+	@FindBy(xpath = "//input[@id='lookuptxt_applicationFacilityExistingFacilityRef_WIFT001MT']")
+	private WebElement Existing_Facility_Ref_near_Application_for;
+	public WebElement Existing_Facility_Ref_near_Application_for() {
+		return Existing_Facility_Ref_near_Application_for;
+	}	
+	
+	//11
+	@FindBy(xpath = "//td[text()='Collateral Management']")
+	private WebElement Click_Collateral_Management;
+	public WebElement Click_Collateral_Management() {
+		return Click_Collateral_Management;
+	}	
+	
+	@FindBy(xpath = "(//span[text()='Maintenance'])[1]")
+	private WebElement Click_maintenance_under_Collateral_Management;
+	public WebElement Click_maintenance_under_Collateral_Management() {
+		return Click_maintenance_under_Collateral_Management;
+	}	
+	
+	@FindBy(xpath = "//a[@id='infoBarSearchButton_T014MT']")
+	private WebElement Click_search_on_maintenance_screen;
+	public WebElement Click_search_on_maintenance_screen() {
+		return Click_search_on_maintenance_screen;
+	}
+	
+	@FindBy(xpath = "//input[@id='collateralManagementGridTbl_Id_T014MT_gs_fmsCollateralVO.CIF']")
+	private WebElement Click_Click_and_enter_CIF ;
+	public WebElement Click_Click_and_enter_CIF() {
+		return Click_Click_and_enter_CIF;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_collateralManagementGridTbl_Id_T014MT_1_cifVO.ID_NO']")
+	private WebElement After_enter_CIF_find_if_any_alphabetic_in_ID_number ;
+	public WebElement After_enter_CIF_find_if_any_alphabetic_in_ID_number() {
+		return After_enter_CIF_find_if_any_alphabetic_in_ID_number;
+	}
 	
 }
