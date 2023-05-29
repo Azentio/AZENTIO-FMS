@@ -43,35 +43,37 @@ public class ConfigFileReader {
 		else
 			throw new RuntimeException("url not specified in the Configuration.properties file.");
 	}
-public String getSADSApplicationUrl() {
+	
+	public String getSADSApplicationUrl() {
 		String url = properties.getProperty("SADSapplicationUrl");
 		if (url != null)
 			return url;
 		else
 			throw new RuntimeException("url not specified in the Configuration.properties file.");
 	}
-public String getFMSparamsUrl() {
+	
+	public String getFMSparamsUrl() {
 	String url = properties.getProperty("FMSparamsUrl");
 	if (url != null)
 		return url;
 	else
 		throw new RuntimeException("url not specified in the Configuration.properties file.");
-}
-public String getCSMParamApplicationUrl() {
+	}
+	public String getCSMParamApplicationUrl() {
 	String url = properties.getProperty("CSMparamsUrl");
 	if (url != null)
 		return url;
 	else
 		throw new RuntimeException("url not specified in the Configuration.properties file.");
-}
-public String getCSMApplicationUrl() {
+	}
+	public String getCSMApplicationUrl() {
 	String url = properties.getProperty("CSMapplicationUrl");
 	if (url != null)
 		return url;
 	else
 		throw new RuntimeException("url not specified in the Configuration.properties file.");
-}
-public String getIISParamUrl() {
+	}
+	public String getIISParamUrl() {
 	String url = properties.getProperty("IISparamUrl");
 	if (url != null)
 		return url;
@@ -115,6 +117,15 @@ public String getIISParamUrl() {
 		else
 			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
 	}
+	
+	public String getFMSApplicationUserType1() {
+		String userType = properties.getProperty("FMS_Application_UserType1");
+		if (userType != null)
+			return userType;
+		else
+			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
+	}
+	
 	public String getFMSParamApplicationUserType() {
 		String userType = properties.getProperty("FMS_ParamApplication_UserType");
 		if (userType != null)

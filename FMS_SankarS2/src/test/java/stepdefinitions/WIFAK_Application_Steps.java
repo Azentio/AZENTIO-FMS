@@ -32,11 +32,12 @@ public class WIFAK_Application_Steps {
 	Selenium_Actions selenium_Actions = new Selenium_Actions(driver);
 	FMSLogin login = new FMSLogin(driver);
 	
-	StringBuffer refID = new StringBuffer();
+	String refID;
 	
 	String path = System.getProperty("user.dir") +"\\TestData\\FMSTestData.xlsx";
 //	ExcelData excecutionExcelData = new ExcelData(path,"TestExecution","TestCaseID");
-	ExcelData fmsTransactionsExcelData = new ExcelData(path,"FMS_WIFAK_ApplicationTestData","DataSet ID");
+//	ExcelData fmsTransactionsExcelData = new ExcelData(path,"FMS_WIFAK_ApplicationTestData","DataSet ID");
+	ExcelData fmsTransactionsExcelData = new ExcelData(path,"IIS_Param_TestData","DataSet ID");
 	Map<String, String> testData;
 //	Map<String, String> executionTestData;
 	
@@ -65,6 +66,26 @@ public class WIFAK_Application_Steps {
     	testData = fmsTransactionsExcelData.getTestdata("DS01_681303");
     }
 	
+//  @665923_FMSCore
+    @And("^get the test data for test case 665923_FMSCore$")
+    public void get_the_test_data_for_test_case_665923fmscore() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS01_665923");
+    }
+    
+//  @640861
+    @And("^get the test data for test case 640861$")
+    public void get_the_test_data_for_test_case_640861() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS01_640861");
+    }
+    
+//  @583893_User1
+    @And("^get the test data for test case 583893_User1$")
+    public void get_the_test_data_for_test_case_583893user1() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS01_583893_1");
+    }
+    
+    
+    
 	
 	@And("^User clicks on the WIFAK_Application first link$")
 	public void user_clicks_on_the_wifakapplication_first_link() throws Throwable {
@@ -407,10 +428,9 @@ public class WIFAK_Application_Steps {
 			}
 		}
     	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsValidateSuccessMsg());
-    	String SuccessMsg = WIFAKapplicationObj.limitDetailsValidateSuccessMsg().getText();
-    	String substring = SuccessMsg.substring(23, 27);
-    	refID.append(substring);
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.successMessage());
+    	String SuccessMsg = WIFAKapplicationObj.successMessage().getText();
+    	refID = SuccessMsg.substring(23, 27);
     	System.err.println("Reference Number: "+refID);
     	
     	for (int i = 0; i < 2000; i++) {
@@ -581,6 +601,253 @@ public class WIFAK_Application_Steps {
     	Assert.assertNull(readOnly);
     }
 
+    
+//  @640861
+    @And("^User enter the down payment percentage in additional info tab$")
+    public void user_enter_the_down_payment_percentage_in_additional_info_tab() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.additionalTabDownPayPercent());
+    	WIFAKapplicationObj.additionalTabDownPayPercent().sendKeys(testData.get("Down Payment %"));
+    	WIFAKapplicationObj.additionalTabDownPayPercent().sendKeys(Keys.TAB);
+    }
+
+    @And("^User enter the down payment to vendor percentage in additional info tab$")
+    public void user_enter_the_down_payment_to_vendor_percentage_in_additional_info_tab() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.additionalTabDownPayToVendor());
+    	WIFAKapplicationObj.additionalTabDownPayToVendor().sendKeys(testData.get("Down Payment to Vendor %"));
+    	WIFAKapplicationObj.additionalTabDownPayToVendor().sendKeys(Keys.TAB);
+    }
+    
+    @Then("^User validate the visibility of Account No input box in limit details$")
+    public void user_validate_the_visibility_of_account_no_input_box_in_limit_details() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsAccNoInput());
+    	boolean accNoDisplayed = WIFAKapplicationObj.limitDetailsAccNoInput().isDisplayed();
+    	Assert.assertEquals(true, accNoDisplayed);
+    }
+
+    @Then("^User validate the visibility of Fund Transfer rate input box in limit details$")
+    public void user_validate_the_visibility_of_fund_transfer_rate_input_box_in_limit_details() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsFundTransferRateInput());
+    	boolean fundtransferdisplayed = WIFAKapplicationObj.limitDetailsFundTransferRateInput().isDisplayed();
+    	Assert.assertEquals(true, fundtransferdisplayed);
+    }
+    
+    
+//  @583893_User1
+    @And("^User1 clicks on the WIFAK_Application first link$")
+    public void user1_clicks_on_the_wifakapplication_first_link() throws Throwable {
+    	for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(WIFAKapplicationObj.wifakApplicationFirst());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.wifakApplicationFirst());
+		WIFAKapplicationObj.wifakApplicationFirst().click();
+    }
+
+    @And("^User1 clicks on the WIFAK_Application second link$")
+    public void user1_clicks_on_the_wifakapplication_second_link() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.wifakApplicationSecond());
+		WIFAKapplicationObj.wifakApplicationSecond().click();
+    }
+
+    @And("^User1 clicks on the approval committe recommedation menu$")
+    public void user1_clicks_on_the_approval_committe_recommedation_menu() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approvalCommitteeRecommendations());
+    	WIFAKapplicationObj.approvalCommitteeRecommendations().click();
+    }
+
+    @And("^User1 clicks on the clear button in approval committe recommedations menu$")
+    public void user1_clicks_on_the_clear_button_in_approval_committe_recommedations_menu() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approvalCommitteeClearBtn());
+    	WIFAKapplicationObj.approvalCommitteeClearBtn().click();
+    }
+
+    @And("^User1 double click on the any one record in approval committe recommedations menu$")
+    public void user1_double_click_on_the_any_one_record_in_approval_committe_recommedations_menu() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approvalCommitteeSelectRow());
+    	clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.approvalCommitteeSelectRow());
+    }
+
+    @And("^User1 clicks on the Recommend button in approval committe recommedations menu$")
+    public void user1_clicks_on_the_recommend_button_in_approval_committe_recommedations_menu() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approvalCommitteeCode());
+    	for (int i = 0; i <= 500; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(WIFAKapplicationObj.approvalCommitteeRecommendBtn());
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approvalCommitteeRecommendBtn());
+		WIFAKapplicationObj.approvalCommitteeRecommendBtn().click();
+		
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ButtonConfirmOk());
+    	WIFAKapplicationObj.ButtonConfirmOk().click();
+    	
+    }
+
+    @And("^User1 click the User1 recommended by name in recommend box$")
+    public void user1_click_the_user1_recommended_by_name_in_recommend_box() throws Throwable {
+    	for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(WIFAKapplicationObj.approvalCommitteeRecommendByLabel());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approvalCommitteeRecommendByLabel());
+    	WIFAKapplicationObj.approvalCommitteeRecommendByLabel().click();
+    }
+
+    @And("^User1 select the recommendation as approve in recommend box$")
+    public void user1_select_the_recommendation_as_approve_in_recommend_box() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approvalCommitteeRecommendationDropdown());
+//    	dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj.approvalCommitteeRecommendationDropdown(), testData.get("Recommendation"));
+    	dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj.approvalCommitteeRecommendationDropdown(), "Approve");
+    }
+
+    @And("^User1 click the comment code lookup option in recommend box$")
+    public void user1_click_the_comment_code_lookup_option_in_recommend_box() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approvalCommitteeRecommendationDropdownOption());
+    	for (int i = 0; i < 2000; i++) {
+			try {
+		    	WIFAKapplicationObj.approvalCommitteeCommentCodeLookup().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approvalCommitteeCommentCodeLookup());
+//    	WIFAKapplicationObj.approvalCommitteeCommentCodeLookup().click();
+    }
+
+    @And("^User1 double click the first row of comment code lookup in recommend box$")
+    public void user1_double_click_the_first_row_of_comment_code_lookup_in_recommend_box() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approvalCommitteeCommentCodeLookupFirstRow());
+    	clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.approvalCommitteeCommentCodeLookupFirstRow());
+    }
+
+    @And("^User1 clicks the more comments button in recommend box$")
+    public void user1_clicks_the_more_comments_button_in_recommend_box() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approvalCommitteeMoreCommentsBtn());
+    	WIFAKapplicationObj.approvalCommitteeMoreCommentsBtn().click();
+    }
+
+    @And("^User1 enter the some comments in more comments$")
+    public void user1_enter_the_some_comments_in_more_comments() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approvalCommitteeMoreCommentsInput());
+//    	WIFAKapplicationObj.approvalCommitteeMoreCommentsInput().sendKeys(testData.get("More Comments"));
+    	WIFAKapplicationObj.approvalCommitteeMoreCommentsInput().sendKeys("Test Comments");
+    }
+
+    @And("^User1 click the Ok button in more comments$")
+    public void user1_click_the_ok_button_in_more_comments() throws Throwable {
+    	for (int i = 0; i < 2000; i++) {
+			try {
+		    	WIFAKapplicationObj.approvalCommitteeMoreCommentsOkBtn().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approvalCommitteeMoreCommentsOkBtn());
+//    	WIFAKapplicationObj.approvalCommitteeMoreCommentsOkBtn().click();
+    }
+    
+    @When("^User1 click the Ok button in recommend box$")
+    public void user1_click_the_ok_button_in_recommend_box() throws Throwable {
+    	for (int i = 0; i < 2000; i++) {
+			try {
+		    	WIFAKapplicationObj.approvalCommitteeOkBtn().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}    	
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approvalCommitteeOkBtn());    	
+//    	WIFAKapplicationObj.approvalCommitteeOkBtn().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ButtonSuccessOk());
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.successMessage());
+    	String SuccessMsg = WIFAKapplicationObj.successMessage().getText();
+    	refID = SuccessMsg.substring(23, 27);
+    	System.err.println("Reference Number: "+refID);
+    	
+    	WIFAKapplicationObj.ButtonSuccessOk().click();
+    }
+
+    
+//  @583893_User2
+    @And("^User clicks on the search button in Application for financial facility main screen$")
+    public void user_clicks_on_the_search_button_in_application_for_financial_facility_main_screen() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.applicationFinancialFacilitySearchBtn());
+    	WIFAKapplicationObj.applicationFinancialFacilitySearchBtn().click();
+    }
+
+    @And("^User search the code in Application for financial facility main screen$")
+    public void user_search_the_code_in_application_for_financial_facility_main_screen() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.applicationFinancialFacilitySearchCode());
+    	WIFAKapplicationObj.applicationFinancialFacilitySearchCode().sendKeys("3691");
+    	WIFAKapplicationObj.applicationFinancialFacilitySearchCode().sendKeys(Keys.ENTER);
+    }
+
+    @And("^User double click searched record in Application for financial facility main screen$")
+    public void user_double_click_searched_record_in_application_for_financial_facility_main_screen() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.applicationFinancialFacilitySearchResult());
+    	clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.applicationFinancialFacilitySearchResult());
+    }
+
+    @And("^User clicks on the Approval committee button$")
+    public void user_clicks_on_the_approval_committee_button() throws Throwable {
+    	for (int i = 0; i <= 500; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(WIFAKapplicationObj.applicationFinancialFacilityApprovalCommittieeBtn());
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.applicationFinancialFacilityApprovalCommittieeBtn());
+    	WIFAKapplicationObj.applicationFinancialFacilityApprovalCommittieeBtn().click();
+    }
+
+    @And("^User click the User1 name in Recommented by column$")
+    public void user_click_the_user1_name_in_recommented_by_column() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.applicationFinancialFacilityApprovalCommittieeRecommendByLabel());
+    	WIFAKapplicationObj.applicationFinancialFacilityApprovalCommittieeRecommendByLabel().click();
+    }
+
+    @And("^User clicks on the more comments button$")
+    public void user_clicks_on_the_more_comments_button() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.applicationFinancialFacilityApprovalCommittieeMoreCommentsBtn());
+    	WIFAKapplicationObj.applicationFinancialFacilityApprovalCommittieeMoreCommentsBtn().click();
+    }
+
+    @Then("^User validate the more comments text in input field$")
+    public void user_validate_the_more_comments_text_in_input_field() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.applicationFinancialFacilityApprovalCommittieeMoreCommentsText());
+    	String text = WIFAKapplicationObj.applicationFinancialFacilityApprovalCommittieeMoreCommentsText().getAttribute("prevvalue");
+    	System.out.println("More Comments Text: "+ text);
+    }
 
 
 }

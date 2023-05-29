@@ -1,10 +1,14 @@
 package stepdefinitions;
 
+import java.util.Map;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import dataProvider.ConfigFileReader;
+import dataProvider.ExcelData;
 import helper.ClicksAndActionsHelper;
 import helper.DropDownHelper;
 import helper.JavascriptHelper;
@@ -25,8 +29,17 @@ public class IISParam_Steps {
 	DropDownHelper dropDownHelper = new DropDownHelper(driver);
 	Selenium_Actions selenium_Actions = new Selenium_Actions(driver);
 	
+	String path = System.getProperty("user.dir") +"\\TestData\\FMSTestData.xlsx";
+	ExcelData fmsTransactionsExcelData = new ExcelData(path,"IIS_Param_TestData","DataSet ID");
+	Map<String, String> testData;
+	
 	
 //	@665923_IISParam
+	 @And("^get the test data for test case 665923_IISParam$")
+	    public void get_the_test_data_for_test_case_665923iisparam() throws Throwable {
+		 testData = fmsTransactionsExcelData.getTestdata("DS01_665923");
+	    }
+	
 	@And("^User clicks on the parameter feature in IIS Param application$")
     public void user_clicks_on_the_parameter_feature_in_iis_param_application() throws Throwable {
         waitHelper.waitForElementwithFluentwait(driver, iisParamObj.IISParameterFeature());
@@ -63,16 +76,15 @@ public class IISParam_Steps {
 
     @And("^User enter the class code in maintanance under product class$")
     public void user_enter_the_class_code_in_maintanance_under_product_class() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, iisParamObj.productClassMainSearchClass());
-    	iisParamObj.productClassMainSearchClass().sendKeys("1");
-    	iisParamObj.productClassMainSearchClass().sendKeys(Keys.ENTER);
+    	waitHelper.waitForElementwithFluentwait(driver, iisParamObj.productClassMainSearchedRow());
+//    	iisParamObj.productClassMainSearchClass().sendKeys("1");
+    	iisParamObj.productClassMainSearchClass().sendKeys(testData.get("Class"));
     	iisParamObj.productClassMainSearchClass().sendKeys(Keys.ENTER);
     }
 
     @And("^User double click on the retrived data in maitanance under product class$")
     public void user_double_click_on_the_retrived_data_in_maitanance_under_product_class() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, iisParamObj.productClassMainSearchedRow());
-//    	Thread.sleep(5000);
+    	waitHelper.waitForElementwithFluentwait(driver, iisParamObj.productClassMainSearchRowLabel());
     	clicksAndActionsHelper.doubleClick(iisParamObj.productClassMainSearchedRow());
     }
 
@@ -102,14 +114,16 @@ public class IISParam_Steps {
     public void user_enter_the_value_in_number_of_payments_under_repayment_plan_tab() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, iisParamObj.repaymentTabNoOfPaymentInput());
     	iisParamObj.repaymentTabNoOfPaymentInput().clear();
-    	iisParamObj.repaymentTabNoOfPaymentInput().sendKeys("1");
+//    	iisParamObj.repaymentTabNoOfPaymentInput().sendKeys("1");
+    	iisParamObj.repaymentTabNoOfPaymentInput().sendKeys(testData.get("No of payment input"));
     	iisParamObj.repaymentTabNoOfPaymentInput().sendKeys(Keys.TAB);
     }
 
     @And("^User select the dropdown in number of payments under repayment plan tab$")
     public void user_select_the_dropdown_in_number_of_payments_under_repayment_plan_tab() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, iisParamObj.repaymentTabNoOfPaymentDropdown());
-    	dropDownHelper.SelectUsingVisibleText(iisParamObj.repaymentTabNoOfPaymentDropdown(), "Nearest 1");
+//    	dropDownHelper.SelectUsingVisibleText(iisParamObj.repaymentTabNoOfPaymentDropdown(), "Nearest 1");
+    	dropDownHelper.SelectUsingVisibleText(iisParamObj.repaymentTabNoOfPaymentDropdown(), testData.get("No of Payment Select"));
     }
     
     @Then("^User clicks save the button in maintanance under product class$")
@@ -129,22 +143,38 @@ public class IISParam_Steps {
 //  665923_FMSCore
     @And("^User clicks the limit details first row$")
     public void user_clicks_the_limit_details_first_row() throws Throwable {
-        
+    	waitHelper.waitForElementwithFluentwait(driver, iisParamObj.limitDetailsFirstRow());
+    	iisParamObj.limitDetailsFirstRow().click();
     }
 
     @And("^User clicks the repayment plan button under limit details tab$")
     public void user_clicks_the_repayment_plan_button_under_limit_details_tab() throws Throwable {
-        
+    	waitHelper.waitForElementwithFluentwait(driver, iisParamObj.limitDetailsRepaymentPlanBtn());
+    	iisParamObj.limitDetailsRepaymentPlanBtn().click();
     }
     
     @Then("^User validate the Rounding factor dropdown$")
     public void user_validate_the_rounding_factor_dropdown() throws Throwable {
-        
+    	for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(iisParamObj.fmsRepaymentPlanRoundingfactorDropdown());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+    	waitHelper.waitForElementwithFluentwait(driver, iisParamObj.fmsRepaymentPlanRoundingfactorDropdown());
+    	String roundingfactorDropdown = iisParamObj.fmsRepaymentPlanRoundingfactorDropdown().getText();
+    	Assert.assertEquals(testData.get("No of Payment Select"), roundingfactorDropdown);
     }
 
     @Then("^User validate the No of payments input$")
     public void user_validate_the_no_of_payments_input() throws Throwable {
-        
+    	waitHelper.waitForElementwithFluentwait(driver, iisParamObj.fmsRepaymentPlanNoOfPaymentsInput());
+    	String NoOfPaymentsInput = iisParamObj.fmsRepaymentPlanNoOfPaymentsInput().getText();
+    	Assert.assertEquals(testData.get("No of payment input"), NoOfPaymentsInput);
     }
 	
 

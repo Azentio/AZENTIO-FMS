@@ -96,3 +96,70 @@ When User clicks on the BM Recommendations button
 Then User validate the BM Recommendations tab is editable or not
 
 
+@640861
+Scenario: TSR - RIDB180129
+
+Given navigate to FMS application and login with valid credentials
+And get the test data for test case 640861
+And User clicks on the WIFAK_Application first link
+And User clicks on the WIFAK_Application second link
+And User clicks on the Application for financial facility link
+And User clicks the maintanance menu
+And User select the application for dropdown as new facility
+And User enter the CIF No in main info tab
+And User enter the facility type in main info tab
+And User enter the country of financing in main info tab
+And User enter the facility rating in main info tab
+And User clicks on the additional details tab
+And User enter the total value in additional info tab
+And User enter the expire date in additional info tab
+And User enter the down payment percentage in additional info tab
+And User enter the down payment to vendor percentage in additional info tab
+And User clicks the limit details tab
+And User clicks the add new record button in limit details tab
+And User enter the product class details
+Then User validate the visibility of Account No input box in limit details
+Then User validate the visibility of Fund Transfer rate input box in limit details
+
+
+
+@583893_User1
+Scenario: TSR - BTII170041
+
+Given User1 navigate to FMS application and login with valid credentials
+And get the test data for test case 583893_User1
+And User1 clicks on the WIFAK_Application first link
+And User1 clicks on the WIFAK_Application second link
+And User1 clicks on the approval committe recommedation menu
+And User1 clicks on the clear button in approval committe recommedations menu
+And User1 double click on the any one record in approval committe recommedations menu
+And User1 clicks on the Recommend button in approval committe recommedations menu
+And User1 click the User1 recommended by name in recommend box
+And User1 select the recommendation as approve in recommend box
+And User1 click the comment code lookup option in recommend box
+And User1 double click the first row of comment code lookup in recommend box
+And User1 clicks the more comments button in recommend box
+And User1 enter the some comments in more comments
+And User1 click the Ok button in more comments
+When User1 click the Ok button in recommend box
+
+
+@583893_User2
+Scenario: TSR - BTII170041
+
+Given navigate to FMS application and login with valid credentials
+#And get the test data for test case 583893_User2
+And User clicks on the WIFAK_Application first link
+And User clicks on the WIFAK_Application second link
+And User clicks on the Application for financial facility link
+And User clicks the maintanance menu
+And User clicks on the search button in Application for financial facility main screen
+And User search the code in Application for financial facility main screen
+And User double click searched record in Application for financial facility main screen
+And User clicks on the Approval committee button
+And User click the User1 name in Recommented by column
+And User clicks on the more comments button
+Then User validate the more comments text in input field
+
+
+

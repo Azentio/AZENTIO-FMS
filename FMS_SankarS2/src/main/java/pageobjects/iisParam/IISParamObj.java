@@ -43,6 +43,12 @@ public class IISParamObj {
 		return product_class_main_search_class;
 	}
 	
+	@FindBy(xpath = "//td[text()='Ijara']")
+	private WebElement product_class_main_search_row_label;
+	public WebElement productClassMainSearchRowLabel() {
+		return product_class_main_search_row_label;
+	}
+	
 	@FindBy(xpath = "//td[@id='td_iISProductClassListGridTbl_Id_M003MT_1_trsctrlclassVO.CLASS']")
 	private WebElement product_class_main_searched_row;
 	public WebElement productClassMainSearchedRow() {

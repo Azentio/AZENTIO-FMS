@@ -356,8 +356,8 @@ public class WIFAK_Application2_Steps {
 //			}
 //		}
     	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsValidateSuccessMsg());
-    	String SuccessMsg = WIFAKapplicationObj.limitDetailsValidateSuccessMsg().getText();
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.successMessage());
+    	String SuccessMsg = WIFAKapplicationObj.successMessage().getText();
     	String substring = SuccessMsg.substring(23, 27);
     	refID.append(substring);
     	

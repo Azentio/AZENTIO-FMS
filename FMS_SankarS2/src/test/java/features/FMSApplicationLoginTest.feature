@@ -3,6 +3,12 @@ Feature: To Test the FMS application login
 Scenario: To Test the login functionality of FMS application
 Given navigate to FMS application and login with valid credentials
 And logout from the application
+
+@LOGIN2
+Scenario: To Test the login functionality of FMS application
+Given User1 navigate to FMS application and login with valid credentials
+And logout from the application
+
 @LoginFMSparam
 Scenario: To Test the login functionality of FMS param application
 Given navigate to FMS param application and login with valid credentials
