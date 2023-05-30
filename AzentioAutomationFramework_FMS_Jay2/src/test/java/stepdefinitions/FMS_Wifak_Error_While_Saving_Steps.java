@@ -581,7 +581,42 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 	        
 	    }
 	    
-	    //-----------------------------@665893
+	    //-----------------------------@592970 TSR - AMANAUPG170182 - Holiday issue
 	    
+	    @Then("^Enter Holiday Date In Expiratin date in additional Details$")
+	    public void enter_holiday_date_in_expiratin_date_in_additional_details() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Expiratin_date_additional_Details());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Expiratin_date_additional_Details());
+			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Expiratin_date_additional_Details());
+			FMSWifakErrorWhileSavingObj.Expiratin_date_additional_Details().sendKeys("02/10/2022");
+			FMSWifakErrorWhileSavingObj.Expiratin_date_additional_Details().sendKeys(Keys.TAB);
+	    }
+
+	    @And("^Confirm the Requested Holiday date$")
+	    public void confirm_the_requested_holiday_date() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Confirm_theRequested_Holiday_date());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Confirm_theRequested_Holiday_date());
+			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Confirm_theRequested_Holiday_date());
+	    }
 	    
+	   
+	    @Then("^Enter Holiday date in Expected Payment Date in Limit Details SubMenu$")
+	    public void enter_holiday_date_in_expected_payment_date_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.ExpectedPaymenDate_inLimitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.ExpectedPaymenDate_inLimitDetails_SubMenu());
+			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.ExpectedPaymenDate_inLimitDetails_SubMenu());
+			FMSWifakErrorWhileSavingObj.ExpectedPaymenDate_inLimitDetails_SubMenu().sendKeys("02/10/2022");
+			FMSWifakErrorWhileSavingObj.ExpectedPaymenDate_inLimitDetails_SubMenu().sendKeys(Keys.TAB);
+	    }
+
+	   	    
+	    
+	    @And("^Confirm the Requested Holiday date in Limit Details SubMenu$")
+	    public void confirm_the_requested_holiday_date_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Confirm_theRequested_Holiday_date_In_LimitsDetails());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Confirm_theRequested_Holiday_date_In_LimitsDetails());
+			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Confirm_theRequested_Holiday_date_In_LimitsDetails());
+	    }
+	    
+	    //---------------
 }

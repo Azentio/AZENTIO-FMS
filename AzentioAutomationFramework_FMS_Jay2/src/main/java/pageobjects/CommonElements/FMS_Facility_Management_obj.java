@@ -31,19 +31,19 @@ public class FMS_Facility_Management_obj {
 		return Click_Application_Ref;
 	}
 	
-	@FindBy(id =  "spanLookup_facilityMgtMainApplicationRef_WIFT008MT")
-	private WebElement Click_Application_Ref_Search_button;
-	public WebElement Click_Application_Ref_Search_button() {
-		return Click_Application_Ref_Search_button;
+	@FindBy(id =  "facilityManagementForm_WIFT008MT_Status_key")
+	private WebElement Click_Random_button_In_Status_SubMenu;
+	public WebElement Click_Random_button_In_Status_SubMenu() {
+		return Click_Random_button_In_Status_SubMenu;
 	}
 	
-	@FindBy(id =  "facilityAdditionalDetailsTab_WIFT008MT")
-	private WebElement Click_Additional_Details;
-	public WebElement Click_Additional_Details() {
-		return Click_Additional_Details;
-	}
+//	@FindBy(id =  "facilityAdditionalDetailsTab_WIFT008MT")
+//	private WebElement Click_Additional_Details;
+//	public WebElement Click_Additional_Details() {
+//		return Click_Additional_Details;
+//	}
 	
-	@FindBy(id =  "facilityLimitDetailsTab_WIFT008MT")
+	@FindBy(xpath =  "//*[@id=\"facilityLimitDetailsTab_WIFT008MT\"]")
 	private WebElement Click_facility_Limit_Details;
 	public WebElement Click_facility_Limit_Details() {
 		return Click_facility_Limit_Details;
@@ -60,4 +60,11 @@ public class FMS_Facility_Management_obj {
 	public WebElement Enter_Previous_dataIn_MaturityDate() {
 		return Enter_Previous_dataIn_MaturityDate;
 	}
+	
+	@FindBy(xpath =  "//div[text()='[20158] Maturity Date cannot be Less than System Date']")
+	private WebElement Validate_dataIn_MaturityDate;
+	public WebElement Validate_dataIn_MaturityDate() {
+		return Validate_dataIn_MaturityDate;
+	}
+	
 }

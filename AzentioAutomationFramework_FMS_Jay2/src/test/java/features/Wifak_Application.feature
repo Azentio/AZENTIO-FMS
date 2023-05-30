@@ -148,16 +148,43 @@ Scenario: BAJI200117 - VAT on advance insurance is wrongly calculated - BAJI2000
     Then Click Facilities Management
     And Click Maintence Screen
     Then Click and Enter Application Ref No
-    And Click Application Ref Search button
-    Then Click Additional Details SunMenu
+  #  And Click Random button In Status SubMenu
+  #  Then Click Additional Details SunMenu
     And Click facility Limit Details
     Then Click ProductClass In facility Limit Details
     And Enter Previous data In MaturityDate
     
     
     
+    @592970
+    Scenario: TSR - AMANAUPG170182 - Holiday issue
+
+     Given navigate to FMS application2 and login with valid credentials
+    And Click Wifak Application first
+    And Click Wifak Application Second
+    And Click Application for financial facilities
+    And Click Maintenance
+    And Click and Select Application for
+    And Search CIF No
+    And Enter codeOn Facility Type
+    And Enter Code In Country of Financing
+    And Enter line Code On Facility Rating
+    And Click on additional Details
+    And Enter the Total Value
+    Then Enter Holiday Date In Expiratin date in additional Details
+    And  Confirm the Requested Holiday date 
+    And Click Save Button After Document Details 
+    And Click Ok Button In Waring Screen Document Details
+    And Click OK  Button In Sucess Screen Document Details
+    And Select limit Details
+    And Click Add button on limit Detail
+    And Enter ValueOn Product Class
+    Then Enter Holiday date in Expected Payment Date in Limit Details SubMenu
+    And  Confirm the Requested Holiday date in Limit Details SubMenu
+    And  Confirm the Requested Holiday date in Limit Details SubMenu
+    And Click Add button AfterEnter Value On Product Class
     
-    
+
     
     
     

@@ -330,6 +330,40 @@ public class FMS_Wifak_Error_While_Saving_Obj {
 		return Click_SaveButton_OnLimitDetails_Tab;
 	}
 	
+	//-------------- Holiday 
+	
+	@FindBy(id =  "applicationFacilityofferexpirydate_WIFT001MT")
+	private WebElement Expiratin_date_additional_Details;
+	public WebElement Expiratin_date_additional_Details(){
+		return Expiratin_date_additional_Details;
+	}
+	
+	@FindBy(id =  "_popup_path_sol_confirm_ok")
+	private WebElement Confirm_theRequested_Holiday_date;
+	public WebElement Confirm_theRequested_Holiday_date(){
+		return Confirm_theRequested_Holiday_date;
+	}
+	
+	@FindBy(id =  "_popup_path_sol_confirm_ok")
+	private WebElement Confirm_theRequested_Holiday_date_In_LimitsDetails;
+	public WebElement Confirm_theRequested_Holiday_date_In_LimitsDetails(){
+		return Confirm_theRequested_Holiday_date_In_LimitsDetails;
+	}
+	
+	
+	
+	@FindBy(id =  "applicationfacilityLimitDetailsEXPECTED_PAYMENT_DATE_WIFT001MT")
+	private WebElement Expected_Payment_Date_inLimit_Details_SubMenu;
+	public WebElement ExpectedPaymenDate_inLimitDetails_SubMenu(){
+		return Expected_Payment_Date_inLimit_Details_SubMenu;
+	}
+//	
+//	@FindBy(id =  "_popup_path_sol_confirm_ok")
+//	private WebElement Expected_Payment_Date_inLimit_Details_SubMenu;
+//	public WebElement ExpectedPaymenDate_inLimitDetails_SubMenu(){
+//		return Expected_Payment_Date_inLimit_Details_SubMenu;
+//	}
+	
 	@FindBy(xpath =  "//input[@id='_popup_path_sol_confirm_ok']")
 	private WebElement ClickOk_saveOn_Draft_WarrningScreen;
 	public WebElement getClickOk_saveOn_Draft_WarrningScreen() {
@@ -445,7 +479,7 @@ public class FMS_Wifak_Error_While_Saving_Obj {
 		return Ok_Button_In_Confirm_Screen;
 	}
 	
-	@FindBy(id =  "_popup_path_sol_confirm_ok")
+	@FindBy(id =  "_popup_path_sol_ok")
 	private WebElement Ok_Button_In_Sucess_Screen;
 	public WebElement Ok_Button_In_Sucess_Screen() {
 		return Ok_Button_In_Sucess_Screen;

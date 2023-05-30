@@ -1,6 +1,8 @@
 package stepdefinitions;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 import dataProvider.ConfigFileReader;
 import helper.ClicksAndActionsHelper;
@@ -37,20 +39,23 @@ public class FMS_Facilitics_Management_Steps {
     	waitHelper.waitForElementwithFluentwait(driver, FMS_FaciliticsManagementObj.Click_Application_Ref());
 		clicksAndActionsHelper.moveToElement(FMS_FaciliticsManagementObj.Click_Application_Ref());
 		clicksAndActionsHelper.clickOnElement(FMS_FaciliticsManagementObj.Click_Application_Ref());
-    }
+		FMS_FaciliticsManagementObj.Click_Application_Ref().sendKeys("3561");
+		FMS_FaciliticsManagementObj.Click_Application_Ref().sendKeys(Keys.TAB);
+		    }
+
     
-    @Then("^Click Additional Details SunMenu$")
-    public void click_additional_details_sunmenu() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, FMS_FaciliticsManagementObj.Click_Additional_Details());
-		clicksAndActionsHelper.moveToElement(FMS_FaciliticsManagementObj.Click_Additional_Details());
-		clicksAndActionsHelper.clickOnElement(FMS_FaciliticsManagementObj.Click_Additional_Details());
-    }
+//    @Then("^Click Additional Details SunMenu$")
+//    public void click_additional_details_sunmenu() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, FMS_FaciliticsManagementObj.Click_Additional_Details());
+//		clicksAndActionsHelper.moveToElement(FMS_FaciliticsManagementObj.Click_Additional_Details());
+//		clicksAndActionsHelper.clickOnElement(FMS_FaciliticsManagementObj.Click_Additional_Details());
+//    }
 
     @Then("^Click ProductClass In facility Limit Details$")
     public void click_productclass_in_facility_limit_details() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, FMS_FaciliticsManagementObj.DoubleClick_ProductClassIN_facility_Limit_Details());
 		clicksAndActionsHelper.moveToElement(FMS_FaciliticsManagementObj.DoubleClick_ProductClassIN_facility_Limit_Details());
-		clicksAndActionsHelper.clickOnElement(FMS_FaciliticsManagementObj.DoubleClick_ProductClassIN_facility_Limit_Details());
+		clicksAndActionsHelper.doubleClick(FMS_FaciliticsManagementObj.DoubleClick_ProductClassIN_facility_Limit_Details());
     }
 
     @And("^Click Maintence Screen$")
@@ -60,18 +65,29 @@ public class FMS_Facilitics_Management_Steps {
 		clicksAndActionsHelper.clickOnElement(FMS_FaciliticsManagementObj.Click_Maintenance_In_Facilities_Management());
     }
 
-    @And("^Click Application Ref Search button$")
-    public void click_application_ref_search_button() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, FMS_FaciliticsManagementObj.Click_Application_Ref_Search_button());
-		clicksAndActionsHelper.moveToElement(FMS_FaciliticsManagementObj.Click_Application_Ref_Search_button());
-		clicksAndActionsHelper.clickOnElement(FMS_FaciliticsManagementObj.Click_Application_Ref_Search_button());
-		FMS_FaciliticsManagementObj.Click_Application_Ref_Search_button().sendKeys("3561");
+    @And("^Click Random button In Status SubMenu$")
+    public void click_random_button_in_status_submenu() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, FMS_FaciliticsManagementObj.Click_Random_button_In_Status_SubMenu());
+		clicksAndActionsHelper.moveToElement(FMS_FaciliticsManagementObj.Click_Random_button_In_Status_SubMenu());
+		clicksAndActionsHelper.clickOnElement(FMS_FaciliticsManagementObj.Click_Random_button_In_Status_SubMenu());
+		Thread.sleep(5000);
     }
     @And("^Click facility Limit Details$")
     public void click_facility_limit_details() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, FMS_FaciliticsManagementObj.Click_facility_Limit_Details());
-		clicksAndActionsHelper.moveToElement(FMS_FaciliticsManagementObj.Click_facility_Limit_Details());
-		clicksAndActionsHelper.clickOnElement(FMS_FaciliticsManagementObj.Click_facility_Limit_Details());
+    //	waitHelper.waitForElementwithFluentwait(driver, FMS_FaciliticsManagementObj.Click_facility_Limit_Details());
+	//	clicksAndActionsHelper.moveToElement(FMS_FaciliticsManagementObj.Click_facility_Limit_Details());
+	//	clicksAndActionsHelper.clickOnElement(FMS_FaciliticsManagementObj.Click_facility_Limit_Details());
+		
+		for (int i = 0; i < 200; i++) {
+			try {
+				clicksAndActionsHelper.clickOnElement(FMS_FaciliticsManagementObj.Click_facility_Limit_Details());
+				break;
+			} catch (Exception e) {
+				if (i == 199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
     }
 
     @And("^Enter Previous data In MaturityDate$")
@@ -80,5 +96,6 @@ public class FMS_Facilitics_Management_Steps {
 		clicksAndActionsHelper.moveToElement(FMS_FaciliticsManagementObj.Enter_Previous_dataIn_MaturityDate());
 		clicksAndActionsHelper.clickOnElement(FMS_FaciliticsManagementObj.Enter_Previous_dataIn_MaturityDate());
 		FMS_FaciliticsManagementObj.Enter_Previous_dataIn_MaturityDate().sendKeys("04/01/2021");
+		Assert.assertEquals(true, FMS_FaciliticsManagementObj.Enter_Previous_dataIn_MaturityDate().isDisplayed());
     }
 }
