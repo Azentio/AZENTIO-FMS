@@ -619,4 +619,566 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 	    }
 	    
 	    //---------------
+	    
+	    //-------- 592279 TSR- SUPT170522 - Label missing limit Details
+	    
+	    
+	    @Then("^Check The Level Of Product Class In LImit Details SubMenu$")
+	    public void check_the_level_of_product_class_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.ProductClass_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.ProductClass_InLImitDetails_SubMenu());
+		//	clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Enter_Previous_dataIn_MaturityDate());
+		//	FMSWifakErrorWhileSavingObj.Enter_Previous_dataIn_MaturityDate().sendKeys("04/01/2021");
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.ProductClass_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of Case Non Case In LImit Details SubMenu$")
+	    public void check_the_level_of_case_non_case_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.CaseNonCase_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.CaseNonCase_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.CaseNonCase_InLImitDetails_SubMenu().isDisplayed());
+	      	    }
+
+	    @Then("^Check The Level Of Exchange Rate In LImit Details SubMenu$")
+	    public void check_the_level_of_exchange_rate_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.ExchangeRate_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.ExchangeRate_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.ExchangeRate_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of Down Payment Percentage In LImit Details SubMenu$")
+	    public void check_the_level_of_down_payment_percentage_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.DownPaymentPercentage_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.DownPaymentPercentage_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.DownPaymentPercentage_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of Details Down Payment To Vendor Percentage In LImit Details SubMenu$")
+	    public void check_the_level_of_details_down_payment_to_vendor_percentage_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.DownPaymentToVendorPerc_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.DownPaymentToVendorPerc_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.DownPaymentToVendorPerc_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of Total Down Payment Percentage In LImit Details SubMenu$")
+	    public void check_the_level_of_total_down_payment_percentage_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.TotalDownPaymentPerc_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.TotalDownPaymentPerc_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.TotalDownPaymentPerc_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of Total Facility Value In LImit Details SubMenu$")
+	    public void check_the_level_of_total_facility_value_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.TotalFacilityValue_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.TotalFacilityValue_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.TotalFacilityValue_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of Items In LImit Details SubMenu$")
+	    public void check_the_level_of_items_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Items_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Items_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.Items_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of Type In LImit Details SubMenu$")
+	    public void check_the_level_of_type_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Type_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Type_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.Type_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of Facility Value In LImit Details SubMenu$")
+	    public void check_the_level_of_facility_value_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.FacilityValue_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.FacilityValue_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.FacilityValue_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of CV Value In LImit Details SubMenu$")
+	    public void check_the_level_of_cv_value_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.CvValue_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.CvValue_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.CvValue_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of Down Payment AmountIn LImit Details SubMenu$")
+	    public void check_the_level_of_down_payment_amountin_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.DownPaymentAmount_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.DownPaymentAmount_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.DownPaymentAmount_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of Down Payment To Vendor Amt In LImit Details SubMenu$")
+	    public void check_the_level_of_down_payment_to_vendor_amt_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.DownPaymentToVendorAmt_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.DownPaymentToVendorAmt_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.DownPaymentToVendorAmt_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of  Total Down Payment In LImit Details SubMenu$")
+	    public void check_the_level_of_total_down_payment_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.TotalDownPayment_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.TotalDownPayment_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.TotalDownPayment_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of Value Date In LImit Details SubMenu$")
+	    public void check_the_level_of_value_date_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.ValueDate_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.ValueDate_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.ValueDate_InLImitDetails_SubMenu().isDisplayed());
+	    }
+	    
+	    @Then("^Check The Level Of Maturity Date In LImit Details SubMenu$")
+	    public void check_the_level_of_maturity_date_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Maturity_Date_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Maturity_Date_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.Maturity_Date_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of  Status In LImit Details SubMenu$")
+	    public void check_the_level_of_status_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.status_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.status_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.status_InLImitDetails_SubMenu().isDisplayed());  
+	    }
+
+	    @Then("^Check The Level Of  Account No In LImit Details SubMenu$")
+	    public void check_the_level_of_account_no_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.AccountNo_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.AccountNo_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.AccountNo_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of  Account Name In LImit Details SubMenu$")
+	    public void check_the_level_of_account_name_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.AccountName_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.AccountName_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.AccountName_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of    TFA Margin Rate_In LImit Details SubMenu$")
+	    public void check_the_level_of_tfa_margin_ratein_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.TFAMarginRate_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.TFAMarginRate_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.TFAMarginRate_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of    Sub Eco Sector In LImit Details SubMenu$")
+	    public void check_the_level_of_sub_eco_sector_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.SubEcoSector_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.SubEcoSector_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.SubEcoSector_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of    Discounting Margin percentage In LImit Details SubMenu$")
+	    public void check_the_level_of_discounting_margin_percentage_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.DiscountingMarginPer_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.DiscountingMarginPer_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.DiscountingMarginPer_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of    Payment Method In LImit Details SubMenu$")
+	    public void check_the_level_of_payment_method_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.PaymentMethod_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.PaymentMethod_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.PaymentMethod_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of    Installment Amount In LImit Details SubMenu$")
+	    public void check_the_level_of_installment_amount_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.InstallmentAmount_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.InstallmentAmount_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.InstallmentAmount_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of    Security Deposit Amount In LImit Details SubMenu$")
+	    public void check_the_level_of_security_deposit_amount_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.SecurityDepositAmount_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.SecurityDepositAmount_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.SecurityDepositAmount_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of    Cap Rate In LImit Details SubMenu$")
+	    public void check_the_level_of_cap_rate_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.CapRate_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.CapRate_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.CapRate_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of    floor Rate Method In LImit Details SubMenu$")
+	    public void check_the_level_of_floor_rate_method_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.floorRateMethod_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.floorRateMethod_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.floorRateMethod_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of    Credit Spread In LImit Details SubMenu$")
+	    public void check_the_level_of_credit_spread_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.CreditSpread_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.CreditSpread_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.CreditSpread_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of    Sublimit Lower Limit Amount In LImit Details SubMenu$")
+	    public void check_the_level_of_sublimit_lower_limit_amount_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.SublimitLowerLimitAmount_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.SublimitLowerLimitAmount_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.SublimitLowerLimitAmount_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of Expected Payment Date In LImit Details SubMenu$")
+	    public void check_the_level_of_expected_payment_date_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.ExpectedPaymenDate_inLimitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.ExpectedPaymenDate_inLimitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.ExpectedPaymenDate_inLimitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of Checking On In LImit Details SubMenu$")
+	    public void check_the_level_of_checking_on_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.CheckingOn_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.CheckingOn_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.CheckingOn_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of    Fund Transfer Rate In LImit Details SubMenu$")
+	    public void check_the_level_of_fund_transfer_rate_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.FundTransferRate_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.FundTransferRate_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.FundTransferRate_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of    Eco Sector In LImit Details SubMenu$")
+	    public void check_the_level_of_eco_sector_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.EcoSector_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.EcoSector_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.EcoSector_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of    TFAT enure Days In LImit Details SubMenu$")
+	    public void check_the_level_of_tfat_enure_days_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.TFATenureDays_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.TFATenureDays_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.TFATenureDays_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of    Remarks In LImit Details SubMenu$")
+	    public void check_the_level_of_remarks_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Remarks_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Remarks_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.Remarks_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of    Purpose of financing In LImit Details SubMenu$")
+	    public void check_the_level_of_purpose_of_financing_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Purposeoffinancing_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Purposeoffinancing_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.Purposeoffinancing_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of    No of Installments In LImit Details SubMenu$")
+	    public void check_the_level_of_no_of_installments_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.NoofInstallments_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.NoofInstallments_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.NoofInstallments_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of    Amended Security Deposit Amount In LImit Details SubMenu$")
+	    public void check_the_level_of_amended_security_deposit_amount_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.AmendedSecurityDepositAmount_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.AmendedSecurityDepositAmount_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.AmendedSecurityDepositAmount_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of    selling price In LImit Details SubMenu$")
+	    public void check_the_level_of_selling_price_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.selling_price_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.selling_price_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.selling_price_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of    Floor Rate Percentage In LImit Details SubMenu$")
+	    public void check_the_level_of_floor_rate_percentage_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.FloorRatePercentage_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.FloorRatePercentage_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.FloorRatePercentage_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of    Sublimit Lower Limit Percentage In LImit Details SubMenu$")
+	    public void check_the_level_of_sublimit_lower_limit_percentage_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.SublimitLowerLimitPerc_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.SublimitLowerLimitPerc_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.SublimitLowerLimitPerc_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of    Clean Flag In LImit Details SubMenu$")
+	    public void check_the_level_of_clean_flag_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.CleanFlag_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.CleanFlag_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.CleanFlag_InLImitDetails_SubMenu().isDisplayed());
+	    }
+	    
+	    
+	    @Then("^Check The Level Of Revolving One Off In LImit Details SubMenu$")
+	    public void check_the_level_of_revolving_one_off_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.RevolvingOneOff_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.RevolvingOneOff_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.RevolvingOneOff_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    
+	    
+	    @Then("^Check The Level Of Penalty On Due Amount In LImit Details SubMenu$")
+	    public void check_the_level_of_penalty_on_due_amount_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.PenaltyOnDueAmount_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.PenaltyOnDueAmount_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.PenaltyOnDueAmount_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of charges type In LImit Details SubMenu$")
+	    public void check_the_level_of_charges_type_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.chargestype_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.chargestype_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.chargestype_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of PPR In LImit Details SubMenu$")
+	    public void check_the_level_of_ppr_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.PPR_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.PPR_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.PPR_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of BUDGET ALLOCATION In LImit Details SubMenu$")
+	    public void check_the_level_of_budget_allocation_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.PPR_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.PPR_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.PPR_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of comments and conditions In LImit Details SubMenu$")
+	    public void check_the_level_of_comments_and_conditions_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.comments_and_conditions_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.comments_and_conditions_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.comments_and_conditions_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of Maximum Tenure Periodicity No key In LImit Details SubMenu$")
+	    public void check_the_level_of_maximum_tenure_periodicity_no_key_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.MaximumTenure_PeriodicityNo_key_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.MaximumTenure_PeriodicityNo_key_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.MaximumTenure_PeriodicityNo_key_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of Minimum Tenure Periodicity No In LImit Details SubMenu$")
+	    public void check_the_level_of_minimum_tenure_periodicity_no_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.MinimumTenure_PeriodicityNo_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.MinimumTenure_PeriodicityNo_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.MinimumTenure_PeriodicityNo_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of Maximum Tenure for financing PeriodicityNo key In LImit Details SubMenu$")
+	    public void check_the_level_of_maximum_tenure_for_financing_periodicityno_key_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.MaximumTenureforfinancing_PeriodicityNo_key_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.MaximumTenureforfinancing_PeriodicityNo_key_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.MaximumTenureforfinancing_PeriodicityNo_key_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of Floating Rate In LImit Details SubMenu$")
+	    public void check_the_level_of_floating_rate_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.FloatingRate_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.FloatingRate_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.FloatingRate_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of Floating Rate Periodi city Type In LImit Details SubMenu$")
+	    public void check_the_level_of_floating_rate_periodi_city_type_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.FloatingRatePeriodicityType_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.FloatingRatePeriodicityType_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.FloatingRatePeriodicityType_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of Total Yield In LImit Details SubMenu$")
+	    public void check_the_level_of_total_yield_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.TotalYield_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.TotalYield_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.TotalYield_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of  limit lip start dat In LImit Details SubMenu$")
+	    public void check_the_level_of_limit_lip_start_dat_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.limitlipstartdate_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.limitlipstartdate_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.limitlipstartdate_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of zero entry cost In LImit Details SubMenu$")
+	    public void check_the_level_of_zero_entry_cost_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.zeroentrycost_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.zeroentrycost_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.zeroentrycost_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of  Apply PenaltyIn LImit Details SubMenu$")
+	    public void check_the_level_of_apply_penaltyin_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.ApplyPenalty_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.ApplyPenalty_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.ApplyPenalty_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of Grace Period_ In LImit Details SubMenu$")
+	    public void check_the_level_of_grace_period_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.GracePeriod_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.GracePeriod_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.GracePeriod_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of Vat code In LImit Details SubMenu$")
+	    public void check_the_level_of_vat_code_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Vatcode_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Vatcode_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.Vatcode_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of REGIMENTAL AGENT In LImit Details SubMenu$")
+	    public void check_the_level_of_regimental_agent_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.REGIMENTAL_AGENT_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.REGIMENTAL_AGENT_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.REGIMENTAL_AGENT_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of  CONTRACTED In LImit Details SubMenu$")
+	    public void check_the_level_of_contracted_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.CONTRACTED_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.CONTRACTED_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.CONTRACTED_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of  transaction cy In LImit Details SubMenu$")
+	    public void check_the_level_of_transaction_cy_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.transaction_cy_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.transaction_cy_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.transaction_cy_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of Maximum Tenure Periodicity Type key In LImit Details SubMenu$")
+	    public void check_the_level_of_maximum_tenure_periodicity_type_key_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.MaximumTenure_PeriodicityType_key_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.MaximumTenure_PeriodicityType_key_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.MaximumTenure_PeriodicityType_key_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of Minimum Tenure PeriodicityType key In LImit Details SubMenu$")
+	    public void check_the_level_of_minimum_tenure_periodicitytype_key_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.MinimumTenure_PeriodicityType_key_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.MinimumTenure_PeriodicityType_key_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.MinimumTenure_PeriodicityType_key_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of  Maximum Tenure for financing PeriodicityType key In LImit Details SubMenu$")
+	    public void check_the_level_of_maximum_tenure_for_financing_periodicitytype_key_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.MaximumTenureforfinancing_PeriodicityType_key_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.MaximumTenureforfinancing_PeriodicityType_key_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.MaximumTenureforfinancing_PeriodicityType_key_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of  Floating Rate Periodi city In LImit Details SubMenu$")
+	    public void check_the_level_of_floating_rate_periodi_city_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.FloatingRatePeriodicit_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.FloatingRatePeriodicit_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.FloatingRatePeriodicit_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of   Margin Rate In LImit Details SubMenu$")
+	    public void check_the_level_of_margin_rate_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.MarginRate_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.MarginRate_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.MarginRate_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of  lip perioIn LImit Details SubMenu$")
+	    public void check_the_level_of_lip_perioin_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.lip_period_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.lip_period_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.lip_period_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of  lip period amende In LImit Details SubMenu$")
+	    public void check_the_level_of_lip_period_amende_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.lip_period_amende_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.lip_period_amende_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.lip_period_amende_InLImitDetails_SubMenu().isDisplayed());
+	    }
+	    
+	    
+	    
+	    @Then("^Check The Level Of Transcation Type In LImit Details SubMenu$")
+	    public void check_the_level_of_transcation_type_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.TranscationType_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.TranscationType_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.TranscationType_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of Acc No In LImit Details SubMenu$")
+	    public void check_the_level_of_acc_no_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.acc_no_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.acc_no_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.acc_no_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @Then("^Check The Level Of  Close Button In LImit Details SubMenu$")
+	    public void check_the_level_of_close_button_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.close_btn_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.close_btn_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.close_btn_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of  Transcation Maturity In LImit Details SubMenu$")
+	    public void check_the_level_of_transcation_maturity_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.TranscationMaturity_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.TranscationMaturity_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.TranscationMaturity_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of  Bank No In LImit Details SubMenu$")
+	    public void check_the_level_of_bank_no_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.bank_no_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.bank_no_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.bank_no_InLImitDetails_SubMenu().isDisplayed());
+	    }
+
+	    @And("^Check The Level Of  Add Button In LImit Details SubMenu$")
+	    public void check_the_level_of_add_button_in_limit_details_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.acc_no_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.acc_no_InLImitDetails_SubMenu());
+			Assert.assertEquals(true, FMSWifakErrorWhileSavingObj.acc_no_InLImitDetails_SubMenu().isDisplayed());
+	    }
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
 }

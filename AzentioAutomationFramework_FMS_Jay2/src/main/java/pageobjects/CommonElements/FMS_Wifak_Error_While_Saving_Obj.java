@@ -516,6 +516,467 @@ public class FMS_Wifak_Error_While_Saving_Obj {
 	
 	
 		
+	//-------- 592279 TSR- SUPT170522 - Label missing limit Details
 	
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_Item_Key")
+	private WebElement Items_InLImitDetails_SubMenu;
+	public WebElement Items_InLImitDetails_SubMenu() {
+		return Items_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_ProductClass_key")
+	private WebElement ProductClass_InLImitDetails_SubMenu;
+	public WebElement ProductClass_InLImitDetails_SubMenu() {
+		return ProductClass_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_ProductClass_key")
+	private WebElement Type_InLImitDetails_SubMenu;
+	public WebElement Type_InLImitDetails_SubMenu() {
+		return Type_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_CashNonCash_key")
+	private WebElement CaseNonCase_InLImitDetails_SubMenu;
+	public WebElement CaseNonCase_InLImitDetails_SubMenu() {
+		return CaseNonCase_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_Facilityvalue_key")
+	private WebElement FacilityValue_InLImitDetails_SubMenu;
+	public WebElement FacilityValue_InLImitDetails_SubMenu() {
+		return FacilityValue_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_Exchangerate_key")
+	private WebElement ExchangeRate_InLImitDetails_SubMenu;
+	public WebElement ExchangeRate_InLImitDetails_SubMenu() {
+		return ExchangeRate_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_CVValue_key")
+	private WebElement CvValue_InLImitDetails_SubMenu;
+	public WebElement CvValue_InLImitDetails_SubMenu() {
+		return CvValue_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_DownPayment_key")
+	private WebElement DownPaymentPercentage_InLImitDetails_SubMenu;
+	public WebElement DownPaymentPercentage_InLImitDetails_SubMenu() {
+		return DownPaymentPercentage_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_DownPaymentAmount_key")
+	private WebElement DownPaymentAmount_InLImitDetails_SubMenu;
+	public WebElement DownPaymentAmount_InLImitDetails_SubMenu() {
+		return DownPaymentAmount_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "lbl_applicationFacilityLimitDetailsDownPaymentToVendorPerc_WIFT001MT")
+	private WebElement DownPaymentToVendorPerc_InLImitDetails_SubMenu;
+	public WebElement DownPaymentToVendorPerc_InLImitDetails_SubMenu() {
+		return DownPaymentToVendorPerc_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "lbl_applFacilityLimitDetailsDownPaymentToVendorAmt_WIFT001MT")
+	private WebElement DownPaymentToVendorAmt_InLImitDetails_SubMenu;
+	public WebElement DownPaymentToVendorAmt_InLImitDetails_SubMenu() {
+		return DownPaymentToVendorAmt_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "lbl_applFacilityLimitDetailsTotalDownPaymentPerc_WIFT001MT")
+	private WebElement TotalDownPaymentPerc_InLImitDetails_SubMenu;
+	public WebElement TotalDownPaymentPerc_InLImitDetails_SubMenu() {
+		return TotalDownPaymentPerc_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "lbl_applFacilityLimitDetailsTotalDownPayment_WIFT001MT")
+	private WebElement TotalDownPayment_InLImitDetails_SubMenu;
+	public WebElement TotalDownPayment_InLImitDetails_SubMenu() {
+		return TotalDownPayment_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_TotalFacilityValue_key")
+	private WebElement TotalFacilityValue_InLImitDetails_SubMenu;
+	public WebElement TotalFacilityValue_InLImitDetails_SubMenu() {
+		return TotalFacilityValue_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_value_date_key")
+	private WebElement ValueDate_InLImitDetails_SubMenu;
+	public WebElement ValueDate_InLImitDetails_SubMenu() {
+		return ValueDate_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_maturity_date_key")
+	private WebElement Maturity_Date_InLImitDetails_SubMenu;
+	public WebElement Maturity_Date_InLImitDetails_SubMenu() {
+		return Maturity_Date_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_ExpectedPaymentDate_key")
+	private WebElement ExpectedPaymentDate_InLImitDetails_SubMenu;
+	public WebElement ExpectedPaymentDate_InLImitDetails_SubMenu() {
+		return ExpectedPaymentDate_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_status_key")
+	private WebElement status_InLImitDetails_SubMenu;
+	public WebElement status_InLImitDetails_SubMenu() {
+		return status_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_checkingOn_key")
+	private WebElement CheckingOn_InLImitDetails_SubMenu;
+	public WebElement CheckingOn_InLImitDetails_SubMenu() {
+		return CheckingOn_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_Account_No_key")
+	private WebElement AccountNo_InLImitDetails_SubMenu;
+	public WebElement AccountNo_InLImitDetails_SubMenu() {
+		return AccountNo_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "lbl_applicationfacilityLimitDetailsACC_Desc_WIFT001MT")
+	private WebElement AccountName_InLImitDetails_SubMenu;
+	public WebElement AccountName_InLImitDetails_SubMenu() {
+		return AccountName_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_FundTransferRate_key")
+	private WebElement FundTransferRate_InLImitDetails_SubMenu;
+	public WebElement FundTransferRate_InLImitDetails_SubMenu() {
+		return FundTransferRate_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_TFAMarginRate_key")
+	private WebElement TFAMarginRate_InLImitDetails_SubMenu;
+	public WebElement TFAMarginRate_InLImitDetails_SubMenu() {
+		return TFAMarginRate_InLImitDetails_SubMenu;
+	}
+	 
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_EcoSector_key")
+	private WebElement EcoSector_InLImitDetails_SubMenu;
+	public WebElement EcoSector_InLImitDetails_SubMenu() {
+		return EcoSector_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_SubEcoSector_key")
+	private WebElement SubEcoSector_InLImitDetails_SubMenu;
+	public WebElement SubEcoSector_InLImitDetails_SubMenu() {
+		return SubEcoSector_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_TFA_Tenure_Days_Key")
+	private WebElement TFATenureDays_InLImitDetails_SubMenu;
+	public WebElement TFATenureDays_InLImitDetails_SubMenu() {
+		return TFATenureDays_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_DiscountingMarginPer_key")
+	private WebElement DiscountingMarginPer_InLImitDetails_SubMenu;
+	public WebElement DiscountingMarginPer_InLImitDetails_SubMenu() {
+		return DiscountingMarginPer_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_Remarks_key")
+	private WebElement Remarks_InLImitDetails_SubMenu;
+	public WebElement Remarks_InLImitDetails_SubMenu() {
+		return Remarks_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_Payment_method_key")
+	private WebElement PaymentMethod_InLImitDetails_SubMenu;
+	public WebElement PaymentMethod_InLImitDetails_SubMenu() {
+		return PaymentMethod_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_Purpose_of_financing_key")
+	private WebElement Purposeoffinancing_InLImitDetails_SubMenu;
+	public WebElement Purposeoffinancing_InLImitDetails_SubMenu() {
+		return Purposeoffinancing_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_InstallmentAmount_key")
+	private WebElement InstallmentAmount_InLImitDetails_SubMenu;
+	public WebElement InstallmentAmount_InLImitDetails_SubMenu() {
+		return InstallmentAmount_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_NoofInstallments_key")
+	private WebElement NoofInstallments_InLImitDetails_SubMenu;
+	public WebElement NoofInstallments_InLImitDetails_SubMenu() {
+		return NoofInstallments_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_SecurityDepositAmount_key")
+	private WebElement SecurityDepositAmount_InLImitDetails_SubMenu;
+	public WebElement SecurityDepositAmount_InLImitDetails_SubMenu() {
+		return SecurityDepositAmount_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_AmendedSecurityDepositAmount_key")
+	private WebElement AmendedSecurityDepositAmount_InLImitDetails_SubMenu;
+	public WebElement AmendedSecurityDepositAmount_InLImitDetails_SubMenu() {
+		return AmendedSecurityDepositAmount_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_cap_rate_key")
+	private WebElement CapRate_InLImitDetails_SubMenu;
+	public WebElement CapRate_InLImitDetails_SubMenu() {
+		return CapRate_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_selling_price_key")
+	private WebElement selling_price_InLImitDetails_SubMenu;
+	public WebElement selling_price_InLImitDetails_SubMenu() {
+		return selling_price_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_floor_rate_method_key")
+	private WebElement floorRateMethod_InLImitDetails_SubMenu;
+	public WebElement floorRateMethod_InLImitDetails_SubMenu() {
+		return floorRateMethod_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_floor_rate_percentage_key")
+	private WebElement FloorRatePercentage_InLImitDetails_SubMenu;
+	public WebElement FloorRatePercentage_InLImitDetails_SubMenu() {
+		return FloorRatePercentage_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_credit_spread_key")
+	private WebElement CreditSpread_InLImitDetails_SubMenu;
+	public WebElement CreditSpread_InLImitDetails_SubMenu() {
+		return CreditSpread_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_sublimit_lower_limit_perc_key")
+	private WebElement SublimitLowerLimitPerc_InLImitDetails_SubMenu;
+	public WebElement SublimitLowerLimitPerc_InLImitDetails_SubMenu() {
+		return SublimitLowerLimitPerc_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_sublimit_lower_limit_amount_key")
+	private WebElement SublimitLowerLimitAmount_InLImitDetails_SubMenu;
+	public WebElement SublimitLowerLimitAmount_InLImitDetails_SubMenu() {
+		return SublimitLowerLimitAmount_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "lbl_applicationfacilityLimitDetailsCLEAN_FLAG_WIFT001MT")
+	private WebElement CleanFlag_InLImitDetails_SubMenu;
+	public WebElement CleanFlag_InLImitDetails_SubMenu() {
+		return CleanFlag_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_Revolving_One_off_key")
+	private WebElement RevolvingOneOff_InLImitDetails_SubMenu;
+	public WebElement RevolvingOneOff_InLImitDetails_SubMenu() {
+		return RevolvingOneOff_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "lbl_applicationFacilityLimitApplyPenalty_WIFT001MT")
+	private WebElement ApplyPenalty_InLImitDetails_SubMenu;
+	public WebElement ApplyPenalty_InLImitDetails_SubMenu() {
+		return ApplyPenalty_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "lbl_applicationFacilitylimitPenaltyOnDueAmount_WIFT001MT")
+	private WebElement PenaltyOnDueAmount_InLImitDetails_SubMenu;
+	public WebElement PenaltyOnDueAmount_InLImitDetails_SubMenu() {
+		return PenaltyOnDueAmount_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "lbl_applicationFacilitylimitGracePeriod_WIFT001MT")
+	private WebElement GracePeriod_InLImitDetails_SubMenu;
+	public WebElement GracePeriod_InLImitDetails_SubMenu() {
+		return GracePeriod_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "lbl_applicationFacilitylimityielddetchargestype_WIFT001MT")
+	private WebElement chargestype_InLImitDetails_SubMenu;
+	public WebElement chargestype_InLImitDetails_SubMenu() {
+		return chargestype_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_Vat_code_key")
+	private WebElement Vatcode_InLImitDetails_SubMenu;
+	public WebElement Vatcode_InLImitDetails_SubMenu() {
+		return Vatcode_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "lbl_applicationfacilityLimitDetails_PPR_YN_WIFT001MT")
+	private WebElement PPR_InLImitDetails_SubMenu;
+	public WebElement PPR_InLImitDetails_SubMenu() {
+		return PPR_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "lbl_applicationfacilityLimitDetails_REGIMENTAL_AGENT_WIFT001MT")
+	private WebElement REGIMENTAL_AGENT_InLImitDetails_SubMenu;
+	public WebElement REGIMENTAL_AGENT_InLImitDetails_SubMenu() {
+		return REGIMENTAL_AGENT_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "lbl_applicationfacilityLimitDetails_BUDGET_ALLOCATION_WIFT001MT")
+	private WebElement BUDGET_ALLOCATION_InLImitDetails_SubMenu;
+	public WebElement BUDGET_ALLOCATION_InLImitDetails_SubMenu() {
+		return BUDGET_ALLOCATION_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "lbl_applicationfacilityLimitDetails_CONTRACTED_YN_WIFT001MT")
+	private WebElement CONTRACTED_InLImitDetails_SubMenu;
+	public WebElement CONTRACTED_InLImitDetails_SubMenu() {
+		return CONTRACTED_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_comments_and_conditions_key")
+	private WebElement comments_and_conditions_InLImitDetails_SubMenu;
+	public WebElement comments_and_conditions_InLImitDetails_SubMenu() {
+		return comments_and_conditions_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_transaction_cy")
+	private WebElement transaction_cy_InLImitDetails_SubMenu;
+	public WebElement transaction_cy_InLImitDetails_SubMenu() {
+		return transaction_cy_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_MaximumTenure_PeriodicityNo_key")
+	private WebElement MaximumTenure_PeriodicityNo_key_InLImitDetails_SubMenu;
+	public WebElement MaximumTenure_PeriodicityNo_key_InLImitDetails_SubMenu() {
+		return MaximumTenure_PeriodicityNo_key_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_MaximumTenure_PeriodicityType_key")
+	private WebElement MaximumTenure_PeriodicityType_key_InLImitDetails_SubMenu;
+	public WebElement MaximumTenure_PeriodicityType_key_InLImitDetails_SubMenu() {
+		return MaximumTenure_PeriodicityType_key_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_MinimumTenure_PeriodicityNo_key")
+	private WebElement MinimumTenure_PeriodicityNo_InLImitDetails_SubMenu;
+	public WebElement MinimumTenure_PeriodicityNo_InLImitDetails_SubMenu() {
+		return MinimumTenure_PeriodicityNo_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_MinimumTenure_PeriodicityType_key")
+	private WebElement MinimumTenure_PeriodicityType_key_InLImitDetails_SubMenu;
+	public WebElement MinimumTenure_PeriodicityType_key_InLImitDetails_SubMenu() {
+		return MinimumTenure_PeriodicityType_key_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_MaximumTenureforfinancing_PeriodicityNo_key")
+	private WebElement MaximumTenureforfinancing_PeriodicityNo_key_InLImitDetails_SubMenu;
+	public WebElement MaximumTenureforfinancing_PeriodicityNo_key_InLImitDetails_SubMenu() {
+		return MaximumTenureforfinancing_PeriodicityNo_key_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_MaximumTenureforfinancing_PeriodicityType_key")
+	private WebElement MaximumTenureforfinancing_PeriodicityType_key_InLImitDetails_SubMenu;
+	public WebElement MaximumTenureforfinancing_PeriodicityType_key_InLImitDetails_SubMenu() {
+		return MaximumTenureforfinancing_PeriodicityType_key_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_FloatingRate_key")
+	private WebElement FloatingRate_InLImitDetails_SubMenu;
+	public WebElement FloatingRate_InLImitDetails_SubMenu() {
+		return FloatingRate_InLImitDetails_SubMenu;
+	}
+	
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_FloatingRatePeriodicity_key")
+	private WebElement FloatingRatePeriodicit_InLImitDetails_SubMenu;
+	public WebElement FloatingRatePeriodicit_InLImitDetails_SubMenu() {
+		return FloatingRatePeriodicit_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_FloatingRatePeriodicityType_key")
+	private WebElement FloatingRatePeriodicityType_InLImitDetails_SubMenu;
+	public WebElement FloatingRatePeriodicityType_InLImitDetails_SubMenu() {
+		return FloatingRatePeriodicityType_InLImitDetails_SubMenu;
+	}
+	
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_MarginRate_key")
+	private WebElement MarginRate_InLImitDetails_SubMenu;
+	public WebElement MarginRate_InLImitDetails_SubMenu() {
+		return MarginRate_InLImitDetails_SubMenu;
+	}
+	
+
+	@FindBy(id =  "lbl_applicationFacilityLimitTotalYield_WIFT001MT")
+	private WebElement TotalYield_InLImitDetails_SubMenu;
+	public WebElement TotalYield_InLImitDetails_SubMenu() {
+		return TotalYield_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "lbl_applicationFacilitylimitlipdetlipperiod_WIFT001MT")
+	private WebElement lip_period_InLImitDetails_SubMenu;
+	public WebElement lip_period_InLImitDetails_SubMenu() {
+		return lip_period_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "lbl_applicationFacilitylimitlipstartdate_WIFT001MT")
+	private WebElement limitlipstartdate_InLImitDetails_SubMenu;
+	public WebElement limitlipstartdate_InLImitDetails_SubMenu() {
+		return limitlipstartdate_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "lbl_applicationFacilitylimitlipdetlipperiodamended_WIFT001MT")
+	private WebElement lip_period_amende_InLImitDetails_SubMenu;
+	public WebElement lip_period_amende_InLImitDetails_SubMenu() {
+		return lip_period_amende_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "lbl_applicationFacilitylimitzeroentrycost_WIFT001MT")
+	private WebElement zeroentrycost_InLImitDetails_SubMenu;
+	public WebElement zeroentrycost_InLImitDetails_SubMenu() {
+		return zeroentrycost_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "lbl_applicationFacilityLimitTranscationMaturity_WIFT001MT")
+	private WebElement TranscationMaturity_InLImitDetails_SubMenu;
+	public WebElement TranscationMaturity_InLImitDetails_SubMenu() {
+		return TranscationMaturity_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "lbl_applicationFacilityLimitTranscationType_WIFT001MT")
+	private WebElement TranscationType_InLImitDetails_SubMenu;
+	public WebElement TranscationType_InLImitDetails_SubMenu() {
+		return TranscationType_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "lbl_applicationFacilityLimitMaturityAction_WIFT001MT")
+	private WebElement MaturityAction_InLImitDetails_SubMenu;
+	public WebElement MaturityAction_InLImitDetails_SubMenu() {
+		return MaturityAction_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_bank_no_key")
+	private WebElement bank_no_InLImitDetails_SubMenu;
+	public WebElement bank_no_InLImitDetails_SubMenu() {
+		return bank_no_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_acc_no_key")
+	private WebElement acc_no_InLImitDetails_SubMenu;
+	public WebElement acc_no_InLImitDetails_SubMenu() {
+		return acc_no_InLImitDetails_SubMenu;
+	}
+	
+	
+	@FindBy(id =  "limitDetails_add_btn_WIFT001MT")
+	private WebElement add_btn_InLImitDetails_SubMenu;
+	public WebElement add_btn_InLImitDetails_SubMenu() {
+		return add_btn_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(id =  "limitDetails_close_btn_WIFT001MT")
+	private WebElement close_btn_InLImitDetails_SubMenu;
+	public WebElement close_btn_InLImitDetails_SubMenu() {
+		return close_btn_InLImitDetails_SubMenu;
+	}
 	
 }
