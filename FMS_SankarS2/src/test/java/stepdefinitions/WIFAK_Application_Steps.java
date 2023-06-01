@@ -32,12 +32,10 @@ public class WIFAK_Application_Steps {
 	Selenium_Actions selenium_Actions = new Selenium_Actions(driver);
 	FMSLogin login = new FMSLogin(driver);
 	
-	String refID;
-	
 	String path = System.getProperty("user.dir") +"\\TestData\\FMSTestData.xlsx";
 //	ExcelData excecutionExcelData = new ExcelData(path,"TestExecution","TestCaseID");
-//	ExcelData fmsTransactionsExcelData = new ExcelData(path,"FMS_WIFAK_ApplicationTestData","DataSet ID");
-	ExcelData fmsTransactionsExcelData = new ExcelData(path,"IIS_Param_TestData","DataSet ID");
+	ExcelData fmsTransactionsExcelData = new ExcelData(path,"FMS_WIFAK_ApplicationTestData","DataSet ID");
+//	ExcelData fmsTransactionsExcelData = new ExcelData(path,"IIS_Param_TestData","DataSet ID");
 	Map<String, String> testData;
 //	Map<String, String> executionTestData;
 	
@@ -51,7 +49,7 @@ public class WIFAK_Application_Steps {
 //	296063
 	@And("^get the test data for test case 296063$")
     public void get_the_test_data_for_test_case_296063() throws Throwable {
-		fmsTransactionsExcelData.getTestdata("DS01_296063");
+		testData = fmsTransactionsExcelData.getTestdata("DS01_296063");
     }
 	
 //  @834966_FMS_Core
@@ -83,6 +81,26 @@ public class WIFAK_Application_Steps {
     public void get_the_test_data_for_test_case_583893user1() throws Throwable {
     	testData = fmsTransactionsExcelData.getTestdata("DS01_583893_1");
     }
+    
+//  @583893_User2
+    @And("^get the test data for test case 583893_User2$")
+    public void get_the_test_data_for_test_case_583893user2() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS01_583893_2");
+    }
+    
+//	@583895_FMSCore
+    @And("^get the test data for test case 583895_FMSCore$")
+    public void get_the_test_data_for_test_case_583895fmscore() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS01_583895");
+    }
+    
+//  @582426
+    @And("^get the test data for test case 582426$")
+    public void get_the_test_data_for_test_case_582426() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS01_582426");
+    }
+    
+    
     
     
     
@@ -193,6 +211,16 @@ public class WIFAK_Application_Steps {
 //		WIFAKapplicationObj.mainFacilityRating().sendKeys("2");
 		WIFAKapplicationObj.mainFacilityRating().sendKeys(testData.get("Facility Rating"));
 		WIFAKapplicationObj.mainFacilityRating().sendKeys(Keys.TAB);
+		
+		for(int i = 0; i <= 300; i++) {
+    		try {
+				if(!(WIFAKapplicationObj.mainFacilityRating().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}    
 	}
 
 	@And("^User clicks on the additional details tab$")
@@ -310,6 +338,13 @@ public class WIFAK_Application_Steps {
 			// TODO: handle exception
 		}
     }
+    
+    @And("^User validate visibility of Collateral details button under limit details tab$")
+    public void user_validate_visibility_of_collateral_details_button_under_limit_details_tab() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsCollateralDetailsBtn());
+    	boolean collateralDetailsBtn = WIFAKapplicationObj.limitDetailsCollateralDetailsBtn().isDisplayed();
+    	Assert.assertTrue(collateralDetailsBtn);
+    }
 
     @And("^User clicks on the Charges details button$")
     public void user_clicks_on_the_charges_details_button() throws Throwable {
@@ -317,56 +352,34 @@ public class WIFAK_Application_Steps {
     	WIFAKapplicationObj.limitDetailsChargesDetailsBtn().click();
     }
 
-//    @And("^User clicks the add new record button$")
-//    public void user_clicks_the_add_new_record_button() throws Throwable {
-////    	for (int i = 0; i <= 300; i++) {
-////			try {
-////				javaScriptHelper.scrollIntoView(WIFAKapplicationObj.chargesDetailsAddNewBtn());
-////				break;
-////			} catch (Exception e) {
-////				if (i == 300) {
-////					Assert.fail(e.getMessage());
-////				}
-////			}
-////    	}
-//    	
-//    	for (int i = 0; i <= 300; i++) {
-//			try {
-//				clicksAndActionsHelper.clickUsingActionClass(WIFAKapplicationObj.chargesDetailsAddNewBtn(),
-//						WIFAKapplicationObj.chargesDetailsAddNewBtn());
-//				break;
-//			} catch (Exception e) {
-//				if (i == 300) {
-//					Assert.fail(e.getMessage());
-//				}
-//			}
-//		}    	
-//    	
-//    }
-
     @And("^User enter the code and check the collect at facility approval$")
     public void user_enter_the_code_and_check_the_collect_at_facility_approval() throws Throwable {
-//    	Thread.sleep(3000);
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.chargeDetailsFirstRow());
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.chargesDetailsCodeLabel());
     	WIFAKapplicationObj.chargesDetailsCodeLabel().click();
-//    	WIFAKapplicationObj.chargesDetailsCode().sendKeys("1");
-//    	WIFAKapplicationObj.chargesDetailsCode().sendKeys(Keys.TAB);
-//    	WIFAKapplicationObj.chargesDetailsCode().sendKeys(testData.get("Charges Details Code"));
-    	
+   
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.chargesDetailsCode());    	
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.chargesDetailsCheckFacApproval());
     	WIFAKapplicationObj.chargesDetailsCheckFacApproval().click();	
     }
 
     @And("^User click the Ok button$")
     public void user_click_the_ok_button() throws Throwable {
-    	Thread.sleep(3000);
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.chargesDetailsOkBtn());
-    	WIFAKapplicationObj.chargesDetailsOkBtn().click();
+    	for (int i = 0; i < 2000; i++) {
+			try {
+		    	WIFAKapplicationObj.chargesDetailsOkBtn().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+//    	WIFAKapplicationObj.chargesDetailsOkBtn().click();
     }
 
     @And("^User move to the Document details tab$")
     public void user_move_to_the_document_details_tab() throws Throwable {
-    	Thread.sleep(3000);
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.mainDocumentDetailsTab());
     	WIFAKapplicationObj.mainDocumentDetailsTab().click();
     	
@@ -402,11 +415,11 @@ public class WIFAK_Application_Steps {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsSaveBtn());
     	WIFAKapplicationObj.limitDetailsSaveBtn().click();
     	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ButtonConfirmOk());
-    	WIFAKapplicationObj.ButtonConfirmOk().click();
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.WarningPopupOkBtn());
+    	WIFAKapplicationObj.WarningPopupOkBtn().click();
     	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ButtonSuccessOk());
-    	WIFAKapplicationObj.ButtonSuccessOk().click();
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.SuccessPopupOkBtn());
+    	WIFAKapplicationObj.SuccessPopupOkBtn().click();
     }
 
     @And("^User clicks the validate button$")
@@ -414,28 +427,29 @@ public class WIFAK_Application_Steps {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsValidateBtn());
     	WIFAKapplicationObj.limitDetailsValidateBtn().click();
     	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ButtonConfirmOk());
-    	WIFAKapplicationObj.ButtonConfirmOk().click();
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.WarningPopupOkBtn());
+    	WIFAKapplicationObj.WarningPopupOkBtn().click();
     	
-    	for (int i = 0; i < 2000; i++) {
+    	for (int i = 0; i < 500; i++) {
 			try {
-		    	WIFAKapplicationObj.facilityAlreadyCreatedPopup().click();
+				javaScriptHelper.JSEClick(WIFAKapplicationObj.facilityAlreadyCreatedPopup());
+//		    	WIFAKapplicationObj.facilityAlreadyCreatedPopup().click();
 		    	break;
 			} catch (Exception e) {
-				if (i==1999) {
+				if (i==499) {
 					Assert.fail(e.getMessage());
 				}
 			}
 		}
     	
+//    	Thread.sleep(10000);	
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.successMessage());
-    	String SuccessMsg = WIFAKapplicationObj.successMessage().getText();
-    	refID = SuccessMsg.substring(23, 27);
-    	System.err.println("Reference Number: "+refID);
+    	String SuccessMsg = WIFAKapplicationObj.successMessage().getText().substring(23, 27);
+    	System.err.println("Reference Number: "+SuccessMsg);
     	
     	for (int i = 0; i < 2000; i++) {
 			try {
-		    	WIFAKapplicationObj.ButtonSuccessOk().click();
+		    	WIFAKapplicationObj.SuccessPopupOkBtn().click();
 		    	break;
 			} catch (Exception e) {
 				if (i==1999) {
@@ -443,13 +457,18 @@ public class WIFAK_Application_Steps {
 				}
 			}
 		}
+    	
+    	// close the send alert pop-up box
+//    	Thread.sleep(5000);
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.sendAlertPopupDismissBtn());
+    	WIFAKapplicationObj.sendAlertPopupDismissBtn().click();  	
     	
     }
 
     @And("^User clicks the Approve Level1 link$")
-    public void user_clicks_the_approve_level1_link() throws Throwable {
+    public void user_clicks_the_approve_level1_link() throws Throwable {    	
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.applicationFinancialFacilityApproveLevel1());
-    	WIFAKapplicationObj.applicationFinancialFacilityApproveLevel1().click();  	
+    	WIFAKapplicationObj.applicationFinancialFacilityApproveLevel1().click();	
     }
     
     @And("^User retrive the first data in approve level1$")
@@ -473,10 +492,10 @@ public class WIFAK_Application_Steps {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approveLevel1SubmitBtn());
     	WIFAKapplicationObj.approveLevel1SubmitBtn().click();
     	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ButtonConfirmOk());
-    	WIFAKapplicationObj.ButtonConfirmOk().click();
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ButtonSuccessOk());
-    	WIFAKapplicationObj.ButtonSuccessOk().click();
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.WarningPopupOkBtn());
+    	WIFAKapplicationObj.WarningPopupOkBtn().click();
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.SuccessPopupOkBtn());
+    	WIFAKapplicationObj.SuccessPopupOkBtn().click();
     	
     }
 
@@ -507,10 +526,10 @@ public class WIFAK_Application_Steps {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approveLevel2SubmitBtn());
     	WIFAKapplicationObj.approveLevel2SubmitBtn().click();
     	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ButtonConfirmOk());
-    	WIFAKapplicationObj.ButtonConfirmOk().click();
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ButtonSuccessOk());
-    	WIFAKapplicationObj.ButtonSuccessOk().click();
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.WarningPopupOkBtn());
+    	WIFAKapplicationObj.WarningPopupOkBtn().click();
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.SuccessPopupOkBtn());
+    	WIFAKapplicationObj.SuccessPopupOkBtn().click();
     }
 
     @And("^User clicks the Approve Level3 link$")
@@ -541,10 +560,10 @@ public class WIFAK_Application_Steps {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approveLevel3SubmitBtn());
     	WIFAKapplicationObj.approveLevel3SubmitBtn().click();
     	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ButtonConfirmOk());
-    	WIFAKapplicationObj.ButtonConfirmOk().click();
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ButtonSuccessOk());
-    	WIFAKapplicationObj.ButtonSuccessOk().click();
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.WarningPopupOkBtn());
+    	WIFAKapplicationObj.WarningPopupOkBtn().click();
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.SuccessPopupOkBtn());
+    	WIFAKapplicationObj.SuccessPopupOkBtn().click();
     }
     
     
@@ -689,8 +708,8 @@ public class WIFAK_Application_Steps {
 		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approvalCommitteeRecommendBtn());
 		WIFAKapplicationObj.approvalCommitteeRecommendBtn().click();
 		
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ButtonConfirmOk());
-    	WIFAKapplicationObj.ButtonConfirmOk().click();
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.WarningPopupOkBtn());
+    	WIFAKapplicationObj.WarningPopupOkBtn().click();
     	
     }
 
@@ -713,8 +732,8 @@ public class WIFAK_Application_Steps {
     @And("^User1 select the recommendation as approve in recommend box$")
     public void user1_select_the_recommendation_as_approve_in_recommend_box() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approvalCommitteeRecommendationDropdown());
-//    	dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj.approvalCommitteeRecommendationDropdown(), testData.get("Recommendation"));
-    	dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj.approvalCommitteeRecommendationDropdown(), "Approve");
+    	dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj.approvalCommitteeRecommendationDropdown(), testData.get("Recommendation"));
+//    	dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj.approvalCommitteeRecommendationDropdown(), "Approve");
     }
 
     @And("^User1 click the comment code lookup option in recommend box$")
@@ -749,8 +768,8 @@ public class WIFAK_Application_Steps {
     @And("^User1 enter the some comments in more comments$")
     public void user1_enter_the_some_comments_in_more_comments() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approvalCommitteeMoreCommentsInput());
-//    	WIFAKapplicationObj.approvalCommitteeMoreCommentsInput().sendKeys(testData.get("More Comments"));
-    	WIFAKapplicationObj.approvalCommitteeMoreCommentsInput().sendKeys("Test Comments");
+    	WIFAKapplicationObj.approvalCommitteeMoreCommentsInput().sendKeys(testData.get("More Comments"));
+//    	WIFAKapplicationObj.approvalCommitteeMoreCommentsInput().sendKeys("Test Comments");
     }
 
     @And("^User1 click the Ok button in more comments$")
@@ -784,13 +803,12 @@ public class WIFAK_Application_Steps {
 //    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approvalCommitteeOkBtn());    	
 //    	WIFAKapplicationObj.approvalCommitteeOkBtn().click();
     	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ButtonSuccessOk());
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.SuccessPopupOkBtn());
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.successMessage());
-    	String SuccessMsg = WIFAKapplicationObj.successMessage().getText();
-    	refID = SuccessMsg.substring(23, 27);
-    	System.err.println("Reference Number: "+refID);
+    	String SuccessMsg = WIFAKapplicationObj.successMessage().getText().substring(23, 27);
+    	fmsTransactionsExcelData.updateTestData("DS01_583893_2", "Search Code", SuccessMsg);
     	
-    	WIFAKapplicationObj.ButtonSuccessOk().click();
+    	WIFAKapplicationObj.SuccessPopupOkBtn().click();
     }
 
     
@@ -804,7 +822,7 @@ public class WIFAK_Application_Steps {
     @And("^User search the code in Application for financial facility main screen$")
     public void user_search_the_code_in_application_for_financial_facility_main_screen() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.applicationFinancialFacilitySearchCode());
-    	WIFAKapplicationObj.applicationFinancialFacilitySearchCode().sendKeys("3691");
+    	WIFAKapplicationObj.applicationFinancialFacilitySearchCode().sendKeys(testData.get("Search Code"));
     	WIFAKapplicationObj.applicationFinancialFacilitySearchCode().sendKeys(Keys.ENTER);
     }
 
@@ -847,7 +865,121 @@ public class WIFAK_Application_Steps {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.applicationFinancialFacilityApprovalCommittieeMoreCommentsText());
     	String text = WIFAKapplicationObj.applicationFinancialFacilityApprovalCommittieeMoreCommentsText().getAttribute("prevvalue");
     	System.out.println("More Comments Text: "+ text);
+    	Assert.assertEquals(testData.get("More Comments"), text);
     }
+    
+    
+//  @582426
+    @And("^User select the application for dropdown as decrease in main screen$")
+    public void user_select_the_application_for_dropdown_as_decrease_in_main_screen() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.mainApplicationForDropdown());
+		dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj.mainApplicationForDropdown(), testData.get("Application For"));
+    }
+
+    @And("^User enter the input as Existing Facility Ref in main screen$")
+    public void user_enter_the_input_as_existing_facility_ref_in_main_screen() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.mainExistingFacilityRef());
+    	WIFAKapplicationObj.mainExistingFacilityRef().sendKeys(testData.get("Facility Ref"));
+    	WIFAKapplicationObj.mainExistingFacilityRef().sendKeys(Keys.TAB);
+    	
+    	for(int i = 0; i <= 300; i++) {
+    		try {
+				if(!(WIFAKapplicationObj.mainExistingFacilityRef().getAttribute("readonly").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}    	
+
+    }
+    
+    @And("^User enter the total value under additional info tab$")
+    public void user_enter_the_total_value_under_additional_info_tab() throws Throwable {    	
+    	// First We get the Finance amount without total amount
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.additionalTabFinanceAmount());
+    	String beforeFinanceAmount = WIFAKapplicationObj.additionalTabFinanceAmount().getAttribute("prevvalue");
+//    	System.out.println("Before Finance Amount: "+ beforeFinanceAmount);
+    	fmsTransactionsExcelData.updateTestData("DS01_582426", "Finance Amount", beforeFinanceAmount);
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.mainAdditionalTabTotalValue());
+		WIFAKapplicationObj.mainAdditionalTabTotalValue().sendKeys(testData.get("Total value"));
+		WIFAKapplicationObj.mainAdditionalTabTotalValue().sendKeys(Keys.TAB);
+		Thread.sleep(3000);
+    }
+
+    @And("^User validate the finance amount should be decresed based on total value$")
+    public void user_validate_the_finance_amount_should_be_decresed_based_on_total_value() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS01_582426");
+    	String financeAmount = testData.get("Finance Amount");
+    	String totalValue = testData.get("Total value");
+    	
+    	String afterFinanceAmount = WIFAKapplicationObj.additionalTabFinanceAmount().getAttribute("prevvalue");
+    	String[] splitFinaceAmount  = afterFinanceAmount.split("[.]");
+    	String finalFinaceAmount = splitFinaceAmount[0].replace(",", "");
+//    	System.out.println("Finance Amount: "+finalFinaceAmount);
+//    	System.out.println("After Finance Amount: "+afterFinanceAmount);
+    	
+    	int cvValue = Integer.parseInt(financeAmount)-Integer.parseInt(totalValue);
+    	String cvValueText = String.valueOf(cvValue);
+    	fmsTransactionsExcelData.updateTestData("DS01_582426", "CV Value", cvValueText);
+    	
+    	Assert.assertEquals(cvValueText, finalFinaceAmount);
+    	
+    }
+
+    @And("^User validate the Facility value and CV value should be changed same as decreased finance amount under limit details$")
+    public void user_validate_the_facility_value_and_cv_value_should_be_changed_same_as_decreased_finance_amount_under_limit_details() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsProductFacilityValue());
+    	String facilityValue = WIFAKapplicationObj.limitDetailsProductFacilityValue().getAttribute("title");
+    	String[] splitFacilityValue  = facilityValue.split("[.]");
+    	String finalFacilityValue = splitFacilityValue[0].replace(",", "");
+    	
+    	testData = fmsTransactionsExcelData.getTestdata("DS01_582426");
+    	Assert.assertEquals(testData.get("CV Value"), finalFacilityValue);
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsProductCVValue());
+    	String CVValue = WIFAKapplicationObj.limitDetailsProductCVValue().getAttribute("title");
+    	String[] splitCVValue  = CVValue.split("[.]");
+    	String finalCVValue = splitCVValue[0].replace(",", "");
+    	
+    	Assert.assertEquals(testData.get("CV Value"), finalCVValue);
+    	
+    }
+
+    @And("^User double click on the product class under limit details$")
+    public void user_double_click_on_the_product_class_under_limit_details() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsProductFacilityValue());
+    	clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.limitDetailsProductFacilityValue());
+    }
+    
+    @And("^User click the clean flag under product calss in limit details tab$")
+    public void user_click_the_clean_flag_under_product_calss_in_limit_details_tab() throws Throwable {
+    	// check the clean flag
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsNewRecordCleanFlag());
+        WebElement cleanFlag = WIFAKapplicationObj.limitDetailsNewRecordCleanFlag();
+        if(!(cleanFlag.isSelected())) {
+        	cleanFlag.click();
+    	}
+    }
+    
+    @And("^User click the edit button under product class in limit details tab$")
+    public void user_click_the_edit_button_under_product_class_in_limit_details_tab() throws Throwable {
+    	
+    	for (int i = 0; i <= 300; i++) {
+        	try {
+        		javaScriptHelper.scrollIntoView(WIFAKapplicationObj.limitDetailsProductEditBtn());
+    				break;
+    			} catch (Exception e) {
+    				if (i == 300) {
+    					Assert.fail(e.getMessage());
+    				}
+    			}
+    	}
+        waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsProductEditBtn());
+        WIFAKapplicationObj.limitDetailsProductEditBtn().click();
+    }
+    
 
 
 }

@@ -2,7 +2,6 @@ package stepdefinitions;
 
 import java.util.Map;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -39,18 +38,26 @@ public class WIFAK_Application2_Steps {
 	ExcelData fmsTransactionsExcelData = new ExcelData(path,"FMS_WIFAK_ApplicationTestData","DataSet ID");
 	Map<String, String> testData;
 	
-	// Highlights the every element in run time
-	public static void highlightElement(WebElement element) {
-	JavascriptExecutor executor = (JavascriptExecutor) BaseClass.driver;
-	executor.executeScript("arguments[0].style.border='3px solid blue'", element);
-	}
-	
 //	@834966_FMS_Param
 	@And("^get the test data for test case 834966_FMS_Param$")
     public void get_the_test_data_for_test_case_834966fmsparam() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS01_834966");
     }
+	
+//  @681303_FMSParam
+	@And("^get the test data for test case 681303_FMSParam$")
+	public void get_the_test_data_for_test_case_681303fmsparam() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS01_681303");
+	}
 
+//	@583895_FMSParam
+	@And("^get the test data for test case 583895_FMSParam$")
+    public void get_the_test_data_for_test_case_583895fmsparam() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS01_583895");
+    }
+	
+
+	
 	@And("^User clicks on the parameter module$")
     public void user_clicks_on_the_parameter_module() throws Throwable {
         waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.fmsParamParameter());
@@ -198,6 +205,16 @@ public class WIFAK_Application2_Steps {
     
     @When("^User clicks on the Update button$")
     public void user_clicks_on_the_update_button() throws Throwable {
+    	for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(facilityTypeObj.updateAfterApproveUpdateBtn());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}
     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.updateAfterApproveUpdateBtn());
     	facilityTypeObj.updateAfterApproveUpdateBtn().click();
     	
@@ -278,13 +295,7 @@ public class WIFAK_Application2_Steps {
     
     
     
-//    @681303_FMSParam
-    
-    @And("^get the test data for test case 681303_FMSParam$")
-    public void get_the_test_data_for_test_case_681303fmsparam() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS01_681303");
-    }
-   
+//  @681303_FMSParam
     @And("^User uncheck the Issue Facility Offer flag$")
     public void user_uncheck_the_issue_facility_offer_flag() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.issueFacilityOfferFlag());
@@ -339,39 +350,40 @@ public class WIFAK_Application2_Steps {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsValidateBtn());
     	WIFAKapplicationObj.limitDetailsValidateBtn().click();
     	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ButtonConfirmOk());
-    	WIFAKapplicationObj.ButtonConfirmOk().click();
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.WarningPopupOkBtn());
+    	WIFAKapplicationObj.WarningPopupOkBtn().click();
     	
+    	Thread.sleep(3000);
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityAlreadyCreatedPopup());
-    	WIFAKapplicationObj.facilityAlreadyCreatedPopup().click();
-    	
-//    	for (int i = 0; i < 2000; i++) {
-//			try {
-//		    	WIFAKapplicationObj.facilityAlreadyCreatedPopup().click();
-//		    	break;
-//			} catch (Exception e) {
-//				if (i==1999) {
-//					Assert.fail(e.getMessage());
-//				}
-//			}
-//		}
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.successMessage());
-    	String SuccessMsg = WIFAKapplicationObj.successMessage().getText();
-    	String substring = SuccessMsg.substring(23, 27);
-    	refID.append(substring);
-    	
+//    	WIFAKapplicationObj.facilityAlreadyCreatedPopup().click();
     	
     	for (int i = 0; i < 2000; i++) {
 			try {
-		    	WIFAKapplicationObj.ButtonSuccessOk().click();
+		    	WIFAKapplicationObj.facilityAlreadyCreatedPopup().click();
 		    	break;
 			} catch (Exception e) {
 				if (i==1999) {
 					Assert.fail(e.getMessage());
 				}
 			}
-		}   	
+		}
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.successMessage());
+//    	String SuccessMsg = WIFAKapplicationObj.successMessage().getText();
+//    	String substring = SuccessMsg.substring(23, 27);
+//    	refID.append(substring);
+    	
+    	
+    	for (int i = 0; i < 2000; i++) {
+			try {
+		    	WIFAKapplicationObj.SuccessPopupOkBtn().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
     	
     } 
    
@@ -413,5 +425,34 @@ public class WIFAK_Application2_Steps {
     }
     
     
+    
+//  @583895_FMSParam
+    @And("^User clicks the Application Requirements Details option$")
+    public void user_clicks_the_application_requirements_details_option() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.applicationReqDetails());
+    	facilityTypeObj.applicationReqDetails().click();
+    }
+
+    @And("^User select the collateral as application level$")
+    public void user_select_the_collateral_as_application_level() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.selectCollateral());
+    	facilityTypeObj.selectCollateral().click();
+    	dropDownHelper.SelectUsingVisibleText(facilityTypeObj.selectCollateral(), testData.get("Collateral"));
+    }
+
+    @And("^User select the Collaterals defined at the level of as sublimit$")
+    public void user_select_the_collaterals_defined_at_the_level_of_as_sublimit() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.selectCollateralDefinedLevel());
+    	facilityTypeObj.selectCollateralDefinedLevel().click();
+    	dropDownHelper.SelectUsingVisibleText(facilityTypeObj.selectCollateralDefinedLevel(), testData.get("Collaterals defined"));
+    	
+    	// Dummy step
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.checkCollateralFacility());
+   	 	WebElement checkCollateralFacility = facilityTypeObj.checkCollateralFacility();
+   	 	facilityTypeObj.checkCollateralFacility().click();
+   	 	if(!(checkCollateralFacility.isSelected())) {
+   	 		checkCollateralFacility.click();
+    	}
+    }
     
 }

@@ -59,7 +59,6 @@ And User enter the product class details
 And User retrive the one account number
 And User clicks on the add button
 And User clicks on the Charges details button
-#And User clicks the add new record button
 And User enter the code and check the collect at facility approval
 And User click the Ok button
 And User move to the Document details tab
@@ -148,7 +147,7 @@ When User1 click the Ok button in recommend box
 Scenario: TSR - BTII170041
 
 Given navigate to FMS application and login with valid credentials
-#And get the test data for test case 583893_User2
+And get the test data for test case 583893_User2
 And User clicks on the WIFAK_Application first link
 And User clicks on the WIFAK_Application second link
 And User clicks on the Application for financial facility link
@@ -160,6 +159,47 @@ And User clicks on the Approval committee button
 And User click the User1 name in Recommented by column
 And User clicks on the more comments button
 Then User validate the more comments text in input field
+
+
+@582426
+Scenario: TSR-AMANAUPG170045
+
+Given navigate to FMS application and login with valid credentials
+And get the test data for test case 582426
+And User clicks on the WIFAK_Application first link
+And User clicks on the WIFAK_Application second link
+And User clicks on the Application for financial facility link
+And User clicks the maintanance menu
+And User select the application for dropdown as decrease in main screen
+And User enter the input as Existing Facility Ref in main screen
+And User enter the facility rating in main info tab
+And User clicks on the additional details tab
+And User enter the total value under additional info tab
+And User validate the finance amount should be decresed based on total value
+And User enter the expire date in additional info tab
+And User clicks the limit details tab
+And User validate the Facility value and CV value should be changed same as decreased finance amount under limit details
+And User double click on the product class under limit details
+And User click the clean flag under product calss in limit details tab
+And User click the edit button under product class in limit details tab
+And User move to the Document details tab
+And User enter the Solicitor Name
+And User enter the Estimator Name
+And User clicks the save button
+And User clicks the validate button
+#And User clicks the Approve Level1 link
+#And User retrive the first data in approve level1
+#And User select the level1 devision as approve
+#And User clicks on the level1 submit button
+#And User clicks the Approve Level2 link
+#And User retrive the first data in approve level2
+#And User select the level2 devision as approve
+#And User clicks on the level2 submit button
+#And User clicks the Approve Level3 link
+#And User retrive the first data in approve level3
+#And User select the level3 devision as approve
+#When User clicks on the level3 submit button
+
 
 
 

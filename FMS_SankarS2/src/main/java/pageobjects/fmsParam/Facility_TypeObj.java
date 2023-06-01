@@ -248,4 +248,32 @@ public class Facility_TypeObj {
 	}
 
 	
+//	@583895_FMSParam
+	@FindBy(xpath = "//div[@id='Fms_facility_type_app_requirments_details_Div_P008UP']")
+	private WebElement application_req_details;
+	public WebElement applicationReqDetails() {
+		return application_req_details;
+	}
+	
+	@FindBy(xpath = "//select[@id='fmsFacilityType_collateral_P008UP']")
+	private WebElement select_collateral;
+	public WebElement selectCollateral() {
+		return select_collateral;
+	}
+	
+	@FindBy(xpath = "//select[@id='fmsFacilityType_coll_defined_level_P008UP']")
+	private WebElement select_collateral_defined_level;
+	public WebElement selectCollateralDefinedLevel() {
+		return select_collateral_defined_level;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmsFacilityType_chek_collat_valid_at_facility_P008UP']")
+	private WebElement check_collateral_facility;
+	public WebElement checkCollateralFacility() {
+		return check_collateral_facility;
+	}
+	
+	
+	
+	
 }

@@ -164,4 +164,68 @@ And User double click on the retrived data
 When User clicks on the issue offer button under issue facility offer
 
 
+@583895_FMSParam
+Scenario: TSR - BTII170059
+
+Given navigate to FMS param application and login with valid credentials
+And get the test data for test case 583895_FMSParam
+And User clicks on the parameter module
+And User clicks on the Facility Type feature
+And User clicks on the update after approve menu in Facility type
+And User enter the code value in update after approve menu
+And User double click on the retrived data in update after approve menu
+And User clicks on the facility details tab in update after approve
+And User clicks the Application Requirements Details option
+And User select the collateral as application level
+And User select the Collaterals defined at the level of as sublimit
+When User clicks on the Update button
+And User after the update go to the approve menu
+And User enter the code value in approve menu
+And User double click on the retrived data in approve menu
+When User clicks on the Approve button
+
+
+@583895_FMSCore
+Scenario: TSR - BTII170059
+
+Given navigate to FMS application and login with valid credentials
+And get the test data for test case 583895_FMSCore
+And User clicks on the WIFAK_Application first link
+And User clicks on the WIFAK_Application second link
+And User clicks on the Application for financial facility link
+And User clicks the maintanance menu
+And User select the application for dropdown as new facility
+And User enter the CIF No in main info tab
+And User enter the facility type in main info tab
+And User enter the country of financing in main info tab
+And User enter the facility rating in main info tab
+And User clicks on the additional details tab
+And User enter the total value in additional info tab
+And User enter the expire date in additional info tab
+And User clicks the limit details tab
+And User clicks the add new record button in limit details tab
+And User enter the product class details
+And User clicks on the add button
+And User validate visibility of Collateral details button under limit details tab
+And User move to the Document details tab
+And User enter the Solicitor Name
+And User enter the Estimator Name
+And User clicks the save button
+And User clicks on the validate button
+And User clicks the Approve Level1 link
+And User retrive the first data in approve level1
+And User select the level1 devision as approve
+And User clicks on the level1 submit button
+And User clicks the Approve Level2 link
+And User retrive the first data in approve level2
+And User select the level2 devision as approve
+And User clicks on the level2 submit button
+And User clicks the Approve Level3 link
+And User retrive the first data in approve level3
+And User select the level3 devision as approve
+When User clicks on the level3 submit button
+And User clicks the issue facility offer under WIFAK Application
+And User search the code in issue facility offer
+And User double click on the retrived data
+When User clicks on the issue offer button under issue facility offer
 

@@ -172,25 +172,19 @@ public class WIFAK_ApplicationObj {
 		return clicks_add_btn;
 	}
 	
+	@FindBy(xpath = "//button[@id='applicationfacility_collateralDetails_btn_WIFT001MT']")
+	private WebElement limit_details_collateral_details_btn;
+	public WebElement limitDetailsCollateralDetailsBtn() {
+		return limit_details_collateral_details_btn;
+	}	
+	
 	@FindBy(xpath = "//button[@id='applicationfacility_chargesdtls_btn_WIFT001MT']")
 	private WebElement limit_details_charges_details_btn;
 	public WebElement limitDetailsChargesDetailsBtn() {
 		return limit_details_charges_details_btn;
 	}
 	
-	@FindBy(xpath = "//*[@id=\"add_FacilityChargesGrid_WIFT001MT\"]")
-	private WebElement charges_details_add_new_btn;
-	public WebElement chargesDetailsAddNewBtn() {
-		return charges_details_add_new_btn;
-	}
-	
-	@FindBy(xpath = "//td[@id='td_FacilityChargesGrid_WIFT001MT_1_rn']")
-	private WebElement charge_details_first_row;
-	public WebElement chargeDetailsFirstRow() {
-		return charge_details_first_row;
-	}
-	
-	@FindBy(xpath = "//*[@id=\"td_FacilityChargesGrid_WIFT001MT_1_fmsapplchargesVO.CHARGES_CODE\"]")
+	@FindBy(xpath = "//*[@id='td_FacilityChargesGrid_WIFT001MT_1_fmsapplchargesVO.CHARGES_CODE']")
 	private WebElement charges_details_code_label;
 	public WebElement chargesDetailsCodeLabel() {
 		return charges_details_code_label;
@@ -202,7 +196,7 @@ public class WIFAK_ApplicationObj {
 		return charges_details_code;
 	}
 	
-	@FindBy(xpath = "(//input[@editrowid='new_1684479425550'])[8]")
+	@FindBy(xpath = "//input[@id='1_fmsapplchargesVO.COLLECT_AT_FAC_APPROVAL_FacilityChargesGrid_WIFT001MT']")
 	private WebElement charges_details_check_fac_approval;
 	public WebElement chargesDetailsCheckFacApproval() {
 		return charges_details_check_fac_approval;
@@ -239,15 +233,15 @@ public class WIFAK_ApplicationObj {
 	}
 	
 	@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
-	private WebElement button_confirm_ok;
-	public WebElement ButtonConfirmOk() {
-		return button_confirm_ok;
+	private WebElement warning_popup_ok_btn;
+	public WebElement WarningPopupOkBtn() {
+		return warning_popup_ok_btn;
 	}
 	
 	@FindBy(xpath = "//*[@id='_popup_path_sol_ok']")
-	private WebElement button_success_ok;
-	public WebElement ButtonSuccessOk() {
-		return button_success_ok;
+	private WebElement success_popup_ok_btn;
+	public WebElement SuccessPopupOkBtn() {
+		return success_popup_ok_btn;
 	}
 	
 	@FindBy(xpath = "//button[@id='applicationfacility_save_btn_WIFT001MT']")
@@ -262,10 +256,22 @@ public class WIFAK_ApplicationObj {
 		return facility_already_created_popup;
 	}
 	
-	@FindBy(xpath = "//*[@id='div__popup_path_sol_ok']/div[2]/div")
+	@FindBy(xpath = "//div[@class='jMsgbox-contentWrap']")
 	private WebElement success_msg;
 	public WebElement successMessage() {
 		return success_msg;
+	}
+	
+	@FindBy(xpath = "(//a[@class='ui-dialog-titlebar-close ui-corner-all'])[9]")
+	private WebElement send_alert_popup;
+	public WebElement sendAlertPopup() {
+		return send_alert_popup;
+	}
+	
+	@FindBy(xpath = "//a[@id='dismissbut_WIFT001MT']")
+	private WebElement send_alert_popup_dismiss_btn;
+	public WebElement sendAlertPopupDismissBtn() {
+		return send_alert_popup_dismiss_btn;
 	}
 	
 	@FindBy(xpath = "//a[@id='WIFT001AP1']")
@@ -532,4 +538,35 @@ public class WIFAK_ApplicationObj {
 		return application_financial_facility_approval_committiee_more_comments_text;
 	}
 	
+	
+//	@582426
+	@FindBy(xpath = "//input[@id='lookuptxt_applicationFacilityExistingFacilityRef_WIFT001MT']")
+	private WebElement main_existing_facility_ref;
+	public WebElement mainExistingFacilityRef() {
+		return main_existing_facility_ref;
+	}
+	
+	@FindBy(xpath = "//input[@id='applicationFacilityfinancedamount_WIFT001MT']")
+	private WebElement additional_tab_finance_amount;
+	public WebElement additionalTabFinanceAmount() {
+		return additional_tab_finance_amount;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_ApplicationFacilityLimitDetailsGrid_WIFT001MT_1_fmsAppLimitDetVO.FACILITY_VALUE']")
+	private WebElement limit_details_product_facility_value;
+	public WebElement limitDetailsProductFacilityValue() {
+		return limit_details_product_facility_value;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_ApplicationFacilityLimitDetailsGrid_WIFT001MT_1_fmsAppLimitDetVO.CV_VALUE']")
+	private WebElement limit_details_product_CV_value;
+	public WebElement limitDetailsProductCVValue() {
+		return limit_details_product_CV_value;
+	}
+	
+	@FindBy(xpath = "//button[@id='limitDetails_edit_btn_WIFT001MT']")
+	private WebElement limit_details_product_edit_btn;
+	public WebElement limitDetailsProductEditBtn() {
+		return limit_details_product_edit_btn;
+	}
 }
