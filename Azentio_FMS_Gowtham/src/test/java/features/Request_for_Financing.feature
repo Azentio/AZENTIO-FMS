@@ -55,9 +55,68 @@ Feature: Title of your feature
     And Click validate button on down
     
     
+    @652870
+		 Scenario: TSR - BTII180030
+		 Given navigate to FMS application2 and login with valid credentials
+		  And Click Collateral Management
+      And Click maintenance under Collateral Management
+      And Click search on maintenance screen
+      And Click and enter CIF 
+      And After enter CIF find if any alphabetic in ID number
+    
+    
+    @652912
+    Scenario: TSR - BTII180039
+    Given navigate to FMS application2 and login with valid credentials
+    And Click Wifak Application first
+    And Click Wifak Application Second
+    And Click Facilities Management under WIFAK APPLICATION
+    And Click cancel under Facilities Management
+    And Select the existing record
+    And Cancel the record
+    And Click approve reject cancel under WIFAK APPLICATION
+    And Select the record
+    And Click approve cancel button on approve reject cancel Screen
+    And Click maintenance under WIFAK APPLICATION
+    And Select the record on maintenance screen
+    Then Check the Status its on cancel
     
     
     
+    @636958
+    Scenario: TSR - EWB180031
+     Given navigate to FMS application2 and login with valid credentials
+     And Click Request for financin
+     And Click Request for financing
+     And Goto maintenace
+     And click the reason for submission search box
+     And click the customer search box
+    And click the facility type details
+    And Enter the facility type code under facility type
+    And Enter the total limit under global limit
+    And Click the Disbursement Sublimit under maintenance screen
+    And Add the limits under Disbursement Sublimit
+    And Add the product class values in product searchbox
+    And Add the Margin values in Margin
+    And Enter the tenure value in tenure
+    And Add all the Above limit values
+    And Save all the values when limits are add
+    And Confirm the popup menu when all the limits are saved
+    And Click the final save popup message
+    And Click Repayment plan button in maintance screen
+    And Click Create Schedule button
+    And Click the validate button when all the values are saved
+    And Confirm the validate popup menu
+    And Click the final validate popup
+    And Click the Approve level1 screen under request for financing
+    And Select the record in Approve Screen1
+    And Reject the record in Approve level1 
+    And enter the reason for rejection
+    And Click Reopen Rejected Applications Under request for financing
+    And Click mainteance under Reopen Rejected Applications
+    And Select the reopen record mainteance under Reopen Rejected Applications
+    
+     
     
     
     

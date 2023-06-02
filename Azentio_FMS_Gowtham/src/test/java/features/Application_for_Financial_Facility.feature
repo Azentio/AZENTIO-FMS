@@ -129,16 +129,6 @@ Feature: Linking Fixed Asset to Application in FMS
 
   @929306
   Scenario: Exception error in Production
-    #Given navigate to FMS param application and login with valid credentials
-    #And Click on the Parameters menu
-    #		Then Click on the facility type under parameters menu
-    #		And Click on update after approve under facility type
-    #		Then search for the reference code in update after approve
-    #		Then Click the Facility Details tab in update after approve screen
-    #		And Click the reference code
-    #		Then Click on the Facility Details
-    #		And Click on the STP Facility Requirements
-    #		And Check customer grading under STP Facility Requirements
     Given navigate to FMS application2 and login with valid credentials
     And Click Wifak Application first
     And Click Wifak Application Second
@@ -161,10 +151,12 @@ Feature: Linking Fixed Asset to Application in FMS
     And Click Add button AfterEnter Value On Product Class
     And Click Add button on limit Detail
     And Enter second ValueOn Product Class
+    And Enter the floating rate
+    And Enter the floating rate periodicity
+    And Enter the floating rate periodicity type
     And AfterEnter ValueOn Product Class Search
     And Click Add button AfterEnter Value On Product Class
     And Click save button on limit details
-    And After save click validate button
     And User move to the Document details tab
     And User enter the Solicitor Name
     And User enter the Estimator Name
@@ -182,19 +174,10 @@ Feature: Linking Fixed Asset to Application in FMS
 		And User retrive the first data in approve level3
 		And User select the level3 devision as approve
 		And User clicks on the level3 submit button
-#		And Click Application for financial facilities
-#		And Click Maintenance
-#		And Click and Select Modification in Application for
+
 		
 		
-		@11
-		 Scenario: check alpabhate
-		 Given navigate to FMS application2 and login with valid credentials
-		  And Click Collateral Management
-      And Click maintenance under Collateral Management
-      And Click search on maintenance screen
-      And Click and enter CIF 
-      And After enter CIF find if any alphabetic in ID number
+		
 		 	
 		
 		

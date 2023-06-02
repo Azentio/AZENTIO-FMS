@@ -352,32 +352,460 @@ public class Request_for_financing_Obj {
 	
 	
 	
+	//@652870
+		@FindBy(xpath = "//td[text()='Collateral Management']")
+		private WebElement Click_Collateral_Management;
+		public WebElement Click_Collateral_Management() {
+			return Click_Collateral_Management;
+		}	
+		
+		@FindBy(xpath = "(//span[text()='Maintenance'])[1]")
+		private WebElement Click_maintenance_under_Collateral_Management;
+		public WebElement Click_maintenance_under_Collateral_Management() {
+			return Click_maintenance_under_Collateral_Management;
+		}	
+		
+		@FindBy(xpath = "//a[@id='infoBarSearchButton_T014MT']")
+		private WebElement Click_search_on_maintenance_screen;
+		public WebElement Click_search_on_maintenance_screen() {
+			return Click_search_on_maintenance_screen;
+		}
+		
+		@FindBy(xpath = "//input[@id='collateralManagementGridTbl_Id_T014MT_gs_fmsCollateralVO.CIF']")
+		private WebElement Click_Click_and_enter_CIF ;
+		public WebElement Click_Click_and_enter_CIF() {
+			return Click_Click_and_enter_CIF;
+		}
+		
+		@FindBy(xpath = "//td[@id='td_collateralManagementGridTbl_Id_T014MT_1_cifVO.ID_NO']")
+		private WebElement After_enter_CIF_find_if_any_alphabetic_in_ID_number ;
+		public WebElement After_enter_CIF_find_if_any_alphabetic_in_ID_number() {
+			return After_enter_CIF_find_if_any_alphabetic_in_ID_number;
+		}
+		//@652912
+		
+		@FindBy(xpath = "(//td[text()='Facilities Management'])[1]")
+		private WebElement Click_Facilities_Management_under_WIFAK_APPLICATION;	
+		public WebElement Click_Facilities_Management_under_WIFAK_APPLICATION() {
+			return Click_Facilities_Management_under_WIFAK_APPLICATION;
+		}
+		
+		@FindBy(xpath = "(//span[text()='Cancel'])[1]")
+		private WebElement Click_cancel_under_Facilities_Management;	
+		public WebElement Click_cancel_under_Facilities_Management() {
+			return Click_cancel_under_Facilities_Management;
+		}
+		
+		@FindBy(xpath = "//a[@id='infoBarSearchButton_CSMT008CN']")
+		private WebElement Click_search_on_cancel_Screen;	
+		public WebElement Click_search_on_cancel_Screen() {
+			return Click_search_on_cancel_Screen;
+		}
 	
+		@FindBy(xpath = "(//td[text()='Clear'])[1]")
+		private WebElement Click_Clearsearch_on_cancel_Screen;	
+		public WebElement Click_Clearsearch_on_cancel_Screen() {
+			return Click_Clearsearch_on_cancel_Screen;
+		}
 	
+		@FindBy(xpath = "//tr[@id='1']")
+		private WebElement DoubleClick_select_firstRecord;	
+		public WebElement DoubleClick_select_firstRecord() {
+			return DoubleClick_select_firstRecord;
+		}
+		
+		
+		@FindBy(xpath = "//button[@id='facilityManagement_cancel_btn_WIFT008CN']")
+		private WebElement After_selectRecord_Click_Cancel;	
+		public WebElement After_selectRecord_Click_Cancel() {
+			return After_selectRecord_Click_Cancel;
+		}
+		
+		
+		@FindBy(xpath = "(//span[text()='Approve/Reject Cancel'])[1]")
+		private WebElement Click_approve_reject_cancel_under_WIFAK_APPLICATION;	
+		public WebElement Click_approve_reject_cancel_under_WIFAK_APPLICATION() {
+			return Click_approve_reject_cancel_under_WIFAK_APPLICATION;
+		}
+		
+		
+//		@FindBy(xpath = "(//td[text()='Clear'])[1]")
+//		private WebElement DoubleClick_select_firstRecord_on_Click_approve_reject_cancel;	
+//		public WebElement DoubleClick_select_firstRecord_on_Click_approve_reject_cancel() {
+//			return DoubleClick_select_firstRecord_on_Click_approve_reject_cancel;
+//		}
+		
+		
+		
+		//tr[@id='1']
+		@FindBy(xpath = "//*[@id=\"facilityManagementGridTbl_Id_WIFT008CR_pager_left\"]/table/tbody/tr/td[7]")
+		private WebElement Click_Clearsearch_on_approve_reject_cancel;	
+		public WebElement Click_Clearsearch_on_approve_reject_cancel() {
+			return Click_Clearsearch_on_approve_reject_cancel;
+		}
+		//td[@id='td_requestFinancingGridTbl_Id_RFFRF00P1_1_fmsRequestFinancingVO.BRANCH']
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		@FindBy(xpath = "//td[@id='td_facilityManagementGridTbl_Id_WIFT008CR_1_fmsFacilityVO.CODE']")
+		private WebElement DoubleClick_select_firstRecord_on_Click_approve_reject_cancel;	
+		public WebElement DoubleClick_select_firstRecord_on_Click_approve_reject_cancel() {
+			return DoubleClick_select_firstRecord_on_Click_approve_reject_cancel;
+		}
+		
+		@FindBy(xpath = "//span[contains(text(),' Approve Cancel ')]")
+		private WebElement Click_approveCancel_Button;	
+		public WebElement Click_approveCancel_Button() {
+			return Click_approveCancel_Button;
+		}
 
+		@FindBy(xpath = "(//span[contains(text(),'Maintenance')])[1]")
+		private WebElement Click_maintence_under_WIFAK_APPLICATION;
+		public WebElement Click_maintence_under_WIFAK_APPLICATION() {
+			return Click_maintence_under_WIFAK_APPLICATION;
+		}
+	
+		@FindBy(xpath = "//a[@id='infoBarSearchButton_WIFT008MT']")
+		private WebElement Click_search_on_maintence_Screen;
+		public WebElement Click_search_on_maintence_Screen() {
+			return Click_search_on_maintence_Screen;
+		}
+	
+		
+		@FindBy(xpath = "//a[@id='infoBarSearchButton_WIFT008MT']")
+		private WebElement Click_Clearsearch_on_maintenceScreen;
+		public WebElement Click_Clearsearch_on_maintenceScreen() {
+			return Click_Clearsearch_on_maintenceScreen;
+		}
+		
+		@FindBy(xpath = "//td[@id='td_facilityManagementGridTbl_Id_WIFT008MT_1_fmsFacilityVO.CODE']")
+		private WebElement DoubleClick_select_firstRecord_on_maintenace;
+		public WebElement DoubleClick_select_firstRecord_on_maintenace() {
+			return DoubleClick_select_firstRecord_on_maintenace;
+		}	
+		
+		//input[@id='statusDesc_WIFT001MT']
+		@FindBy(xpath = "//input[@name='facilityManagementCO.statusDesc']")
+		private WebElement Check_the_Record_Status;
+		public WebElement Check_the_Record_Status() {
+			return Check_the_Record_Status;
+		}	
+		
+	
+//		@FindBy(xpath = "//td[@id='td_facilityManagementGridTbl_Id_WIFT008MT_1_statusDesc']")
+//		private WebElement Check_the_Record_Status;
+//		public WebElement Check_the_Record_Status() {
+//			return Check_the_Record_Status;
+//		}
+		
+		@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
+		private WebElement Click_okOn_Warrning_popup;
+		public WebElement Click_okOn_Warrning_popup() {
+			return Click_okOn_Warrning_popup;
+		}	
+		
+		@FindBy(xpath = "//*[@id=\"_popup_path_sol_ok\"]")
+		private WebElement Success_Popup;
+		public WebElement Success_Popup() {
+			return Success_Popup;
+		}
+	
+		@FindBy(xpath = "//input[@id='facilityManagementGridTbl_Id_WIFT008CR_gs_fmsFacilityVO.CODE']")
+		private WebElement Search_cancel_code_onApproveCancel;
+		public WebElement Search_cancel_code_onApproveCancel() {
+			return Search_cancel_code_onApproveCancel;
+		}
+	
+		@FindBy(xpath = "//*[@id=\"div__popup_path_sol_ok\"]/div[2]/div")
+		private WebElement limit_details_validate_success_msg;
+		public WebElement limitDetailsValidateSuccessMsg() {
+			return limit_details_validate_success_msg;
+		}
 
+		
+		@FindBy(xpath = "//input[@id='facilityManagementGridTbl_Id_WIFT008MT_gs_fmsFacilityVO.CODE']")
+		private WebElement search_approvecancelCode_OnMainteance;
+		public WebElement search_approvecancelCode_OnMainteance() {
+			return search_approvecancelCode_OnMainteance;
+		}
+		
+		@FindBy(xpath = "//div[contains(text(),'Do you want to cancel the related applications?')]//parent::div//following-sibling::center//input[@value='Ok ']")
+		private WebElement Do_youWantCancel_Warnimg;
+		public WebElement Do_youWantCancel_Warnimg() {
+			return Do_youWantCancel_Warnimg;
+		}
+		
+		//@636958
+		
+//		@FindBy(xpath="//td[text()='REQUEST FOR FINANCIN']")
+//		private WebElement REQUEST_FOR_FINANCIN;
+//	    public WebElement REQUESTFORFINANCIN() {
+//			return REQUEST_FOR_FINANCIN;
+//		}
+//		@FindBy(xpath="//td[text()='Request For Financing']")
+//		private WebElement Request_For_Financing;
+//	    public WebElement RequestForFinancing() {
+//			return Request_For_Financing;
+//		}
+//	    @FindBy(xpath="//span[text()='Maintenance']")
+//		private WebElement Maintenance;
+//	    public WebElement maintenance() {
+//			return Maintenance;
+//		}
+	    @FindBy(xpath="//select[@id='requestFinancingApplicationFor_CSMRF00MT']")
+		private WebElement Reason_For_Submission;
+	    public WebElement reasonforsubmisson() {
+			return Reason_For_Submission;
+		}
+	    @FindBy(xpath="(//input[@class='path-theme-cust-input liveSearchText liveSearchCompSize ui-state-focus liveSearchInputCorner'])[5]")
+		private WebElement Customer_Search_box;
+	    public WebElement customersearchbox() {
+			return Customer_Search_box;
+		}
+	    @FindBy(xpath="//label[@id='requestFinancingCustomer_CSMRF00MT']")
+		private WebElement CUSTOMER;
+	    public WebElement customer() {
+			return CUSTOMER;
+		}
+	    @FindBy(xpath="//span[text()='Facility Type Details']")
+		private WebElement Facility_Type_details;
+	    public WebElement facilitytypedetails() {
+			return Facility_Type_details;
+		}
+	    @FindBy(xpath="//input[@id='lookuptxt_requestFinancingFacilityType_CSMRF00MT']")
+		private WebElement Facility_Type_details_searchbox;
+	    public WebElement facilitytypedetailssearchbox() {
+			return Facility_Type_details_searchbox;
+		}
+	    @FindBy(xpath="//*[@id=\"rerquestFinancingMainLimitTabsContent_CSMRF00MT\"]/div/table[1]/tbody/tr/td[1]/fieldset")
+		private WebElement FacIltytype_touch;
+	    public WebElement facilitytypetouch() {
+			return FacIltytype_touch;
+		}
+	    @FindBy(xpath="//input[@id='requestFinancingFacilityTotalvalue_CSMRF00MT']")
+		private WebElement ToTal_Limit_Search_box;
+	    public WebElement totallimitsearchbox() {
+			return ToTal_Limit_Search_box;
+		}
+//	    @FindBy(xpath="//label[@id='requestFinancingFormId_CSMRF00MT_Total_Limit_Key']")
+//		private WebElement ToTal_Limit;
+//	    public WebElement totallimit() {
+//			return ToTal_Limit;
+//		}
+
+		
+//		  @FindBy(xpath="//label[@id='requestFinancingFormId_CSMRF00MT_save_key']")
+//		  private WebElement LIMIT_Savebutton; 
+//		  public WebElement limitsavebutton() {
+//			  return LIMIT_Savebutton; 
+//			  }
+//		  
+//		  @FindBy(xpath="//input[@id='_popup_path_sol_confirm_ok']") 
+//		  private WebElement confirm_save_button; 
+//		  public WebElement confirmsavebutton() {
+//		   return confirm_save_button; }
+//		  
+//		  @FindBy(xpath="//input[@id='_popup_path_sol_ok']") 
+//		  private WebElement Record_saved_successfully; 
+//		  public WebElement recordsavedsuccessfully() {
+//			  return Record_saved_successfully;
+//		  }
+		 
+	    @FindBy(xpath="//li[@id='requestFinancingLimitDtlsTabs_CSMRF00MT']/a/span[text()='Disbursement/Sublimit']")
+		private WebElement Disbursement_SUBlimit;
+	    public WebElement disbursementsublimit() {
+			return Disbursement_SUBlimit;
+		}
+	    @FindBy(xpath="//td[@id='add_RequestFinancingLimitDetailsGridId_CSMRF00MT']/div/span")
+		private WebElement Disbursement_SUBlimit_aDD_Button;
+	    public WebElement disbursementsublimitaddbutton() {
+			return Disbursement_SUBlimit_aDD_Button;
+		}
+	    @FindBy(xpath="//input[@id=\'lookuptxt_requestFinancingLimitDetailsGeneralFacilityProductClass_CSMRF00MT\']")
+		private WebElement Product_class_searchbox;
+	    public WebElement productclasssearchbox() {
+			return Product_class_searchbox;
+		}
+	    @FindBy(xpath="//label[@id='requestfinancingLimitPopupFormId_CSMRF00MT_Product_Class_Key']")
+		private WebElement Product_class;
+	    public WebElement productclass() {
+			return Product_class;
+		}
+	    @FindBy(id="requestFinancingLimitDetailsRfNewMargin_CSMRF00MT")
+		private WebElement MaRgin_search_box;
+	    public WebElement marginsearchbox() {
+			return MaRgin_search_box;
+		}
+	    @FindBy(xpath="(//label[@id='requestfinancingLimitPopupFormId_CSMRF00MT_MarignRate_key'])[1]")
+		private WebElement MaRgin;
+	    public WebElement margin() {
+			return MaRgin;
+		}
+	    @FindBy(xpath="//input[@id=\'requestFinancingLimitDetailsPeriodicityNbr_CSMRF00MT\']")
+		private WebElement TeNURe;
+	    public WebElement tenure() {
+			return TeNURe;
+		}
+	    @FindBy(xpath="//button[@id=\'limitDetails_add_btn_CSMRF00MT\']")
+		private WebElement ADD_Button;
+	    public WebElement addbutton() {
+			return ADD_Button;
+		}
+	    @FindBy(xpath="//label[@id=\'requestFinancingFormId_CSMRF00MT_save_key\']")
+		private WebElement Save_Button;
+	    public WebElement savebutton() {
+			return Save_Button;
+		}
+	  //input[@id='_popup_path_sol_confirm_ok']
+	    @FindBy(xpath="//input[@id='_popup_path_sol_confirm_ok']")
+	   	private WebElement Confirmsave_popup_okbutton;
+	       public WebElement confirmsavepopupokbutton() {
+	   		return Confirmsave_popup_okbutton;
+	   	}
+	    @FindBy(xpath="//input[@id='_popup_path_sol_ok']")
+	    private WebElement Confirmsave_Successfully_popup;
+	    public WebElement confirmsavesuccessfullypopup() {
+	      return Confirmsave_Successfully_popup;
+	    }
+	  
+	    @FindBy(xpath="//label[text()='Repayment plan ']")
+	    private WebElement Click_RepaymentPlan;
+	    public WebElement Click_RepaymentPlan() {
+	      return Click_RepaymentPlan;
+	    }
+	  
+	    @FindBy(xpath="//label[text()='Create Schedule ']")
+	    private WebElement Click_Create_Schedule_InRepaymentPlan;
+	    public WebElement Click_Create_Schedule_InRepaymentPlan() {
+	      return Click_Create_Schedule_InRepaymentPlan;
+	    }
+	  
+	    @FindBy(xpath="//span[contains(text(),' Save ')]")
+	    private WebElement Click_saveButton_In_RepaymentPlan;
+	    public WebElement Click_saveButton_In_RepaymentPlan() {
+	      return Click_saveButton_In_RepaymentPlan;
+	    }
+	    
+	    @FindBy(xpath="//label[@id='requestFinancingFormId_CSMRF00MT_Validate_key']")
+	    private WebElement Validate_button;
+	    public WebElement validatebutton() {
+	      return Validate_button;
+	    }
+	    @FindBy(xpath="//input[@id='_popup_path_sol_confirm_ok']")
+	    private WebElement Confirmvalidate_popup_okbutton;
+	    public WebElement confirmvalidatepopupokbutton() {
+	      return Confirmvalidate_popup_okbutton;
+	    }
+	    @FindBy(xpath="//input[@id='_popup_path_sol_ok']")
+	    private WebElement Validate_Successfully_popup;
+	    public WebElement validatesuccessfullypopup() {
+	      return Validate_Successfully_popup;
+	    }
+	    
+	    @FindBy(xpath="//span[text()='Approve Level 1']")
+	    private WebElement Approve_level1;
+	    public WebElement approvelevel1() {
+	      return Approve_level1;
+	    }
+	    
+	    @FindBy(xpath="//span[text()='Approve Level 1']")
+	    private WebElement Click_clearsearch_inApproveLev_1;
+	    public WebElement Click_clearsearch_inApproveLev_1() {
+	      return Click_clearsearch_inApproveLev_1;
+	    }
+	    
+	  
+	    
+	    @FindBy(xpath="//td[@id='td_requestFinancingGridTbl_Id_RFFRF00P1_1_fmsRequestFinancingVO.BRANCH']")
+	    private WebElement doubleClick_and_select_record_inApproveLev_1;
+	    public WebElement doubleClick_and_select_record_inApproveLev_1() {
+	      return doubleClick_and_select_record_inApproveLev_1;
+	    }
+	  
+	    @FindBy(xpath="//label[@id='requestFinancingFormId_RFFRF00P1_approve_key']")
+	    private WebElement approve_buttton_inApproveLev_1;
+	    public WebElement approve_buttton_inApproveLev_1() {
+	      return approve_buttton_inApproveLev_1;
+	    }
+	  
+	    @FindBy(xpath="//select[@id='requestDecisionForward_1_RFFRF00P1']")
+	    private WebElement select_decision_inApproveLev_1;
+	    public WebElement select_decision_inApproveLev_1() {
+	      return select_decision_inApproveLev_1;
+	    }
+	    
+	  
+	    @FindBy(xpath="//td[@id='add_reguestFinancingRejectionReasonGrid_RFFRF00P1']/div/span")
+	    private WebElement click_addButton_On_reasonForRejection;
+	    public WebElement click_addButton_On_reasonForRejection() {
+	      return click_addButton_On_reasonForRejection;
+	    }
+	    
+	  
+	    @FindBy(xpath="//*[@id='td_reguestFinancingRejectionReasonGrid_RFFRF00P1_1_rn']")
+	    private WebElement select_firstRow_in_RejectReason;
+	    public WebElement select_firstRow_in_RejectReason() {
+	      return select_firstRow_in_RejectReason;
+	    }
+	    
+	  
+
+	    @FindBy(xpath="//td[@id='td_reguestFinancingRejectionReasonGrid_RFFRF00P1_1_fmsRequestFinancingRejectionDetailsVO.REASON_CODE']//select")
+	    private WebElement select_reasonForRejection;
+	    public WebElement select_reasonForRejection() {
+	      return select_reasonForRejection;
+	    }
+	    
+	  
+	    
+	    @FindBy(xpath="//td[@id='td_reguestFinancingRejectionReasonGrid_RFFRF00P1_1_fmsRequestFinancingRejectionDetailsVO.DETAILS']//textarea")
+	    private WebElement Type_detailsIn_reasonForRejection;
+	    public WebElement Type_detailsIn_reasonForRejection() {
+	      return Type_detailsIn_reasonForRejection;
+	    }
+	    
+	  
+	    @FindBy(xpath="//span[text()='Ok']")
+	    private WebElement clickOk_reasonForRejection;
+	    public WebElement clickOk_reasonForRejection() {
+	      return clickOk_reasonForRejection;
+	    }
+	    
+	  
+	    @FindBy(xpath="//td[text()='Reopen Rejected Applications']")
+	    private WebElement Click_Reopen_Rejected_Applications_Under_request_for_financing;
+	    public WebElement Click_Reopen_Rejected_Applications_Under_request_for_financing() {
+	      return Click_Reopen_Rejected_Applications_Under_request_for_financing;
+	    }
+	    
+	  
+	    
+	    @FindBy(xpath="//a[@id='RFFRF00RJMT']/span[2]")
+	    private WebElement Click_mainteance_under_Reopen_Rejected_Applications;
+	    public WebElement Click_mainteance_under_Reopen_Rejected_Applications() {
+	      return Click_mainteance_under_Reopen_Rejected_Applications;
+	    }
+	    
+	    
+	    @FindBy(xpath="//*[@id='requestFinancingGridTbl_Id_RFFRF00RJMT_pager_left']/table/tbody/tr/td[7]")
+	    private WebElement Click_clearSearch_in_mainteance_under_Reopen_Rejected_Applications;
+	    public WebElement Click_clearSearch_in_mainteance_under_Reopen_Rejected_Applications() {
+	      return Click_clearSearch_in_mainteance_under_Reopen_Rejected_Applications;
+	    }
+	  
+	    @FindBy(xpath="//td[@id='td_requestFinancingGridTbl_Id_RFFRF00RJMT_1_fmsRequestFinancingVO.BRANCH']")
+	    private WebElement DoubleClick_Select_firstRecord_Reopen_Rejected_Applications;
+	    public WebElement DoubleClick_Select_firstRecord_Reopen_Rejected_Applications() {
+	      return DoubleClick_Select_firstRecord_Reopen_Rejected_Applications;
+	    }
+
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
 }

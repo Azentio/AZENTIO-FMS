@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import dataProvider.ConfigFileReader;
@@ -218,6 +219,17 @@ public class Application_for_Financial_Facility {
 		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.getEnter_ValueOn_Product_Class());
 		// applicationFinancialObj.getEnter_ValueOn_Product_Class().sendKeys("160");
 		applicationFinancialObj.getEnter_ValueOn_Product_Class().sendKeys(testData.get("Product Class"));
+		applicationFinancialObj.getEnter_ValueOn_Product_Class().sendKeys(Keys.TAB);
+		 for (int i = 0; i <= 300; i++) {
+				if (!(applicationFinancialObj.getEnter_ValueOn_Product_Class().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			}
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.limitDetailsNewRecordCleanFlag());
+	        WebElement cleanFlag = applicationFinancialObj.limitDetailsNewRecordCleanFlag();
+	        if(!(cleanFlag.isSelected())) {
+	            cleanFlag.click();
+	        }
 
 	}
 
@@ -805,7 +817,7 @@ public class Application_for_Financial_Facility {
 		clicksAndActionsHelper.doubleClick(applicationFinancialObj.enter_valueOn_downPayment_inAdditionalDetails());
 		applicationFinancialObj.enter_valueOn_downPayment_inAdditionalDetails().sendKeys(Keys.DELETE);
 
-		applicationFinancialObj.enter_valueOn_downPayment_inAdditionalDetails().sendKeys("100000");
+		applicationFinancialObj.enter_valueOn_downPayment_inAdditionalDetails().sendKeys("10000");
 		applicationFinancialObj.clickOut_after_enterValueOn_down_payment().click();
 		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.down_payment_popup());
 		clicksAndActionsHelper.moveToElement(applicationFinancialObj.down_payment_popup());
@@ -884,6 +896,17 @@ public class Application_for_Financial_Facility {
 		 waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.getEnter_ValueOn_Product_Class());
 		 applicationFinancialObj.getEnter_ValueOn_Product_Class().click();
 		 applicationFinancialObj.getEnter_ValueOn_Product_Class().sendKeys("1");
+			applicationFinancialObj.getEnter_ValueOn_Product_Class().sendKeys(Keys.TAB);
+		 for (int i = 0; i <= 300; i++) {
+				if (!(applicationFinancialObj.getEnter_ValueOn_Product_Class().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			}
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.limitDetailsNewRecordCleanFlag());
+	        WebElement cleanFlag = applicationFinancialObj.limitDetailsNewRecordCleanFlag();
+	        if(!(cleanFlag.isSelected())) {
+	            cleanFlag.click();
+	        }
 		 
 	    }
 
@@ -914,6 +937,56 @@ public class Application_for_Financial_Facility {
 	    	 waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.getEnter_ValueOn_Product_Class());
 			 applicationFinancialObj.getEnter_ValueOn_Product_Class().click();
 			 applicationFinancialObj.getEnter_ValueOn_Product_Class().sendKeys("2");
+			 applicationFinancialObj.getEnter_ValueOn_Product_Class().sendKeys(Keys.TAB);
+				waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.limitDetailsNewRecordCleanFlag());
+			 for (int i = 0; i <= 300; i++) {
+					if (!(applicationFinancialObj.getEnter_ValueOn_Product_Class().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				}
+			 waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.limitDetailsNewRecordCleanFlag());
+			  WebElement cleanFlag = applicationFinancialObj.limitDetailsNewRecordCleanFlag();
+		        if(!(cleanFlag.isSelected())) {
+		            cleanFlag.click();
+		        }
+	    }
+	    @And("^Enter the floating rate$")
+	    public void enter_the_floating_rate() throws Throwable {
+	    	//waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.floatingRateSearchbox());
+	    	
+	    	for (int i = 0; i < 300; i++) {
+				try {
+					applicationFinancialObj.floatingRateSearchbox().click();
+			    	applicationFinancialObj.floatingRateSearchbox().sendKeys("98");
+			    	applicationFinancialObj.floatingRateSearchbox().sendKeys(Keys.TAB);
+					break;
+				} catch (Exception e) {
+					if (i == 299) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+	    	
+	    	for (int i = 0; i <= 300; i++) {
+	    		if (!(applicationFinancialObj.floatingRateSearchbox().getAttribute("prevvalue").isBlank())) {
+	    		break;
+	    		} else if (i == 300) {
+	    			Assert.fail("Data Not populated");
+	    		}
+	   		}     
+	    }
+
+	    @And("^Enter the floating rate periodicity$")
+	    public void enter_the_floating_rate_periodicity() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.floatingrateperiodicitysearchbox());
+	    	applicationFinancialObj.floatingrateperiodicitysearchbox().sendKeys("2");
+	    	applicationFinancialObj.floatingrateperiodicitysearchbox().sendKeys(Keys.TAB);
+	        
+	    }
+	    @Then("^Enter the floating rate periodicity type$")
+	    public void enter_the_floating_rate_periodicity_type() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.floatingrateperiodicitytypesearchbox());
+	    	DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.floatingrateperiodicitytypesearchbox(),"Month(s)");
 	    }
 
 	    @And("^Click save button on limit details$")
@@ -937,65 +1010,6 @@ public class Application_for_Financial_Facility {
 
 	    
 	    
-	    //////////////////
-//	    @And("^Click on document details$")
-//	    public void click_on_document_details() throws Throwable {
-//	    	//waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Click_Document_details());
-//	    	
-//	    	 for (int i = 0; i < 300; i++) {
-//					try {
-//						applicationFinancialObj.Click_Document_details().click();
-//						break;
-//					} catch (Exception e) {
-//						if (i == 299) {
-//							Assert.fail(e.getMessage());
-//						}
-//					}
-//				}
-//	    	
-//	    }
-//
-//	    @And("^Scroll to save and validate button$")
-//	    public void scroll_to_save_and_validate_button() throws Throwable {
-//	       JavascriptHelper.scrollIntoView(applicationFinancialObj.Scroll_downTo_SaveValiate_button_ONDocomentDetails());
-//	       
-//	    }
-//
-//	    @And("^Enter Solicitor Name in document details$")
-//	    public void enter_solicitor_name_in_document_details() throws Throwable {
-//	    	//waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Entervalue_On_Solicitor_Name_InDocomentDetails());
-//	    	
-//	    	 for (int i = 0; i < 300; i++) {
-//					try {
-//						applicationFinancialObj.Entervalue_On_Solicitor_Name_InDocomentDetails().click();
-//				    	applicationFinancialObj.Entervalue_On_Solicitor_Name_InDocomentDetails().sendKeys("1");
-//				    	applicationFinancialObj.ClickSearchAfter_Entervalue_On_Solicitor_Name_InDocomentDetails().click();
-//						break;
-//					} catch (Exception e) {
-//						if (i == 299) {
-//							Assert.fail(e.getMessage());
-//						}
-//					}
-//				}
-//	    	
-//	    }
-//
-//	    @And("^Enter Estimator Name in document details$")
-//	    public void enter_estimator_name_in_document_details() throws Throwable {
-//	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Entervalue_On_Estimator_Name_InDocomentDetails());
-//	    	applicationFinancialObj.Entervalue_On_Estimator_Name_InDocomentDetails().click();
-//	    	applicationFinancialObj.Entervalue_On_Estimator_Name_InDocomentDetails().sendKeys("1");
-//	    	applicationFinancialObj.ClickSearchAfter_Entervalue_On_Estimator_Name_InDocomentDetails().click();
-//	    	
-//	    }
-//
-//	    @And("^Click validate button on document details$")
-//	    public void click_validate_button_on_document_details() throws Throwable {
-//	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Click_validate_button_on_docomentDetails());
-//	    	applicationFinancialObj.Click_validate_button_on_docomentDetails().click();
-//	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Click_ok_onScuccessWarnning_for_applicationFacility());
-//	    	applicationFinancialObj.Click_ok_onScuccessWarnning_for_applicationFacility().click();
-//	    }
 
 	    @And("^User move to the Document details tab$")
 	    public void user_move_to_the_document_details_tab() throws Throwable {
@@ -1017,6 +1031,32 @@ public class Application_for_Financial_Facility {
 
 	    @And("^User enter the Solicitor Name$")
 	    public void user_enter_the_solicitor_name() throws Throwable {
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.documentDetailsSolicitorName());
+	    	applicationFinancialObj.documentDetailsSolicitorName().sendKeys("1");;
+	    	applicationFinancialObj.documentDetailsSolicitorName().sendKeys(Keys.TAB);
+	    	 for (int i = 0; i <= 300; i++) {
+					if (!(applicationFinancialObj.documentDetailsSolicitorName().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				}
+	    }
+
+	    @And("^User enter the Estimator Name$")
+	    public void user_enter_the_estimator_name() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.documentDetailsEstimatorName());
+	    	applicationFinancialObj.documentDetailsEstimatorName().sendKeys("1");
+	    	applicationFinancialObj.documentDetailsEstimatorName().sendKeys(Keys.TAB);
+	    	 for (int i = 0; i <= 300; i++) {
+					if (!(applicationFinancialObj.documentDetailsSolicitorName().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				}
+	    	
+	    }
+
+	    @And("^User clicks the save button$")
+	    public void user_clicks_the_save_button() throws Throwable {
 	    	for (int i = 0; i <= 300; i++) {
 				try {
 					JavascriptHelper.scrollIntoView(applicationFinancialObj.documentDetailsSolicitorName());
@@ -1027,22 +1067,6 @@ public class Application_for_Financial_Facility {
 					}
 				}
 	    	}
-	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.documentDetailsSolicitorName());
-	    	applicationFinancialObj.documentDetailsSolicitorName().sendKeys("1");;
-	    	applicationFinancialObj.documentDetailsSolicitorName().sendKeys(Keys.TAB);
-	    }
-
-	    @And("^User enter the Estimator Name$")
-	    public void user_enter_the_estimator_name() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.documentDetailsEstimatorName());
-	    	applicationFinancialObj.documentDetailsEstimatorName().sendKeys("1");
-	    	applicationFinancialObj.documentDetailsEstimatorName().sendKeys(Keys.TAB);
-	    	Thread.sleep(10000);
-	    	
-	    }
-
-	    @And("^User clicks the save button$")
-	    public void user_clicks_the_save_button() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.limitDetailsSaveBtn());
 	    	applicationFinancialObj.limitDetailsSaveBtn().click();
 	    	
@@ -1071,12 +1095,7 @@ public class Application_for_Financial_Facility {
 					}
 				}
 			}
-	    	StringBuffer refID=new StringBuffer();  
-	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.limitDetailsValidateSuccessMsg());
-	    	String SuccessMsg = applicationFinancialObj.limitDetailsValidateSuccessMsg().getText();
-	    	String substring = SuccessMsg.substring(23, 27);
-	    	refID.append(substring);
-	    	System.err.println("Reference Number: "+refID);
+
 	    	
 	    	for (int i = 0; i < 2000; i++) {
 				try {
@@ -1195,47 +1214,7 @@ public class Application_for_Financial_Facility {
 	
 	
 	
-	//@11
-
-    @And("^Click Collateral Management$")
-    public void click_collateral_management() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Click_Collateral_Management());
-    	 applicationFinancialObj.Click_Collateral_Management().click();
-    }
-
-    @And("^Click maintenance under Collateral Management$")
-    public void click_maintenance_under_collateral_management() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Click_maintenance_under_Collateral_Management());
-    	applicationFinancialObj.Click_maintenance_under_Collateral_Management().click();
-    }
-
-    @And("^Click search on maintenance screen$")
-    public void click_search_on_maintenance_screen() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Click_search_on_maintenance_screen());
-    	applicationFinancialObj.Click_search_on_maintenance_screen().click();
-
-    }
-
-    @And("^Click and enter CIF$")
-    public void click_and_enter_cif() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Click_Click_and_enter_CIF());
-    	applicationFinancialObj.Click_Click_and_enter_CIF().click();
-    	applicationFinancialObj.Click_Click_and_enter_CIF().sendKeys("8");
-    	applicationFinancialObj.Click_Click_and_enter_CIF().sendKeys(Keys.ENTER);
-
-    }
-    
-    @And("^After enter CIF find if any alphabetic in ID number$")
-    public void after_enter_cif_find_if_any_alphabetic_in_id_number() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.After_enter_CIF_find_if_any_alphabetic_in_ID_number());
-    	String alp = applicationFinancialObj.After_enter_CIF_find_if_any_alphabetic_in_ID_number().getAttribute("title");
-    	boolean flag1 = alp.matches(".*[a-zA-Z]+.*");
-    	assertEquals(flag1,true);
-    	
-    	System.out.println("done");
-    }
-
-    
+	
     
     
     

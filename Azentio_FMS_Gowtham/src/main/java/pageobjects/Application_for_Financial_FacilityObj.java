@@ -830,35 +830,28 @@ public class Application_for_Financial_FacilityObj {
 		return Existing_Facility_Ref_near_Application_for;
 	}	
 	
-	//11
-	@FindBy(xpath = "//td[text()='Collateral Management']")
-	private WebElement Click_Collateral_Management;
-	public WebElement Click_Collateral_Management() {
-		return Click_Collateral_Management;
-	}	
-	
-	@FindBy(xpath = "(//span[text()='Maintenance'])[1]")
-	private WebElement Click_maintenance_under_Collateral_Management;
-	public WebElement Click_maintenance_under_Collateral_Management() {
-		return Click_maintenance_under_Collateral_Management;
-	}	
-	
-	@FindBy(xpath = "//a[@id='infoBarSearchButton_T014MT']")
-	private WebElement Click_search_on_maintenance_screen;
-	public WebElement Click_search_on_maintenance_screen() {
-		return Click_search_on_maintenance_screen;
+	@FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsCLEAN_FLAG_WIFT001MT']")
+    private WebElement limit_details_new_record_clean_flag;
+    public WebElement limitDetailsNewRecordCleanFlag() {
+        return limit_details_new_record_clean_flag;
+    }
+    
+    @FindBy(xpath = "//*[@id='lookuptxt_applicationfacilityLimitDetailsFLOATING_RATE_WIFT001MT']")
+	private WebElement Floating_rate_Searchbox;
+	public WebElement floatingRateSearchbox() {
+		return Floating_rate_Searchbox;
 	}
 	
-	@FindBy(xpath = "//input[@id='collateralManagementGridTbl_Id_T014MT_gs_fmsCollateralVO.CIF']")
-	private WebElement Click_Click_and_enter_CIF ;
-	public WebElement Click_Click_and_enter_CIF() {
-		return Click_Click_and_enter_CIF;
+	@FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsFLOAT_RATE_PERIODICITY_NBR_WIFT001MT']")
+	private WebElement Floatingrate_Periodicity_Searchbox;
+	public WebElement floatingrateperiodicitysearchbox() {
+		return Floatingrate_Periodicity_Searchbox;
+	}
+	@FindBy(xpath ="//select[@id='applicationfacilityLimitDetailsFLOAT_RATE_PERIODICITY_TYPE_WIFT001MT']")
+	private WebElement Floatingrate_PeriodicityType_Searchbox;
+	public WebElement floatingrateperiodicitytypesearchbox() {
+		return Floatingrate_PeriodicityType_Searchbox;
 	}
 	
-	@FindBy(xpath = "//td[@id='td_collateralManagementGridTbl_Id_T014MT_1_cifVO.ID_NO']")
-	private WebElement After_enter_CIF_find_if_any_alphabetic_in_ID_number ;
-	public WebElement After_enter_CIF_find_if_any_alphabetic_in_ID_number() {
-		return After_enter_CIF_find_if_any_alphabetic_in_ID_number;
-	}
 	
 }
