@@ -798,6 +798,86 @@ public class Request_for_financing_Obj {
 	    }
 
 	    
+	  
+	    @FindBy(xpath="//button[@id='requestFinancing_reopenReject_btn_RFFRF00RJMT']")
+	    private WebElement Click_reopen_button;
+	    public WebElement Click_reopen_button() {
+	      return Click_reopen_button;
+	    }
+	 
+	  
+	    
+//	    @FindBy(xpath="//td[@id='td_requestFinancingGridTbl_Id_RFFRF00RJMT_1_fmsRequestFinancingVO.BRANCH']")
+//	    private WebElement DoubleClick_openRecord_in_mainteance;
+//	    public WebElement DoubleClick_openRecord_in_mainteance() {
+//	      return DoubleClick_openRecord_in_mainteance;
+//	    }
+	    
+	    
+	    
+	  
+	    @FindBy(xpath="//a[@id='RFFRF00RJAP']/span[2]")
+	    private WebElement Click_approve_reject_Reopen_Rejected_Applications;
+	    public WebElement Click_approve_reject_Reopen_Rejected_Applications() {
+	      return Click_approve_reject_Reopen_Rejected_Applications;
+	    }
+	    
+	    
+ 
+	    
+	    @FindBy(xpath="//*[@id='requestFinancingGridTbl_Id_RFFRF00RJAP_pager_left']/table/tbody/tr/td[7]")
+	    private WebElement Click_clear_search_in_approve_reject;
+	    public WebElement Click_clear_search_in_approve_reject() {
+	      return Click_clear_search_in_approve_reject;
+	    }
+	 
+	    @FindBy(xpath="//td[@id='td_requestFinancingGridTbl_Id_RFFRF00RJAP_1_fmsRequestFinancingVO.CODE']")
+	    private WebElement double_click_select_record_in_approve_reject;
+	    public WebElement double_click_select_record_in_approve_reject() {
+	      return double_click_select_record_in_approve_reject;
+	    }
+	    
+	    
+	  
+	    @FindBy(xpath="//button[@id='requestFinancing_approveReopen_btn_RFFRF00RJAP']")
+	    private WebElement Click_approve_in_approve_reject;
+	    public WebElement Click_approve_in_approve_reject() {
+	      return Click_approve_in_approve_reject;
+	
+	    }
+	    
+	      @FindBy(xpath="//a[@id='RFFRF00MT']/span[2]")
+		    private WebElement Click_mainteance_under_request_for_financing;
+		    public WebElement Click_mainteance_under_request_for_financing() {
+		      return Click_mainteance_under_request_for_financing;
+	    
+		    }
+	    
+	    
+		  
+		    @FindBy(xpath="//a[@id='infoBarSearchButton_RFFRF00MT']")
+		    private WebElement Click_searchIn_maintenance_under_request_for_financing;
+		    public WebElement Click_searchIn_maintenance_under_request_for_financing() {
+		      return Click_searchIn_maintenance_under_request_for_financing;
+		    }
+	    
+		  
+	    
+		    @FindBy(xpath="//*[@id='requestFinancingGridTbl_Id_RFFRF00MT_pager_left']/table/tbody/tr/td[7] ")
+		    private WebElement Click_ClearsearchIn_maintenance_under_request_for_financing;
+		    public WebElement Click_ClearsearchIn_maintenance_under_request_for_financing() {
+		      return Click_ClearsearchIn_maintenance_under_request_for_financing;
+		    }
+	    
+	    
+		  
+		    @FindBy(xpath="//td[@id='td_requestFinancingGridTbl_Id_RFFRF00MT_1_fmsRequestFinancingVO.CODE']")
+		    private WebElement select_recordIn_maintenance_under_request_for_financing;
+		    public WebElement select_recordIn_maintenance_under_request_for_financing() {
+		      return select_recordIn_maintenance_under_request_for_financing;
+		    }
+	    
+	    
 	    
 	    
 	    

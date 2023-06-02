@@ -115,8 +115,14 @@ Feature: Title of your feature
     And Click Reopen Rejected Applications Under request for financing
     And Click mainteance under Reopen Rejected Applications
     And Select the reopen record mainteance under Reopen Rejected Applications
-    
-     
+    And Reopen the rejected record
+    #And Goto maintenace
+    #And Take the reopen record under mainteance 
+    And Click Approve rejection under Reopen Rejected Applications
+    And Select the rejected record in  Reopen Rejected Applications
+    And Approve the reopen request
+    And click mainteance under request for financing
+    And select the record in the mainteance under request for financing
     
     
     

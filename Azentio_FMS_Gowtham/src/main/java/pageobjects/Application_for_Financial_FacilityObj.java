@@ -854,4 +854,31 @@ public class Application_for_Financial_FacilityObj {
 	}
 	
 	
+	//@583228
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

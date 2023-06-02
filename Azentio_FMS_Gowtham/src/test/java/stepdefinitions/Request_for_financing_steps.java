@@ -687,7 +687,12 @@ public class Request_for_financing_steps {
 	    public void save_all_the_values_when_limits_are_add() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.savebutton());
 	    	Request_for_financing_Obj.savebutton().click();
-	        
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Success_Popup());
+	    	Request_for_financing_Obj.Success_Popup().click();
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.savebutton());
+	    	Request_for_financing_Obj.savebutton().click();
 	    }
 
 	    @And("^Confirm the popup menu when all the limits are saved$")
@@ -809,10 +814,7 @@ public class Request_for_financing_steps {
 					}
 				}
 	    	}
-	        
-
-	    	
-	    	
+	 
 	    }
 
 	    @And("^Reject the record in Approve level1$")
@@ -873,11 +875,109 @@ public class Request_for_financing_steps {
 	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.DoubleClick_Select_firstRecord_Reopen_Rejected_Applications());
 	    	clicksAndActionsHelper.doubleClick( Request_for_financing_Obj.DoubleClick_Select_firstRecord_Reopen_Rejected_Applications());
 
+	    
+	    }
+	    
+	    @And("^Reopen the rejected record$")
+	    public void reopen_the_rejected_record() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_reopen_button());
+	    	JavascriptHelper.scrollIntoView(Request_for_financing_Obj.Click_reopen_button());
 	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_reopen_button());
+	    	Request_for_financing_Obj.Click_reopen_button().click();
 	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmvalidatepopupokbutton());
+	    	Request_for_financing_Obj.confirmvalidatepopupokbutton().click();
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Success_Popup());
+	    	Request_for_financing_Obj.Success_Popup().click();
+	    
+	    }
+
+//	    @And("^Take the reopen record under mainteance$")
+//	    public void Take_the_reopen_record_under_mainteance() throws Throwable {
+//	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_Clearsearch_on_maintenceScreen());
+//	    	Request_for_financing_Obj.Click_Clearsearch_on_maintenceScreen().click();
+//	    	
+//	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.DoubleClick_openRecord_in_mainteance());
+//	    	clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.DoubleClick_openRecord_in_mainteance());
+//	    	
+//	    }
+	    
+	    @And("^Click Approve rejection under Reopen Rejected Applications$")
+	    public void click_approve_rejection_under_reopen_rejected_applications() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_approve_reject_Reopen_Rejected_Applications());
+	    	Request_for_financing_Obj.Click_approve_reject_Reopen_Rejected_Applications().click();
 	    	
 	    	
 	    }
+	   
+
+	    @And("^Select the rejected record in  Reopen Rejected Applications$")
+	    public void select_the_rejected_record_in_reopen_rejected_applications() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_clear_search_in_approve_reject());
+	    	Request_for_financing_Obj.Click_clear_search_in_approve_reject().click();
+	    	
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_clear_search_in_approve_reject());
+	    	Request_for_financing_Obj.Click_clear_search_in_approve_reject().click();
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_clear_search_in_approve_reject());
+	    	clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.Click_clear_search_in_approve_reject());
+	    	
+	    }
+	    
+	    @And("^Approve the reopen request$")
+	    public void approve_the_reopen_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_approve_in_approve_reject());
+	    	JavascriptHelper.scrollIntoView(Request_for_financing_Obj.Click_approve_in_approve_reject());
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_approve_in_approve_reject());
+	    	Request_for_financing_Obj.Click_approve_in_approve_reject().click();
+	    
+	    }
+
+	    @And("^click mainteance under request for financing$")
+	    public void click_mainteance_under_request_for_financing() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_mainteance_under_request_for_financing());
+	    	Request_for_financing_Obj.Click_mainteance_under_request_for_financing().click();
+
+	    }
+	    
+	    @And("^select the record in the mainteance under request for financing$")
+	    public void select_the_record_in_the_mainteance_under_request_for_financing() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_searchIn_maintenance_under_request_for_financing());
+	    	Request_for_financing_Obj.Click_searchIn_maintenance_under_request_for_financing().click();
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_ClearsearchIn_maintenance_under_request_for_financing());
+	    	Request_for_financing_Obj.Click_ClearsearchIn_maintenance_under_request_for_financing().click();
+
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.select_recordIn_maintenance_under_request_for_financing());
+	    	clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.select_recordIn_maintenance_under_request_for_financing());
+
+	    	
+	    }
+
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
 
 	
 	
