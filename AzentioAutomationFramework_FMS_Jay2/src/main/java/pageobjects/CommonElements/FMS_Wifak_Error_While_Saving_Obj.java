@@ -1021,27 +1021,68 @@ public class FMS_Wifak_Error_While_Saving_Obj {
 	
 	
 	
+	//-------------------- @574947  Scenario: TSR-EWB170043
+   
+	@FindBy(id =  "applicationfacilityLimitDetailsCLEAN_FLAG_WIFT001MT")
+	private WebElement CLEAN_FLAG_In_LimitsDetails;
+	public WebElement CLEAN_FLAG_In_LimitsDetails() {
+		return CLEAN_FLAG_In_LimitsDetails;
+	}
+	
+	@FindBy(id =  "td_ApplicationFacilityLimitDetailsGrid_WIFT001MT_1_fmsAppLimitDetVO.GENERAL_FACILITY_TYPE")
+	private WebElement ProductClass_In_LimitsDetails;
+	public WebElement ProductClass_In_LimitsDetails() {
+		return ProductClass_In_LimitsDetails;
+	}
+	
+	@FindBy(id =  "applicationfacility_repayplan_btn_WIFT001MT")
+	private WebElement RepaymentPlan_btn_In_LimitsDetails;
+	public WebElement RepaymentPlan_btn_In_LimitsDetails() {
+		return RepaymentPlan_btn_In_LimitsDetails;
+	}
 	
 	
+	@FindBy(xpath =  "//Button[@id='applicationfacility_save_as_draft_btn_WIFT001MT']")
+	private WebElement SaveButton_OnLimitDetails_Tab;
+	public WebElement SaveButton_OnLimitDetails_Tab() {
+		return SaveButton_OnLimitDetails_Tab;
+	}
 	
+    @FindBy(id =  "_popup_path_sol_confirm_ok")
+	private WebElement WaringButton_OnLimitDetails_Tab;
+	public WebElement WaringButton_OnLimitDetails_Tab() {
+	return WaringButton_OnLimitDetails_Tab;
+	}
 	
+	@FindBy(id =  "_popup_path_sol_ok")
+	private WebElement SucessButton_OnLimitDetails_Tab;
+	public WebElement SucessButton_OnLimitDetails_Tab() {
+	return SucessButton_OnLimitDetails_Tab;
+	}
 	
+	@FindBy(id =  "No_Of_Payments_WIFT001MT")
+	private WebElement No_Of_Payments_InRepaymentPlan;
+	public WebElement No_Of_Payments_InRepaymentPlan() {
+	return No_Of_Payments_InRepaymentPlan;
+	}
 	
+	@FindBy(id =  "createSchedule_WIFT001MT")
+	private WebElement createSchedule_InRepaymentPlan;
+	public WebElement createSchedule_InRepaymentPlan() {
+	return createSchedule_InRepaymentPlan;
+	}
 	
+	@FindBy(id =  "_popup_path_sol_confirm")
+	private WebElement Warning_popup_No_In_RepaymentPlan;
+	public WebElement Warning_popup_No_In_RepaymentPlan() {
+	return Warning_popup_No_In_RepaymentPlan;
+	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	@FindBy(id =  "applicationfacility_save_btn_WIFT001MT")
+	private WebElement Validate_Button;
+	public WebElement Validate_Button() {
+	return Validate_Button;
+	}
 	
 	
 	

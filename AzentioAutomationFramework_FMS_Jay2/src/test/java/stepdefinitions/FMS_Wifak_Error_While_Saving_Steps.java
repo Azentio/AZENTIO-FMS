@@ -1249,13 +1249,96 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 	    }
 	    
 	    
+	//--------------------------------- @574947 Scenario: TSR-EWB170043 
 	    
 	    
+	    @Then("^Check Flag in Clean Level IN Limits Detalis SubMenu$")
+	    public void check_flag_in_clean_level_in_limits_detalis_submenu() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.CLEAN_FLAG_In_LimitsDetails());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.CLEAN_FLAG_In_LimitsDetails());
+			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.CLEAN_FLAG_In_LimitsDetails());
+	    }
 	    
+	    @Then("^Click the Product Class In Limits Details$")
+	    public void click_the_product_class_in_limits_details() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.ProductClass_In_LimitsDetails());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.ProductClass_In_LimitsDetails());
+			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.ProductClass_In_LimitsDetails());
+	    }
 	    
-	    
-	    
-	    
+	    @Then("^Click Ok Button In Waring Screen In Limits Details$")
+	    public void click_ok_button_in_waring_screen_in_limits_details() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Ok_Button_In_Waring_Screen());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Waring_Screen());
+			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Waring_Screen());
+	    }
+
+	    @Then("^Enter the value in No Of Payments  In Repayment Plan$")
+	    public void enter_the_value_in_no_of_payments_in_repayment_plan() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.No_Of_Payments_InRepaymentPlan());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.No_Of_Payments_InRepaymentPlan());
+			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.No_Of_Payments_InRepaymentPlan());
+			FMSWifakErrorWhileSavingObj.No_Of_Payments_InRepaymentPlan().clear();
+			Thread.sleep(4000);
+			FMSWifakErrorWhileSavingObj.No_Of_Payments_InRepaymentPlan().sendKeys("10");
+	    }
+
+	    @Then("^Click Warning popup No In Repayment Plan$")
+	    public void click_warning_popup_no_in_repayment_plan() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.WaringButton_OnLimitDetails_Tab());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.WaringButton_OnLimitDetails_Tab());
+			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.WaringButton_OnLimitDetails_Tab());
+			//FMSWifakErrorWhileSavingObj.No_Of_Payments_InRepaymentPlan().sendKeys("10");
+	    }
+
+	    @Then("^Click Ok Button In Waring Screen In Repayment Plan$")
+	    public void click_ok_button_in_waring_screen_in_repayment_plan() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Ok_Button_In_Waring_Screen());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Waring_Screen());
+			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Waring_Screen());
+	    }
+
+	    @And("^Click Save Button After In Limits Details$")
+	    public void click_save_button_after_in_limits_details() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.getClick_SaveButton_OnLimitDetails_Tab());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.getClick_SaveButton_OnLimitDetails_Tab());
+			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.getClick_SaveButton_OnLimitDetails_Tab());
+	    }
+
+	    @And("^Click OK  Button In Sucess Screen In Limits Details$")
+	    public void click_ok_button_in_sucess_screen_in_limits_details() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Ok_Button_In_Sucess_Screen());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Sucess_Screen());
+			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Sucess_Screen());
+	    }
+
+	    @And("^Click Repayment Plan In Limits Details$")
+	    public void click_repayment_plan_in_limits_details() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.RepaymentPlan_btn_In_LimitsDetails());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.RepaymentPlan_btn_In_LimitsDetails());
+			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.RepaymentPlan_btn_In_LimitsDetails());
+	    }
+
+	    @And("^Click Create Schedule In Repayment Plan$")
+	    public void click_create_schedule_in_repayment_plan() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.createSchedule_InRepaymentPlan());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.createSchedule_InRepaymentPlan());
+			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.createSchedule_InRepaymentPlan());
+	    }
+
+	    @And("^Click Save Button After In Repayment Plan$")
+	    public void click_save_button_after_in_repayment_plan() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.SaveButton_OnLimitDetails_Tab());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.SaveButton_OnLimitDetails_Tab());
+			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.SaveButton_OnLimitDetails_Tab());
+	    }
+
+	    @And("^Click OK  Button In Sucess Screen In Repayment Plan$")
+	    public void click_ok_button_in_sucess_screen_in_repayment_plan() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Ok_Button_In_Sucess_Screen());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Sucess_Screen());
+			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Sucess_Screen());
+	    }
 	    
 	    
 	    

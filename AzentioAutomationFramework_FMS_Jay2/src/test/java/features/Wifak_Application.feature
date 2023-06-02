@@ -283,12 +283,46 @@ Feature: Wifak Application
     And Enter the Total Value In Additional Details
     Then Enter Down Payment In Percentage
     
+    @574947
+    Scenario: TSR-EWB170043
     
-    
-    
-    
-    
-    
+    Given navigate to FMS application2 and login with valid credentials
+    And Click Wifak Application first
+    And Click Wifak Application Second
+    And Click Application for financial facilities
+    And Click Maintenance
+    And Click and Select Application for
+    And Search CIF No
+    And Enter codeOn Facility Type
+    And Enter Code In Country of Financing
+    And Enter line Code On Facility Rating
+    And Click on additional Details
+    And Enter the Total Value
+    And Click Offer Expiration SelectDate
+    And Select limit Details
+    And Click Add button on limit Detail
+    And Enter ValueOn Product Class
+    Then Check Flag in Clean Level IN Limits Detalis SubMenu
+    And Click Add button AfterEnter Value On Product Class
+  #  Then Click the Product Class In Limits Details
+   # And Click Repayment Plan In Limits Details
+    And Click Save Button After In Limits Details
+    Then Click Ok Button In Waring Screen In Limits Details
+    And Click OK  Button In Sucess Screen In Limits Details
+    Then Click the Product Class In Limits Details
+    And Click Repayment Plan In Limits Details
+    Then Enter the value in No Of Payments  In Repayment Plan
+    And Click Create Schedule In Repayment Plan
+    Then Click Warning popup No In Repayment Plan
+    And Click Save Button After In Repayment Plan
+    Then Click Ok Button In Waring Screen In Repayment Plan
+    And Click OK  Button In Sucess Screen In Repayment Plan
+    And Click Document Details
+    And Enter The Value Solicitor Name
+    And Enter The Value Estimator Name
+    And Click Validate Button in Document Details
+    And Click Ok Button In Waring Screen Document Details
+    And Click OK Button In Confirm Screen IN Document Details
     
     
     
