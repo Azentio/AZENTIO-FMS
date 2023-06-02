@@ -264,7 +264,7 @@ public class WIFAK_Application2_Steps {
 		}
     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.approveApproveBtn());
     	facilityTypeObj.approveApproveBtn().click();
-    	
+ 
     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.ButtonConfirmOk());
     	facilityTypeObj.ButtonConfirmOk().click();
     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.ButtonSuccessOk());
@@ -374,8 +374,8 @@ public class WIFAK_Application2_Steps {
 			}
 		}
     	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.successMessage());
-//    	String SuccessMsg = WIFAKapplicationObj.successMessage().getText();
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.successPopup());
+//    	String SuccessMsg = WIFAKapplicationObj.successPopupMessage().getText();
 //    	String substring = SuccessMsg.substring(23, 27);
 //    	refID.append(substring);
     	
@@ -545,7 +545,30 @@ public class WIFAK_Application2_Steps {
     @And("^User clicks on the Approve button under approve in Document checklist$")
     public void user_clicks_on_the_approve_button_under_approve_in_document_checklist() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.documentChecklistApproveBtn());
+    	for (int i = 0; i < 300; i++) {
+			try {
+				facilityTypeObj.documentChecklistApproveBtn().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==299) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}
+    	
+    	// close the warning popup alert
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.ButtonSuccessOk());
+    	facilityTypeObj.ButtonSuccessOk().click();
+    	
+    	// again click the 
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.documentChecklistApproveBtn());
     	facilityTypeObj.documentChecklistApproveBtn().click();
+    	    	
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.ButtonConfirmOk());
+    	facilityTypeObj.ButtonConfirmOk().click();
+ 	
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.ButtonSuccessOk());
+    	facilityTypeObj.ButtonSuccessOk().click();
     }
 
     @And("^User clicks on the Document management tab in update after approve menu$")
@@ -591,7 +614,8 @@ public class WIFAK_Application2_Steps {
     	facilityTypeObj.limitDetailsdocumentChecklistSecondRow().click();
     	
     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.limitDetailsDocumentChecklistDocumentCodeInput());
-    	facilityTypeObj.limitDetailsDocumentChecklistDocumentCodeInput().sendKeys("3455");
+//    	facilityTypeObj.limitDetailsDocumentChecklistDocumentCodeInput().sendKeys("3455");
+    	facilityTypeObj.limitDetailsDocumentChecklistDocumentCodeInput().sendKeys(testData.get("Document Code"));
     	facilityTypeObj.limitDetailsDocumentChecklistDocumentCodeInput().sendKeys(Keys.TAB);    	
     	
     }
@@ -599,7 +623,8 @@ public class WIFAK_Application2_Steps {
     @And("^User give the Line No under document checklist$")
     public void user_give_the_line_no_under_document_checklist() throws Throwable {    	
     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.limitDetailsDocumentChecklistLineNoInput());
-    	facilityTypeObj.limitDetailsDocumentChecklistLineNoInput().sendKeys("2");
+//    	facilityTypeObj.limitDetailsDocumentChecklistLineNoInput().sendKeys("2");
+    	facilityTypeObj.limitDetailsDocumentChecklistLineNoInput().sendKeys(testData.get("Line No"));
     	facilityTypeObj.limitDetailsDocumentChecklistLineNoInput().sendKeys(Keys.TAB); 
     	for(int i = 0; i <= 300; i++) {
     		try {

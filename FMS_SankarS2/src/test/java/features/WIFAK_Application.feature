@@ -68,15 +68,15 @@ And User clicks the save button
 And User clicks the validate button
 And User clicks the Approve Level1 link
 And User retrive the first data in approve level1
-And User select the level1 devision as approve
+And User select the level1 decision as approve
 And User clicks on the level1 submit button
 And User clicks the Approve Level2 link
 And User retrive the first data in approve level2
-And User select the level2 devision as approve
+And User select the level2 decision as approve
 And User clicks on the level2 submit button
 And User clicks the Approve Level3 link
 And User retrive the first data in approve level3
-And User select the level3 devision as approve
+And User select the level3 decision as approve
 When User clicks on the level3 submit button
 
 
@@ -90,7 +90,7 @@ And User clicks on the Application for financial facility link
 And User clicks the Approve Level1 link
 And User clicks on the clear button
 And User double clicks on the first row of approve level1
-And User move to additional details tab
+And User move to additional details tab in approve level1
 When User clicks on the BM Recommendations button
 Then User validate the BM Recommendations tab is editable or not
 
@@ -187,19 +187,59 @@ And User enter the Solicitor Name
 And User enter the Estimator Name
 And User clicks the save button
 And User clicks the validate button
-#And User clicks the Approve Level1 link
-#And User retrive the first data in approve level1
-#And User select the level1 devision as approve
-#And User clicks on the level1 submit button
-#And User clicks the Approve Level2 link
-#And User retrive the first data in approve level2
-#And User select the level2 devision as approve
-#And User clicks on the level2 submit button
-#And User clicks the Approve Level3 link
-#And User retrive the first data in approve level3
-#And User select the level3 devision as approve
-#When User clicks on the level3 submit button
+And User clicks the Approve Level1 link
+And User retrive the first data in approve level1
+And User select the level1 decision as approve
+And User clicks on the level1 submit button
+And User clicks the Approve Level2 link
+And User retrive the first data in approve level2
+And User select the level2 decision as approve
+And User clicks on the level2 submit button
+And User clicks the Approve Level3 link
+And User retrive the first data in approve level3
+And User select the level3 decision as approve
+When User clicks on the level3 submit button
 
+@582565
+Scenario: TSR-AMANAUPG170105
+
+Given navigate to FMS application and login with valid credentials
+And get the test data for test case 582565
+And User clicks on the WIFAK_Application first link
+And User clicks on the WIFAK_Application second link
+And User clicks on the Application for financial facility link
+And User clicks the maintanance menu
+And User select the application for dropdown as new facility
+And User enter the CIF No in main info tab
+And User enter the facility type in main info tab
+And User enter the country of financing in main info tab
+And User enter the facility rating in main info tab
+And User clicks on the additional details tab
+And User enter the total value in additional info tab
+And User enter the expire date in additional info tab
+And User clicks the limit details tab
+And User clicks the add new record button in limit details tab
+And User select the Item in limit Details
+And User select the Maturity date in limit Details
+And User enter the Margin rate in limit Details
+And User clicks on the add button
+And User move to the Document details tab
+And User enter the Solicitor Name
+And User enter the Estimator Name
+And User clicks the save button
+And User clicks the validate button
+And User clicks the Approve Level1 link
+And User retrive the first data in approve level1
+And User select the level1 decision as approve
+And User clicks on the level1 submit button
+And User clicks the Approve Level2 link
+And User retrive the first data in approve level2
+And User select the level2 decision as approve
+And User clicks on the level2 submit button
+And User clicks the Approve Level3 link
+And User retrive the first data in approve level3
+And User select the level3 decision as approve
+When User clicks on the level3 submit button
 
 
 

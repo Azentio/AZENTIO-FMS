@@ -75,6 +75,12 @@ public class WIFAK_ApplicationObj {
 		return main_facility_type;
 	}
 	
+	@FindBy(xpath = "//input[@id='applicationFacilityFacilityTypeName_WIFT001MT']")
+	private WebElement main_facility_type_label;
+	public WebElement mainFacilityTypeLabel() {
+		return main_facility_type_label;
+	}
+	
 	@FindBy(xpath = "//input[@id='lookuptxt_applicationFacilityCountry_WIFT001MT']")
 	private WebElement main_country_of_financing;
 	public WebElement mainCountryOfFinancing() {
@@ -250,22 +256,40 @@ public class WIFAK_ApplicationObj {
 		return limit_details_validate_btn;
 	}
 	
+	@FindBy(xpath = "//div[@class='jMsgbox-contentWrap']")
+	private WebElement facility_already_created_popup_Msg;
+	public WebElement facilityAlreadyCreatedPopupMsg() {
+		return facility_already_created_popup_Msg;
+	}
+	
 	@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
 	private WebElement facility_already_created_popup;
 	public WebElement facilityAlreadyCreatedPopup() {
 		return facility_already_created_popup;
 	}
 	
+	@FindBy(xpath = "//div[text()='Success']")
+	private WebElement success_popup;
+	public WebElement successPopup() {
+		return success_popup;
+	}
+	
 	@FindBy(xpath = "//div[@class='jMsgbox-contentWrap']")
-	private WebElement success_msg;
-	public WebElement successMessage() {
-		return success_msg;
+	private WebElement success_popup_msg;
+	public WebElement successPopupMessage() {
+		return success_popup_msg;
 	}
 	
 	@FindBy(xpath = "(//a[@class='ui-dialog-titlebar-close ui-corner-all'])[9]")
 	private WebElement send_alert_popup;
 	public WebElement sendAlertPopup() {
 		return send_alert_popup;
+	}
+	
+	@FindBy(xpath = "/html/body/div[70]/div[1]/a")
+	private WebElement level3_send_alert_popup;
+	public WebElement level3SendAlertPopup() {
+		return level3_send_alert_popup;
 	}
 	
 	@FindBy(xpath = "//a[@id='dismissbut_WIFT001MT']")
@@ -378,6 +402,12 @@ public class WIFAK_ApplicationObj {
 	private WebElement clear_btn;
 	public WebElement clearBtn() {
 		return clear_btn;
+	}
+	
+	@FindBy(xpath = "//li[@id='applicationFacilityAdditionDetailsTabs_WIFT001AP1']")
+	private WebElement approve_level1_additional_details_tab;
+	public WebElement approveLevel1AdditionalDetailsTab() {
+		return approve_level1_additional_details_tab;
 	}
 	
 	@FindBy(xpath = "//button[@id='applicationfacility_bmrecommendations_btn_WIFT001AP1']")
@@ -569,4 +599,34 @@ public class WIFAK_ApplicationObj {
 	public WebElement limitDetailsProductEditBtn() {
 		return limit_details_product_edit_btn;
 	}
+	
+	
+	
+//  @582565
+    @FindBy(xpath = "//select[@id='applicationfacilityLimitDetailsGENERAL_FACILITY_TYPE_WIFT001MT']")
+    private WebElement limit_details_item;
+    public WebElement limitDetailsItem() {
+    	return limit_details_item;
+    }
+    
+    @FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsMATURITY_DATE_WIFT001MT']/following-sibling::img")
+    private WebElement limit_details_maturity_date_calender;
+    public WebElement limitDetailsMaturityDateCalender() {
+    	return limit_details_maturity_date_calender;
+    }
+    
+    @FindBy(xpath = "//*[@id='ui-datepicker-div']/table/tbody/tr[5]/td[6]")
+    private WebElement limit_details_maturity_date;
+    public WebElement limitDetailsMaturityDate() {
+    	return limit_details_maturity_date;
+    }
+    
+    @FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsMARGIN_RATE_WIFT001MT']")
+    private WebElement limit_details_margin_rate_input;
+    public WebElement limitDetailsMarginRateInput() {
+    	return limit_details_margin_rate_input;
+    }
+	
+    
+	
 }

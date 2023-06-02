@@ -58,15 +58,15 @@ And User clicks the save button
 And User clicks the validate button
 And User clicks the Approve Level1 link
 And User retrive the first data in approve level1
-And User select the level1 devision as approve
+And User select the level1 decision as approve
 And User clicks on the level1 submit button
 And User clicks the Approve Level2 link
 And User retrive the first data in approve level2
-And User select the level2 devision as approve
+And User select the level2 decision as approve
 And User clicks on the level2 submit button
 And User clicks the Approve Level3 link
 And User retrive the first data in approve level3
-And User select the level3 devision as approve
+And User select the level3 decision as approve
 When User clicks on the level3 submit button
 
 @834966_CSM_Core
@@ -148,15 +148,15 @@ And User clicks the save button
 And User clicks on the validate button
 And User clicks the Approve Level1 link
 And User retrive the first data in approve level1
-And User select the level1 devision as approve
+And User select the level1 decision as approve
 And User clicks on the level1 submit button
 And User clicks the Approve Level2 link
 And User retrive the first data in approve level2
-And User select the level2 devision as approve
+And User select the level2 decision as approve
 And User clicks on the level2 submit button
 And User clicks the Approve Level3 link
 And User retrive the first data in approve level3
-And User select the level3 devision as approve
+And User select the level3 decision as approve
 When User clicks on the level3 submit button
 And User clicks the issue facility offer under WIFAK Application
 And User search the code in issue facility offer
@@ -214,15 +214,15 @@ And User clicks the save button
 And User clicks on the validate button
 And User clicks the Approve Level1 link
 And User retrive the first data in approve level1
-And User select the level1 devision as approve
+And User select the level1 decision as approve
 And User clicks on the level1 submit button
 And User clicks the Approve Level2 link
 And User retrive the first data in approve level2
-And User select the level2 devision as approve
+And User select the level2 decision as approve
 And User clicks on the level2 submit button
 And User clicks the Approve Level3 link
 And User retrive the first data in approve level3
-And User select the level3 devision as approve
+And User select the level3 decision as approve
 When User clicks on the level3 submit button
 
 
@@ -287,15 +287,15 @@ And User clicks the save button
 And User clicks the validate button
 And User clicks the Approve Level1 link
 And User retrive the first data in approve level1
-And User select the level1 devision as approve
+And User select the level1 decision as approve
 And User clicks on the level1 submit button
 And User clicks the Approve Level2 link
 And User retrive the first data in approve level2
-And User select the level2 devision as approve
+And User select the level2 decision as approve
 And User clicks on the level2 submit button
 And User clicks the Approve Level3 link
 And User retrive the first data in approve level3
-And User select the level3 devision as approve
+And User select the level3 decision as approve
 When User clicks on the level3 submit button
 
 
