@@ -274,6 +274,138 @@ public class Facility_TypeObj {
 	}
 	
 	
+//  @582480_FMSParam
+	@FindBy(xpath = "//td[text()='Document Checklist']")
+	private WebElement param_document_checklist;
+	public WebElement paramDocumentChecklist() {
+		return param_document_checklist;
+	}
+	
+	@FindBy(xpath = "//a[@id='P0031UP']")
+	private WebElement document_checklist_update_after_approve;
+	public WebElement documentChecklistUpdateAfterApprove() {
+		return document_checklist_update_after_approve;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_fmsDocumentChecklistParamListGridTbl_Id_P0031UP_2_CODE']")
+	private WebElement document_checklist_code;
+	public WebElement documentChecklistCode() {
+		return document_checklist_code;
+	}
+	
+	@FindBy(xpath = "//td[@id='add_fmsParamDocChecklistGridTbl_Id_P0031UP']")
+	private WebElement document_checklist_add_new_btn;
+	public WebElement documentChecklistAddNewBtn() {
+		return document_checklist_add_new_btn;
+	}
+	
+	@FindBy(xpath = "//td[@id='del_fmsParamDocChecklistGridTbl_Id_P0031UP']")
+	private WebElement document_checklist_delete_btn;
+	public WebElement documentChecklistDeleteBtn() {
+		return document_checklist_delete_btn;
+	}	
+	
+	@FindBy(xpath = "//td[@id='td_fmsParamDocChecklistGridTbl_Id_P0031UP_1_rn']")
+	private WebElement document_checklist_row2;
+	public WebElement documentChecklistRow2() {
+		return document_checklist_row2;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_fmsParamDocChecklistGridTbl_Id_P0031UP_1_fmsdocchecklist_DETVO.DOC_TYPE']//input")
+	private WebElement document_checklist_doctype_input;
+	public WebElement documentChecklistDoctypeInput() {
+		return document_checklist_doctype_input;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_fmsParamDocChecklistGridTbl_Id_P0031UP_1_fmsdocchecklist_DETVO.DOC_TITLE']/input")
+	private WebElement document_checklist_doctitle_input;
+	public WebElement documentChecklistDoctitleInput() {
+		return document_checklist_doctitle_input;
+	}
+	
+	@FindBy(xpath = "//button[@id='fmsDocumentChecklistParamMaint_update_P0031UP']")
+	private WebElement document_checklist_update_btn;
+	public WebElement documentChecklistUpdateBtn() {
+		return document_checklist_update_btn;
+	}
+	
+	@FindBy(xpath = "//a[@id='P0031P']")
+	private WebElement document_checklist_approve_menu;
+	public WebElement documentChecklistApproveMenu() {
+		return document_checklist_approve_menu;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_fmsDocumentChecklistParamListGridTbl_Id_P0031P_1_CODE']")
+	private WebElement document_checklist_approve_code;
+	public WebElement documentChecklistApproveCode() {
+		return document_checklist_approve_code;
+	}
+	
+	@FindBy(xpath = "//button[@id='fmsDocumentChecklistParamMaint_approve_P0031P']")
+	private WebElement document_checklist_approve_btn;
+	public WebElement documentChecklistApproveBtn() {
+		return document_checklist_approve_btn;
+	}
 	
 	
+	@FindBy(xpath = "//li[@id='fmsFacilityTypeDocManagementTab_P008UP']")
+	private WebElement facility_type_Doc_management_tab;
+	public WebElement facilityTypeDocManagementTab() {
+		return facility_type_Doc_management_tab;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_FmsFacilityTypeDocManagementGrid_P008UP_1_screenReference']")
+	private WebElement application_creation_label;
+	public WebElement applicationCreationLabel() {
+		return application_creation_label;
+	}
+	
+	@FindBy(xpath = "//input[@gridid='FmsFacilityTypeDocManagementGrid_P008UP']")
+	private WebElement application_creation_checkbox;
+	public WebElement applicationCreationCheckbox() {
+		return application_creation_checkbox;
+	}
+	
+//  @582480_FMSCore
+    @FindBy(xpath = "//button[@id='applicationfacility_documentchecklist_btn_WIFT001MT']")
+    private WebElement limit_details_document_checklist_btn;
+    public WebElement limitDetailsDocumentChecklistBtn() {
+    	return limit_details_document_checklist_btn;
+    }
+    
+    @FindBy(xpath = "//td[@id='td_FacilityDocumentCheckListGrid_WIFT001MT_1_rn']")
+    private WebElement limit_details_document_checklist_second_row;
+    public WebElement limitDetailsdocumentChecklistSecondRow () {
+    	return limit_details_document_checklist_second_row;
+    }
+    
+    @FindBy(xpath = "//td[@id='del_FacilityDocumentCheckListGrid_WIFT001MT']")
+    private WebElement limit_details_document_checklist_delete_btn;
+    public WebElement limitDetailsDocumentChecklistDeleteBtn () {
+    	return limit_details_document_checklist_delete_btn;
+    }
+    
+    @FindBy(xpath = "//td[@id='add_FacilityDocumentCheckListGrid_WIFT001MT']")
+    private WebElement limit_details_document_checklist_add_btn;
+    public WebElement limitDetailsDocumentChecklistAddBtn () {
+    	return limit_details_document_checklist_add_btn;
+    }
+    
+    @FindBy(xpath = "//input[@name='lookupTxt_DOC_CODE']")
+    private WebElement limit_details_document_checklist_document_code_input;
+    public WebElement limitDetailsDocumentChecklistDocumentCodeInput () {
+    	return limit_details_document_checklist_document_code_input;
+    }
+    
+    @FindBy(xpath = "//input[@name='lookupTxt_LINE_NO']")
+    private WebElement limit_details_document_checklist_line_no_input;
+    public WebElement limitDetailsDocumentChecklistLineNoInput () {
+    	return limit_details_document_checklist_line_no_input;
+    }
+       
+    @FindBy(xpath = "//span[text()='Ok']")
+    private WebElement limit_details_document_checklist_Ok_btn;
+    public WebElement limitDetailsDocumentChecklistOkBtn () {
+    	return limit_details_document_checklist_Ok_btn;
+    }
 }

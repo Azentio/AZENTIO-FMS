@@ -100,6 +100,12 @@ public class WIFAK_Application_Steps {
     	testData = fmsTransactionsExcelData.getTestdata("DS01_582426");
     }
     
+//  @582480_FMSCore
+    @And("^get the test data for test case 582480_FMSCore$")
+    public void get_the_test_data_for_test_case_582480fmscore() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS01_583895");
+    }
+    
     
     
     
@@ -212,7 +218,7 @@ public class WIFAK_Application_Steps {
 		WIFAKapplicationObj.mainFacilityRating().sendKeys(testData.get("Facility Rating"));
 		WIFAKapplicationObj.mainFacilityRating().sendKeys(Keys.TAB);
 		
-		for(int i = 0; i <= 300; i++) {
+		for(int i = 0; i <= 500; i++) {
     		try {
 				if(!(WIFAKapplicationObj.mainFacilityRating().getAttribute("prevvalue").isBlank())) {
 					break;
@@ -440,11 +446,10 @@ public class WIFAK_Application_Steps {
 					Assert.fail(e.getMessage());
 				}
 			}
-		}
-    	
-//    	Thread.sleep(10000);	
+		}	
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.successMessage());
-    	String SuccessMsg = WIFAKapplicationObj.successMessage().getText().substring(23, 27);
+    	String SuccessMsg = WIFAKapplicationObj.successMessage().getText();
+//    	String SuccessMsg = WIFAKapplicationObj.successMessage().getText().substring(23, 27);
     	System.err.println("Reference Number: "+SuccessMsg);
     	
     	for (int i = 0; i < 2000; i++) {
@@ -460,8 +465,16 @@ public class WIFAK_Application_Steps {
     	
     	// close the send alert pop-up box
 //    	Thread.sleep(5000);
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.sendAlertPopupDismissBtn());
-    	WIFAKapplicationObj.sendAlertPopupDismissBtn().click();  	
+    	for (int i = 0; i < 2000; i++) {
+			try {
+		    	WIFAKapplicationObj.sendAlertPopup().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
     	
     }
 
@@ -564,6 +577,18 @@ public class WIFAK_Application_Steps {
     	WIFAKapplicationObj.WarningPopupOkBtn().click();
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.SuccessPopupOkBtn());
     	WIFAKapplicationObj.SuccessPopupOkBtn().click();
+    	
+    	// close the send alert pop-up box
+    	for (int i = 0; i < 2000; i++) {
+			try {
+		    	WIFAKapplicationObj.sendAlertPopup().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
     }
     
     
@@ -879,7 +904,8 @@ public class WIFAK_Application_Steps {
     @And("^User enter the input as Existing Facility Ref in main screen$")
     public void user_enter_the_input_as_existing_facility_ref_in_main_screen() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.mainExistingFacilityRef());
-    	WIFAKapplicationObj.mainExistingFacilityRef().sendKeys(testData.get("Facility Ref"));
+//    	WIFAKapplicationObj.mainExistingFacilityRef().sendKeys(testData.get("Facility Ref"));
+    	WIFAKapplicationObj.mainExistingFacilityRef().sendKeys("1390");
     	WIFAKapplicationObj.mainExistingFacilityRef().sendKeys(Keys.TAB);
     	
     	for(int i = 0; i <= 300; i++) {

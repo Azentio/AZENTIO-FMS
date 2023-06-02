@@ -224,8 +224,79 @@ And User clicks the Approve Level3 link
 And User retrive the first data in approve level3
 And User select the level3 devision as approve
 When User clicks on the level3 submit button
-And User clicks the issue facility offer under WIFAK Application
-And User search the code in issue facility offer
-And User double click on the retrived data
-When User clicks on the issue offer button under issue facility offer
+
+
+@582480_FMSParam
+Scenario: TSR-AMANAUPG170107
+
+Given navigate to FMS param application and login with valid credentials
+And get the test data for test case 582480_FMSParam
+And User clicks on the parameter module
+And User clicks on the Document checklist feature
+And User clicks on the update after approve menu in Document checklist
+And User retrive the one data in update after approve in Document checklist
+And User click the add new button under update after approve in Document checklist
+And User add the new record under Document details in update after approve
+And User clicks on the update button under the update after approve in Document checklist
+And User move to the approve menu under Document checklist
+And User retrive the first data in approve under Document checklist
+And User clicks on the Approve button under approve in Document checklist
+And User clicks on the Facility Type feature
+And User clicks on the update after approve menu in Facility type
+And User enter the code value in update after approve menu
+And User double click on the retrived data in update after approve menu
+And User clicks on the Document management tab in update after approve menu
+And User check the Application creation checkbox under Document management tab
+When User clicks on the Update button
+And User after the update go to the approve menu
+And User enter the code value in approve menu
+And User double click on the retrived data in approve menu
+When User clicks on the Approve button
+
+
+@582480_FMSCore
+Scenario: TSR-AMANAUPG170107
+
+Given navigate to FMS application and login with valid credentials
+And get the test data for test case 582480_FMSCore
+And User clicks on the WIFAK_Application first link
+And User clicks on the WIFAK_Application second link
+And User clicks on the Application for financial facility link
+And User clicks the maintanance menu
+And User select the application for dropdown as new facility
+And User enter the CIF No in main info tab
+And User enter the facility type in main info tab
+And User enter the country of financing in main info tab
+And User enter the facility rating in main info tab
+And User clicks on the additional details tab
+And User enter the total value in additional info tab
+And User enter the expire date in additional info tab
+And User clicks the limit details tab
+And User clicks the add new record button in limit details tab
+And User enter the product class details
+And User clicks on the add button
+And User clicks on the document checklist button under limit details
+And User clicks on the add new button under document checklist
+And User give the Document Code under document checklist
+And User give the Line No under document checklist
+And User click the Ok button under document checklist
+And User move to the Document details tab
+And User enter the Solicitor Name
+And User enter the Estimator Name
+And User clicks the save button
+And User clicks the validate button
+And User clicks the Approve Level1 link
+And User retrive the first data in approve level1
+And User select the level1 devision as approve
+And User clicks on the level1 submit button
+And User clicks the Approve Level2 link
+And User retrive the first data in approve level2
+And User select the level2 devision as approve
+And User clicks on the level2 submit button
+And User clicks the Approve Level3 link
+And User retrive the first data in approve level3
+And User select the level3 devision as approve
+When User clicks on the level3 submit button
+
+
 

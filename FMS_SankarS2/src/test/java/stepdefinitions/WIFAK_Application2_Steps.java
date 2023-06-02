@@ -56,6 +56,12 @@ public class WIFAK_Application2_Steps {
 		testData = fmsTransactionsExcelData.getTestdata("DS01_583895");
     }
 	
+//	@582480_FMSParam
+	@And("^get the test data for test case 582480_FMSParam$")
+    public void get_the_test_data_for_test_case_582480fmsparam() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS01_583895");
+    }
+	
 
 	
 	@And("^User clicks on the parameter module$")
@@ -385,7 +391,18 @@ public class WIFAK_Application2_Steps {
 			}
 		}
     	
-    } 
+    	// Send Alert pop-up
+    	for (int i = 0; i < 2000; i++) {
+			try {
+		    	WIFAKapplicationObj.sendAlertPopup().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+    }
    
     @And("^User clicks the issue facility offer under WIFAK Application$")
     public void user_clicks_the_issue_facility_offer_under_wifak_application() throws Throwable {    	
@@ -454,5 +471,157 @@ public class WIFAK_Application2_Steps {
    	 		checkCollateralFacility.click();
     	}
     }
+    
+    
+//  @582480_FMSParam
+    @And("^User clicks on the Document checklist feature$")
+    public void user_clicks_on_the_document_checklist_feature() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.paramDocumentChecklist());
+    	facilityTypeObj.paramDocumentChecklist().click();
+    }
+
+    @And("^User clicks on the update after approve menu in Document checklist$")
+    public void user_clicks_on_the_update_after_approve_menu_in_document_checklist() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.documentChecklistUpdateAfterApprove());
+    	facilityTypeObj.documentChecklistUpdateAfterApprove().click();
+    }
+
+    @And("^User retrive the one data in update after approve in Document checklist$")
+    public void user_retrive_the_one_data_in_update_after_approve_in_document_checklist() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.documentChecklistCode());
+    	clicksAndActionsHelper.doubleClick(facilityTypeObj.documentChecklistCode());
+    }
+    
+    @And("^User click the add new button under update after approve in Document checklist$")
+    public void user_click_the_add_new_button_under_update_after_approve_in_document_checklist() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.documentChecklistRow2());
+    	facilityTypeObj.documentChecklistRow2().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.documentChecklistDeleteBtn());
+    	facilityTypeObj.documentChecklistDeleteBtn().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.documentChecklistAddNewBtn());
+    	facilityTypeObj.documentChecklistAddNewBtn().click();
+    }
+
+    @And("^User add the new record under Document details in update after approve$")
+    public void user_add_the_new_record_under_document_details_in_update_after_approve() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.documentChecklistRow2());
+    	facilityTypeObj.documentChecklistRow2().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.documentChecklistDoctypeInput());
+    	facilityTypeObj.documentChecklistDoctypeInput().sendKeys("5");
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.documentChecklistDoctitleInput());
+    	facilityTypeObj.documentChecklistDoctitleInput().sendKeys("Test");
+    	
+    }
+
+    @And("^User clicks on the update button under the update after approve in Document checklist$")
+    public void user_clicks_on_the_update_button_under_the_update_after_approve_in_document_checklist() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.documentChecklistUpdateBtn());
+    	facilityTypeObj.documentChecklistUpdateBtn().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.ButtonConfirmOk());
+    	facilityTypeObj.ButtonConfirmOk().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.ButtonSuccessOk());
+    	facilityTypeObj.ButtonSuccessOk().click();
+    	
+    }
+
+    @And("^User move to the approve menu under Document checklist$")
+    public void user_move_to_the_approve_menu_under_document_checklist() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.documentChecklistApproveMenu());
+    	facilityTypeObj.documentChecklistApproveMenu().click();
+    }
+
+    @And("^User retrive the first data in approve under Document checklist$")
+    public void user_retrive_the_first_data_in_approve_under_document_checklist() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.documentChecklistApproveCode());
+    	clicksAndActionsHelper.doubleClick(facilityTypeObj.documentChecklistApproveCode());
+    }
+
+    @And("^User clicks on the Approve button under approve in Document checklist$")
+    public void user_clicks_on_the_approve_button_under_approve_in_document_checklist() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.documentChecklistApproveBtn());
+    	facilityTypeObj.documentChecklistApproveBtn().click();
+    }
+
+    @And("^User clicks on the Document management tab in update after approve menu$")
+    public void user_clicks_on_the_document_management_tab_in_update_after_approve_menu() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.facilityTypeDocManagementTab());
+    	facilityTypeObj.facilityTypeDocManagementTab().click();
+    }
+
+    @And("^User check the Application creation checkbox under Document management tab$")
+    public void user_check_the_application_creation_checkbox_under_document_management_tab() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.applicationCreationLabel());
+    	facilityTypeObj.applicationCreationLabel().click();
+    	WebElement applicationCreationCheckbox = facilityTypeObj.applicationCreationCheckbox();
+    	applicationCreationCheckbox.click();
+    	if(!(applicationCreationCheckbox.isSelected())) {
+    		applicationCreationCheckbox.click();
+    	}
+    }
+
+//  @582480_FMSCore
+    @And("^User clicks on the document checklist button under limit details$")
+    public void user_clicks_on_the_document_checklist_button_under_limit_details() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.limitDetailsDocumentChecklistBtn());
+    	facilityTypeObj.limitDetailsDocumentChecklistBtn().click();
+    }
+
+    @And("^User clicks on the add new button under document checklist$")
+    public void user_clicks_on_the_add_new_button_under_document_checklist() throws Throwable {
+    	// delete the second row 
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.limitDetailsdocumentChecklistSecondRow());
+    	facilityTypeObj.limitDetailsdocumentChecklistSecondRow().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.limitDetailsDocumentChecklistDeleteBtn());
+    	facilityTypeObj.limitDetailsDocumentChecklistDeleteBtn().click();    	
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.limitDetailsDocumentChecklistAddBtn());
+    	facilityTypeObj.limitDetailsDocumentChecklistAddBtn().click();    	
+    }
+
+    @And("^User give the Document Code under document checklist$")
+    public void user_give_the_document_code_under_document_checklist() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.limitDetailsdocumentChecklistSecondRow());
+    	facilityTypeObj.limitDetailsdocumentChecklistSecondRow().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.limitDetailsDocumentChecklistDocumentCodeInput());
+    	facilityTypeObj.limitDetailsDocumentChecklistDocumentCodeInput().sendKeys("3455");
+    	facilityTypeObj.limitDetailsDocumentChecklistDocumentCodeInput().sendKeys(Keys.TAB);    	
+    	
+    }
+
+    @And("^User give the Line No under document checklist$")
+    public void user_give_the_line_no_under_document_checklist() throws Throwable {    	
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.limitDetailsDocumentChecklistLineNoInput());
+    	facilityTypeObj.limitDetailsDocumentChecklistLineNoInput().sendKeys("2");
+    	facilityTypeObj.limitDetailsDocumentChecklistLineNoInput().sendKeys(Keys.TAB); 
+    	for(int i = 0; i <= 300; i++) {
+    		try {
+				if(!(facilityTypeObj.limitDetailsDocumentChecklistLineNoInput().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}
+    }
+
+    @And("^User click the Ok button under document checklist$")
+    public void user_click_the_ok_button_under_document_checklist() throws Throwable {
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.limitDetailsDocumentChecklistOkBtn());
+    	facilityTypeObj.limitDetailsDocumentChecklistOkBtn().click();
+    }
+    
+    
+    
+    
+    
     
 }
