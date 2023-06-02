@@ -352,7 +352,7 @@ public class FMS_Wifak_Error_While_Saving_Obj {
 	
 	
 	
-	@FindBy(id =  "applicationfacilityLimitDetailsEXPECTED_PAYMENT_DATE_WIFT001MT")
+	@FindBy(xpath =  "//input[@id='applicationfacilityLimitDetailsEXPECTED_PAYMENT_DATE_WIFT001MT']")
 	private WebElement Expected_Payment_Date_inLimit_Details_SubMenu;
 	public WebElement ExpectedPaymenDate_inLimitDetails_SubMenu(){
 		return Expected_Payment_Date_inLimit_Details_SubMenu;
@@ -567,10 +567,16 @@ public class FMS_Wifak_Error_While_Saving_Obj {
 		return DownPaymentPercentage_InLImitDetails_SubMenu;
 	}
 	
-	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_DownPaymentAmount_key")
+	@FindBy(xpath =  "//input[@name='applicationFacilityCO.fmsApplVO.DOWN_PAYMENT_PERC']")
 	private WebElement DownPaymentAmount_InLImitDetails_SubMenu;
 	public WebElement DownPaymentAmount_InLImitDetails_SubMenu() {
 		return DownPaymentAmount_InLImitDetails_SubMenu;
+	}
+	
+	@FindBy(xpath = "//input[@id='applicationFacilitydownpayment_WIFT001MT']")
+	private WebElement DownPaymentAmo_InLImitDetails_SubMenu;
+	public WebElement DownPaymentAmo_InLImitDetails_SubMenu() {
+		return DownPaymentAmo_InLImitDetails_SubMenu;
 	}
 	
 	@FindBy(id =  "lbl_applicationFacilityLimitDetailsDownPaymentToVendorPerc_WIFT001MT")
@@ -978,5 +984,160 @@ public class FMS_Wifak_Error_While_Saving_Obj {
 	public WebElement close_btn_InLImitDetails_SubMenu() {
 		return close_btn_InLImitDetails_SubMenu;
 	}
+	
+	//-------------@579604  Scenario: TSR - KCB170047
+	
+	
+	
+	@FindBy(xpath =  "//select[@id='applicationFacilityApplicationfor_WIFT001MT']")
+	private WebElement Application_for_Decrease;
+	public WebElement Application_for_Decrease() {
+		return Application_for_Decrease;
+	}
+	
+	@FindBy(id =  "lookuptxt_applicationFacilityExistingFacilityRef_WIFT001MT")
+	private WebElement ExistingFacility_Ref;
+	public WebElement ExistingFacility_Ref() {
+		return ExistingFacility_Ref;
+	}
+	
+	@FindBy(xpath =  "//span[text()='Additional Details']")
+	private WebElement Click_AdditionalDetails;
+	public WebElement Click_AdditionalDetails() {
+		return Click_AdditionalDetails;
+	}
+	
+	@FindBy(xpath =  "//input[@name='applicationFacilityCO.TOTAL_AMOUNT']")
+	private WebElement TOTAL_AMOUNT_InAdditionalDetails;
+	public WebElement TOTAL_AMOUNT_InAdditionalDetails() {
+		return TOTAL_AMOUNT_InAdditionalDetails;
+	}
+	
+	@FindBy(xpath =  "//input[@name='applicationFacilityCO.fmsApplVO.DOWN_PAYMENT_PERC']")
+	private WebElement DOWN_PAYMENT_PERC_InAdditionalDetails;
+	public WebElement DOWN_PAYMENT_PERC_InAdditionalDetails() {
+		return DOWN_PAYMENT_PERC_InAdditionalDetails;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }

@@ -605,7 +605,7 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.ExpectedPaymenDate_inLimitDetails_SubMenu());
 			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.ExpectedPaymenDate_inLimitDetails_SubMenu());
 			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.ExpectedPaymenDate_inLimitDetails_SubMenu());
-			FMSWifakErrorWhileSavingObj.ExpectedPaymenDate_inLimitDetails_SubMenu().sendKeys("02/10/2022");
+			FMSWifakErrorWhileSavingObj.ExpectedPaymenDate_inLimitDetails_SubMenu().sendKeys("02/10/2021");
 			FMSWifakErrorWhileSavingObj.ExpectedPaymenDate_inLimitDetails_SubMenu().sendKeys(Keys.TAB);
 	    }
 
@@ -1157,8 +1157,96 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 	    
 	    
 	    
+	    //-------------@579604  Scenario: TSR - KCB170047
 	    
 	    
+	    @Then("^Click Application For Decrease$")
+	    public void click_application_for_decrease() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.getApplication_for());
+			// clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.getMaintenance());
+			DropDownhelper.SelectUsingVisibleText(FMSWifakErrorWhileSavingObj.getApplication_for(), "Decrease");
+	    }
+
+	    @And("^Enter Existing Facility Ref$")
+	    public void enter_existing_facility_ref() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.ExistingFacility_Ref());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.ExistingFacility_Ref());
+			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.ExistingFacility_Ref());
+			FMSWifakErrorWhileSavingObj.ExistingFacility_Ref().sendKeys("1382");
+			FMSWifakErrorWhileSavingObj.ExistingFacility_Ref().sendKeys(Keys.TAB);
+	    }
+	    
+	    @And("^Click on additional Details In Additional Details$")
+	    public void click_on_additional_details_in_additional_details() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.getMaintenance());
+//			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.getMaintenance());
+//			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.getMaintenance());
+			
+	    	for (int i = 0; i < 200; i++) {
+				try {
+					clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Click_AdditionalDetails());
+					break;
+				} catch (Exception e) {
+					if (i == 199) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+	    	    
+	    @And("^Enter the Total Value In Additional Details$")
+	    public void enter_the_total_value_in_additional_details() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.TOTAL_AMOUNT_InAdditionalDetails());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.TOTAL_AMOUNT_InAdditionalDetails());
+			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.TOTAL_AMOUNT_InAdditionalDetails());
+			FMSWifakErrorWhileSavingObj.getEnter_TotalValue().sendKeys("50000");
+	    }
+	    
+	    @Then("^Enter Down Payment In Percentage$")
+	    public void enter_down_payment_in_percentage() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.DownPaymentAmount_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.DownPaymentAmount_InLImitDetails_SubMenu());
+			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.DownPaymentAmount_InLImitDetails_SubMenu());
+			for(int i = 0; i <= 500; i++) {
+	            try {
+	                if(FMSWifakErrorWhileSavingObj.DownPaymentAmo_InLImitDetails_SubMenu().getAttribute("prevvalue").isBlank()) {
+	                    break;
+	                }
+	            } catch (Exception e) {
+	                // TODO: handle exception
+	            }
+	        }
+			FMSWifakErrorWhileSavingObj.DownPaymentAmount_InLImitDetails_SubMenu().sendKeys("10");
+			FMSWifakErrorWhileSavingObj.DownPaymentAmount_InLImitDetails_SubMenu().sendKeys(Keys.TAB);
+			
+			int total = (50000*10)/100;
+			System.err.println("Total value: "+total);
+			String valueOf = String.valueOf(total);
+			
+			for(int i = 0; i <= 500; i++) {
+	            try {
+	                if(!(FMSWifakErrorWhileSavingObj.DownPaymentAmo_InLImitDetails_SubMenu().getAttribute("prevvalue").isBlank())) {
+	                    break;
+	                }
+	            } catch (Exception e) {
+	                // TODO: handle exception
+	            }
+	        }    
+			
+			
+			waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.DownPaymentAmo_InLImitDetails_SubMenu());
+			String attribute = FMSWifakErrorWhileSavingObj.DownPaymentAmo_InLImitDetails_SubMenu().getAttribute("prevvalue");
+			System.err.println("Down payment amount: "+attribute);
+			
+			String[] splitAttribute  = attribute.split("[.]");
+	        String finalAttribute = splitAttribute[0].replace(",", "");
+	        
+	        System.err.println(finalAttribute);
+	        
+	        Assert.assertEquals(valueOf, finalAttribute);
+			
+			
+	    }
 	    
 	    
 	    

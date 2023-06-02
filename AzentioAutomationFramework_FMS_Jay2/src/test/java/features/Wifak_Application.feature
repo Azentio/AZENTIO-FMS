@@ -195,7 +195,6 @@ Feature: Wifak Application
     And Click Add button on limit Detail
     And Check The Level Of Items In LImit Details SubMenu
     Then Check The Level Of Product Class In LImit Details SubMenu
-    
     And Check The Level Of Type In LImit Details SubMenu
     Then Check The Level Of Case Non Case In LImit Details SubMenu
     And Check The Level Of Facility Value In LImit Details SubMenu
@@ -269,4 +268,44 @@ Feature: Wifak Application
     Then Check The Level Of Acc No In LImit Details SubMenu
     And Check The Level Of  Add Button In LImit Details SubMenu
     Then Check The Level Of  Close Button In LImit Details SubMenu
+    
+    
+    @579604 
+    Scenario: TSR - KCB170047
+    Given navigate to FMS application2 and login with valid credentials
+    And Click Wifak Application first
+    And Click Wifak Application Second
+    And Click Application for financial facilities
+    And Click Maintenance
+    Then Click Application For Decrease
+    And Enter Existing Facility Ref
+		And Click on additional Details In Additional Details
+    And Enter the Total Value In Additional Details
+    Then Enter Down Payment In Percentage
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
