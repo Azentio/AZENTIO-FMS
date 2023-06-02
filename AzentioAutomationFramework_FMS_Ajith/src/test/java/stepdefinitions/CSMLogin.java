@@ -34,7 +34,7 @@ public class CSMLogin {
 		clicksAndActionHelper = new ClicksAndActionsHelper(driver);
 		waitHelper.waitForElementwithFluentwait(driver, csmCommonWebElements.csmUserName());
 		csmCommonWebElements.csmUserName().click();
-		csmCommonWebElements.csmUserName().sendKeys(csmLoginTestData.get("userName"));
+		csmCommonWebElements.csmUserName().sendKeys(csmLoginTestData.get("UserName"));
 		waitHelper.waitForElementwithFluentwait(driver, csmCommonWebElements.csmPassword());
 		csmCommonWebElements.csmPassword().click();
 		csmCommonWebElements.csmPassword().sendKeys(csmLoginTestData.get("Password"));
@@ -69,6 +69,16 @@ public class CSMLogin {
 
 		waitHelper.waitForElementwithFluentwait(driver, csmCommonWebElements.csmContinueButton());
 		csmCommonWebElements.csmContinueButton().click();
+		for (int i = 0; i <200; i++) {
+			try {
+				if (csmCommonWebElements.csm_UserAlreadyLoginPopUp().isDisplayed()) {
+					csmCommonWebElements.csm_UserAlreadyLoginYes().click();
+					break;
+				}
+			} catch (Exception e) {
+				
+			}
+		}
 		waitHelper.waitForElementwithFluentwait(driver, csmCommonWebElements.csmContinueButton());
 		csmCommonWebElements.csmContinueButton().click();
 		waitHelper.waitForElementwithFluentwait(driver, csmCommonWebElements.csmLoginValidation());
@@ -91,7 +101,7 @@ public class CSMLogin {
 		clicksAndActionHelper = new ClicksAndActionsHelper(driver);
 		waitHelper.waitForElementwithFluentwait(driver, csmCommonWebElements.csmUserName());
 		csmCommonWebElements.csmUserName().click();
-		csmCommonWebElements.csmUserName().sendKeys(csmLoginTestData.get("userName"));
+		csmCommonWebElements.csmUserName().sendKeys(csmLoginTestData.get("UserName"));
 		waitHelper.waitForElementwithFluentwait(driver, csmCommonWebElements.csmPassword());
 		csmCommonWebElements.csmPassword().click();
 		csmCommonWebElements.csmPassword().sendKeys(csmLoginTestData.get("Password"));

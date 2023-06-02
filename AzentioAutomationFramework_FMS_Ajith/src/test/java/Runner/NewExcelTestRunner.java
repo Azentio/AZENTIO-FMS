@@ -13,7 +13,7 @@ import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
 public class NewExcelTestRunner {
-	String path = System.getProperty("user.dir") + "\\Test-data\\KUBSTestData.xlsx";
+	String path = System.getProperty("user.dir") + "\\TestData\\FMSTestData.xlsx";
 	ExcelData testExecution = new ExcelData(path, "TestExecution", "TestCaseID");
 	Map<String, String> testExecutionData;
 	ExcelTest excelTest = new ExcelTest(path, "TestExecution", "TestCaseID");
@@ -24,10 +24,8 @@ public class NewExcelTestRunner {
 
 		String[] parameter = {
 
-				"src/test/java/features/BugetAndPlanningDefinition_UATFEATURE.feature",
-				"src\\test\\java\\features\\BudgetAndPlanning_UATBudgetCreation.feature",
-				"src\\test\\java\\features\\BudgetAndPlanning_UATBudgetSupplementary.feature",
-				"src\\test\\java\\features\\BudgetTransferExcel.feature", "--glue", "stepdefinitions", "--plugin",
+				"src/test/java/features/ApplicationForFinancialFacility.feature",
+				 "--glue", "stepdefinitions", "--plugin",
 				"pretty", "--plugin", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"--plugin", "rerun:ReRunScenarios/FailedReRun.txt", "--tags", "@" + tags };
 
@@ -45,7 +43,7 @@ public class NewExcelTestRunner {
 
 	@Test()
 	public void test() {
-		String path = System.getProperty("user.dir") + "\\Test-data\\KUBSTestData.xlsx";
+		String path = System.getProperty("user.dir") + "\\TestData\\FMSTestData.xlsx";
 		ExcelTest excelTest = new ExcelTest(path, "TestExecution", "TestCaseID");
 		testCaseTagsFromExcel = excelTest.getTestCaseTagsfromExcel();
 		NewExcelTestRunner newExcelTestRunner = new NewExcelTestRunner();

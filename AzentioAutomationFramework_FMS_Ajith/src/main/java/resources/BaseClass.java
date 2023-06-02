@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
@@ -26,6 +27,10 @@ public class BaseClass {
 	if(browserName.equalsIgnoreCase("chrome")) {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
+//		options.addArguments("--disable-notifications");
+		options.addArguments("--incognito");
+//		options.addArguments("--headless=new");
+//		options.addArguments("disable-infobars");
 		driver = new ChromeDriver(options);
 		
 	}else if(browserName.equalsIgnoreCase("firefox")) {
@@ -41,8 +46,9 @@ public class BaseClass {
 		
 	}
 else if(browserName.equalsIgnoreCase("edge")) {
-		
-		driver = new EdgeDriver();
+		EdgeOptions options = new EdgeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		driver = new EdgeDriver(options);
 		
 	}
 	

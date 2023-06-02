@@ -11,3 +11,6 @@ And logout from the application
 Scenario: To Test the login functionality of FMS sads application
 Given navigate to FMS sads application and login with valid credentials
 And logout from the application
+@EndExecution
+Scenario: End exection
+Given Test Ended

@@ -50,5 +50,6 @@ public class LoginTest extends BaseClass {
 		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsUserName());
 		Assert.assertTrue(fmsCommonWebElements.fmsUserName().isDisplayed());
 	}
-
+	
+	
 }

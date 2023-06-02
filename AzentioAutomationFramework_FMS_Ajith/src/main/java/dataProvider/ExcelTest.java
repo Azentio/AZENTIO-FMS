@@ -22,6 +22,10 @@ public class ExcelTest {
 		int rowCount = excelReader.getRowCount(sheetName);
 		for (int i = 2; i <=rowCount; i++) {
 			String cellData = excelReader.getCellData(sheetName, columnName, i);
+			if (cellData.contains(".0")) {
+				String[] split = cellData.split("[.]");
+				cellData =split[0];
+			}
 			if (!(cellData.isBlank())) {
 				li.add(cellData);
 			}
