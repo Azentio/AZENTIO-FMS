@@ -12,11 +12,13 @@ import helper.WaitHelper;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import pageobjects.fms.ChecknewfieldatsublimittabOBJ;
+import pageobjects.fms.LimitadditionaldetailsOBJ;
 import resources.BaseClass;
 
 public class ChecknewfieldatsublimittabSTEPS {
 	WebDriver driver = BaseClass.driver;
 	ChecknewfieldatsublimittabOBJ checknewfieldatsublimittab = new ChecknewfieldatsublimittabOBJ(driver);
+	LimitadditionaldetailsOBJ limitadditionaldetails = new LimitadditionaldetailsOBJ(driver);
 	WaitHelper waitHelper = new WaitHelper(driver);
 	JavascriptHelper javascriptHelper = new JavascriptHelper(driver);
 	DropDownHelper dropDownHelper = new DropDownHelper(driver);
@@ -138,9 +140,11 @@ public class ChecknewfieldatsublimittabSTEPS {
 					if (i==1999) {
 						Assert.fail(e.getMessage());
 					}
+					
 				}
 			}   	
-	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, limitadditionaldetails.sendAlertPopup());
+	    	limitadditionaldetails.sendAlertPopup().click();
 	    }
 
 	    @And("^User clicks the Approve Level1 link$")

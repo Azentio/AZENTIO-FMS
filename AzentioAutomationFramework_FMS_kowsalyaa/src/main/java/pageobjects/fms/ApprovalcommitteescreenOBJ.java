@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ApprovalcommitteescreenOBJ {
-WebDriver driver;
+	WebDriver driver;
 	
 	public ApprovalcommitteescreenOBJ(WebDriver driver) {
 		this.driver = driver;

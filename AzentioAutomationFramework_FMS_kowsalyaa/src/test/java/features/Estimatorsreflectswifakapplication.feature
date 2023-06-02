@@ -220,10 +220,11 @@ Feature: To Test the Financial facilities in FMS Application
     And User retrive the first data in approve level3
     And User select the level3 decision as approve
     And User clicks on the level3 submit button
-    
-     @434947
-     Scenario: Check the limit additional details will show in Fms Application Maintenance screen
-     And Click the first Wifak Appliaction
+
+  @434947_limitadditionaldetails
+  Scenario: Check the limit additional details will show in Fms Application Maintenance screen
+    Given navigate to FMS application and login with valid credentials
+    And Click the first Wifak Appliaction
     And Click the second Wifak Appliaction
     And Click the application for financial facilities under second Wifak Appliaction
     And Click the maintenance underapplication for financial facilities
@@ -240,7 +241,9 @@ Feature: To Test the Financial facilities in FMS Application
     And Click the limit details tab
     And Click the add button under limit details tab
     And user choose the product class from iis param
+    #And Enter the floating rate
     And Enter the floating rate periodicity
+    #Then Enter the floating rate periodicity type
     And Click the add button
     And Click the doucmentdetailstab
     And Enter the value for slicitorname
@@ -262,23 +265,81 @@ Feature: To Test the Financial facilities in FMS Application
     And user clicks the facility management under wifak application
     And user clicks the update after approve under wifak application
     And user clicks the facility limit details tab
-    And Enter the value of Rate and Margin rate
+    And Enter the value of Yield details and Margin rate
     And Click the add button
     And Click the doucmentdetailstab
-    And Enter the value of doucment code dates 
+    And Enter the value of doucment code dates
     And User clicks the save button
     And user clicks the Approve menu under facility management
     And user clicks the facility limit details tab
-    And User clicks the maintenance under facility management 
+    And User clicks the maintenance under facility management
     And user clicks the facility limit details tab
+
+  @640874_Fms_param
+  Scenario: TSR - RIDB180131
+  Given navigate to FMS param application and login with valid credentials
+    And Click the parameters menu in param application
+    And User click the colletral type in parameter
+    And user click the Maintenence menu under colletral type
+    And user enter the value of brief discription
+    And user enter the value of long discription
+    And user enter the value of facility coverage
+    And user select the Asset type
+    And user Click the Approve menu under Colletral type
     
-    
-    
-    
-     
-     
    
     
+    @640874_Fms_Core
+  	Scenario: TSR - RIDB180131
+    Given navigate to FMS application and login with valid credentials
+    And user Click the Colletral management menu
+    And user click the maintenance under Colletral management
+    And user select the valid from date 
+    And user select the valid to date
+    And user Enter the value of brief discription in main information
+    And user Enter the value of long discription in main information
+    And User Enter the value of CIFNO in main information
+    And user Enter the value of colletral currency
+    And user Enter the cash colletral details
+    And user click the approve menu in colletral management
     
-    
+    @584557_Fms_Core
+    Scenario: TSR - AMANAUPG170110
+    Given navigate to FMS application and login with valid credentials
+    And Click the first Wifak Appliaction
+    And Click the second Wifak Appliaction
+    And Click the application for financial facilities under second Wifak Appliaction
+    And Click the maintenance underapplication for financial facilities
+    And Click the Main information
+    And Select a new facility under application
+    And Enter the CIF num under cif details
+    And Enter the facility type under facility type details
+    And Enter the country of financing under facility type details
+    And Enter the facility rating under facility type details
+    And Click the Additional details
+    And Enter the currency code under Additional details
+    And Enter the total value under Additional details
+    And Enter the Expiry date
+    And Click the limit details tab
+    And Click the add button under limit details tab
+    And User select the Item in limit Details
+    And User select the Maturity date in limit Details
+    And Click the add button
+    And Click the doucmentdetailstab
+    And Enter the value for slicitorname
+    And Enter the value for estimators name
+    And User clicks the save button
+    And User clicks the validate button
+    And User clicks the Approve Level1 link
+    And User retrive the first data in approve level1
+    And select the Approve level1 decision as approve
+    And User clicks on the level1 submit button
+    And User clicks the Approve Level2 link
+    And User retrive the first data in approve level2
+    And User select the level2 decision as approve
+    And User clicks on the level2 submit button
+    And User clicks the Approve Level3 link
+    And User retrive the first data in approve level3
+    And User select the level3 decision as approve
+    When User clicks on the level3 submit button
     

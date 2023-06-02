@@ -77,12 +77,13 @@ public class floatingratereflectsallmenuOBJ {
 	public WebElement approveLevel3SelectDecision() {
 		return approve_level3_select_devision;
 	}
-	
 	@FindBy(xpath = "//button[@id='applicationfacility_approvelevel3_btn_WIFT001AP3']")
 	private WebElement approve_level3_submit_btn;
 	public WebElement approveLevel3SubmitBtn() {
 		return approve_level3_submit_btn;
 	}
+	
+	
 	
 
 }

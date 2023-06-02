@@ -54,7 +54,7 @@ public class floatingratereflectsSTEPS {
     public void enter_the_floating_rate() throws Throwable {
     	waithelper.waitForElementwithFluentwait(driver, floatingratereflects.floatingRateSearchbox());
     	floatingratereflects.floatingRateSearchbox().click();
-    	floatingratereflects.floatingRateSearchbox().sendKeys("41");
+    	floatingratereflects.floatingRateSearchbox().sendKeys("98");
     	floatingratereflects.floatingRateSearchbox().sendKeys(Keys.TAB);
     	for (int i = 0; i <= 1000; i++) {
     		if (!(floatingratereflects.floatingRateSearchbox().getAttribute("prevvalue").isBlank())) {

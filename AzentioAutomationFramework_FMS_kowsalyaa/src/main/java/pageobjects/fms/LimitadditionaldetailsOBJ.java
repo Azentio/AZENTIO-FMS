@@ -17,32 +17,60 @@ public class LimitadditionaldetailsOBJ {
 		return Productclass_Value;
 	
     }
-	@FindBy(xpath ="//td[text()='Facilities Management']")
+	@FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsCLEAN_FLAG_WIFT001MT']")
+    private WebElement limit_details_new_record_clean_flag;
+    public WebElement limitDetailsNewRecordCleanFlag() {
+        return limit_details_new_record_clean_flag;
+    }
+	@FindBy(xpath ="(//*[@id=\"_selenuimWIFT008\"]/li/a/table/tbody/tr/td[2]")
 	private WebElement Facility_Management ;
 	public WebElement facilitymanagement() {
 		return Facility_Management;
 	
     }
-	@FindBy(xpath ="(//span[text()='Update After Approve'])[1]")
+	@FindBy(xpath ="(//span[text()='Update After Approve'])[2]")
 	private WebElement Facility_Management_Updateafter_Approve ;
 	public WebElement updateafterapprove() {
 		return Facility_Management_Updateafter_Approve;
 	}
-	@FindBy(xpath ="//*[@id=\"facilityLimitDetailsTab_WIFT008MT\"]")
+	@FindBy(xpath = "//*[@id=\"facilityManagementGridTbl_Id_WIFT008UP_pager_left\"]/table/tbody/tr/td[7]")
+	private WebElement Updateafter_Approve_Clearbtn ;
+	public WebElement updateafterapproveclearbtn() {
+		return Updateafter_Approve_Clearbtn;
+	}
+	@FindBy(xpath ="(//tr[@id='1'])[1]")
+	private WebElement Retrivedata_Doubleclick ;
+	public WebElement retrivedatadoubleclick() {
+		return Retrivedata_Doubleclick;
+	}
+	
+	@FindBy(xpath ="//span[text()='Facility Limit Details']")
 	private WebElement Facility_Limit_details ;
 	public WebElement facilitylimitdetails() {
 		return Facility_Limit_details;
 	}
+	@FindBy(xpath ="//span[text()='Facility Limit Details']")
+	private WebElement Facility_Limit_detailsvalue_Doubletap ;
+	public WebElement facilitylimitdetailsvaluedoubletap() {
+		return Facility_Limit_detailsvalue_Doubletap;
+	}
+	
 	@FindBy(xpath ="//input[@id='facilityMgtLimitDetailsyielddetrate_WIFT008MT']")
-	private WebElement Limit_Additional_details_Rate ;
-	public WebElement limitadditionaldetailsRate() {
-		return Limit_Additional_details_Rate;
+	private WebElement Limit_Additional_Yield_details ;
+	public WebElement limitadditionalyielddetails() {
+		return Limit_Additional_Yield_details;
 	}
 	@FindBy(xpath ="//input[@id='facilityMgtLimitDetailsAdditionalMarginRate_WIFT008MT']")
 	private WebElement Limit_Additional_details_MarginRate ;
 	public WebElement limitadditionaldetailsMarginRate() {
 		return Limit_Additional_details_MarginRate;
 	}
+	@FindBy(xpath ="//table[@id='FacilityManagementDocumentDetailsGrid_WIFT008UP']")
+	private WebElement Doubleclick_fordatevalue ;
+	public WebElement doubleclickfordatevalue() {
+		return Doubleclick_fordatevalue;
+	}
+	
 	@FindBy(xpath ="//input[@id='1_fmsFacDocumentsVO.SOL_DATE_SENT_FacilityManagementDocumentDetailsGrid_WIFT008UP']")
 	private WebElement Solicitor_Datesent;
 	public WebElement solicitordatesent() {
@@ -73,7 +101,7 @@ public class LimitadditionaldetailsOBJ {
 	public WebElement datedetailssave() {
 		return Datedetails_Save;
 	}
-	@FindBy(xpath ="//span[text()='Approve/Reject']")
+	@FindBy(xpath ="(//span[text()='Approve/Reject'])[2]")
 	private WebElement FacilityMangement_Approve;
 	public WebElement facilitymanagementapprove() {
 		return FacilityMangement_Approve;
@@ -103,6 +131,11 @@ public class LimitadditionaldetailsOBJ {
 	public WebElement facilitymanagementmaintenanceclear() {
 		return FacilityManagement_Maintenance_Clear;
 	}
+	@FindBy(xpath = "(//a[@class='ui-dialog-titlebar-close ui-corner-all'])[9]")
+    private WebElement send_alert_popup;
+    public WebElement sendAlertPopup() {
+        return send_alert_popup;
+    }
 	
 
 

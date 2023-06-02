@@ -23,7 +23,7 @@ public class floatingraterefelectsallmenuSTEPS {
 	FMSLogin fmsLogin = new FMSLogin(driver);
 	StringBuffer refID = new StringBuffer();
 	
-	 @And("^select the Approve level1 decision as approve $")
+	 @And("^select the Approve level1 decision as approve$")
 	    public void select_the_approve_level1_decision_as_approve() throws Throwable {
 		 waitHelper.waitForElementwithFluentwait(driver, floatingratereflectsallmenu.approveLevel1SelectDecision());
 		 dropDownHelper.SelectUsingVisibleText(floatingratereflectsallmenu.approveLevel1SelectDecision(), "Approve");
@@ -96,5 +96,7 @@ public class floatingraterefelectsallmenuSTEPS {
 	    	waitHelper.waitForElementwithFluentwait(driver, floatingratereflectsallmenu.ButtonSuccessOk1());
 	    	floatingratereflectsallmenu.ButtonSuccessOk1().click();
 	    }
+	    
+	    
 		 
 }
