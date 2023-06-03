@@ -639,11 +639,13 @@ public class Request_for_financing_Obj {
 	    public WebElement margin() {
 			return MaRgin;
 		}
-	    @FindBy(xpath="//input[@id=\'requestFinancingLimitDetailsPeriodicityNbr_CSMRF00MT\']")
+	  
+	    @FindBy(xpath="//input[@name='requestFinancingCO.requestFinancingLimitCO.fmsAppLimitDetVO.PERIODICITY_NBR']")
 		private WebElement TeNURe;
 	    public WebElement tenure() {
 			return TeNURe;
 		}
+	  
 	    @FindBy(xpath="//button[@id=\'limitDetails_add_btn_CSMRF00MT\']")
 		private WebElement ADD_Button;
 	    public WebElement addbutton() {
@@ -878,14 +880,61 @@ public class Request_for_financing_Obj {
 		    }
 	    
 	    
+		  
+		    @FindBy(xpath="//li[@id='customerGradingRecommendationsTab_RFFRF00P1']/a/span")
+		    private WebElement Click_Customer_Grading_Recommendations_For_reject;
+		    public WebElement Click_Customer_Grading_Recommendations_For_reject() {
+		      return Click_Customer_Grading_Recommendations_For_reject;
+		    }
 	    
+		  
 	    
+		    @FindBy(xpath="//td[@id='td_RequestFinancingLimitDetailsGridId_RFFRF00MT_0_rn']")
+		    private WebElement double_click_and_select_existing_productClass;
+		    public WebElement double_click_and_select_existing_productClass() {
+		      return double_click_and_select_existing_productClass;
+		    }
+		  
+		    @FindBy(xpath="//button[@id='limitDetails_edit_btn_RFFRF00MT']")
+		    private WebElement click_editbutton_in_exitstingproduct_Class;
+		    public WebElement click_editbutton_in_exitstingproduct_Class() {
+		      return click_editbutton_in_exitstingproduct_Class;
+		    }
+		  
+		    @FindBy(xpath="//*[@id='legend']")
+		    private WebElement AfterEnter_margin_clickOut;
+		    public WebElement AfterEnter_margin_clickOut() {
+		      return AfterEnter_margin_clickOut;
+		    }
+		    
+		  
+		    @FindBy(xpath="//select[@id='requestFinancingLimitDetailsPeriodicityType_RFFRF00MT']")
+		    private WebElement select_the_moths_in_tenure;
+		    public WebElement select_the_moths_in_tenure() {
+		      return select_the_moths_in_tenure;
+		    }
+		  
+		    @FindBy(xpath="//input[@id='_popup_path_sol_ok']")
+		    private WebElement please_wait_server_loading;
+		    public WebElement please_wait_server_loading() {
+		      return please_wait_server_loading;
+		    }
 	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
+		  
+		    @FindBy(xpath="//button[@id='requestForFinance_save_as_draft_btn_RFFRF00MT']")
+		    private WebElement Click_save_afterEdit_productClass;
+		    public WebElement Click_save_afterEdit_productClass() {
+		      return Click_save_afterEdit_productClass;
+		    }
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
 }

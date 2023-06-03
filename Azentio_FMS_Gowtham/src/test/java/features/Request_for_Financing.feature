@@ -98,7 +98,8 @@ Feature: Title of your feature
     And Add the limits under Disbursement Sublimit
     And Add the product class values in product searchbox
     And Add the Margin values in Margin
-    And Enter the tenure value in tenure
+    #And Enter the tenure value in tenure
+    #And Change the month in tenure
     And Add all the Above limit values
     And Save all the values when limits are add
     And Confirm the popup menu when all the limits are saved
@@ -123,9 +124,10 @@ Feature: Title of your feature
     And Approve the reopen request
     And click mainteance under request for financing
     And select the record in the mainteance under request for financing
-    
-    
-    
+    And Click the Disbursement Sublimit under maintenance screen
+    And Select the exesting product class 
+    And change the months
+    Then After Changes save it
     
     
     

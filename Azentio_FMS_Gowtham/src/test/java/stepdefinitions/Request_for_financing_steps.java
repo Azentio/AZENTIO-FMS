@@ -669,17 +669,49 @@ public class Request_for_financing_steps {
 	    }
 
 
-	    @And("^Enter the tenure value in tenure$")
-	    public void enter_the_tenure_value_in_tenure() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.tenure());
-	    	Request_for_financing_Obj.tenure().click();
-	        
+	    @And("^Change the month in tenure$")
+	    public void change_the_month_in_tenure() throws Throwable {
+	  	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.tenure());
+    	clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.tenure());
+    	Request_for_financing_Obj.tenure().sendKeys("5");
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.select_the_moths_in_tenure());
+		Request_for_financing_Obj.select_the_moths_in_tenure().click();
+    	DropDownHelper.SelectUsingVisibleValue(Request_for_financing_Obj.select_the_moths_in_tenure(), "Months");
 	    }
+
+//	    @And("^Enter the tenure value in tenure$")
+//	    public void enter_the_tenure_value_in_tenure() throws Throwable {
+//	  //  	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.tenure());
+////	    	clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.tenure());
+////	    	Request_for_financing_Obj.tenure().sendKeys("5");
+//	    
+//	    	//waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.select_the_moths_in_tenure());
+//	    	
+//	    	for(int i = 0; i <= 300; i++) {
+//    		try {
+//    			//waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.tenure());
+//    			Request_for_financing_Obj.select_the_moths_in_tenure().click();
+//    	    	DropDownHelper.SelectUsingVisibleValue(Request_for_financing_Obj.select_the_moths_in_tenure(), "Months");
+//    			break;
+//			} catch (Exception e) {
+//				if(i == 299) {
+//					Assert.fail(e.getMessage());
+//				}
+//			}
+//    	}
+//	    }
 
 	    @And("^Add all the Above limit values$")
 	    public void add_all_the_above_limit_values() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.addbutton());
 	    	Request_for_financing_Obj.addbutton().click();
+	    	
+	    	if(Request_for_financing_Obj.please_wait_server_loading().isDisplayed()) {
+	    		Request_for_financing_Obj.please_wait_server_loading().click();
+	    		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.addbutton());
+		    	Request_for_financing_Obj.addbutton().click();
+	    	}
 	        
 	    }
 
@@ -819,6 +851,10 @@ public class Request_for_financing_steps {
 
 	    @And("^Reject the record in Approve level1$")
 	    public void reject_the_record_in_approve_level1() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_Customer_Grading_Recommendations_For_reject());
+	    	Request_for_financing_Obj.Click_Customer_Grading_Recommendations_For_reject().click();
+	    	
+	    	
 	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.approve_buttton_inApproveLev_1());
 	    	JavascriptHelper.scrollIntoView(Request_for_financing_Obj.approve_buttton_inApproveLev_1());
 	    	
@@ -934,7 +970,13 @@ public class Request_for_financing_steps {
 	    	
 	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_approve_in_approve_reject());
 	    	Request_for_financing_Obj.Click_approve_in_approve_reject().click();
-	    
+	    	
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmsavepopupokbutton());
+	    	Request_for_financing_Obj.confirmvalidatepopupokbutton().click();
+
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Success_Popup());
+	    	Request_for_financing_Obj.Success_Popup().click();
 	    }
 
 	    @And("^click mainteance under request for financing$")
@@ -955,10 +997,45 @@ public class Request_for_financing_steps {
 	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.select_recordIn_maintenance_under_request_for_financing());
 	    	clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.select_recordIn_maintenance_under_request_for_financing());
 
+	    }
+	    @And("^Select the exesting product class$")
+	    public void select_the_exesting_product_class() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.double_click_and_select_existing_productClass());
+	    	clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.double_click_and_select_existing_productClass());
+	    	
 	    	
 	    }
 
+	    @And("^change the months$")
+	    public void change_the_months() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.click_editbutton_in_exitstingproduct_Class());
+	    	JavascriptHelper.scrollIntoView(Request_for_financing_Obj.click_editbutton_in_exitstingproduct_Class());
+	    	
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.tenure());
+	    	clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.tenure());
+	    	Request_for_financing_Obj.tenure().sendKeys("5");
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.click_editbutton_in_exitstingproduct_Class());
+	    	Request_for_financing_Obj.click_editbutton_in_exitstingproduct_Class().click();
+	    	
+	    	
+	    	if(Request_for_financing_Obj.please_wait_server_loading().isDisplayed()) {
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.please_wait_server_loading());
+	    	Request_for_financing_Obj.please_wait_server_loading().click();
+	    	}
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.click_editbutton_in_exitstingproduct_Class());
+	    	Request_for_financing_Obj.click_editbutton_in_exitstingproduct_Class().click();
+	    }
 	    
+	    
+	    @Then("^After Changes save it$")
+	    public void after_changes_save_it() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_save_afterEdit_productClass());
+	    	Request_for_financing_Obj.Click_save_afterEdit_productClass().click();
+
+	    }
 	    
 	    
 	    
