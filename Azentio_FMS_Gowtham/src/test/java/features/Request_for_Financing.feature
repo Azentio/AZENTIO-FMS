@@ -97,9 +97,9 @@ Feature: Title of your feature
     And Click the Disbursement Sublimit under maintenance screen
     And Add the limits under Disbursement Sublimit
     And Add the product class values in product searchbox
-    And Add the Margin values in Margin
     #And Enter the tenure value in tenure
-    #And Change the month in tenure
+    And Change the month in tenure
+    And Add the Margin values in Margin
     And Add all the Above limit values
     And Save all the values when limits are add
     And Confirm the popup menu when all the limits are saved
@@ -128,6 +128,7 @@ Feature: Title of your feature
     And Select the exesting product class 
     And change the months
     Then After Changes save it
+    
     
     
     

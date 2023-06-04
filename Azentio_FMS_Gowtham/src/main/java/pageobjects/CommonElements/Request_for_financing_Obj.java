@@ -640,13 +640,13 @@ public class Request_for_financing_Obj {
 			return MaRgin;
 		}
 	  
-	    @FindBy(xpath="//input[@name='requestFinancingCO.requestFinancingLimitCO.fmsAppLimitDetVO.PERIODICITY_NBR']")
+	    @FindBy(xpath="//*[@id=\'requestfinancingLimitPopupFormId_RFFRF00MT_Tenure_Key\']//following::input")
 		private WebElement TeNURe;
 	    public WebElement tenure() {
 			return TeNURe;
 		}
 	  
-	    @FindBy(xpath="//button[@id=\'limitDetails_add_btn_CSMRF00MT\']")
+	    @FindBy(xpath="//span[contains(text(),' Add ')]")
 		private WebElement ADD_Button;
 	    public WebElement addbutton() {
 			return ADD_Button;
@@ -908,7 +908,7 @@ public class Request_for_financing_Obj {
 		    }
 		    
 		  
-		    @FindBy(xpath="//select[@id='requestFinancingLimitDetailsPeriodicityType_RFFRF00MT']")
+		    @FindBy(xpath="//*[@id=\'requestFinancingLimitDetailsPeriodicityNbr_RFFRF00MT\']//following::select")
 		    private WebElement select_the_moths_in_tenure;
 		    public WebElement select_the_moths_in_tenure() {
 		      return select_the_moths_in_tenure;

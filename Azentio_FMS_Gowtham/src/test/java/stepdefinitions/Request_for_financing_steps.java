@@ -441,7 +441,7 @@ public class Request_for_financing_steps {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Success_Popup());
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.limitDetailsValidateSuccessMsg());
 		String SuccessMsg = Request_for_financing_Obj.limitDetailsValidateSuccessMsg().getText();
-		String substring = SuccessMsg.substring(23, 27);
+		String substring = SuccessMsg.substring(11, 15);
 		refID.append(substring);
 		System.err.println("Reference Number: " + refID);
 		Request_for_financing_Obj.Success_Popup().click();
@@ -458,32 +458,10 @@ public class Request_for_financing_steps {
 	@And("^Select the record$")
 	public void select_the_record() throws Throwable {
 
-//		for (int i = 0; i < 1000; i++) {
-//			try {	
-//				Request_for_financing_Obj.Click_Clearsearch_on_approve_reject_cancel().click();
-//				clicksAndActionsHelper
-//				.doubleClick(Request_for_financing_Obj.DoubleClick_select_firstRecord_on_Click_approve_reject_cancel());
-//				break;
-//			} catch (Exception e) {
-//				if (i == 999) {
-//					Assert.fail(e.getMessage());
-//				}
-//			}
-//		}
-//		waitHelper.waitForElementwithFluentwait(driver,
-//				Request_for_financing_Obj.DoubleClick_select_firstRecord_on_Click_approve_reject_cancel());
-
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Search_cancel_code_onApproveCancel());
-		Request_for_financing_Obj.Search_cancel_code_onApproveCancel().sendKeys("1389");
+		Request_for_financing_Obj.Search_cancel_code_onApproveCancel().sendKeys(refID);
 		Request_for_financing_Obj.Search_cancel_code_onApproveCancel().sendKeys(Keys.ENTER);
-//		String xpath ="//td[contains(text(),'1441')]";
-//		for (int i = 0; i <200; i++) {
-//			try {
-//				driver.findElement(By.xpath(xpath)).isDisplayed();
-//				break;
-//			} catch (Exception e) {
-//			}
-//		}
+
 		waitHelper.waitForElementwithFluentwait(driver,
 				Request_for_financing_Obj.DoubleClick_select_firstRecord_on_Click_approve_reject_cancel());
 		clicksAndActionsHelper
@@ -535,7 +513,7 @@ public class Request_for_financing_steps {
 		waitHelper.waitForElementwithFluentwait(driver,
 				Request_for_financing_Obj.search_approvecancelCode_OnMainteance());
 
-		Request_for_financing_Obj.search_approvecancelCode_OnMainteance().sendKeys("1389");
+		Request_for_financing_Obj.search_approvecancelCode_OnMainteance().sendKeys(refID);
 
 		Request_for_financing_Obj.search_approvecancelCode_OnMainteance().sendKeys(Keys.ENTER);
 
@@ -649,58 +627,53 @@ public class Request_for_financing_steps {
 	        
 	    }
 
-
-
-	    @And("^Add the Margin values in Margin$")
-	    public void add_the_margin_values_in_margin() throws Throwable {
+	    @And("^Change the month in tenure$")
+	    public void change_the_month_in_tenure() throws Throwable {
 	    	for(int i = 0; i <= 300; i++) {
 	    		try {
-	    			JavascriptHelper.scrollIntoView(Request_for_financing_Obj.marginsearchbox());
-	    			Request_for_financing_Obj.marginsearchbox().clear();
-	    	    	Request_for_financing_Obj.marginsearchbox().sendKeys("1",Keys.ENTER);
+	    			JavascriptHelper.scrollIntoView(Request_for_financing_Obj.addbutton());
+	    		  	//waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.tenure());
+	    		  	clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.tenure());
+	    	    	Request_for_financing_Obj.tenure().sendKeys("12");
 	    			break;
 				} catch (Exception e) {
 					if(i == 300) {
 						Assert.fail(e.getMessage());
 					}
 				}
-	    	}
+				}
+
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.select_the_moths_in_tenure());
+		//Request_for_financing_Obj.select_the_moths_in_tenure().click();
+    	DropDownHelper.SelectUsingVisibleValue(Request_for_financing_Obj.select_the_moths_in_tenure(), "Months");
+	    }
+
+
+
+	    @And("^Add the Margin values in Margin$")
+	    public void add_the_margin_values_in_margin() throws Throwable {
+	    	for(int i = 0; i <= 300; i++) {
+	    		try {
+	    			//JavascriptHelper.scrollIntoView(Request_for_financing_Obj.marginsearchbox());
+	    			Request_for_financing_Obj.marginsearchbox().clear();
+	    	    	Request_for_financing_Obj.marginsearchbox().sendKeys("1",Keys.TAB);
+	    			break;
+				} catch (Exception e) {
+					if(i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}for (int i = 0; i <= 300; i++) {
+				if (!(Request_for_financing_Obj.marginsearchbox().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			}
 	    	
 	    }
 
 
-	    @And("^Change the month in tenure$")
-	    public void change_the_month_in_tenure() throws Throwable {
-	  	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.tenure());
-    	clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.tenure());
-    	Request_for_financing_Obj.tenure().sendKeys("5");
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.select_the_moths_in_tenure());
-		Request_for_financing_Obj.select_the_moths_in_tenure().click();
-    	DropDownHelper.SelectUsingVisibleValue(Request_for_financing_Obj.select_the_moths_in_tenure(), "Months");
-	    }
-
-//	    @And("^Enter the tenure value in tenure$")
-//	    public void enter_the_tenure_value_in_tenure() throws Throwable {
-//	  //  	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.tenure());
-////	    	clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.tenure());
-////	    	Request_for_financing_Obj.tenure().sendKeys("5");
-//	    
-//	    	//waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.select_the_moths_in_tenure());
-//	    	
-//	    	for(int i = 0; i <= 300; i++) {
-//    		try {
-//    			//waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.tenure());
-//    			Request_for_financing_Obj.select_the_moths_in_tenure().click();
-//    	    	DropDownHelper.SelectUsingVisibleValue(Request_for_financing_Obj.select_the_moths_in_tenure(), "Months");
-//    			break;
-//			} catch (Exception e) {
-//				if(i == 299) {
-//					Assert.fail(e.getMessage());
-//				}
-//			}
-//    	}
-//	    }
+	    
 
 	    @And("^Add all the Above limit values$")
 	    public void add_all_the_above_limit_values() throws Throwable {

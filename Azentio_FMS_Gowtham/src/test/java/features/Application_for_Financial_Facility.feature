@@ -218,7 +218,7 @@ Feature: Linking Fixed Asset to Application in FMS
 		And User select the level3 devision as approve
 		And User clicks on the level3 submit button
 		
-		
+	
 		
 		
 		

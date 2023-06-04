@@ -2,23 +2,23 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-03T15:47:27 IST" name="Default suite" finished-at="2023-06-03T15:50:35 IST" duration-ms="188415">
+  <suite started-at="2023-06-04T16:32:42 IST" name="Default suite" finished-at="2023-06-04T16:36:36 IST" duration-ms="233968">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@1cf6d1be]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-06-03T15:47:27 IST" name="Default test" finished-at="2023-06-03T15:50:35 IST" duration-ms="188415">
+    <test started-at="2023-06-04T16:32:42 IST" name="Default test" finished-at="2023-06-04T16:36:36 IST" duration-ms="233968">
       <class name="Runner.TestApplication">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@1cf6d1be]" started-at="2023-06-03T15:47:27 IST" name="setUpClass" finished-at="2023-06-03T15:47:28 IST" duration-ms="1845" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@1cf6d1be]" started-at="2023-06-04T16:32:42 IST" name="setUpClass" finished-at="2023-06-04T16:32:44 IST" duration-ms="1775" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@1cf6d1be]" started-at="2023-06-03T15:47:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-06-03T15:50:22 IST" duration-ms="173350" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@1cf6d1be]" started-at="2023-06-04T16:32:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-06-04T16:36:23 IST" duration-ms="219258" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["TSR - EWB180031"]]>
+                <![CDATA["TSR - BTII180039"]]>
               </value>
             </param>
             <param index="1">
@@ -27,56 +27,27 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[element click intercepted: Element <label id="requestFinancingFormId_CSMRF00MT_save_key" style="font-weight:bold!important;font-size:100%!important" labelkey="save_key" class="path_btn_lbl_theme">...</label> is not clickable at point (276, 515). Other element would receive the click: <div class="jMsgbox-background" style="position: fixed; width: 1366px; height: 555px; z-index: 999999; opacity: 0.6; top: 0px; left: 0px;"></div>
-  (Session info: chrome=113.0.5672.129)
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0f29da485e3117f4cb7f066c89607958, clickElement {id=38A78C56330CEC8E48A6FD23EB6CEE44_element_404}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.129, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57029}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57029/devtoo..., se:cdpVersion: 113.0.5672.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (0f29da485e3117f4cb7f066c89607958)] -> xpath: //label[@id='requestFinancingFormId_CSMRF00MT_save_key']]
-Session ID: 0f29da485e3117f4cb7f066c89607958]]>
+              <![CDATA[expected [Cancelled] but found [Create]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <label id="requestFinancingFormId_CSMRF00MT_save_key" style="font-weight:bold!important;font-size:100%!important" labelkey="save_key" class="path_btn_lbl_theme">...</label> is not clickable at point (276, 515). Other element would receive the click: <div class="jMsgbox-background" style="position: fixed; width: 1366px; height: 555px; z-index: 999999; opacity: 0.6; top: 0px; left: 0px;"></div>
-  (Session info: chrome=113.0.5672.129)
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0f29da485e3117f4cb7f066c89607958, clickElement {id=38A78C56330CEC8E48A6FD23EB6CEE44_element_404}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.129, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57029}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57029/devtoo..., se:cdpVersion: 113.0.5672.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (0f29da485e3117f4cb7f066c89607958)] -> xpath: //label[@id='requestFinancingFormId_CSMRF00MT_save_key']]
-Session ID: 0f29da485e3117f4cb7f066c89607958
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-at jdk.internal.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-at jdk.proxy2/jdk.proxy2.$Proxy45.click(Unknown Source)
-at stepdefinitions.Request_for_financing_steps.save_all_the_values_when_limits_are_add(Request_for_financing_steps.java:721)
-at ✽.Save all the values when limits are add(file:///C:/Users/priya/git/AZENTIO-FMS_3/Azentio_FMS_Gowtham/src/test/java/features/Request_for_Financing.feature:104)
+              <![CDATA[java.lang.AssertionError: expected [Cancelled] but found [Create]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at stepdefinitions.Request_for_financing_steps.check_the_status_its_on_cancel(Request_for_financing_steps.java:537)
+at ✽.Check the Status its on cancel(file:///C:/Users/priya/git/AZENTIO-FMS_3/Azentio_FMS_Gowtham/src/test/java/features/Request_for_Financing.feature:82)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@1cf6d1be]" started-at="2023-06-03T15:50:22 IST" name="tearDownClass" finished-at="2023-06-03T15:50:35 IST" duration-ms="13133" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@1cf6d1be]" started-at="2023-06-04T16:36:23 IST" name="tearDownClass" finished-at="2023-06-04T16:36:36 IST" duration-ms="12830" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
