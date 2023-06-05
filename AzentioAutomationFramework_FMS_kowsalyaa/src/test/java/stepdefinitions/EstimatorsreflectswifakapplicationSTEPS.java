@@ -25,6 +25,7 @@ public class EstimatorsreflectswifakapplicationSTEPS {
 	ClicksAndActionsHelper clickandactionhelper = new ClicksAndActionsHelper(driver);
 	Selenium_Actions seleniumactions = new Selenium_Actions(driver);
 	FMSLogin fmslogin = new FMSLogin(driver);
+	String financeamt;
 	
 	 @And("^Click the parameters menu in param application$")
 	    public void click_the_parameters_menu_in_param_application() throws Throwable {
@@ -270,6 +271,108 @@ public class EstimatorsreflectswifakapplicationSTEPS {
 	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.retrivedvaluedoubleclick());
 	    	clickandactionhelper.doubleClick(coreestimatesreflects.retrivedvaluedoubleclick());
 	        Thread.sleep(10000);
+	    }
+	    
+	    //@584744
+	    
+	    @And("^Click the UpdateafterApprove under application for financial facilities$")
+	    public void click_the_updateafterapprove_under_application_for_financial_facilities() throws Throwable {
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.applicationforfinancialfacilitiesupdateafterapprove());
+	    	coreestimatesreflects.applicationforfinancialfacilitiesupdateafterapprove().click();
+	    	
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.applicationforfinancialfacilitiesupdateafterapproveclearbtn());
+	    	coreestimatesreflects.applicationforfinancialfacilitiesupdateafterapproveclearbtn().click();
+	    	
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.applicationforfinancialfacilitiesupdateafterapproveclearbtnfirstretrivedata());
+	    	coreestimatesreflects.applicationforfinancialfacilitiesupdateafterapproveclearbtnfirstretrivedata().click();
+	        
+	    }
+	    
+	    @And("^Enter the downpayment Amount in Additional details$")
+	    public void enter_the_downpayment_amount_in_additional_details() throws Throwable {
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.additionaldetailsdownpayment());
+	    	coreestimatesreflects.additionaldetailsdownpayment().sendKeys("2",Keys.TAB);
+	    	for(int i = 0; i <= 500; i++) {
+	            try {
+	                if(!(coreestimatesreflects.additionaldetailsdownpayment().getAttribute("prevvalue").isBlank())) {
+	                    break;
+	                }
+	            } catch (Exception e) {
+	                // TODO: handle exception
+	            }
+	        }
+	    	
+	    	
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.additionaldetailsfinanceamount());
+	    	financeamt = coreestimatesreflects.additionaldetailsfinanceamount().getAttribute("prevvalue");
+	        System.out.println(financeamt);
+	    }
+
+	 
+
+	    @And("^Doubletap the retrived data$")
+	    public void doubletap_the_retrived_data() throws Throwable {
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.limitdetailsretrivedatadoubletap());
+	    	clickandactionhelper.doubleClick(coreestimatesreflects.limitdetailsretrivedatadoubletap());
+	        
+	    }
+
+	 
+
+	    @And("^Enter the facility value under limit details$")
+	    public void enter_the_facility_value_under_limit_details() throws Throwable {
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.limitdetailsfacilityvalue());
+	    	coreestimatesreflects.limitdetailsfacilityvalue().sendKeys("financeamt");
+	    }
+
+	 
+
+	    @And("^Enter the downpayment Amount in limit details$")
+	    public void enter_the_downpayment_amount_in_limit_details() throws Throwable {
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.limitdetailsdownpaymentamount());
+	    	coreestimatesreflects.limitdetailsdownpaymentamount().sendKeys("2",Keys.TAB);
+	    	
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.limitdetailsdownpaymentamounteditbutton());
+	    	coreestimatesreflects.limitdetailsdownpaymentamounteditbutton().click();
+	        
+	    }
+
+	 
+
+	    @And("^validate all the above details$")
+	    public void validate_all_the_above_details() throws Throwable {
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.limitdetailsvalidate());
+	    	coreestimatesreflects.limitdetailsvalidate().click();
+	        
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.confirmvalidateokbtn());
+	    	coreestimatesreflects.confirmvalidateokbtn().click();
+	    	
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.confirmvalidateokbtnvalidatedsuccessfully());
+	    	coreestimatesreflects.confirmvalidateokbtnvalidatedsuccessfully().click();
+	        
+	    }
+	    
+	    //771445
+	    
+	    @And("^Retrive the Cif profile value$")
+	    public void retrive_the_cif_profile_value() throws Throwable {
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.maininformationcifprofilesearchbox());
+	    	coreestimatesreflects.maininformationcifprofilesearchbox().sendKeys("5656",Keys.TAB);
+	    	
+	    	for(int i = 0; i <= 500; i++) {
+	            try {
+	                if(!(coreestimatesreflects.maininformationcifprofilesearchbox().getAttribute("prevvalue").isBlank())) {
+	                    break;
+	                }
+	            } catch (Exception e) {
+	                // TODO: handle exception
+	            }
+	        }
+	    	
+	    	String attribute = coreestimatesreflects.maininformationcifprofilesearchbox().getAttribute("prevvalue");
+	    	Assert.assertEquals("5656", attribute);
+	    	
+
 	    }
 	    
 

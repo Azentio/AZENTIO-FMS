@@ -343,3 +343,27 @@ Feature: To Test the Financial facilities in FMS Application
     And User select the level3 decision as approve
     When User clicks on the level3 submit button
     
+    @584744_Fms_Core
+    Scenario: TSR - BTII170154
+    Given navigate to FMS application and login with valid credentials
+    And Click the first Wifak Appliaction
+    And Click the second Wifak Appliaction
+    And Click the application for financial facilities under second Wifak Appliaction
+    And Click the UpdateafterApprove under application for financial facilities
+    And Click the Additional details
+    And Enter the downpayment Amount in Additional details
+    And Click the limit details tab
+    And Doubletap the retrived data 
+    And Enter the facility value under limit details
+    And Enter the downpayment Amount in limit details
+    And validate all the above details 
+    
+    @771445_Fms_Core
+    Scenario: SUPT180408-CIF Profile not defined for the employer validation is not displaying while validate the active record
+    Given navigate to FMS application and login with valid credentials
+    And Click the first Wifak Appliaction
+    And Click the second Wifak Appliaction
+    And Click the application for financial facilities under second Wifak Appliaction
+    And Click the maintenance underapplication for financial facilities
+    And Click the Main information
+    And Retrive the Cif profile value

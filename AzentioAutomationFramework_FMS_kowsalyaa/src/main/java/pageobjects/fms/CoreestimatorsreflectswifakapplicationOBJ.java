@@ -99,6 +99,73 @@ public class CoreestimatorsreflectswifakapplicationOBJ {
 	public WebElement retrivedvaluedoubleclick() {
 		return Retrivedvalue_doubleclick;
 	}
+	//@584744
+	@FindBy(xpath="//span[text()='Update After Approve']")
+	private WebElement ApplicationForFinancialfacilities_UpdateAfterApprove ;
+	public WebElement applicationforfinancialfacilitiesupdateafterapprove() {
+		return ApplicationForFinancialfacilities_UpdateAfterApprove;
+	}
+	@FindBy(xpath="//td[text()='Clear']")
+	private WebElement ApplicationForFinancialfacilities_UpdateAfterApprove_clearbtn ;
+	public WebElement applicationforfinancialfacilitiesupdateafterapproveclearbtn() {
+		return ApplicationForFinancialfacilities_UpdateAfterApprove_clearbtn;
+	}
+	@FindBy(xpath="(//tr[@id='1'])[3]")
+	private WebElement ApplicationForFinancialfacilities_UpdateAfterApprove_clearbtn_firstretrivedata;
+	public WebElement applicationforfinancialfacilitiesupdateafterapproveclearbtnfirstretrivedata() {
+		return ApplicationForFinancialfacilities_UpdateAfterApprove_clearbtn_firstretrivedata;
+	}
+	@FindBy(xpath="//input[@id='applicationFacilitydownpayment_WIFT001UP']")
+	private WebElement Additionaldetails_Downpayment;
+	public WebElement additionaldetailsdownpayment() {
+		return Additionaldetails_Downpayment;
+	}
+	@FindBy(xpath="(//tr[@id='1'])[5]")
+	private WebElement Limitdetails_Retrivedata_doubletap;
+	public WebElement limitdetailsretrivedatadoubletap() {
+		return Limitdetails_Retrivedata_doubletap;
+	}
+	@FindBy(xpath="//input[@id='applicationfacilityLimitDetailsFACILITY_VALUE_WIFT001UP']")
+	private WebElement Limitdetails_FacilityValue;
+	public WebElement limitdetailsfacilityvalue() {
+		return Limitdetails_FacilityValue;
+	}
+	@FindBy(xpath="//input[@id='applicationfacilityLimitDetailsDOWN_PAYMENT_AMT_WIFT001UP']")
+	private WebElement Limitdetails_DownpaymentAmount;
+	public WebElement limitdetailsdownpaymentamount() {
+		return Limitdetails_DownpaymentAmount;
+	}
+	@FindBy(xpath="//button[@id='limitDetails_edit_btn_WIFT001UP']")
+	private WebElement Limitdetails_DownpaymentAmount_Editbutton;
+	public WebElement limitdetailsdownpaymentamounteditbutton() {
+		return Limitdetails_DownpaymentAmount_Editbutton;
+	}
+	@FindBy(xpath="//button[@id='applicationfacility_save_btn_WIFT001UP']")
+	private WebElement Limitdetails_DownpaymentAmount_Editbutton_validate;
+	public WebElement limitdetailsvalidate() {
+		return Limitdetails_DownpaymentAmount_Editbutton_validate;
+	}
+	@FindBy(xpath="//input[@id='_popup_path_sol_confirm_ok']")
+	private WebElement Confirm_validateok_btn;
+	public WebElement confirmvalidateokbtn() {
+		return Confirm_validateok_btn;
+	}
+	@FindBy(xpath="//input[@id='_popup_path_sol_ok']")
+	private WebElement Confirm_validateok_btn_validatedsuccessfully;
+	public WebElement confirmvalidateokbtnvalidatedsuccessfully() {
+		return Confirm_validateok_btn_validatedsuccessfully;
+	}
+	@FindBy(xpath="//input[@id='applicationFacilityfinancedamount_WIFT001UP']")
+	private WebElement Additionaldetails_Financeamount;
+	public WebElement additionaldetailsfinanceamount() {
+		return Additionaldetails_Financeamount;
+	}
+	//771445
+	@FindBy(xpath="//input[@id='lookuptxt_applicationFacilitycifprofile_WIFT001MT']")
+	private WebElement Maininformation_CIFProfile;
+	public WebElement maininformationcifprofilesearchbox() {
+		return Maininformation_CIFProfile;
+	}
 
 
 }
