@@ -327,14 +327,39 @@ Feature: Wifak Application
     
     
     
+    @740790
+    Scenario: TSR - AIBBI180271
     
-    
-    
-    
-    
-    
-    
-    
+     Given navigate to FMS application2 and login with valid credentials
+    And Click Wifak Application first
+    And Click Wifak Application Second
+    And Click Application for financial facilities
+    And Click Maintenance
+    And Click and Select Application for
+    And Search CIF No
+    And Enter codeOn Facility Type
+    And Enter Code In Country of Financing
+    And Enter line Code On Facility Rating
+    And Click on additional Details
+    And Enter the Total Value
+    And Click Offer Expiration SelectDate
+    And Select limit Details
+    And Click Add button on limit Detail
+    And Enter ValueOn Product Class
+    Then Check Flag in Clean Level IN Limits Detalis SubMenu
+    And Click Add button AfterEnter Value On Product Class
+    And Click Add button on limit Detail
+    And Enter second ValueOn Product Class
+    Then Check Flag in Clean Level IN Limits Detalis SubMenu
+    And Click Add button AfterEnter Value On Product Class
+    And Click Add button on limit Detail
+    And Enter third ValueOn Product Class
+    Then Check Flag in Clean Level IN Limits Detalis SubMenu
+    And Click Add button AfterEnter Value On Product Class
+    And Click Add button on limit Detail
+    And Enter Fourth ValueOn Product Class
+    Then Check Flag in Clean Level IN Limits Detalis SubMenu
+    And Click Add button AfterEnter Value On Product Class
     
     
     

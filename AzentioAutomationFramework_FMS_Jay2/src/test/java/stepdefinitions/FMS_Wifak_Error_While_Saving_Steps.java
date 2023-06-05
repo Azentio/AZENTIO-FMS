@@ -162,11 +162,22 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 
 	@And("^Select limit Details$")
 	public void select_limit_details() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.getSelect_limitDetails());
-		clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.getSelect_limitDetails());
-		clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.getSelect_limitDetails());
+//		waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.getSelect_limitDetails());
+//		clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.getSelect_limitDetails());
+//		clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.getSelect_limitDetails());
 		// FMSWifakErrorWhileSavingObj.getClick_Offer_Expiration_SelectDate().sendKeys("25/05/2023");
-
+		
+		for (int i = 0; i < 200; i++) {
+			try {
+				
+				clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.getSelect_limitDetails());
+				break;
+			} catch (Exception e) {
+				if (i == 199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
 	}
 
 	@And("^Click Add button on limit Detail$")
@@ -187,6 +198,33 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 		Thread.sleep(10000);
 
 	}
+	@And("^Enter second ValueOn Product Class$")
+    public void enter_second_valueon_product_class() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.getEnter_ValueOn_Product_Class());
+		clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.getEnter_ValueOn_Product_Class());
+		clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.getEnter_ValueOn_Product_Class());
+		FMSWifakErrorWhileSavingObj.getEnter_ValueOn_Product_Class().sendKeys("2");
+    }
+
+ 
+
+    @And("^Enter third ValueOn Product Class$")
+    public void enter_third_valueon_product_class() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.getEnter_ValueOn_Product_Class());
+		clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.getEnter_ValueOn_Product_Class());
+		clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.getEnter_ValueOn_Product_Class());
+		FMSWifakErrorWhileSavingObj.getEnter_ValueOn_Product_Class().sendKeys("3");
+    }
+
+ 
+
+    @And("^Enter Fourth ValueOn Product Class$")
+    public void enter_fourth_valueon_product_class() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.getEnter_ValueOn_Product_Class());
+		clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.getEnter_ValueOn_Product_Class());
+		clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.getEnter_ValueOn_Product_Class());
+		FMSWifakErrorWhileSavingObj.getEnter_ValueOn_Product_Class().sendKeys("4");
+    }
 	
 	@And("^Click Search Button In Account No$")
     public void click_search_button_in_account_no() throws Throwable {
@@ -230,6 +268,21 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 				if (i == 199) {
 					Assert.fail(e.getMessage());
 				}
+			}
+		}
+		//Thread.sleep(50000);
+		
+		for (int i = 0; i < 200; i++) {
+			try {
+				if(FMSWifakErrorWhileSavingObj.Waring_OnLimitDetails_Tab().isDisplayed()) {
+					FMSWifakErrorWhileSavingObj.Waring_OnLimitDetails_Tab().click();
+					waitHelper.waitForElementwithFluentwait(driver,
+							FMSWifakErrorWhileSavingObj.getAfterEnter_ValueOn_Product_Class_Search());
+					FMSWifakErrorWhileSavingObj.getAfterEnter_ValueOn_Product_Class_Scroll_ToAdd().click();
+				}
+				break;
+			} catch (Exception e) {
+				
 			}
 		}
 				
@@ -1279,7 +1332,23 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.No_Of_Payments_InRepaymentPlan());
 			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.No_Of_Payments_InRepaymentPlan());
 			FMSWifakErrorWhileSavingObj.No_Of_Payments_InRepaymentPlan().clear();
-			Thread.sleep(4000);
+			
+			//Thread.sleep(40000);
+			for (int i = 0; i < 200; i++) {
+				try {
+					waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Popup_NoOfPayments_InRepaymentPlan());
+					clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Popup_NoOfPayments_InRepaymentPlan());
+					break;
+				} catch (Exception e) {
+					if (i == 199) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			
+//			waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.No_Of_Payments_InRepaymentPlan());
+//			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.No_Of_Payments_InRepaymentPlan());
+			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.No_Of_Payments_InRepaymentPlan());
 			FMSWifakErrorWhileSavingObj.No_Of_Payments_InRepaymentPlan().sendKeys("10");
 	    }
 
@@ -1293,16 +1362,41 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 
 	    @Then("^Click Ok Button In Waring Screen In Repayment Plan$")
 	    public void click_ok_button_in_waring_screen_in_repayment_plan() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Ok_Button_In_Waring_Screen());
-			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Waring_Screen());
-			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Waring_Screen());
+//	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Ok_Button_In_Waring_Screen());
+//			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Waring_Screen());
+//			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Waring_Screen());
+	    	
+	    	for (int i = 0; i < 200; i++) {
+				try {
+					waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Waring_RepaymentPlan());
+					clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Waring_RepaymentPlan());
+					break;
+				} catch (Exception e) {
+					if (i == 199) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
 	    }
+	    
 
 	    @And("^Click Save Button After In Limits Details$")
 	    public void click_save_button_after_in_limits_details() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.getClick_SaveButton_OnLimitDetails_Tab());
-			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.getClick_SaveButton_OnLimitDetails_Tab());
-			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.getClick_SaveButton_OnLimitDetails_Tab());
+//	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.getClick_SaveButton_OnLimitDetails_Tab());
+//			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.getClick_SaveButton_OnLimitDetails_Tab());
+//			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.getClick_SaveButton_OnLimitDetails_Tab());
+	    	
+	    	for (int i = 0; i < 200; i++) {
+				try {
+					waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.getClick_SaveButton_OnLimitDetails_Tab());
+					clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.getClick_SaveButton_OnLimitDetails_Tab());
+					break;
+				} catch (Exception e) {
+					if (i == 199) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
 	    }
 
 	    @And("^Click OK  Button In Sucess Screen In Limits Details$")
@@ -1328,16 +1422,40 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 
 	    @And("^Click Save Button After In Repayment Plan$")
 	    public void click_save_button_after_in_repayment_plan() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.SaveButton_OnLimitDetails_Tab());
-			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.SaveButton_OnLimitDetails_Tab());
-			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.SaveButton_OnLimitDetails_Tab());
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.SaveButton_RepaymentPlan());
+			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.SaveButton_RepaymentPlan());
+			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.SaveButton_RepaymentPlan());
+			
+//			for (int i = 0; i < 200; i++) {
+//				try {
+//					waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.SaveButton_RepaymentPlan());
+//					clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.SaveButton_RepaymentPlan());
+//					break;
+//				} catch (Exception e) {
+//					if (i == 199) {
+//						Assert.fail(e.getMessage());
+//					}
+//				}
+//			}
 	    }
 
 	    @And("^Click OK  Button In Sucess Screen In Repayment Plan$")
 	    public void click_ok_button_in_sucess_screen_in_repayment_plan() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Ok_Button_In_Sucess_Screen());
-			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Sucess_Screen());
-			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Sucess_Screen());
+//	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Ok_Button_In_Sucess_Screen());
+//			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Sucess_Screen());
+//			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Sucess_Screen());
+	    	
+	    	for (int i = 0; i < 200; i++) {
+				try {
+					waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.SaveInformation_RepaymentPlan());
+					clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.SaveInformation_RepaymentPlan());
+					break;
+				} catch (Exception e) {
+					if (i == 199) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
 	    }
 	    
 	    

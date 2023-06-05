@@ -473,6 +473,7 @@ public class FMS_Wifak_Error_While_Saving_Obj {
 		return Ok_Button_In_Waring_Screen;
 	}
 	
+	
 	@FindBy(id =  "_popup_path_sol_confirm_ok")
 	private WebElement Ok_Button_In_Confirm_Screen;
 	public WebElement Ok_Button_In_Confirm_Screen() {
@@ -1048,11 +1049,38 @@ public class FMS_Wifak_Error_While_Saving_Obj {
 		return SaveButton_OnLimitDetails_Tab;
 	}
 	
+	@FindBy(xpath =  "//button[@id='savebutton_WIFT001MT']")
+	private WebElement SaveButton_RepaymentPlan;
+	public WebElement SaveButton_RepaymentPlan() {
+		return SaveButton_RepaymentPlan;
+	}
+	
+//	_popup_path_sol_confirm_ok
+	@FindBy(xpath =  "_popup_path_sol_confirm_ok")
+	private WebElement Waring_RepaymentPlan;
+	public WebElement Waring_RepaymentPlan() {
+		return Waring_RepaymentPlan;
+	}
+	
+	//_popup_path_sol_ok
+	@FindBy(xpath =  "_popup_path_sol_ok")
+	private WebElement SaveInformation_RepaymentPlan;
+	public WebElement SaveInformation_RepaymentPlan() {
+		return SaveInformation_RepaymentPlan;
+	}
+	
     @FindBy(id =  "_popup_path_sol_confirm_ok")
 	private WebElement WaringButton_OnLimitDetails_Tab;
 	public WebElement WaringButton_OnLimitDetails_Tab() {
 	return WaringButton_OnLimitDetails_Tab;
 	}
+	
+	
+	 @FindBy(id =  "_popup_path_sol_ok")
+		private WebElement Waring_OnLimitDetails_Tab;
+		public WebElement Waring_OnLimitDetails_Tab() {
+		return Waring_OnLimitDetails_Tab;
+		}
 	
 	@FindBy(id =  "_popup_path_sol_ok")
 	private WebElement SucessButton_OnLimitDetails_Tab;
@@ -1065,8 +1093,14 @@ public class FMS_Wifak_Error_While_Saving_Obj {
 	public WebElement No_Of_Payments_InRepaymentPlan() {
 	return No_Of_Payments_InRepaymentPlan;
 	}
+	//_popup_path_sol_ok
+	@FindBy(id =  "_popup_path_sol_ok")
+	private WebElement Popup_NoOfPayments_InRepaymentPlan;
+	public WebElement Popup_NoOfPayments_InRepaymentPlan() {
+	return Popup_NoOfPayments_InRepaymentPlan;
+	}
 	
-	@FindBy(id =  "createSchedule_WIFT001MT")
+	@FindBy(xpath =  "//button[@id='createSchedule_WIFT001MT']")
 	private WebElement createSchedule_InRepaymentPlan;
 	public WebElement createSchedule_InRepaymentPlan() {
 	return createSchedule_InRepaymentPlan;
