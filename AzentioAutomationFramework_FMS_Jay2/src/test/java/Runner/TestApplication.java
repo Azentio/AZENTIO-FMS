@@ -8,7 +8,7 @@ import io.cucumber.testng.CucumberOptions;
 import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
-@CucumberOptions(features = {"src/test/java/features/Wifak_Application.feature"},
+@CucumberOptions(features = {"src/test/java/features/ApplicationForFinancialFacility.feature"},
                 glue = "stepdefinitions",
                 //monochrome=false, //to make steps in color
                 plugin = { "pretty",
@@ -16,7 +16,7 @@ import utilities.ExtentTestManager;
                            "rerun:ReRunScenarios/FailedReRun.txt"}
                //dryRun = false //to check compilation errors                                      
             //   , tags="@127788" 
-            		,   tags="@740790"
+            		,   tags="@834957"
 
 )
 public class TestApplication extends AbstractTestNGCucumberTests {
@@ -24,7 +24,7 @@ public class TestApplication extends AbstractTestNGCucumberTests {
 	 * @Override
 	 *
 	 * @DataProvider(parallel = true) public Object[][] scenarios() { return
-	 * super.scenarios(); }
+	 * super.scenarios(); }  
 	 */
 	
 

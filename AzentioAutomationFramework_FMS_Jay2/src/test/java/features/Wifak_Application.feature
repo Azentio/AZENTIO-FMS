@@ -325,6 +325,20 @@ Feature: Wifak Application
     And Click OK Button In Confirm Screen IN Document Details
     
     
+  #  And User clicks the Approve Level1 link
+  #  And User retrive the first data in approve level1
+ #   And select the Approve level1 decision as approve
+ #   And User clicks on the level1 submit button
+  #  And User clicks the Approve Level2 link
+  #  And User retrive the first data in approve level2
+  #  And User select the level2 decision as approve
+  #  And User clicks on the level2 submit button
+  #  And User clicks the Approve Level3 link
+  #  And User retrive the first data in approve level3
+  #  And User select the level3 decision as approve
+   # When User clicks on the level3 submit button
+    
+    
     
     
     @740790
@@ -346,18 +360,29 @@ Feature: Wifak Application
     And Select limit Details
     And Click Add button on limit Detail
     And Enter ValueOn Product Class
+    And Enter Facility Value
+    Then Enter the value on  Purpose Of Finacing
     Then Check Flag in Clean Level IN Limits Detalis SubMenu
     And Click Add button AfterEnter Value On Product Class
-    And Click Add button on limit Detail
+    
+    And Click Second Add button on limit Detail 
     And Enter second ValueOn Product Class
+    Then Enter second ValueOn Facility Value
+    And Enter the second value on  Purpose Of Finacing
     Then Check Flag in Clean Level IN Limits Detalis SubMenu
     And Click Add button AfterEnter Value On Product Class
-    And Click Add button on limit Detail
+    
+    And Click third Add button on limit Detail
     And Enter third ValueOn Product Class
+    Then Enter third ValueOn Facility Value
+    And Enter the third value on  Purpose Of Finacing
     Then Check Flag in Clean Level IN Limits Detalis SubMenu
     And Click Add button AfterEnter Value On Product Class
-    And Click Add button on limit Detail
+    
+    And Click Fourth Add button on limit Detail
     And Enter Fourth ValueOn Product Class
+    Then Enter Fourth ValueOn Facility Value
+    And Enter the Fourth value on  Purpose Of Finacing
     Then Check Flag in Clean Level IN Limits Detalis SubMenu
     And Click Add button AfterEnter Value On Product Class
     
