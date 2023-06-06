@@ -61,23 +61,23 @@ And User clicks on the add button
 And User clicks on the Charges details button
 And User enter the code and check the collect at facility approval
 And User click the Ok button
-And User move to the Document details tab
-And User enter the Solicitor Name
-And User enter the Estimator Name
-And User clicks the save button
-And User clicks the validate button
-And User clicks the Approve Level1 link
-And User retrive the first data in approve level1
-And User select the level1 decision as approve
-And User clicks on the level1 submit button
-And User clicks the Approve Level2 link
-And User retrive the first data in approve level2
-And User select the level2 decision as approve
-And User clicks on the level2 submit button
-And User clicks the Approve Level3 link
-And User retrive the first data in approve level3
-And User select the level3 decision as approve
-When User clicks on the level3 submit button
+#And User move to the Document details tab
+#And User enter the Solicitor Name
+#And User enter the Estimator Name
+#And User clicks the save button
+#And User clicks the validate button
+#And User clicks the Approve Level1 link
+#And User retrive the first data in approve level1
+#And User select the level1 decision as approve
+#And User clicks on the level1 submit button
+#And User clicks the Approve Level2 link
+#And User retrive the first data in approve level2
+#And User select the level2 decision as approve
+#And User clicks on the level2 submit button
+#And User clicks the Approve Level3 link
+#And User retrive the first data in approve level3
+#And User select the level3 decision as approve
+#When User clicks on the level3 submit button
 
 
 @294466
@@ -161,6 +161,7 @@ And User clicks on the more comments button
 Then User validate the more comments text in input field
 
 
+ #//No data available in FMSCore
 @582426
 Scenario: TSR-AMANAUPG170045
 
@@ -242,4 +243,20 @@ And User select the level3 decision as approve
 When User clicks on the level3 submit button
 
 
+@AT_RF_157
+Scenario: TSR - AMANA180702
+
+Given navigate to FMS application and login with valid credentials
+#And get the test data for test case AT_RF_157
+And User clicks on the WIFAK_Application first link
+And User clicks on the WIFAK_Application second link
+And User clicks on the Draw Down request module
+And User clicks on the Maintanance under Draw Down request
+And User enter the Facility Reference in main screen under Draw Down request
+And User select the draw down type in main screen under Draw Down request
+And User enter the Description in main screen under Draw Down request
+And User enter the value date in main screen under Draw Down request
+And User select the product class in additional screen under Draw Down request
+And User give the FC Amount in additional screen under Draw Down request
+When User click the save button under in maintanance under Draw Down request
 

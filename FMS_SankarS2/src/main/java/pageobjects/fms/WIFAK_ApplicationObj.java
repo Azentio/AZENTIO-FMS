@@ -256,6 +256,12 @@ public class WIFAK_ApplicationObj {
 		return limit_details_validate_btn;
 	}
 	
+	@FindBy(xpath = "//div[text()='CONFIRM']")
+	private WebElement confirm_popup;
+	public WebElement confirmPopup() {
+		return confirm_popup;
+	}
+	
 	@FindBy(xpath = "//div[@class='jMsgbox-contentWrap']")
 	private WebElement facility_already_created_popup_Msg;
 	public WebElement facilityAlreadyCreatedPopupMsg() {
@@ -628,5 +634,89 @@ public class WIFAK_ApplicationObj {
     }
 	
     
-	
+//  @AT_RF_157
+    @FindBy(xpath = "//td[text()='Draw Down Request']")
+    private WebElement wifak_application_draw_down_request;
+    public WebElement wifakApplicationDrawDownRequest() {
+    	return wifak_application_draw_down_request;
+    }
+    
+    @FindBy(xpath = "//a[@id='WIFT009MT']")
+    private WebElement draw_down_request_maintanance;
+    public WebElement drawDownRequestMaintanance() {
+    	return draw_down_request_maintanance;
+    }
+    
+    @FindBy(xpath = "//input[@id='lookuptxt_drawDownRequestFacilityReference_WIFT009MT']")
+    private WebElement drawdown_main_facility_ref;
+    public WebElement drawdownMainFacilityRef() {
+    	return drawdown_main_facility_ref;
+    }
+    
+    @FindBy(xpath = "//button[@id='submit_1278755883']")
+    private WebElement drawdown_post_approval_yes_btn;
+    public WebElement drawdownPostApprovalYesBtn() {
+    	return drawdown_post_approval_yes_btn;
+    }
+    
+    @FindBy(xpath = "//span[@id='spanLookup_drawDownRequestDrawDownType_WIFT009MT']")
+    private WebElement drawdown_main_drawdown_type_lookup;
+    public WebElement drawdownMaindrawdownTypeLookup() {
+    	return drawdown_main_drawdown_type_lookup;
+    }
+    
+    @FindBy(xpath = "//td[text()='Sukuk/Equity'][1]")
+    private WebElement drawdown_main_drawdown_type_value;
+    public WebElement drawdownMainDrawdownTypeLookup() {
+    	return drawdown_main_drawdown_type_value;
+    }
+    
+    @FindBy(xpath = "//input[@id='drawDownRequestLongNameEnglish_WIFT009MT']")
+    private WebElement drawdown_main_description;
+    public WebElement drawdownMainDescription() {
+    	return drawdown_main_description;
+    }
+    
+    @FindBy(xpath = "//input[@id='drawDownRequestDateSubmitted_WIFT009MT']")
+    private WebElement drawdown_main_date_submitted;
+    public WebElement drawdownMainDateSubmitted() {
+    	return drawdown_main_date_submitted;
+    }
+    
+    @FindBy(xpath = "//input[@id='drawDownRequestValueDate_WIFT009MT']")
+    private WebElement drawdown_main_value_date;
+    public WebElement drawdownMainValueDate() {
+    	return drawdown_main_value_date;
+    }
+    
+    @FindBy(xpath = "//input[@id='lookuptxt_drawDownRequestProduct_Class_WIFT009MT']")
+    private WebElement drawdown_additional_product_class;
+    public WebElement drawdownAdditionalProductClass() {
+    	return drawdown_additional_product_class;
+    }
+    
+    @FindBy(xpath = "//span[@id='spanLookup_drawDownRequestProduct_Class_WIFT009MT']")
+    private WebElement drawdown_additional_product_class_lookup;
+    public WebElement drawdownAdditionalProductClassLookup() {
+    	return drawdown_additional_product_class_lookup;
+    }
+    
+    @FindBy(xpath = "//td[@id='td_gridtab_drawDownRequestProduct_Class_WIFT009MT_1_viewDrawDownClassVO.CODE']")
+    private WebElement drawdown_additional_product_class_code;
+    public WebElement drawdownAdditionalProductClassCode() {
+    	return drawdown_additional_product_class_code;
+    }
+    
+    @FindBy(xpath = "//input[@id='drawDownRequestFC_Amount_WIFT009MT']")
+    private WebElement drawdown_additional_FC_amount;
+    public WebElement drawdownAdditionalFCAmount() {
+    	return drawdown_additional_FC_amount;
+    }
+    
+    @FindBy(xpath = "//button[@id='drawdownrequest_save_btn_WIFT009MT']")
+    private WebElement drawdown_main_save_btn;
+    public WebElement drawdownMainSaveBtn() {
+    	return drawdown_main_save_btn;
+    }
+    
 }

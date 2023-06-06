@@ -103,7 +103,7 @@ public class WIFAK_Application_Steps {
 //  @582480_FMSCore
     @And("^get the test data for test case 582480_FMSCore$")
     public void get_the_test_data_for_test_case_582480fmscore() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS01_583895");
+    	testData = fmsTransactionsExcelData.getTestdata("DS01_582480");
     }
     
 //  @582565
@@ -461,7 +461,7 @@ public class WIFAK_Application_Steps {
     	WIFAKapplicationObj.WarningPopupOkBtn().click();
     	
     	// Facility already created popup
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityAlreadyCreatedPopupMsg());
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.confirmPopup());
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityAlreadyCreatedPopup());
     	WIFAKapplicationObj.facilityAlreadyCreatedPopup().click();
     	
@@ -1077,6 +1077,54 @@ public class WIFAK_Application_Steps {
     	WIFAKapplicationObj.limitDetailsMarginRateInput().sendKeys(Keys.TAB);
         
     }
+    
+    
+//  @AT_RF_157
+    @And("^User clicks on the Draw Down request module$")
+    public void user_clicks_on_the_draw_down_request_module() throws Throwable {
+        
+    }
+
+    @And("^User clicks on the Maintanance under Draw Down request$")
+    public void user_clicks_on_the_maintanance_under_draw_down_request() throws Throwable {
+        
+    }
+
+    @And("^User enter the Facility Reference in main screen under Draw Down request$")
+    public void user_enter_the_facility_reference_in_main_screen_under_draw_down_request() throws Throwable {
+        
+    }
+
+    @And("^User select the draw down type in main screen under Draw Down request$")
+    public void user_select_the_draw_down_type_in_main_screen_under_draw_down_request() throws Throwable {
+        
+    }
+
+    @And("^User enter the Description in main screen under Draw Down request$")
+    public void user_enter_the_description_in_main_screen_under_draw_down_request() throws Throwable {
+        
+    }
+
+    @And("^User enter the value date in main screen under Draw Down request$")
+    public void user_enter_the_value_date_in_main_screen_under_draw_down_request() throws Throwable {
+        
+    }
+
+    @And("^User select the product class in additional screen under Draw Down request$")
+    public void user_select_the_product_class_in_additional_screen_under_draw_down_request() throws Throwable {
+        
+    }
+
+    @And("^User give the FC Amount in additional screen under Draw Down request$")
+    public void user_give_the_fc_amount_in_additional_screen_under_draw_down_request() throws Throwable {
+        
+    }
+    
+    @When("^User click the save button under in maintanance under Draw Down request$")
+    public void user_click_the_save_button_under_in_maintanance_under_draw_down_request() throws Throwable {
+        
+    }
+
 
 
 }

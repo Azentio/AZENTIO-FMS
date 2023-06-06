@@ -94,7 +94,17 @@ public class WIFAK_Application2_Steps {
     @And("^User double click on the retrived data in update after approve menu$")
     public void user_double_click_on_the_retrived_data_in_update_after_approve_menu() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.facilityTypeCode());
-   	 	clicksAndActionsHelper.doubleClick(facilityTypeObj.facilityTypeCode());
+    	for (int i = 0; i <= 300; i++) {
+			try {
+				clicksAndActionsHelper.doubleClick(facilityTypeObj.facilityTypeCode());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+   	 	
     }
     
     @And("^User clicks on the facility details tab in update after approve$")
@@ -489,7 +499,17 @@ public class WIFAK_Application2_Steps {
     @And("^User retrive the one data in update after approve in Document checklist$")
     public void user_retrive_the_one_data_in_update_after_approve_in_document_checklist() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.documentChecklistCode());
-    	clicksAndActionsHelper.doubleClick(facilityTypeObj.documentChecklistCode());
+    	for (int i = 0; i <= 300; i++) {
+			try {
+				clicksAndActionsHelper.doubleClick(facilityTypeObj.documentChecklistCode());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}    	
+    	
     }
     
     @And("^User click the add new button under update after approve in Document checklist$")
@@ -614,9 +634,9 @@ public class WIFAK_Application2_Steps {
     	facilityTypeObj.limitDetailsdocumentChecklistSecondRow().click();
     	
     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.limitDetailsDocumentChecklistDocumentCodeInput());
-//    	facilityTypeObj.limitDetailsDocumentChecklistDocumentCodeInput().sendKeys("3455");
-    	facilityTypeObj.limitDetailsDocumentChecklistDocumentCodeInput().sendKeys(testData.get("Document Code"));
-    	facilityTypeObj.limitDetailsDocumentChecklistDocumentCodeInput().sendKeys(Keys.TAB);    	
+    	facilityTypeObj.limitDetailsDocumentChecklistDocumentCodeInput().sendKeys("3455");
+//    	facilityTypeObj.limitDetailsDocumentChecklistDocumentCodeInput().sendKeys(testData.get("Document Code"));
+    	facilityTypeObj.limitDetailsDocumentChecklistDocumentCodeInput().sendKeys(Keys.TAB);
     	
     }
 
