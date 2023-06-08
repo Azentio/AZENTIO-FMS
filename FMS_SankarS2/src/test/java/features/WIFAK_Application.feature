@@ -246,8 +246,9 @@ When User clicks on the level3 submit button
 @AT_RF_157
 Scenario: TSR - AMANA180702
 
+# Draw Down request
 Given navigate to FMS application and login with valid credentials
-#And get the test data for test case AT_RF_157
+And get the test data for test case AT_RF_157
 And User clicks on the WIFAK_Application first link
 And User clicks on the WIFAK_Application second link
 And User clicks on the Draw Down request module
@@ -255,8 +256,122 @@ And User clicks on the Maintanance under Draw Down request
 And User enter the Facility Reference in main screen under Draw Down request
 And User select the draw down type in main screen under Draw Down request
 And User enter the Description in main screen under Draw Down request
-And User enter the value date in main screen under Draw Down request
+And User click on the draw down additional details tab
 And User select the product class in additional screen under Draw Down request
 And User give the FC Amount in additional screen under Draw Down request
+And User enter the value date in main screen under Draw Down request
 When User click the save button under in maintanance under Draw Down request
+Then User click on the Verify link under Draw Down request
+And User click on the clear button in verify under Draw Down request
+And User double click on the code in verify under Draw Down request
+When User click on the verify button in Verify link under Draw Down request
+Then User click on the Approve link under Draw Down request
+And User click on the clear button in Approve under Draw Down request
+And User double click on the code in Approve under Draw Down request
+When User click on the Approve button in Approve link under Draw Down request
+Then User again clicks on the Maintanance under Draw Down request
+And User clicks on the search button in main screen under Draw Down request
+And User click the clear button in main screen under Draw Down request
+And User double click on the first line code in main screen under Draw Down request
+And User click on the Status Details button in main screen under Draw Down request
+And User verify the Status Details tab User Name in main screen under Draw Down request
+ ########  Facility Closure Request
+Then User clicks on the Facility Closure Request module
+And User click on the Maintanance under Facility Closure Request module
+And User enter the Facility ref in main screen under Facility Closure Request
+And User enter the Closure reason in main screen under Facility Closure Request
+And User click on the Save button in main screen under Facility Closure Request
+Then User clicks on the Approve under Facility Closure Request module
+And User click on the clear button in approve screen under Facility Closure Request
+And User double click on the code in approve screen under Facility Closure Request
+When User click on the Approve button in approve screen under Facility Closure Request
+Then User again click the Maintanance under Facility Closure Request module
+And User click on the search button in main screen under Facility Closure Request
+And User double click on the code in main screen under Facility Closure Request
+And User click the Status details button in main screen under Facility Closure Request
+Then User verify the Status details tab in main screen under Facility Closure Request
+Then User again clicks on the Maintanance under Draw Down request
+And User clicks on the search button in main screen under Draw Down request
+And User click the clear button in main screen under Draw Down request
+And User double click on the first line code in main screen under Draw Down request
+And User click on the Status Details button in main screen under Draw Down request
+And User verify the Status Details tab User Name in main screen under Draw Down request
+
+
+@AT_RF_139
+Scenario: MFI190122 - Request for financing-->Doc Checklist-->Upload Document-->Flags Attachment and Available is not checked
+
+Given navigate to FMS application and login with valid credentials
+And get the test data for test case AT_RF_139
+And User clicks on the WIFAK_Application first link
+And User clicks on the WIFAK_Application second link
+And User clicks on the Application for financial facility link
+And User clicks the maintanance menu
+And User select the application for dropdown as new facility
+And User enter the CIF No in main info tab
+And User enter the facility type in main info tab
+And User enter the country of financing in main info tab
+And User enter the facility rating in main info tab
+And User clicks on the additional details tab
+And User enter the total value in additional info tab
+And User enter the expire date in additional info tab
+And User clicks the limit details tab
+And User clicks the add new record button in limit details tab
+And User enter the product class details
+And User clicks on the add button
+And User clicks on the document checklist button under limit details
+And User clicks the all critical checkboxes in document checklist
+And User click the Ok button under document checklist
+And User move to the Document details tab
+And User enter the Solicitor Name
+And User enter the Estimator Name
+And User clicks the save button
+And User clicks the validate button
+And User clicks the Approve Level1 link
+And User retrive the first data in approve level1
+And User select the level1 decision as approve
+And User clicks the limit details tab under approve level1
+And User select the product class in limit details under approve level1
+And User click the document checklist button under limit details in approve level1
+And User click the ok button in document checklist under limit details
+And User clicks on the level1 submit button
+And User clicks the Approve Level2 link
+And User retrive the first data in approve level2
+And User select the level2 decision as approve
+And User clicks on the level2 submit button
+And User clicks the Approve Level3 link
+And User retrive the first data in approve level3
+And User select the level3 decision as approve
+When User clicks on the level3 submit button
+
+
+@AT_RF_140
+Scenario: MFI190126 - Request for financing Document Checklist-->Document name changing after uploading document and document is showing in wrong order
+
+Given navigate to FMS application and login with valid credentials
+And get the test data for test case AT_RF_140
+And User clicks on the WIFAK_Application first link
+And User clicks on the WIFAK_Application second link
+And User clicks on the Application for financial facility link
+And User clicks the maintanance menu
+And User select the application for dropdown as new facility
+And User enter the CIF No in main info tab
+And User enter the facility type in main info tab
+And User enter the country of financing in main info tab
+And User enter the facility rating in main info tab
+And User clicks on the additional details tab
+And User enter the total value in additional info tab
+And User enter the expire date in additional info tab
+And User clicks the limit details tab
+And User clicks the add new record button in limit details tab
+And User enter the product class details
+And User clicks on the add button
+And User clicks on the document checklist button under limit details
+And User select the second row in document checklist tab
+And User give the file in choose file input under document checklist tab
+And User click the Upload docs button under document checklist tab
+And User validate the Attachment flag is checked in second row under document checklist tab
+And User click the Ok button under document checklist
+And User move to the Document details tab
+
 

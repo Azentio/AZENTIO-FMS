@@ -8,14 +8,15 @@ import io.cucumber.testng.CucumberOptions;
 import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
-@CucumberOptions(features = {"src/test/java/features/Collateral_Management.feature"},
+@CucumberOptions(features = {"src/test/java/features/WIFAK_Application.feature"},
                 glue = "stepdefinitions",
+//                dryRun = true,
                 monochrome=true, //to make steps in color
                 plugin = { "pretty",
                            "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                            "rerun:ReRunScenarios/FailedReRun.txt"}
-               //dryRun = false //to check compilation errors  
-				, tags= "@AT_RF_158_Core"
+//               	,dryRun = true //to check compilation errors  
+				, tags= "@AT_RF_140"
 //               , tags= "@582480_FMSParam or @582480_FMSCore"
 
 )

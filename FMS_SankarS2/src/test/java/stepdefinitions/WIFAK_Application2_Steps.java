@@ -659,7 +659,6 @@ public class WIFAK_Application2_Steps {
 
     @And("^User click the Ok button under document checklist$")
     public void user_click_the_ok_button_under_document_checklist() throws Throwable {
-    	
     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.limitDetailsDocumentChecklistOkBtn());
     	facilityTypeObj.limitDetailsDocumentChecklistOkBtn().click();
     }
