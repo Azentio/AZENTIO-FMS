@@ -9,13 +9,13 @@ import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
 @CucumberOptions(features = { "src/test/java/features/RequestforFinancing.feature" }, 
-				//dryRun = true,
+				dryRun = !true,
 				glue = "stepdefinitions",
 				// monochrome=false, //to make steps in color
 				plugin = { "pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 							"rerun:ReRunScenarios/FailedReRun.txt" },
 				// dryRun = false //to check compilation errors
-		 		tags = "@863738"
+		 		tags = "@402669"
 				
 
 )

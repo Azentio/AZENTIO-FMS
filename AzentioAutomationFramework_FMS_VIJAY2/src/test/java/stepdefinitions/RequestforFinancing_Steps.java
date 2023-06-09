@@ -1,10 +1,13 @@
 package stepdefinitions;
 
+import static org.testng.Assert.assertNotNull;
+
 import java.util.HashMap;
 import java.util.Map;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 import dataProvider.ConfigFileReader;
 import dataProvider.ExcelData;
@@ -13,17 +16,14 @@ import helper.DropDownHelper;
 import helper.JavascriptHelper;
 import helper.WaitHelper;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageobjects.RequestforFinancing_Pageobjects;
 import resources.BaseClass;
 
 public class RequestforFinancing_Steps extends BaseClass{
 	WebDriver driver=BaseClass.driver;
-	String TestDataPath = System.getProperty("user.dir") + "\\TestData\\FMSTestData.xlsx";
-	ExcelData fmsParamLoginTestData = new ExcelData(TestDataPath, "FMSParam_login", "UserType");
-	ExcelData fmsLoginExceldata = new ExcelData(TestDataPath, "FMS_Login", "UserType");
-	ExcelData sadsLoginExceldata = new ExcelData(TestDataPath, "SadsLogin", "UserType");
-	Map<String, String> fmsLoginTestData = new HashMap<>();
 	WaitHelper waitHelper = new WaitHelper(driver);
 	ClicksAndActionsHelper clicksAndActionHelper = new ClicksAndActionsHelper(driver);
 	RequestforFinancing_Pageobjects RequestforFinancingObj = new RequestforFinancing_Pageobjects(driver);
@@ -31,7 +31,22 @@ public class RequestforFinancing_Steps extends BaseClass{
 	FMSLogin FMSLogin = new FMSLogin(driver);
 	DropDownHelper dropdownhelper = new DropDownHelper(driver);
 	JavascriptHelper javascripthelper = new JavascriptHelper(driver);
+	
+	String TestDataPath = System.getProperty("user.dir") + "\\TestData\\FMSTestData.xlsx";
+	ExcelData fmsParamLoginTestData = new ExcelData(TestDataPath, "FMSParam_login", "UserType");
+	ExcelData fmsLoginExceldata = new ExcelData(TestDataPath, "FMS_Login", "UserType");
+	//ExcelData sadsLoginExceldata = new ExcelData(TestDataPath, "SadsLogin", "UserType");
+	
+	ExcelData fmsTransactionsExcelData = new ExcelData(TestDataPath,"FMS_WIFAK_ApplicationTestData","DataSet ID");
+    Map<String, String> testData;
+	Map<String, String> fmsLoginTestData = new HashMap<>();
 
+	@And("get the test data set id for AT_RF_192")
+	public void get_the_test_data_set_id_for_at_rf_192() {
+		testData = fmsTransactionsExcelData.getTestdata("DS01_583895");
+	    
+	}
+	
 	
     @And("^Click on the WIFAK APPLICATION menu$")
     public void click_on_the_wifak_application_menu() throws Throwable {
@@ -66,7 +81,8 @@ public class RequestforFinancing_Steps extends BaseClass{
     	waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Applicationfor());
 		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Applicationfor());
 		clicksAndActionHelper.clickOnElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Applicationfor());
-		dropdownhelper.SelectUsingVisibleText(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Applicationfor(), "New Facility");
+		//dropdownhelper.SelectUsingVisibleText(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Applicationfor(), "New Facility");
+		dropdownhelper.SelectUsingVisibleText(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Applicationfor(), testData.get("Application For"));
     }
 
     @And("^Select the CIF No in Main Information tab$")
@@ -74,7 +90,16 @@ public class RequestforFinancing_Steps extends BaseClass{
     	waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Cifno());
 		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Cifno());
 		clicksAndActionHelper.clickOnElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Cifno());
-		RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Cifno().sendKeys("727");
+		for (int i = 0; i < 300; i++) {
+			try {
+				//RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Cifno().sendKeys("727");
+				RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Cifno().sendKeys(testData.get("CIF No"));
+				break;
+			} catch (Exception e) {
+				Assert.fail(e.getMessage());
+				}
+		}
+
     }
 
     @And("^Select the Facility Type in Main Information tab$")
@@ -82,30 +107,103 @@ public class RequestforFinancing_Steps extends BaseClass{
     	waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Facilitytype());
 		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Facilitytype());
 		clicksAndActionHelper.clickOnElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Facilitytype());
-		RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Cifno().sendKeys("369");
+		for (int i = 0; i < 300; i++) {
+			try {
+				//RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Facilitytype().sendKeys("369");
+				RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Facilitytype().sendKeys(testData.get("Facility Type"));
+				break;
+			} catch (Exception e) {
+				Assert.fail(e.getMessage());
+				}
+		}
     }
 
     @And("^Click the Country of Financing in Main Information tab$")
     public void click_the_country_of_financing_in_main_information_tab() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Countryoffinancing());
 		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Countryoffinancing());
-		clicksAndActionHelper.clickOnElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Countryoffinancing());
-		RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Cifno().sendKeys("320");
+		clicksAndActionHelper.clickOnElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Countryoffinancing());		
+		for (int i = 0; i < 300; i++) {
+			try {
+				//RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Countryoffinancing().sendKeys("320");
+				RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Countryoffinancing().sendKeys(testData.get("Country of Financing"));
+				RequestforFinancingObj.Demo_Click().click();
+				Thread.sleep(3000);
+				break;
+			} catch (Exception e) {
+				Assert.fail(e.getMessage());
+				}
+		}	
     }
     
+    @Then("Check the Country of Financing field is filled")
+    public void check_the_country_of_financing_field_is_filled() {
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Countryoffinancing());
+		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Countryoffinancing());
+		//String countryoffinancing = RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Countryoffinancing().getText();
+		//System.out.println(countryoffinancing);
+		for (int i = 0; i <200; i++) {
+            try {
+                if (RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Countryoffinancing().getAttribute("prevvalue").isBlank()
+                		&&RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Countryoffinancing().getAttribute("prevvalue").isEmpty()) {
+                  break;    
+              }
+            } catch (Exception e) {
+            	Assert.fail(e.getMessage());
+            }    
+        }
+		
+		/*
+		try {
+	    	Assert.assertTrue(!(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Countryoffinancing().getAttribute("prevvalue") != null));
+	    	Assert.assertTrue(false);
+	    	
+	     if ((RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Countryoffinancing().getAttribute("prevvalue")) != null){
+	    	 RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Countryoffinancing().isDisplayed();
+	             }
+	             
+		}
+	     catch (Exception e) {
+	    	 Assert.fail(e.getMessage());
+		}
+		
+    }
+    
+    /*
     @And("^Click the search icon for Facility Rating$")
     public void click_the_search_icon_for_facility_rating() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_FacilityRatingSearch());
 		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_FacilityRatingSearch());
-		clicksAndActionHelper.clickOnElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_FacilityRatingSearch());
+		for (int i = 0; i < 300; i++) {
+			try {
+				RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_FacilityRatingSearch().click();
+				break;
+			} catch (Exception e) {
+				Assert.fail(e.getMessage());
+				}
+		}
+		*/
     }
 
     @And("^Select the Facility Rating$")
     public void select_the_facility_rating() throws Throwable {
+    	/*
     	waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_FacilityRating());
 		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_FacilityRating());
-		clicksAndActionHelper.doubleClick(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_FacilityRating());
-    }
+		clicksAndActionHelper.clickOnElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_FacilityRating());
+		RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_FacilityRating().sendKeys("2");
+		*/
+		
+                waitHelper.waitForElementwithFluentwait(driver,RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_FacilityRating());
+                clicksAndActionHelper.clickOnElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_FacilityRating());
+              //  RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_FacilityRating().sendKeys("2");
+              // RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_FacilityRating().sendKeys(Keys.ENTER);
+                RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_FacilityRating().sendKeys(testData.get("Facility Rating"));
+                Thread.sleep(2000);
+        }
+    
+    
     
     
     
@@ -120,8 +218,22 @@ public class RequestforFinancing_Steps extends BaseClass{
     public void select_the_currency_code() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_CurrencyCode());
 		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_CurrencyCode());
-		clicksAndActionHelper.clickOnElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_CurrencyCode());
+		clicksAndActionHelper.doubleClick(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_CurrencyCode());
+		RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_CurrencyCode().sendKeys(Keys.DELETE);
 		RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_CurrencyCode().sendKeys("586");
+		Thread.sleep(2000);
+		/*
+		//RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_CurrencyCode().clear();
+		for (int i = 0; i < 300; i++) {
+			try {
+				RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_CurrencyCode().sendKeys("586");
+				break;
+			} catch (Exception e) {
+				Assert.fail(e.getMessage());
+				}
+		}
+		*/
+		
     }
 
     @And("^Enter the Total Value$")
@@ -129,7 +241,26 @@ public class RequestforFinancing_Steps extends BaseClass{
     	waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_TotalValue());
 		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_TotalValue());
 		clicksAndActionHelper.clickOnElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_TotalValue());
+		Thread.sleep(2000);
 		RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_TotalValue().sendKeys("10000");
+		
+		/*
+		
+		for (int i = 0; i < 500; i++) {
+			try {
+				clicksAndActionHelper.clickOnElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_TotalValue());
+				clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_TotalValue());
+				RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_TotalValue().sendKeys("10000");
+				break;
+			} catch (Exception e) {
+				Assert.fail(e.getMessage());
+				}
+		}
+		
+		//RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_TotalValue().sendKeys(Keys.ENTER);
+	//	Thread.sleep(5000);
+	 * */
+	 
     }
 
     @And("^Select the Offer/Expiration$")
@@ -137,12 +268,11 @@ public class RequestforFinancing_Steps extends BaseClass{
     	waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_OfferExpiration());
 		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_OfferExpiration());
 		clicksAndActionHelper.clickOnElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_OfferExpiration());
+		Thread.sleep(2000);
 		RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_OfferExpiration().sendKeys("01/06/2023");
-		RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_OfferExpiration().sendKeys(Keys.ENTER);
+	//	RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_OfferExpiration().sendKeys(Keys.ENTER);
+		
     }
-    
-    
-    
     
     @And("^Click on the Limit Details tab$")
     public void click_on_the_limit_details_tab() throws Throwable {
@@ -170,6 +300,30 @@ public class RequestforFinancing_Steps extends BaseClass{
     	waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ProductClass());
 		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ProductClass());
 		clicksAndActionHelper.doubleClick(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ProductClass());
+    }
+    
+    @Given("Select the Purpose Of Financing")
+    public void select_the_purpose_of_financing() {
+    	waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancing());
+		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancing());
+		clicksAndActionHelper.clickOnElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancing());
+		
+		waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancingValue());
+		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancingValue());
+		clicksAndActionHelper.doubleClick(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancingValue());
+    }
+    
+    @Given("Check the clean flag is enabled")
+    public void check_the_clean_flag_is_enabled() {
+    	waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_Clean());
+		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_Clean());
+		//clicksAndActionHelper.doubleClick(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_Clean());
+		try { 
+			RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_Clean().click();
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+		
     }
 
     @And("^Click on the add button$")
@@ -217,13 +371,50 @@ public class RequestforFinancing_Steps extends BaseClass{
     }
     
     
+    @Given("Click the save button")
+    public void click_the_save_button() {
+    	waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.save());
+		clicksAndActionHelper.moveToElement(RequestforFinancingObj.save());
+		clicksAndActionHelper.doubleClick(RequestforFinancingObj.save());
+        
+    }
     
+    @Given("Click the validate button")
+    public void click_the_validate_button() {
+    	waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.validate());
+		clicksAndActionHelper.moveToElement(RequestforFinancingObj.validate());
+		clicksAndActionHelper.doubleClick(RequestforFinancingObj.validate());
+    }
     
+    @Given("Click the ok button to proceed")
+    public void click_the_ok_button_to_proceed() {
+    	waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.Confirmok());
+		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Confirmok());
+		try {
+		if (RequestforFinancingObj.Confirmok().isDisplayed()) {
+			RequestforFinancingObj.Confirmok().click();
+			}	
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+		
+    }
     
+    @Given("Click Dismiss in Send Alert")
+    public void click_dismiss_in_send_alert() {
+    	waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.SendAlert());
+		clicksAndActionHelper.moveToElement(RequestforFinancingObj.SendAlert());
+		try {
+			if (RequestforFinancingObj.SendAlert().isDisplayed()) {
+				RequestforFinancingObj.SendAlert().click();
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		} 
+    }
     
-    
-   
-    
+      
+ 
     
     @And("^Click the Approve Level1 link$")
     public void click_the_approve_level1_link() throws Throwable {
@@ -317,5 +508,87 @@ public class RequestforFinancing_Steps extends BaseClass{
     	waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.ButtonSuccessOk1());
     	RequestforFinancingObj.ButtonSuccessOk1().click();
     }  
+    
+  //*************************862727*********************//
+  	@Given("Check the Mandatory Purpose of Financing flag is enabled")
+  	public void check_the_mandatory_purpose_of_financing_flag_is_enabled() {
+  		waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.FacilityType_UpdateAfterApprove_FacilityDetails_ApplicationRequirementsandDetails_MandatoryPurposeofFinancing());
+		clicksAndActionHelper.moveToElement(RequestforFinancingObj.FacilityType_UpdateAfterApprove_FacilityDetails_ApplicationRequirementsandDetails_MandatoryPurposeofFinancing());
+		try {
+			if (RequestforFinancingObj.FacilityType_UpdateAfterApprove_FacilityDetails_ApplicationRequirementsandDetails_MandatoryPurposeofFinancing().isEnabled()) {
+				Assert.assertTrue(true);
+			}	
+			else {
+				RequestforFinancingObj.FacilityType_UpdateAfterApprove_FacilityDetails_ApplicationRequirementsandDetails_MandatoryPurposeofFinancing().click();		
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+		
+  	    
+  	}
+  	
+  	
+  //	****************************@402669********************    //
+  	
+  	@And("get the test data set id for AT_RF_195")
+	public void get_the_test_data_set_id_for_at_rf_195() {
+		testData = fmsTransactionsExcelData.getTestdata("DS01_402669");
+	    
+	}
+  	
+  	@Given("Click Yes in post approval pop up")
+  	public void click_yes_in_post_approval_pop_up() {
+  		waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.WifakApplication_PostApproval());
+		clicksAndActionHelper.moveToElement(RequestforFinancingObj.WifakApplication_PostApproval());
+		RequestforFinancingObj.WifakApplication_PostApproval().click();
+  	}
+  	
+  	@Then("Enter values in Revolving Validity field")
+  	public void enter_values_in_revolving_validity_field() {
+  		waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_RevolvingValidity());
+		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_RevolvingValidity());
+		
+		Assert.assertTrue(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_RevolvingValidity().isEnabled());
+		RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_RevolvingValidity().click();
+		RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_RevolvingValidity().clear();
+		RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_RevolvingValidity().sendKeys("1111");
+  	}
+  	
+  	@Then("Enter values in Max Revolving Times field")
+  	public void enter_values_in_max_revolving_times_field() {
+  		waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_MaxRevolvingTimes());
+		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_MaxRevolvingTimes());
+		Assert.assertTrue(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_MaxRevolvingTimes().isEnabled());
+		RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_MaxRevolvingTimes().click();
+		RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_MaxRevolvingTimes().clear();
+		RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_MaxRevolvingTimes().sendKeys("111");
+  	}
+  	
+  	@Then("Enable Subject To Full Repayment flag")
+  	public void enable_subject_to_full_repayment_flag() {
+  		waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_SubjectToFullRepayment());
+		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_SubjectToFullRepayment());
+		if (RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_TotalApproval().isDisplayed()){
+			RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_SubjectToFullRepayment().click();
+		}
+  	}
+  	
+  	@Then("Check the Current Utilization field is enabled")
+  	public void check_the_current_utilization_field_is_enabled() {
+  		waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_CurrentUtilization());
+		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_CurrentUtilization());
+		Assert.assertTrue(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_CurrentUtilization().isEnabled());
+		//RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_CurrentUtilization().click();
+  	}
+  	
+  	@Then("Check the Total Approval field is enabled")
+  	public void check_the_total_approval_field_is_enabled() {
+  		waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_TotalApproval());
+		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_TotalApproval());
+		Assert.assertTrue(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_TotalApproval().isEnabled());
+		//RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_TotalApproval().click();
+  	}
+
    
 }
