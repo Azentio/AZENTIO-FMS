@@ -8,15 +8,15 @@ import io.cucumber.testng.CucumberOptions;
 import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
-@CucumberOptions(features = {"src/test/java/features/ApplicationForFinancialFacility.feature"},
+@CucumberOptions(features = {"src/test/java/features/Wifak_Application.feature"},
                 glue = "stepdefinitions",
                 //monochrome=false, //to make steps in color
                 plugin = { "pretty",
                            "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                            "rerun:ReRunScenarios/FailedReRun.txt"}
-               //dryRun = false //to check compilation errors                                      
+           //  ,  dryRun = true //to check compilation errors                                      
             //   , tags="@127788" 
-            		,   tags="@834957"
+            		,   tags="@740809"
 
 )
 public class TestApplication extends AbstractTestNGCucumberTests {
