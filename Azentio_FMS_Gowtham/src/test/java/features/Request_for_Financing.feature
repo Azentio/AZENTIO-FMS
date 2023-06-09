@@ -31,11 +31,6 @@ Feature: Title of your feature
   Scenario: BTII180015
     Given Login into CSM Application
     And Click Request on FMS Core
-    # And Click Request Application under Request
-    #	  And Click baj Application under Request Application
-    #	  And Click approve under baj Application
-    #	  And Take first existing record
-    #	  And ScrollDown and Approve
     And Click request management under request
     And Click management process branch under request management
     And Select first approve status detail
@@ -64,7 +59,6 @@ Feature: Title of your feature
       And Click and enter CIF 
       And After enter CIF find if any alphabetic in ID number
     
-    
     @652912
     Scenario: TSR - BTII180039
     Given navigate to FMS application2 and login with valid credentials
@@ -81,8 +75,7 @@ Feature: Title of your feature
     And Select the record on maintenance screen
     Then Check the Status its on cancel
     
-    
-    
+   
     @636958
     Scenario: TSR - EWB180031
      Given navigate to FMS application2 and login with valid credentials
@@ -97,7 +90,6 @@ Feature: Title of your feature
     And Click the Disbursement Sublimit under maintenance screen
     And Add the limits under Disbursement Sublimit
     And Add the product class values in product searchbox
-    #And Enter the tenure value in tenure
     And Change the month in tenure
     And Add the Margin values in Margin
     And Add all the Above limit values
@@ -109,8 +101,36 @@ Feature: Title of your feature
     And Click the validate button when all the values are saved
     And Confirm the validate popup menu
     And Click the final validate popup
+    #And Click the Approve level1 screen under request for financing
+    #And Search the value in approve1
+    #And Select the record in approve1
+    #And Select the record in Approve Screen1
+    #And Reject the record in Approve level1 
+    #And enter the reason for rejection
+    #And Click Reopen Rejected Applications Under request for financing
+    #And Click mainteance under Reopen Rejected Applications
+    #And Select the reopen record mainteance under Reopen Rejected Applications
+    #And Reopen the rejected record
+    #And Goto maintenace
+    #And Take the reopen record under mainteance 
+    #And Click Approve rejection under Reopen Rejected Applications
+    #And Select the rejected record in  Reopen Rejected Applications
+    #And Approve the reopen request
+    #And click mainteance under request for financing
+    #And select the record in the mainteance under request for financing
+    #And Click the Disbursement Sublimit under maintenance screen
+    #And Select the exesting product class 
+    #And change the months
+    #Then After Changes save it
+  
+    @6369582
+    Scenario: TSR - EWB180031
+    Given navigate to FMS application2 and login with valid credentials
+     And Click Request for financin
+     And Click Request for financing
     And Click the Approve level1 screen under request for financing
-    And Select the record in Approve Screen1
+    And Search the value in approve1
+    And Select the record in approve1
     And Reject the record in Approve level1 
     And enter the reason for rejection
     And Click Reopen Rejected Applications Under request for financing
@@ -130,10 +150,146 @@ Feature: Title of your feature
     Then After Changes save it
     
     
+    @583228
+		Scenario: Exception error in Production
+		Given navigate to FMS application2 and login with valid credentials
+		And Click Wifak Application first
+    And Click Wifak Application Second
+    And User update test data for test case no 949677
+    And Click Application for financial facilities
+    And Click Maintenance
+    And Click and Select Application for
+    And Search CIF No
+    And Enter codeOn Facility Type
+    And Enter Code In Country of Financing
+    And Enter line Code On Facility Rating
+    And Click on additional Details
+    And Enter the Total Value
+    And Click Offer Expiration SelectDate
+    And Select limit Details
+    And Click Add button on limit Detail
+    And Enter ValueOn Product Class
+    And AfterEnter ValueOn Product Class Search
+    And Click Add button AfterEnter Value On Product Class
+    And Click save button on limit details
+    And User move to the Document details tab
+    And User enter the Solicitor Name
+    And User enter the Estimator Name
+    And User clicks the save button
+    And User clicks the validate button
+    And User clicks the Approve Level1 link
+		And User retrive the first data in approve level1
+		And User select the level1 devision as approve
+		And User clicks on the level1 submit button
+		And User clicks the Approve Level2 link
+		And User retrive the first data in approve level2
+		And User select the level2 devision as approve
+		And User clicks on the level2 submit button
+		And User clicks the Approve Level3 link
+		And User retrive the first data in approve level3
+		And User select the level3 devision as approve
+		And User clicks on the level3 submit button
+    
+    
+    	
+	  @636898
+   Scenario: TSR - BIPL180002
+		Given navigate to FMS application2 and login with valid credentials
+    And Click Wifak Application first
+    And Click Wifak Application Second
+    And User update test data for test case no 949677
+    And Click Application for financial facilities
+    And Click Maintenance
+    And User select the application for dropdown as decrease in main screen
+		And User enter the input as Existing Facility Ref in main screen
+		And Enter line Code On Facility Rating
+    And Click on additional Details
+		And User enter the total value under additional info tab
+		And User validate the finance amount should be decresed based on total value
+		And Click Offer Expiration SelectDate
+    And Select limit Details
+		And User validate the Facility value and CV value should be changed same as decreased finance amount under limit details
+		And User double click on the product class under limit details
+		And User click the clean flag under product calss in limit details tab
+		And User click the edit button under product class in limit details tab
+	  And User move to the Document details tab
+    And User enter the Solicitor Name
+    And User enter the Estimator Name
+    And User clicks the save button
+    And User clicks the validate button
+    And User clicks the Approve Level1 link
+		And User retrive the first data in approve level1
+		And User select the level1 devision as approve
+		And User clicks on the level1 submit button
+		And User clicks the Approve Level2 link
+		And User retrive the first data in approve level2
+		And User select the level2 devision as approve
+		And User clicks on the level2 submit button
+		And User clicks the Approve Level3 link
+		And User retrive the first data in approve level3
+		And User select the level3 devision as approve
+		And User clicks on the level3 submit button 
+		And Click Maintenance
+		And User select the application for dropdown as decrease in main screen
+		And User enter the input as Existing Facility Ref in main screen
+		And Click on additional Details
+		And Enter Total value on additional Details
+		And Change Total value and down payment
     
     
     
     
     
-    
+  @749113
+  Scenario: TSR - NIZ180070
+  Given navigate to FMS application2 and login with valid credentials
+  And Click Wifak Application first
+  And Click Wifak Application Second
+  And Click Grading under Wifak Application
+  And Click Maintenance under Grading
+  
+  
+  @749102
+   Scenario: TSR - AIBBI180296
+   Given navigate to MTS application and login with valid credentials
+   And Click Parameters in MTS
+   And Click Batch under parameters
+   And Click Maintenance underBatch 
+   And Enter additionalReference
+   And Enter briefName in main information
+   And Enter Long name in main information
+   And Select batchPeriodicity in main information
+   And Check head office in batch details 
+   And Click FC limit in Facility Management
+   And Click save button after adding details in mainteance
+   And Click Approve under Batch
+   And Select the record from Approve
+   And Approve the record on approve screen
+   And Select Process under menu
+   And Select batch Process under process
+   And Select the approved record under process
+   And Select record under Branches status
+   And Run the record
+   Then Check the Execution Status
+   
+   @749155
+   Scenario: SUPT180347 - Users are able to choose Decision and Send Back level simultaneously
+   Given navigate to FMS application2 and login with valid credentials
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
     

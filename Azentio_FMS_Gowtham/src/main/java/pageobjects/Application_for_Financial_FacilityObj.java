@@ -854,11 +854,77 @@ public class Application_for_Financial_FacilityObj {
 	}
 	
 	
-	//@583228
+	//@636898
+	@FindBy(xpath = "//input[@id='lookuptxt_applicationFacilityExistingFacilityRef_WIFT001MT']")
+	private WebElement main_existing_facility_ref;
+	public WebElement mainExistingFacilityRef() {
+		return main_existing_facility_ref;
+	}
+	
+	@FindBy(xpath = "//input[@id='applicationFacilityfinancedamount_WIFT001MT']")
+	private WebElement additional_tab_finance_amount;
+	public WebElement additionalTabFinanceAmount() {
+		return additional_tab_finance_amount;
+	}
+	
+	@FindBy(xpath = "//input[@id='applicationFacilitytotalvalue_WIFT001MT']")
+    private WebElement main_additional_tab_total_value;
+    public WebElement mainAdditionalTabTotalValue() {
+        return main_additional_tab_total_value;
+    }
+	
+	@FindBy(xpath = "//td[@id='td_ApplicationFacilityLimitDetailsGrid_WIFT001MT_1_fmsAppLimitDetVO.FACILITY_VALUE']")
+	private WebElement limit_details_product_facility_value;
+	public WebElement limitDetailsProductFacilityValue() {
+		return limit_details_product_facility_value;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_ApplicationFacilityLimitDetailsGrid_WIFT001MT_1_fmsAppLimitDetVO.CV_VALUE']")
+	private WebElement limit_details_product_CV_value;
+	public WebElement limitDetailsProductCVValue() {
+		return limit_details_product_CV_value;
+	}
+	
+	@FindBy(xpath = "//button[@id='limitDetails_edit_btn_WIFT001MT']")
+	private WebElement limit_details_product_edit_btn;
+	public WebElement limitDetailsProductEditBtn() {
+		return limit_details_product_edit_btn;
+	}
 	
 	
+	@FindBy(xpath = "//input[@id='applicationFacilitytotalvalue_WIFT001MT']")
+	private WebElement TotalValue_in_additionalDetails;
+	public WebElement TotalValue_in_additionalDetails() {
+		return TotalValue_in_additionalDetails;
+	}
+	
+
+	@FindBy(xpath = "//input[@id='applicationFacilitydownpaymentperc_WIFT001MT']")
+	private WebElement DownPayment_precent;
+	public WebElement DownPayment_precent() {
+		return DownPayment_precent;
+	}
 	
 	
+	@FindBy(xpath = "//button[@id='applicationfacility_save_as_draft_btn_WIFT001MT']")
+	private WebElement Click_SaveButton_AfterEdit_downPayment;
+	public WebElement Click_SaveButton_AfterEdit_downPayment() {
+		return Click_SaveButton_AfterEdit_downPayment;
+	}
+	
+	
+	@FindBy(xpath = "//*[@id='applicationFacilitydownpaymentperc_WIFT001MT']")
+	private WebElement Enter_downPayment;
+	public WebElement Enter_downPayment() {
+		return Enter_downPayment;
+	}
+	
+	
+	@FindBy(xpath = "//*[@id='applicationFacilitytotalvalue_WIFT001MT']")
+	private WebElement Enter_total_value_on_additionalDetails;
+	public WebElement Enter_total_value_on_additionalDetails() {
+		return Enter_total_value_on_additionalDetails;
+	}
 	
 	
 	

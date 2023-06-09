@@ -11,3 +11,9 @@ And logout from the application
 Scenario: To Test the login functionality of FMS sads application
 Given navigate to FMS sads application and login with valid credentials
 And logout from the application
+@LoginITRS
+Scenario: To Test the login functionality of ITRS application
+Given navigate to ITRS application and login with valid credentials
+@LoginMTS
+Scenario: To Test the login functionality of MTS application
+Given navigate to MTS application and login with valid credentials

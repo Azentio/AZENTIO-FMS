@@ -108,6 +108,20 @@ public String getCSMApplicationUrl() {
 		else
 			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
 	}
+	public String getITRS_ApplicationURL() {
+		String userType = properties.getProperty("ITRSapplicationUrl");
+		if (userType != null)
+			return userType;
+		else
+			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
+	}
+	public String getMTS_ApplicationURL() {
+		String userType = properties.getProperty("MTSapplicationUrl");
+		if (userType != null)
+			return userType;
+		else
+			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
+	}
 	public String getFMSParamApplicationUserType() {
 		String userType = properties.getProperty("FMS_ParamApplication_UserType");
 		if (userType != null)
@@ -131,6 +145,20 @@ public String getCSMApplicationUrl() {
 	}
 	public String getSADSApplicationUserType() {
 		String userType = properties.getProperty("SADS_Application");
+		if (userType != null)
+			return userType;
+		else
+			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
+	}
+	public String getITRSApplicationUserType() {
+		String userType = properties.getProperty("ITRS_Application_UserType");
+		if (userType != null)
+			return userType;
+		else
+			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
+	}
+	public String getMTSApplicationUserType() {
+		String userType = properties.getProperty("MTS_Application_UserType");
 		if (userType != null)
 			return userType;
 		else

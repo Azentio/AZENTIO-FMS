@@ -477,10 +477,9 @@ public class Request_for_financing_steps {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_okOn_Warrning_popup());
 		Request_for_financing_Obj.Click_okOn_Warrning_popup().click();
 
-		
 		for (int i = 0; i < 500; i++) {
 			try {
-				
+
 				Request_for_financing_Obj.Do_youWantCancel_Warnimg().click();
 				break;
 			} catch (Exception e) {
@@ -500,7 +499,6 @@ public class Request_for_financing_steps {
 				Request_for_financing_Obj.Click_maintence_under_WIFAK_APPLICATION());
 
 		Request_for_financing_Obj.Click_maintence_under_WIFAK_APPLICATION().click();
-
 
 	}
 
@@ -536,372 +534,517 @@ public class Request_for_financing_steps {
 
 		Assert.assertEquals(check, "Cancelled");
 	}
-	
-	
-	//@636958
-	 @And("^click the reason for submission search box$")
-	    public void click_the_reason_for_submission_search_box() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.reasonforsubmisson());
-	    	//Request_for_financing_Obj.SelectUsingVisibleText(Request_for_financing_Obj.reasonforsubmisson(), "New Request");
-	    	DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.Select_reason_for_submission(),
-					"New Request");
-	    }
-	 
-	 @And("^click the customer search box$")
-	    public void click_the_customer_search_box() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.customersearchbox());
-	    	Request_for_financing_Obj.customersearchbox().click();
-	    	Request_for_financing_Obj.customersearchbox().sendKeys("727");
-	    	Request_for_financing_Obj.customersearchbox().sendKeys(Keys.TAB);
-	        Thread.sleep(5000);
-	    }
 
+	// @636958
+	@And("^click the reason for submission search box$")
+	public void click_the_reason_for_submission_search_box() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.reasonforsubmisson());
+		// Request_for_financing_Obj.SelectUsingVisibleText(Request_for_financing_Obj.reasonforsubmisson(),
+		// "New Request");
+		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.Select_reason_for_submission(), "New Request");
+	}
 
+	@And("^click the customer search box$")
+	public void click_the_customer_search_box() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.customersearchbox());
+		Request_for_financing_Obj.customersearchbox().click();
+		Request_for_financing_Obj.customersearchbox().sendKeys("727");
+		Request_for_financing_Obj.customersearchbox().sendKeys(Keys.TAB);
+		Thread.sleep(5000);
+	}
 
-	    @And("^click the facility type details$")
-	    public void click_the_facility_type_details() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.facilitytypedetails());
-	    	Request_for_financing_Obj.facilitytypedetails().click();
-	        
-	    }
+	@And("^click the facility type details$")
+	public void click_the_facility_type_details() throws Throwable {
+		// waitHelper.waitForElementwithFluentwait(driver,
+		// Request_for_financing_Obj.facilitytypedetails());
 
-	    @And("^Enter the facility type code under facility type$")
-	    public void enter_the_facility_type_code_under_facility_type() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.facilitytypedetailssearchbox());
-	    	Request_for_financing_Obj.facilitytypedetailssearchbox().sendKeys("221");
-	    	Request_for_financing_Obj.facilitytypetouch().click();
-	        
-	    }
-
-
-
-	    @And("^Enter the total limit under global limit$")
-	    public void enter_the_total_limit_under_global_limit() throws Throwable {
-	    	
-		    	for(int i = 0; i <= 300; i++) {
-		    		try {
-		    			JavascriptHelper.scrollIntoView(Request_for_financing_Obj.totallimitsearchbox());
-					} catch (Exception e) {
-						if(i == 300) {
-							Assert.fail(e.getMessage());
-						}
-					}
-		    	}
-		    	Request_for_financing_Obj.totallimitsearchbox().sendKeys("10000");
-		    	Request_for_financing_Obj.facilitytypetouch().click();
-		    	
-		    }
-	    	
-	    	
-
-
-	    @And("^Click the Disbursement Sublimit under maintenance screen$")
-	    public void click_the_disbursement_sublimit_under_maintenance_screen() throws Throwable {
-	    	
-	    	for(int i = 0; i <= 300; i++) {
-	    		try {
-	    			JavascriptHelper.scrollIntoView(Request_for_financing_Obj.disbursementsublimit());
-				} catch (Exception e) {
-					if(i == 300) {
-						Assert.fail(e.getMessage());
-					}
-				}
-	    	}
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.disbursementsublimit());
-	    	Request_for_financing_Obj.disbursementsublimit().click();
-	    }
-
-	    @And("^Add the limits under Disbursement Sublimit$")
-	    public void add_the_limits_under_disbursement_sublimit() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.disbursementsublimitaddbutton());
-	    	Request_for_financing_Obj.disbursementsublimitaddbutton().click();
-	   
-	        
-	    }
-
-	    @And("^Add the product class values in product searchbox$")
-	    public void add_the_product_class_values_in_product_searchbox() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver,Request_for_financing_Obj.productclasssearchbox());
-	    	Request_for_financing_Obj.productclasssearchbox().sendKeys("1");
-	    	Request_for_financing_Obj.productclass().click();
-	        
-	    }
-
-	    @And("^Change the month in tenure$")
-	    public void change_the_month_in_tenure() throws Throwable {
-	    	for(int i = 0; i <= 300; i++) {
-	    		try {
-	    			JavascriptHelper.scrollIntoView(Request_for_financing_Obj.addbutton());
-	    		  	//waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.tenure());
-	    		  	clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.tenure());
-	    	    	Request_for_financing_Obj.tenure().sendKeys("12");
-	    			break;
-				} catch (Exception e) {
-					if(i == 300) {
-						Assert.fail(e.getMessage());
-					}
-				}
-				}
-
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.select_the_moths_in_tenure());
-		//Request_for_financing_Obj.select_the_moths_in_tenure().click();
-    	DropDownHelper.SelectUsingVisibleValue(Request_for_financing_Obj.select_the_moths_in_tenure(), "Months");
-	    }
-
-
-
-	    @And("^Add the Margin values in Margin$")
-	    public void add_the_margin_values_in_margin() throws Throwable {
-	    	for(int i = 0; i <= 300; i++) {
-	    		try {
-	    			//JavascriptHelper.scrollIntoView(Request_for_financing_Obj.marginsearchbox());
-	    			Request_for_financing_Obj.marginsearchbox().clear();
-	    	    	Request_for_financing_Obj.marginsearchbox().sendKeys("1",Keys.TAB);
-	    			break;
-				} catch (Exception e) {
-					if(i == 300) {
-						Assert.fail(e.getMessage());
-					}
-				}
-	    	}for (int i = 0; i <= 300; i++) {
-				if (!(Request_for_financing_Obj.marginsearchbox().getAttribute("prevvalue").isBlank())) {
-					break;
+		for (int i = 0; i <= 300; i++) {
+			try {
+				Request_for_financing_Obj.facilitytypedetails().click();
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
 				}
 			}
-	    	
-	    }
+		}
 
+	}
 
-	    
+	@And("^Enter the facility type code under facility type$")
+	public void enter_the_facility_type_code_under_facility_type() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.facilitytypedetailssearchbox());
+		Request_for_financing_Obj.facilitytypedetailssearchbox().sendKeys("221");
+		Request_for_financing_Obj.facilitytypetouch().click();
 
-	    @And("^Add all the Above limit values$")
-	    public void add_all_the_above_limit_values() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.addbutton());
-	    	Request_for_financing_Obj.addbutton().click();
-	    	
-	    	if(Request_for_financing_Obj.please_wait_server_loading().isDisplayed()) {
-	    		Request_for_financing_Obj.please_wait_server_loading().click();
-	    		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.addbutton());
-		    	Request_for_financing_Obj.addbutton().click();
-	    	}
-	        
-	    }
+	}
 
-	    @And("^Save all the values when limits are add$")
-	    public void save_all_the_values_when_limits_are_add() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.savebutton());
-	    	Request_for_financing_Obj.savebutton().click();
-	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Success_Popup());
-	    	Request_for_financing_Obj.Success_Popup().click();
-	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.savebutton());
-	    	Request_for_financing_Obj.savebutton().click();
-	    }
+	@And("^Enter the total limit under global limit$")
+	public void enter_the_total_limit_under_global_limit() throws Throwable {
 
-	    @And("^Confirm the popup menu when all the limits are saved$")
-	    public void confirm_the_popup_menu_when_all_the_limits_are_saved() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmsavepopupokbutton());
-	    	//waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_okOn_Warrning_popup());
-			Request_for_financing_Obj.confirmsavepopupokbutton().click();
-	       // requestID = Request_for_financing_Obj.confirmsavepopupokbutton()
-	        
-	    }
+		for (int i = 0; i <= 300; i++) {
+			try {
+				JavascriptHelper.scrollIntoView(Request_for_financing_Obj.totallimitsearchbox());
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		Request_for_financing_Obj.totallimitsearchbox().sendKeys("10000");
+		Request_for_financing_Obj.facilitytypetouch().click();
 
-	    @And("^Click the final save popup message$")
-	    public void click_the_final_ok_popup_message() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmsavesuccessfullypopup());
-	    	Request_for_financing_Obj.confirmsavesuccessfullypopup().click();
-	    	
-	    }
-	    @And("^Click Repayment plan button in maintance screen$")
-	    public void click_repayment_plan_button_in_maintance_screen() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_RepaymentPlan());
-	    	JavascriptHelper.scrollIntoView(Request_for_financing_Obj.Click_RepaymentPlan());
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_RepaymentPlan());
-	    	Request_for_financing_Obj.Click_RepaymentPlan().click();
-	    }
+	}
 
-	    @And("^Click Create Schedule button$")
-	    public void click_create_schedule_button() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_Create_Schedule_InRepaymentPlan());
-	    	Request_for_financing_Obj.Click_Create_Schedule_InRepaymentPlan().click();
-	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmsavepopupokbutton());
-	    	for(int i = 0; i <= 300; i++) {
-	    		try {
-	    			Request_for_financing_Obj.confirmsavepopupokbutton().click();
-	    			break;
-				} catch (Exception e) {
-					if(i == 300) {
-						Assert.fail(e.getMessage());
+	@And("^Click the Disbursement Sublimit under maintenance screen$")
+	public void click_the_disbursement_sublimit_under_maintenance_screen() throws Throwable {
+
+		for (int i = 0; i <= 300; i++) {
+			try {
+				JavascriptHelper.scrollIntoView(Request_for_financing_Obj.disbursementsublimit());
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.disbursementsublimit());
+		Request_for_financing_Obj.disbursementsublimit().click();
+	}
+
+	@And("^Add the limits under Disbursement Sublimit$")
+	public void add_the_limits_under_disbursement_sublimit() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.disbursementsublimitaddbutton());
+		Request_for_financing_Obj.disbursementsublimitaddbutton().click();
+
+	}
+
+	@And("^Add the product class values in product searchbox$")
+	public void add_the_product_class_values_in_product_searchbox() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.productclasssearchbox());
+		Request_for_financing_Obj.productclasssearchbox().sendKeys("1");
+		Request_for_financing_Obj.productclasssearchbox().sendKeys(Keys.TAB);
+		// Request_for_financing_Obj.productclass().click();
+		for (int i = 0; i < 200; i++) {
+			try {
+				if (!Request_for_financing_Obj.product_Class_Name_Validation().getAttribute("prevvalue").isBlank()
+						|| !Request_for_financing_Obj.product_Class_Name_Validation().getAttribute("prevvalue")
+								.isEmpty()) {
+					break;
+				}
+			} catch (Exception e) {
+
+			}
+		}
+
+	}
+
+	@And("^Change the month in tenure$")
+	public void change_the_month_in_tenure() throws Throwable {
+		JavascriptHelper.scrollIntoView(Request_for_financing_Obj.addbutton());
+		for (int i = 0; i < 200; i++) {
+			try {
+				clicksAndActionsHelper.moveToElement(Request_for_financing_Obj.tenure());
+				clicksAndActionsHelper.clickOnElement(Request_for_financing_Obj.tenure());
+				break;
+			} catch (Exception e) {
+				if (i == 199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+		for (int i = 0; i <= 300; i++) {
+			try {
+				Request_for_financing_Obj.tenure().clear();
+
+				for (int j = 0; j < 200; j++) {
+					try {
+						if (Request_for_financing_Obj.Click_okOn_lessvalue().isDisplayed()) {
+							Request_for_financing_Obj.Click_okOn_lessvalue().click();
+						}
+						break;
+					} catch (Exception e) {
 					}
 				}
-	    	}
-	    	
-	    	
+				Request_for_financing_Obj.tenure().sendKeys("12");
+				Request_for_financing_Obj.tenure().sendKeys(Keys.TAB);
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		for (int i = 0; i < 300; i++) {
+			try {
+				// waitHelper.waitForElementwithFluentwait(driver,
+				// Request_for_financing_Obj.select_the_moths_in_tenure());
+				DropDownHelper.SelectUsingVisibleValue(Request_for_financing_Obj.select_the_moths_in_tenure(),
+						"Months");
+				break;
+			} catch (Exception e) {
+				if (i == 299) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+	}
+
+	@And("^Add the Margin values in Margin$")
+	public void add_the_margin_values_in_margin() throws Throwable {
+		for (int i = 0; i <= 300; i++) {
+			try {
+				// JavascriptHelper.scrollIntoView(Request_for_financing_Obj.marginsearchbox());
+				Request_for_financing_Obj.marginsearchbox().clear();
+				Request_for_financing_Obj.marginsearchbox().sendKeys("1", Keys.TAB);
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+//	    	for (int i = 0; i <= 300; i++) {
+//				if (!(Request_for_financing_Obj.marginsearchbox().getAttribute("prevvalue").isBlank())) {
+//					break;
+//				}
+//			}
+	}
+
+	@And("^Add all the Above limit values$")
+	public void add_all_the_above_limit_values() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.addbutton());
+		Request_for_financing_Obj.addbutton().click();
+
+		for (int i = 0; i < 200; i++) {
+			try {
+				if (Request_for_financing_Obj.please_wait_server_loading().isDisplayed()) {
+					Request_for_financing_Obj.please_wait_server_loading().click();
+					waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.addbutton());
+					Request_for_financing_Obj.addbutton().click();
+					break;
+				}
+			} catch (Exception e) {
+
+			}
+		}
+//	    	if(Request_for_financing_Obj.please_wait_server_loading().isDisplayed()) {
+//	    		Request_for_financing_Obj.please_wait_server_loading().click();
+//	    		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.addbutton());
+//		    	Request_for_financing_Obj.addbutton().click();
+//	    	}
+		// waitHelper.waitForElementwithFluentwait(driver,
+		// Request_for_financing_Obj.confirmsavepopupokbutton());
+
+		for (int i = 0; i < 200; i++) {
+			try {
+				if (Request_for_financing_Obj.confirmsavepopupokbutton().isDisplayed()) {
+					Request_for_financing_Obj.confirmsavepopupokbutton().click();
+					break;
+				}
+			} catch (Exception e) {
+
+			}
+		}
+	}
+
+	@And("^Save all the values when limits are add$")
+	public void save_all_the_values_when_limits_are_add() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.savebutton());
+		Request_for_financing_Obj.savebutton().click();
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmsavepopupokbutton());
+		Request_for_financing_Obj.confirmsavepopupokbutton().click();
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Success_Popup());
+		Request_for_financing_Obj.Success_Popup().click();
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.savebutton());
+		Request_for_financing_Obj.savebutton().click();
+	}
+
+	@And("^Confirm the popup menu when all the limits are saved$")
+	public void confirm_the_popup_menu_when_all_the_limits_are_saved() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmsavepopupokbutton());
+		// waitHelper.waitForElementwithFluentwait(driver,
+		// Request_for_financing_Obj.Click_okOn_Warrning_popup());
+		Request_for_financing_Obj.confirmsavepopupokbutton().click();
+		// requestID = Request_for_financing_Obj.confirmsavepopupokbutton()
+
+	}
+
+	@And("^Click the final save popup message$")
+	public void click_the_final_ok_popup_message() throws Throwable {
+
+		for (int i = 0; i < 200; i++) {
+			try {
+				if (Request_for_financing_Obj.confirmsavepopupokbutton().isDisplayed()) {
+					Request_for_financing_Obj.confirmsavepopupokbutton().click();
+					break;
+				}
+			} catch (Exception e) {
+
+			}
+		}
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmsavesuccessfullypopup());
+		Request_for_financing_Obj.confirmsavesuccessfullypopup().click();
+
+	}
+
+	@And("^Click Repayment plan button in maintance screen$")
+	public void click_repayment_plan_button_in_maintance_screen() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_RepaymentPlan());
+		JavascriptHelper.scrollIntoView(Request_for_financing_Obj.Click_RepaymentPlan());
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_RepaymentPlan());
+		Request_for_financing_Obj.Click_RepaymentPlan().click();
+	}
+
+	@And("^Click Create Schedule button$")
+	public void click_create_schedule_button() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				Request_for_financing_Obj.Click_Create_Schedule_InRepaymentPlan());
+		Request_for_financing_Obj.Click_Create_Schedule_InRepaymentPlan().click();
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmsavepopupokbutton());
+		for (int i = 0; i <= 300; i++) {
+			try {
+				Request_for_financing_Obj.confirmsavepopupokbutton().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
 //	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmsavesuccessfullypopup());
 //	    	Request_for_financing_Obj.confirmsavesuccessfullypopup().click();
 //	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_saveButton_In_RepaymentPlan());
-	    	for(int i = 0; i <= 300; i++) {
-	    		try {
-	    			Request_for_financing_Obj.Click_saveButton_In_RepaymentPlan().click();
-	    			break;
-				} catch (Exception e) {
-					if(i == 300) {
-						Assert.fail(e.getMessage());
-					}
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_saveButton_In_RepaymentPlan());
+		for (int i = 0; i <= 300; i++) {
+			try {
+				Request_for_financing_Obj.Click_saveButton_In_RepaymentPlan().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
 				}
-	    	}
-	    	
-	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmsavepopupokbutton());
-	    	Request_for_financing_Obj.confirmsavepopupokbutton().click();
-	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmsavesuccessfullypopup());
-	    	Request_for_financing_Obj.confirmsavesuccessfullypopup().click();
-	    	
-	    	
-	    }
-	    @And("^Click the validate button when all the values are saved$")
-	    public void click_the_validate_button_when_all_the_values_are_saved() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.validatebutton());
-	    	Request_for_financing_Obj.validatebutton().click();
-	        
-	    }
+			}
+		}
 
-	    @And("^Confirm the validate popup menu$")
-	    public void confirm_the_validate_popup_menu() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmvalidatepopupokbutton());
-	    	Request_for_financing_Obj.confirmvalidatepopupokbutton().click();
-	        
-	        
-	    }
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmsavepopupokbutton());
+		Request_for_financing_Obj.confirmsavepopupokbutton().click();
 
-	    @And("^Click the final validate popup$")
-	    public void click_the_final_validate_popup() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.validatesuccessfullypopup());
-	    	
-	    	for(int i = 0; i <= 300; i++) {
-	    		try {
-	    			Request_for_financing_Obj.validatesuccessfullypopup().click();
-	    			break;
-				} catch (Exception e) {
-					if(i == 300) {
-						Assert.fail(e.getMessage());
-					}
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmsavesuccessfullypopup());
+		Request_for_financing_Obj.confirmsavesuccessfullypopup().click();
+
+	}
+
+	@And("^Click the validate button when all the values are saved$")
+	public void click_the_validate_button_when_all_the_values_are_saved() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.validatebutton());
+		Request_for_financing_Obj.validatebutton().click();
+
+	}
+
+	@And("^Confirm the validate popup menu$")
+	public void confirm_the_validate_popup_menu() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmvalidatepopupokbutton());
+		Request_for_financing_Obj.confirmvalidatepopupokbutton().click();
+
+	}
+
+	@And("^Click the final validate popup$")
+	public void click_the_final_validate_popup() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.validatesuccessfullypopup());
+
+		for (int i = 0; i <= 300; i++) {
+			try {
+				Request_for_financing_Obj.validatesuccessfullypopup().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
 				}
-	    	}
-	        
-	    }
-
-	    @And("^Click the Approve level1 screen under request for financing$")
-	    public void click_the_approve_level1_screen_under_request_for_financing() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.approvelevel1());
-	    	Request_for_financing_Obj.approvelevel1().click();
-	        
-	    }
-
-	    @And("^Select the record in Approve Screen1$")
-	    public void select_the_record_in_Approve_Screen1() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_clearsearch_inApproveLev_1());
-	    	Request_for_financing_Obj.Click_clearsearch_inApproveLev_1().click();
-	    	for(int i = 0; i <= 300; i++) {
-	    		try {
-	    			waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.doubleClick_and_select_record_inApproveLev_1());
-	    	    	clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.doubleClick_and_select_record_inApproveLev_1());
-	    			break;
-				} catch (Exception e) {
-					if(i == 300) {
-						Assert.fail(e.getMessage());
-					}
+			}
+		}
+		for (int i = 0; i < 200; i++) {
+			try {
+				if (Request_for_financing_Obj.SendAlert_pop().isDisplayed()) {
+					Request_for_financing_Obj.SendAlert_pop().click();
+					break;
 				}
-	    	}
-	 
-	    }
+			} catch (Exception e) {
 
-	    @And("^Reject the record in Approve level1$")
-	    public void reject_the_record_in_approve_level1() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_Customer_Grading_Recommendations_For_reject());
-	    	Request_for_financing_Obj.Click_Customer_Grading_Recommendations_For_reject().click();
-	    	
-	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.approve_buttton_inApproveLev_1());
-	    	JavascriptHelper.scrollIntoView(Request_for_financing_Obj.approve_buttton_inApproveLev_1());
-	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.select_decision_inApproveLev_1());
-	    	DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.select_decision_inApproveLev_1(),
-					"Reject");
-	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.approve_buttton_inApproveLev_1());
-	    	Request_for_financing_Obj.approve_buttton_inApproveLev_1().click();
-	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmvalidatepopupokbutton());
-	    	Request_for_financing_Obj.confirmvalidatepopupokbutton().click();
-	    }
-	    
-	    @And("^enter the reason for rejection$")
-	    public void enter_the_reason_for_rejection() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.click_addButton_On_reasonForRejection());
-	    	 Request_for_financing_Obj.click_addButton_On_reasonForRejection().click();
-	    	 
-		    waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.select_firstRow_in_RejectReason());
-		    Request_for_financing_Obj.select_firstRow_in_RejectReason().click();
-		    
-		    waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.select_reasonForRejection());
-		    DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.select_reasonForRejection(), "TEST");
-		    
-		    waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Type_detailsIn_reasonForRejection());
-		    Request_for_financing_Obj.Type_detailsIn_reasonForRejection().sendKeys("dc");
-	    	 
-		    waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.clickOk_reasonForRejection());
-		    Request_for_financing_Obj.clickOk_reasonForRejection().click();
-		    
-		    waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.validatesuccessfullypopup());
-	    	Request_for_financing_Obj.validatesuccessfullypopup().click();
-	    	 
-	  	    }
-	    
-	    @And("^Click Reopen Rejected Applications Under request for financing$")
-	    public void click_reopen_rejected_applications_under_request_for_financing() throws Throwable {
-	    	 waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_Reopen_Rejected_Applications_Under_request_for_financing());
-	    	 Request_for_financing_Obj.Click_Reopen_Rejected_Applications_Under_request_for_financing().click();
-	    }
+			}
+		}
+	}
 
-	    @And("^Click mainteance under Reopen Rejected Applications$")
-	    public void click_mainteance_under_reopen_rejected_applications() throws Throwable {
-	    	 waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_mainteance_under_Reopen_Rejected_Applications());
-	    	 Request_for_financing_Obj.Click_mainteance_under_Reopen_Rejected_Applications().click();
-	    }
+	@And("^Click the Approve level1 screen under request for financing$")
+	public void click_the_approve_level1_screen_under_request_for_financing() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.approvelevel1());
+		Request_for_financing_Obj.approvelevel1().click();
 
-	    @And("^Select the reopen record mainteance under Reopen Rejected Applications$")
-	    public void select_the_reopen_record_mainteance_under_reopen_rejected_applications() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_clearSearch_in_mainteance_under_Reopen_Rejected_Applications());
-	    	Request_for_financing_Obj.Click_clearSearch_in_mainteance_under_Reopen_Rejected_Applications().click();
-	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.DoubleClick_Select_firstRecord_Reopen_Rejected_Applications());
-	    	clicksAndActionsHelper.doubleClick( Request_for_financing_Obj.DoubleClick_Select_firstRecord_Reopen_Rejected_Applications());
+		for (int i = 0; i < 200; i++) {
+			try {
+				if (Request_for_financing_Obj.confirmsavepopupokbutton().isDisplayed()) {
+					Request_for_financing_Obj.confirmsavepopupokbutton().click();
+					break;
+				}
+			} catch (Exception e) {
 
-	    
-	    }
-	    
-	    @And("^Reopen the rejected record$")
-	    public void reopen_the_rejected_record() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_reopen_button());
-	    	JavascriptHelper.scrollIntoView(Request_for_financing_Obj.Click_reopen_button());
-	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_reopen_button());
-	    	Request_for_financing_Obj.Click_reopen_button().click();
-	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmvalidatepopupokbutton());
-	    	Request_for_financing_Obj.confirmvalidatepopupokbutton().click();
-	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Success_Popup());
-	    	Request_for_financing_Obj.Success_Popup().click();
-	    
-	    }
+			}
+		}
+
+	}
+
+	@And("^Select the record in Approve Screen1$")
+	public void select_the_record_in_Approve_Screen1() throws Throwable {
+		for (int i = 0; i <= 300; i++) {
+			try {
+				// waitHelper.waitForElementwithFluentwait(driver,
+				// Request_for_financing_Obj.Click_clearsearch_inApproveLev_1());
+				Request_for_financing_Obj.Click_clearsearch_inApproveLev_1().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+		for (int i = 0; i <= 300; i++) {
+			try {
+				// waitHelper.waitForElementwithFluentwait(driver,
+				// Request_for_financing_Obj.doubleClick_and_select_record_inApproveLev_1());
+				if (Request_for_financing_Obj.doubleClick_and_select_record_inApproveLev_1().isDisplayed()) {
+					clicksAndActionsHelper
+							.doubleClick(Request_for_financing_Obj.doubleClick_and_select_record_inApproveLev_1());
+					break;
+				}
+
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+	}
+
+	@And("^Reject the record in Approve level1$")
+	public void reject_the_record_in_approve_level1() throws Throwable {
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.approve_buttton_inApproveLev_1());
+		JavascriptHelper.scrollIntoView(Request_for_financing_Obj.approve_buttton_inApproveLev_1());
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.select_decision_inApproveLev_1());
+
+		for (int i = 0; i <= 300; i++) {
+			try {
+				DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.select_decision_inApproveLev_1(),
+						"Reject");
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.approve_buttton_inApproveLev_1());
+		Request_for_financing_Obj.approve_buttton_inApproveLev_1().click();
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmvalidatepopupokbutton());
+		Request_for_financing_Obj.confirmvalidatepopupokbutton().click();
+	}
+
+	@And("^enter the reason for rejection$")
+	public void enter_the_reason_for_rejection() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				Request_for_financing_Obj.click_addButton_On_reasonForRejection());
+		Request_for_financing_Obj.click_addButton_On_reasonForRejection().click();
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.select_firstRow_in_RejectReason());
+		Request_for_financing_Obj.select_firstRow_in_RejectReason().click();
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.select_reasonForRejection());
+		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.select_reasonForRejection(), "TEST");
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Type_detailsIn_reasonForRejection());
+		Request_for_financing_Obj.Type_detailsIn_reasonForRejection().sendKeys("dc");
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.clickOk_reasonForRejection());
+		Request_for_financing_Obj.clickOk_reasonForRejection().click();
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.validatesuccessfullypopup());
+		Request_for_financing_Obj.validatesuccessfullypopup().click();
+
+	}
+
+	@And("^Click Reopen Rejected Applications Under request for financing$")
+	public void click_reopen_rejected_applications_under_request_for_financing() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				Request_for_financing_Obj.Click_Reopen_Rejected_Applications_Under_request_for_financing());
+		Request_for_financing_Obj.Click_Reopen_Rejected_Applications_Under_request_for_financing().click();
+	}
+
+	@And("^Click mainteance under Reopen Rejected Applications$")
+	public void click_mainteance_under_reopen_rejected_applications() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				Request_for_financing_Obj.Click_mainteance_under_Reopen_Rejected_Applications());
+		for (int i = 0; i <= 300; i++) {
+			try {
+				Request_for_financing_Obj.Click_mainteance_under_Reopen_Rejected_Applications().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+	}
+
+	@And("^Select the reopen record mainteance under Reopen Rejected Applications$")
+	public void select_the_reopen_record_mainteance_under_reopen_rejected_applications() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				Request_for_financing_Obj.Click_clearSearch_in_mainteance_under_Reopen_Rejected_Applications());
+		Request_for_financing_Obj.Click_clearSearch_in_mainteance_under_Reopen_Rejected_Applications().click();
+
+		// waitHelper.waitForElementwithFluentwait(driver,
+		// Request_for_financing_Obj.DoubleClick_Select_firstRecord_Reopen_Rejected_Applications());
+
+		for (int i = 0; i <= 600; i++) {
+			try {
+				clicksAndActionsHelper.doubleClick(
+						Request_for_financing_Obj.DoubleClick_Select_firstRecord_Reopen_Rejected_Applications());
+				break;
+			} catch (Exception e) {
+				if (i == 599) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+	}
+
+	@And("^Reopen the rejected record$")
+	public void reopen_the_rejected_record() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_reopen_button());
+		JavascriptHelper.scrollIntoView(Request_for_financing_Obj.Click_reopen_button());
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_reopen_button());
+		Request_for_financing_Obj.Click_reopen_button().click();
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmvalidatepopupokbutton());
+		Request_for_financing_Obj.confirmvalidatepopupokbutton().click();
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Success_Popup());
+		Request_for_financing_Obj.Success_Popup().click();
+
+	}
 
 //	    @And("^Take the reopen record under mainteance$")
 //	    public void Take_the_reopen_record_under_mainteance() throws Throwable {
@@ -912,134 +1055,469 @@ public class Request_for_financing_steps {
 //	    	clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.DoubleClick_openRecord_in_mainteance());
 //	    	
 //	    }
-	    
-	    @And("^Click Approve rejection under Reopen Rejected Applications$")
-	    public void click_approve_rejection_under_reopen_rejected_applications() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_approve_reject_Reopen_Rejected_Applications());
-	    	Request_for_financing_Obj.Click_approve_reject_Reopen_Rejected_Applications().click();
-	    	
-	    	
-	    }
-	   
 
-	    @And("^Select the rejected record in  Reopen Rejected Applications$")
-	    public void select_the_rejected_record_in_reopen_rejected_applications() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_clear_search_in_approve_reject());
-	    	Request_for_financing_Obj.Click_clear_search_in_approve_reject().click();
-	    	
-	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_clear_search_in_approve_reject());
-	    	Request_for_financing_Obj.Click_clear_search_in_approve_reject().click();
-	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_clear_search_in_approve_reject());
-	    	clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.Click_clear_search_in_approve_reject());
-	    	
-	    }
-	    
-	    @And("^Approve the reopen request$")
-	    public void approve_the_reopen_request() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_approve_in_approve_reject());
-	    	JavascriptHelper.scrollIntoView(Request_for_financing_Obj.Click_approve_in_approve_reject());
-	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_approve_in_approve_reject());
-	    	Request_for_financing_Obj.Click_approve_in_approve_reject().click();
-	    	
-	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmsavepopupokbutton());
-	    	Request_for_financing_Obj.confirmvalidatepopupokbutton().click();
+	@And("^Click Approve rejection under Reopen Rejected Applications$")
+	public void click_approve_rejection_under_reopen_rejected_applications() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				Request_for_financing_Obj.Click_approve_reject_Reopen_Rejected_Applications());
+		Request_for_financing_Obj.Click_approve_reject_Reopen_Rejected_Applications().click();
 
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Success_Popup());
-	    	Request_for_financing_Obj.Success_Popup().click();
-	    }
+	}
 
-	    @And("^click mainteance under request for financing$")
-	    public void click_mainteance_under_request_for_financing() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_mainteance_under_request_for_financing());
-	    	Request_for_financing_Obj.Click_mainteance_under_request_for_financing().click();
+	@And("^Select the rejected record in  Reopen Rejected Applications$")
+	public void select_the_rejected_record_in_reopen_rejected_applications() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				Request_for_financing_Obj.Click_clear_search_in_approve_reject());
+		Request_for_financing_Obj.Click_clear_search_in_approve_reject().click();
 
-	    }
-	    
-	    @And("^select the record in the mainteance under request for financing$")
-	    public void select_the_record_in_the_mainteance_under_request_for_financing() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_searchIn_maintenance_under_request_for_financing());
-	    	Request_for_financing_Obj.Click_searchIn_maintenance_under_request_for_financing().click();
-	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_ClearsearchIn_maintenance_under_request_for_financing());
-	    	Request_for_financing_Obj.Click_ClearsearchIn_maintenance_under_request_for_financing().click();
+		waitHelper.waitForElementwithFluentwait(driver,
+				Request_for_financing_Obj.DoubleClick_Select_firstRecord_Reopen_Rejected_Applications());
+		for (int i = 0; i <= 300; i++) {
+			try {
+				clicksAndActionsHelper.doubleClick(
+						Request_for_financing_Obj.DoubleClick_Select_firstRecord_Reopen_Rejected_Applications());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
 
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.select_recordIn_maintenance_under_request_for_financing());
-	    	clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.select_recordIn_maintenance_under_request_for_financing());
+//	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_clear_search_in_approve_reject());
+//	    	Request_for_financing_Obj.Click_clear_search_in_approve_reject().click();
 
-	    }
-	    @And("^Select the exesting product class$")
-	    public void select_the_exesting_product_class() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.double_click_and_select_existing_productClass());
-	    	clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.double_click_and_select_existing_productClass());
-	    	
-	    	
-	    }
+	}
 
-	    @And("^change the months$")
-	    public void change_the_months() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.click_editbutton_in_exitstingproduct_Class());
-	    	JavascriptHelper.scrollIntoView(Request_for_financing_Obj.click_editbutton_in_exitstingproduct_Class());
-	    	
-	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.tenure());
-	    	clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.tenure());
-	    	Request_for_financing_Obj.tenure().sendKeys("5");
-	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.click_editbutton_in_exitstingproduct_Class());
-	    	Request_for_financing_Obj.click_editbutton_in_exitstingproduct_Class().click();
-	    	
-	    	
-	    	if(Request_for_financing_Obj.please_wait_server_loading().isDisplayed()) {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.please_wait_server_loading());
-	    	Request_for_financing_Obj.please_wait_server_loading().click();
-	    	}
-	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.click_editbutton_in_exitstingproduct_Class());
-	    	Request_for_financing_Obj.click_editbutton_in_exitstingproduct_Class().click();
-	    }
-	    
-	    
-	    @Then("^After Changes save it$")
-	    public void after_changes_save_it() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_save_afterEdit_productClass());
-	    	Request_for_financing_Obj.Click_save_afterEdit_productClass().click();
+	@And("^Approve the reopen request$")
+	public void approve_the_reopen_request() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_approve_in_approve_reject());
+		JavascriptHelper.scrollIntoView(Request_for_financing_Obj.Click_approve_in_approve_reject());
 
-	    }
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_approve_in_approve_reject());
+		Request_for_financing_Obj.Click_approve_in_approve_reject().click();
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmsavepopupokbutton());
+		Request_for_financing_Obj.confirmvalidatepopupokbutton().click();
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Success_Popup());
+		Request_for_financing_Obj.Success_Popup().click();
+	}
+
+	@And("^click mainteance under request for financing$")
+	public void click_mainteance_under_request_for_financing() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				Request_for_financing_Obj.Click_mainteance_under_request_for_financing());
+		Request_for_financing_Obj.Click_mainteance_under_request_for_financing().click();
+
+	}
+
+	@And("^select the record in the mainteance under request for financing$")
+	public void select_the_record_in_the_mainteance_under_request_for_financing() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				Request_for_financing_Obj.Click_searchIn_maintenance_under_request_for_financing());
+		Request_for_financing_Obj.Click_searchIn_maintenance_under_request_for_financing().click();
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				Request_for_financing_Obj.Click_ClearsearchIn_maintenance_under_request_for_financing());
+		Request_for_financing_Obj.Click_ClearsearchIn_maintenance_under_request_for_financing().click();
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				Request_for_financing_Obj.select_recordIn_maintenance_under_request_for_financing());
+		clicksAndActionsHelper
+				.doubleClick(Request_for_financing_Obj.select_recordIn_maintenance_under_request_for_financing());
+
+	}
+
+	@And("^Select the exesting product class$")
+	public void select_the_exesting_product_class() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				Request_for_financing_Obj.double_click_and_select_existing_productClass());
+		clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.double_click_and_select_existing_productClass());
+
+	}
+
+	@And("^change the months$")
+	public void change_the_months() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				Request_for_financing_Obj.click_editbutton_in_exitstingproduct_Class());
+		JavascriptHelper.scrollIntoView(Request_for_financing_Obj.click_editbutton_in_exitstingproduct_Class());
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.tenure());
+		clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.tenure());
+		Request_for_financing_Obj.tenure().sendKeys("5");
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				Request_for_financing_Obj.click_editbutton_in_exitstingproduct_Class());
+		Request_for_financing_Obj.click_editbutton_in_exitstingproduct_Class().click();
+
+		if (Request_for_financing_Obj.please_wait_server_loading().isDisplayed()) {
+			waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.please_wait_server_loading());
+			Request_for_financing_Obj.please_wait_server_loading().click();
+		}
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				Request_for_financing_Obj.click_editbutton_in_exitstingproduct_Class());
+		Request_for_financing_Obj.click_editbutton_in_exitstingproduct_Class().click();
+	}
+
+	@Then("^After Changes save it$")
+	public void after_changes_save_it() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_save_afterEdit_productClass());
+		Request_for_financing_Obj.Click_save_afterEdit_productClass().click();
+
+	}
+
+	////////// @123
+
+	@And("^Search the value in approve1$")
+	public void search_the_value_in_approve1() throws Throwable {
+//	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Search_value_on_approve1());
+//	    	Request_for_financing_Obj.Search_value_on_approve1().click();
+//	    	Request_for_financing_Obj.Search_value_on_approve1().sendKeys("3988");
+//	    	Request_for_financing_Obj.Search_value_on_approve1().sendKeys(Keys.ENTER);
+
+		for (int i = 0; i <= 300; i++) {
+			try {
+				// waitHelper.waitForElementwithFluentwait(driver,
+				// Request_for_financing_Obj.Click_clearsearch_inApproveLev_1());
+				Request_for_financing_Obj.Click_clearsearch_inApproveLev_1().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+		for (int i = 0; i <= 300; i++) {
+			try {
+				// waitHelper.waitForElementwithFluentwait(driver,
+				// Request_for_financing_Obj.doubleClick_and_select_record_inApproveLev_1());
+				if (Request_for_financing_Obj.doubleClick_and_select_record_inApproveLev_1().isDisplayed()) {
+					clicksAndActionsHelper
+							.doubleClick(Request_for_financing_Obj.doubleClick_and_select_record_inApproveLev_1());
+					break;
+				}
+
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+	}
+
+	@And("^Select the record in approve1$")
+	public void select_the_record_in_approve1() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Select_value_on_approve1());
+		clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.Select_value_on_approve1());
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				Request_for_financing_Obj.Click_Customer_Grading_Recommendations_For_reject());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				Request_for_financing_Obj.Click_Customer_Grading_Recommendations_For_reject().click();
+				break;
+			} catch (Exception e) {
+				if (i == 499) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+	}
+
+	// @749113
+	@And("^Click Grading under Wifak Application$")
+	public void click_grading_under_wifak_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				Request_for_financing_Obj.Click_Grading_under_Wifak_Application());
+		Request_for_financing_Obj.Click_Grading_under_Wifak_Application().click();
+
+	}
+
+	@And("^Click Maintenance under Grading$")
+	public void click_maintenance_under_grading() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_Maintenance_under_Grading());
+		Request_for_financing_Obj.Click_Maintenance_under_Grading().click();
+
+	}
+
+	// @749102
+	@Given("Click Parameters in MTS")
+	public void click_parameters_in_mts() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_Parameters_in_MTS());
+		Request_for_financing_Obj.Click_Parameters_in_MTS().click();
+	}
+
+	@Given("Click Batch under parameters")
+	public void click_batch_under_parameters() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_Batch_under_parameters());
+		Request_for_financing_Obj.Click_Batch_under_parameters().click();
+
+	}
+
+	@Given("Click Maintenance underBatch")
+	public void click_maintenance_under_batch() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_Maintenance_underBatch());
+		Request_for_financing_Obj.Click_Maintenance_underBatch().click();
+	}
+
+	@Given("Enter additionalReference")
+	public void enter_additional_reference() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Enter_additionalReference());
+		Request_for_financing_Obj.Enter_additionalReference().sendKeys("abcdefghi");
+
+	}
+
+	@Given("Enter briefName in main information")
+	public void enter_brief_name_in_main_information() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Enter_briefName());
+		Request_for_financing_Obj.Enter_briefName().sendKeys("abcdefghi");
+
+	}
+
+	@Given("Enter Long name in main information")
+	public void enter_long_name_in_main_information() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Enter_LongName());
+		Request_for_financing_Obj.Enter_LongName().sendKeys("Limiterdrrgm abcdefghi");
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Enter_Menu_Reference());
+		Request_for_financing_Obj.Enter_Menu_Reference().sendKeys("abcdefghi");
+
+	}
+
+	@Given("Select batchPeriodicity in main information")
+	public void select_batch_periodicity_in_main_information() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Select_batchPeriodicity());
+		for (int i = 0; i <= 300; i++) {
+			try {
+				DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.Select_batchPeriodicity(), "Daily");
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		Request_for_financing_Obj.Select_batchPeriodicity().sendKeys(Keys.ENTER);
+
+	}
+
+	@Given("Check head office in batch details")
+	public void check_head_office_in_batch_details() {
+		// waitHelper.waitForElementwithFluentwait(driver,
+		// Request_for_financing_Obj.Click_dropdown_in_oracalBAJ());
+
+		for (int i = 0; i <= 500; i++) {
+			try {
+				Request_for_financing_Obj.Click_dropdown_in_oracalBAJ().click();
+				break;
+			} catch (Exception e) {
+				if (i == 499) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.cHECK_HEADOFFICE());
+
+		for (int i = 0; i <= 500; i++) {
+			try {
+				Request_for_financing_Obj.cHECK_HEADOFFICE().click();
+				break;
+			} catch (Exception e) {
+				if (i == 499) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+	}
+
+	@Given("Click FC limit in Facility Management")
+	public void click_fc_limit_in_facility_management() {
+		// waitHelper.waitForElementwithFluentwait(driver,
+		// Request_for_financing_Obj.Scroll_into_others());
+
+		for (int i = 0; i <= 300; i++) {
+			try {
+				JavascriptHelper.scrollIntoView(Request_for_financing_Obj.Scroll_into_others());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		waitHelper.waitForElementwithFluentwait(driver,
+				Request_for_financing_Obj.Click_dropDown_in_Facility_Management());
+		Request_for_financing_Obj.Click_dropDown_in_Facility_Management().click();
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_101_in_Facility_Management());
+		Request_for_financing_Obj.Click_101_in_Facility_Management().click();
+
+	}
+
+	@Given("Click save button after adding details in mainteance")
+	public void click_save_button_after_adding_details_in_mainteance() {
+		waitHelper.waitForElementwithFluentwait(driver,
+				Request_for_financing_Obj.Click_save_button_in_mainteance_MTS());
+		Request_for_financing_Obj.Click_save_button_in_mainteance_MTS().click();
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_okOn_save_pop());
+		Request_for_financing_Obj.Click_okOn_save_pop().click();
+
+	}
+
+	@Given("Click Approve under Batch")
+	public void click_approve_under_batch() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_Approve_under_Batch());
+		Request_for_financing_Obj.Click_Approve_under_Batch().click();
+
+	}
+
+	@Given("Select the record from Approve")
+	public void select_the_record_from_approve() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.select_the_record_from_Approve());
+		clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.select_the_record_from_Approve());
+
+	}
+
+	@Given("Approve the record on approve screen")
+	public void approve_the_record_on_approve_screen() {
+		waitHelper.waitForElementwithFluentwait(driver,
+				Request_for_financing_Obj.Click_approveButton_in_approve_under_batch());
+		JavascriptHelper.scrollIntoView(Request_for_financing_Obj.Click_Approve_under_Batch());
+		Request_for_financing_Obj.Click_approveButton_in_approve_under_batch().click();
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmsavepopupokbutton());
+		Request_for_financing_Obj.confirmsavepopupokbutton().click();
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_okOn_save_pop());
+		Request_for_financing_Obj.Click_okOn_save_pop().click();
+
+	}
+
+	@Given("Select Process under menu")
+	public void select_process_under_menu() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_ProcessUnder_menu());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				Request_for_financing_Obj.Click_ProcessUnder_menu().click();
+				break;
+			} catch (Exception e) {
+				if (i == 499) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+	}
+
+	@Given("Select batch Process under process")
+	public void select_batch_process_under_process() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_batch_process_under_process());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				Request_for_financing_Obj.Click_batch_process_under_process().click();
+				break;
+			} catch (Exception e) {
+				if (i == 499) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+	}
+
+	@Given("Select the approved record under process")
+	public void select_the_approved_record_under_process() {
+		// waitHelper.waitForElementwithFluentwait(driver,
+		// Request_for_financing_Obj.Select_approved_record_under_process());
+		for (int i = 0; i <= 700; i++) {
+			try {
+				JavascriptHelper.scrollIntoView(Request_for_financing_Obj.Select_approved_record_under_process());
+				Request_for_financing_Obj.Select_approved_record_under_process().click();
+				break;
+			} catch (Exception e) {
+				if (i == 699) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				Request_for_financing_Obj.Select_batchRun_under_ApprovedRecord());
+		Request_for_financing_Obj.Select_batchRun_under_ApprovedRecord().click();
+
+	}
+
+	@Given("Select record under Branches status")
+	public void select_record_under_branches_status() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.select_record_underBranches_status());
+
+		for (int i = 0; i <= 700; i++) {
+			try {
+				Request_for_financing_Obj.select_record_underBranches_status().click();
+				break;
+			} catch (Exception e) {
+				if (i == 699) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		for (int i = 0; i <= 700; i++) {
+			try {
+				if(Request_for_financing_Obj.select_record_underBranches_status().isDisplayed()) {
+					Request_for_financing_Obj.select_record_underBranches_status().click();
+				}
+				
+				break;
+			} catch (Exception e) {
+				if (i == 699) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+	}
+
+	@Given("Run the record")
+	public void run_the_record() {
+		// waitHelper.waitForElementwithFluentwait(driver,
+		// Request_for_financing_Obj.click_runButton_after_select_record_underBranches_status());
+
+		for (int i = 0; i <= 700; i++) {
+			try {
+				clicksAndActionsHelper.moveToElement(
+						Request_for_financing_Obj.click_runButton_after_select_record_underBranches_status());
+				Request_for_financing_Obj.click_runButton_after_select_record_underBranches_status().click();
+				break;
+			} catch (Exception e) {
+				if (i == 700) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+	}
+
+	@Then("Check the Execution Status")
+	public void check_the_execution_status() {
+		String check = "";
+		for (int i = 0; i <= 1000; i++) {
+			check = Request_for_financing_Obj.CheckThe_Execution_Status().getAttribute("value");
+			if (check.equalsIgnoreCase("Success")) {
+				break;
+			}
+		}
+		Assert.assertEquals(check, "Success");
+
+	}
+
+	// @749155
 
 }

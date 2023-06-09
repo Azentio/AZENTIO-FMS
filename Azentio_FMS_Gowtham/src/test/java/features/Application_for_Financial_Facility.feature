@@ -175,51 +175,32 @@ Feature: Linking Fixed Asset to Application in FMS
 		And User select the level3 devision as approve
 		And User clicks on the level3 submit button
 
+@749102
+Scenario: TSR - AIBBI180296
 		
 		
 		
-		@583228
-		Scenario: Exception error in Production
-		Given navigate to FMS application2 and login with valid credentials
-		And Click Wifak Application first
-    And Click Wifak Application Second
-    And User update test data for test case no 949677
-    And Click Application for financial facilities
-    And Click Maintenance
-    And Click and Select Application for
-    And Search CIF No
-    And Enter codeOn Facility Type
-    And Enter Code In Country of Financing
-    And Enter line Code On Facility Rating
-    And Click on additional Details
-    And Enter the Total Value
-    And Click Offer Expiration SelectDate
-    And Select limit Details
-    And Click Add button on limit Detail
-    And Enter ValueOn Product Class
-    And AfterEnter ValueOn Product Class Search
-    And Click Add button AfterEnter Value On Product Class
-    And Click save button on limit details
-    And User move to the Document details tab
-    And User enter the Solicitor Name
-    And User enter the Estimator Name
-    And User clicks the save button
-    And User clicks the validate button
-    And User clicks the Approve Level1 link
-		And User retrive the first data in approve level1
-		And User select the level1 devision as approve
-		And User clicks on the level1 submit button
-		And User clicks the Approve Level2 link
-		And User retrive the first data in approve level2
-		And User select the level2 devision as approve
-		And User clicks on the level2 submit button
-		And User clicks the Approve Level3 link
-		And User retrive the first data in approve level3
-		And User select the level3 devision as approve
-		And User clicks on the level3 submit button
 		
 	
-		
-		
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 		
 		

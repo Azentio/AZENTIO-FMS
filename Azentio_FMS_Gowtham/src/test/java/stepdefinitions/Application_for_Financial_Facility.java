@@ -41,7 +41,7 @@ public class Application_for_Financial_Facility {
 	@Given("^navigate to FMS application2 and login with valid credentials$")
 	public void navigate_to_fms_application2_and_login_with_valid_credentials() throws Throwable {
 		driver.get(configFileReader.getFMSApplicationUrl());
-		login.loginIntoFmsApplication2(configFileReader.getFMSApplicationUserType());
+		login.loginIntoFmsApplication(configFileReader.getFMSApplicationUserType());
 	}
 
 	@And("^Click Wifak Application first$")
@@ -1213,15 +1213,139 @@ public class Application_for_Financial_Facility {
 	    }
 	
 	
-	  //@583228
+	  //@636898
 	
-    
-    
-    
-    
-    
-    
+	    @And("^User select the application for dropdown as decrease in main screen$")
+	    public void user_select_the_application_for_dropdown_as_decrease_in_main_screen() throws Throwable {
+//	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.mainApplicationForDropdown());
+//			DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.mainApplicationForDropdown(), testData.get("Application For"));
+	    }
 
+	    @And("^User enter the input as Existing Facility Ref in main screen$")
+	    public void user_enter_the_input_as_existing_facility_ref_in_main_screen() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.mainExistingFacilityRef());
+//	    	applicationFinancialObj.mainExistingFacilityRef().sendKeys(testData.get("Facility Ref"));
+	    	applicationFinancialObj.mainExistingFacilityRef().sendKeys("1390");
+	    	applicationFinancialObj.mainExistingFacilityRef().sendKeys(Keys.TAB);
+	    	
+	    	for(int i = 0; i <= 300; i++) {
+	    		try {
+					if(!(applicationFinancialObj.mainExistingFacilityRef().getAttribute("readonly").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+	    	}    	
+
+	    }
+	    
+	    @And("^User enter the total value under additional info tab$")
+	    public void user_enter_the_total_value_under_additional_info_tab() throws Throwable {    	
+	    	// First We get the Finance amount without total amount
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.additionalTabFinanceAmount());
+	    	String beforeFinanceAmount = applicationFinancialObj.additionalTabFinanceAmount().getAttribute("prevvalue");
+//	    	System.out.println("Before Finance Amount: "+ beforeFinanceAmount);
+	    	fmsTransactionsExcelData.updateTestData("DS01_582426", "Finance Amount", beforeFinanceAmount);
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.mainAdditionalTabTotalValue());
+			applicationFinancialObj.mainAdditionalTabTotalValue().sendKeys(testData.get("Total value"));
+			applicationFinancialObj.mainAdditionalTabTotalValue().sendKeys(Keys.TAB);
+			Thread.sleep(3000);
+	    }
+
+	    @And("^User validate the finance amount should be decresed based on total value$")
+	    public void user_validate_the_finance_amount_should_be_decresed_based_on_total_value() throws Throwable {
+	    	testData = fmsTransactionsExcelData.getTestdata("DS01_582426");
+	    	String financeAmount = testData.get("Finance Amount");
+	    	String totalValue = testData.get("Total value");
+	    	
+	    	String afterFinanceAmount = applicationFinancialObj.additionalTabFinanceAmount().getAttribute("prevvalue");
+	    	String[] splitFinaceAmount  = afterFinanceAmount.split("[.]");
+	    	String finalFinaceAmount = splitFinaceAmount[0].replace(",", "");
+//	    	System.out.println("Finance Amount: "+finalFinaceAmount);
+//	    	System.out.println("After Finance Amount: "+afterFinanceAmount);
+	    	
+	    	int cvValue = Integer.parseInt(financeAmount)-Integer.parseInt(totalValue);
+	    	String cvValueText = String.valueOf(cvValue);
+	    	fmsTransactionsExcelData.updateTestData("DS01_582426", "CV Value", cvValueText);
+	    	
+	    	Assert.assertEquals(cvValueText, finalFinaceAmount);
+	    	
+	    }
+
+	    @And("^User validate the Facility value and CV value should be changed same as decreased finance amount under limit details$")
+	    public void user_validate_the_facility_value_and_cv_value_should_be_changed_same_as_decreased_finance_amount_under_limit_details() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.limitDetailsProductFacilityValue());
+	    	String facilityValue = applicationFinancialObj.limitDetailsProductFacilityValue().getAttribute("title");
+	    	String[] splitFacilityValue  = facilityValue.split("[.]");
+	    	String finalFacilityValue = splitFacilityValue[0].replace(",", "");
+	    	
+	    	testData = fmsTransactionsExcelData.getTestdata("DS01_582426");
+	    	Assert.assertEquals(testData.get("CV Value"), finalFacilityValue);
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.limitDetailsProductCVValue());
+	    	String CVValue = applicationFinancialObj.limitDetailsProductCVValue().getAttribute("title");
+	    	String[] splitCVValue  = CVValue.split("[.]");
+	    	String finalCVValue = splitCVValue[0].replace(",", "");
+	    	
+	    	Assert.assertEquals(testData.get("CV Value"), finalCVValue);
+	    	
+	    }
+
+	    @And("^User double click on the product class under limit details$")
+	    public void user_double_click_on_the_product_class_under_limit_details() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.limitDetailsProductFacilityValue());
+	    	clicksAndActionsHelper.doubleClick(applicationFinancialObj.limitDetailsProductFacilityValue());
+	    }
+	    
+	    @And("^User click the clean flag under product calss in limit details tab$")
+	    public void user_click_the_clean_flag_under_product_calss_in_limit_details_tab() throws Throwable {
+	    	// check the clean flag
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.limitDetailsNewRecordCleanFlag());
+	        WebElement cleanFlag = applicationFinancialObj.limitDetailsNewRecordCleanFlag();
+	        if(!(cleanFlag.isSelected())) {
+	        	cleanFlag.click();
+	    	}
+	    }
+	    
+	    @And("^User click the edit button under product class in limit details tab$")
+	    public void user_click_the_edit_button_under_product_class_in_limit_details_tab() throws Throwable {
+	    	
+	    	for (int i = 0; i <= 300; i++) {
+	        	try {
+	        		JavascriptHelper.scrollIntoView(applicationFinancialObj.limitDetailsProductEditBtn());
+	    				break;
+	    			} catch (Exception e) {
+	    				if (i == 300) {
+	    					Assert.fail(e.getMessage());
+	    				}
+	    			}
+	    	}
+	        waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.limitDetailsProductEditBtn());
+	        applicationFinancialObj.limitDetailsProductEditBtn().click();
+	    }
+	    
+	   @And("^Enter Total value on additional Details$")
+	   public void Enter_Total_value_on_additional_Details() throws Throwable{
+	        waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Enter_total_value_on_additionalDetails());
+	        applicationFinancialObj.Enter_total_value_on_additionalDetails().sendKeys("10000");
+	        applicationFinancialObj.Enter_total_value_on_additionalDetails().sendKeys(Keys.TAB);
+	        
+
+	   }
+	   
+	   
+		@And("^Change Total value and down payment$")
+	    public void Change_Total_value_and_down_payment() throws Throwable {
+	        waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Enter_downPayment());
+	        applicationFinancialObj.Enter_downPayment().sendKeys("1");
+	        applicationFinancialObj.Enter_downPayment().sendKeys(Keys.TAB);
+	        applicationFinancialObj.Click_SaveButton_AfterEdit_downPayment().click();
+	        
+	    }
+		
+    
 }
 	
 	
