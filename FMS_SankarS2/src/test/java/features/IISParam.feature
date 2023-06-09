@@ -1,10 +1,10 @@
 Feature: To test the IIS Param Application
 
-@665923_IISParam
+@AT_RF_014_IISParam
 Scenario: IIS Param Application
 
 Given navigate to IIS param application and login with valid credentials
-And get the test data for test case 665923_IISParam
+And get the test data for test case AT_RF_014_IISParam
 And User clicks on the parameter feature in IIS Param application
 And User clicks on the product class module uder parameter feature
 And User clicks on the maintanance screen under product class module
@@ -17,11 +17,11 @@ And User enter the value in number of payments under repayment plan tab
 And User select the dropdown in number of payments under repayment plan tab
 Then User clicks save the button in maintanance under product class
 
-@665923_FMSCore
+@AT_RF_014_FMSCore
 Scenario: IIS Param Application
 
 Given navigate to FMS application and login with valid credentials
-And get the test data for test case 665923_FMSCore
+And get the test data for test case AT_RF_014_FMSCore
 And User clicks on the WIFAK_Application first link
 And User clicks on the WIFAK_Application second link
 And User clicks on the Application for financial facility link

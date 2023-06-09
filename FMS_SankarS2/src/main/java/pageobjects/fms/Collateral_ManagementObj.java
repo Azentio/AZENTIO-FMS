@@ -13,7 +13,7 @@ public class Collateral_ManagementObj {
 		PageFactory.initElements(driver, this);
 	}
 	
-	// 680390
+//	@AT_RF_035
 	@FindBy(xpath = "//label[@id='language_key']")
 	private WebElement FMS_core_language_btn;
 	public WebElement FMSCoreLanguageBtn() {

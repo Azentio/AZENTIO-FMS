@@ -1,6 +1,6 @@
 Feature: To check the FMS param facility custom fields feature
 
-@666161
+@AT_RF_024
 Scenario: TSR - FIBSI180217
 
 Given navigate to FMS param application and login with valid credentials

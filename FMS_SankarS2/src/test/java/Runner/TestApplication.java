@@ -10,13 +10,12 @@ import utilities.ExtentTestManager;
 
 @CucumberOptions(features = {"src/test/java/features/WIFAK_Application.feature"},
                 glue = "stepdefinitions",
-//                dryRun = true,
                 monochrome=true, //to make steps in color
                 plugin = { "pretty",
                            "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                            "rerun:ReRunScenarios/FailedReRun.txt"}
-//               	,dryRun = true //to check compilation errors  
-				, tags= "@AT_RF_140"
+//               	,dryRun = true //to check compilation errors
+				, tags= "@AT_RF_102"
 //               , tags= "@582480_FMSParam or @582480_FMSCore"
 
 )

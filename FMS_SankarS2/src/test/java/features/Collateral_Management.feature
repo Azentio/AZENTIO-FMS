@@ -1,6 +1,6 @@
 Feature: To check the Collateral Management module features
 
-@680390
+@AT_RF_035
 Scenario: TSR - SBYB160013
 
 Given navigate to FMS application and login with valid credentials

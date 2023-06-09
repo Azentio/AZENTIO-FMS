@@ -1,6 +1,6 @@
 Feature: To check the FMS Param facility category features
 
-@299883
+@AT_AFF_056
 Scenario: DB130085 - CIF type can not be changed in FMS category
 
 Given navigate to FMS param application and login with valid credentials

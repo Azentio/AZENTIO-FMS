@@ -13,7 +13,7 @@ public class WIFAK_ApplicationObj {
 		PageFactory.initElements(driver, this);
 	}
 	
-	// 862019
+//	@AT_AFF_040
 	@FindBy(xpath = "(//td[text()='WIFAK APPLICATION'])[1]")
 	private WebElement wifak_application_first;
 	public WebElement wifakApplicationFirst() {
@@ -50,7 +50,7 @@ public class WIFAK_ApplicationObj {
 		return application_financial_facility_historylog;
 	}
 	
-	// 843959	
+//	@AT_AFF_036	
 	@FindBy(xpath = "//a[@id='WIFT001MT']")
 	private WebElement app_financial_facility_main;
 	public WebElement appFinancialFacilityMaintanance() {
@@ -160,7 +160,7 @@ public class WIFAK_ApplicationObj {
 	}
 	
 	
-	// 296063
+//	@AT_AFF_048
 	@FindBy(xpath = "//span[@id='spanLookup_applicationfacilityLimitDetailsACC_SL_NO_WIFT001MT']")
 	private WebElement account_no_search;
 	public WebElement accountNoSearch() {
@@ -251,7 +251,7 @@ public class WIFAK_ApplicationObj {
 		return warning_popup_ok_btn;
 	}
 	
-	@FindBy(xpath = "//*[@id='_popup_path_sol_ok']")
+	@FindBy(xpath = "//input[@id='_popup_path_sol_ok']")
 	private WebElement success_popup_ok_btn;
 	public WebElement SuccessPopupOkBtn() {
 		return success_popup_ok_btn;
@@ -600,7 +600,7 @@ public class WIFAK_ApplicationObj {
 	}
 	
 	
-//	@582426
+//	@AT_RF_100
 	@FindBy(xpath = "//input[@id='lookuptxt_applicationFacilityExistingFacilityRef_WIFT001MT']")
 	private WebElement main_existing_facility_ref;
 	public WebElement mainExistingFacilityRef() {
@@ -633,7 +633,7 @@ public class WIFAK_ApplicationObj {
 	
 	
 	
-//  @582565
+//  @AT_RF_102
     @FindBy(xpath = "//select[@id='applicationfacilityLimitDetailsGENERAL_FACILITY_TYPE_WIFT001MT']")
     private WebElement limit_details_item;
     public WebElement limitDetailsItem() {
@@ -970,7 +970,7 @@ public class WIFAK_ApplicationObj {
     }       
     
     
-//  @AT_RF_140
+// //  @AT_RF_140
     @FindBy(xpath = "//td[@id='td_FacilityDocumentCheckListGrid_WIFT001MT_2_DOC_CODE']")
     private WebElement limit_details_document_checklist_row2;
     public WebElement limitDetailsDocumentChecklistRow2 () {
@@ -993,7 +993,30 @@ public class WIFAK_ApplicationObj {
     private WebElement limit_details_document_checklist_upload_docs_btn;
     public WebElement limitDetailsDocumentChecklistUploadDocsBtn () {
     	return limit_details_document_checklist_upload_docs_btn;
+    }    
+    //Approve Level1
+    @FindBy(xpath = "//td[@id='td_FacilityDocumentCheckListGrid_WIFT001AP1_2_DOC_CODE']")
+    private WebElement approve1_limit_details_document_checklist_row2;
+    public WebElement approve1LimitDetailsDocumentChecklistRow2 () {
+    	return approve1_limit_details_document_checklist_row2;
     }
     
+    @FindBy(xpath = "//a[@id='document_ViewBtn_WIFT001AP1']")
+    private WebElement approve1_limit_details_document_checklist_view_btn;
+    public WebElement approve1LimitDetailsDocumentChecklistViewBtn () {
+    	return approve1_limit_details_document_checklist_view_btn;
+    }
+    
+    @FindBy(xpath = "//td[@id='td_FacilityDocumentCheckListViewGrid_WIFT001AP1_0_rn']")
+    private WebElement approve1_limit_details_document_checklist_view_row1;
+    public WebElement approve1LimitDetailsDocumentChecklistViewRow1 () {
+    	return approve1_limit_details_document_checklist_view_row1;
+    }
+    
+    @FindBy(xpath = "/html/body/div[49]/div[1]/a")
+    private WebElement approve1_limit_details_document_checklist_view_close;
+    public WebElement approve1LimitDetailsDocumentChecklistViewClose () {
+    	return approve1_limit_details_document_checklist_view_close;
+    }
     
 }

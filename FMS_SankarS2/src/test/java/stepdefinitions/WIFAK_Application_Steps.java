@@ -42,77 +42,83 @@ public class WIFAK_Application_Steps {
 	Map<String, String> testData;
 //	Map<String, String> executionTestData;
 	
-//	843959
-	@And("^get the test data for test case 843959$")
-    public void get_the_test_data_for_test_case_843959() throws Throwable {
+//	@AT_AFF_036
+	@And("^get the test data for test case AT_AFF_036$")
+    public void get_the_test_data_for_test_case_AT_AFF_036() throws Throwable {
 //		executionTestData = excecutionExcelData.getTestdata("843959");
-		testData = fmsTransactionsExcelData.getTestdata("DS01_843959");
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_AFF_036");
     }
 	
-//	296063
-	@And("^get the test data for test case 296063$")
-    public void get_the_test_data_for_test_case_296063() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS01_296063");
+//	@AT_AFF_040
+	@And("^get the test data for test case AT_AFF_040$")
+    public void get_the_test_data_for_test_case_AT_AFF_040() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_AFF_040");
     }
 	
-//  @834966_FMS_Core
-	@And("^get the test data for test case 834966_FMS_Core$")
-	public void get_the_test_data_for_test_case_834966fmscore() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS01_834966");
+//	@AT_AFF_048
+	@And("^get the test data for test case AT_AFF_048$")
+    public void get_the_test_data_for_test_case_AT_AFF_048() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_AFF_048");
+    }
+	
+//  @AT_AFF_098_FMS_Core
+	@And("^get the test data for test case AT_AFF_098_FMSCore$")
+	public void get_the_test_data_for_test_case_AT_AFF_098fmscore() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_AFF_098");
 	}
 	
-//  @681303_FMSCore    
-    @And("^get the test data for test case 681303_FMSCore$")
-    public void get_the_test_data_for_test_case_681303fmscore() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS01_681303");
+//  @AT_RF_034_FMSCore    
+    @And("^get the test data for test case AT_RF_034_FMSCore$")
+    public void get_the_test_data_for_test_case_AT_RF_034fmscore() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_034");
     }
 	
-//  @665923_FMSCore
-    @And("^get the test data for test case 665923_FMSCore$")
-    public void get_the_test_data_for_test_case_665923fmscore() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS01_665923");
+//  @AT_RF_014_FMSCore
+    @And("^get the test data for test case AT_RF_014_FMSCore$")
+    public void get_the_test_data_for_test_case_AT_RF_014fmscore() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_014");
     }
     
-//  @640861
-    @And("^get the test data for test case 640861$")
-    public void get_the_test_data_for_test_case_640861() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS01_640861");
+//  @AT_RF_040
+    @And("^get the test data for test case AT_RF_040$")
+    public void get_the_test_data_for_test_case_AT_RF_040() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_040");
     }
     
-//  @583893_User1
-    @And("^get the test data for test case 583893_User1$")
-    public void get_the_test_data_for_test_case_583893user1() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS01_583893_1");
+//  @AT_RF_098_User1
+    @And("^get the test data for test case AT_RF_098_User1$")
+    public void get_the_test_data_for_test_case_AT_RF_098user1() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_098");
     }
     
-//  @583893_User2
-    @And("^get the test data for test case 583893_User2$")
-    public void get_the_test_data_for_test_case_583893user2() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS01_583893_2");
+//  @AT_RF_098_User2
+    @And("^get the test data for test case AT_RF_098_User2$")
+    public void get_the_test_data_for_test_case_AT_RF_098user2() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_098");
     }
     
-//	@583895_FMSCore
-    @And("^get the test data for test case 583895_FMSCore$")
-    public void get_the_test_data_for_test_case_583895fmscore() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS01_583895");
+//	@AT_RF_099_FMSCore
+    @And("^get the test data for test case AT_RF_099_FMSCore$")
+    public void get_the_test_data_for_test_case_AT_RF_099fmscore() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_099");
     }
     
-//  @582426
-    @And("^get the test data for test case 582426$")
-    public void get_the_test_data_for_test_case_582426() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS01_582426");
+//  @AT_RF_100
+    @And("^get the test data for test case AT_RF_100$")
+    public void get_the_test_data_for_test_case_AT_RF_100() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_100");
     }
     
-//  @582480_FMSCore
-    @And("^get the test data for test case 582480_FMSCore$")
-    public void get_the_test_data_for_test_case_582480fmscore() throws Throwable {
+//  @AT_RF_101_FMSCore
+    @And("^get the test data for test case AT_RF_101_FMSCore$")
+    public void get_the_test_data_for_test_case_AT_RF_101fmscore() throws Throwable {
     	testData = fmsTransactionsExcelData.getTestdata("DS01_582480");
     }
     
-//  @582565
-    @And("^get the test data for test case 582565$")
-    public void get_the_test_data_for_test_case_582565() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS01_582565");
+//  @AT_RF_102
+    @And("^get the test data for test case AT_RF_102$")
+    public void get_the_test_data_for_test_case_AT_RF_102() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_102");
     }
     
 //  @AT_RF_157
@@ -130,7 +136,7 @@ public class WIFAK_Application_Steps {
 //  @AT_RF_140
     @And("get the test data for test case AT_RF_140")
     public void get_the_test_data_for_test_case_at_rf_140() {
-    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_139");
+    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_140");
     }
     
 	
@@ -169,11 +175,6 @@ public class WIFAK_Application_Steps {
 		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.applicationFinancialFacilityApproveLevel1());
 		WIFAKapplicationObj.applicationFinancialFacilityApproveLevel1().click();
 	}
-	
-	@And("^get the test data for test case 862019$")
-    public void get_the_test_data_for_test_case_862019() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS01_862019");
-    }
 
 	@And("^User search the code$")
 	public void user_search_the_code() throws Throwable {
@@ -195,7 +196,7 @@ public class WIFAK_Application_Steps {
 		WIFAKapplicationObj.applicationFinancialFacilityHistoryLog().click();
 	}
 
-	// @843959
+	// @AT_AFF_036
 
 	@And("^User clicks the maintanance menu$")
 	public void user_clicks_the_maintanance_menu() throws Throwable {
@@ -335,7 +336,7 @@ public class WIFAK_Application_Steps {
 	}
 	
 	
-//	 @296063
+//	 @AT_AFF_048
 	@And("^User enter the product class details$")
     public void user_enter_the_product_class_details() throws Throwable {
         waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsNewRecordProductClass());
@@ -486,7 +487,7 @@ public class WIFAK_Application_Steps {
 //    	String SuccessMsg = WIFAKapplicationObj.successPopupMessage().getText();
     	String SuccessMsg = WIFAKapplicationObj.successPopupMessage().getText().substring(23, 27);
     	System.err.println("Reference Number: "+SuccessMsg);
-    	fmsTransactionsExcelData.updateTestData("DS_AT_RF_139", "Approve Code", SuccessMsg);
+    	fmsTransactionsExcelData.updateTestData("DS_AT_RF_102", "Approve Code", SuccessMsg);
     	
     	for (int i = 0; i < 2000; i++) {
 			try {
@@ -935,7 +936,7 @@ public class WIFAK_Application_Steps {
     }
     
     
-//  @582426
+//  @AT_RF_100
     @And("^User select the application for dropdown as decrease in main screen$")
     public void user_select_the_application_for_dropdown_as_decrease_in_main_screen() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.mainApplicationForDropdown());
@@ -1048,7 +1049,7 @@ public class WIFAK_Application_Steps {
     }
     
     
-//  @582565
+//  @AT_RF_102
     @And("^User select the Item in limit Details$")
     public void user_select_the_item_in_limit_details() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsItem());
@@ -1529,7 +1530,8 @@ public class WIFAK_Application_Steps {
     @And("User give the file in choose file input under document checklist tab")
     public void user_give_the_file_in_choose_file_input_under_document_checklist_tab() {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsDocumentChecklistChooseFileInput());
-    	WIFAKapplicationObj.limitDetailsDocumentChecklistChooseFileInput().sendKeys("C:\\Users\\inindc00608\\Desktop\\FMSTest.txt");;
+//    	WIFAKapplicationObj.limitDetailsDocumentChecklistChooseFileInput().sendKeys("C:\\Users\\inindc00608\\Desktop\\FMSTest.txt");
+    	WIFAKapplicationObj.limitDetailsDocumentChecklistChooseFileInput().sendKeys(testData.get("File Location"));
     }
 
     @And("User click the Upload docs button under document checklist tab")
@@ -1537,8 +1539,17 @@ public class WIFAK_Application_Steps {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsDocumentChecklistUploadDocsBtn());
     	WIFAKapplicationObj.limitDetailsDocumentChecklistUploadDocsBtn().click();
     	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.successPopup());
-    	WIFAKapplicationObj.SuccessPopupOkBtn();
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.SuccessPopupOkBtn());
+    	for (int i = 0; i < 2000; i++) {
+			try {
+		    	WIFAKapplicationObj.SuccessPopupOkBtn().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
     }
 
     @And("User validate the Attachment flag is checked in second row under document checklist tab")
@@ -1549,6 +1560,31 @@ public class WIFAK_Application_Steps {
     }
 
     
+    @And("User click the second row of checklist under limit details in approve level1")
+    public void user_click_the_second_row_of_checklist_under_limit_details_in_approve_level1() {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approve1LimitDetailsDocumentChecklistRow2());
+    	WIFAKapplicationObj.approve1LimitDetailsDocumentChecklistRow2().click();
+    }
+
+    @And("User click the View button in checklist under limit details in approve level1")
+    public void user_click_the_view_button_in_checklist_under_limit_details_in_approve_level1() {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approve1LimitDetailsDocumentChecklistViewBtn());
+    	WIFAKapplicationObj.approve1LimitDetailsDocumentChecklistViewBtn().click();
+    }
+
+    @And("User vaidate the rows are available in View tab under document checklist")
+    public void user_vaidate_the_rows_are_available_in_view_tab_under_document_checklist() {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approve1LimitDetailsDocumentChecklistViewRow1());
+    	boolean rowDisplayed = WIFAKapplicationObj.approve1LimitDetailsDocumentChecklistViewRow1().isDisplayed();
+    	System.out.println("Row are available: "+rowDisplayed);
+    }
+
+    @And("User close the View tab in document checklist under approve level1 limit details")
+    public void user_close_the_view_tab_in_document_checklist_under_approve_level1_limit_details() {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approve1LimitDetailsDocumentChecklistViewClose());
+    	WIFAKapplicationObj.approve1LimitDetailsDocumentChecklistViewClose().click();
+    }
+
 
 
 }

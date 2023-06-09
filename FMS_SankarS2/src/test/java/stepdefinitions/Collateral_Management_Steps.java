@@ -48,7 +48,7 @@ public class Collateral_Management_Steps {
 	
 	
 	
-//	@680390
+//	@AT_RF_035
 	@And("^User click on the language option in FMS core$")
     public void user_click_on_the_language_option_in_fms_core() throws Throwable {
         waitHelper.waitForElementwithFluentwait(driver, collateralManagementObj.FMSCoreLanguageBtn());

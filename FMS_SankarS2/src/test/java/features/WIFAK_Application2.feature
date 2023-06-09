@@ -1,10 +1,10 @@
 Feature: To check the WIFAK Application Feature with Facility type
 
-@834966_FMS_Param
+@AT_AFF_098_FMSParam
 Scenario: Check by default the option “Application From & To” is selected and user can choose the Facility No from the lookup
 
 Given navigate to FMS param application and login with valid credentials
-And get the test data for test case 834966_FMS_Param
+And get the test data for test case AT_AFF_098_FMSParam
 And User clicks on the parameter module
 And User clicks on the Facility Type feature
 And User clicks on the update after approve menu in Facility type
@@ -29,11 +29,11 @@ And User enter the code value in approve menu
 And User double click on the retrived data in approve menu
 When User clicks on the Approve button
 
-@834966_FMS_Core
+@AT_AFF_098_FMSCore
 Scenario: Check by default the option “Application From & To” is selected and user can choose the Facility No from the lookup
 
 Given navigate to FMS application and login with valid credentials
-And get the test data for test case 834966_FMS_Core
+And get the test data for test case AT_AFF_098_FMSCore
 And User clicks on the WIFAK_Application first link
 And User clicks on the WIFAK_Application second link
 And User clicks on the Application for financial facility link
@@ -69,7 +69,7 @@ And User retrive the first data in approve level3
 And User select the level3 decision as approve
 When User clicks on the level3 submit button
 
-@834966_CSM_Core
+@AT_AFF_098_CSMCore
 Scenario: Check by default the option “Application From & To” is selected and user can choose the Facility No from the lookup
 
 Given navigate to CSM application and login with valid credentials
@@ -78,7 +78,7 @@ And User clicks on the transfer of entities maintanance menu
 # after the unblocked, some steps are needed
 
 
-@834967
+@AT_AFF_099_CSMCore
 Scenario: Check the lookup of the Application From and To is matching the following conditions
 Given navigate to CSM application and login with valid credentials
 And User clicks on the transfer of entities module
@@ -87,11 +87,11 @@ And User clicks on the transfer of entities maintanance menu
 
 
 # Sprint 3
-@681303_FMSParam
+@AT_RF_034_FMSParam
 Scenario: TSR - CDMI180093
 
 Given navigate to FMS param application and login with valid credentials
-And get the test data for test case 681303_FMSParam
+And get the test data for test case AT_RF_034_FMSParam
 And User clicks on the parameter module
 And User clicks on the Facility Type feature
 And User clicks on the update after approve menu in Facility type
@@ -120,11 +120,11 @@ And User enter the code value in approve menu
 And User double click on the retrived data in approve menu
 When User clicks on the Approve button
 
-@681303_FMSCore
+@AT_RF_034_FMSCore
 Scenario: TSR - CDMI180093
 
 Given navigate to FMS application and login with valid credentials
-And get the test data for test case 681303_FMSCore
+And get the test data for test case AT_RF_034_FMSCore
 And User clicks on the WIFAK_Application first link
 And User clicks on the WIFAK_Application second link
 And User clicks on the Application for financial facility link
@@ -164,11 +164,11 @@ And User double click on the retrived data
 When User clicks on the issue offer button under issue facility offer
 
 
-@583895_FMSParam
+@AT_RF_099_FMSParam
 Scenario: TSR - BTII170059
 
 Given navigate to FMS param application and login with valid credentials
-And get the test data for test case 583895_FMSParam
+And get the test data for test case AT_RF_099_FMSParam
 And User clicks on the parameter module
 And User clicks on the Facility Type feature
 And User clicks on the update after approve menu in Facility type
@@ -185,11 +185,11 @@ And User double click on the retrived data in approve menu
 When User clicks on the Approve button
 
 
-@583895_FMSCore
+@AT_RF_099_FMSCore
 Scenario: TSR - BTII170059
 
 Given navigate to FMS application and login with valid credentials
-And get the test data for test case 583895_FMSCore
+And get the test data for test case AT_RF_099_FMSCore
 And User clicks on the WIFAK_Application first link
 And User clicks on the WIFAK_Application second link
 And User clicks on the Application for financial facility link
@@ -226,11 +226,11 @@ And User select the level3 decision as approve
 When User clicks on the level3 submit button
 
 
-@582480_FMSParam
+@AT_RF_101_FMSParam
 Scenario: TSR-AMANAUPG170107
 
 Given navigate to FMS param application and login with valid credentials
-And get the test data for test case 582480_FMSParam
+And get the test data for test case AT_RF_101_FMSParam
 And User clicks on the parameter module
 And User clicks on the Document checklist feature
 And User clicks on the update after approve menu in Document checklist
@@ -254,11 +254,11 @@ And User double click on the retrived data in approve menu
 When User clicks on the Approve button
 
 
-@582480_FMSCore
+@AT_RF_101_FMSCore
 Scenario: TSR-AMANAUPG170107
 
 Given navigate to FMS application and login with valid credentials
-And get the test data for test case 582480_FMSCore
+And get the test data for test case AT_RF_101_FMSCore
 And User clicks on the WIFAK_Application first link
 And User clicks on the WIFAK_Application second link
 And User clicks on the Application for financial facility link

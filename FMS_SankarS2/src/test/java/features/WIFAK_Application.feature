@@ -1,6 +1,6 @@
 Feature: To check the WIFAK Application features
 
-@862019
+@AT_AFF_040
 Scenario: MFI190130 - History Log is empty for Application for facility--Approval/Reject option
 
 Given navigate to FMS application and login with valid credentials
@@ -8,16 +8,16 @@ And User clicks on the WIFAK_Application first link
 And User clicks on the WIFAK_Application second link
 And User clicks on the Application for financial facility link
 And User clicks on the Approve level1 link
-And get the test data for test case 862019
+And get the test data for test case AT_AFF_040
 And User search the code
 And User double click searched record
 Then user clicks on the History log tap
 
-@843959
+@AT_AFF_036
 Scenario: ABSAI190084 - Floating Yield Issue at FMS
 
 Given navigate to FMS application and login with valid credentials
-And get the test data for test case 843959
+And get the test data for test case AT_AFF_036
 And User clicks on the WIFAK_Application first link
 And User clicks on the WIFAK_Application second link
 And User clicks on the Application for financial facility link
@@ -36,11 +36,11 @@ And User enter the product class
 Then Validate the floating rate with yield details
 
 
-@296063
+@AT_AFF_048
 Scenario: BIM140064 - Nous voulons mettre les frais au niveau de FMS Comment peut on faire ceci?
 
 Given navigate to FMS application and login with valid credentials
-And get the test data for test case 296063
+And get the test data for test case AT_AFF_048
 And User clicks on the WIFAK_Application first link
 And User clicks on the WIFAK_Application second link
 And User clicks on the Application for financial facility link
@@ -95,11 +95,11 @@ When User clicks on the BM Recommendations button
 Then User validate the BM Recommendations tab is editable or not
 
 
-@640861
+@AT_RF_040
 Scenario: TSR - RIDB180129
 
 Given navigate to FMS application and login with valid credentials
-And get the test data for test case 640861
+And get the test data for test case AT_RF_040
 And User clicks on the WIFAK_Application first link
 And User clicks on the WIFAK_Application second link
 And User clicks on the Application for financial facility link
@@ -122,11 +122,11 @@ Then User validate the visibility of Fund Transfer rate input box in limit detai
 
 
 
-@583893_User1
+@AT_RF_098_User1
 Scenario: TSR - BTII170041
 
 Given User1 navigate to FMS application and login with valid credentials
-And get the test data for test case 583893_User1
+And get the test data for test case AT_RF_098_User1
 And User1 clicks on the WIFAK_Application first link
 And User1 clicks on the WIFAK_Application second link
 And User1 clicks on the approval committe recommedation menu
@@ -147,7 +147,7 @@ When User1 click the Ok button in recommend box
 Scenario: TSR - BTII170041
 
 Given navigate to FMS application and login with valid credentials
-And get the test data for test case 583893_User2
+And get the test data for test case AT_RF_098_User2
 And User clicks on the WIFAK_Application first link
 And User clicks on the WIFAK_Application second link
 And User clicks on the Application for financial facility link
@@ -162,11 +162,11 @@ Then User validate the more comments text in input field
 
 
  #//No data available in FMSCore
-@582426
+@AT_RF_100
 Scenario: TSR-AMANAUPG170045
 
 Given navigate to FMS application and login with valid credentials
-And get the test data for test case 582426
+And get the test data for test case AT_RF_100
 And User clicks on the WIFAK_Application first link
 And User clicks on the WIFAK_Application second link
 And User clicks on the Application for financial facility link
@@ -201,11 +201,11 @@ And User retrive the first data in approve level3
 And User select the level3 decision as approve
 When User clicks on the level3 submit button
 
-@582565
+@AT_RF_102
 Scenario: TSR-AMANAUPG170105
 
 Given navigate to FMS application and login with valid credentials
-And get the test data for test case 582565
+And get the test data for test case AT_RF_102
 And User clicks on the WIFAK_Application first link
 And User clicks on the WIFAK_Application second link
 And User clicks on the Application for financial facility link
@@ -373,5 +373,31 @@ And User click the Upload docs button under document checklist tab
 And User validate the Attachment flag is checked in second row under document checklist tab
 And User click the Ok button under document checklist
 And User move to the Document details tab
+And User enter the Solicitor Name
+And User enter the Estimator Name
+And User clicks the save button
+And User clicks the validate button
+And User clicks the Approve Level1 link
+And User retrive the first data in approve level1
+And User select the level1 decision as approve
+And User clicks the limit details tab under approve level1
+And User select the product class in limit details under approve level1
+And User click the document checklist button under limit details in approve level1
+And User click the second row of checklist under limit details in approve level1
+And User click the View button in checklist under limit details in approve level1
+And User vaidate the rows are available in View tab under document checklist
+And User close the View tab in document checklist under approve level1 limit details
+And User click the ok button in document checklist under limit details
+And User clicks on the level1 submit button
+And User clicks the Approve Level2 link
+And User retrive the first data in approve level2
+And User select the level2 decision as approve
+And User clicks on the level2 submit button
+And User clicks the Approve Level3 link
+And User retrive the first data in approve level3
+And User select the level3 decision as approve
+When User clicks on the level3 submit button
+
+
 
 

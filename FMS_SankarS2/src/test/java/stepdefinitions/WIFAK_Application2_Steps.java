@@ -38,28 +38,28 @@ public class WIFAK_Application2_Steps {
 	ExcelData fmsTransactionsExcelData = new ExcelData(path,"FMS_WIFAK_ApplicationTestData","DataSet ID");
 	Map<String, String> testData;
 	
-//	@834966_FMS_Param
-	@And("^get the test data for test case 834966_FMS_Param$")
-    public void get_the_test_data_for_test_case_834966fmsparam() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS01_834966");
+//	@AT_AFF_098_FMSParam
+	@And("^get the test data for test case AT_AFF_098_FMSParam$")
+    public void get_the_test_data_for_test_case_AT_AFF_098fmsparam() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_AFF_098");
     }
 	
-//  @681303_FMSParam
-	@And("^get the test data for test case 681303_FMSParam$")
-	public void get_the_test_data_for_test_case_681303fmsparam() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS01_681303");
+//  @AT_RF_034_FMSParam
+	@And("^get the test data for test case AT_RF_034_FMSParam$")
+	public void get_the_test_data_for_test_case_AT_RF_034fmsparam() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_034");
 	}
 
-//	@583895_FMSParam
-	@And("^get the test data for test case 583895_FMSParam$")
-    public void get_the_test_data_for_test_case_583895fmsparam() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS01_583895");
+//	@AT_RF_099_FMSParam
+	@And("^get the test data for test case AT_RF_099_FMSParam$")
+    public void get_the_test_data_for_test_case_AT_RF_099fmsparam() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_099");
     }
 	
-//	@582480_FMSParam
-	@And("^get the test data for test case 582480_FMSParam$")
-    public void get_the_test_data_for_test_case_582480fmsparam() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS01_583895");
+//	@AT_RF_101_FMSParam
+	@And("^get the test data for test case AT_RF_101_FMSParam$")
+    public void get_the_test_data_for_test_case_AT_RF_101fmsparam() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_101");
     }
 	
 
@@ -282,7 +282,7 @@ public class WIFAK_Application2_Steps {
         
     }
     
-//  @834966_FMS_Core
+//  @AT_AFF_098_FMSCore
     @And("^User define the marketed by field$")
     public void user_define_the_marketed_by_field() throws Throwable {
 //    	Thread.sleep(5000);
@@ -294,8 +294,7 @@ public class WIFAK_Application2_Steps {
     	
     }
     
-//    @834966_CSM_Core
-    
+//    @AT_AFF_098_CSMCore    
     @And("^User clicks on the transfer of entities module$")
     public void user_clicks_on_the_transfer_of_entities_module() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.transferOfEntitiesModule());

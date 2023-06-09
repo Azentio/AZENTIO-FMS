@@ -13,7 +13,7 @@ public class Facility_TypeObj {
 		PageFactory.initElements(driver, this);
 	}
 	
-//	@834966_FMS_Param
+//	@AT_AFF_098_FMSParam
 	
 	@FindBy(xpath = "//td[text()='Parameters']")
 	private WebElement fms_param_parameter;
@@ -166,7 +166,7 @@ public class Facility_TypeObj {
 	}
 	
 	
-	// @834966_FMS_Core
+	// @AT_AFF_098_FMSCore
 	@FindBy(xpath = "//span[@id='spanLookup_applicationFacilityMarketedBy_WIFT001MT']")
 	private WebElement marketed_by_field_search;
 	public WebElement marketedByFieldSearch() {
@@ -180,7 +180,7 @@ public class Facility_TypeObj {
 	}
 	
 	
-	// @834966_CSM_Core
+	// @AT_AFF_098_CSMCore
 	@FindBy(xpath = "//td[text()='Transfer Of Entities']")
 	private WebElement transfer_of_entities_module;
 	public WebElement transferOfEntitiesModule() {

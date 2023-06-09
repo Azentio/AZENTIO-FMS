@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Control_RecordsObj {
 	
-//	@305607
+//	@AT_AFF_075
 	WebDriver driver;
 	public Control_RecordsObj(WebDriver driver) {
 		this.driver = driver;
@@ -105,7 +105,7 @@ public class Control_RecordsObj {
 		return approve_button;
 	}
 	
-	// @305703
+	// @AT_AFF_074
 	@FindBy(xpath = "//td[@id='add_FMSControlRecordMemberCountryGrid_P007UP']")
 	private WebElement memeber_coutries_add_new_row_btn;
 	public WebElement memberCountriesAddNewRowBtn() {

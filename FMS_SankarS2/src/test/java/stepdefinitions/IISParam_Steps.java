@@ -34,10 +34,10 @@ public class IISParam_Steps {
 	Map<String, String> testData;
 	
 	
-//	@665923_IISParam
-	 @And("^get the test data for test case 665923_IISParam$")
-	    public void get_the_test_data_for_test_case_665923iisparam() throws Throwable {
-		 testData = fmsTransactionsExcelData.getTestdata("DS01_665923");
+//	@AT_RF_014_IISParam
+	 @And("^get the test data for test case AT_RF_014_IISParam$")
+	    public void get_the_test_data_for_test_case_AT_RF_014iisparam() throws Throwable {
+		 testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_014");
 	    }
 	
 	@And("^User clicks on the parameter feature in IIS Param application$")
@@ -140,7 +140,7 @@ public class IISParam_Steps {
     
     
     
-//  665923_FMSCore
+//  AT_RF_014_FMSCore
     @And("^User clicks the limit details first row$")
     public void user_clicks_the_limit_details_first_row() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, iisParamObj.limitDetailsFirstRow());

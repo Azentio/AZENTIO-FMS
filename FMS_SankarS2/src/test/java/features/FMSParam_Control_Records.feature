@@ -1,6 +1,6 @@
 Feature: To check the control records features
 
-@305607
+@AT_AFF_075
 Scenario: Check modification at the FMS Ctrl Record
 
 Given navigate to FMS param application and login with valid credentials
@@ -19,7 +19,7 @@ And User clicks on the update button
 And User clicks on the approve menu
 Then User clicks on the approve button
 
-@305703
+@AT_AFF_074
 Scenario: Check modification at the FMS Ctrl Rec. new radio button-Member Countries Screen
 
 Given navigate to FMS param application and login with valid credentials
@@ -28,7 +28,7 @@ And User clicks on the control records feature
 And User clicks on the update after approve menu
 And User clicks on the member countries menu
 And User clicks the add new row button
-And Update test data for test case no 305703
+And Update test data for test case no AT_AFF_074
 And User enter the country code
 And User clicks on the membership type dropdown
 #Then validate the membership DDLB values

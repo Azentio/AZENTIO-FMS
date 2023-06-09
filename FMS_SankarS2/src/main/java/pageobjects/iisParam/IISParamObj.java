@@ -12,7 +12,7 @@ public class IISParamObj {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-//	665923_IISParam
+//	AT_RF_014_IISParam
 	@FindBy(xpath = "//td[text()='Parameters']")
 	private WebElement IIS_parameter_feature;
 	public WebElement IISParameterFeature() {
@@ -97,7 +97,7 @@ public class IISParamObj {
 		return success_ok_btn;
 	}
 	
-//	665923_FMSCore
+//	AT_RF_014_FMSCore
 	@FindBy(xpath = "//td[@id='td_ApplicationFacilityLimitDetailsGrid_WIFT001MT_1_rn']")
 	private WebElement limit_details_first_row;
 	public WebElement limitDetailsFirstRow() {

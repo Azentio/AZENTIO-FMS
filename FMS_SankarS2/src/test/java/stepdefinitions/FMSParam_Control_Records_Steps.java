@@ -35,7 +35,7 @@ public class FMSParam_Control_Records_Steps {
 	ExcelData fmsTransactionsExcelData = new ExcelData(path,"FMSParam_Control_Records","DataSet ID");
 	Map<String, String> testData;
 	
-//	@305607
+//	@AT_AFF_075
 	@And("^User clicks on the control records feature$")
     public void user_clicks_on_the_control_records_feature() throws Throwable {
         waitHelper.waitForElementwithFluentwait(driver, controlRecordsObj.paramControlRecords());
@@ -186,7 +186,7 @@ public class FMSParam_Control_Records_Steps {
     
     
     
-//    @305703
+//    @AT_AFF_074
     
     @And("^User clicks on the member countries menu$")
     public void user_clicks_on_the_member_countries_menu() throws Throwable {
@@ -200,9 +200,9 @@ public class FMSParam_Control_Records_Steps {
     	controlRecordsObj.memberCountriesAddNewRowBtn().click();
     }
     
-    @And("^Update test data for test case no 305703$")
-    public void update_test_data_for_test_case_no_305703() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS01_305703");
+    @And("^Update test data for test case no AT_AFF_074$")
+    public void update_test_data_for_test_case_no_AT_AFF_074() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_AFF_074");
     }
 
     @And("^User enter the country code$")
