@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-05T18:32:03 IST" name="Default suite" finished-at="2023-06-05T18:34:35 IST" duration-ms="151846">
+  <suite started-at="2023-06-09T14:34:41 IST" name="Default suite" finished-at="2023-06-09T14:40:42 IST" duration-ms="360553">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@795509d9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-06-05T18:32:03 IST" name="Default test" finished-at="2023-06-05T18:34:35 IST" duration-ms="151846">
+    <test started-at="2023-06-09T14:34:41 IST" name="Default test" finished-at="2023-06-09T14:40:42 IST" duration-ms="360553">
       <class name="Runner.TestApplication">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@795509d9]" started-at="2023-06-05T18:32:03 IST" name="setUpClass" finished-at="2023-06-05T18:32:07 IST" duration-ms="4069" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@795509d9]" started-at="2023-06-09T14:34:41 IST" name="setUpClass" finished-at="2023-06-09T14:34:43 IST" duration-ms="1960" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@795509d9]" started-at="2023-06-05T18:32:07 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-06-05T18:34:17 IST" duration-ms="130259" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@795509d9]" started-at="2023-06-09T14:34:43 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-06-09T14:40:13 IST" duration-ms="329392" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["SUPT180408-CIF Profile not defined for the employer validation is not displaying while validate the active record"]]>
+                <![CDATA["TSR - EWBI160719"]]>
               </value>
             </param>
             <param index="1">
@@ -27,10 +27,38 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[@id='limitDetails_add_btn_WIFT001MT']"}
+  (Session info: chrome=114.0.5735.110)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8d162de94746dbeb2883ed3951e9f591, findElement {using=xpath, value=//button[@id='limitDetails_add_btn_WIFT001MT']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ININDC~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62730}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62730/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8d162de94746dbeb2883ed3951e9f591]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@id='limitDetails_add_btn_WIFT001MT']"}
+  (Session info: chrome=114.0.5735.110)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8d162de94746dbeb2883ed3951e9f591, findElement {using=xpath, value=//button[@id='limitDetails_add_btn_WIFT001MT']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ININDC~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62730}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62730/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8d162de94746dbeb2883ed3951e9f591
+at org.testng.Assert.fail(Assert.java:99)
+at stepdefinitions.ChecknewfieldatsublimittabSTEPS.click_the_add_button(ChecknewfieldatsublimittabSTEPS.java:51)
+at ✽.Click the add button(file:///C:/Users/inindc00611/git/FMS1/AzentioAutomationFramework_FMS_kowsalyaa/src/test/java/features/Estimatorsreflectswifakapplication.feature:404)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@795509d9]" started-at="2023-06-05T18:34:17 IST" name="tearDownClass" finished-at="2023-06-05T18:34:35 IST" duration-ms="17447" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@795509d9]" started-at="2023-06-09T14:40:13 IST" name="tearDownClass" finished-at="2023-06-09T14:40:42 IST" duration-ms="29142" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

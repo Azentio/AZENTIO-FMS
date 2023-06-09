@@ -1,7 +1,12 @@
 package stepdefinitions;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import helper.ClicksAndActionsHelper;
@@ -10,6 +15,7 @@ import helper.JavascriptHelper;
 import helper.Selenium_Actions;
 import helper.WaitHelper;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import pageobjects.fms.CoreestimatorsreflectswifakapplicationOBJ;
 import pageobjects.fms.ParamestimatorsreflectswifakapplicationOBJ;
@@ -284,7 +290,7 @@ public class EstimatorsreflectswifakapplicationSTEPS {
 	    	coreestimatesreflects.applicationforfinancialfacilitiesupdateafterapproveclearbtn().click();
 	    	
 	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.applicationforfinancialfacilitiesupdateafterapproveclearbtnfirstretrivedata());
-	    	coreestimatesreflects.applicationforfinancialfacilitiesupdateafterapproveclearbtnfirstretrivedata().click();
+	    	clickandactionhelper.doubleClick(coreestimatesreflects.applicationforfinancialfacilitiesupdateafterapproveclearbtnfirstretrivedata());
 	        
 	    }
 	    
@@ -352,6 +358,9 @@ public class EstimatorsreflectswifakapplicationSTEPS {
 	        
 	    }
 	    
+	    
+	    
+	    
 	    //771445
 	    
 	    @And("^Retrive the Cif profile value$")
@@ -374,10 +383,70 @@ public class EstimatorsreflectswifakapplicationSTEPS {
 	    	
 
 	    }
+	    //@759182_Fms_Core
+	    
+	    @Given("user click the client response under wifak application$")
+	    public void user_click_the_client_response_under_wifak_application() {
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.wifakapplicationclientresponse());
+	    	coreestimatesreflects.wifakapplicationclientresponse().click();
+	    	
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.wifakapplicationclientresponseclrbtn());
+	    	coreestimatesreflects.wifakapplicationclientresponseclrbtn().click();
+	    	
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.wifakapplicationclientresponseclrbtnfirstretrivedata());
+	    	clickandactionhelper.doubleClick(coreestimatesreflects.wifakapplicationclientresponseclrbtnfirstretrivedata());
+	    	
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.clientresponsereject());
+	    	coreestimatesreflects.clientresponsereject().click();
+	    	
+	    }
+	    @Given("user search the rejected data in maintenance")
+	    public void user_search_the_rejected_data_in_maintenance() {
+	    	
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.appforfinancialmanagmentmaintenencefirstsearchbtn());
+	    	coreestimatesreflects.appforfinancialmanagmentmaintenencefirstsearchbtn().click();
+	    	
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.appforfinancialmanagmentmaintenencesecondclrbtn());
+	    	coreestimatesreflects.appforfinancialmanagmentmaintenencesecondclrbtn().click();
+	    	
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.appforfinancialmanagmentmaintenencesecondclrbtnretrivedata());
+	    	clickandactionhelper.doubleClick(coreestimatesreflects.appforfinancialmanagmentmaintenencesecondclrbtnretrivedata());
+	        
+	    }
+
+	    
+	    // @749202_Fms_Core
+	    @And("user clicks the query menu under facility management")
+	    public void user_clicks_the_query_menu_under_facility_management() throws Throwable {
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.facilitymanagementquerymenu());
+	    	coreestimatesreflects.facilitymanagementquerymenu().click();	        
+	    }
+
+	    @And("user clicks on the clear button in query under facility management")
+	    public void user_clicks_on_the_clear_button_in_query_under_facility_management() throws Throwable {
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.facilitymanagementquerymenuclearbtn());  
+	    	coreestimatesreflects.facilitymanagementquerymenuclearbtn().click();
+	    }
+
+	    @And("user validate the retrived records are not duplicate")
+	    public void user_validate_the_retrived_records_are_not_duplicate() throws Throwable {
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.facilitymanagementquerymenuCode());
+	    	List<WebElement> code = driver.findElements(By.xpath("//table[@id='facilityManagementGridTbl_Id_WIFT008QY']//td[@tdlabel='Code']"));
+	    	
+	    	System.out.println("Code Size: "+code.size());
+	    	
+	    	for (WebElement webElement : code) {
+	            String getCode = webElement.getText();
+	            System.out.println(getCode);
+	        }
+	    }        
+}
+
+	    
 	    
 
 
-	}
+	
 
 
 	

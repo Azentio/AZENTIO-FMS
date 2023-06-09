@@ -180,7 +180,7 @@ public class FloatingratereflectsfromparamOBJ {
 //        	public WebElement additionalTabExpireDate() {
 //        		return Additionaldetails_expireDate;
 //        	}
-        	@FindBy(xpath = "//*[@id=\"applicationFacilityLimitDetailsTabs_WIFT001MT\"]/a/span")
+        	@FindBy(xpath = "//*[@id=\"applicationFacilityLimitDetailsTabs_WIFT001MT\"]")
         	private WebElement Limitdetails_Tab;
         	public WebElement limitdetailstab() {
         		return Limitdetails_Tab;

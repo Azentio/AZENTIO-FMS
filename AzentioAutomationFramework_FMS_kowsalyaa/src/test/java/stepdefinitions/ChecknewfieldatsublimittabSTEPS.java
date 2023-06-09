@@ -2,6 +2,7 @@ package stepdefinitions;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import helper.ClicksAndActionsHelper;
@@ -34,6 +35,9 @@ public class ChecknewfieldatsublimittabSTEPS {
 		
 		waitHelper.waitForElementwithFluentwait(driver, checknewfieldatsublimittab.additionalTabExpireDate());
 		checknewfieldatsublimittab.additionalTabExpireDate().click();
+		
+		
+        
 	}
 	 
 	
@@ -48,6 +52,7 @@ public class ChecknewfieldatsublimittabSTEPS {
 				}
 			}
     	}
+		Thread.sleep(2000);
 		waitHelper.waitForElementwithFluentwait(driver, checknewfieldatsublimittab.addProductclass());
 		checknewfieldatsublimittab.addProductclass().click();
         

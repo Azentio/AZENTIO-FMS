@@ -22,7 +22,7 @@ public class LimitadditionaldetailsOBJ {
     public WebElement limitDetailsNewRecordCleanFlag() {
         return limit_details_new_record_clean_flag;
     }
-	@FindBy(xpath ="(//*[@id=\"_selenuimWIFT008\"]/li/a/table/tbody/tr/td[2]")
+	@FindBy(xpath ="//td[text()='Facilities Management']")
 	private WebElement Facility_Management ;
 	public WebElement facilitymanagement() {
 		return Facility_Management;

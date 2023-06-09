@@ -110,7 +110,7 @@ public class CoreestimatorsreflectswifakapplicationOBJ {
 	public WebElement applicationforfinancialfacilitiesupdateafterapproveclearbtn() {
 		return ApplicationForFinancialfacilities_UpdateAfterApprove_clearbtn;
 	}
-	@FindBy(xpath="(//tr[@id='1'])[3]")
+	@FindBy(xpath="//tr[@id='1']")
 	private WebElement ApplicationForFinancialfacilities_UpdateAfterApprove_clearbtn_firstretrivedata;
 	public WebElement applicationforfinancialfacilitiesupdateafterapproveclearbtnfirstretrivedata() {
 		return ApplicationForFinancialfacilities_UpdateAfterApprove_clearbtn_firstretrivedata;
@@ -120,7 +120,7 @@ public class CoreestimatorsreflectswifakapplicationOBJ {
 	public WebElement additionaldetailsdownpayment() {
 		return Additionaldetails_Downpayment;
 	}
-	@FindBy(xpath="(//tr[@id='1'])[5]")
+	@FindBy(xpath="//table[@id='ApplicationFacilityLimitDetailsGrid_WIFT001UP']")
 	private WebElement Limitdetails_Retrivedata_doubletap;
 	public WebElement limitdetailsretrivedatadoubletap() {
 		return Limitdetails_Retrivedata_doubletap;
@@ -166,6 +166,78 @@ public class CoreestimatorsreflectswifakapplicationOBJ {
 	public WebElement maininformationcifprofilesearchbox() {
 		return Maininformation_CIFProfile;
 	}
+	
+	
+	//@749202_Fms_Core	
+	@FindBy(xpath = "//td[text()='Facilities Management']")
+	private WebElement wifak_application_FacilityManagement;
+	public WebElement wifakApplicationFacilitymanagement() {
+		return wifak_application_FacilityManagement;
+	}
+	
+	@FindBy(xpath="//a[@id='WIFT008QY']")
+	private WebElement FacilityManagement_QueryMenu;
+	public WebElement facilitymanagementquerymenu() {
+		return FacilityManagement_QueryMenu;
+	}
+	@FindBy(xpath="//td[@id='facilityManagementGridTbl_Id_WIFT008QY_pager_left']/table/tbody/tr/td[7]")
+	private WebElement FacilityManagement_QueryMenu_Clearbtn;
+	public WebElement facilitymanagementquerymenuclearbtn() {
+		return FacilityManagement_QueryMenu_Clearbtn;
+	}
+	
+	@FindBy(xpath = "//table[@id='facilityManagementGridTbl_Id_WIFT008QY']")
+	private WebElement FacilityManagement_QueryMenu_table;
+	public WebElement facilitymanagementquerymenuTable() {
+		return FacilityManagement_QueryMenu_table;
+	}
+	
+	@FindBy(xpath = "//table[@id='facilityManagementGridTbl_Id_WIFT008QY']//td[@tdlabel='Code']")
+	private WebElement FacilityManagement_QueryMenu_code;
+	public WebElement facilitymanagementquerymenuCode() {
+		return FacilityManagement_QueryMenu_code;
+	}
+	
+	
+	
+	//@759182_Fms_Core
+	@FindBy(xpath="//span[text()='Client Response ']")
+	private WebElement WifakApplication_ClientResponse;
+	public WebElement wifakapplicationclientresponse() {
+		return WifakApplication_ClientResponse;
+	}
+	@FindBy(xpath="(//td[text()='Clear'])[3]")
+	private WebElement WifakApplication_ClientResponse_Clearbtn;
+	public WebElement wifakapplicationclientresponseclrbtn() {
+		return WifakApplication_ClientResponse_Clearbtn;
+	}
+	@FindBy(xpath="(//tr[@id='1'])[3]")
+	private WebElement WifakApplication_ClientResponse_Clearbtn_firstretrivedata;
+	public WebElement wifakapplicationclientresponseclrbtnfirstretrivedata() {
+		return WifakApplication_ClientResponse_Clearbtn_firstretrivedata;
+	}
+	@FindBy(xpath="//button[@id='applicationfacility_investorReject_btn_WIFT006MT']")
+	private WebElement ClientResponse_Reject;
+	public WebElement clientresponsereject() {
+		return ClientResponse_Reject;
+	}
+	@FindBy(xpath="//a[@id='infoBarSearchButton_WIFT001MT']")
+	private WebElement Appforfinancialmanagment_Maintenence_firstsearchbtn;
+	public WebElement appforfinancialmanagmentmaintenencefirstsearchbtn() {
+		return Appforfinancialmanagment_Maintenence_firstsearchbtn;
+	}
+	@FindBy(xpath="//td[text()='Clear']")
+	private WebElement Appforfinancialmanagment_Maintenence_secondclrbtn;
+	public WebElement appforfinancialmanagmentmaintenencesecondclrbtn() {
+		return Appforfinancialmanagment_Maintenence_secondclrbtn;
+	}
+	@FindBy(xpath="(//tr[@id='1'])[1]")
+	private WebElement Appforfinancialmanagment_Maintenence_secondclrbtn_retrivedata;
+	public WebElement appforfinancialmanagmentmaintenencesecondclrbtnretrivedata() {
+		return Appforfinancialmanagment_Maintenence_secondclrbtn_retrivedata;
+	}
+	
+	
 
 
 }

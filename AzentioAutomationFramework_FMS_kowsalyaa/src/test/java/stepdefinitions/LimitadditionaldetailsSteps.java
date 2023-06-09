@@ -39,8 +39,8 @@ public class LimitadditionaldetailsSteps {
 	}
 	 @And("^user clicks the facility management under wifak application$")
 	    public void user_clicks_the_facility_management_under_wifak_application() throws Throwable {
-		 waitHelper.waitForElementwithFluentwait(driver, limitadditionaldetails.facilitymanagement());
-			limitadditionaldetails.facilitymanagement().click();
+		waitHelper.waitForElementwithFluentwait(driver, limitadditionaldetails.facilitymanagement());
+		limitadditionaldetails.facilitymanagement().click();
 	        
 	    }
 
