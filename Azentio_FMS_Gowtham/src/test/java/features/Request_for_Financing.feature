@@ -101,27 +101,7 @@ Feature: Title of your feature
     And Click the validate button when all the values are saved
     And Confirm the validate popup menu
     And Click the final validate popup
-    #And Click the Approve level1 screen under request for financing
-    #And Search the value in approve1
-    #And Select the record in approve1
-    #And Select the record in Approve Screen1
-    #And Reject the record in Approve level1 
-    #And enter the reason for rejection
-    #And Click Reopen Rejected Applications Under request for financing
-    #And Click mainteance under Reopen Rejected Applications
-    #And Select the reopen record mainteance under Reopen Rejected Applications
-    #And Reopen the rejected record
-    #And Goto maintenace
-    #And Take the reopen record under mainteance 
-    #And Click Approve rejection under Reopen Rejected Applications
-    #And Select the rejected record in  Reopen Rejected Applications
-    #And Approve the reopen request
-    #And click mainteance under request for financing
-    #And select the record in the mainteance under request for financing
-    #And Click the Disbursement Sublimit under maintenance screen
-    #And Select the exesting product class 
-    #And change the months
-    #Then After Changes save it
+   
   
     @6369582
     Scenario: TSR - EWB180031
@@ -236,9 +216,7 @@ Feature: Title of your feature
 		And Enter Total value on additional Details
 		And Change Total value and down payment
     
-    
-    
-    
+ 
     
   @749113
   Scenario: TSR - NIZ180070
@@ -275,10 +253,117 @@ Feature: Title of your feature
    @749155
    Scenario: SUPT180347 - Users are able to choose Decision and Send Back level simultaneously
    Given navigate to FMS application2 and login with valid credentials
+   And Click request under menu 
+   And Click request financing
+   And Click request for financing under request financing
+   And Click Approve level1 under request for financing
+   And Select the record from approve level1
+   And Select Customer Grading Recommendations tab 
+   And Select decision in approve level 
+   And approve the record
+   And Click Approval Committee Recommendations under	request for financing
+   And Select the Approved record 
+   And click credit Committee Recommendations Tab
+   And click Recommandations In credit Committee Recommendations Tab
+   And Click the Add button in Recommandations
+   Then Check the send back level visibility
    
-   
-   
-   
+   @748962
+   Scenario: TSR - NIZ180070:
+   Given navigate to FMS application2 and login with valid credentials
+    And Click Wifak Application first
+    And Click Wifak Application Second
+    And User update test data for test case no 949677
+    And Click Application for financial facilities
+    And Click Maintenance
+    And Click and Select Application for
+    And Search CIF No
+    And Enter codeOn Facility Type
+    And Select select oneOff inFacility Type Details
+    And Enter Code In Country of Financing
+    And Enter line Code On Facility Rating
+    And Click on additional Details
+    And Enter the Total Value
+    And Click Offer Expiration SelectDate
+    And Select limit Details
+    And Click Add button on limit Detail
+    And Enter ValueOn Product Class
+    And AfterEnter ValueOn Product Class Search
+    And Click Add button AfterEnter Value On Product Class
+    And Click save button on limit details
+    And User move to the Document details tab
+    And User enter the Solicitor Name
+    And User enter the Estimator Name
+    And User clicks the save button
+    And User clicks the validate button
+    And User clicks the Approve Level1 link
+		And User retrive the first data in approve level1
+		And User select the level1 devision as approve
+		And User clicks on the level1 submit button
+		And User clicks the Approve Level2 link
+		And User retrive the first data in approve level2
+		And User select the level2 devision as approve
+		And User clicks on the level2 submit button
+		And User clicks the Approve Level3 link
+		And User retrive the first data in approve level3
+		And User select the level3 devision as approve
+		And User clicks on the level3 submit button
+		And Click Facilitie Managementunder wifakApplication
+		And click Maintenance under Facilities Managementunder
+		And select recordIn Maintenance under Facilities Management
+		And Get Application code from the record
+		And Click drawDown request under wifakApplication
+		And Click Mainteance under drawDown request
+		And Enter Facility Reference code
+		And Enter drawdown type
+		And Enter Description English and date
+		And Click Drawdown Additional Details tab
+		And Enter value Product ClassLN
+		And Click save button IndrawDown Additional Details tab
+		And Click verifyAndDeny under drawDownRequest
+		And Select Record verifyAndDeny under draw Down Request
+		And Click verify button In verifyAndDeny
+		And Click Approve Reject under drawdown
+		And Select Record In Approve Reject under drawdown
+		And Approve The record In Approve Reject under drawdown
+#		before goto facility closure need to create deal for this facility in irts
+		And Click Facility Closure Request under drawdown
+		And Click Mainteance under Facility Closure Request under drawdown
+		And Enter Facility Reference In Mainteance under Facility Closure Request
+		
+		
+		 @7489622
+   Scenario: TSR - NIZ180070:
+   Given navigate to FMS application2 and login with valid credentials
+    And Click Wifak Application first
+    And Click Wifak Application Second
+		And Click Facilitie Managementunder wifakApplication
+		And click Maintenance under Facilities Managementunder
+		And select recordIn Maintenance under Facilities Management
+		And Get Application code from the record
+		And Click drawDown request under wifakApplication
+		And Click Mainteance under drawDown request
+		And Enter Facility Reference code
+		And Enter drawdown type
+		And Enter Description English and date
+		And Click Drawdown Additional Details tab
+		And Enter value Product ClassLN
+		And Click save button IndrawDown Additional Details tab
+		And Click verifyAndDeny under drawDownRequest
+		And Select Record verifyAndDeny under draw Down Request
+		And Click verify button In verifyAndDeny
+		And Click Approve Reject under drawdown
+		And Select Record In Approve Reject under drawdown
+		And Approve The record In Approve Reject under drawdown
+#		before goto facility closure need to create deal for this facility in irts
+		And Click Facility Closure Request under drawdown
+		And Click Mainteance under Facility Closure Request under drawdown
+		And Enter Facility Reference In Mainteance under Facility Closure Request
+		
+		
+		
+		
+		
    
    
    
