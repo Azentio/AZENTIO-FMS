@@ -164,6 +164,7 @@ Feature: Wifak Application
     And Click on additional Details
     And Enter the Total Value
     Then Enter Holiday Date In Expiratin date in additional Details
+    And Validate holiday day allow or not 
     And Confirm the Requested Holiday date
     And Click Save Button After Document Details
     And Click Ok Button In Waring Screen Document Details
@@ -172,6 +173,7 @@ Feature: Wifak Application
     And Click Add button on limit Detail
     And Enter ValueOn Product Class
     Then Enter Holiday date in Expected Payment Date in Limit Details SubMenu
+    And Validate holiday day allow or not
     And Confirm the Requested Holiday date in Limit Details SubMenu
     #   And  Confirm the Requested Holiday date in Limit Details SubMenu
     And Click Add button AfterEnter Value On Product Class
@@ -441,5 +443,28 @@ Feature: Wifak Application
     When User clicks on the level3 submit button
     Then Click Update After Approve in Application For Finacial Facilities
     
-    
+ @814762
+ Scenario: AIBBI190201 - Errors at facility update after approve
+    Given navigate to FMS application2 and login with valid credentials
+    And Click Wifak Application first
+    And Click Wifak Application Second
+    And click facility management 
+    And click update after approvel
+    And Retrive one data in update after approvel screen
+    And click facility application details 
+    And check flag exceed facility at sublimit
+    And check flag subject to full repayment 
+    And click facility limit details 
+    And click product class 
+    And enter the value cap rate 
+    And enter the value selling price
+    And click document details
+    And enter the date in document details 
+    And save the details
+    And click  approvel and reject screen
+    And enter the retrive data code
+    And validate the facility application details screen
+    And validate the product class screen
+    And validate the document details screen
+  
     

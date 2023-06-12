@@ -359,12 +359,19 @@ public class FMS_Wifak_Error_While_Saving_Obj {
 		return Expiratin_date_additional_Details;
 	}
 	
+	@FindBy(xpath =  "a//div[contains(text(),'Is a Holiday')]")
+	private WebElement validate_holidayDate;
+	public WebElement validate_holidayDate(){
+		return validate_holidayDate;
+	}
+	
 	@FindBy(id =  "_popup_path_sol_confirm_ok")
 	private WebElement Confirm_theRequested_Holiday_date;
 	public WebElement Confirm_theRequested_Holiday_date(){
 		return Confirm_theRequested_Holiday_date;
 	}
 	
+		
 	@FindBy(id =  "_popup_path_sol_confirm_ok")
 	private WebElement Confirm_theRequested_Holiday_date_In_LimitsDetails;
 	public WebElement Confirm_theRequested_Holiday_date_In_LimitsDetails(){
@@ -1390,13 +1397,39 @@ public class FMS_Wifak_Error_While_Saving_Obj {
 	}
 	
 	
+	//-----------------facility management screen
 	
 	
 	
+	@FindBy(xpath = "//td[text()='Facilities Management']")
+	private WebElement facilityManagement_screen;
+	public WebElement facilityManagement_screen() {
+		return facilityManagement_screen;
+	}
 	
+	@FindBy(xpath = "//span[text()='Update After Approve']")
+	private WebElement updateAfterApprove_screen;
+	public WebElement updateAfterApprove_screen() {
+		return updateAfterApprove_screen;
+	}
 	
+	@FindBy(xpath = "//td[@id='facilityManagementGridTbl_Id_WIFT008UP_pager_left']/table/tbody/tr/td[7][text()='Clear']")
+	private WebElement clearButton_InUpdateApproveScreen;
+	public WebElement clearButton_InUpdateApproveScreen() {
+		return clearButton_InUpdateApproveScreen;
+	}
 	
+	@FindBy(xpath = "//table[@id='facilityManagementGridTbl_Id_WIFT008UP']/tbody/tr[2]")
+	private WebElement retriveData_InUpdateApproveScreen;
+	public WebElement retriveData_InUpdateApproveScreen() {
+		return retriveData_InUpdateApproveScreen;
+	}
 	
+//	@FindBy(xpath = "//table[@id='facilityManagementGridTbl_Id_WIFT008UP']/tbody/tr[2]")
+//	private WebElement retriveData_InUpdateApproveScreen;
+//	public WebElement retriveData_InUpdateApproveScreen() {
+//		return retriveData_InUpdateApproveScreen;
+//	}
 	
 	
 	

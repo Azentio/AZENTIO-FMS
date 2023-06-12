@@ -1,5 +1,7 @@
 package stepdefinitions;
 
+import static org.testng.Assert.assertTrue;
+
 import java.util.List;
 import java.util.Map;
 
@@ -698,31 +700,6 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 	    }
 	 
 	 //-----------------------------------------------------
-//	 @And("^Click Search Button In Account No $")
-//	    public void click_search_button_in_account_no() throws Throwable {
-//		 waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Search_Button_In_Account_No());
-//			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Search_Button_In_Account_No());
-//			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Search_Button_In_Account_No());
-//	    }
-
-//	    @And("^Double Click Search Account No$")
-//	    public void double_click_search_account_no() throws Throwable {
-//	    	 waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Currency__Button_In_Account_No());
-//				clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Currency__Button_In_Account_No());
-//				clicksAndActionsHelper.doubleClick(FMSWifakErrorWhileSavingObj.Currency__Button_In_Account_No());
-//				FMSWifakErrorWhileSavingObj.Currency__Button_In_Account_No().sendKeys("840");
-//				
-//								
-//				waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.GLCode__Button_In_Account_No());
-//				clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.GLCode__Button_In_Account_No());
-//				clicksAndActionsHelper.doubleClick(FMSWifakErrorWhileSavingObj.GLCode__Button_In_Account_No());
-//				FMSWifakErrorWhileSavingObj.GLCode__Button_In_Account_No().sendKeys("10001");
-//				
-//				waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Serial__Button_In_Account_No());
-//				clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Serial__Button_In_Account_No());
-//				clicksAndActionsHelper.doubleClick(FMSWifakErrorWhileSavingObj.Serial__Button_In_Account_No());
-//				FMSWifakErrorWhileSavingObj.Serial__Button_In_Account_No().sendKeys("1");
-//		    }
 	    
 	    @And("^Enter Currency Button In Account No$")
 	    public void enter_currency_button_in_account_no() throws Throwable {
@@ -757,8 +734,7 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Enter_Account_Number());
 			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Enter_Account_Number());
 			FMSWifakErrorWhileSavingObj.Enter_Account_Number().sendKeys("84001000100000727001");
-		//	Thread.sleep(3000);
-	    }
+			    }
 	    
 	    
 	    
@@ -814,17 +790,10 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 	        
 	    }
 
-//	    @And("^ Click Document Details $")
-//	    public void click_document_details() throws Throwable {
-//	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Click_Document_Details());
-//			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Click_Document_Details());
-//			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Click_Document_Details());
-//	    }
-
 	    
 	    @And("^Click Document Details$")
 	    public void click_document_details() throws Throwable {
-//	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Click_Document_Details());
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Click_Document_Details());
 //			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Click_Document_Details());
 //			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Click_Document_Details());
 			
@@ -843,7 +812,7 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 	    
 	    @And("^Enter The Value Solicitor Name$")
 	    public void enter_the_value_solicitor_name() throws Throwable {
-//	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.EnterTheValue_Solicitor_Name());
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.EnterTheValue_Solicitor_Name());
 //			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.EnterTheValue_Solicitor_Name());
 //			clicksAndActionsHelper.doubleClick(FMSWifakErrorWhileSavingObj.EnterTheValue_Solicitor_Name());
 			
@@ -863,7 +832,7 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 
 	    @And("^Enter The Value Estimator Name$")
 	    public void enter_the_value_estimator_name() throws Throwable {
-//	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.EnterTheValue_Estimator_Name());
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.EnterTheValue_Estimator_Name());
 //			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.EnterTheValue_Estimator_Name());
 //			clicksAndActionsHelper.doubleClick(FMSWifakErrorWhileSavingObj.EnterTheValue_Estimator_Name());
 			
@@ -893,23 +862,21 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 
 	    @And("^Click Ok Button In Waring Screen Document Details$")
 	    public void click_ok_button_in_waring_screen_document_details() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Validate_Warning_ConfirmValidateProcess());
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Waring_OnLimitDetails_Tab());
 //			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Validate_Warning_ConfirmValidateProcess());
 //			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Validate_Warning_ConfirmValidateProcess());
 			
 			for (int i = 0; i < 2000; i++) {
 				try {
 				//	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Validate_Warning_ConfirmValidateProcess());
-					clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Validate_Warning_ConfirmValidateProcess());
+					clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Waring_OnLimitDetails_Tab());
 				} catch (Exception e) {
-					if (i == 199) {
+					if (i == 1999) {
 						Assert.fail(e.getMessage());
 					}
-				
-			}
+				 }
 			 }
-			Thread.sleep(5000);
-	    }
+			}
 	    
 	    @Then("Click OK Button In Confirm Already Created IN Document Details")
 	    public void click_ok_button_in_confirm_already_created_in_document_details() {
@@ -995,6 +962,7 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 	        System.err.println("Reference Number: "+SuccessMsg);
 	   //     fmsTransactionsExcelData.updateTestData("DS_AT_RF_139", "Approve Code", SuccessMsg);
 
+	        waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.successPopup());
 	        for (int i = 0; i < 2000; i++) {
 	            try {
 	                FMSWifakErrorWhileSavingObj.SuccessPopupOkBtn().click();
@@ -1019,36 +987,6 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 	            }
 	        }
 	    	
-//	    	JavascriptHelper.scrollIntoView(FMSWifakErrorWhileSavingObj.Validate_Button());
-//	    	waitHelper.waitForElementwithFluentwait(driver,FMSWifakErrorWhileSavingObj.Validate_Button());
-//	    	clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Validate_Button());
-//	    	clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Validate_Button());
-//	    	Thread.sleep(5000);
-//	    	
-//	    	for (int i = 0; i < 500; i++) {
-//				try {
-//					if(FMSWifakErrorWhileSavingObj.PopupBefore_ValidateButton().isDisplayed()) {
-//						clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.ServerReuest());
-//						Thread.sleep(5000);
-//						waitHelper.waitForElementwithFluentwait(driver,FMSWifakErrorWhileSavingObj.Validate_Button());
-//						clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Validate_Button());
-//						Thread.sleep(6000);
-//					}
-//					break;
-//				} catch (Exception e) {
-//					
-//				}
-//				
-//			} 
-	    	
-//	    	JavascriptHelper.scrollIntoView(FMSWifakErrorWhileSavingObj.Validate_Button());
-//	    	waitHelper.waitForElementwithFluentwait(driver,FMSWifakErrorWhileSavingObj.Validate_Button());
-//	    	clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Sucess_Screen());
-//			FMSWifakErrorWhileSavingObj.Validate_Button().click();
-	    	
-//	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Ok_Button_In_Sucess_Screen());
-//			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Sucess_Screen());
-//      		clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Sucess_Screen());
 	    }
 
 	    @And("^Click OK Button In Success Screen IN Document Details$")
@@ -1069,6 +1007,12 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 			FMSWifakErrorWhileSavingObj.Expiratin_date_additional_Details().sendKeys(Keys.TAB);
 	    }
 
+	    @Then("Validate holiday day allow or not")
+	    public void validate_holiday_day_allow_or_not() {
+	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.validate_holidayDate());
+	    	Assert.assertTrue(FMSWifakErrorWhileSavingObj.validate_holidayDate().isDisplayed());
+	    }
+	    
 	    @And("^Confirm the Requested Holiday date$")
 	    public void confirm_the_requested_holiday_date() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Confirm_theRequested_Holiday_date());
@@ -1810,20 +1754,18 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 	    @Then("^Click Ok Button In Waring Screen In Repayment Plan$")
 	    public void click_ok_button_in_waring_screen_in_repayment_plan() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Ok_Button_In_Waring_Screen());
-			clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Waring_Screen());
-			clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Waring_Screen());
-			Thread.sleep(6000);
-//	    	for (int i = 0; i < 200; i++) {
-//				try {
-//				//	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.Waring_RepaymentPlan());
-//					clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Waring_RepaymentPlan());
-//					break;
-//				} catch (Exception e) {
-//					if (i == 199) {
-//						Assert.fail(e.getMessage());
-//					}
-//				}
-//			}
+		//	clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Waring_Screen());
+		//	clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Waring_Screen());
+			for (int i = 0; i < 2000; i++) {
+				try {
+					clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.Ok_Button_In_Waring_Screen());
+					break;
+				} catch (Exception e) {
+					if (i == 1999) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
 	    }
 	    
 
@@ -1944,9 +1886,19 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 	    	
 	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.ButtonConfirmOk1());
 	    	FMSWifakErrorWhileSavingObj.ButtonConfirmOk1().click();
+	    	    	
 	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.ButtonConfirmOk1());
-	    	FMSWifakErrorWhileSavingObj.ButtonConfirmOk1().click();
-	    	Thread.sleep(5000);
+	    	
+	    	for (int i = 0; i < 2000; i++) {
+	            try {
+	            	FMSWifakErrorWhileSavingObj.ButtonConfirmOk1().click();
+	                break;
+	            } catch (Exception e) {
+	                if (i==1999) {
+	                    Assert.fail(e.getMessage());
+	                }
+	            }
+	        }
 	    	
 	    }
 	    
@@ -1955,7 +1907,17 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 	    @And("^User clicks the Approve Level2 link$")
 	    public void user_clicks_the_approve_level2_link() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.applicationFinancialFacilityApproveLevel2());
-	    	FMSWifakErrorWhileSavingObj.applicationFinancialFacilityApproveLevel2().click();
+	    	//FMSWifakErrorWhileSavingObj.applicationFinancialFacilityApproveLevel2().click();
+	    	for (int i = 0; i < 2000; i++) {
+	            try {
+	                FMSWifakErrorWhileSavingObj.applicationFinancialFacilityApproveLevel2().click();
+	                break;
+	            } catch (Exception e) {
+	                if (i==1999) {
+	                    Assert.fail(e.getMessage());
+	                }
+	            }
+	        }
 	    }
 	    
 	    @And("^User retrive the first data in approve level2$")
