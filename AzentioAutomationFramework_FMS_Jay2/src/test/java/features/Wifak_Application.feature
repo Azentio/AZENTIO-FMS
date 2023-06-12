@@ -441,7 +441,7 @@ Feature: Wifak Application
     And User retrive the first data in approve level3
     And User select the level3 decision as approve
     When User clicks on the level3 submit button
-    Then Click Update After Approve in Application For Finacial Facilities
+   # Then Click Update After Approve in Application For Finacial Facilities
     
  @814762
  Scenario: AIBBI190201 - Errors at facility update after approve

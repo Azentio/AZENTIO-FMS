@@ -1988,4 +1988,8 @@ public class FMS_Wifak_Error_While_Saving_Steps {
 	    	waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.ButtonSuccessOk1());
 	    	FMSWifakErrorWhileSavingObj.ButtonSuccessOk1().click();
 	    } 
+	    
+	    //-------facility management screen
+	    
+	    
 }
