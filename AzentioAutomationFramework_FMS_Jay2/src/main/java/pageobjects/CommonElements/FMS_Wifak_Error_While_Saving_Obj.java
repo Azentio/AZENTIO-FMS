@@ -1397,7 +1397,7 @@ public class FMS_Wifak_Error_While_Saving_Obj {
 	}
 	
 	
-	//-----------------facility management screen
+	//----------------- @814762 facility management screen
 	
 	
 	
@@ -1407,7 +1407,7 @@ public class FMS_Wifak_Error_While_Saving_Obj {
 		return facilityManagement_screen;
 	}
 	
-	@FindBy(xpath = "//span[text()='Update After Approve']")
+	@FindBy(xpath = "//a[@id='WIFT008UP']/span[text()='Update After Approve']")
 	private WebElement updateAfterApprove_screen;
 	public WebElement updateAfterApprove_screen() {
 		return updateAfterApprove_screen;
@@ -1425,40 +1425,120 @@ public class FMS_Wifak_Error_While_Saving_Obj {
 		return retriveData_InUpdateApproveScreen;
 	}
 	
-//	@FindBy(xpath = "//table[@id='facilityManagementGridTbl_Id_WIFT008UP']/tbody/tr[2]")
-//	private WebElement retriveData_InUpdateApproveScreen;
-//	public WebElement retriveData_InUpdateApproveScreen() {
-//		return retriveData_InUpdateApproveScreen;
+	@FindBy(id = "facilityApplicationDetailsTab_WIFT008UP")
+	private WebElement facilityApplicationDetails_InUpdateApproveScreen;
+	public WebElement facilityApplicationDetails_InUpdateApproveScreen() {
+		return facilityApplicationDetails_InUpdateApproveScreen;
+	}
+	
+	@FindBy(id = "facilityMgtAppDet_Exceed_Facility_Sublimit_WIFT008UP")
+	private WebElement exceedFacilityAtSublimit_InUpdateApproveScreen;
+	public WebElement exceedFacilityAtSublimit_InUpdateApproveScreen() {
+		return exceedFacilityAtSublimit_InUpdateApproveScreen;
+	}
+	
+	@FindBy(id = "facilityManagementSubjectFullRepaymentYN_WIFT008UP")
+	private WebElement subjectTofullRepayment_InUpdateApproveScreen;
+	public WebElement subjectTofullRepayment_InUpdateApproveScreen() {
+		return subjectTofullRepayment_InUpdateApproveScreen;
+	}
+	
+	@FindBy(id = "facilityLimitDetailsTab_WIFT008UP")
+	private WebElement facilityLimitDetails_InUpdateApproveScreen;
+	public WebElement facilityLimitDetails_InUpdateApproveScreen() {
+		return facilityLimitDetails_InUpdateApproveScreen;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_FacilityManagementFacilityLimitDetailsGrid_WIFT008UP_1_fmsFacilityDetVO.GENERAL_FACILITY_TYPE']")
+	private WebElement productClass_InfacilityLimitDetails_InUpdateApproveScreen;
+	public WebElement productClass_InfacilityLimitDetails_InUpdateApproveScreen() {
+		return productClass_InfacilityLimitDetails_InUpdateApproveScreen;
+	}
+	
+	@FindBy(id = "facilityMgtLimitDetailsCAP_RATE_WIFT008UP")
+	private WebElement capRate_InLimitDetails_InUpdateApproveScreen;
+	public WebElement capRate_InLimitDetails_InUpdateApproveScreen() {
+		return capRate_InLimitDetails_InUpdateApproveScreen;
+	}
+	
+	@FindBy(id = "facilityMgtLimitDetailsSELLING_PRICE_WIFT008UP")
+	private WebElement sellingPrice_InLimitDetails_InUpdateApproveScreen;
+	public WebElement sellingPrice_InLimitDetails_InUpdateApproveScreen() {
+		return sellingPrice_InLimitDetails_InUpdateApproveScreen;
+	}
+	
+	@FindBy(id = "facilityManagement_limitDetails_edit_btn_WIFT008UP")
+	private WebElement EditBUtton_InLimitDetails_InUpdateApproveScreen;
+	public WebElement EditBUtton_InLimitDetails_InUpdateApproveScreen() {
+		return EditBUtton_InLimitDetails_InUpdateApproveScreen;
+	}
+	
+	@FindBy(id = "DocumentDetailsTab_WIFT008UP")
+	private WebElement documentDetails_InUpdateApproveScreen;
+	public WebElement documentDetails_InUpdateApproveScreen() {
+		return documentDetails_InUpdateApproveScreen;
+	}
+	
+	@FindBy(id = "td_FacilityManagementDocumentDetailsGrid_WIFT008UP_0_rn")
+	private WebElement clickfirstRow1buttonButton_InDocumentDetails;
+	public WebElement clickfirstRow1buttonButton_InDocumentDetails() {
+		return clickfirstRow1buttonButton_InDocumentDetails;
+	}
+	
+	
+	@FindBy(xpath = "//td[@id='td_FacilityManagementDocumentDetailsGrid_WIFT008UP_1_fmsFacDocumentsVO.SOL_DATE_SENT']")
+	private WebElement solicitorDataSend_InDocumentDetails;
+	public WebElement solicitorDataSend_InDocumentDetails() {
+		return solicitorDataSend_InDocumentDetails;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_FacilityManagementDocumentDetailsGrid_WIFT008UP_1_fmsFacDocumentsVO.SOL_DATE_REC']")
+	private WebElement solicitorDataReceived_InDocumentDetails;
+	public WebElement solicitorDataReceived_InDocumentDetails() {
+		return solicitorDataReceived_InDocumentDetails;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_FacilityManagementDocumentDetailsGrid_WIFT008UP_1_fmsFacDocumentsVO.EST_DATE_SENT']")
+	private WebElement estimatorDateSent_InDocumentDetails;
+	public WebElement estimatorDateSent_InDocumentDetails() {
+		return estimatorDateSent_InDocumentDetails;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_FacilityManagementDocumentDetailsGrid_WIFT008UP_1_fmsFacDocumentsVO.EST_DATE_REC']")
+	private WebElement estimatorDateRecevied_InDocumentDetails;
+	public WebElement estimatorDateRecevied_InDocumentDetails() {
+		return estimatorDateRecevied_InDocumentDetails;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_FacilityManagementDocumentDetailsGrid_WIFT008UP_1_fmsFacDocumentsVO.CUSTODIAN_SENT']")
+	private WebElement custodianDateSent_InDocumentDetails;
+	public WebElement custodianDateSent_InDocumentDetails() {
+		return custodianDateSent_InDocumentDetails;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_FacilityManagementDocumentDetailsGrid_WIFT008UP_1_fmsFacDocumentsVO.CUSTODIAN_SENT']")
+	private WebElement solicitorDataSendRow2_InDocumentDetails;
+	public WebElement solicitorDataSendRow2_InDocumentDetails() {
+		return solicitorDataSendRow2_InDocumentDetails;
+	}
+	
+	@FindBy(xpath = "//a[@id='WIFT008AP']/span[text()='Approve/Reject']")
+	private WebElement approveRejectScreen_FM;
+	public WebElement approveRejectScreen_FM() {
+		return approveRejectScreen_FM;
+	}
+	
+	@FindBy(xpath = "//input[@id='facilityManagementGridTbl_Id_WIFT008AP_gs_fmsFacilityVO.CODE']")
+	private WebElement enterCode_InapprovelScreen;
+	public WebElement enterCode_InapprovelScreen() {
+		return enterCode_InapprovelScreen;
+	}
+	
+//	@FindBy(xpath = "//tr[@id='1']")
+//	private WebElement selectFirstRow_InapprovelScreen;
+//	public WebElement enterCode_InapprovelScreen() {
+//		return enterCode_InapprovelScreen;
 //	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	

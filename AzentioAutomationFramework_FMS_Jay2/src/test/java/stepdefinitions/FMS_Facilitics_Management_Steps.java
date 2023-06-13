@@ -42,15 +42,7 @@ public class FMS_Facilitics_Management_Steps {
 		FMS_FaciliticsManagementObj.Click_Application_Ref().sendKeys("3561");
 		FMS_FaciliticsManagementObj.Click_Application_Ref().sendKeys(Keys.TAB);
 		    }
-
     
-//    @Then("^Click Additional Details SunMenu$")
-//    public void click_additional_details_sunmenu() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, FMS_FaciliticsManagementObj.Click_Additional_Details());
-//		clicksAndActionsHelper.moveToElement(FMS_FaciliticsManagementObj.Click_Additional_Details());
-//		clicksAndActionsHelper.clickOnElement(FMS_FaciliticsManagementObj.Click_Additional_Details());
-//    }
-
     @Then("^Click ProductClass In facility Limit Details$")
     public void click_productclass_in_facility_limit_details() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, FMS_FaciliticsManagementObj.DoubleClick_ProductClassIN_facility_Limit_Details());
@@ -74,7 +66,7 @@ public class FMS_Facilitics_Management_Steps {
     }
     @And("^Click facility Limit Details$")
     public void click_facility_limit_details() throws Throwable {
-    //	waitHelper.waitForElementwithFluentwait(driver, FMS_FaciliticsManagementObj.Click_facility_Limit_Details());
+    	waitHelper.waitForElementwithFluentwait(driver, FMS_FaciliticsManagementObj.Click_facility_Limit_Details());
 	//	clicksAndActionsHelper.moveToElement(FMS_FaciliticsManagementObj.Click_facility_Limit_Details());
 	//	clicksAndActionsHelper.clickOnElement(FMS_FaciliticsManagementObj.Click_facility_Limit_Details());
 		
@@ -98,4 +90,8 @@ public class FMS_Facilitics_Management_Steps {
 		FMS_FaciliticsManagementObj.Enter_Previous_dataIn_MaturityDate().sendKeys("04/01/2021");
 		Assert.assertEquals(true, FMS_FaciliticsManagementObj.Enter_Previous_dataIn_MaturityDate().isDisplayed());
     }
+    
+    //-------------------------------
+    
+    
 }
