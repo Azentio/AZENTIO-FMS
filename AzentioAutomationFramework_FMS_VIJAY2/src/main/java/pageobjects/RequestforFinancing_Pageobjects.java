@@ -51,16 +51,42 @@ public class RequestforFinancing_Pageobjects {
 		return  ApplicationforfinancialfacilitiesMaintenanceCifno;
 	}
 	
-	@FindBy(xpath =  "//input[@id='lookuptxt_applicationFacilityFacilityType_WIFT001MT']")
+	@FindBy(xpath = "//span[@id='spanLookup_applicationFacilitycif_WIFT001MT']")
+	private WebElement  ApplicationforfinancialfacilitiesMaintenanceCifnoSearch;
+	public WebElement Applicationforfinancialfacilities_Maintenance_CifnoSearch() {
+		return  ApplicationforfinancialfacilitiesMaintenanceCifnoSearch;
+	}
+	
+	
+	@FindBy(xpath =  "//input[@name='applicationFacilityCO.fmsApplVO.LOAN_TYPE']")
 	private WebElement ApplicationforfinancialfacilitiesMaintenanceFacilitytype;
 	public WebElement Applicationforfinancialfacilities_Maintenance_Facilitytype() {
 		return ApplicationforfinancialfacilitiesMaintenanceFacilitytype;
 	}
 	
-	@FindBy(xpath =  "//input[@id='lookuptxt_applicationFacilityCountry_WIFT001MT']")
+	@FindBy(xpath =  "//span[@id='spanLookup_applicationFacilityFacilityType_WIFT001MT']/span")
+	private WebElement ApplicationforfinancialfacilitiesMaintenanceFacilitytypeSearch;
+	public WebElement Applicationforfinancialfacilities_Maintenance_FacilitytypeSearch() {
+		return ApplicationforfinancialfacilitiesMaintenanceFacilitytypeSearch;
+	}
+	
+	
+	@FindBy(xpath = "//span[@id='spanLookup_applicationFacilityCountry_WIFT001MT']/span")
+	private WebElement ApplicationforfinancialfacilitiesMaintenanceCountryoffinancingSearch;
+	public WebElement Applicationforfinancialfacilities_Maintenance_CountryoffinancingSearch() {
+		return ApplicationforfinancialfacilitiesMaintenanceCountryoffinancingSearch;
+	}
+	
+	@FindBy(xpath =  "//input[@name='COUNTRY_CODE']")
 	private WebElement ApplicationforfinancialfacilitiesMaintenanceCountryoffinancing;
 	public WebElement Applicationforfinancialfacilities_Maintenance_Countryoffinancing() {
 		return ApplicationforfinancialfacilitiesMaintenanceCountryoffinancing;
+	}
+	
+	@FindBy(xpath =  "//table[@id='gridtab_applicationFacilityCountry_WIFT001MT']/tbody/tr[2]/td")
+	private WebElement ApplicationforfinancialfacilitiesMaintenanceCountryoffinancingSelect;
+	public WebElement Applicationforfinancialfacilities_Maintenance_CountryoffinancingSelect() {
+		return ApplicationforfinancialfacilitiesMaintenanceCountryoffinancingSelect;
 	}
 	
 	@FindBy(xpath =  "//span[@id='spanLookup_applicationFacilityRating_WIFT001MT']/span")
@@ -69,12 +95,41 @@ public class RequestforFinancing_Pageobjects {
 		return ApplicationforfinancialfacilitiesMaintenanceFacilityRatingSearch;
 	}
 
+	
+	
+	
 	//@FindBy(xpath =  "//td[@id='td_gridtab_applicationFacilityRating_WIFT001MT_1_LINE_NBR']")
 	@FindBy(xpath = "//input[@name='applicationFacilityCO.fmsApplVO.FACILITY_RATING_GRADE']")
 	private WebElement ApplicationforfinancialfacilitiesMaintenanceFacilityRating;
 	public WebElement Applicationforfinancialfacilities_Maintenance_FacilityRating() {
 		return ApplicationforfinancialfacilitiesMaintenanceFacilityRating;
 	}
+	
+	@FindBy(xpath =  "//span[@id='spanLookup_applicationFacilityMarketedBy_WIFT001MT']/span")
+	private WebElement ApplicationforfinancialfacilitiesMaintenanceMarketedBySearch;
+	public WebElement Applicationforfinancialfacilities_Maintenance_MarketedBySearch() {
+		return ApplicationforfinancialfacilitiesMaintenanceMarketedBySearch;
+	}
+	
+	@FindBy(xpath = "//input[@name='applicationFacilityCO.fmsApplVO.MARKETED_BY']")
+	private WebElement ApplicationforfinancialfacilitiesMaintenanceMarketedBy;
+	public WebElement Applicationforfinancialfacilities_Maintenance_MarketedBy() {
+		return ApplicationforfinancialfacilitiesMaintenanceMarketedBy;
+	}
+	
+	
+	@FindBy(xpath = "//input[@id='gridtab_applicationFacilityMarketedBy_WIFT001MT_gs_USER_ID']")
+	private WebElement ApplicationforfinancialfacilitiesMaintenanceMarketedByFind;
+	public WebElement Applicationforfinancialfacilities_Maintenance_MarketedByFind() {
+		return ApplicationforfinancialfacilitiesMaintenanceMarketedByFind;
+	}
+	
+	@FindBy(xpath =  "//table[@id='gridtab_applicationFacilityMarketedBy_WIFT001MT']/tbody/tr[2]")
+	private WebElement ApplicationforfinancialfacilitiesMaintenanceMarketedBySelect;
+	public WebElement Applicationforfinancialfacilities_Maintenance_MarketedBySelect() {
+		return ApplicationforfinancialfacilitiesMaintenanceMarketedBySelect;
+	}
+	
 	
 	
 	@FindBy(xpath = "//li[@id='applicationFacilityAdditionDetailsTabs_WIFT001MT']/a/span[text()='Additional Details']")
@@ -330,7 +385,7 @@ public class RequestforFinancing_Pageobjects {
 	
 	//***********************402669***************************//
 	
-	@FindBy(xpath = "//button[@id= 'submit_529588386']/span[2][contains(text(),' Yes ')]")
+	@FindBy(xpath = "//span[contains(text(),' Yes ')]")
 	private WebElement WifakApplicationPostApproval;
 	public WebElement WifakApplication_PostApproval() {
 		return WifakApplicationPostApproval;

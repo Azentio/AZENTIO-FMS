@@ -143,7 +143,7 @@ Then Check the Country of Financing field is filled
 
 
 @402669
-Scenario:TS-0003-FMS-Modification new fields at the level of Request for Finance Screen
+Scenario: TS-0003-FMS-Modification new fields at the level of Request for Finance Screen
 Given navigate to FMS application and login with valid credentials2
 And get the test data set id for AT_RF_195
 And Click on the WIFAK APPLICATION menu 
@@ -161,4 +161,19 @@ Then Enter values in Max Revolving Times field
 Then Enable Subject To Full Repayment flag
 Then Check the Current Utilization field is enabled
 Then Check the Total Approval field is enabled
+
+@834958
+Scenario: Check a new field “Marketed By” is added under the Request Details Tab in Request for Financing – Maintenance screen
+Given navigate to FMS application and login with valid credentials2
+And get the test data set id for AT_RF_196
+And Click on the WIFAK APPLICATION menu 
+And Click on the WIFAK APPLICATION submenu under WIFAK APPLICATION
+And Click on the Application For Financial Facilities under WIFAK APPLICATION submenu
+And Click on the Maintenance screen under Application For Financial Facilities
+And Select the Application For field in Maintenance screen
+And Select the CIF No in Main Information tab
+And Select the Facility Type in Main Information tab
+And Click the Country of Financing in Main Information tab
+And Select the Facility Rating
+Then Check the Marketed By field is displayed
  
