@@ -1,5 +1,5 @@
 
-Feature:To check the modification at the level of Request for Finance screen-a new DDLB filed Economic Sector and Sub-Economic Sector
+Feature: To check the modification at the level of Request for Finance screen-a new DDLB filed Economic Sector and Sub-Economic Sector
 @931766_1
 Scenario: AIBBI190625 - Economic and Sub-Economic Sector Not appearing
 Given User Launch the CSM params Application
