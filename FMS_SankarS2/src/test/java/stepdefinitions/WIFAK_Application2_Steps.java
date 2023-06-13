@@ -66,8 +66,7 @@ public class WIFAK_Application2_Steps {
 	
 	@And("^User clicks on the parameter module$")
     public void user_clicks_on_the_parameter_module() throws Throwable {
-        waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.fmsParamParameter());
-        
+        waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.fmsParamParameter());        
         facilityTypeObj.fmsParamParameter().click();
     }
 

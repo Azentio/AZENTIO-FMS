@@ -61,26 +61,26 @@ And User clicks on the add button
 And User clicks on the Charges details button
 And User enter the code and check the collect at facility approval
 And User click the Ok button
-#And User move to the Document details tab
-#And User enter the Solicitor Name
-#And User enter the Estimator Name
-#And User clicks the save button
-#And User clicks the validate button
-#And User clicks the Approve Level1 link
-#And User retrive the first data in approve level1
-#And User select the level1 decision as approve
-#And User clicks on the level1 submit button
-#And User clicks the Approve Level2 link
-#And User retrive the first data in approve level2
-#And User select the level2 decision as approve
-#And User clicks on the level2 submit button
-#And User clicks the Approve Level3 link
-#And User retrive the first data in approve level3
-#And User select the level3 decision as approve
-#When User clicks on the level3 submit button
+And User move to the Document details tab
+And User enter the Solicitor Name
+And User enter the Estimator Name
+And User clicks the save button
+And User clicks the validate button
+And User clicks the Approve Level1 link
+And User retrive the first data in approve level1
+And User select the level1 decision as approve
+And User clicks on the level1 submit button
+And User clicks the Approve Level2 link
+And User retrive the first data in approve level2
+And User select the level2 decision as approve
+And User clicks on the level2 submit button
+And User clicks the Approve Level3 link
+And User retrive the first data in approve level3
+And User select the level3 decision as approve
+When User clicks on the level3 submit button
 
 
-@294466
+@AT_AFF_052
 Scenario: NBADAD150041 - Field to update Branch Manager comments while approving
 
 Given navigate to FMS application and login with valid credentials

@@ -420,8 +420,7 @@ public class WIFAK_ApplicationObj {
 	}	
 	
 	
-//	@294466
-	
+//	@AT_AFF_052	
 	@FindBy(xpath = "//tr[@id='1']")
 	private WebElement searched_data;
 	public WebElement searchedData() {

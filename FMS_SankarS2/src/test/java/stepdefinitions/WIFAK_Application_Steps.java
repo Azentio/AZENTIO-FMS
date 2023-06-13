@@ -487,7 +487,7 @@ public class WIFAK_Application_Steps {
 //    	String SuccessMsg = WIFAKapplicationObj.successPopupMessage().getText();
     	String SuccessMsg = WIFAKapplicationObj.successPopupMessage().getText().substring(23, 27);
     	System.err.println("Reference Number: "+SuccessMsg);
-    	fmsTransactionsExcelData.updateTestData("DS_AT_RF_102", "Approve Code", SuccessMsg);
+    	fmsTransactionsExcelData.updateTestData("DS_AT_AFF_048", "Approve Code", SuccessMsg);
     	
     	for (int i = 0; i < 2000; i++) {
 			try {
@@ -633,7 +633,7 @@ public class WIFAK_Application_Steps {
     }
     
     
-    // @294466
+    // @AT_AFF_052
     @And("^User clicks on the clear button$")
     public void user_clicks_on_the_clear_button() throws Throwable {
 //        waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.clearBtn());

@@ -79,7 +79,13 @@ public class Facility_TypeObj {
 	private WebElement committee_approval_flag;
 	public WebElement committeeApprovalFlag() {
 		return committee_approval_flag;
-	}	
+	}
+	
+	@FindBy(xpath = "//select[@id='fmsFacilityType_members_number_P008UP']")
+	private WebElement committee_approval_flag_member_dropdown;
+	public WebElement committeeApprovalFlagMemberDropdown() {
+		return committee_approval_flag_member_dropdown;
+	}
 	
 	@FindBy(xpath = "//input[@id='fmsFacilityType_credit_authorize_P008UP']")
 	private WebElement credit_authorzie_flag;
