@@ -1,8 +1,10 @@
 Feature: Wifak Application
 
-  @870478
+   @870478
   Scenario: Error while saving FMS application.
+  
     Given navigate to FMS application2 and login with valid credentials
+    And get the test data set id for AT_AFF_037
     And Click Wifak Application first
     And Click Wifak Application Second
     And Click Application for financial facilities
@@ -18,12 +20,17 @@ Feature: Wifak Application
     And Select limit Details
     And Click Add button on limit Detail
     And Enter ValueOn Product Class
-    And AfterEnter ValueOn Product Class Search
+    Then Check Flag in Clean Level IN Limits Detalis SubMenu
     And Click Add button AfterEnter Value On Product Class
-
-  #And Click Add button in Limits Detalis
-  #And CLick Save button in Limits Detlis
-  #And click Waring
+    Then Click the Product Class In Limits Details
+    And Click Save Button After In Limits Details
+    Then Click Ok Button In Waring Screen In Limits Details
+    And Click OK  Button In Sucess Screen In Limits Details
+    And Click Document Details
+    And Enter The Value Solicitor Name
+    And Enter The Value Estimator Name
+    And Click Validate Button in Document Details
+    
   @285052
   Scenario: System giving error on updating an application
     Given navigate to FMS application2 and login with valid credentials
@@ -42,9 +49,9 @@ Feature: Wifak Application
     And Select limit Details
     And Click Add button on limit Detail
     And Enter ValueOn Product Class
-    And AfterEnter ValueOn Product Class Search
+    Then Check Flag in Clean Level IN Limits Detalis SubMenu
     And Click Add button AfterEnter Value On Product Class
-    And Click ok on the warrning Screen
+  #  And Click ok on the warrning Screen
     And Click Fixed Assert button
     And Click AddButton On FixedAssert screen
     And Enter value on Catagory
@@ -54,12 +61,13 @@ Feature: Wifak Application
     And Enter value on Unit
     And Enter value on Cy
     And Enter value on UnitCost
-    And Click OkButton On Fixed AssertKey Screen
-    And Click Save button on limit details tab
-    And Click Ok saveOn Draft WarrningScreen
-    Then Click Ok OnSuccess Screen
+  #  And Click OkButton On Fixed AssertKey Screen
+  #  And Click Save button on limit details tab
+  #  And Click Ok saveOn Draft WarrningScreen
+  #  Then Click Ok OnSuccess Screen
 
   # And logout from the application
+  
   @1108920
   Scenario: BAJI200117 - VAT on advance insurance is wrongly calculated - BAJI200034
     Given navigate to FMS application2 and login with valid credentials
@@ -112,6 +120,7 @@ Feature: Wifak Application
     And Enter ValueOn Product Class
     And Click Search Button In Account No
     And Enter Double Click Search Account No
+    Then Check Flag in Clean Level IN Limits Detalis SubMenu
     #  And Enter Currency Button In Account No
     #   And Enter GLCode Button In Account No
     #   And Enter Serial Button In Account No
@@ -128,12 +137,7 @@ Feature: Wifak Application
     And Click Document Details
     And Enter The Value Solicitor Name
     And Enter The Value Estimator Name
-    And Click Save Button After Document Details
-    And Click Ok Button In Waring Screen Document Details
-    And Click OK  Button In Sucess Screen Document Details
     And Click Validate Button in Document Details
-    And Click Ok Button In Waring Screen Document Details
-    And Click OK Button In Success Screen IN Document Details
 
   @665893
   Scenario: TSR - RIDB180130 Maturity Date of any sublimit
@@ -446,27 +450,27 @@ Feature: Wifak Application
      # facilityManagement
  @814762   
  Scenario: AIBBI190201 - Errors at facility update after approve
-    Given navigate to FMS application2 and login with valid credentials
-    And Click Wifak Application first
-    And Click Wifak Application Second
-    And click facility management 
-    And click update after approvel
-    And Retrive one data in update after approvel screen
-    And click facility application details 
-    And check flag exceed facility at sublimit
-    And check flag subject to full repayment 
-    And click facility limit details 
-    And click product class 
-    And enter the value cap rate 
-    And enter the value selling price
-    And click document details approvel screen
-    And enter the date in document details 
-    And save the details
-    And click  approvel and reject screen
-    And enter the retrive data code
-    And validate the facility application details screen
-    And validate the product class screen
-    And validate the document details screen
+    Given  navigate to FMS application2 and login with valid credentials
+    And  Click Wifak Application first
+    And  Click Wifak Application Second
+    And User-610 click facility management 
+    And User-610 click update after approvel
+    And User-610 Retrive one data in update after approvel screen
+    And User-610 click facility application details 
+    And User-610 check flag exceed facility at sublimit
+    And User-610 check flag subject to full repayment 
+    And User-610 click facility limit details 
+    And User-610 click product class 
+    And User-610 enter the value cap rate 
+    And User-610 enter the value selling price
+    And User-610 click document details approvel screen
+    And User-610 enter the date in document details 
+    And User-610 save the details
+    And User-610 click  approvel and reject screen
+    And User-610 enter the retrive data code
+    And User-610 validate the facility application details screen
+    And User-610 validate the product class screen
+    And User-610 validate the document details screen
   
     @828238
     Scenario: ABEI190282 - Facility Closure Error
@@ -516,3 +520,21 @@ Feature: Wifak Application
     And User retrive the first data in approve level3
     And User select the level3 decision as approve
     When User clicks on the level3 submit button
+    
+   @315144 
+   Scenario: Remaining Cash margin updation after complete utilization of facility value -IIAB150154
+
+    Given  navigate to FMS application2 and login with valid credentials
+    And  Click Wifak Application first
+    And  Click Wifak Application Second
+    And User-610 click facility management 
+    And User-610 click update after approvel
+    And User-610 Retrive one data in update after approvel screen
+    And User-610 click facility application details 
+    And User-610 click document details approvel screen
+    And User-610 enter the date in document details 
+    
+    
+    
+    
+    

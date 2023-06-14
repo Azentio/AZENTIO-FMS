@@ -16,7 +16,7 @@ import utilities.ExtentTestManager;
                            "rerun:ReRunScenarios/FailedReRun.txt"}
            //  ,  dryRun = true //to check compilation errors                                      
             //   , tags="@127788" 
-            		,   tags="@740809"
+            		,   tags="@870478"
 
 )
 public class TestApplication extends AbstractTestNGCucumberTests {

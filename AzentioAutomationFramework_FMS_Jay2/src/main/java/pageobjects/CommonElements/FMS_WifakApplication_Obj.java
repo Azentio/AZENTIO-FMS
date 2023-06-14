@@ -9,11 +9,11 @@ import io.cucumber.java.PendingException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
-public class FMS_Wifak_Error_While_Saving_Obj {
+public class FMS_WifakApplication_Obj {
 
 	WebDriver driver;
 
-	public FMS_Wifak_Error_While_Saving_Obj(WebDriver driver) {
+	public FMS_WifakApplication_Obj(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -197,6 +197,18 @@ public class FMS_Wifak_Error_While_Saving_Obj {
 	private WebElement Enter_ValueOn_FacilityValue;
 	public WebElement Enter_ValueOn_FacilityValue() {
 		return Enter_ValueOn_FacilityValue;
+	}
+	
+	@FindBy(xpath =  "//div[text()='Please wait while server request completes']")
+	private WebElement SeverReruest_Popup;
+	public WebElement SeverReruest_Popup() {
+		return SeverReruest_Popup;
+	}
+	
+	@FindBy(xpath =  "//input[@id='_popup_path_sol_ok']")
+	private WebElement ServerReuestOK;
+	public WebElement ServerReuestOK() {
+		return ServerReuestOK;
 	}
 	
 	@FindBy(id =  "lookuptxt_applicationfacilityLimitDetailsPURPOSE_OF_FIN_WIFT001MT")
@@ -1486,7 +1498,7 @@ public class FMS_Wifak_Error_While_Saving_Obj {
 	}
 	
 	
-	@FindBy(xpath = "//td[@id='td_FacilityManagementDocumentDetailsGrid_WIFT008UP_1_fmsFacDocumentsVO.SOL_DATE_SENT']")
+	@FindBy(xpath = "//td[@id='td_FacilityManagementDocumentDetailsGrid_WIFT008UP_1_fmsFacDocumentsVO.SOL_DATE_SENT']/input")
 	private WebElement solicitorDataSend_InDocumentDetails;
 	public WebElement solicitorDataSend_InDocumentDetails() {
 		return solicitorDataSend_InDocumentDetails;
@@ -1534,61 +1546,138 @@ public class FMS_Wifak_Error_While_Saving_Obj {
 		return enterCode_InapprovelScreen;
 	}
 	
-//	@FindBy(xpath = "//tr[@id='1']")
-//	private WebElement selectFirstRow_InapprovelScreen;
-//	public WebElement enterCode_InapprovelScreen() {
-//		return enterCode_InapprovelScreen;
-//	}
+	@FindBy(xpath = "(//tr[@id='1'])[2]")
+	private WebElement selectFirstRow_InapprovelScreen;
+	public WebElement selectCode_InapprovelScreen() {
+		return enterCode_InapprovelScreen;
+	}
+	
+	
+	@FindBy(xpath = "//span[text()='Facility Application Details']")
+	private WebElement facilityApplicationDetails_InapprovelScreen;
+	public WebElement facilityApplicationDetails_InapprovelScreen() {
+		return facilityApplicationDetails_InapprovelScreen;
+	}
+	
+	@FindBy(xpath = "//input[@name='facilityManagementCO.fmsFacilityVO.EXCEED_SUBLIMIT_FACILITY_YN']")
+	private WebElement exceedFacilityAtSublimit_InapprovelScreen;
+	public WebElement exceedFacilityAtSublimit_InapprovelScreen() {
+		return exceedFacilityAtSublimit_InapprovelScreen;
+	}
+	
+	@FindBy(xpath = "//input[@name='facilityManagementCO.fmsFacilityVO.SUBJECT_FULL_REPAYMENT_YN']")
+	private WebElement subjectToFullRepayment_InapprovelScreen;
+	public WebElement subjectToFullRepayment_InapprovelScreen() {
+		return subjectToFullRepayment_InapprovelScreen;
+	}
+	
+	@FindBy(id = "facilityLimitDetailsTab_WIFT008AP")
+	private WebElement facilityLimitDetails_InapprovelScreen;
+	public WebElement facilityLimitDetails_InapprovelScreen() {
+		return facilityLimitDetails_InapprovelScreen;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_FacilityManagementFacilityLimitDetailsGrid_WIFT008AP_1_fmsFacilityDetVO.GENERAL_FACILITY_TYPE']")
+	private WebElement productClass_InapprovelScreen;
+	public WebElement productClass_InapprovelScreen() {
+		return productClass_InapprovelScreen;
+	}
+	
+	
+	@FindBy(xpath = "//input[@name='facilityManagementCO.fmsFacilityDetCO.fmsFacilityDetVO.CAP_RATE']")
+	private WebElement capRate_InapprovelScreen;
+	public WebElement capRate_InapprovelScreen() {
+		return capRate_InapprovelScreen;
+	}
+	
+	
+	@FindBy(xpath = "//input[@name='facilityManagementCO.fmsFacilityDetCO.fmsFacilityDetVO.SELLING_PRICE']")
+	private WebElement sellingPrice_InapprovelScreen;
+	public WebElement sellingPrice_InapprovelScreen() {
+		return sellingPrice_InapprovelScreen;
+	}
+	
+	@FindBy(xpath = "//button[@id='limitDetails_close_btn_WIFT008AP']")
+	private WebElement closeButton_InapprovelScreen;
+	public WebElement closeButton_InapprovelScreen() {
+		return closeButton_InapprovelScreen;
+	}
+	
+	@FindBy(xpath = "//span[text()='Document Details']")
+	private WebElement documentDetails_InapprovelScreen;
+	public WebElement documentDetails_InapprovelScreen() {
+		return documentDetails_InapprovelScreen;
+	}
+	
+	//td[@id='td_FacilityManagementDocumentDetailsGrid_WIFT008AP_1_fmsFacDocumentsVO.SOL_DATE_SENT']
+	
+	@FindBy(xpath = "//td[@id='td_FacilityManagementDocumentDetailsGrid_WIFT008AP_1_fmsFacDocumentsVO.SOL_DATE_SENT']")
+	private WebElement solicitorDateSent_InapprovelScreen;
+	public WebElement solicitorDateSent_InapprovelScreen() {
+		return solicitorDateSent_InapprovelScreen;
+	}
 	
 	
 	
+	//-----------------@315144 
+	 //  Scenario: Remaining Cash margin updation after complete utilization of facility value -IIAB150154
 	
 	
+	@FindBy(xpath = "//input[@name='facilityManagementCO.fmsFacilityVO.FACILITY_MARGIN']")
+	private WebElement cashMargin_InFacilityAppDetails_UpdateAft;
+	public WebElement cashMargin_InFacilityAppDetails_UpdateAft() {
+		return cashMargin_InFacilityAppDetails_UpdateAft;
+	}
 	
 	
+	@FindBy(xpath = "//td[text()='Draw Down Request']")
+	private WebElement drawDownRequest_Screen;
+	public WebElement drawDownRequest_Screen() {
+		return drawDownRequest_Screen;
+	}
+	
+	@FindBy(xpath = "//a[@id='WIFT009MT']/span[text()='Maintenance']")
+	private WebElement drawDownRequestMaintenance_Screen;
+	public WebElement drawDownRequestMaintenance_Screen() {
+		return drawDownRequestMaintenance_Screen;
+	}
 	
 	
+	@FindBy(id = "lookuptxt_drawDownRequestFacilityReference_WIFT009MT")
+	private WebElement facilityReference_drawDownMainInformation;
+	public WebElement facilityReference_drawDownMainInformation() {
+		return facilityReference_drawDownMainInformation;
+	}
 	
+	@FindBy(id = "lookuptxt_drawDownRequestFacilityReference_WIFT009MT")
+	private WebElement drawdownType_drawDownMainInformation;
+	public WebElement drawdownType_drawDownMainInformation() {
+		return drawdownType_drawDownMainInformation;
+	}
 	
+	@FindBy(xpath = "//input[@name='drawdownRequestCO.fmsDrawDownVO.LONG_NAME_ENG']")
+	private WebElement descriptionEnglish_drawDownMainInformation;
+	public WebElement descriptionEnglish_drawDownMainInformation() {
+		return descriptionEnglish_drawDownMainInformation;
+	}
 	
+	@FindBy(id = "//drawDownRequestFormId_WIFT009MT_Description_Arab_Key")
+	private WebElement descriptionArab_drawDownMainInformation;
+	public WebElement descriptionArab_drawDownMainInformation() {
+		return descriptionArab_drawDownMainInformation;
+	}
 	
+	@FindBy(xpath = "//input[@name='drawdownRequestCO.fmsDrawDownVO.DATE_SUBMITTED']")
+	private WebElement dateDatesubmitted_drawDownMainInformation;
+	public WebElement dateDatesubmitted_drawDownMainInformation() {
+		return dateDatesubmitted_drawDownMainInformation;
+	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	@FindBy(xpath = "//input[@name='drawdownRequestCO.fmsDrawDownVO.VALUE_DATE']")
+	private WebElement valueDatesubmitted_drawDownMainInformation;
+	public WebElement valueDatesubmitted_drawDownMainInformation() {
+		return valueDatesubmitted_drawDownMainInformation;
+	}
 	
 	
 	
