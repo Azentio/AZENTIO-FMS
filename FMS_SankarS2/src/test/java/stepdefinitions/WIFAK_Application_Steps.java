@@ -197,7 +197,6 @@ public class WIFAK_Application_Steps {
 	}
 
 	// @AT_AFF_036
-
 	@And("^User clicks the maintanance menu$")
 	public void user_clicks_the_maintanance_menu() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.appFinancialFacilityMaintanance());
@@ -340,7 +339,6 @@ public class WIFAK_Application_Steps {
 	@And("^User enter the product class details$")
     public void user_enter_the_product_class_details() throws Throwable {
         waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsNewRecordProductClass());
-//        WIFAKapplicationObj.limitDetailsNewRecordProductClass().sendKeys("1");
         WIFAKapplicationObj.limitDetailsNewRecordProductClass().sendKeys(testData.get("Product Class"));        
         WIFAKapplicationObj.limitDetailsNewRecordProductClass().sendKeys(Keys.TAB);
         
@@ -376,15 +374,6 @@ public class WIFAK_Application_Steps {
     	Thread.sleep(2000);
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.clickAddBtn());
     	WIFAKapplicationObj.clickAddBtn().click();
-    	
-//    	try {
-//			waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.ServerRequestNotComplete_OKButton());
-//			WIFAKapplicationObj.ServerRequestNotComplete_OKButton().click();
-//			waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.clickAddBtn());
-//			WIFAKapplicationObj.clickAddBtn().click();
-//		} catch (Exception e) {
-//			// TODO: handle exception
-//		}
     }
     
     @And("^User validate visibility of Collateral details button under limit details tab$")
@@ -487,7 +476,7 @@ public class WIFAK_Application_Steps {
 //    	String SuccessMsg = WIFAKapplicationObj.successPopupMessage().getText();
     	String SuccessMsg = WIFAKapplicationObj.successPopupMessage().getText().substring(23, 27);
     	System.err.println("Reference Number: "+SuccessMsg);
-    	fmsTransactionsExcelData.updateTestData("DS_AT_AFF_048", "Approve Code", SuccessMsg);
+    	fmsTransactionsExcelData.updateTestData("DS_AT_AFF_048", "Reference Code", SuccessMsg);
     	
     	for (int i = 0; i < 2000; i++) {
 			try {
@@ -526,7 +515,7 @@ public class WIFAK_Application_Steps {
     public void user_retrive_the_first_data_in_approve_level1() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approveLevel1CodeInput());
 //    	WIFAKapplicationObj.approveLevel1CodeInput().sendKeys("4067",Keys.ENTER);
-    	WIFAKapplicationObj.approveLevel1CodeInput().sendKeys(testData.get("Approve Code"),Keys.ENTER);
+    	WIFAKapplicationObj.approveLevel1CodeInput().sendKeys(testData.get("Reference Code"),Keys.ENTER);
     	
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approveLevel1RetriveData());
     	clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.approveLevel1RetriveData());
@@ -718,7 +707,7 @@ public class WIFAK_Application_Steps {
     }
     
     
-//  @583893_User1
+//  @AT_RF_098_User1
     @And("^User1 clicks on the WIFAK_Application first link$")
     public void user1_clicks_on_the_wifakapplication_first_link() throws Throwable {
     	for (int i = 0; i <= 300; i++) {
@@ -873,13 +862,13 @@ public class WIFAK_Application_Steps {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.successPopup());
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.successPopupMessage());
     	String SuccessMsg = WIFAKapplicationObj.successPopupMessage().getText().substring(23, 27);
-    	fmsTransactionsExcelData.updateTestData("DS01_583893_2", "Search Code", SuccessMsg);
+    	fmsTransactionsExcelData.updateTestData("DS_AT_RF_098", "Search Code", SuccessMsg);
     	
     	WIFAKapplicationObj.SuccessPopupOkBtn().click();
     }
 
     
-//  @583893_User2
+//  @AT_RF_098_User2
     @And("^User clicks on the search button in Application for financial facility main screen$")
     public void user_clicks_on_the_search_button_in_application_for_financial_facility_main_screen() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.applicationFinancialFacilitySearchBtn());

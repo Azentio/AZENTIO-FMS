@@ -480,7 +480,7 @@ public class WIFAK_ApplicationObj {
 	}
 	
 	
-//	@583893_User1
+//	@AT_RF_098_User1
 	@FindBy(xpath = "//a[@id='WIFT002MT']")
 	private WebElement wifak_application_child_approval_committee_recommend;
 	public WebElement approvalCommitteeRecommendations() {
@@ -567,7 +567,7 @@ public class WIFAK_ApplicationObj {
 	}
 	
 	
-//	@583893_User2	
+//	@AT_RF_098_User2
 	@FindBy(xpath = "//a[@id='infoBarSearchButton_WIFT001MT']")
 	private WebElement application_financial_facility_search_btn;
 	public WebElement applicationFinancialFacilitySearchBtn() {

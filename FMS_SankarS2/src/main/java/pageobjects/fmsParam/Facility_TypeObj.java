@@ -193,15 +193,29 @@ public class Facility_TypeObj {
 		return transfer_of_entities_module;
 	}
 	
-	@FindBy(xpath = "//td[text()='Maintenance']")
+	@FindBy(xpath = "//a[@id='TOE00MT']")
 	private WebElement transfer_entities_main;
 	public WebElement transferEntitiesMain(){
 		return transfer_entities_main;
-		/// now blocked after unblock some steps needed
 	}
 	
+	@FindBy(xpath = "//a[@id='infoBarSearchButton_TOE00MT']")
+	private WebElement transfer_entities_main_search_btn;
+	public WebElement transferEntitiesMainSearchBtn(){
+		return transfer_entities_main_search_btn;
+	}
 	
+	@FindBy(xpath = "//input[@name='FROM_CODE']")
+	private WebElement transfer_entities_main_search_from_CIF;
+	public WebElement transferEntitiesMainSearchFromCIF(){
+		return transfer_entities_main_search_from_CIF;
+	}
 	
+	@FindBy(xpath = "//input[@name='TO_CODE']")
+	private WebElement transfer_entities_main_search_to_CIF;
+	public WebElement transferEntitiesMainSearchToCIF(){
+		return transfer_entities_main_search_to_CIF;
+	}
 	
 //	@681303_FMSParam
 	@FindBy(xpath = "//li[@id='fmsFacilityTypeReportTab_P008UP']")

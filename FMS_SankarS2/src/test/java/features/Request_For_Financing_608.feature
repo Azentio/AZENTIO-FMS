@@ -53,10 +53,10 @@ And User_608 check the Create Active Facility If Within Limits flag
 And User_608 Check the Automatically Approve Facility If Within Limits flag
 And User_608 check the Issue Facility Offer flag
 When User_608 clicks on the Update button
-And User_608 after the update go to the approve menu
-And User_608 enter the code value in approve menu
-And User_608 double click on the retrived data in approve menu
-When User_608 clicks on the Approve button
+And User_608 after the update go to the Approve menu
+And User_608 enter the code value in Approve menu
+And User_608 double click on the retrived data in Approve menu
+When User_608 clicks on the Approve button in Approve menu under Facility Type
 
 @AT_FM_043_FMSCore
 Scenario: JAIZ150014 INABILITY TO CRAETE A LIMIT ON APPROVE FACILITY

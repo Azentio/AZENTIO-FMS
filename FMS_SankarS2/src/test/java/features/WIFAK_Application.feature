@@ -125,7 +125,7 @@ Then User validate the visibility of Fund Transfer rate input box in limit detai
 @AT_RF_098_User1
 Scenario: TSR - BTII170041
 
-Given User1 navigate to FMS application and login with valid credentials
+Given User_VAK navigate to FMS application and login with valid credentials
 And get the test data for test case AT_RF_098_User1
 And User1 clicks on the WIFAK_Application first link
 And User1 clicks on the WIFAK_Application second link
@@ -143,7 +143,7 @@ And User1 click the Ok button in more comments
 When User1 click the Ok button in recommend box
 
 
-@583893_User2
+@AT_RF_098_User2
 Scenario: TSR - BTII170041
 
 Given navigate to FMS application and login with valid credentials
