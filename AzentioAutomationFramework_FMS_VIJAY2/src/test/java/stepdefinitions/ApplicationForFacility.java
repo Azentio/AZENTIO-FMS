@@ -46,7 +46,7 @@ public class ApplicationForFacility extends BaseClass {
 	@Given("^User Launch the CSM params Application$")
     public void user_launch_the_csm_params_application() throws Throwable {
 		driver.get(configFileReader.getCSMParamApplicationUrl());
-		csmLogin.loginIntoCSMParamApplication(configFileReader.getCSMApplicationUserType());
+	//	csmLogin.loginIntoCSMParamApplication(configFileReader.getCSMApplicationUserType());
     }
 	
 	@Then("^User Validate the Code is Displayed in Approval Committee Recommendations under Request For Financing Sub Menu in REQUEST FOR FINANCIN$")

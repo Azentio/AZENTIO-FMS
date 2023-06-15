@@ -115,7 +115,7 @@ public String getCSMApplicationUrl() {
 		else
 			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
 	}
-	public String getCSMApplicationUserType() {
+	public String l() {
 		String userType = properties.getProperty("CSM_Application_UserType");
 		if (userType != null)
 			return userType;
