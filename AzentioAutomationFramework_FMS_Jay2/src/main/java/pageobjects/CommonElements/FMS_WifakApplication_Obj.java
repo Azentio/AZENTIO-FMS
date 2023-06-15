@@ -179,10 +179,10 @@ public class FMS_WifakApplication_Obj {
 	}
 	
 //	@FindBy(xpath =  "//td[@id='add_ApplicationFacilityLimitDetailsGrid_WIFT001MT']")
-	@FindBy(id =  "add_ApplicationFacilityLimitDetailsGrid_WIFT001MT")
-	private WebElement Click_AddButtonon_limit_Detail;
+	@FindBy(xpath =  "//td[@id='add_ApplicationFacilityLimitDetailsGrid_WIFT001MT']")
+	private WebElement getClick_AddButtonon_limit_Detail;
 	public WebElement getClick_AddButtonon_limit_Detail() {
-		return Click_AddButtonon_limit_Detail;
+		return getClick_AddButtonon_limit_Detail;
 	}
 	
 	
@@ -244,9 +244,9 @@ public class FMS_WifakApplication_Obj {
 	
 	
 	@FindBy(xpath ="//button[@id='limitDetails_add_btn_WIFT001MT']")
-	private WebElement AfterEnter_ValueOn_Product_Class_Search_Scroll;
+	private WebElement getAfterEnter_ValueOn_Product_Class_Scroll_ToAdd;
 	public WebElement getAfterEnter_ValueOn_Product_Class_Scroll_ToAdd() {
-		return AfterEnter_ValueOn_Product_Class_Search_Scroll;
+		return getAfterEnter_ValueOn_Product_Class_Scroll_ToAdd;
 	}
 	
 	//input[@id='_popup_path_sol_ok']
@@ -357,10 +357,10 @@ public class FMS_WifakApplication_Obj {
 		return Click_OkButton_OnFixedAssertKey_Screen;
 	}
 	
-	@FindBy(id =  "applicationfacility_save_as_draft_btn_WIFT001MT")
-	private WebElement Click_SaveButton_OnLimitDetails_Tab;
-	public WebElement getClick_SaveButton_OnLimitDetails_Tab() {
-		return Click_SaveButton_OnLimitDetails_Tab;
+	@FindBy(xpath =  "//button[@id='applicationfacility_save_as_draft_btn_WIFT001MT']")
+	private WebElement SaveButton_OnLimitDetail;
+	public WebElement SaveButton_OnLimitDetail() {
+		return SaveButton_OnLimitDetail;
 	}
 	
 	//-------------- Holiday 
@@ -1088,7 +1088,7 @@ public class FMS_WifakApplication_Obj {
 	
 	//-------------------- @574947  Scenario: TSR-EWB170043
    
-	@FindBy(id =  "applicationfacilityLimitDetailsCLEAN_FLAG_WIFT001MT")
+	@FindBy(xpath =  "//input[@id='applicationfacilityLimitDetailsCLEAN_FLAG_WIFT001MT']")
 	private WebElement CLEAN_FLAG_In_LimitsDetails;
 	public WebElement CLEAN_FLAG_In_LimitsDetails() {
 		return CLEAN_FLAG_In_LimitsDetails;
@@ -1107,10 +1107,10 @@ public class FMS_WifakApplication_Obj {
 	}
 	
 	
-	@FindBy(xpath =  "//Button[@id='applicationfacility_save_as_draft_btn_WIFT001MT']")
-	private WebElement SaveButton_OnLimitDetails_Tab;
-	public WebElement SaveButton_OnLimitDetails_Tab() {
-		return SaveButton_OnLimitDetails_Tab;
+	@FindBy(xpath =  "//button[@id='facilitymanagement_save_btn_WIFT008UP']")
+	private WebElement SaveButton_DocumentDetails_updateafter_Tab;
+	public WebElement SaveButton_DocumentDetails_updateafter_Tab() {
+		return SaveButton_DocumentDetails_updateafter_Tab;
 	}
 	
 	@FindBy(xpath =  "//button[@id='savebutton_WIFT001MT']")
@@ -1195,11 +1195,11 @@ public class FMS_WifakApplication_Obj {
         return warning_popup_ok_btn;
     }
 
-    @FindBy(xpath = "//*[@id='_popup_path_sol_ok']")
-    private WebElement success_popup_ok_btn;
-    public WebElement SuccessPopupOkBtn() {
-        return success_popup_ok_btn;
-    }
+//    @FindBy(xpath = "//input[@id='_popup_path_sol_ok']")
+//    private WebElement success_popup_ok_btn;
+//    public WebElement SuccessPopupOkBtn() {
+//        return success_popup_ok_btn;
+//    }
 
     @FindBy(xpath = "//button[@id='applicationfacility_save_btn_WIFT001MT']")
     private WebElement limit_details_validate_btn;
@@ -1237,10 +1237,10 @@ public class FMS_WifakApplication_Obj {
         return success_popup_msg;
     }
 
-    @FindBy(xpath = "(//a[@class='ui-dialog-titlebar-close ui-corner-all'])[9]")
-    private WebElement send_alert_popup;
+    @FindBy(xpath = "//a[@id='dismissbut_WIFT008UP']/span[text()=' Dismiss ']")
+    private WebElement sendAlertPopup;
     public WebElement sendAlertPopup() {
-        return send_alert_popup;
+        return sendAlertPopup;
     }
 	
 	
@@ -1443,6 +1443,12 @@ public class FMS_WifakApplication_Obj {
 		return facilityApplicationDetails_InUpdateApproveScreen;
 	}
 	
+	@FindBy(xpath = "//input[@name='facilityManagementCO.fmsFacilityVO.FACILITY_MARGIN']")
+	private WebElement cashMargin_InUpdateApproveScreen;
+	public WebElement cashMargin_InUpdateApproveScreen() {
+		return cashMargin_InUpdateApproveScreen;
+	}
+	
 	@FindBy(id = "facilityMgtAppDet_Exceed_Facility_Sublimit_WIFT008UP")
 	private WebElement exceedFacilityAtSublimit_InUpdateApproveScreen;
 	public WebElement exceedFacilityAtSublimit_InUpdateApproveScreen() {
@@ -1467,13 +1473,14 @@ public class FMS_WifakApplication_Obj {
 		return productClass_InfacilityLimitDetails_InUpdateApproveScreen;
 	}
 	
-	@FindBy(id = "facilityMgtLimitDetailsCAP_RATE_WIFT008UP")
+	////input[@name='facilityManagementCO.fmsFacilityDetCO.fmsFacilityDetVO.CAP_RATE']
+	@FindBy(xpath = "//input[@name='facilityManagementCO.fmsFacilityDetCO.fmsFacilityDetVO.CAP_RATE']")
 	private WebElement capRate_InLimitDetails_InUpdateApproveScreen;
 	public WebElement capRate_InLimitDetails_InUpdateApproveScreen() {
 		return capRate_InLimitDetails_InUpdateApproveScreen;
 	}
 	
-	@FindBy(id = "facilityMgtLimitDetailsSELLING_PRICE_WIFT008UP")
+	@FindBy(xpath = "//input[@name='facilityManagementCO.fmsFacilityDetCO.fmsFacilityDetVO.SELLING_PRICE']")
 	private WebElement sellingPrice_InLimitDetails_InUpdateApproveScreen;
 	public WebElement sellingPrice_InLimitDetails_InUpdateApproveScreen() {
 		return sellingPrice_InLimitDetails_InUpdateApproveScreen;
@@ -1504,34 +1511,64 @@ public class FMS_WifakApplication_Obj {
 		return solicitorDataSend_InDocumentDetails;
 	}
 	
-	@FindBy(xpath = "//td[@id='td_FacilityManagementDocumentDetailsGrid_WIFT008UP_1_fmsFacDocumentsVO.SOL_DATE_REC']")
+	@FindBy(xpath = "//input[@id='1_fmsFacDocumentsVO.SOL_DATE_REC_FacilityManagementDocumentDetailsGrid_WIFT008UP']")
 	private WebElement solicitorDataReceived_InDocumentDetails;
 	public WebElement solicitorDataReceived_InDocumentDetails() {
 		return solicitorDataReceived_InDocumentDetails;
 	}
 	
-	@FindBy(xpath = "//td[@id='td_FacilityManagementDocumentDetailsGrid_WIFT008UP_1_fmsFacDocumentsVO.EST_DATE_SENT']")
+	@FindBy(xpath = "//input[@id='1_fmsFacDocumentsVO.EST_DATE_SENT_FacilityManagementDocumentDetailsGrid_WIFT008UP']")
 	private WebElement estimatorDateSent_InDocumentDetails;
 	public WebElement estimatorDateSent_InDocumentDetails() {
 		return estimatorDateSent_InDocumentDetails;
 	}
 	
-	@FindBy(xpath = "//td[@id='td_FacilityManagementDocumentDetailsGrid_WIFT008UP_1_fmsFacDocumentsVO.EST_DATE_REC']")
+	@FindBy(xpath = "//input[@id='1_fmsFacDocumentsVO.EST_DATE_REC_FacilityManagementDocumentDetailsGrid_WIFT008UP']")
 	private WebElement estimatorDateRecevied_InDocumentDetails;
 	public WebElement estimatorDateRecevied_InDocumentDetails() {
 		return estimatorDateRecevied_InDocumentDetails;
 	}
 	
-	@FindBy(xpath = "//td[@id='td_FacilityManagementDocumentDetailsGrid_WIFT008UP_1_fmsFacDocumentsVO.CUSTODIAN_SENT']")
+	@FindBy(xpath = "//input[@id='1_fmsFacDocumentsVO.CUSTODIAN_SENT_FacilityManagementDocumentDetailsGrid_WIFT008UP']")
 	private WebElement custodianDateSent_InDocumentDetails;
 	public WebElement custodianDateSent_InDocumentDetails() {
 		return custodianDateSent_InDocumentDetails;
 	}
 	
-	@FindBy(xpath = "//td[@id='td_FacilityManagementDocumentDetailsGrid_WIFT008UP_1_fmsFacDocumentsVO.CUSTODIAN_SENT']")
+	@FindBy(xpath = "//td[@id='td_FacilityManagementDocumentDetailsGrid_WIFT008UP_2_fmsFacDocumentsVO.SOL_DATE_SENT']")
+	private WebElement clicksolicitorDataSendRow2_InDocumentDetails;
+	public WebElement clicksolicitorDataSendRow2_InDocumentDetails() {
+		return clicksolicitorDataSendRow2_InDocumentDetails;
+	}
+	
+	@FindBy(xpath = "//input[@id='2_fmsFacDocumentsVO.SOL_DATE_SENT_FacilityManagementDocumentDetailsGrid_WIFT008UP']")
 	private WebElement solicitorDataSendRow2_InDocumentDetails;
 	public WebElement solicitorDataSendRow2_InDocumentDetails() {
 		return solicitorDataSendRow2_InDocumentDetails;
+	}
+	
+	@FindBy(xpath = "//input[@id='2_fmsFacDocumentsVO.SOL_DATE_REC_FacilityManagementDocumentDetailsGrid_WIFT008UP']")
+	private WebElement solicitorDataDataRecived2_InDocumentDetails;
+	public WebElement solicitorDataDataRecived2_InDocumentDetails() {
+		return solicitorDataDataRecived2_InDocumentDetails;
+	}
+	
+	@FindBy(xpath = "//input[@id='2_fmsFacDocumentsVO.EST_DATE_SENT_FacilityManagementDocumentDetailsGrid_WIFT008UP']")
+	private WebElement estimatorDateSent2_InDocumentDetails;
+	public WebElement estimatorDateSent2_InDocumentDetails() {
+		return estimatorDateSent2_InDocumentDetails;
+	}
+	
+	@FindBy(xpath = "//input[@id='2_fmsFacDocumentsVO.EST_DATE_REC_FacilityManagementDocumentDetailsGrid_WIFT008UP']")
+	private WebElement estimatorDateReceviedt2_InDocumentDetails;
+	public WebElement estimatorDateReceviedt2_InDocumentDetails() {
+		return estimatorDateReceviedt2_InDocumentDetails;
+	}
+	
+	@FindBy(xpath = "//input[@id='2_fmsFacDocumentsVO.CUSTODIAN_SENT_FacilityManagementDocumentDetailsGrid_WIFT008UP']")
+	private WebElement custodianDateSent2_InDocumentDetails;
+	public WebElement custodianDateSent2_InDocumentDetails() {
+		return custodianDateSent2_InDocumentDetails;
 	}
 	
 	@FindBy(xpath = "//a[@id='WIFT008AP']/span[text()='Approve/Reject']")
@@ -1548,8 +1585,8 @@ public class FMS_WifakApplication_Obj {
 	
 	@FindBy(xpath = "(//tr[@id='1'])[2]")
 	private WebElement selectFirstRow_InapprovelScreen;
-	public WebElement selectCode_InapprovelScreen() {
-		return enterCode_InapprovelScreen;
+	public WebElement selectFirstRow_InapprovelScreen() {
+		return selectFirstRow_InapprovelScreen;
 	}
 	
 	
@@ -1679,7 +1716,164 @@ public class FMS_WifakApplication_Obj {
 		return valueDatesubmitted_drawDownMainInformation;
 	}
 	
+	//  check flag in param screen
 	
+	@FindBy(xpath = "//td[text()='Parameters']")
+	private WebElement fms_param_parameter;
+	public WebElement fmsParamParameter_610() {
+		return fms_param_parameter;
+	}
+	
+	@FindBy(xpath = "//td[text()='Facility Type']")
+	private WebElement param_facility_type;
+	public WebElement paramFacilityType_610() {
+		return param_facility_type;
+	}
+	
+	@FindBy(xpath = "//a[@id='P008UP']")
+	private WebElement facility_type_update_after_approve;
+	public WebElement facilityTypeUpdateAfterApprove_610() {
+		return facility_type_update_after_approve;
+	}
+	
+	@FindBy(id = "fmsFacilityTypeListGridTbl_Id_P008UP_gs_CODE")
+	private WebElement facility_type_search_code;
+	public WebElement facilityTypeSearchCode_610() {
+		return facility_type_search_code;
+	}
+	
+	@FindBy(id = "td_fmsFacilityTypeListGridTbl_Id_P008UP_1_CODE")
+	private WebElement facility_type_search_code_result;
+	public WebElement facilityTypeSearchCodeResult_610() {
+		return facility_type_search_code_result;
+	}
+	
+	@FindBy(xpath = "//li[@id='fmsFacilityTypeDetailsTab_P008UP']")
+	private WebElement facilty_type_facility_details;
+	public WebElement facilityTypeFacilityDetails_610() {
+		return facilty_type_facility_details;
+	}
+	
+	@FindBy(id = "Fms_facility_type_stp_facility_requirments_Div_P008UP")
+	private WebElement STP_facility_req;
+	public WebElement STPFacilityReq_610() {
+		return STP_facility_req;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmsFacilityType_customer_grading_P008UP']")
+	private WebElement customer_grading_flag;
+	public WebElement customerGradingFlag_610() {
+		return customer_grading_flag;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmsFacilityType_grade_overwrite_P008UP']")
+	private WebElement overwrite_grading_flag;
+	public WebElement OverwriteGradingFlag_610() {
+		return overwrite_grading_flag;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmsFacilityType_credit_review_P008UP']")
+	private WebElement credit_review_flag;
+	public WebElement creditReviewFlag_610() {
+		return credit_review_flag;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmsFacilityType_committee_approval_P008UP']")
+	private WebElement committee_approval_flag;
+	public WebElement committeeApprovalFlag_610() {
+		return committee_approval_flag;
+	}
+	
+	@FindBy(xpath = "//select[@id='fmsFacilityType_members_number_P008UP']")
+	private WebElement committee_approval_flag_member_dropdown;
+	public WebElement committeeApprovalFlagMemberDropdown_610() {
+		return committee_approval_flag_member_dropdown;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmsFacilityType_credit_authorize_P008UP']")
+	private WebElement credit_authorzie_flag;
+	public WebElement creditAuthorzieFlag_610() {
+		return credit_authorzie_flag;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmsFacilityType_issue_offer_P008UP']")
+	private WebElement issue_facility_offer_flag;
+	public WebElement issueFacilityOfferFlag_610() {
+		return issue_facility_offer_flag;
+	}
+
+	@FindBy(xpath = "//input[@id='fmsFacilityType_client_response_P008UP']")
+	private WebElement client_response_flag;
+	public WebElement clientResponseFlag_610() {
+		return client_response_flag;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmsFacilityType_document_validation_yn_P008UP']")
+	private WebElement document_validation_flag;
+	public WebElement documentValidationFlag_610() {
+		return document_validation_flag;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmsFacilityType_final_approval_P008UP']")
+	private WebElement final_approval_flag;
+	public WebElement finalApprovalFlag_610() {
+		return final_approval_flag;
+	}
+		
+	@FindBy(xpath = "//input[@id='fmsFacilityType_active_facility_P008UP']")
+	private WebElement create_active_facility_flag;
+	public WebElement createActiveFacilityFlag_610() {
+		return create_active_facility_flag;
+	}	
+	
+	@FindBy(xpath = "//input[@id='fmsFacilityType_auto_approve_P008UP']")
+	private WebElement auto_appprove_facility_flag;
+	public WebElement autoApproveFacilityFlag_610() {
+		return auto_appprove_facility_flag;
+	}
+	
+	@FindBy(xpath = "//button[@id='fmsFacilityTypeMaint_update_P008UP']")
+	private WebElement update_after_approve_update_btn;
+	public WebElement updateAfterApproveUpdateBtn_610() {
+		return update_after_approve_update_btn;
+	}
+	
+	@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
+	private WebElement confirm_popup_ok_btn;
+	public WebElement confirmPopupOkBtn_610() {
+		return confirm_popup_ok_btn;
+	}
+	
+	@FindBy(xpath = "//input[@id='_popup_path_sol_ok']")
+	private WebElement success_popup_ok_btn;
+	public WebElement successPopupOkBtn_610() {
+		return success_popup_ok_btn;
+	}
+	
+	@FindBy(xpath = "//a[@id='P008P']")
+	private WebElement facility_type_approve_menu;
+	public WebElement facilityTypeApproveMenu_610() {
+		return facility_type_approve_menu;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmsFacilityTypeListGridTbl_Id_P008P_gs_CODE']")
+	private WebElement approve_search_code;
+	public WebElement approveSearchCode_610() {
+		return approve_search_code;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_fmsFacilityTypeListGridTbl_Id_P008P_1_CODE']")
+	private WebElement approve_search_code_result;
+	public WebElement approveSearchCodeResult_610() {
+		return approve_search_code_result;
+	}
+	
+	@FindBy(xpath = "//*[@id=\"fmsFacilityTypeMaint_approve_P008P\"]")
+	private WebElement facility_type_approve_btn;
+	public WebElement facilityTypeApproveBtn_610() {
+		return facility_type_approve_btn;
+	}
+
 	
 	
 }
