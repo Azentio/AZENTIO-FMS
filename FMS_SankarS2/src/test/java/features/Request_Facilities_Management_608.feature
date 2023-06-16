@@ -12,3 +12,6 @@ And User_608 clicks the Maintanance in Facilities Management under Request Finan
 And User_608 click the search button in maintanance screen under Facilities Management
 And User_608 search the facility with CIF number in maintanance screen under Facilities Management
 Then User_608 retrieve the facility in maintanance screen under Facilities Management
+
+
+

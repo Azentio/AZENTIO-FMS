@@ -15,13 +15,13 @@ import helper.Selenium_Actions;
 import helper.WaitHelper;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import pageobjects.fms.FacilitiesManagementObj_608;
+import pageobjects.fms.Request_FacilitiesManagementObj_608;
 import resources.BaseClass;
 
 public class FacilitiesManagementSteps_608 {
 	WebDriver driver = BaseClass.driver;
 	ConfigFileReader configFileReader = new ConfigFileReader();
-	FacilitiesManagementObj_608 facilityManagementObj608 = new FacilitiesManagementObj_608(driver);
+	Request_FacilitiesManagementObj_608 requestFacilityManagementObj608 = new Request_FacilitiesManagementObj_608(driver);
 	WaitHelper waitHelper = new WaitHelper(driver);
 	JavascriptHelper javaScriptHelper = new JavascriptHelper(driver);
 	ClicksAndActionsHelper clicksAndActionsHelper = new ClicksAndActionsHelper(driver);
@@ -44,37 +44,37 @@ public class FacilitiesManagementSteps_608 {
 //	@AT_FM_035
 	@And("User_608 clicks the Facilities Management feature under Request Financing")
 	public void user_clicks_the_facilities_management_feature_under_request_financing() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.facilitiesManagementFeature_608());
-		facilityManagementObj608.facilitiesManagementFeature_608().click();
+		waitHelper.waitForElementwithFluentwait(driver, requestFacilityManagementObj608.requestFacilitiesManagementFeature_608());
+		requestFacilityManagementObj608.requestFacilitiesManagementFeature_608().click();
 	}
 
 	@And("User_608 clicks the Maintanance in Facilities Management under Request Financing")
 	public void user_clicks_the_maintanance_in_facilities_management_under_request_financing() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.facilitiesManagementMaintanance_608());
-		facilityManagementObj608.facilitiesManagementMaintanance_608().click();
+		waitHelper.waitForElementwithFluentwait(driver, requestFacilityManagementObj608.requestFacilitiesManagementMaintanance_608());
+		requestFacilityManagementObj608.requestFacilitiesManagementMaintanance_608().click();
 	}
 
 	@And("User_608 click the search button in maintanance screen under Facilities Management")
 	public void user_click_the_search_button_in_maintanance_screen_under_facilities_management() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.facilitiesManagementMainSearchBtn_608());
-		facilityManagementObj608.facilitiesManagementMainSearchBtn_608().click();
+		waitHelper.waitForElementwithFluentwait(driver, requestFacilityManagementObj608.requestFacilitiesManagementMainSearchBtn_608());
+		requestFacilityManagementObj608.requestFacilitiesManagementMainSearchBtn_608().click();
 	}
 
 	@And("User_608 search the facility with CIF number in maintanance screen under Facilities Management")
 	public void user_search_the_facility_with_cif_number_in_maintanance_screen_under_facilities_management() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.facilitiesManagementMainSearchCIFInput_608());
-		facilityManagementObj608.facilitiesManagementMainSearchCIFInput_608().sendKeys(testData.get("CIF No"),Keys.ENTER);
+		waitHelper.waitForElementwithFluentwait(driver, requestFacilityManagementObj608.requestFacilitiesManagementMainSearchCIFInput_608());
+		requestFacilityManagementObj608.requestFacilitiesManagementMainSearchCIFInput_608().sendKeys(testData.get("CIF No"),Keys.ENTER);
 	}
 
 	@Then("User_608 retrieve the facility in maintanance screen under Facilities Management")
 	public void user_retrieve_the_facility_in_maintanance_screen_under_facilities_management() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.facilitiesManagementMainSearchRow1_608());
-	    clicksAndActionsHelper.doubleClick(facilityManagementObj608.facilitiesManagementMainSearchRow1_608());
+		waitHelper.waitForElementwithFluentwait(driver, requestFacilityManagementObj608.requestFacilitiesManagementMainSearchRow1_608());
+	    clicksAndActionsHelper.doubleClick(requestFacilityManagementObj608.requestFacilitiesManagementMainSearchRow1_608());
 	    
-	    waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.facilitiesManagementMainCode());
+	    waitHelper.waitForElementwithFluentwait(driver, requestFacilityManagementObj608.requestFacilitiesManagementMainCode_608());
 	    for (int i = 0; i <= 300; i++) {
 			try {
-				javaScriptHelper.scrollIntoView(facilityManagementObj608.facilitiesManagementMainCIFLimitBtn());
+				javaScriptHelper.scrollIntoView(requestFacilityManagementObj608.requestFacilitiesManagementMainCode_608());
 				break;
 			} catch (Exception e) {
 				if (i == 300) {

@@ -81,9 +81,17 @@ public class WIFAK_ApplicationSteps_608 {
     	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_014");
     }
     
+//	@AT_FM_038_FMSCore
+	@And("^User_608 get the test data for test case AT_FM_038_FMSCore$")
+    public void get_the_test_data_for_test_case_AT_FM_038_FMSCore() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_038");
+    }
     
-    
-    
+//	@AT_FM_058
+	@And("User_608 get the test data for test case AT_FM_058")
+	public void user_get_the_test_data_for_test_case_AT_FM_058() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_058");
+	}
     
 	
 	
@@ -671,8 +679,8 @@ public class WIFAK_ApplicationSteps_608 {
         
     }
     
-    @And("^User_608 clicks on the add button$")
-    public void user_clicks_on_the_add_button() throws Throwable {
+    @And("^User_608 clicks on the product class add button$")
+    public void user_clicks_on_the_product_class_add_button() throws Throwable {
     	for (int i = 0; i <= 300; i++) {
 			try {
 				javaScriptHelper.scrollIntoView(WIFAKapplicationObj608.limitDetailsProductAddBtn_608());
@@ -1014,6 +1022,100 @@ public class WIFAK_ApplicationSteps_608 {
 			}
 		}
     	
+    }
+
+    
+    
+//    @AT_FM_058
+    @And("User_608 select the limit details product class row in under limit details")
+    public void user_select_the_limit_details_product_class_row_in_under_limit_details() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.WifakLimitDetailsProductClassRow_608());
+    	WIFAKapplicationObj608.WifakLimitDetailsProductClassRow_608().click();
+    }
+
+    @And("User_608 click the Repayment Plan button under limit Details in Application Financial Facility Maintanance")
+    public void user_click_the_repayment_plan_button_under_limit_details_in_application_financial_facility_maintanance() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.WifakLimitDetailsRepaymentPlanBtn_608());
+    	WIFAKapplicationObj608.WifakLimitDetailsRepaymentPlanBtn_608().click();        
+    }
+
+    @And("User_608 user Re_enter the no of payments in Repayment Plan tab Application Financial Facility Maintanance")
+    public void user_user_re_enter_the_no_of_payments_in_repayment_plan_tab_application_financial_facility_maintanance() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.WifakLimitDetailsRepaymentPlanTabNoOfPaymentsInput_608());
+		WIFAKapplicationObj608.WifakLimitDetailsRepaymentPlanTabNoOfPaymentsInput_608().clear();
+		WIFAKapplicationObj608.WifakLimitDetailsRepaymentPlanTabNoOfPaymentsInput_608().sendKeys(testData.get("No of Payments"),Keys.TAB);
+		
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(WIFAKapplicationObj608.WifakLimitDetailsRepaymentPlanTabNoOfPaymentsInput_608().getAttribute("prevvalue")==testData.get("No of Payments")) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		} 
+        
+    }
+
+    @And("User_608 click the Create Schedule button in Repayment Plan tab under Application Financial Facility Maintanance")
+    public void user_click_the_create_schedule_button_in_repayment_plan_tab_under_application_financial_facility_maintanance() throws Throwable {
+    	for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(WIFAKapplicationObj608.WifakLimitDetailsRepaymentPlanTabCreateSheduleBtn_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}
+		
+		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.WifakLimitDetailsRepaymentPlanTabCreateSheduleBtn_608());
+		WIFAKapplicationObj608.WifakLimitDetailsRepaymentPlanTabCreateSheduleBtn_608().click();
+		
+		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.confirmPopup_608());
+		WIFAKapplicationObj608.ConfirmPopupOkBtn_608().click();
+        
+    }
+
+    @And("User_608 validate the Installment Vat Amount in available in Repayment Plan tab under Application Financial Facility Maintanance")
+    public void user_validate_the_installment_vat_amount_in_available_in_repayment_plan_tab_under_application_financial_facility_maintanance() throws Throwable {
+    	for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(WIFAKapplicationObj608.WifakLimitDetailsRepaymentPlanTabInstallmentVatAmt_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}
+		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.WifakLimitDetailsRepaymentPlanTabInstallmentVatAmt_608());
+		boolean installmentVatAmt = WIFAKapplicationObj608.WifakLimitDetailsRepaymentPlanTabInstallmentVatAmt_608().isDisplayed();
+		Assert.assertEquals(true, installmentVatAmt);
+        
+    }
+
+    @And("User_608 click the Save button in Repayment Plan tab under Application Financial Facility Maintanance")
+    public void user_click_the_save_button_in_repayment_plan_tab_under_application_financial_facility_maintanance() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.WifakLimitDetailsRepaymentPlanTabSaveBtn_608());
+    	WIFAKapplicationObj608.WifakLimitDetailsRepaymentPlanTabSaveBtn_608().click();
+		
+		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.ConfirmPopupOkBtn_608());
+		WIFAKapplicationObj608.ConfirmPopupOkBtn_608().click();
+		
+		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.SuccessPopupOkBtn_608());
+		for (int i = 0; i < 500; i++) {
+			try {
+				WIFAKapplicationObj608.SuccessPopupOkBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==499) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+        
     }
 
     

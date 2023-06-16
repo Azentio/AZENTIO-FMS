@@ -15,7 +15,7 @@ import utilities.ExtentTestManager;
                            "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                            "rerun:ReRunScenarios/FailedReRun.txt"}
 //               	,dryRun = true //to check compilation errors
-				, tags= "@AT_RF_098_User_VAK"
+				, tags= "@AT_FM_058"
 //               , tags= "@582480_FMSParam or @582480_FMSCore"
 
 )

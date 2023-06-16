@@ -45,11 +45,7 @@ public class WIFAK_ApplicationSteps2_608 {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_038");
     }
 	
-//	@AT_FM_038_FMSCore
-	@And("^User_608 get the test data for test case AT_FM_038_FMSCore$")
-    public void get_the_test_data_for_test_case_AT_FM_038_FMSCore() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_038");
-    }
+
 	
 	
 //	@AT_FM_038_FMSParam

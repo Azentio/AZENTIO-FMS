@@ -37,7 +37,7 @@ And User_608 clicks on the parameter module
 And User_608 clicks on the Facility Type feature
 And User_608 clicks on the update after approve menu in Facility type
 And User_608 enter the code value in update after approve menu
-And User_608 double click on the retrived data in update after approve menu
+And User_608 double click on the retrieved data in update after approve menu
 And User_608 clicks on the facility details tab in update after approve
 And User_608 clicks on the STP Facility Requirements option
 And User_608 check the Customer Grading flag
@@ -55,7 +55,7 @@ And User_608 check the Issue Facility Offer flag
 When User_608 clicks on the Update button
 And User_608 after the update go to the Approve menu
 And User_608 enter the code value in Approve menu
-And User_608 double click on the retrived data in Approve menu
+And User_608 double click on the retrieved data in Approve menu
 When User_608 clicks on the Approve button in Approve menu under Facility Type
 
 @AT_FM_043_FMSCore

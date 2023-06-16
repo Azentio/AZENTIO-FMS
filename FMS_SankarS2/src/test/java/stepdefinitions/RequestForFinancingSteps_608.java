@@ -49,6 +49,14 @@ public class RequestForFinancingSteps_608 {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_043");
 	}
 	
+////	@AT_FM_058
+//	@And("User_608 get the test data for test case AT_FM_058")
+//	public void user_get_the_test_data_for_test_case_AT_FM_058() throws Throwable {
+//		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_058");
+//	}
+	
+	
+	
 	
 //	@AT_RF_141
 	@And("User_608 clicks on the Request module")
@@ -336,9 +344,10 @@ public class RequestForFinancingSteps_608 {
     
     	
     	// close the send alert pop-up box
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.RequestSendAlertPopup_608());
     	for (int i = 0; i < 2000; i++) {
 			try {
-				requestForFinancingObj608.sendAlertPopupClose_608().click();
+				requestForFinancingObj608.requestSendAlertPopupDismissBtn_608().click();
 		    	break;
 			} catch (Exception e) {
 				if (i==1999) {
@@ -519,6 +528,9 @@ public class RequestForFinancingSteps_608 {
 		}
 	    
 	}
+	
+	
+	
 
 
 }

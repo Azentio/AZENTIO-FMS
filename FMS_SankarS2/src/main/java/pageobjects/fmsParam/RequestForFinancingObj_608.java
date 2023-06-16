@@ -241,11 +241,23 @@ public class RequestForFinancingObj_608 {
 		return success_popup_msg;
 	}	
 	
+	@FindBy(xpath = "/html/body/div[46]/div")
+	private WebElement request_send_alert_popup;
+	public WebElement RequestSendAlertPopup_608() {
+		return request_send_alert_popup;
+	}
+	
 	@FindBy(xpath = "/html/body/div[46]/div[1]/a/span")
-	private WebElement send_alert_popup_close;
-	public WebElement sendAlertPopupClose_608() {
-		return send_alert_popup_close;
+	private WebElement request_send_alert_popup_close;
+	public WebElement RequestSendAlertPopupClose_608() {
+		return request_send_alert_popup_close;
 	}	
+	
+	@FindBy(xpath = "//a[@id='dismissbut_RFFRF00MT']")
+	private WebElement request_send_alert_popup_dismiss_btn;
+	public WebElement requestSendAlertPopupDismissBtn_608() {
+		return request_send_alert_popup_dismiss_btn;
+	}
 	
 	@FindBy(xpath = "//a[@id='RFFRF00P1']")
 	private WebElement request_for_financing_approve_level1;
@@ -348,4 +360,11 @@ public class RequestForFinancingObj_608 {
 	public WebElement approvalCommitteeRecommendationBtn_608() {
 		return approval_committee_recommedation_btn;
 	}
+	
+	
+
+	
+	
+	
+	
 }
