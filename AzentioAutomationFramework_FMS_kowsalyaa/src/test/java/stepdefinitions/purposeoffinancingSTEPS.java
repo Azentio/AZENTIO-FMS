@@ -111,7 +111,17 @@ public class purposeoffinancingSTEPS {
 	 @And("^user Clicks the product class value one$")
 	    public void user_clicks_the_product_class_value_one() throws Throwable {
 		 waitHelper.waitForElementwithFluentwait(driver, purposeoffinancing.productclassvalue());
-		 purposeoffinancing.productclassvalue().sendKeys("1");
+		 purposeoffinancing.productclassvalue().sendKeys("1",Keys.TAB);
+		 
+		 for(int i = 0; i <= 500; i++) {
+	            try {
+	                if(!(purposeoffinancing.productclassvalue().getAttribute("prevvalue").isBlank())) {
+	                    break;
+	                }
+	            } catch (Exception e) {
+	                // TODO: handle exception
+	            }
+	        }
 	        
 	    }
 

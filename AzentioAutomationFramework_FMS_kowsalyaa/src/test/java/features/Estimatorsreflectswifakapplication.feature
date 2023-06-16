@@ -397,14 +397,13 @@ Feature: To Test the Financial facilities in FMS Application
     And Click the limit details tab
     And Click the add button under limit details tab
     And user Clicks the product class value one
+    #And user clicks the wait server warning
     And Click the add button
     And Click the doucmentdetailstab
     And Enter the value for slicitorname
     And Enter the value for estimators name
-    And Click the add button
-    And Click the doucmentdetailstab
-    And Enter the value for slicitorname
-    And Enter the value for estimators name
+    And User clicks the save button
+    And User clicks the validate button
     And User clicks the Approve Level1 link
     And User retrive the first data in approve level1
     And select the Approve level1 decision as approve

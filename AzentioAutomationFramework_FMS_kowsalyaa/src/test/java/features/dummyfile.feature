@@ -6,6 +6,4 @@ Feature: Title of your feature
   @tag1
   Scenario: Title of your scenario
   
-  And User clicks the Request Menu under fms application
-  And User validate the facility management Menu are available in request financing
-  And User validate the sub menu's are available in request for financing menu
+  Then User_611 Validate the Product Class L and N is displayed

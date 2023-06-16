@@ -385,22 +385,23 @@ public class EstimatorsreflectswifakapplicationSTEPS {
 	    }
 	    //@759182_Fms_Core
 	    
-	    @Given("user click the client response under wifak application$")
-	    public void user_click_the_client_response_under_wifak_application() {
+	    @And("user click the client response under wifak application$")
+	    public void user_click_the_client_response_under_wifak_application() throws Throwable {
+	    	Thread.sleep(5000);
 	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.wifakapplicationclientresponse());
 	    	coreestimatesreflects.wifakapplicationclientresponse().click();
-	    	
+	    	Thread.sleep(5000);
 	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.wifakapplicationclientresponseclrbtn());
 	    	coreestimatesreflects.wifakapplicationclientresponseclrbtn().click();
-	    	
+	    	Thread.sleep(5000);
 	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.wifakapplicationclientresponseclrbtnfirstretrivedata());
 	    	clickandactionhelper.doubleClick(coreestimatesreflects.wifakapplicationclientresponseclrbtnfirstretrivedata());
-	    	
+	    	Thread.sleep(5000);
 	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.clientresponsereject());
 	    	coreestimatesreflects.clientresponsereject().click();
 	    	
 	    }
-	    @Given("user search the rejected data in maintenance")
+	    @And("user search the rejected data in maintenance")
 	    public void user_search_the_rejected_data_in_maintenance() {
 	    	
 	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.appforfinancialmanagmentmaintenencefirstsearchbtn());
@@ -413,7 +414,22 @@ public class EstimatorsreflectswifakapplicationSTEPS {
 	    	clickandactionhelper.doubleClick(coreestimatesreflects.appforfinancialmanagmentmaintenencesecondclrbtnretrivedata());
 	        
 	    }
-
+	    @And("user clicks the wait server warning")
+	    public void user_clicks_the_wait_server_warning() throws Throwable {
+	    	for(int i = 0; i <= 300; i++) {
+	    		try {
+	    			javascripthelper.scrollIntoView(coreestimatesreflects.serverwaitwarningokbtn());
+				} catch (Exception e) {
+					if(i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}
+//	    	Thread.sleep(5000);
+	    	waithelper.waitForElementwithFluentwait(driver, coreestimatesreflects.serverwaitwarningokbtn());
+	    	coreestimatesreflects.serverwaitwarningokbtn().click();
+	    }
+	    	
 	    
 	    // @749202_Fms_Core
 	    @And("user clicks the query menu under facility management")

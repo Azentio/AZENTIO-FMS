@@ -206,12 +206,12 @@ public class CoreestimatorsreflectswifakapplicationOBJ {
 	public WebElement wifakapplicationclientresponse() {
 		return WifakApplication_ClientResponse;
 	}
-	@FindBy(xpath="(//td[text()='Clear'])[3]")
+	@FindBy(xpath="//td[text()='Clear']")
 	private WebElement WifakApplication_ClientResponse_Clearbtn;
 	public WebElement wifakapplicationclientresponseclrbtn() {
 		return WifakApplication_ClientResponse_Clearbtn;
 	}
-	@FindBy(xpath="(//tr[@id='1'])[3]")
+	@FindBy(xpath="//tr[@id='1']")
 	private WebElement WifakApplication_ClientResponse_Clearbtn_firstretrivedata;
 	public WebElement wifakapplicationclientresponseclrbtnfirstretrivedata() {
 		return WifakApplication_ClientResponse_Clearbtn_firstretrivedata;
@@ -226,7 +226,7 @@ public class CoreestimatorsreflectswifakapplicationOBJ {
 	public WebElement appforfinancialmanagmentmaintenencefirstsearchbtn() {
 		return Appforfinancialmanagment_Maintenence_firstsearchbtn;
 	}
-	@FindBy(xpath="//td[text()='Clear']")
+	@FindBy(xpath="(//td[text()='Clear'])[2]")
 	private WebElement Appforfinancialmanagment_Maintenence_secondclrbtn;
 	public WebElement appforfinancialmanagmentmaintenencesecondclrbtn() {
 		return Appforfinancialmanagment_Maintenence_secondclrbtn;
@@ -235,6 +235,11 @@ public class CoreestimatorsreflectswifakapplicationOBJ {
 	private WebElement Appforfinancialmanagment_Maintenence_secondclrbtn_retrivedata;
 	public WebElement appforfinancialmanagmentmaintenencesecondclrbtnretrivedata() {
 		return Appforfinancialmanagment_Maintenence_secondclrbtn_retrivedata;
+	}
+	@FindBy(xpath="//input[@id='_popup_path_sol_ok']")
+	private WebElement Serverwait_Warningokbtn;
+	public WebElement serverwaitwarningokbtn() {
+		return Serverwait_Warningokbtn;
 	}
 	
 	

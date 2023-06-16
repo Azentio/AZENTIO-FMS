@@ -52,7 +52,7 @@ public class ChecknewfieldatsublimittabSTEPS {
 				}
 			}
     	}
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		waitHelper.waitForElementwithFluentwait(driver, checknewfieldatsublimittab.addProductclass());
 		checknewfieldatsublimittab.addProductclass().click();
         
