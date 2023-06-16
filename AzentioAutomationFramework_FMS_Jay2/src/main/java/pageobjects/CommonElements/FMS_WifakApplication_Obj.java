@@ -1231,20 +1231,24 @@ public class FMS_WifakApplication_Obj {
         return success_popup;
     }
 
+    //class
     @FindBy(xpath = "//div[@class='jMsgbox-contentWrap']")
     private WebElement success_popup_msg;
     public WebElement successPopupMessage() {
         return success_popup_msg;
     }
 
-    @FindBy(xpath = "//a[@id='dismissbut_WIFT008UP']/span[text()=' Dismiss ']")
+    @FindBy(xpath = "//a[@id='dismissbut_WIFT001MT']/span")
     private WebElement sendAlertPopup;
     public WebElement sendAlertPopup() {
         return sendAlertPopup;
     }
 	
-	
-	
+    @FindBy(xpath = "//a[@id='dismissbut_WIFT008UP']/span")
+    private WebElement sendAlertPopup_facilityManagement;
+    public WebElement sendAlertPopup_facilityManagement() {
+        return sendAlertPopup_facilityManagement;
+    }
 	
 	
 	@FindBy(xpath =  "//input[@id='_popup_path_sol_confirm_ok']")
@@ -1660,60 +1664,84 @@ public class FMS_WifakApplication_Obj {
 	 //  Scenario: Remaining Cash margin updation after complete utilization of facility value -IIAB150154
 	
 	
-	@FindBy(xpath = "//input[@name='facilityManagementCO.fmsFacilityVO.FACILITY_MARGIN']")
-	private WebElement cashMargin_InFacilityAppDetails_UpdateAft;
-	public WebElement cashMargin_InFacilityAppDetails_UpdateAft() {
-		return cashMargin_InFacilityAppDetails_UpdateAft;
+	@FindBy(xpath = "//input[@id='facilityMgtAppDetFacilityMargin_WIFT008UP']")
+	private WebElement cashMargin_InFacilityAppDetails_approvel_610;
+	public WebElement cashMargin_InFacilityAppDetails_approvel_610() {
+		return cashMargin_InFacilityAppDetails_approvel_610;
 	}
 	
+	@FindBy(xpath = "//button[@id='facilityManagement_approve_btn_WIFT008AP']")
+	private WebElement approvelbutton_InFacilityAppDetails_610;
+	public WebElement approvelbutton_InFacilityAppDetails_610() {
+		return approvelbutton_InFacilityAppDetails_610;
+	}
 	
 	@FindBy(xpath = "//td[text()='Draw Down Request']")
-	private WebElement drawDownRequest_Screen;
-	public WebElement drawDownRequest_Screen() {
-		return drawDownRequest_Screen;
+	private WebElement drawDownRequest_Screen_610;
+	public WebElement drawDownRequest_Screen_610() {
+		return drawDownRequest_Screen_610;
 	}
 	
 	@FindBy(xpath = "//a[@id='WIFT009MT']/span[text()='Maintenance']")
-	private WebElement drawDownRequestMaintenance_Screen;
-	public WebElement drawDownRequestMaintenance_Screen() {
-		return drawDownRequestMaintenance_Screen;
+	private WebElement drawDownRequestMaintenance_Screen_610;
+	public WebElement drawDownRequestMaintenance_Screen_610() {
+		return drawDownRequestMaintenance_Screen_610;
 	}
 	
 	
 	@FindBy(id = "lookuptxt_drawDownRequestFacilityReference_WIFT009MT")
-	private WebElement facilityReference_drawDownMainInformation;
-	public WebElement facilityReference_drawDownMainInformation() {
-		return facilityReference_drawDownMainInformation;
+	private WebElement facilityReference_drawDownMainInformation_610;
+	public WebElement facilityReference_drawDownMainInformation_610() {
+		return facilityReference_drawDownMainInformation_610;
 	}
 	
-	@FindBy(id = "lookuptxt_drawDownRequestFacilityReference_WIFT009MT")
-	private WebElement drawdownType_drawDownMainInformation;
-	public WebElement drawdownType_drawDownMainInformation() {
-		return drawdownType_drawDownMainInformation;
+	@FindBy(xpath = "//input[@id='lookuptxt_drawDownRequestDrawDownType_WIFT009MT']")
+	private WebElement drawdownType_drawDownMainInformation_610;
+	public WebElement drawdownType_drawDownMainInformation_610() {
+		return drawdownType_drawDownMainInformation_610;
 	}
 	
 	@FindBy(xpath = "//input[@name='drawdownRequestCO.fmsDrawDownVO.LONG_NAME_ENG']")
-	private WebElement descriptionEnglish_drawDownMainInformation;
-	public WebElement descriptionEnglish_drawDownMainInformation() {
-		return descriptionEnglish_drawDownMainInformation;
+	private WebElement descriptionEnglish_drawDownMainInformation_610;
+	public WebElement descriptionEnglish_drawDownMainInformation_610() {
+		return descriptionEnglish_drawDownMainInformation_610;
 	}
 	
-	@FindBy(id = "//drawDownRequestFormId_WIFT009MT_Description_Arab_Key")
-	private WebElement descriptionArab_drawDownMainInformation;
-	public WebElement descriptionArab_drawDownMainInformation() {
-		return descriptionArab_drawDownMainInformation;
+	@FindBy(xpath = "//input[@id='drawDownRequestLongNameArab_WIFT009MT']")
+	private WebElement descriptionArab_drawDownMainInformation_610;
+	public WebElement descriptionArab_drawDownMainInformation_610() {
+		return descriptionArab_drawDownMainInformation_610;
 	}
 	
 	@FindBy(xpath = "//input[@name='drawdownRequestCO.fmsDrawDownVO.DATE_SUBMITTED']")
-	private WebElement dateDatesubmitted_drawDownMainInformation;
-	public WebElement dateDatesubmitted_drawDownMainInformation() {
-		return dateDatesubmitted_drawDownMainInformation;
+	private WebElement dateDatesubmitted_drawDownMainInformation_610;
+	public WebElement dateDatesubmitted_drawDownMainInformation_610() {
+		return dateDatesubmitted_drawDownMainInformation_610;
 	}
 	
 	@FindBy(xpath = "//input[@name='drawdownRequestCO.fmsDrawDownVO.VALUE_DATE']")
-	private WebElement valueDatesubmitted_drawDownMainInformation;
-	public WebElement valueDatesubmitted_drawDownMainInformation() {
-		return valueDatesubmitted_drawDownMainInformation;
+	private WebElement valueDatesubmitted_drawDownMainInformation_610;
+	public WebElement valueDatesubmitted_drawDownMainInformation_610() {
+		return valueDatesubmitted_drawDownMainInformation_610;
+	}
+	
+	@FindBy(xpath = "//span[text()='Drawdown Additional Details']")
+	private WebElement DrawdownAdditionalDetails_Screen_610;
+	public WebElement DrawdownAdditionalDetails_Screen_610() {
+		return DrawdownAdditionalDetails_Screen_610;
+	}
+	
+	//input[@id='facilityMgtMainFinancedAmount_WIFT008UP']
+	@FindBy(xpath = "//input[@id='facilityMgtMainFinancedAmount_WIFT008UP']")
+	private WebElement facilityManagementFinanceAmt_Validate_610;
+	public WebElement facilityManagementFinanceAmt_Validate_610() {
+		return facilityManagementFinanceAmt_Validate_610;
+	}
+	
+	@FindBy(xpath = "//input[@id='drawDownRequestFC_Amount_WIFT009MT']")
+	private WebElement FCAmount_DrawdownAdditionalDetails_Screen_610;
+	public WebElement FCAmount_DrawdownAdditionalDetails_Screen_610() {
+		return FCAmount_DrawdownAdditionalDetails_Screen_610;
 	}
 	
 	//  check flag in param screen

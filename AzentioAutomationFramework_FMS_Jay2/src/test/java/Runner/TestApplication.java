@@ -14,7 +14,7 @@ import utilities.ExtentTestManager;
                 plugin = { "pretty",
                            "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                            "rerun:ReRunScenarios/FailedReRun.txt"}
-           //  ,  dryRun = true //to check compilation errors                                      
+          //   ,  dryRun = true //to check compilation errors                                      
             //   , tags="@127788" 
             		,   tags="@315144_03"
 

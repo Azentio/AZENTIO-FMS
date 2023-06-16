@@ -343,7 +343,7 @@ Feature: Wifak Application
   @740790
   Scenario: TSR - AIBBI180271
     Given navigate to FMS application2 and login with valid credentials
-    And get the test data set id for AT_RF_192
+ #   And get the test data set id for AT_RF_192
     And Click Wifak Application first
     And Click Wifak Application Second
     And Click Application for financial facilities
@@ -586,9 +586,25 @@ Feature: Wifak Application
     And User-610 click facility management
     And User-610 click update after approvel
     And User-610 Retrive one data in update after approvel screen
-    And User-610 click facility application details
-    And User-610 click cash margin in update after approvel screen 
+    And User-610 Retrive Finance Amount in update after approvel
+    And User-610 click facility application details screen
+    And User-610 enter cash Margin value in facility application details
     And User-610 click document details approvel screen
     And User-610 enter the date in document details
     And User-610 save the details
+    And User-610 click  approvel and reject screen
+    And User-610 enter the retrive data code
+    And User-610 click facility application details screen
+    And User-610 click Approve button in facility application details
+    And User-610 click Draw Down Request screen
+    And User-610 click Maintenance in Draw Down Request screen
+    And User-610 enter Facility Refercence in Draw Down Request screen
+    And User-610 enter Drawdown Type in Draw Down Request screen
+    And User-610 enter Description English in Draw Down Request screen
+    And User-610 enter Description Arab in Draw Down Request screen
+    And User-610 enter Date Submitted in Draw Down Request screen
+    And User-610 enter Date ValueDate in Draw Down Request screen
+    And User-610 click Drawdown Additional Details 
+    And User-610  validate Accepting or not extra amount in FC Amount
+    
     
