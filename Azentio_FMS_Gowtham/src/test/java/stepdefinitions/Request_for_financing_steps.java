@@ -38,6 +38,12 @@ public class Request_for_financing_steps {
 	String path = System.getProperty("user.dir") + "\\TestData\\FMSTestData.xlsx";
 	ExcelData fmsTransactionsExcelData = new ExcelData(path, "WIFAK_Application_TestData", "Data Set ID");
 	Map<String, String> testData;
+	ExcelData fmsTransactionsExcelData1 = new ExcelData(path, "REQUEST_FOR_FINANCIN", "Data Set ID");
+	Map<String, String> testData1;
+	ExcelData fmsTransactionsExcelData2 = new ExcelData(path, "Baj Application", "Data Set ID");
+	Map<String, String> testData2;
+	ExcelData fmsTransactionsExcelData3 = new ExcelData(path, "Collateral Management", "Data Set ID");
+	Map<String, String> testData3;
 
 	@And("^Click Request for financin$")
 	public void click_request_for_financin() throws Throwable {
@@ -55,6 +61,11 @@ public class Request_for_financing_steps {
 		Request_for_financing_Obj.RequestForFinancing().click();
 	}
 
+	@Given("User update test data for test case no 669589")
+	public void User_update_test_data_for_test_case_no_669589() {
+		testData1 = fmsTransactionsExcelData1.getTestdata("AT_RF_021");
+	}
+	
 	@And("^Goto maintenace$")
 	public void goto_maintenace() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
@@ -67,8 +78,9 @@ public class Request_for_financing_steps {
 	public void select_reason_for_submission() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Select_reason_for_submission());
 		clicksAndActionsHelper.moveToElement(Request_for_financing_Obj.Select_reason_for_submission());
-		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.Select_reason_for_submission(),
-				"Modify Request");
+//		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.Select_reason_for_submission(),
+//				"Modify Request");
+		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.Select_reason_for_submission(),testData1.get("Reason For Submission"));
 
 	}
 
@@ -77,7 +89,8 @@ public class Request_for_financing_steps {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.enter_Existing_Facility_No());
 		clicksAndActionsHelper.moveToElement(Request_for_financing_Obj.enter_Existing_Facility_No());
 		Request_for_financing_Obj.enter_Existing_Facility_No().click();
-		Request_for_financing_Obj.enter_Existing_Facility_No().sendKeys("1399");
+		//Request_for_financing_Obj.enter_Existing_Facility_No().sendKeys("1399");
+		Request_for_financing_Obj.enter_Existing_Facility_No().sendKeys(testData1.get("Existing Facility"));
 		Request_for_financing_Obj.Afertenter_Existing_Facility_No_ClickSearch().click();
 //				for (int i = 0; i <= 300; i++) {
 //					if (!(Request_for_financing_Obj.Afertenter_Existing_Facility_No_ClickSearch().getAttribute("prevvalue").isBlank())) {
@@ -135,7 +148,9 @@ public class Request_for_financing_steps {
 		for (int i = 0; i < 300; i++) {
 			try {
 				Request_for_financing_Obj.Click_and_enter_firstGroupID_onGroupLimit().click();
-				Request_for_financing_Obj.Click_In_and_enter_firstGroupID_onGroupLimit().sendKeys("1");
+				//Request_for_financing_Obj.Click_In_and_enter_firstGroupID_onGroupLimit().sendKeys("1");
+				Request_for_financing_Obj.Click_In_and_enter_firstGroupID_onGroupLimit().sendKeys(testData1.get("First GroupID"));
+
 				break;
 			} catch (Exception e) {
 				if (i == 299) {
@@ -152,7 +167,9 @@ public class Request_for_financing_steps {
 				Request_for_financing_Obj.Click_and_enter_firstGroupID_onGroupLimit());
 		clicksAndActionsHelper.moveToElement(Request_for_financing_Obj.Click_and_enter_firstGroupID_onGroupLimit());
 		Request_for_financing_Obj.Click_and_enter_firstlimit_onGroupLimit().click();
-		Request_for_financing_Obj.Click_and_enter_firstlimit_onGroupLimit().sendKeys("2000");
+		//Request_for_financing_Obj.Click_and_enter_firstlimit_onGroupLimit().sendKeys("2000");
+		Request_for_financing_Obj.Click_and_enter_firstlimit_onGroupLimit().sendKeys(testData1.get("First Group Limit"));
+
 
 	}
 
@@ -174,8 +191,8 @@ public class Request_for_financing_steps {
 //					break;
 //				}
 //			}
-
-		Request_for_financing_Obj.Click_In_and_enter_FirstGroupname_onGroupLimit().sendKeys("dq");
+	//	Request_for_financing_Obj.Click_In_and_enter_FirstGroupname_onGroupLimit().sendKeys("dq");
+		Request_for_financing_Obj.Click_In_and_enter_FirstGroupname_onGroupLimit().sendKeys(testData1.get("First Group Name"));
 	}
 
 	@And("^Enter Second GroupID$")
@@ -197,7 +214,9 @@ public class Request_for_financing_steps {
 				Request_for_financing_Obj.Click_and_enter_secondGroupID_onGroupLimit());
 		clicksAndActionsHelper.moveToElement(Request_for_financing_Obj.Click_and_enter_secondGroupID_onGroupLimit());
 		Request_for_financing_Obj.Click_and_enter_secondGroupID_onGroupLimit().click();
-		Request_for_financing_Obj.Click_In_and_enter_secondGroupID_onGroupLimit().sendKeys("2");
+		//Request_for_financing_Obj.Click_In_and_enter_secondGroupID_onGroupLimit().sendKeys("2");
+		Request_for_financing_Obj.Click_In_and_enter_secondGroupID_onGroupLimit().sendKeys(testData1.get("Second GroupID"));
+
 	}
 
 	@Then("^Enter Second Group limit$")
@@ -206,7 +225,8 @@ public class Request_for_financing_steps {
 				Request_for_financing_Obj.Afterenter_value_on_SecondLimit_clickout());
 		// clicksAndActionsHelper.moveToElement(Request_for_financing_Obj.Afterenter_value_on_SecondLimit_clickout());
 		Request_for_financing_Obj.Click_and_enter_secondlimit_onGroupLimit().click();
-		Request_for_financing_Obj.Click_and_enter_secondlimit_onGroupLimit().sendKeys("10000");
+		//Request_for_financing_Obj.Click_and_enter_secondlimit_onGroupLimit().sendKeys("10000");
+		Request_for_financing_Obj.Click_and_enter_secondlimit_onGroupLimit().sendKeys(testData1.get("Second Group Limit"));
 		Request_for_financing_Obj.Afterenter_value_on_SecondLimit_clickout().click();
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.CannotPoceed_After_enterHighvalue());
 		Assert.assertEquals(true, Request_for_financing_Obj.CannotPoceed_After_enterHighvalue().isDisplayed());
@@ -246,7 +266,7 @@ public class Request_for_financing_steps {
 
 	}
 
-	String RequestNo;
+	
 
 	@And("^Select first approve status detail$")
 	public void select_first_approve_status_detail() throws Throwable {
@@ -267,7 +287,7 @@ public class Request_for_financing_steps {
 		// Request_for_financing_Obj.get_approved_reqNo());
 
 	}
-
+	
 	@And("^Click process button in management process branch tab$")
 	public void click_process_button_in_management_process_branch_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.get_approved_reqNo());
@@ -279,6 +299,12 @@ public class Request_for_financing_steps {
 		System.out.println(RequestNo);
 	}
 
+	@Given("User update test data for test case no 664435")
+	public void user_update_test_data_for_test_case_no_664435() {
+		testData2 = fmsTransactionsExcelData2.getTestdata("AT_RF_022");
+	}
+
+	
 	@And("^Click on baj application$")
 	public void click_on_baj_application() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_baj_application());
@@ -311,7 +337,7 @@ public class Request_for_financing_steps {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_searchOn_maintenance());
 		Request_for_financing_Obj.Click_searchOn_maintenance().click();
 	}
-
+	String RequestNo;
 	@And("^Enter Request No$")
 	public void enter_request_no() throws Throwable {
 		// waitHelper.waitForElementwithFluentwait(driver,
@@ -365,7 +391,12 @@ public class Request_for_financing_steps {
 	}
 
 	// @652870
-
+	@Given("User update test data for test case no 652870")
+	public void user_update_test_data_for_test_case_no_652870(){
+		testData1 = fmsTransactionsExcelData1.getTestdata("AT_RF_052");
+	    
+	}
+	
 	@And("^Click Collateral Management$")
 	public void click_collateral_management() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_Collateral_Management());
@@ -390,7 +421,8 @@ public class Request_for_financing_steps {
 	public void click_and_enter_cif() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_Click_and_enter_CIF());
 		Request_for_financing_Obj.Click_Click_and_enter_CIF().click();
-		Request_for_financing_Obj.Click_Click_and_enter_CIF().sendKeys("8");
+		//Request_for_financing_Obj.Click_Click_and_enter_CIF().sendKeys("8");
+		Request_for_financing_Obj.Click_Click_and_enter_CIF().sendKeys(testData3.get("CIF"));
 		Request_for_financing_Obj.Click_Click_and_enter_CIF().sendKeys(Keys.ENTER);
 
 	}
@@ -408,6 +440,11 @@ public class Request_for_financing_steps {
 	}
 
 	// @652912
+	@Given("User update test data for test case no 652912")
+	public void user_update_test_data_for_test_case_no_652912() {
+	    //AT_RF_053
+		
+	}
 
 	@And("^Click Facilities Management under WIFAK APPLICATION$")
 	public void click_facilities_management_under_wifak_application() throws Throwable {
@@ -536,6 +573,11 @@ public class Request_for_financing_steps {
 	}
 
 	// @636958
+	@Given("User update test data for test case no 636958")
+	public void user_update_test_data_for_test_case_no_636958() {
+	    
+	}
+
 	@And("^click the reason for submission search box$")
 	public void click_the_reason_for_submission_search_box() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.reasonforsubmisson());
@@ -1766,6 +1808,15 @@ public class Request_for_financing_steps {
 		
 		//check the date after add produclassLN possible to change if change again change it
 		
+		waitHelper.waitForElementwithFluentwait(driver,Request_for_financing_Obj.click_drawdown_mainInformation());
+		Request_for_financing_Obj.click_drawdown_mainInformation().click();
+		
+		waitHelper.waitForElementwithFluentwait(driver,Request_for_financing_Obj.enter_valid_dateIn_drawDown_mainInformation());
+		Request_for_financing_Obj.enter_valid_dateIn_drawDown_mainInformation().sendKeys("25/05/2024");
+
+		waitHelper.waitForElementwithFluentwait(driver,Request_for_financing_Obj.Click_Drawdown_Additional_Details_tab());
+		Request_for_financing_Obj.Click_Drawdown_Additional_Details_tab().click();
+		
 	}
 
 	@Given("Click save button IndrawDown Additional Details tab")
@@ -1891,8 +1942,13 @@ public class Request_for_financing_steps {
 		Request_for_financing_Obj.Enter_Facility_Reference_InMainteance_under_Facility_Closure_Request().sendKeys(getcode);
 	}
 
-	
-	
+	//@542234
+	@And ("Goto maintenace under request for financing")
+	public void Goto_maintenace_under_request_for_financing() {
+		waitHelper.waitForElementwithFluentwait(driver,Request_for_financing_Obj.Click__maintenace_under_request_for_financing());
+		Request_for_financing_Obj.Click__maintenace_under_request_for_financing().click();
+
+	}
 	
 	
 }

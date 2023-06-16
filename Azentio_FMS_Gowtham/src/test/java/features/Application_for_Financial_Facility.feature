@@ -90,6 +90,7 @@ Feature: Linking Fixed Asset to Application in FMS
   @127787
   Scenario: TC to check the addition of two new flags at the Parameters -Facility Type Maintain  screen(P008)
     Given navigate to FMS param application and login with valid credentials2
+    And User update test data for test case no 127787
     And Click on the Parameters menu
     Then Click on the Facility Type submenu
     And Click on the Update After Approve screen
@@ -106,7 +107,7 @@ Feature: Linking Fixed Asset to Application in FMS
     Given navigate to FMS application2 and login with valid credentials
     And Click Wifak Application first
     And Click Wifak Application Second
-    And User update test data for test case no 949677
+    And User update test data for test case no 299886
     And Click Application for financial facilities
     And Click Maintenance
     And Click and Select Application for
@@ -132,7 +133,7 @@ Feature: Linking Fixed Asset to Application in FMS
     Given navigate to FMS application2 and login with valid credentials
     And Click Wifak Application first
     And Click Wifak Application Second
-    And User update test data for test case no 949677
+    And User update test data for test case no 929306
     And Click Application for financial facilities
     And Click Maintenance
     And Click and Select Application for

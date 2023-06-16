@@ -6,6 +6,7 @@ Feature: Title of your feature
     Given navigate to FMS application2 and login with valid credentials
     And Click Request for financin
     And Click Request for financing
+    And User update test data for test case no 669589
     And Goto maintenace
     And Select Reason For Submission
     And Enter value on Existing Facility No
@@ -36,9 +37,10 @@ Feature: Title of your feature
     And Select first approve status detail
     And Click process button in management process branch tab
 
-  @6644352
+  @664435(2)
   Scenario: BTII180015
     Given navigate to FMS application2 and login with valid credentials
+    And User update test data for test case no 664435
     And Click on baj application
     And Click Application Under baj application
     And Click Application For Financial Facilities under application
@@ -53,6 +55,7 @@ Feature: Title of your feature
     @652870
 		 Scenario: TSR - BTII180030
 		 Given navigate to FMS application2 and login with valid credentials
+		 And User update test data for test case no 652870
 		  And Click Collateral Management
       And Click maintenance under Collateral Management
       And Click search on maintenance screen
@@ -62,6 +65,7 @@ Feature: Title of your feature
     @652912
     Scenario: TSR - BTII180039
     Given navigate to FMS application2 and login with valid credentials
+    And User update test data for test case no 652912
     And Click Wifak Application first
     And Click Wifak Application Second
     And Click Facilities Management under WIFAK APPLICATION
@@ -79,6 +83,8 @@ Feature: Title of your feature
     @636958
     Scenario: TSR - EWB180031
      Given navigate to FMS application2 and login with valid credentials
+     And User update test data for test case no 636958
+     #excell pending
      And Click Request for financin
      And Click Request for financing
      And Goto maintenace
@@ -135,7 +141,7 @@ Feature: Title of your feature
 		Given navigate to FMS application2 and login with valid credentials
 		And Click Wifak Application first
     And Click Wifak Application Second
-    And User update test data for test case no 949677
+    And User update test data for test case no 583228
     And Click Application for financial facilities
     And Click Maintenance
     And Click and Select Application for
@@ -359,6 +365,7 @@ Feature: Title of your feature
 		And Click Facility Closure Request under drawdown
 		And Click Mainteance under Facility Closure Request under drawdown
 		And Enter Facility Reference In Mainteance under Facility Closure Request
+		
 		
 		
 		

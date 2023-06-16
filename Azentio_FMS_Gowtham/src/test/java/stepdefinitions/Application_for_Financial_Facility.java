@@ -1,8 +1,5 @@
 package stepdefinitions;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertFalse;
-
 import java.util.Map;
 
 import org.openqa.selenium.Keys;
@@ -37,7 +34,18 @@ public class Application_for_Financial_Facility {
 	String path = System.getProperty("user.dir") + "\\TestData\\FMSTestData.xlsx";
 	ExcelData fmsTransactionsExcelData = new ExcelData(path, "WIFAK_Application_TestData", "Data Set ID");
 	Map<String, String> testData;
+	
+	
+	@And("^User update test data for test case no 539219$")
+	public void User_update_test_data_for_test_case_no_539219() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("AT_FM_017");
+	}
+	@Given("^User update test data for test case no 929306$")
+	public void User_update_test_data_for_test_case_no_929306() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_RF_113");
+	}
 
+	
 	@Given("^navigate to FMS application2 and login with valid credentials$")
 	public void navigate_to_fms_application2_and_login_with_valid_credentials() throws Throwable {
 		driver.get(configFileReader.getFMSApplicationUrl());
@@ -75,7 +83,7 @@ public class Application_for_Financial_Facility {
 
 	@And("^User update test data for test case no 949677$")
 	public void user_update_test_data_for_test_case_no_949677() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("TC_917005");
+		testData = fmsTransactionsExcelData.getTestdata("AT_AFF_012");
 	}
 
 	@And("^Click and Select Application for$")
@@ -97,8 +105,8 @@ public class Application_for_Financial_Facility {
 		for (int i = 0; i <= 300; i++) {
 			try {
 				applicationFinancialObj.getCIF_no().click();
-				applicationFinancialObj.getCIF_no().sendKeys("727");
-				//applicationFinancialObj.getCIF_no().sendKeys(testData.get("CIF No"));
+				//applicationFinancialObj.getCIF_no().sendKeys("727");
+				applicationFinancialObj.getCIF_no().sendKeys(testData.get("CIF No"));
 				break;
 
 			} catch (Exception e) {
@@ -113,8 +121,8 @@ public class Application_for_Financial_Facility {
 	public void enter_facility_type_code() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.getEnter_codeOn_Facility_Type());
 		applicationFinancialObj.getEnter_codeOn_Facility_Type().click();
-		applicationFinancialObj.getEnter_codeOn_Facility_Type().sendKeys("369");
-		//applicationFinancialObj.getEnter_codeOn_Facility_Type().sendKeys(testData.get("Facility Type"));
+		//applicationFinancialObj.getEnter_codeOn_Facility_Type().sendKeys("369");
+		applicationFinancialObj.getEnter_codeOn_Facility_Type().sendKeys(testData.get("Facility Type"));
 		for (int i = 0; i <= 300; i++) {
 			if (!(applicationFinancialObj.getEnter_codeOn_Facility_Type().getAttribute("prevvalue").isBlank())) {
 				break;
@@ -127,7 +135,7 @@ public class Application_for_Financial_Facility {
 		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.getEnterCodeIn_Country_of_Financing());
 		clicksAndActionsHelper.moveToElement(applicationFinancialObj.getEnterCodeIn_Country_of_Financing());
 		applicationFinancialObj.getEnterCodeIn_Country_of_Financing().click();
-		// applicationFinancialObj.getEnterCodeIn_Country_of_Financing().sendKeys("320");
+		//applicationFinancialObj.getEnterCodeIn_Country_of_Financing().sendKeys("320");
 		applicationFinancialObj.getEnterCodeIn_Country_of_Financing().sendKeys(testData.get("Country of Financing"));
 		for (int i = 0; i <= 300; i++) {
 			if (!(applicationFinancialObj.getEnterCodeIn_Country_of_Financing().getAttribute("prevvalue").isBlank())) {
@@ -308,7 +316,8 @@ public class Application_for_Financial_Facility {
 		for (int i = 0; i < 300; i++) {
 			try {
 				applicationFinancialObj.getEnter_value_on_Catagory().click();
-				applicationFinancialObj.getEnter_value_on_Catagory().sendKeys("1");
+				//applicationFinancialObj.getEnter_value_on_Catagory().sendKeys("1");
+				applicationFinancialObj.getEnter_value_on_Catagory().sendKeys(testData.get("Catagory"));
 				applicationFinancialObj.AfterEnter_value_on_Catagory_Search().click();
 				break;
 			} catch (Exception e) {
@@ -332,7 +341,8 @@ public class Application_for_Financial_Facility {
 		for (int i = 0; i < 300; i++) {
 			try {
 				applicationFinancialObj.getEnter_value_on_Class().click();
-				applicationFinancialObj.getEnter_value_on_Class().sendKeys("1234");
+				//applicationFinancialObj.getEnter_value_on_Class().sendKeys("1234");
+				applicationFinancialObj.getEnter_value_on_Catagory().sendKeys(testData.get("Class"));
 				applicationFinancialObj.AfterEnter_value_on_Class_Search().click();
 				break;
 			} catch (Exception e) {
@@ -355,7 +365,9 @@ public class Application_for_Financial_Facility {
 		for (int i = 0; i < 300; i++) {
 			try {
 				applicationFinancialObj.getEnter_value_on_vendor().click();
-				applicationFinancialObj.getEnter_value_on_vendor().sendKeys("1");
+				//applicationFinancialObj.getEnter_value_on_vendor().sendKeys("1");
+				applicationFinancialObj.getEnter_value_on_vendor().sendKeys(testData.get("Vendor"));
+
 				applicationFinancialObj.AfterEnter_value_on_vendor_search().click();
 				break;
 			} catch (Exception e) {
@@ -379,7 +391,9 @@ public class Application_for_Financial_Facility {
 
 		for (int i = 0; i < 300; i++) {
 			try {
-				applicationFinancialObj.getEnter_value_on_quantity().sendKeys("11");
+				//applicationFinancialObj.getEnter_value_on_quantity().sendKeys("11");
+				applicationFinancialObj.getEnter_value_on_vendor().sendKeys(testData.get("Quantity"));
+
 				applicationFinancialObj.getEnter_value_on_quantity().click();
 
 				break;
@@ -404,7 +418,9 @@ public class Application_for_Financial_Facility {
 		for (int i = 0; i < 300; i++) {
 			try {
 				applicationFinancialObj.getEnter_value_on_Unit().click();
-				applicationFinancialObj.getEnter_value_on_Unit().sendKeys("11");
+				//applicationFinancialObj.getEnter_value_on_Unit().sendKeys("11");
+				applicationFinancialObj.getEnter_value_on_vendor().sendKeys(testData.get("Unit"));
+
 
 				break;
 			} catch (Exception e) {
@@ -429,7 +445,9 @@ public class Application_for_Financial_Facility {
 		for (int i = 0; i < 300; i++) {
 			try {
 				applicationFinancialObj.getEnter_value_on_Cy().click();
-				applicationFinancialObj.getEnter_value_on_Cy().sendKeys("999");
+				//applicationFinancialObj.getEnter_value_on_Cy().sendKeys("999");
+				applicationFinancialObj.getEnter_value_on_vendor().sendKeys(testData.get("Cy"));
+
 				applicationFinancialObj.AfterEnter_value_on_vendor_search().click();
 
 				break;
@@ -454,8 +472,8 @@ public class Application_for_Financial_Facility {
 		for (int i = 0; i < 300; i++) {
 			try {
 				applicationFinancialObj.getEnter_value_on_UnitCost().click();
-				applicationFinancialObj.getEnter_value_on_UnitCost().sendKeys("11");
-
+				//applicationFinancialObj.getEnter_value_on_UnitCost().sendKeys("11");
+				applicationFinancialObj.getEnter_value_on_vendor().sendKeys(testData.get("UnitCost"));
 				break;
 			} catch (Exception e) {
 				if (i == 299) {
@@ -558,7 +576,7 @@ public class Application_for_Financial_Facility {
 //*** @917005
 	@And("^User update test data for test case no 917005$")
 	public void user_update_test_data_for_test_case_no_917005() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("TC_917005");
+		testData = fmsTransactionsExcelData.getTestdata("AT_AFF_017");
 	}
 
 	@And("^Go to mainInformation Screen$")
@@ -583,7 +601,7 @@ public class Application_for_Financial_Facility {
 	// *** @817662
 	@And("^User update test data for test case no 817662$")
 	public void user_update_test_data_for_test_case_no_817662() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("TC_917005");
+		testData = fmsTransactionsExcelData.getTestdata("AT_AFF_022");
 	}
 
 	@And("^Click Document checklist$")
@@ -654,6 +672,10 @@ public class Application_for_Financial_Facility {
 		driver.get(configFileReader.getFMSparamsUrl());
 		login.loginIntoFmsParamApplication2(configFileReader.getFMSParamApplicationUserType());
 	}
+	@Given("User update test data for test case no 127787")
+	public void And_User_update_test_data_for_test_case_no_127787() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_AFF_060");
+	}
 
 	@And("^Click on the Parameters menu$")
 	public void click_on_the_parameters_menu() throws Throwable {
@@ -661,7 +683,6 @@ public class Application_for_Financial_Facility {
 		clicksAndActionsHelper.moveToElement(applicationFinancialObj.Fms_ParametersMenu());
 		clicksAndActionsHelper.clickOnElement(applicationFinancialObj.Fms_ParametersMenu());
 		// applicationFinancialObj.Fms_Parameters().click();
-
 	}
 
 	@Then("^Click on the Facility Type submenu$")
@@ -676,7 +697,8 @@ public class Application_for_Financial_Facility {
 		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.FacilityType_UpdateAfterApprove_Code());
 		clicksAndActionsHelper.moveToElement(applicationFinancialObj.FacilityType_UpdateAfterApprove_Code());
 		clicksAndActionsHelper.clickOnElement(applicationFinancialObj.FacilityType_UpdateAfterApprove_Code());
-		applicationFinancialObj.FacilityType_UpdateAfterApprove_Code().sendKeys("221");
+		//applicationFinancialObj.FacilityType_UpdateAfterApprove_Code().sendKeys("221");
+		applicationFinancialObj.FacilityType_UpdateAfterApprove_Code().sendKeys(testData.get("Update After Approve Code"));
 		applicationFinancialObj.FacilityType_UpdateAfterApprove_Code().sendKeys(Keys.ENTER);
 	}
 
@@ -790,18 +812,20 @@ public class Application_for_Financial_Facility {
 	
 	
 	
+	@And("User update test data for test case no 299886")
+	public void User_update_test_data_for_test_case_no_299886() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_AFF_022");
+		
+	}
 	
-	
-	
-	
-
 	@And("^In AdditionalDetails enter value On  downPayment more than total value and check$")
 	public void in_additionaldetails_enter_value_on_downpayment_more_than_total_value_and_check() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				applicationFinancialObj.enter_valueOn_downPayment_inAdditionalDetails());
 		clicksAndActionsHelper.moveToElement(applicationFinancialObj.enter_valueOn_downPayment_inAdditionalDetails());
 		applicationFinancialObj.enter_valueOn_downPayment_inAdditionalDetails().click();
-		applicationFinancialObj.enter_valueOn_downPayment_inAdditionalDetails().sendKeys("100");
+	//	applicationFinancialObj.enter_valueOn_downPayment_inAdditionalDetails().sendKeys("100");
+		applicationFinancialObj.enter_valueOn_downPayment_inAdditionalDetails().sendKeys(testData.get("Down Payment High"));
 		applicationFinancialObj.clickOut_after_enterValueOn_down_payment().click();
 		if (!applicationFinancialObj.down_payment_popup().isDisplayed()) {
 
@@ -817,7 +841,9 @@ public class Application_for_Financial_Facility {
 		clicksAndActionsHelper.doubleClick(applicationFinancialObj.enter_valueOn_downPayment_inAdditionalDetails());
 		applicationFinancialObj.enter_valueOn_downPayment_inAdditionalDetails().sendKeys(Keys.DELETE);
 
-		applicationFinancialObj.enter_valueOn_downPayment_inAdditionalDetails().sendKeys("10000");
+		//applicationFinancialObj.enter_valueOn_downPayment_inAdditionalDetails().sendKeys("10000");
+		applicationFinancialObj.enter_valueOn_downPayment_inAdditionalDetails().sendKeys("Down Payment Less");
+		
 		applicationFinancialObj.clickOut_after_enterValueOn_down_payment().click();
 		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.down_payment_popup());
 		clicksAndActionsHelper.moveToElement(applicationFinancialObj.down_payment_popup());
@@ -827,6 +853,12 @@ public class Application_for_Financial_Facility {
 	
 	
 	/////@929306
+	@Given("User update test data for test case no 929306")
+	public void user_update_test_data_for_test_case_no_929306() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_AFF_007");
+	}
+
+	
 //	@Given("^navigate to FMS param application and login with valid credentials$")
 //    public void navigate to FMS param application and login with valid credentials() throws Throwable {
 //		driver.get(configFileReader.getFMSparamsUrl());
@@ -895,7 +927,8 @@ public class Application_for_Financial_Facility {
 	    public void enter_first_value_on_product_class() throws Throwable {
 		 waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.getEnter_ValueOn_Product_Class());
 		 applicationFinancialObj.getEnter_ValueOn_Product_Class().click();
-		 applicationFinancialObj.getEnter_ValueOn_Product_Class().sendKeys("1");
+		// applicationFinancialObj.getEnter_ValueOn_Product_Class().sendKeys("1");
+		 applicationFinancialObj.getEnter_ValueOn_Product_Class().sendKeys(testData.get("Product Class 1"));
 			applicationFinancialObj.getEnter_ValueOn_Product_Class().sendKeys(Keys.TAB);
 		 for (int i = 0; i <= 300; i++) {
 				if (!(applicationFinancialObj.getEnter_ValueOn_Product_Class().getAttribute("prevvalue").isBlank())) {
@@ -920,7 +953,9 @@ public class Application_for_Financial_Facility {
 						applicationFinancialObj.Add_facilityValue_OnLimitDetails().click();
 						clicksAndActionsHelper.doubleClick(applicationFinancialObj.Add_facilityValue_OnLimitDetails());
 						applicationFinancialObj.Add_facilityValue_OnLimitDetails().sendKeys(Keys.DELETE);
-						 applicationFinancialObj.Add_facilityValue_OnLimitDetails().sendKeys("5000");
+						
+					//	 applicationFinancialObj.Add_facilityValue_OnLimitDetails().sendKeys("5000");
+						applicationFinancialObj.Add_facilityValue_OnLimitDetails().sendKeys(testData.get("Facility Value"));
 						break;
 					} catch (Exception e) {
 						if (i == 299) {
@@ -936,7 +971,8 @@ public class Application_for_Financial_Facility {
 	    public void enter_second_valueon_product_class() throws Throwable {
 	    	 waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.getEnter_ValueOn_Product_Class());
 			 applicationFinancialObj.getEnter_ValueOn_Product_Class().click();
-			 applicationFinancialObj.getEnter_ValueOn_Product_Class().sendKeys("2");
+			 //applicationFinancialObj.getEnter_ValueOn_Product_Class().sendKeys("2");
+			 applicationFinancialObj.getEnter_ValueOn_Product_Class().sendKeys(testData.get("Product Class 2"));
 			 applicationFinancialObj.getEnter_ValueOn_Product_Class().sendKeys(Keys.TAB);
 				waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.limitDetailsNewRecordCleanFlag());
 			 for (int i = 0; i <= 300; i++) {
@@ -957,7 +993,8 @@ public class Application_for_Financial_Facility {
 	    	for (int i = 0; i < 300; i++) {
 				try {
 					applicationFinancialObj.floatingRateSearchbox().click();
-			    	applicationFinancialObj.floatingRateSearchbox().sendKeys("98");
+			    	//applicationFinancialObj.floatingRateSearchbox().sendKeys("98");
+					applicationFinancialObj.floatingRateSearchbox().sendKeys(testData.get("Floating Rate"));
 			    	applicationFinancialObj.floatingRateSearchbox().sendKeys(Keys.TAB);
 					break;
 				} catch (Exception e) {
@@ -979,14 +1016,16 @@ public class Application_for_Financial_Facility {
 	    @And("^Enter the floating rate periodicity$")
 	    public void enter_the_floating_rate_periodicity() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.floatingrateperiodicitysearchbox());
-	    	applicationFinancialObj.floatingrateperiodicitysearchbox().sendKeys("2");
+	    	//applicationFinancialObj.floatingrateperiodicitysearchbox().sendKeys("2");
+	    	applicationFinancialObj.floatingrateperiodicitysearchbox().sendKeys(testData.get("Floating Rate Periodicity"));
 	    	applicationFinancialObj.floatingrateperiodicitysearchbox().sendKeys(Keys.TAB);
 	        
 	    }
 	    @Then("^Enter the floating rate periodicity type$")
 	    public void enter_the_floating_rate_periodicity_type() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.floatingrateperiodicitytypesearchbox());
-	    	DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.floatingrateperiodicitytypesearchbox(),"Month(s)");
+	    	//DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.floatingrateperiodicitytypesearchbox(),"Month(s)");
+	    	DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.floatingrateperiodicitytypesearchbox(),testData.get("Floating Rate Periodicity Type"));
 	    }
 
 	    @And("^Click save button on limit details$")
@@ -1033,7 +1072,8 @@ public class Application_for_Financial_Facility {
 	    public void user_enter_the_solicitor_name() throws Throwable {
 	    	
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.documentDetailsSolicitorName());
-	    	applicationFinancialObj.documentDetailsSolicitorName().sendKeys("1");;
+	    	//applicationFinancialObj.documentDetailsSolicitorName().sendKeys("1");;
+			applicationFinancialObj.documentDetailsSolicitorName().sendKeys(testData.get("Solicitor Name"));
 	    	applicationFinancialObj.documentDetailsSolicitorName().sendKeys(Keys.TAB);
 	    	 for (int i = 0; i <= 300; i++) {
 					if (!(applicationFinancialObj.documentDetailsSolicitorName().getAttribute("prevvalue").isBlank())) {
@@ -1045,7 +1085,9 @@ public class Application_for_Financial_Facility {
 	    @And("^User enter the Estimator Name$")
 	    public void user_enter_the_estimator_name() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.documentDetailsEstimatorName());
-	    	applicationFinancialObj.documentDetailsEstimatorName().sendKeys("1");
+	    	//applicationFinancialObj.documentDetailsEstimatorName().sendKeys("1");
+			applicationFinancialObj.documentDetailsEstimatorName().sendKeys(testData.get("Estimator Name"));
+
 	    	applicationFinancialObj.documentDetailsEstimatorName().sendKeys(Keys.TAB);
 	    	 for (int i = 0; i <= 300; i++) {
 					if (!(applicationFinancialObj.documentDetailsSolicitorName().getAttribute("prevvalue").isBlank())) {
@@ -1128,7 +1170,7 @@ public class Application_for_Financial_Facility {
 	    @And("^User select the level1 devision as approve$")
 	    public void user_select_the_level1_decision_as_approve() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.approveLevel1SelectDevision());
-	    	DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.approveLevel1SelectDevision(), "Approve");
+	    	DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.approveLevel1SelectDevision(), testData.get("Approve1 Decision"));
 	    	//DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.approveLevel1SelectDevision(), testData.get("Decision1"));
 	    	
 	    }
@@ -1163,8 +1205,8 @@ public class Application_for_Financial_Facility {
 	    @And("^User select the level2 devision as approve$")
 	    public void user_select_the_level2_decision_as_approve() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.approveLevel2SelectDevision());
-	    	DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.approveLevel2SelectDevision(), "Approve");
-	//    	DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.approveLevel2SelectDevision(), testData.get("Decision2"));
+	    //	DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.approveLevel2SelectDevision(), "Approve");
+	    	DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.approveLevel2SelectDevision(), testData.get("Approve2 Decision"));
 	    }
 
 	    @And("^User clicks on the level2 submit button$")
@@ -1196,8 +1238,8 @@ public class Application_for_Financial_Facility {
 	    @And("^User select the level3 devision as approve$")
 	    public void user_select_the_level3_decision_as_approve() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.approveLevel3SelectDevision());
-	    	DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.approveLevel3SelectDevision(), "Approve");
-//	    	DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.approveLevel3SelectDevision(), testData.get("Decision3"));
+	    //	DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.approveLevel3SelectDevision(), "Approve");
+	    	DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.approveLevel3SelectDevision(), testData.get("Approve3 Decision"));
 	    
 	    }
 	    
@@ -1210,6 +1252,17 @@ public class Application_for_Financial_Facility {
 	    	applicationFinancialObj.ButtonConfirmOk().click();
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonSuccessOk());
 	    	applicationFinancialObj.ButtonSuccessOk().click();
+	    	
+	    		for (int i = 0; i < 700; i++) {
+					try {
+						if (applicationFinancialObj.SendAlert_pop().isDisplayed()) {
+							applicationFinancialObj.SendAlert_pop().click();
+							break;
+						}
+					} catch (Exception e) {
+
+					}
+				}
 	    }
 	
 	
@@ -1344,6 +1397,56 @@ public class Application_for_Financial_Facility {
 	        applicationFinancialObj.Click_SaveButton_AfterEdit_downPayment().click();
 	        
 	    }
+		
+		//@539219
+		@And("User Click Approval Committee Recommendations")
+		public void User_Click_Approval_Committee_Recommendations(){
+	        waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Click_Approval_Committee_Recommendations());
+	        applicationFinancialObj.Click_Approval_Committee_Recommendations().click();
+		}
+		
+		@And("Select the record in Approval Committee Recommendations")
+		public void Select_the_record_in_Approval_Committee_Recommendations() throws InterruptedException{
+	        waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Click_ClearSearch_InApproval_Committee_Recommendations());
+	        applicationFinancialObj.Click_ClearSearch_InApproval_Committee_Recommendations().click();
+	        
+	        waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.select_the_record_InApproval_Committee_Recommendations());
+	        clicksAndActionsHelper.doubleClick(applicationFinancialObj.select_the_record_InApproval_Committee_Recommendations());
+
+		}
+		@Given("Click recommend button in the Approval Committee Recommendations Screen")
+		public void click_recommend_button_in_the_approval_committee_recommendations_screen() {
+	        waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Click_recommend_button_in_the_Approval_Committee_Recommendations_Screen());
+	        applicationFinancialObj.Click_recommend_button_in_the_Approval_Committee_Recommendations_Screen().click();
+	        
+	        waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonConfirmOk());
+	        applicationFinancialObj.ButtonConfirmOk().click();
+
+		}
+
+		@Given("Enter the details in Recommendations")
+		public void enter_the_details_in_recommendations() {
+			waitHelper.waitForElementwithFluentwait(driver,
+					applicationFinancialObj.select_approve_In_recommendaionDropDown());
+			applicationFinancialObj.select_approve_In_recommendaionDropDown().click();
+			
+			
+	       waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.select_approve_In_recommendaionDropDown());
+	       DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.select_approve_In_recommendaionDropDown(), "Approve");
+
+	       waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.enter_comment_code_In_recommendaionPopup());
+	       applicationFinancialObj.enter_comment_code_In_recommendaionPopup().sendKeys("1");
+	         
+		}
+
+		@Given("Click ok button in the Recommendations screen")
+		public void click_ok_button_in_the_recommendations_screen() {
+		       waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Click_ok_After_enterValues_On_recommendaion());
+		       applicationFinancialObj.Click_ok_After_enterValues_On_recommendaion().click();
+		}
+
+		
+		
 		
     
 }

@@ -824,6 +824,9 @@ public class Application_for_Financial_FacilityObj {
 		return approve_level3_submit_btn;
 	}	
 	
+	
+	
+	
 	@FindBy(xpath = "//input[@id='lookuptxt_applicationFacilityExistingFacilityRef_WIFT001MT']")
 	private WebElement Existing_Facility_Ref_near_Application_for;
 	public WebElement Existing_Facility_Ref_near_Application_for() {
@@ -926,20 +929,58 @@ public class Application_for_Financial_FacilityObj {
 		return Enter_total_value_on_additionalDetails;
 	}
 	
+	//@539219
 	
+		@FindBy(xpath = "//span[text()='Approval Committee Recommendations ']")
+		private WebElement Click_Approval_Committee_Recommendations;
+		public WebElement Click_Approval_Committee_Recommendations() {
+			return Click_Approval_Committee_Recommendations;
+		}
+		
+		@FindBy(xpath = "//td[@id='applicationFacilityGridTbl_Id_WIFT002MT_pager_left']/table/tbody/tr/td[7]")
+		private WebElement Click_ClearSearch_InApproval_Committee_Recommendations;
+		public WebElement Click_ClearSearch_InApproval_Committee_Recommendations() {
+			return Click_ClearSearch_InApproval_Committee_Recommendations;
+		}
+		
+		@FindBy(xpath="//a[@id='dismissbut_CSMRF00MT']/span")
+	    private WebElement SendAlert_pop;
+	    public WebElement SendAlert_pop() {
+	      return SendAlert_pop;
+	    }
+	    
+	  
+	    @FindBy(xpath="//*[@id='td_applicationFacilityGridTbl_Id_WIFT002MT_1_fmsApplVO.CODE']")
+	    private WebElement select_the_record_InApproval_Committee_Recommendations;
+	    public WebElement select_the_record_InApproval_Committee_Recommendations() {
+	      return select_the_record_InApproval_Committee_Recommendations;
+	    }
 	
+	  
+	    @FindBy(xpath="//span[contains(text(),' Recommend ')]")
+	    private WebElement Click_recommend_button_in_the_Approval_Committee_Recommendations_Screen;
+	    public WebElement Click_recommend_button_in_the_Approval_Committee_Recommendations_Screen() {
+	      return Click_recommend_button_in_the_Approval_Committee_Recommendations_Screen;
+	    }
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	  
+	    @FindBy(xpath="//td[@tdlabel='Recommended By' and text()='GOWTHAM']//following::td[@tdlabel='Recommendation']/select")
+	    private WebElement select_approve_In_recommendaionDropDown;
+	    public WebElement select_approve_In_recommendaionDropDown() {
+	      return select_approve_In_recommendaionDropDown;
+	    }
+	  
+	    @FindBy(xpath="//td[@tdlabel='Recommended By' and text()='GOWTHAM']//following::td[@tdlabel='Recommendation']//following::input[@name='lookupTxt_fmsApplRecommendVO.COMMENT_CODE']")
+	    private WebElement enter_comment_code_In_recommendaionPopup;
+	    public WebElement enter_comment_code_In_recommendaionPopup() {
+	      return enter_comment_code_In_recommendaionPopup;
+	    }
+	  
+	    @FindBy(xpath="//span[text()='OK']")
+	    private WebElement Click_ok_After_enterValues_On_recommendaion;
+	    public WebElement Click_ok_After_enterValues_On_recommendaion() {
+	      return Click_ok_After_enterValues_On_recommendaion;
+	    }
 	
 	
 	

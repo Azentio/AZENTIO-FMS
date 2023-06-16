@@ -1366,6 +1366,13 @@ public class Request_for_financing_Obj {
 				return Enter_value_Product_ClassLN;
 			}
 			
+			
+			@FindBy(xpath = "//span[text()='Drawdown Main Information']")
+			private WebElement click_drawdown_mainInformation;
+			public WebElement click_drawdown_mainInformation() {
+				return click_drawdown_mainInformation;
+			}
+			
 			@FindBy(xpath = "//label[text()='Save ']")
 			private WebElement Click_save_button_IndrawDown_Additional_Details_tab;
 			public WebElement Click_save_button_IndrawDown_Additional_Details_tab() {
@@ -1441,6 +1448,12 @@ public class Request_for_financing_Obj {
 			private WebElement Enter_Facility_Reference_InMainteance_under_Facility_Closure_Request;
 			public WebElement Enter_Facility_Reference_InMainteance_under_Facility_Closure_Request() {
 				return Enter_Facility_Reference_InMainteance_under_Facility_Closure_Request;
+			}
+			
+			@FindBy(xpath = "//*[@id='RFFRF00MT']/span[2]")
+			private WebElement Click__maintenace_under_request_for_financing;
+			public WebElement Click__maintenace_under_request_for_financing() {
+				return Click__maintenace_under_request_for_financing;
 			}
 			
 			

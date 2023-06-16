@@ -17,3 +17,6 @@ Given navigate to ITRS application and login with valid credentials
 @LoginMTS
 Scenario: To Test the login functionality of MTS application
 Given navigate to MTS application and login with valid credentials
+@LoginIIS
+Scenario: To Test the login functionality of IIS application
+Given navigate to IIS application and login with valid credentials

@@ -16,6 +16,7 @@ public class LoginTest extends BaseClass {
 	FMSLogin FMSLogin = new FMSLogin(driver);
 	ITRS_Login itrs_Login= new ITRS_Login(driver);
 	MTS_Login mts_Login = new MTS_Login(driver);
+	IIS_Login iis_login = new IIS_Login(driver);
 	WaitHelper waitHelper = new WaitHelper(driver);
 	ClicksAndActionsHelper clicksAndActionHelper = new ClicksAndActionsHelper(driver);
 	FMSCommonWebElements fmsCommonWebElements = new FMSCommonWebElements(driver);
@@ -59,6 +60,12 @@ public class LoginTest extends BaseClass {
 	public void navigate_to_MTS_application_and_login_with_valid_credentials() throws Throwable {
 		driver.get(configFileReader.getMTS_ApplicationURL());
 		mts_Login.loginIntoMTSApplication(configFileReader.getMTSApplicationUserType());
+	}
+
+	@Given("navigate to IIS application and login with valid credentials")
+	public void navigate_to_iis_application_and_login_with_valid_credentials() {
+		driver.get(configFileReader.getIIS_ApplicationURL());
+		iis_login.loginIntoIISApplication(configFileReader.getIISApplicationUserType());
 	}
 
 
