@@ -870,6 +870,12 @@ public class Application_for_Financial_FacilityObj {
 		return additional_tab_finance_amount;
 	}
 	
+	@FindBy(xpath = "//select[@id='applicationFacilityApplicationfor_WIFT001MT']")
+	private WebElement select_decrease_inApplicationFor;
+	public WebElement select_decrease_inApplicationFor() {
+		return select_decrease_inApplicationFor;
+	}
+	
 	@FindBy(xpath = "//input[@id='applicationFacilitytotalvalue_WIFT001MT']")
     private WebElement main_additional_tab_total_value;
     public WebElement mainAdditionalTabTotalValue() {

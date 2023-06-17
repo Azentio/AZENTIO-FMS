@@ -69,11 +69,11 @@ Feature: Title of your feature
     And User_607 enter the request code in approve level1 under Request for Financing
     And User_607 double click on the first row in approve level1 under Request for Financing
     And User_607 Click the Disbursement Sublimit In ApproveLev1
-    And user_607 Open the Product class in approve lev1 
+    And user_607 Open the Product class in approve lev1
     Then user_607 Check the ammount in decimal value
-    
-    @165388
-   	Scenario: SRA140005 - Facility Limit Utilization Not Updated After Linked To An Approved Investment Deal
+
+  @292089
+  Scenario: BIPL150025 - Duplicate corporate facility created by facility management
     Given navigate to FMS application2 and login with valid credentials
     And Click Wifak Application first
     And Click Wifak Application Second
@@ -81,10 +81,9 @@ Feature: Title of your feature
     And user clicks the query menu under facility management
     And user clicks on the clear button in query under facility management
     And user validate the retrived records are not duplicate
-    
-    
-    @172636
-    Scenario: TSR-SUPT140138 - Update Facility
+
+  @172636
+  Scenario: TSR-SUPT140138 - Update Facility
     Given navigate to FMS application2 and login with valid credentials
     And Click Wifak Application first
     And Click Wifak Application Second
@@ -95,7 +94,7 @@ Feature: Title of your feature
     And User_607 Click Facility Application Details In updateAfterApprove
     And User_607 Check Exceed Facility at Sublimit In update AfterApprove
     And User_607 Click Document Details In update AfterApprove under Facilities Management
-    And User_607 Enter Solicitor Date Sent In DocumentD etails    
+    And User_607 Enter Solicitor Date Sent In DocumentD etails
     And User_607 Enter Solicitor Date Received In Document Details
     And User_607 Enter Estimator Date Sent In Document Details
     And User_607 Enter Estimator Date Received In Document Details
@@ -116,18 +115,14 @@ Feature: Title of your feature
     And User_607 Check the Flag Is Check or Not In Facility Application Details In Mainteance under Facilities Management
     And User_607 Click Document Details In Mainteance under Facilities Management
     And User_607 Check date Filled Or Not In Document Details In Mainteance under Facilities Management
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+  @165388
+  Scenario: SRA140005 - Facility Limit Utilization Not Updated After Linked To An Approved Investment Deal
+    Given navigate to IIS application and login with valid credentials
+    And User_607 Change the date in iis
+    And User_607 Click Investment Deals -Combined without Trade Deal under menu
+    And User_607 Click Maintenance under Investment Deals -Combined without Trade Deal under menu
+    And User_607 Click link button in Maintenance tab
     
     
     

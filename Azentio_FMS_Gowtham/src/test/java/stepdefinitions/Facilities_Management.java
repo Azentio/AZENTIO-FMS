@@ -1,7 +1,9 @@
 package stepdefinitions;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -210,12 +212,12 @@ public class Facilities_Management {
 	    	System.err.println("Reference Number: "+RequestID);
 	    	fmsTransactionsExcelData1.updateTestData("AT_FM_020", "Request Code", RequestID);
 	    	
-			for (int i = 0; i < 500; i++) {
+			for (int i = 0; i < 1000; i++) {
 				try {
 					FacilitiesManagementObj.confirmsavesuccessfullypopup_607().click();
 			    	break;
 				} catch (Exception e) {
-					if (i==499) {
+					if (i==1000) {
 						Assert.fail(e.getMessage());
 					}
 				}
@@ -351,13 +353,21 @@ public class Facilities_Management {
 	    @And("user validate the retrived records are not duplicate")
 	    public void user_validate_the_retrived_records_are_not_duplicate() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.facilitymanagementquerymenuCode());
-	    	List<WebElement> code = driver.findElements(By.xpath("table[@id='facilityManagementGridTbl_Id_WIFT008QY']td[@tdlabel='Code']"));
+	    	List<WebElement> code = driver.findElements(By.xpath("//*[@id='facilityManagementGridTbl_Id_WIFT008QY']//td[@tdlabel='Code']"));
 	    	
+	        Set<WebElement> uniqueElements = new HashSet<>();
 	    	System.out.println("Code Size: "+code.size());
-	    	
 	    	for (WebElement webElement : code) {
 	            String getCode = webElement.getText();
 	            System.out.println(getCode);
+	            if (uniqueElements.contains(webElement)) {
+	                // Handle duplicate WebElement
+	                System.out.println("Duplicate element found: " + webElement.getText());
+	                // Handle the duplicate as per your requirement
+	            } else {
+	                // Add the element to the set
+	                uniqueElements.add(webElement);
+	            }
 	        }
 	    }   
 	
@@ -647,7 +657,45 @@ public class Facilities_Management {
 			}
 
 	    }
+	    
+	    //165388
 
-	
-	
+		@Given("User_607 Change the date in iis")
+		public void user_change_the_date_in_iis() {
+	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Click_dateIn_iis());
+	    	FacilitiesManagementObj.Click_dateIn_iis().click();
+
+	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Enterdate_inIIS());
+	    	FacilitiesManagementObj.Enterdate_inIIS().sendKeys(null);
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.AfterChange_dateIn_iis_ClickUse());
+	    	FacilitiesManagementObj.AfterChange_dateIn_iis_ClickUse().click();
+
+	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Click_closeButton_afterChangedate());
+	    	FacilitiesManagementObj.Click_closeButton_afterChangedate().click();
+	    	
+		}
+
+		@Given("User_607 Click Investment Deals -Combined without Trade Deal under menu")
+		public void user_click_investment_deals_combined_without_trade_deal_under_menu() {
+	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Click_Investment_DealsCombined_without_Trade_Deal_underMenu());
+	    	FacilitiesManagementObj.Click_Investment_DealsCombined_without_Trade_Deal_underMenu().click();
+
+		}
+
+		@Given("User_607 Click Maintenance under Investment Deals -Combined without Trade Deal under menu")
+		public void user_click_maintenance_under_investment_deals_combined_without_trade_deal_under_menu() {
+	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Click_MainteanceUnder_Investment_DealsCombined_without_Trade_Deal_underMenu());
+	    	FacilitiesManagementObj.Click_MainteanceUnder_Investment_DealsCombined_without_Trade_Deal_underMenu().click();
+
+		}
+
+		@Given("User_607 Click link button in Maintenance tab")
+		public void user_click_link_button_in_maintenance_tab() {
+	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Click_labelButton_InMainteance());
+	    	FacilitiesManagementObj.Click_labelButton_InMainteance().click();
+
+
+		}
+
 }

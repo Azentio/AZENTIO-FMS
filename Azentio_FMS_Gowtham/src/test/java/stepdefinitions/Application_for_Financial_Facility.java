@@ -42,6 +42,10 @@ public class Application_for_Financial_Facility {
 	}
 	@Given("^User update test data for test case no 929306$")
 	public void User_update_test_data_for_test_case_no_929306() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_AFF_007");
+	}
+	@Given("User update test data for test case no 583228")
+	public void user_update_test_data_for_test_case_no() {
 		testData = fmsTransactionsExcelData.getTestdata("AT_RF_113");
 	}
 
@@ -1270,8 +1274,9 @@ public class Application_for_Financial_Facility {
 	
 	    @And("^User select the application for dropdown as decrease in main screen$")
 	    public void user_select_the_application_for_dropdown_as_decrease_in_main_screen() throws Throwable {
-//	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.mainApplicationForDropdown());
-//			DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.mainApplicationForDropdown(), testData.get("Application For"));
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.select_decrease_inApplicationFor());
+			//DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.select_decrease_inApplicationFor(), testData.get("Application For"));
+	    	DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.select_decrease_inApplicationFor(),"Decrease");
 	    }
 
 	    @And("^User enter the input as Existing Facility Ref in main screen$")

@@ -438,12 +438,54 @@ public class Facilities_Management_Obj {
         return Check_dateFilledOrNot_InDocumentDetails_InMainteance_under_Facilities_Management;
     }
     
+   // @165388
+  
+    @FindBy(xpath ="//*[@id='hdr_runn_date']")
+    private WebElement Click_dateIn_iis;
+    public WebElement Click_dateIn_iis() {
+        return Click_dateIn_iis;
+    }
+  
+    @FindBy(xpath ="//input[@id='global_user_run_date']")
+    private WebElement Enterdate_inIIS;
+    public WebElement Enterdate_inIIS() {
+        return Enterdate_inIIS;
+    }
     
+	@FindBy(xpath = "(//span[contains(text(),' Use ')])[1]")
+	private WebElement AfterChange_dateIn_iis_ClickUse;
+	public WebElement AfterChange_dateIn_iis_ClickUse() {
+		return AfterChange_dateIn_iis_ClickUse;
+	}
+	
+	@FindBy(xpath = "//span[contains(text(),'Close')]")
+	private WebElement Click_closeButton_afterChangedate;
+	public WebElement Click_closeButton_afterChangedate() {
+		return Click_closeButton_afterChangedate;
+	}
+  
+    @FindBy(xpath ="//td[text()='Investment Deals -Combined without Trade Deal']")
+    private WebElement Click_Investment_DealsCombined_without_Trade_Deal_underMenu;
+    public WebElement Click_Investment_DealsCombined_without_Trade_Deal_underMenu() {
+        return Click_Investment_DealsCombined_without_Trade_Deal_underMenu;
+    }
+  
+    @FindBy(xpath ="//span[text()='Maintenance']")
+    private WebElement Click_MainteanceUnder_Investment_DealsCombined_without_Trade_Deal_underMenu;
+    public WebElement Click_MainteanceUnder_Investment_DealsCombined_without_Trade_Deal_underMenu() {
+        return Click_MainteanceUnder_Investment_DealsCombined_without_Trade_Deal_underMenu;
+    }
     
-    
-    
-    
-    
-    
+	@FindBy(xpath = "(//label[contains(text(),'Link')])[5]")
+	private WebElement Click_labelButton_InMainteance;
+	public WebElement Click_labelButton_InMainteance() {
+		return Click_labelButton_InMainteance;
+	}
+	
+	@FindBy(xpath = "//*[@id='lookuptxt_trsdealVO_FACILITY_NUMBER_T022MT']")
+	private WebElement enter_valueIn_facilityNo;
+	public WebElement enter_valueIn_facilityNo() {
+		return enter_valueIn_facilityNo;
+	}
     
 }
