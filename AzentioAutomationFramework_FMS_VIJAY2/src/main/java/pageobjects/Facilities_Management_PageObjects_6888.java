@@ -426,7 +426,7 @@ public class Facilities_Management_PageObjects_6888 {
 	
 	@FindBy(xpath = "//td[@id='td_RequestFinancingRecommendationsGridId_RFFRF00AC_1_fmsApplRecommendVO.RECOMMENDATION']")
 	private WebElement REQUESTFORFINANCINRequestForFinancingApprovalCommitteeRecommendationsField;
-	public WebElement REQUESTFORFINANCIN_RequestForFinancing_ApprovalCommitteeRecommendations_Field() {
+	public WebElement REQUESTFORFINANCIN_RequestForFinancing_ApprovalCommitteeRecommendationsField() {
 		return REQUESTFORFINANCINRequestForFinancingApprovalCommitteeRecommendationsField;
 	}
 	

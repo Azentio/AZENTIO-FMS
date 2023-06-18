@@ -41,3 +41,34 @@ And User_609 Select the Reason For Submission field
 And User_609 Enter the value in Customer field
 And User_609 Select the Facility Type in Facility Type Details tab
 And User_609 Select the Revolving/One-Off in Facility Type Details tab
+And User_609 Enter the Total Limit	
+And User_609 Click on the Disbursement or Sublimit tab
+And User_609 Click the add new row icon
+And User_609 Select the Product Class
+And User_609 Enter the value in New Margin field
+And User_609 Click the Add Button
+And User_609 Click the Save Button
+And User_609 Click the confirm ok button
+And User_609 Click the ok button
+And User_609 Click the Validate Button
+And User_609 Click the confirm ok button
+And User_609 Click the ok button
+And User_609 Click on the Approve Level1 submenu
+And User_609 Select the Code in Approve Level1 submenu
+And User_609 Click on the Customer Grading Recommendations tab
+And User_609 Select the Decision
+And User_609 Select the More Recommendatiions
+And User_609 Select the Approval Committee
+And User_609 Click on Approve Button
+And User_609 Click on the Approval Committee Recommendations submenu
+And User_609 Select the Code in Approval Committee Recommendations Submenu
+And User_609 Click the Credit Committee Recommendations tab
+And User_609 Click on the Recommendations Label
+And User_609 Click on the Recommendations icon 
+And User_609 Select the Approval Committee Recommendations field
+And User_609 Click on Approve Button in Approval Committee Recommendations submenu
+And User_609 Click on Search in REQUEST FOR FINANCIN menu
+And User_609 Click on Clear in REQUEST FOR FINANCIN menu
+
+
+
