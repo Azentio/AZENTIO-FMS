@@ -1094,6 +1094,13 @@ public class FMS_WifakApplication_Obj {
 		return CLEAN_FLAG_In_LimitsDetails;
 	}
 	
+	//input[@id='applicationfacilityLimitDetailsFacilityRiskRatingValueDate_WIFT001MT']
+	@FindBy(xpath =  "//input[@id='applicationfacilityLimitDetailsFacilityRiskRatingValueDate_WIFT001MT']")
+	private WebElement FRRValueDate_In_LimitsDetails;
+	public WebElement FRRValueDate_In_LimitsDetails() {
+		return FRRValueDate_In_LimitsDetails;
+	}
+	
 	@FindBy(id =  "td_ApplicationFacilityLimitDetailsGrid_WIFT001MT_1_fmsAppLimitDetVO.GENERAL_FACILITY_TYPE")
 	private WebElement ProductClass_In_LimitsDetails;
 	public WebElement ProductClass_In_LimitsDetails() {
@@ -1774,6 +1781,12 @@ public class FMS_WifakApplication_Obj {
 	private WebElement facility_type_search_code_result;
 	public WebElement facilityTypeSearchCodeResult_610() {
 		return facility_type_search_code_result;
+	}
+	
+	@FindBy(id = "td_fmsFacilityTypeListGridTbl_Id_P008UP_3_CODE")
+	private WebElement facilityTypeSearchCodeResultRow3_610;
+	public WebElement facilityTypeSearchCodeResultRow3_610() {
+		return facilityTypeSearchCodeResultRow3_610;
 	}
 	
 	@FindBy(xpath = "//li[@id='fmsFacilityTypeDetailsTab_P008UP']")

@@ -57,14 +57,7 @@ public class FMS_Reports_Pagination_Issue_Steps {
 		}
 	}
 
-//	    @And("^user click the cif no in availment ticket sub menu$")
-//	    public void user_click_the_cif_no_in_availment_ticket_sub_menu() throws Throwable {
-//		    waitHelper.waitForElementwithFluentwait(driver, fmsReportsPaginationObj.fmsAvilmentTicketSubMenu());
-//		    clicksAndActionsHelper.moveToElement(fmsReportsPaginationObj.fmsAvilmentTicketSubMenu());
-//		    clicksAndActionsHelper.clickOnElement(fmsReportsPaginationObj.fmsAvilmentTicketSubMenu());
-//		    //Thread.sleep(3000000);
-//		    fmsReportsPaginationObj.fmsAvilmentTicketSubMenu().click();
-//    }
+
 
 	@And("^user click the cif and enter the cif number in availment ticket sub menu$")
 	public void user_click_the_cif_and_enter_the_cif_number_in_availment_ticket_sub_menu() throws Throwable {
@@ -77,22 +70,6 @@ public class FMS_Reports_Pagination_Issue_Steps {
 		//Thread.sleep(3000);
 	}
 	
-//	try {
-//	     driver.findElement(By.linkText("Scans")).click();
-//	  } catch (Exception e) {
-//	     JavascriptExecutor executor = (JavascriptExecutor) driver;
-//	     executor.executeScript("arguments[0].click();", driver.findElement(By.linkText("Scans")));
-//	  }
-
-//	    @And("^user enter the value in cif no$")
-//	    public void user_enter_the_value_in_cif_no() throws Throwable {
-//		    waitHelper.waitForElementwithFluentwait(driver, fmsReportsPaginationObj.fmsCIFNo());
-//		    clicksAndActionsHelper.moveToElement(fmsReportsPaginationObj.fmsCIFNo());
-//		    clicksAndActionsHelper.clickOnElement(fmsReportsPaginationObj.fmsCIFNo());
-//		    fmsReportsPaginationObj.fmsCIFNo().click();
-//		    fmsReportsPaginationObj.fmsCIFNo().sendKeys("77");
-//		    
-//	    }
 
 	@Then("^user click retrieve button to view the report without error$")
 	public void user_click_retrieve_button_to_view_the_report_without_error() throws Throwable {
