@@ -1,40 +1,8 @@
 Feature: To check the WIFAK Application Features
 
-@AT_AFF_036
-Scenario: ABSAI190084 - Floating Yield Issue at FMS
-
-Given navigate to FMS application and login with valid credentials
-And User_608 get the test data for test case AT_AFF_036
-And User_608 clicks on the WIFAK_Application first link
-And User_608 clicks on the WIFAK_Application second link
-And User_608 clicks on the Application for financial facility link
-And User_608 clicks the maintanance menu under Application for financial facility
-And User_608 select the application for dropdown as new facility
-And User_608 enter the CIF No in main info tab
-And User_608 enter the facility type in main info tab
-And User_608 enter the country of financing in main info tab
-And User_608 enter the facility rating in main info tab
-And User_608 clicks on the additional details tab
-And User_608 enter the total value in additional info tab
-And User_608 enter the expire date in additional info tab
-And User_608 clicks the limit details tab
-And User_608 clicks the add new record button in limit details tab
-And User_608 enter the product class
-Then User_608 Validate the floating rate with yield details
 
 
-@AT_AFF_040
-Scenario: MFI190130 - History Log is empty for Application for facility--Approval/Reject option
 
-Given navigate to FMS application and login with valid credentials
-And User_608 get the test data for test case AT_AFF_040
-And User_608 clicks on the WIFAK_Application first link
-And User_608 clicks on the WIFAK_Application second link
-And User_608 clicks on the Application for financial facility link
-And User_608 clicks on the Approve level1 link
-And User_608 search the code
-And User_608 double click searched record
-Then User_608 clicks on the History log tap
 
 
 @AT_RF_098_User_VAK
@@ -166,11 +134,68 @@ When User_608 clicks on the Approve level3 submit button
 
 
 
-@AT_FM_058
-Scenario: Create a facility from Request for Finance
+#@AT_FM_058
+#Scenario: Create a facility from Request for Finance
+#
+#Given navigate to FMS application and login with valid credentials
+#And User_608 get the test data for test case AT_FM_058
+#And User_608 clicks on the WIFAK_Application first link
+#And User_608 clicks on the WIFAK_Application second link
+#And User_608 clicks on the Application for financial facility link
+#And User_608 clicks the maintanance menu under Application for financial facility
+#And User_608 select the application for dropdown as new facility
+#And User_608 enter the CIF No in main info tab
+#And User_608 enter the facility type in main info tab
+#And User_608 enter the country of financing in main info tab
+#And User_608 enter the facility rating in main info tab
+#And User_608 clicks on the additional details tab
+#And User_608 enter the total value in additional info tab
+#And User_608 enter the expire date in additional info tab
+#And User_608 clicks the limit details tab
+#And User_608 clicks the add new record button in limit details tab
+#And User_608 enter the product class details
+#And User_608 clicks on the product class add button
+#And User_608 clicks the save button
+#And User_608 select the limit details product class row in under limit details
+#And User_608 click the Repayment Plan button under limit Details in Application Financial Facility Maintanance
+#And User_608 user Re_enter the no of payments in Repayment Plan tab Application Financial Facility Maintanance
+#And User_608 click the Create Schedule button in Repayment Plan tab under Application Financial Facility Maintanance
+#And User_608 validate the Installment Vat Amount in available in Repayment Plan tab under Application Financial Facility Maintanance
+#And User_608 click the Save button in Repayment Plan tab under Application Financial Facility Maintanance
+#And User_608 move to the Document details tab
+#And User_608 enter the Solicitor Name
+#And User_608 enter the Estimator Name
+#And User_608 clicks on the validate button
+#Then User_608 clicks the Approve Level1 menu under Application for financial facilities
+#And User_608 enter the reference code in Approve level1
+#And User_608 double click on the retrieved reference code in Approve level1
+#And User_608 select the Approve level1 decision as Forward
+#And User_608 select the Approve level1 decision Forward to Approve level3
+#When User_608 clicks on the Approve level1 submit button
+#Then User_608 clicks the Approve Level3 menu under Application for financial facilities
+#And User_608 enter the reference code in Approve level3
+#And User_608 double click on the retrieved reference code in Approve level3
+#And User_608 select the Approve level3 decision as Approve
+#When User_608 clicks on the Approve level3 submit button
+#Then User_608 click the Facilities Management menu under WIFAK Application
+#And User_608 click the Maintanance in Facilities Management under WIFAK Application
+#And User_608 click the search button in Facilities Management Maintanance under WIFAK Application
+#And User_608 enter the Application Ref number in Facilities Management Maintanance Search grid under WIFAK Application
+#And User_608 double click the Application Ref number in Facilities Management Maintanance Search grid under WIFAK Application
+#And User_608 click the Facility limit details tab in Facilities Management Maintanance under WIFAK Application
+#And User_608 select the Facility limit details product class row in Facilities Management Maintanance under WIFAK Application
+#And User_608 click the Repayment plan button in Facilities Management Maintanance under WIFAK Application
+#And User_608 click the Schedule details tab in Repayment plan tab in Facilities Management Maintanance under WIFAK Application
+#Then User_608 validate Installment Vat amount should be displayed Repayment plan tab under Facilities Management Maintanance
+
+
+
+@AT_FM_059
+@AT_FM_059_User_608
+Scenario: Checking the Alert functionality at the level of Facilities Management screens
 
 Given navigate to FMS application and login with valid credentials
-And User_608 get the test data for test case AT_FM_058
+And User_608 get the test data for test case AT_FM_059
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link
@@ -187,41 +212,23 @@ And User_608 clicks the limit details tab
 And User_608 clicks the add new record button in limit details tab
 And User_608 enter the product class details
 And User_608 clicks on the product class add button
-And User_608 clicks the save button
-And User_608 select the limit details product class row in under limit details
-And User_608 click the Repayment Plan button under limit Details in Application Financial Facility Maintanance
-And User_608 user Re_enter the no of payments in Repayment Plan tab Application Financial Facility Maintanance
-And User_608 click the Create Schedule button in Repayment Plan tab under Application Financial Facility Maintanance
-And User_608 validate the Installment Vat Amount in available in Repayment Plan tab under Application Financial Facility Maintanance
-And User_608 click the Save button in Repayment Plan tab under Application Financial Facility Maintanance
 And User_608 move to the Document details tab
 And User_608 enter the Solicitor Name
 And User_608 enter the Estimator Name
-And User_608 clicks on the validate button
-Then User_608 clicks the Approve Level1 menu under Application for financial facilities
-And User_608 enter the reference code in Approve level1
-And User_608 double click on the retrieved reference code in Approve level1
-And User_608 select the Approve level1 decision as Forward
-And User_608 select the Approve level1 decision Forward to Approve level3
-When User_608 clicks on the Approve level1 submit button
-Then User_608 clicks the Approve Level3 menu under Application for financial facilities
-And User_608 enter the reference code in Approve level3
-And User_608 double click on the retrieved reference code in Approve level3
-And User_608 select the Approve level3 decision as Approve
-When User_608 clicks on the Approve level3 submit button
-#Then User_608 click the Facilities Management menu under WIFAK Application
-#And User_608 click the Maintanance in Facilities Management under WIFAK Application
-#And User_608 click the search button in Facilities Management Maintanance under WIFAK Application
-#And User_608 enter the Application Ref number in Facilities Management Maintanance Search grid under WIFAK Application
-#And User_608 double click the Application Ref number in Facilities Management Maintanance Search grid under WIFAK Application
-#And User_608 click the Facility limit details tab in Facilities Management Maintanance under WIFAK Application
-#And User_608 select the Facility limit details product class row in Facilities Management Maintanance under WIFAK Application
-#And User_608 click the Repayment plan button in Facilities Management Maintanance under WIFAK Application
-#And User_608 click the Schedule details tab in Repayment plan tab in Facilities Management Maintanance under WIFAK Application
-#Then User_608 validate Installment Vat amount should be displayed Repayment plan tab under Facilities Management Maintanance
+And User_608 clicks the save button
+And User_608 clicks on the validate button and wait for Send Alert popup
+And User_608 search the VAK user in search grid under Send Alert popup
+And User_608 click the VAK User row in search grid under Send Alert popup
+And User_608 click the Send button under Send Alert popup
 
+@AT_FM_059
+@AT_FM_059_User_VAK
+Scenario: Checking the Alert functionality at the level of Facilities Management screens
 
-
+Given User_VAK navigate to FMS application and login with valid credentials
+And User_VAK Should be validate Alert popup is displayed
+And User_VAK click the open items under approve alert popup
+And User_VAK Click the Approve button under Approve item popup
 
 
 

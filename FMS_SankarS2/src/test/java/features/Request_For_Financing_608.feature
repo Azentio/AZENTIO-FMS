@@ -28,6 +28,8 @@ And User_608 click the approval committee under Funding Request in Request
 Then User_608 validate the search grid value are displayed in arbic language under approval committee
 
 
+
+@AT_FM_043
 @AT_FM_043_FMSParam
 Scenario: JAIZ150014 INABILITY TO CRAETE A LIMIT ON APPROVE FACILITY
 
@@ -58,6 +60,7 @@ And User_608 enter the code value in Approve menu
 And User_608 double click on the retrieved data in Approve menu
 When User_608 clicks on the Approve button in Approve menu under Facility Type
 
+@AT_FM_043
 @AT_FM_043_FMSCore
 Scenario: JAIZ150014 INABILITY TO CRAETE A LIMIT ON APPROVE FACILITY
 

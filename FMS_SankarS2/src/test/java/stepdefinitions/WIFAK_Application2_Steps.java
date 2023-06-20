@@ -281,30 +281,29 @@ public class WIFAK_Application2_Steps {
         
     }
     
-//  @AT_AFF_098_FMSCore
-    @And("^User define the marketed by field$")
-    public void user_define_the_marketed_by_field() throws Throwable {
-//    	Thread.sleep(5000);
-    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.marketedByFieldSearch()); 
-    	facilityTypeObj.marketedByFieldSearch().click();
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.marketedByValue());
-    	clicksAndActionsHelper.doubleClick(facilityTypeObj.marketedByValue());
-    	
-    }
-    
-//    @AT_AFF_098_CSMCore    
-    @And("^User clicks on the transfer of entities module$")
-    public void user_clicks_on_the_transfer_of_entities_module() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.transferOfEntitiesModule());
-    	facilityTypeObj.transferOfEntitiesModule().click();
-    }
-
-    @And("^User clicks on the transfer of entities maintanance menu$")
-    public void user_clicks_on_the_transfer_of_entities_maintanance_menu() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.transferEntitiesMain());
-    	facilityTypeObj.transferEntitiesMain().click();
-    }
+////  @AT_AFF_098_FMSCore
+//    @And("^User define the marketed by field$")
+//    public void user_define_the_marketed_by_field() throws Throwable {
+////    	Thread.sleep(5000);
+//    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.marketedByFieldSearch()); 
+//    	facilityTypeObj.marketedByFieldSearch().click();
+//    	
+//    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.marketedByValue());
+//    	clicksAndActionsHelper.doubleClick(facilityTypeObj.marketedByValue());    	
+//    }
+//    
+////    @AT_AFF_098_CSMCore    
+//    @And("^User clicks on the transfer of entities module$")
+//    public void user_clicks_on_the_transfer_of_entities_module() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.transferOfEntitiesModule());
+//    	facilityTypeObj.transferOfEntitiesModule().click();
+//    }
+//
+//    @And("^User clicks on the transfer of entities maintanance menu$")
+//    public void user_clicks_on_the_transfer_of_entities_maintanance_menu() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.transferEntitiesMain());
+//    	facilityTypeObj.transferEntitiesMain().click();
+//    }
     
     
     

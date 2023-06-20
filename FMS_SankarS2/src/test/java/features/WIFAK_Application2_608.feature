@@ -1,33 +1,33 @@
 Feature: To check the FMSParam & FMSCore WIFAK Application Features
 
-@AT_FM_038_FMSParam
-Scenario: JAIZ150014 - INABILITY TO CRAETE A LIMIT ON APPROVE FACILITY
-
-Given navigate to FMS param application and login with valid credentials
-And User_608 get the test data for test case AT_FM_038_FMSParam
-And User_608 clicks on the parameter module
-And User_608 clicks on the Facility Type feature
-And User_608 clicks on the update after approve menu in Facility type
-And User_608 enter the code value in update after approve menu
-And User_608 double click on the retrieved data in update after approve menu
-And User_608 clicks on the facility details tab in update after approve
-And User_608 clicks on the STP Facility Requirements option
-And User_608 check the Customer Grading flag
-And User_608 check the Overwrite Grading flag
-And User_608 check the Credit Review flag
-And User_608 check the Committee Approval flag
-And User_608 check the Credit Authorization flag
-And User_608 check the Issue Facility Offer flag
-And User_608 check the Client Response flag
-And User_608 check the Document Validation flag
-And User_608 check the Final Approval flag
-And User_608 check the Create Active Facility If Within Limits flag
-And User_608 Check the Automatically Approve Facility If Within Limits flag
-When User_608 clicks on the Update button
-And User_608 after the update go to the Approve menu
-And User_608 enter the code value in Approve menu
-And User_608 double click on the retrieved data in Approve menu
-When User_608 clicks on the Approve button in Approve menu under Facility Type
+#@AT_FM_038_FMSParam
+#Scenario: JAIZ150014 - INABILITY TO CRAETE A LIMIT ON APPROVE FACILITY
+#
+#Given navigate to FMS param application and login with valid credentials
+#And User_608 get the test data for test case AT_FM_038_FMSParam
+#And User_608 clicks on the parameter module
+#And User_608 clicks on the Facility Type feature
+#And User_608 clicks on the update after approve menu in Facility type
+#And User_608 enter the code value in update after approve menu
+#And User_608 double click on the retrieved data in update after approve menu
+#And User_608 clicks on the facility details tab in update after approve
+#And User_608 clicks on the STP Facility Requirements option
+#And User_608 check the Customer Grading flag
+#And User_608 check the Overwrite Grading flag
+#And User_608 check the Credit Review flag
+#And User_608 check the Committee Approval flag
+#And User_608 check the Credit Authorization flag
+#And User_608 check the Issue Facility Offer flag
+#And User_608 check the Client Response flag
+#And User_608 check the Document Validation flag
+#And User_608 check the Final Approval flag
+#And User_608 check the Create Active Facility If Within Limits flag
+#And User_608 Check the Automatically Approve Facility If Within Limits flag
+#When User_608 clicks on the Update button
+#And User_608 after the update go to the Approve menu
+#And User_608 enter the code value in Approve menu
+#And User_608 double click on the retrieved data in Approve menu
+#When User_608 clicks on the Approve button in Approve menu under Facility Type
 
 
 @AT_FM_038_FMSCore

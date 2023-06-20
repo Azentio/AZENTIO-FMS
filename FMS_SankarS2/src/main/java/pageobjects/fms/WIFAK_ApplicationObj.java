@@ -421,36 +421,36 @@ public class WIFAK_ApplicationObj {
 	
 	
 //	@AT_AFF_052	
-	@FindBy(xpath = "//tr[@id='1']")
-	private WebElement searched_data;
-	public WebElement searchedData() {
-		return searched_data;
-	}
-	
-	
-	@FindBy(xpath = "//td[text()='Clear']")
-	private WebElement clear_btn;
-	public WebElement clearBtn() {
-		return clear_btn;
-	}
-	
-	@FindBy(xpath = "//li[@id='applicationFacilityAdditionDetailsTabs_WIFT001AP1']")
-	private WebElement approve_level1_additional_details_tab;
-	public WebElement approveLevel1AdditionalDetailsTab() {
-		return approve_level1_additional_details_tab;
-	}
-	
-	@FindBy(xpath = "//button[@id='applicationfacility_bmrecommendations_btn_WIFT001AP1']")
-	private WebElement additional_details_BM_recommend_btn;
-	public WebElement additionalDetailsBMRecommedBtn() {
-		return additional_details_BM_recommend_btn;
-	}
-	
-	@FindBy(xpath = "//textarea[@id='applicationFacilityBMRecommendations_WIFT001AP1']")
-	private WebElement BM_recommendations_tab;
-	public WebElement BMRecommedTab() {
-		return BM_recommendations_tab;
-	}
+//	@FindBy(xpath = "//tr[@id='1']")
+//	private WebElement searched_data;
+//	public WebElement searchedData() {
+//		return searched_data;
+//	}
+//	
+//	
+//	@FindBy(xpath = "//td[text()='Clear']")
+//	private WebElement clear_btn;
+//	public WebElement clearBtn() {
+//		return clear_btn;
+//	}
+//	
+//	@FindBy(xpath = "//li[@id='applicationFacilityAdditionDetailsTabs_WIFT001AP1']")
+//	private WebElement approve_level1_additional_details_tab;
+//	public WebElement approveLevel1AdditionalDetailsTab() {
+//		return approve_level1_additional_details_tab;
+//	}
+//	
+//	@FindBy(xpath = "//button[@id='applicationfacility_bmrecommendations_btn_WIFT001AP1']")
+//	private WebElement additional_details_BM_recommend_btn;
+//	public WebElement additionalDetailsBMRecommedBtn() {
+//		return additional_details_BM_recommend_btn;
+//	}
+//	
+//	@FindBy(xpath = "//textarea[@id='applicationFacilityBMRecommendations_WIFT001AP1']")
+//	private WebElement BM_recommendations_tab;
+//	public WebElement BMRecommedTab() {
+//		return BM_recommendations_tab;
+//	}
 	
 	
 	

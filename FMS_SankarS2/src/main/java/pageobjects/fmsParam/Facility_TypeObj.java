@@ -172,50 +172,7 @@ public class Facility_TypeObj {
 	}
 	
 	
-	// @AT_AFF_098_FMSCore
-	@FindBy(xpath = "//span[@id='spanLookup_applicationFacilityMarketedBy_WIFT001MT']")
-	private WebElement marketed_by_field_search;
-	public WebElement marketedByFieldSearch() {
-		return marketed_by_field_search;
-	}
 	
-	@FindBy(id = "td_gridtab_applicationFacilityMarketedBy_WIFT001MT_1_USER_ID")
-	private WebElement marketed_by_value;
-	public WebElement marketedByValue() {
-		return marketed_by_value;
-	}
-	
-	
-	// @AT_AFF_098_CSMCore
-	@FindBy(xpath = "//td[text()='Transfer Of Entities']")
-	private WebElement transfer_of_entities_module;
-	public WebElement transferOfEntitiesModule() {
-		return transfer_of_entities_module;
-	}
-	
-	@FindBy(xpath = "//a[@id='TOE00MT']")
-	private WebElement transfer_entities_main;
-	public WebElement transferEntitiesMain(){
-		return transfer_entities_main;
-	}
-	
-	@FindBy(xpath = "//a[@id='infoBarSearchButton_TOE00MT']")
-	private WebElement transfer_entities_main_search_btn;
-	public WebElement transferEntitiesMainSearchBtn(){
-		return transfer_entities_main_search_btn;
-	}
-	
-	@FindBy(xpath = "//input[@name='FROM_CODE']")
-	private WebElement transfer_entities_main_search_from_CIF;
-	public WebElement transferEntitiesMainSearchFromCIF(){
-		return transfer_entities_main_search_from_CIF;
-	}
-	
-	@FindBy(xpath = "//input[@name='TO_CODE']")
-	private WebElement transfer_entities_main_search_to_CIF;
-	public WebElement transferEntitiesMainSearchToCIF(){
-		return transfer_entities_main_search_to_CIF;
-	}
 	
 //	@681303_FMSParam
 	@FindBy(xpath = "//li[@id='fmsFacilityTypeReportTab_P008UP']")

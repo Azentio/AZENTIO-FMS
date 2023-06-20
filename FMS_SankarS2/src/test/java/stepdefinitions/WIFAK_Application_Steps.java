@@ -55,17 +55,13 @@ public class WIFAK_Application_Steps {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_AFF_040");
     }
 	
-//	@AT_AFF_048
-	@And("^get the test data for test case AT_AFF_048$")
-    public void get_the_test_data_for_test_case_AT_AFF_048() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_AFF_048");
-    }
+
 	
-//  @AT_AFF_098_FMS_Core
-	@And("^get the test data for test case AT_AFF_098_FMSCore$")
-	public void get_the_test_data_for_test_case_AT_AFF_098fmscore() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_AFF_098");
-	}
+////  @AT_AFF_098_FMS_Core
+//	@And("^get the test data for test case AT_AFF_098_FMSCore$")
+//	public void get_the_test_data_for_test_case_AT_AFF_098fmscore() throws Throwable {
+//		testData = fmsTransactionsExcelData.getTestdata("DS_AT_AFF_098");
+//	}
 	
 //  @AT_RF_034_FMSCore    
     @And("^get the test data for test case AT_RF_034_FMSCore$")
@@ -623,58 +619,58 @@ public class WIFAK_Application_Steps {
     
     
     // @AT_AFF_052
-    @And("^User clicks on the clear button$")
-    public void user_clicks_on_the_clear_button() throws Throwable {
-//        waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.clearBtn());
-//        WIFAKapplicationObj.clearBtn().click();
-        
-        for (int i = 0; i <= 300; i++) {
-			try {
-				clicksAndActionsHelper.clickUsingActionClass(WIFAKapplicationObj.clearBtn(),
-						WIFAKapplicationObj.clearBtn());
-				break;
-			} catch (Exception e) {
-				if (i == 300) {
-					Assert.fail(e.getMessage());
-				}
-			}
-		}
-    }
-
-    @And("^User double clicks on the first row of approve level1$")
-    public void user_double_clicks_on_the_first_row_of_approve_level1() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.searchedData());
-    	clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.searchedData());
-    }
-
-    @And("^User move to additional details tab in approve level1$")
-    public void user_move_to_additional_details_tab_in_approve_level1() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approveLevel1AdditionalDetailsTab());
-    	WIFAKapplicationObj.approveLevel1AdditionalDetailsTab().click();
-    }
-
-    
-    @When("^User clicks on the BM Recommendations button$")
-    public void user_clicks_on_the_bm_recommendations_button() throws Throwable {
-    	for (int i = 0; i <= 300; i++) {
-			try {
-				javaScriptHelper.scrollIntoView(WIFAKapplicationObj.additionalDetailsBMRecommedBtn());
-				break;
-			} catch (Exception e) {
-				if (i == 300) {
-					Assert.fail(e.getMessage());
-				}
-			}
-		}
-    	WIFAKapplicationObj.additionalDetailsBMRecommedBtn().click();
-    }
-
-    @Then("^User validate the BM Recommendations tab is editable or not$")
-    public void user_validate_the_bm_recommendations_tab_is_editable_or_not() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.BMRecommedTab());
-    	String readOnly = WIFAKapplicationObj.BMRecommedTab().getAttribute("readonly");
-    	Assert.assertNull(readOnly);
-    }
+//    @And("^User clicks on the clear button$")
+//    public void user_clicks_on_the_clear_button() throws Throwable {
+////        waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.clearBtn());
+////        WIFAKapplicationObj.clearBtn().click();
+//        
+//        for (int i = 0; i <= 300; i++) {
+//			try {
+//				clicksAndActionsHelper.clickUsingActionClass(WIFAKapplicationObj.clearBtn(),
+//						WIFAKapplicationObj.clearBtn());
+//				break;
+//			} catch (Exception e) {
+//				if (i == 300) {
+//					Assert.fail(e.getMessage());
+//				}
+//			}
+//		}
+//    }
+//
+//    @And("^User double clicks on the first row of approve level1$")
+//    public void user_double_clicks_on_the_first_row_of_approve_level1() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.searchedData());
+//    	clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.searchedData());
+//    }
+//
+//    @And("^User move to additional details tab in approve level1$")
+//    public void user_move_to_additional_details_tab_in_approve_level1() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.approveLevel1AdditionalDetailsTab());
+//    	WIFAKapplicationObj.approveLevel1AdditionalDetailsTab().click();
+//    }
+//
+//    
+//    @When("^User clicks on the BM Recommendations button$")
+//    public void user_clicks_on_the_bm_recommendations_button() throws Throwable {
+//    	for (int i = 0; i <= 300; i++) {
+//			try {
+//				javaScriptHelper.scrollIntoView(WIFAKapplicationObj.additionalDetailsBMRecommedBtn());
+//				break;
+//			} catch (Exception e) {
+//				if (i == 300) {
+//					Assert.fail(e.getMessage());
+//				}
+//			}
+//		}
+//    	WIFAKapplicationObj.additionalDetailsBMRecommedBtn().click();
+//    }
+//
+//    @Then("^User validate the BM Recommendations tab is editable or not$")
+//    public void user_validate_the_bm_recommendations_tab_is_editable_or_not() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.BMRecommedTab());
+//    	String readOnly = WIFAKapplicationObj.BMRecommedTab().getAttribute("readonly");
+//    	Assert.assertNull(readOnly);
+//    }
 
     
 //  @640861
