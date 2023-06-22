@@ -321,7 +321,7 @@ public class Application_for_Financial_Facility {
 			try {
 				applicationFinancialObj.getEnter_value_on_Catagory().click();
 				//applicationFinancialObj.getEnter_value_on_Catagory().sendKeys("1");
-				applicationFinancialObj.getEnter_value_on_Catagory().sendKeys(testData.get("Catagory"));
+				applicationFinancialObj.getEnter_value_on_Catagory().sendKeys(testData.get("Category"));
 				applicationFinancialObj.AfterEnter_value_on_Catagory_Search().click();
 				break;
 			} catch (Exception e) {
@@ -346,7 +346,7 @@ public class Application_for_Financial_Facility {
 			try {
 				applicationFinancialObj.getEnter_value_on_Class().click();
 				//applicationFinancialObj.getEnter_value_on_Class().sendKeys("1234");
-				applicationFinancialObj.getEnter_value_on_Catagory().sendKeys(testData.get("Class"));
+				applicationFinancialObj.getEnter_value_on_Class().sendKeys(testData.get("Class"));
 				applicationFinancialObj.AfterEnter_value_on_Class_Search().click();
 				break;
 			} catch (Exception e) {
@@ -371,8 +371,8 @@ public class Application_for_Financial_Facility {
 				applicationFinancialObj.getEnter_value_on_vendor().click();
 				//applicationFinancialObj.getEnter_value_on_vendor().sendKeys("1");
 				applicationFinancialObj.getEnter_value_on_vendor().sendKeys(testData.get("Vendor"));
-
-				applicationFinancialObj.AfterEnter_value_on_vendor_search().click();
+				applicationFinancialObj.getEnter_value_on_vendor().sendKeys(Keys.TAB);
+				//applicationFinancialObj.AfterEnter_value_on_vendor_search().click();
 				break;
 			} catch (Exception e) {
 				if (i == 299) {
@@ -396,7 +396,7 @@ public class Application_for_Financial_Facility {
 		for (int i = 0; i < 300; i++) {
 			try {
 				//applicationFinancialObj.getEnter_value_on_quantity().sendKeys("11");
-				applicationFinancialObj.getEnter_value_on_vendor().sendKeys(testData.get("Quantity"));
+				applicationFinancialObj.getEnter_value_on_quantity().sendKeys(testData.get("Quantity"));
 
 				applicationFinancialObj.getEnter_value_on_quantity().click();
 
@@ -423,7 +423,7 @@ public class Application_for_Financial_Facility {
 			try {
 				applicationFinancialObj.getEnter_value_on_Unit().click();
 				//applicationFinancialObj.getEnter_value_on_Unit().sendKeys("11");
-				applicationFinancialObj.getEnter_value_on_vendor().sendKeys(testData.get("Unit"));
+				applicationFinancialObj.getEnter_value_on_Unit().sendKeys(testData.get("Unit"));
 
 
 				break;
@@ -450,9 +450,9 @@ public class Application_for_Financial_Facility {
 			try {
 				applicationFinancialObj.getEnter_value_on_Cy().click();
 				//applicationFinancialObj.getEnter_value_on_Cy().sendKeys("999");
-				applicationFinancialObj.getEnter_value_on_vendor().sendKeys(testData.get("Cy"));
-
-				applicationFinancialObj.AfterEnter_value_on_vendor_search().click();
+				applicationFinancialObj.getEnter_value_on_Cy().sendKeys(testData.get("Cy"));
+				applicationFinancialObj.getEnter_value_on_Cy().sendKeys(Keys.TAB);
+			//	applicationFinancialObj.AfterEnter_value_on_vendor_search().click();
 
 				break;
 			} catch (Exception e) {
@@ -477,7 +477,7 @@ public class Application_for_Financial_Facility {
 			try {
 				applicationFinancialObj.getEnter_value_on_UnitCost().click();
 				//applicationFinancialObj.getEnter_value_on_UnitCost().sendKeys("11");
-				applicationFinancialObj.getEnter_value_on_vendor().sendKeys(testData.get("UnitCost"));
+				applicationFinancialObj.getEnter_value_on_UnitCost().sendKeys(testData.get("UnitCost"));
 				break;
 			} catch (Exception e) {
 				if (i == 299) {
@@ -647,7 +647,7 @@ public class Application_for_Financial_Facility {
 				applicationFinancialObj.In_Document_Checklist_Click_Choose_File());
 		clicksAndActionsHelper.moveToElement(applicationFinancialObj.In_Document_Checklist_Click_Choose_File());
 
-		String file = "C:\\Users\\inindc00607\\Desktop\\FMSTestData.xlsx";
+		String file = "C:\\Users\\inindc00607\\Desktop\\sample.xlsx";
 
 		waitHelper.waitForElementwithFluentwait(driver,
 				applicationFinancialObj.In_Document_Checklist_Click_Choose_File());

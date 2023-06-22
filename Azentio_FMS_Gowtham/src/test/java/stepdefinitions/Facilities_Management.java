@@ -233,7 +233,7 @@ public class Facilities_Management {
 			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.confirmsavepopupokbutton_607());
 			FacilitiesManagementObj.confirmsavepopupokbutton_607().click();
 			
-			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.CONFIRM_pop());
+			//waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.CONFIRM_pop());
 			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.facilityAlreadyCreatedPopup());
 			FacilitiesManagementObj.facilityAlreadyCreatedPopup().click();
 			    	
@@ -264,11 +264,14 @@ public class Facilities_Management {
 			}
 			}
 				}
-	    	
+		
 		}
 		
 		@Then("User_607 click the approve level1 under Request for Financing")
 		public void user_click_the_approve_level1_under_request_for_financing() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.CloseTab());
+			FacilitiesManagementObj.CloseTab().click();
+			
 			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.requestForFinancingApproveLevel1_607());
 	    	FacilitiesManagementObj.requestForFinancingApproveLevel1_607().click();
 		}
@@ -288,7 +291,7 @@ public class Facilities_Management {
 		
 		@Given("User_607 Click the Disbursement Sublimit In ApproveLev1")
 		public void user_click_the_disbursement_sublimit_in_approve_lev1() {
-			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Click_DisbursementSublimitInApproveLev1());
+			//waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Click_DisbursementSublimitInApproveLev1());
 			
 			for (int i = 0; i < 1000; i++) {
 				try {
@@ -363,6 +366,7 @@ public class Facilities_Management {
 	            if (uniqueElements.contains(webElement)) {
 	                // Handle duplicate WebElement
 	                System.out.println("Duplicate element found: " + webElement.getText());
+	                Assert.fail("having Duplicate");
 	                // Handle the duplicate as per your requirement
 	            } else {
 	                // Add the element to the set
@@ -529,7 +533,7 @@ public class Facilities_Management {
 	    	
 	    	for (int i = 0; i < 1000; i++) {
 				try {
-				//	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.confirmsavepopupokbutton_607());
+				
 			    	FacilitiesManagementObj.confirmsavepopupokbutton_607().click();
 				} catch (Exception e) {
 					if (i == 1000) {
@@ -540,8 +544,8 @@ public class Facilities_Management {
 	    	
 	    	for (int i = 0; i < 1000; i++) {
 				try {
-					//waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.successPopupMsg_607());
-			    	FacilitiesManagementObj.successPopupMsg_607().click();
+					
+			    	FacilitiesManagementObj.ClickOk_on_successPop().click();
 
 				} catch (Exception e) {
 					if (i == 1000) {
@@ -590,8 +594,8 @@ public class Facilities_Management {
 	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.confirmsavepopupokbutton_607());
 	    	FacilitiesManagementObj.confirmsavepopupokbutton_607().click();
 
-	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.successPopupMsg_607());
-	    	FacilitiesManagementObj.successPopupMsg_607().click();
+	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.ClickOk_on_successPop());
+	    	FacilitiesManagementObj.ClickOk_on_successPop().click();
 
 	    }
 
@@ -599,7 +603,6 @@ public class Facilities_Management {
 	    public void user_click_mainteance_under_facilities_management() {
 	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.ClickMainteance_under_Facilities_Management_607());
 	    	FacilitiesManagementObj.ClickMainteance_under_Facilities_Management_607().click();
-
 	    }
 
 	    @Given("User_607 Search the record in Mainteance under Facilities Management")
@@ -697,5 +700,512 @@ public class Facilities_Management {
 
 
 		}
+		
+		
+		//403133
+		
+		@Given("User_607 Click retail under menu")
+		public void user_click_retail_under_menu() {
+	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Clickretail_In_french_607());
+	    	FacilitiesManagementObj.Clickretail_In_french_607().click();
+
+		}
+
+		@Given("User_607 Click body under retail")
+		public void user_click_body_under_retail() {
+	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.ClickCORP_In_french_607());
+	    	FacilitiesManagementObj.ClickCORP_In_french_607().click();
+
+		}
+
+		@Given("User_607 Click request for financing under retail")
+		public void user_click_request_for_financing_under_retail() {
+	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.ClickDemande_pour_financemen_In_french_607());
+	    	FacilitiesManagementObj.ClickDemande_pour_financemen_In_french_607().click();
+	    	
+
+		}
+
+		@Given("User_607 clicks on the Maintanance screen under Request for Financing in french")
+		public void user_clicks_on_the_maintanance_screen_under_request_for_financing_in_french() {
+	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.ClickMaintenance_In_french_607());
+	    	FacilitiesManagementObj.ClickMaintenance_In_french_607().click();
+	    	
+		}
+
+		@Given("User_607 Select Submission Reason in Maintanance screen")
+		public void user_select_submission_reason_in_maintanance_screen() {
+	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Select_Raison_de_Soumission_in_french_607());
+	    	DropDownHelper.SelectUsingVisibleText(FacilitiesManagementObj.Select_Raison_de_Soumission_in_french_607(), "Nouvelle demande");
+
+		}
+		@Then("User_607 Check the record Language in french")
+		public void user_check_the_record_language_in_french() {
+	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.checkFirst_filed_in_french_607());
+	    	String checkFirstField = FacilitiesManagementObj.checkFirst_filed_in_french_607().getText();
+	    	Assert.assertEquals(checkFirstField, "Détails de la demande");
+	    	
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.checksecond_filed_in_french_607());
+	    	String checksecondField = FacilitiesManagementObj.checksecond_filed_in_french_607().getText();
+	    	Assert.assertEquals(checksecondField, "Recommandations et Classement du Client");
+
+		}
+		
+		//403177
+		@Given("User_607 Select the record in Mainteance")
+		public void user_select_the_record_in_mainteance() {
+//	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.confirmsavepopupokbutton_607());
+//	    	FacilitiesManagementObj.confirmsavepopupokbutton_607().click();
+//	    	
+	    	//waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Click_search_in_mainteance_under_DrawDownRequest_607());
+	    	for (int i = 0; i <= 300; i++) {
+				try {
+					FacilitiesManagementObj.Click_search_in_mainteance_under_DrawDownRequest_607().click();
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Click_Clearsearch_in_mainteance_under_DrawDownRequest_607());
+	    	FacilitiesManagementObj.Click_Clearsearch_in_mainteance_under_DrawDownRequest_607().click();
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.SelectRecord_in_mainteance_under_DrawDownRequest_607());
+	    	clicksAndActionsHelper.doubleClick(FacilitiesManagementObj.SelectRecord_in_mainteance_under_DrawDownRequest_607());
+
+
+		}
+
+		@Given("User_607 Check the record Status")
+		public void user_check_the_record_status() {
+	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.check_recordStatus_in_mainteance_under_DrawDownRequest_607());
+	    	String check = "";
+			for (int i = 0; i <= 300; i++) {
+				check = FacilitiesManagementObj.check_recordStatus_in_mainteance_under_DrawDownRequest_607().getAttribute("value");
+				if (check.equalsIgnoreCase("Approved")) {
+					break;
+				}
+			}
+
+			Assert.assertEquals(check, "Approved");
+	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.CloseTab());
+	    	FacilitiesManagementObj.CloseTab().click();
+
+		}
+		@Given("User_607 Click Deny button In verifyAndDeny")
+		public void click_deny_button_in_verify_and_deny() {
+	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.click_deny_InVerfyDeny_607());
+	    	FacilitiesManagementObj.click_deny_InVerfyDeny_607().click();
+
+		}
+		@Given("User_607 Check the Status after Deny")
+		public void user_check_the_status_after_deny() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.check_recordStatus_in_mainteance_under_DrawDownRequest_607());
+	    	String Checkstatus = FacilitiesManagementObj.check_recordStatus_in_mainteance_under_DrawDownRequest_607().getAttribute("prevvalue");
+	    	
+	    	
+	    	for (int i = 0; i <= 300; i++) {
+	    		Checkstatus = FacilitiesManagementObj.check_recordStatus_in_mainteance_under_DrawDownRequest_607().getAttribute("prevvalue");
+				if (Checkstatus.equalsIgnoreCase("Denied")) {
+					break;
+				}
+			}
+	    	Assert.assertEquals("Denied", Checkstatus);
+	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.CloseTab());
+	    	FacilitiesManagementObj.CloseTab().click();
+		}
+
+		@Given("User_607 Reject the record in Approve Reject")
+		public void user_reject_the_record_in_approve_reject() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Click_rejectButton_in_ApproveReject_607());
+			FacilitiesManagementObj.Click_rejectButton_in_ApproveReject_607().click();
+			
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.confirmsavepopupokbutton_607());
+			FacilitiesManagementObj.confirmsavepopupokbutton_607().click();
+			
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.ClickOk_on_successPop());
+			FacilitiesManagementObj.ClickOk_on_successPop().click();
+			
+		}
+
+		@Given("User_607 Check the Status after Reject")
+		public void user_check_the_status_after_reject() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.check_recordStatus_in_mainteance_under_DrawDownRequest_607());
+	    	String Checkstatus = FacilitiesManagementObj.check_recordStatus_in_mainteance_under_DrawDownRequest_607().getAttribute("prevvalue");
+	    	
+	    	
+	    	for (int i = 0; i <= 300; i++) {
+	    		Checkstatus = FacilitiesManagementObj.check_recordStatus_in_mainteance_under_DrawDownRequest_607().getAttribute("prevvalue");
+				if (Checkstatus.equalsIgnoreCase("Reject")) {
+					break;
+				}
+			}
+	    	Assert.assertEquals("Reject", Checkstatus);
+	    	
+		}
+
+
+//824257
+		@Given("User_607 Click Facility Closure Request under WIFAK Application")
+		public void user_click_facility_closure_request_under_wifak_application() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Click_Facility_Closure_Request_under_WIFIAK_APP_607());
+			FacilitiesManagementObj.Click_Facility_Closure_Request_under_WIFIAK_APP_607().click();
+
+			
+		}
+
+		@Given("User_607 Click maintaince under Facility Closure Request")
+		public void user_click_maintaince_under_facility_closure_request() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Click_Mainteance_under_Facility_Closure_Request_607());
+			FacilitiesManagementObj.Click_Mainteance_under_Facility_Closure_Request_607().click();
+			
+			try {
+				for (int i = 0; i <= 300; i++) {
+					if (FacilitiesManagementObj.confirmsavepopupokbutton_607().isDisplayed()) {
+						FacilitiesManagementObj.confirmsavepopupokbutton_607().click();
+						break;
+					}
+				}
+			} catch (Exception e) {
+				
+			}
+			
+		
+//			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.getCode_in_mainteance_Facility_Closure_Request_607());
+//			FacilitiesManagementObj.getCode_in_mainteance_Facility_Closure_Request_607().getAttribute("value");
+		}
+
+//		@Given("User_607 Enter value in Facility Reference under maintaince")
+//		public void user_enter_value_in_facility_reference_under_maintaince() {
+//			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.enter_Facility_Reference_Mainteance_under_Facility_Closure_Request_607());
+//			FacilitiesManagementObj.enter_Facility_Reference_Mainteance_under_Facility_Closure_Request_607().sendKeys(null);
+//
+//			
+//		}
+
+		@Given("User_607 Click Save button In Mainteance under Facility Closure Request")
+		public void user_click_save_button_in_mainteance_under_facility_closure_request() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Click_SaveButton_InMainteance_under_Facility_Closure_Request_607());
+			FacilitiesManagementObj.Click_SaveButton_InMainteance_under_Facility_Closure_Request_607().click();
+			
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.confirmsavepopupokbutton_607());
+			FacilitiesManagementObj.confirmsavepopupokbutton_607().click();
+
+			
+		
+			for (int i = 0; i < 1000; i++) {
+				try {
+					
+					FacilitiesManagementObj.ClickOk_on_successPop().click();
+
+				} catch (Exception e) {
+					if (i == 1000) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+
+		}
+
+		@Given("User_607 Click Approve under Facility Closure Request")
+		public void user_click_approve_under_facility_closure_request() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Click_Approve_under_Facility_Closure_Request_607());
+			FacilitiesManagementObj.Click_Approve_under_Facility_Closure_Request_607().click();
+			
+		}
+
+		@Given("User_607 Select record in Approve under Facility Closure Request")
+		public void user_select_record_in_approve_under_facility_closure_request() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Select_record_in_Approve_under_Facility_Closure_Request_607());
+			clicksAndActionsHelper.doubleClick(FacilitiesManagementObj.Select_record_in_Approve_under_Facility_Closure_Request_607());
+
+			
+		}
+
+		@Given("User_607 ApproveRecord in Approve under Facility Closure Request")
+		public void user_approve_record_in_approve_under_facility_closure_request() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.ApproveRecord_in_Approve_under_Facility_Closure_Request_607());
+			FacilitiesManagementObj.ApproveRecord_in_Approve_under_Facility_Closure_Request_607().click();
+			
+			for (int i = 0; i < 1000; i++) {
+				try {
+				
+			    	FacilitiesManagementObj.confirmsavepopupokbutton_607().click();
+				} catch (Exception e) {
+					if (i == 1000) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+	    	
+	    	for (int i = 0; i < 1000; i++) {
+				try {
+					
+			    	FacilitiesManagementObj.ClickOk_on_successPop().click();
+
+				} catch (Exception e) {
+					if (i == 1000) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+	    	for (int i = 0; i < 1000; i++) {
+				try {
+
+			    	//waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.SendAlert_pop());
+			    	FacilitiesManagementObj.SendAlert_pop().click();
+
+				} catch (Exception e) {
+					if (i == 1000) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+
+		@Given("User_607 Click List under Facility Closure Request")
+		public void user_click_list_under_facility_closure_request() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Click_List_under_Facility_Closure_Request());
+			FacilitiesManagementObj.Click_List_under_Facility_Closure_Request().click();
+
+		}
+
+		@Given("User_607 enter value in From Code In List")
+		public void user_enter_value_in_from_code_in_list() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.enter_value_inFromCode_InList_607());
+			FacilitiesManagementObj.enter_value_inFromCode_InList_607().sendKeys(null);
+
+		}
+
+		@Given("User_607 enter value In To Code In List")
+		public void user_enter_value_in_to_code_in_list() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.enter_value_InToCode_InList_607());
+			FacilitiesManagementObj.enter_value_InToCode_InList_607().sendKeys(null);
+
+		}
+
+		@Given("User_607 Click Retrive In List")
+		public void user_click_retrive_in_list() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.ClickRetrive_InList_607());
+			FacilitiesManagementObj.ClickRetrive_InList_607().click();
+
+			
+		}
+
+		@Given("User_607 Check Status In List Is Approve")
+		public void user_check_status_in_list_is_approve() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.CheckStatus_InListIs_Approve_607());
+			//check sts code
+			
+		}
+
+
+		@Given("Check the Status is in Closed")
+		public void check_the_status_is_in_closed() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.CheckStatus_InMainteance_under_FacilitiesManagement_607());
+//			String CheckStatuss = FacilitiesManagementObj.CheckStatus_InMainteance_under_FacilitiesManagement_607().getAttribute("value");
+//			System.out.println(CheckStatuss);
+//			//check sts code
+//			for (int i = 0; i <= 300; i++) {
+//				if (CheckStatuss.equalsIgnoreCase("Closed")) {
+//					break;
+//				}
+//			}
+//	    	Assert.assertEquals("Closed", CheckStatuss);
+	    	
+	    	String check = "";
+			for (int i = 0; i <= 300; i++) {
+				check = FacilitiesManagementObj.Check_Status_in_mainteance_Facility_Closure_Request_607().getAttribute("value");
+				if (check.equalsIgnoreCase("Closed")) {
+					break;
+				}
+			}
+
+			Assert.assertEquals(check, "Closed");
+		
+		}
+		
+
+		@Given("User_607 Select record in maintaince under Facility Closure Request")
+		public void user_select_record_in_maintaince_under_facility_closure_request() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Click_Search_in_mainteance_Facility_Closure_Request_607());
+			FacilitiesManagementObj.Click_Search_in_mainteance_Facility_Closure_Request_607().click();
+			
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.select_Record_in_mainteance_Facility_Closure_Request_607());
+			clicksAndActionsHelper.doubleClick(FacilitiesManagementObj.select_Record_in_mainteance_Facility_Closure_Request_607());
+;
+
+		}
+
+		@Given("User_607 Check the Status in maintaince under Facility Closure Request")
+		public void user_check_the_status_in_maintaince_under_facility_closure_request() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Check_Status_in_mainteance_Facility_Closure_Request_607());
+			for (int i = 0; i <500; i++) {
+				
+			}
+			
+//			String CheckStatus = FacilitiesManagementObj.Check_Status_in_mainteance_Facility_Closure_Request_607().getAttribute("prevvalue");
+//			for (int i = 0; i <= 300; i++) {
+//				if (CheckStatus.equalsIgnoreCase("Approved")) {
+//					System.out.println(CheckStatus);
+//					break;
+//				}
+//			}
+//	    	Assert.assertEquals(CheckStatus, "Approved");
+	    	String check = "";
+			for (int i = 0; i <= 500; i++) {
+				check = FacilitiesManagementObj.Check_Status_in_mainteance_Facility_Closure_Request_607().getAttribute("prevvalue");
+				System.out.println(check);
+				if (check.equalsIgnoreCase("Approved")) {
+					break;
+				}
+			}
+
+			Assert.assertEquals(check, "Approved");
+		}
+		
+		
+//349582
+		@Given("User_607 Click reverse under Facility Closure Request")
+		public void user_click_reverse_under_facility_closure_request() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Click_reverse_under_Facility_Closure_Request_607());
+			FacilitiesManagementObj.Click_reverse_under_Facility_Closure_Request_607().click();
+
+		}
+
+		@Given("User_607 Select Record In reverse under Facility Closure Request")
+		public void user_select_record_in_reverse_under_facility_closure_request() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.SelectRecord_Inreverse_under_Facility_Closure_Request_607());
+			clicksAndActionsHelper.doubleClick(FacilitiesManagementObj.SelectRecord_Inreverse_under_Facility_Closure_Request_607());	
+			
+//			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.ClickReverseBtn_Inreverse_under_Facility_Closure_Request_607());
+//			FacilitiesManagementObj.ClickReverseBtn_Inreverse_under_Facility_Closure_Request_607().click();
+		}
+
+		@Given("User_607 Click Reverse button Inreverse under Facility Closure Request")
+		public void user_click_reverse_button_inreverse_under_facility_closure_request() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.ClickReverseBtn_Inreverse_under_Facility_Closure_Request_607());
+			FacilitiesManagementObj.ClickReverseBtn_Inreverse_under_Facility_Closure_Request_607().click();
+			
+			for (int i = 0; i < 1000; i++) {
+				try {
+				
+			    	FacilitiesManagementObj.confirmsavepopupokbutton_607().click();
+				} catch (Exception e) {
+					if (i == 1000) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+	    	
+	    	for (int i = 0; i < 1000; i++) {
+				try {
+			    	FacilitiesManagementObj.ClickOk_on_successPop().click();
+				} catch (Exception e) {
+					if (i == 1000) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+	    	for (int i = 0; i < 1000; i++) {
+				try {
+
+			    	FacilitiesManagementObj.SendAlert_pop().click();
+
+				} catch (Exception e) {
+					if (i == 1000) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+
+		@Given("User_607 Click Approve Reject Reverse under Facility Closure Request")
+		public void user_click_approve_reject_reverse_under_facility_closure_request() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.ClickApprove_RejectReverse_under_Facility_Closure_Request_607());
+			FacilitiesManagementObj.ClickApprove_RejectReverse_under_Facility_Closure_Request_607().click();
+
+			
+		}
+
+		@Given("User_607 Select record In Approve Reject Reverse under Facility Closure Request")
+		public void user_select_record_in_approve_reject_reverse_under_facility_closure_request() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Select_record_InApprove_RejectReverse_under_Facility_Closure_Request_607());
+			clicksAndActionsHelper.doubleClick(FacilitiesManagementObj.Select_record_InApprove_RejectReverse_under_Facility_Closure_Request_607());
+
+			
+		}
+
+		@Given("User_607 Click Approve Reverse button In Approve Reject Reverse under Facility Closure Request")
+		public void user_click_approve_reverse_button_in_approve_reject_reverse_under_facility_closure_request() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Click_ApproveReverseBtn_InApprove_RejectReverse_under_Facility_Closure_Request_607());
+			FacilitiesManagementObj.Click_ApproveReverseBtn_InApprove_RejectReverse_under_Facility_Closure_Request_607().click();
+
+			for (int i = 0; i < 1000; i++) {
+				try {
+			    	FacilitiesManagementObj.confirmsavepopupokbutton_607().click();
+				} catch (Exception e) {
+					if (i == 1000) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+	    	
+	    	for (int i = 0; i < 1000; i++) {
+				try {
+			    	FacilitiesManagementObj.ClickOk_on_successPop().click();
+				} catch (Exception e) {
+					if (i == 1000) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+	    	for (int i = 0; i < 1000; i++) {
+				try {
+			    	FacilitiesManagementObj.SendAlert_pop().click();
+				} catch (Exception e) {
+					if (i == 1000) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			
+		}
+
+		@Given("User_607 Click Query under Facility Closure Request")
+		public void user_click_query_under_facility_closure_request() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Click_Query_under_Facility_Closure_Request_607());
+			FacilitiesManagementObj.Click_Query_under_Facility_Closure_Request_607().click();
+
+		}
+
+		@Given("User_607 Select Record In Query under Facility Closure Request")
+		public void user_select_record_in_query_under_facility_closure_request() {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.SelectRecord_InQuery_under_Facility_Closure_Request_607());
+			clicksAndActionsHelper.doubleClick(FacilitiesManagementObj.SelectRecord_InQuery_under_Facility_Closure_Request_607());
+
+		}
+
+		@Given("User_607 Check Status In Query under Facility Closure Request")
+		public void user_check_status_in_query_under_facility_closure_request() {
+			for (int i = 0; i < 500; i++) {
+				
+			}
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.CheckStatus_InQuery_under_Facility_Closure_Request_607());
+			//String Check = FacilitiesManagementObj.CheckStatus_InQuery_under_Facility_Closure_Request_607().getAttribute("prevvalue");
+			String check = "";
+			for (int i = 0; i <= 500; i++) {
+				check = FacilitiesManagementObj.CheckStatus_InQuery_under_Facility_Closure_Request_607().getAttribute("prevvalue");
+				System.out.println(check);
+				if (check.equalsIgnoreCase("Reversed")) {
+					break;
+				}
+			}
+
+			Assert.assertEquals(check, "Reversed");
+		}
+		
 
 }

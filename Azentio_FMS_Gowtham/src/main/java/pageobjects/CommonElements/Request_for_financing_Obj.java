@@ -550,7 +550,8 @@ public class Request_for_financing_Obj {
 //	    public WebElement maintenance() {
 //			return Maintenance;
 //		}
-	    @FindBy(xpath="//select[@id='requestFinancingApplicationFor_CSMRF00MT']")
+		
+	    @FindBy(xpath="//select[@id='requestFinancingApplicationFor_RFFRF00MT']")
 		private WebElement Reason_For_Submission;
 	    public WebElement reasonforsubmisson() {
 			return Reason_For_Submission;
@@ -1180,6 +1181,12 @@ public class Request_for_financing_Obj {
 				return Click_Request_for_financing_under_Request_financing;
 			}
 			
+			@FindBy(xpath = "//span[text()='Maintenance']")
+			private WebElement Click_Maintenance_Request_for_financing;
+			public WebElement Click_Maintenance_Request_for_financing_607() {
+				return Click_Maintenance_Request_for_financing;
+			}
+			
 			
 			@FindBy(xpath = "//span[text()='Approve Level 1']")
 			private WebElement ApproveLevel1_under_Request_for_financing;
@@ -1286,7 +1293,7 @@ public class Request_for_financing_Obj {
 			}
 		    
 			
-			@FindBy(xpath = "(//span[text()='Maintenance'])[1]")
+			@FindBy(xpath = "//*[@id='WIFT008MT']//span//span")
 			private WebElement click_Maintenance_under_Facilities_Managementunder;
 			public WebElement click_Maintenance_under_Facilities_Managementunder() {
 				return click_Maintenance_under_Facilities_Managementunder;
@@ -1366,7 +1373,11 @@ public class Request_for_financing_Obj {
 				return Enter_value_Product_ClassLN;
 			}
 			
-			
+			@FindBy(xpath = "//*[@id='drawDownRequestFC_Amount_WIFT009MT']")
+			private WebElement Enter_FC_ammount;
+			public WebElement Enter_FC_ammount() {
+				return Enter_FC_ammount;
+			}
 			@FindBy(xpath = "//span[text()='Drawdown Main Information']")
 			private WebElement click_drawdown_mainInformation;
 			public WebElement click_drawdown_mainInformation() {
@@ -1403,6 +1414,11 @@ public class Request_for_financing_Obj {
 				return Click_verifyButton_InverifyAndDeny;
 			}
 			
+			@FindBy(xpath = "//span[contains(text(),' Yes ')]")
+			private WebElement Click_yes_in_postApproval;
+			public WebElement Click_yes_in_postApproval() {
+				return Click_yes_in_postApproval;
+			}
 			
 			@FindBy(xpath = "//*[@id='WIFT009AP']/span[2]")
 			private WebElement Click_ApproveReject_under_drawdown;
@@ -1456,7 +1472,166 @@ public class Request_for_financing_Obj {
 				return Click__maintenace_under_request_for_financing;
 			}
 			
+			//403133
+			@FindBy(xpath = "//label[text()='Language ']")
+			private WebElement Change_Language;
+			public WebElement Change_Language() {
+				return Change_Language;
+			}
 			
+			
+			@FindBy(xpath = "//a[text()='French']")
+			private WebElement Select_LanguageIn_French;
+			public WebElement Select_LanguageIn_French() {
+				return Select_LanguageIn_French;
+			}
+			
+			@FindBy(xpath = "//*[@id='infoBarSearchButton_RFFRF00MT']")
+			private WebElement search_recordIn__maintenace_under_request_for_financing;
+			public WebElement search_recordIn__maintenace_under_request_for_financing_607() {
+				return search_recordIn__maintenace_under_request_for_financing;
+			}
+			
+			@FindBy(xpath = "//*[@id='requestFinancingGridTbl_Id_RFFRF00MT_pager_left']/table/tbody/tr/td[7]")
+			private WebElement Clearsearch_recordIn__maintenace_under_request_for_financing;
+			public WebElement Clearsearch_recordIn__maintenace_under_request_for_financing_607() {
+				return Clearsearch_recordIn__maintenace_under_request_for_financing;
+			}
+			
+			@FindBy(xpath = "//*[@id='td_requestFinancingGridTbl_Id_RFFRF00MT_1_fmsRequestFinancingVO.CODE']")
+			private WebElement select_recordIn__maintenace_under_request_for_financing;
+			public WebElement select_recordIn__maintenace_under_request_for_financing_607() {
+				return select_recordIn__maintenace_under_request_for_financing;
+			}
+			
+			
+			@FindBy(xpath = "//span[text()='Disbursement/Sublimit']")
+			private WebElement DisbursementSublimit__Inmaintenace_under_request_for_financing;
+			public WebElement DisbursementSublimit__Inmaintenace_under_request_for_financing_607() {
+				return DisbursementSublimit__Inmaintenace_under_request_for_financing;
+			}
+			
+			@FindBy(xpath = "//span[text()='Customer Credit Memo']")
+			private WebElement Customer_Credit_Memo__Inmaintenace_under_request_for_financing;
+			public WebElement Customer_Credit_Memo__Inmaintenace_under_request_for_financing_607() {
+				return Customer_Credit_Memo__Inmaintenace_under_request_for_financing;
+			}
+			
+			@FindBy(xpath = "//span[text()='Request Details']")
+			private WebElement Request_Details__Inmaintenace_under_request_for_financing;
+			public WebElement Request_Details__Inmaintenace_under_request_for_financing_607() {
+				return Request_Details__Inmaintenace_under_request_for_financing;
+			}
+			
+			@FindBy(xpath = "//span[text()='Customer Grading & Recommendations']")
+			private WebElement Customer_Grading_Recommendations__Inmaintenace_under_request_for_financing;
+			public WebElement Customer_Grading_Recommendations__Inmaintenace_under_request_for_financing_607() {
+				return Customer_Grading_Recommendations__Inmaintenace_under_request_for_financing;
+			}
+			
+			@FindBy(xpath = "//*[@id='lookuptxt_facilityClosureRequestFacilityReference_WIFT010MT']")
+			private WebElement enter_Facility_Reference_Mainteance_under_Facility_Closure_Request;
+			public WebElement enter_Facility_Reference_Mainteance_under_Facility_Closure_Request_607() {
+				return enter_Facility_Reference_Mainteance_under_Facility_Closure_Request;
+			}
+			
+			
+			//570417
+			@FindBy(xpath = "//span[text()='Remove Tab']")
+			private WebElement CloseTab;
+			public WebElement CloseTab() {
+				return CloseTab;
+			}
+			
+			@FindBy(xpath = "//span[text()='Maintenance']")
+			private WebElement cLICK_MAINTEANCE_under_RequestForFinancing;
+			public WebElement cLICK_MAINTEANCE_under_RequestForFinancing_607() {
+				return cLICK_MAINTEANCE_under_RequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='lookuptxt_fmsFacilityFromFacility_RFFRF00MT']")
+			private WebElement Existing_Facility_No_InMainteance_under_RequestForFinancing;
+			public WebElement Existing_Facility_No_InMainteance_under_RequestForFinancing_607() {
+				return Existing_Facility_No_InMainteance_under_RequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='requestFinancingFacilityTotalvalue_RFFRF00MT']")
+			private WebElement EnterTotallimit_InMainteance_under_RequestForFinancing;
+			public WebElement EnterTotallimit_InMainteance_under_RequestForFinancing_607() {
+				return EnterTotallimit_InMainteance_under_RequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='requestFinancingFacilityValue_RFFRF00MT']")
+			private WebElement CheckFinance_Amount_InMainteance_under_RequestForFinancing;
+			public WebElement CheckFinance_Amount_InMainteance_under_RequestForFinancing_607() {
+				return CheckFinance_Amount_InMainteance_under_RequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//span[text()='Disbursement/Sublimit']")
+			private WebElement Click_DisbursementSublimit_InMainteance_under_RequestForFinancing;
+			public WebElement Click_DisbursementSublimit_InMainteance_under_RequestForFinancing_607() {
+				return Click_DisbursementSublimit_InMainteance_under_RequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='td_RequestFinancingLimitDetailsGridId_RFFRF00MT_1_fmsAppLimitDetVO.FACILITY_VALUE']")
+			private WebElement Check_total_limit_InDisbursementSublimit;
+			public WebElement Check_total_limit_InDisbursementSublimit_607() {
+				return Check_total_limit_InDisbursementSublimit;
+			}
+			
+			@FindBy(xpath = "//*[@id='requestForFinance_save_as_draft_btn_RFFRF00MT']")
+			private WebElement click_Save_btn_inInMainteance_under_RequestForFinancing;
+			public WebElement click_Save_btn_inInMainteance_under_RequestForFinancing_607() {
+				return click_Save_btn_inInMainteance_under_RequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='requestForFinance_save_btn_RFFRF00MT']")
+			private WebElement click_validate_btn_inInMainteance_under_RequestForFinancing;
+			public WebElement click_validate_btn_inInMainteance_under_RequestForFinancing_607() {
+				return click_validate_btn_inInMainteance_under_RequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//span[text()='Approve Level 1']")
+			private WebElement Click_ApproveLevel1_under_RequestForFinancing;
+			public WebElement Click_ApproveLevel1_under_RequestForFinancing_607() {
+				return Click_ApproveLevel1_under_RequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='requestFinancingGridTbl_Id_RFFRF00P1_pager_left']/table/tbody/tr/td[7]")
+			private WebElement Click_clearSearch_InApproveLevel1_under_RequestForFinancing;
+			public WebElement Click_clearSearch_InApproveLevel1_under_RequestForFinancing_607() {
+				return Click_clearSearch_InApproveLevel1_under_RequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='td_requestFinancingGridTbl_Id_RFFRF00P1_1_fmsRequestFinancingVO.CODE']")
+			private WebElement Select_Record_InApproveLevel1_under_RequestForFinancing;
+			public WebElement Select_Record_InApproveLevel1_under_RequestForFinancing_607() {
+				return Select_Record_InApproveLevel1_under_RequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='td_requestFinancingGridTbl_Id_RFFRF00P1_1_fmsRequestFinancingVO.CODE']")
+			private WebElement Check_totalAmmount_InApproveLevel1_under_RequestForFinancing;
+			public WebElement Check_totalAmmount_InApproveLevel1_under_RequestForFinancing_607() {
+				return Check_totalAmmount_InApproveLevel1_under_RequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='requestFinancingFacilityValue_RFFRF00P1']")
+			private WebElement Click_Finance_Amount_InApproveLevel1;
+			public WebElement Click_Finance_Amount_InApproveLevel1_607() {
+				return Click_Finance_Amount_InApproveLevel1;
+			}
+			
+			@FindBy(xpath = "//span[text()='Disbursement/Sublimit']")
+			private WebElement Click_DisbursementSublimit_InApproveLevel1_under_RequestForFinancing;
+			public WebElement Click_DisbursementSublimit_InApproveLevel1_under_RequestForFinancing_607() {
+				return Click_DisbursementSublimit_InApproveLevel1_under_RequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='td_RequestFinancingLimitDetailsGridId_RFFRF00P1_1_fmsAppLimitDetVO.FACILITY_VALUE']")
+			private WebElement Check_Totallimit_InDisbursementSublimit_ApproveLevel1;
+			public WebElement Check_Totallimit_InDisbursementSublimit_ApproveLevel1_607() {
+				return Check_Totallimit_InDisbursementSublimit_ApproveLevel1;
+			}
 			
 			
 			
