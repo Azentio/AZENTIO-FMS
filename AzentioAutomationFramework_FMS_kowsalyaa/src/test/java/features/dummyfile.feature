@@ -6,4 +6,4 @@ Feature: Title of your feature
   @tag1
   Scenario: Title of your scenario
   
-  Then User_611 Validate the Product Class L and N is displayed
+And Search the particular Transaction ref no in view list

@@ -3,11 +3,12 @@ package pageobjects.fms;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
-public class WIFAK_ApplicationOBJ_611 {
+public class ApplicationforfinancialfacilityOBJ_611 {
 	WebDriver driver;	
-	public WIFAK_ApplicationOBJ_611(WebDriver driver) {
+	public ApplicationforfinancialfacilityOBJ_611(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		}
@@ -481,5 +482,398 @@ public class WIFAK_ApplicationOBJ_611 {
 	public WebElement drawdownrequestvatyield_611() {
 		return DrawDownRequest_VatYield;
 	}
+	
+	//841963
+	@FindBy(xpath ="//input[@id='drawDownRequestProductClassDesc_WIFT009MT']")
+	private WebElement DrawDownRequest_Maintenance_DrawdownAdditionaldetails_ProductclassLandN_Details;
+	public WebElement drawdownrequestmaintenancedrawdownadditionaldetailsproductclassLandNdetails_611() {
+		return DrawDownRequest_Maintenance_DrawdownAdditionaldetails_ProductclassLandN_Details;
+	}
+	
+	//586558_Fms_param
+	
+	@FindBy(xpath ="//*[@id='_selenuimP000']/h3")
+	private WebElement ParameterApplication_Parameter;
+	public WebElement parameterApplicationparameter() {
+		return ParameterApplication_Parameter;
+	}
+	@FindBy(xpath ="//*[@id=\'_selenuimP049\']/li/a")
+	private WebElement Parameter_FacilityRiskRating;
+	public WebElement parameterfacilityriskrating_611() {
+		return Parameter_FacilityRiskRating;
+	}
+	@FindBy(xpath ="//a[@id='P049MT']")
+	private WebElement FacilityRiskRating_Maintenance;
+	public WebElement facilityriskratingmaintenance_611() {
+		return FacilityRiskRating_Maintenance;
+	}
+	@FindBy(xpath ="//td[@id='add_fmsParamFacilityRiskRatingGridListGrid_Id_P049MT']")
+	private WebElement Maintenance_AddBtn;
+	public WebElement maintenanceaddbtn_611() {
+		return Maintenance_AddBtn;
+	}
+	@FindBy(xpath ="//tr[@id='3']")
+	private WebElement Maintenance_AddBtn_Forscrolling;
+	public WebElement maintenanceaddbtnforscrolling_611() {
+		return Maintenance_AddBtn_Forscrolling;
+	}
+	//td[@id='td_fmsParamFacilityRiskRatingGridListGrid_Id_P049MT_1_fmsfacilityriskrating.FRR_RATING']/div/input[@gridid='fmsParamFacilityRiskRatingGridListGrid_Id_P049MT']
+	@FindBy(xpath ="(//td[@id='td_fmsParamFacilityRiskRatingGridListGrid_Id_P049MT_1_fmsfacilityriskrating.FRR_RATING'])[2]")
+	private WebElement FacilityRiskRating_Maintenance_Rating_Scrollintoview;
+	public WebElement facilityriskratingmaintenanceratingscrollintoview_611() {
+		return FacilityRiskRating_Maintenance_Rating_Scrollintoview;
+	}
+	@FindBy(xpath ="//td[@id='td_fmsParamFacilityRiskRatingGridListGrid_Id_P049MT_1_fmsfacilityriskrating.FRR_RATING']/div/input")
+	private WebElement FacilityRiskRating_Maintenance_Rating;
+	public WebElement facilityriskratingmaintenancerating_611() {
+		return FacilityRiskRating_Maintenance_Rating;
+	}
+	@FindBy(xpath ="//td[@id='td_fmsParamFacilityRiskRatingGridListGrid_Id_P049MT_1_fmsfacilityriskrating.BRIEF_NAME_ENG']/input")
+	private WebElement FacilityRiskRating_Maintenance_BriefDiscription;
+	public WebElement facilityriskratingmaintenancebriefdiscription_611() {
+		return FacilityRiskRating_Maintenance_BriefDiscription;
+	}
+	@FindBy(xpath ="//td[@id='td_fmsParamFacilityRiskRatingGridListGrid_Id_P049MT_1_fmsfacilityriskrating.BRIEF_NAME_ARAB']/input")
+	private WebElement FacilityRiskRating_Maintenance_BriefDiscription_Arab;
+	public WebElement facilityriskratingmaintenancebriefdiscriptionarab_611() {
+		return FacilityRiskRating_Maintenance_BriefDiscription_Arab;
+	}
+	@FindBy(xpath ="//td[@id='td_fmsParamFacilityRiskRatingGridListGrid_Id_P049MT_1_fmsfacilityriskrating.LONG_NAME_ENG']/input")
+	private WebElement FacilityRiskRating_Maintenance_LongDiscription;
+	public WebElement facilityriskratingmaintenancelongdiscription_611() {
+		return FacilityRiskRating_Maintenance_LongDiscription;
+	}
+	@FindBy(xpath ="//td[@id='td_fmsParamFacilityRiskRatingGridListGrid_Id_P049MT_1_fmsfacilityriskrating.LONG_NAME_ARAB']/input")
+	private WebElement FacilityRiskRating_Maintenance_LongDiscription_Arab;
+	public WebElement facilityriskratingmaintenancelongdiscriptionarab_611() {
+		return FacilityRiskRating_Maintenance_LongDiscription_Arab;
+	}
+	@FindBy(xpath ="//td[@id='td_fmsParamFacilityRiskRatingGridListGrid_Id_P049MT_1_fmsfacilityriskrating.MINIMUM_RATE']/div/input")
+	private WebElement FacilityRiskRating_Maintenance_MinimunRate;
+	public WebElement facilityriskratingmaintenanceminimumrate_611() {
+		return FacilityRiskRating_Maintenance_MinimunRate;
+	}
+	@FindBy(xpath ="//td[@id='td_fmsParamFacilityRiskRatingGridListGrid_Id_P049MT_1_fmsfacilityriskrating.MAXIMUM_RATE']/div/input")
+	private WebElement FacilityRiskRating_Maintenance_MaximumRate;
+	public WebElement facilityriskratingmaintenancemaximumrate_611() {
+		return FacilityRiskRating_Maintenance_MaximumRate;
+	}
+	@FindBy(xpath ="//label[@id='fmsFacilityRiskRatingMaintFormId_P049MT_Update_key']")
+	private WebElement FacilityRiskRating_Maintenance_Updatebtn;
+	public WebElement facilityriskratingmaintenanceupdatebtn_611() {
+		return FacilityRiskRating_Maintenance_Updatebtn;
+	}
+	@FindBy(id ="_popup_path_sol_ok")
+	private WebElement Maximum_Rate_cannotbelessthen_Minium_Rate;
+	public WebElement maximumratecannotlessthenminimumrateokbtn_611() {
+		return Maximum_Rate_cannotbelessthen_Minium_Rate;
+	}
+	@FindBy(xpath ="//td[@id='del_fmsParamFacilityRiskRatingGridListGrid_Id_P049MT']")
+	private WebElement FacilityRiskRating_Maintenance_deletebtn;
+	public WebElement facilityriskratingmaintenancedeletebtn_611() {
+		return FacilityRiskRating_Maintenance_deletebtn;
+	}
+	@FindBy(xpath ="//input[@id='_popup_path_sol_confirm_ok']")
+	private WebElement FacilityRiskRating_Maintenance_Confirmdelprocessokbtn;
+	public WebElement facilityriskratingmaintenanceconfirmdelprocessokbtn_611() {
+		return FacilityRiskRating_Maintenance_Confirmdelprocessokbtn;
+	}
+	@FindBy(xpath ="//input[@id='_popup_path_sol_confirm_ok']")
+	private WebElement FacilityRiskRating_Maintenance_ConfirmSaveprocessokbtn;
+	public WebElement facilityriskratingmaintenanceconfirmsaveprocessokbtn_611() {
+		return FacilityRiskRating_Maintenance_ConfirmSaveprocessokbtn;
+	}
+	@FindBy(xpath ="//input[@id='_popup_path_sol_ok']")
+	private WebElement Saverecord_wasUpdated_Successfully_okbtn;
+	public WebElement Saverecordwasupdatedsuccessfullyokbtn_611() {
+		return Saverecord_wasUpdated_Successfully_okbtn;
+	}
+	//586558_Fms_core
+	@FindBy(xpath ="//span[@id='spanLookup_applicationFacilityRating_WIFT001MT']")
+	private WebElement FacilityRating_Smallsearchbtn ;
+	public WebElement facilityratingsmallsearchbtn_611() {
+		return FacilityRating_Smallsearchbtn;
+	}
+	@FindBy(xpath ="//input[@id='gridtab_applicationFacilityRating_WIFT001MT_gs_FRR_RATING']")
+	private WebElement FacilityRating_Smallsearchbtn_Ratingsearchbtn ;
+	public WebElement facilityratingsmallsearchbtnratingsearchbtn_611() {
+		return FacilityRating_Smallsearchbtn_Ratingsearchbtn;
+	}
+	@FindBy(xpath ="//td[@id='td_gridtab_applicationFacilityRating_WIFT001MT_1_FRR_RATING']")
+	private WebElement FacilityRating_output_Isdisplayed ;
+	public WebElement facilityratingoutputisdisplayed_611() {
+		return FacilityRating_output_Isdisplayed;
+	}
+	//@586526_Fms_Core
+	
+	@FindBy(xpath ="//input[@id='lookuptxt_applicationFacilityRating_WIFT001MT']")
+	private WebElement FacilityRating_Isenabled ;
+	public WebElement facilityratingisenabled_611() {
+		return FacilityRating_Isenabled;
+	}
+	//@586527_Fms_param
+	@FindBy(xpath ="//input[@id='_popup_path_sol_ok']")
+	private WebElement AlreadyAvailable_InExistingRate;
+	public WebElement alreadyavailableinexistingrateokbtn_611() {
+		return AlreadyAvailable_InExistingRate;
+	}
+	// @827643_Fms_Core
+	@FindBy(xpath = "//input[@id='_popup_path_sol_ok']")
+	private WebElement DateCannot_beLessthen_RunningDate;
+	public WebElement datecannotbelessthenrunningdate_611( ) {
+		return DateCannot_beLessthen_RunningDate;
+	}
+	@FindBy(xpath = "//input[@id='applicationFacilityFxSettlementExpiryDate_WIFT001MT']")
+	private WebElement AdditionalDetails_Fxsettlementexpirydate;
+	public WebElement additionaldetailsfxsettlementexpirydate_611 ( ) {
+		return AdditionalDetails_Fxsettlementexpirydate;
+	}
+	//@280446
+	
+	@FindBy(xpath="//td[text()='REQUEST FOR FINANCIN']")
+	private WebElement REQUEST_FOR_FINANCIN;
+    public WebElement REQUESTFORFINANCIN_611() {
+		return REQUEST_FOR_FINANCIN;
+	}
+	@FindBy(xpath="//td[text()='Request For Financing']")
+	private WebElement Request_For_Financing;
+    public WebElement RequestForFinancing_611() {
+		return Request_For_Financing;
+	}
+    @FindBy(xpath="//span[text()='Maintenance']")
+	private WebElement RequestForFinancing_Maintenance;
+    public WebElement requestforfinancingmaintenance_611() {
+		return RequestForFinancing_Maintenance;
+	}
+   
+    
+    @FindBy(xpath="//select[@id='requestFinancingApplicationFor_CSMRF00MT']")
+	private WebElement Reason_For_Submission;
+    public WebElement reasonforsubmisson_611() {
+		return Reason_For_Submission;
+	}
+    @FindBy(xpath="(//input[@class='path-theme-cust-input liveSearchText liveSearchCompSize ui-state-focus liveSearchInputCorner'])[5]")
+	private WebElement Customer_Search_box;
+    public WebElement customersearchbox_611() {
+		return Customer_Search_box;
+	}
+    @FindBy(xpath="//span[text()='Facility Type Details']")
+	private WebElement Facility_Type_details;
+    public WebElement facilitytypedetails_611() {
+		return Facility_Type_details;
+	}
+    @FindBy(xpath="//input[@id='lookuptxt_requestFinancingFacilityType_CSMRF00MT']")
+	private WebElement Facility_Type_details_searchbox;
+    public WebElement facilitytypedetailssearchbox_611() {
+		return Facility_Type_details_searchbox;
+	}
+    @FindBy(xpath="//input[@id='requestFinancingFacilityTotalvalue_CSMRF00MT']")
+	private WebElement ToTal_Limit_Search_box;
+    public WebElement totallimitsearchbox_611() {
+		return ToTal_Limit_Search_box;
+	}
+    @FindBy(xpath="//li[@id='requestFinancingLimitDtlsTabs_CSMRF00MT']/a/span[text()='Disbursement/Sublimit']")
+	private WebElement Disbursement_SUBlimit;
+    public WebElement disbursementsublimit_611() {
+		return Disbursement_SUBlimit;
+	}
+    @FindBy(xpath="//td[@id='add_RequestFinancingLimitDetailsGridId_CSMRF00MT']/div/span")
+	private WebElement Disbursement_SUBlimit_aDD_Button;
+    public WebElement disbursementsublimitaddbutton_611() {
+		return Disbursement_SUBlimit_aDD_Button;
+	}
+    @FindBy(xpath="//input[@id=\'lookuptxt_requestFinancingLimitDetailsGeneralFacilityProductClass_CSMRF00MT\']")
+	private WebElement Product_class_searchbox;
+    public WebElement productclasssearchbox_611() {
+		return Product_class_searchbox;
+	}
+//    @FindBy(xpath="//label[@id='requestfinancingLimitPopupFormId_CSMRF00MT_Product_Class_Key']")
+//	private WebElement Product_class;
+//    public WebElement productclass_611() {
+//		return Product_class;
+//	}
+    @FindBy(id="//input[@id='requestFinancingLimitDetailsFacilityRiskRatingScore_CSMRF00MT']")
+	private WebElement Productclscreen_Facility_Risk_Rating;
+    public WebElement Productclscreenfacilityriskrating_611() {
+		return Productclscreen_Facility_Risk_Rating;
+	}
+    @FindBy(id="//input[@id='requestFinancingLimitDetailsFacilityRiskRatingValueDate_CSMRF00MT']")
+	private WebElement FRR_Value_Date;
+    public WebElement frrvaluedate_611() {
+		return FRR_Value_Date;
+	}
+    @FindBy(id="requestFinancingLimitDetailsRfNewMargin_CSMRF00MT")
+	private WebElement MaRgin_search_box;
+    public WebElement marginsearchbox_611() {
+		return MaRgin_search_box;
+	}
+    @FindBy(xpath="//button[@id=\'limitDetails_add_btn_CSMRF00MT\']")
+	private WebElement Final_ADD_Button;
+    public WebElement finaladdbutton_611() {
+		return Final_ADD_Button;
+	}
+    @FindBy(xpath="//label[@id=\'requestFinancingFormId_CSMRF00MT_save_key\']")
+	private WebElement Save_Button;
+    public WebElement savebutton_611() {
+		return Save_Button;
+	}
+    @FindBy(xpath="//input[@id='_popup_path_sol_confirm_ok']")
+   	private WebElement Confirmsave_popup_okbutton;
+       public WebElement confirmsavepopupokbutton_611() {
+   		return Confirmsave_popup_okbutton;
+   	}
+    @FindBy(xpath="//input[@id='_popup_path_sol_ok']")
+    private WebElement Confirmsave_Successfully_popup;
+    public WebElement confirmsavesuccessfullypopup_611() {
+      return Confirmsave_Successfully_popup;
+    }
+    @FindBy(xpath="//label[@id='requestFinancingFormId_CSMRF00MT_Validate_key']")
+    private WebElement Validate_button;
+    public WebElement validatebutton_611() {
+      return Validate_button;
+    }
+    @FindBy(xpath="//input[@id='_popup_path_sol_confirm_ok']")
+    private WebElement Confirmvalidate_popup_okbutton;
+    public WebElement confirmvalidatepopupokbutton_611() {
+      return Confirmvalidate_popup_okbutton;
+    }
+    @FindBy(xpath="//input[@id='_popup_path_sol_confirm_ok']")
+    private WebElement FacilityAlready_create_sameDetails;
+    public WebElement facilityalreadycreatesamedetails_611() {
+      return FacilityAlready_create_sameDetails;
+    }
+    @FindBy(xpath="//input[@id='_popup_path_sol_ok']")
+    private WebElement Validate_Successfully_popup;
+    public WebElement validatesuccessfullypopup_611() {
+      return Validate_Successfully_popup;
+    }
+    @FindBy(xpath="//span[text()='Approve Level 1']")
+    private WebElement Approve_level1;
+    public WebElement approvelevel1_611() {
+      return Approve_level1;
+    }
+    @FindBy(xpath="//input[@id='requestFinancingGridTbl_Id_CSMRF00P1_gs_fmsRequestFinancingVO.CODE']")
+    private WebElement Approve_level1_Retrivedata_Searchbox;
+    public WebElement approvelevel1retrivedatasearchbox_611() {
+      return Approve_level1_Retrivedata_Searchbox;
+    }
+    @FindBy(xpath="//td[@id='td_requestFinancingGridTbl_Id_CSMRF00P1_1_fmsRequestFinancingVO.CODE']")
+    private WebElement Approve_level1_searchcode_doubletap;
+    public WebElement approvelevel1searchcodedoubletap_611() {
+      return Approve_level1_searchcode_doubletap;
+    }
+    @FindBy(xpath="(//span[text()='Customer Grading & Recommendations'])[3]")
+    private WebElement customer_Grading_RECOmmendation;
+    public WebElement customergradingrecommendation_611() {
+      return customer_Grading_RECOmmendation;
+    }
+    @FindBy(xpath="//select[@id='requestDecisionForward_1_CSMRF00P1']")
+    private WebElement DecisioN_SelectForward;
+    public WebElement decisionselectforward_611() {
+      return DecisioN_SelectForward;
+    }
+    @FindBy(xpath="//select[@id='requestDecisionForwardP1_CSMRF00P1']")
+    private WebElement Select_Approval_Committee;
+    public WebElement selectapprovalcommittee_611() {
+      return Select_Approval_Committee;
+    }
+    
+    @FindBy(xpath="//select[@id='requestP1approvalCommitte_CSMRF00P1']")
+    private WebElement Approval_Committee_Investment_committee ;
+    public WebElement approvalcommitteeinvestmentcommittee_611() {
+      return Approval_Committee_Investment_committee;
+    }
+    @FindBy(xpath="//label[@id='requestFinancingFormId_CSMRF00P1_approve_key']")
+    private WebElement Approve_button ;
+    public WebElement approvebutton_611() {
+      return Approve_button;
+    }
+    
+    @FindBy(xpath="//input[@id='_popup_path_sol_confirm_ok']")
+    private WebElement ConfirmApprove_PRocess_okpopup;
+    public WebElement confirmapproveprocessokpopup_611() {
+      return ConfirmApprove_PRocess_okpopup;
+    }
+    @FindBy(xpath="//input[@id='_popup_path_sol_ok']")
+    private WebElement Approved_successfully_popup;
+    public WebElement approvedsuccessfullypopup_611() {
+      return Approved_successfully_popup;
+    }
+    @FindBy(xpath="//span[text()='Approval Committee Recommendations ']")
+    private WebElement Approval_Committee_Recommendation;
+    public WebElement approvalcommitteerecommendation_611() {
+      return Approval_Committee_Recommendation;
+    }
+    @FindBy(xpath="(//input[@name='fmsRequestFinancingVO.CODE'])[3]")
+    private WebElement Approval_Committee_Recommendation_searchbox;
+    public WebElement approvalcommitteerecommendationretrivedatasearchbox_611() {
+      return Approval_Committee_Recommendation_searchbox;
+    }
+    @FindBy(xpath="//td[@id='td_requestFinancingGridTbl_Id_CSMRF00AC_1_fmsRequestFinancingVO.CODE']")
+    private WebElement Approval_Committee_Recommendation_searchbox_Doubletap;
+    public WebElement approvalcommitteerecommendationretrivedatasearchboxdoubletap_611() {
+      return Approval_Committee_Recommendation_searchbox_Doubletap;
+    }
+    @FindBy(xpath="(//span[text()='Credit Committee Recommendations'])[2]")
+    private WebElement Credit_committee_recommendation;
+    public WebElement creditcommitterecommendation_611() {
+      return Credit_committee_recommendation;
+    }
+    @FindBy(xpath="//div[@id='requestFinancingCreditReviewRecommandations_CSMRF00AC']/div/span[text()='Recommendations']")
+    private WebElement Recommendations;
+    public WebElement recommendations_611() {
+      return Recommendations;
+    }
+    @FindBy(xpath="//span[@class='ui-icon ui-icon-circlesmall-plus tree-wrap-ltr']")
+    private WebElement Recommendation_Add_button;
+    public WebElement recommendationaddbutton_611() {
+      return Recommendation_Add_button;
+    }
+    @FindBy(xpath="(//tr[@id='1'])[6]")
+    private WebElement Recommendation_Add_button_name_doubletap;
+    public WebElement recommendationaddbuttonnamedoubletap_611() {
+      return Recommendation_Add_button_name_doubletap;
+    }
+    @FindBy(xpath="(//select[@class='editable'])[1]")
+    private WebElement Recommendation_Send_back;
+    public WebElement recommendationsendback_611() {
+      return Recommendation_Send_back;
+    }
+    @FindBy(xpath="(//select[@class='editable'])[2]")
+    private WebElement Sendbacklevel_Maintenancelevel;
+    public WebElement sendbacklevelmaintenancelevel_611() {
+      return Sendbacklevel_Maintenancelevel;
+    }
+    @FindBy(xpath="//label[@id='requestFinancingFormId_CSMRF00AC_Recommendation_key']")
+    private WebElement Approve_Recommendation;
+    public WebElement approverecommendation_611() {
+      return Approve_Recommendation;
+    }
+    
+    @FindBy(xpath="//input[@id='_popup_path_sol_confirm_ok']")
+    private WebElement Confirm_recommendation_popup;
+    public WebElement confirmrecommendationpopup_611() {
+      return Confirm_recommendation_popup;
+    }
+    @FindBy(xpath="//input[@id='_popup_path_sol_ok']")
+    private WebElement Confirm_recommendation_popup_successfully;
+    public WebElement confirmrecommendationpopupsuccessfully_611() {
+      return Confirm_recommendation_popup_successfully;
+    }
+    @FindBy(xpath="//a[@id='infoBarSearchButton_CSMRF00MT']")
+    private WebElement Requestforfinancing_Maintenance_Searchbox;
+    public WebElement requestforfinancingmaintenancesearchbox_611() {
+      return Requestforfinancing_Maintenance_Searchbox;
+    }
+    @FindBy(xpath="(//input[@name='fmsRequestFinancingVO.CODE'])[1]")
+    private WebElement Maintenance_COde_Searchbox;
+    public WebElement maintenancecodesearchbox_611() {
+      return Maintenance_COde_Searchbox;
+    }
+    @FindBy(xpath="(//tr[@id='1'])[1]")
+    private WebElement Maintenance_Codevalue_Doubletap;
+    public WebElement maintenancecodevaluedoubletap_611() {
+      return Maintenance_Codevalue_Doubletap;
+    }
 }
 

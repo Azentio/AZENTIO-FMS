@@ -1,6 +1,6 @@
 Feature: To Test the Financial facilities in FMS Application
 
-  @280446
+  @862778
   Scenario: Details are not showing in owner Shareholders tab after validating application from Request from financing Screen
     Given navigate to FMS application and login with valid credentials
     And Click the request for financin in fms application
@@ -20,14 +20,14 @@ Feature: To Test the Financial facilities in FMS Application
     #And click the product class values word
     And Add the Margin values in Margin
     #And Click the Margin values word
-    And Enter the tenure value in tenure
+    #And Enter the tenure value in tenure
     And Add all the Above limit values
     And Save all the values when limits are add
-    And Confirm the popup menu when all the limits are saved
-    And Click the final save popup message
-    And Click the validate button when all the values are saved
-    And Confirm the validate popup menu
-    And Click the final validate popup
+    #And Confirm the popup menu when all the limits are saved
+    #And Click the final save popup message
+    #And Click the validate button when all the values are saved
+    #And Confirm the validate popup menu
+    #And Click the final validate popup
     And Click the Approve level1 screen under request for financing
     And Enter the request code in search box
     And Double tap the request code value

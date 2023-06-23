@@ -24,9 +24,9 @@ public class RequestforfinancingOBJ {
 		return Request_For_Financing;
 	}
     @FindBy(xpath="//span[text()='Maintenance']")
-	private WebElement Maintenance;
-    public WebElement maintenance() {
-		return Maintenance;
+	private WebElement RequestForFinancing_Maintenance;
+    public WebElement requestforfinancingmaintenance() {
+		return RequestForFinancing_Maintenance;
 	}
    
     
@@ -40,11 +40,11 @@ public class RequestforfinancingOBJ {
     public WebElement customersearchbox() {
 		return Customer_Search_box;
 	}
-    @FindBy(xpath="//label[@id='requestFinancingCustomer_CSMRF00MT']")
-	private WebElement CUSTOMER;
-    public WebElement customer() {
-		return CUSTOMER;
-	}
+//    @FindBy(xpath="//label[@id='requestFinancingCustomer_CSMRF00MT']")
+//	private WebElement CUSTOMER;
+//    public WebElement customer() {
+//		return CUSTOMER;
+//	}
     @FindBy(xpath="//span[text()='Facility Type Details']")
 	private WebElement Facility_Type_details;
     public WebElement facilitytypedetails() {
@@ -55,11 +55,11 @@ public class RequestforfinancingOBJ {
     public WebElement facilitytypedetailssearchbox() {
 		return Facility_Type_details_searchbox;
 	}
-    @FindBy(xpath="//*[@id=\"rerquestFinancingMainLimitTabsContent_CSMRF00MT\"]/div/table[1]/tbody/tr/td[1]/fieldset")
-	private WebElement FacIltytype_touch;
-    public WebElement facilitytypetouch() {
-		return FacIltytype_touch;
-	}
+//    @FindBy(xpath="//*[@id=\"rerquestFinancingMainLimitTabsContent_CSMRF00MT\"]/div/table[1]/tbody/tr/td[1]/fieldset")
+//	private WebElement FacIltytype_touch;
+//    public WebElement facilitytypetouch() {
+//		return FacIltytype_touch;
+//	}
     @FindBy(xpath="//input[@id='requestFinancingFacilityTotalvalue_CSMRF00MT']")
 	private WebElement ToTal_Limit_Search_box;
     public WebElement totallimitsearchbox() {
@@ -109,24 +109,34 @@ public class RequestforfinancingOBJ {
     public WebElement productclass() {
 		return Product_class;
 	}
+    @FindBy(id="//input[@id='requestFinancingLimitDetailsFacilityRiskRatingScore_CSMRF00MT']")
+	private WebElement Facility_Risk_Rating;
+    public WebElement facilityriskrating() {
+		return Facility_Risk_Rating;
+	}
+    @FindBy(id="//input[@id='requestFinancingLimitDetailsFacilityRiskRatingValueDate_CSMRF00MT']")
+	private WebElement FRR_Value_Date;
+    public WebElement frrvaluedate() {
+		return FRR_Value_Date;
+	}
     @FindBy(id="requestFinancingLimitDetailsRfNewMargin_CSMRF00MT")
 	private WebElement MaRgin_search_box;
     public WebElement marginsearchbox() {
 		return MaRgin_search_box;
 	}
-    @FindBy(xpath="(//label[@id='requestfinancingLimitPopupFormId_CSMRF00MT_MarignRate_key'])[1]")
-	private WebElement MaRgin;
-    public WebElement margin() {
-		return MaRgin;
-	}
-    @FindBy(xpath="//input[@id=\'requestFinancingLimitDetailsPeriodicityNbr_CSMRF00MT\']")
-	private WebElement TeNURe;
-    public WebElement tenure() {
-		return TeNURe;
-	}
+//    @FindBy(xpath="(//label[@id='requestfinancingLimitPopupFormId_CSMRF00MT_MarignRate_key'])[1]")
+//	private WebElement MaRgin;
+//    public WebElement margin() {
+//		return MaRgin;
+//	}
+//    @FindBy(xpath="//input[@id=\'requestFinancingLimitDetailsPeriodicityNbr_CSMRF00MT\']")
+//	private WebElement TeNURe;
+//    public WebElement tenure() {
+//		return TeNURe;
+//	}
     @FindBy(xpath="//button[@id=\'limitDetails_add_btn_CSMRF00MT\']")
 	private WebElement ADD_Button;
-    public WebElement addbutton() {
+    public WebElement finaladdbutton() {
 		return ADD_Button;
 	}
     @FindBy(xpath="//label[@id=\'requestFinancingFormId_CSMRF00MT_save_key\']")
@@ -154,11 +164,11 @@ public class RequestforfinancingOBJ {
     public WebElement confirmvalidatepopupokbutton() {
       return Confirmvalidate_popup_okbutton;
     }
-   // @FindBy(xpath="//input[@id='_popup_path_sol_confirm_ok']")
-   // private WebElement Already_create_sameDetails;
-   // public WebElement alreadycreatesamedetails() {
-     // return Already_create_sameDetails;
-    //}
+    @FindBy(xpath="//input[@id='_popup_path_sol_confirm_ok']")
+    private WebElement FacilityAlready_create_sameDetails;
+    public WebElement facilityalreadycreatesamedetails() {
+      return FacilityAlready_create_sameDetails;
+    }
     @FindBy(xpath="//input[@id='_popup_path_sol_ok']")
     private WebElement Validate_Successfully_popup;
     public WebElement validatesuccessfullypopup() {
@@ -169,10 +179,10 @@ public class RequestforfinancingOBJ {
     public WebElement approvelevel1() {
       return Approve_level1;
     }
-    @FindBy(xpath="(//input[@name='fmsRequestFinancingVO.CODE'])[2]")
-    private WebElement Approve_level1_searchcode;
-    public WebElement approvelevel1searchcode() {
-      return Approve_level1_searchcode;
+    @FindBy(xpath="//input[@id='requestFinancingGridTbl_Id_CSMRF00P1_gs_fmsRequestFinancingVO.CODE']")
+    private WebElement Approve_level1_Retrivedata_Searchbox;
+    public WebElement approvelevel1retrivedatasearchbox() {
+      return Approve_level1_Retrivedata_Searchbox;
     }
 
 	/*
@@ -185,7 +195,7 @@ public class RequestforfinancingOBJ {
 	 * EXIsting_value_doubletap; public WebElement existingvaluedoubletap() { return
 	 * EXIsting_value_doubletap; }
 	 */
-    @FindBy(xpath="(//tr[@id='1'])[2]")
+    @FindBy(xpath="//td[@id='td_requestFinancingGridTbl_Id_CSMRF00P1_1_fmsRequestFinancingVO.CODE']")
     private WebElement Approve_level1_searchcode_doubletap;
     public WebElement approvelevel1searchcodedoubletap() {
       return Approve_level1_searchcode_doubletap;
@@ -233,9 +243,9 @@ public class RequestforfinancingOBJ {
       return Approval_Committee_Recommendation;
     }
     @FindBy(xpath="(//input[@name='fmsRequestFinancingVO.CODE'])[3]")
-    private WebElement Approval_Committee_Recommendation_searchcode;
-    public WebElement approvalcommitteerecommendationsearchcode() {
-      return Approval_Committee_Recommendation_searchcode;
+    private WebElement Approval_Committee_Recommendation_searchbox;
+    public WebElement approvalcommitteerecommendationretrivedatasearchbox() {
+      return Approval_Committee_Recommendation_searchbox;
     }
 	/*
 	 * @FindBy(xpath="(//span[@class='ui-icon ui-icon-refresh'])[2]") private
@@ -247,20 +257,20 @@ public class RequestforfinancingOBJ {
 	 * EXisting_Record_DOUBletap; public WebElement existingrecorddoubletap() {
 	 * return EXisting_Record_DOUBletap; }
 	 */
-    @FindBy(xpath="(//tr[@id='1'])[2]")
-    private WebElement search_Record_DOUBletap;
-    public WebElement searchrecorddoubletap() {
-      return search_Record_DOUBletap;
+    @FindBy(xpath="//td[@id='td_requestFinancingGridTbl_Id_CSMRF00AC_1_fmsRequestFinancingVO.CODE']")
+    private WebElement Approval_Committee_Recommendation_searchbox_Doubletap;
+    public WebElement approvalcommitteerecommendationretrivedatasearchboxdoubletap() {
+      return Approval_Committee_Recommendation_searchbox_Doubletap;
     }
     @FindBy(xpath="(//span[text()='Credit Committee Recommendations'])[2]")
     private WebElement Credit_committee_recommendation;
     public WebElement creditcommitterecommendation() {
       return Credit_committee_recommendation;
     }
-    @FindBy(xpath="(//span[text()='Recommendations'])[2]")
-    private WebElement Recommendation;
-    public WebElement recommendation() {
-      return Recommendation;
+    @FindBy(xpath="//div[@id='requestFinancingCreditReviewRecommandations_CSMRF00AC']/div/span[text()='Recommendations']")
+    private WebElement Recommendations;
+    public WebElement recommendations() {
+      return Recommendations;
     }
     @FindBy(xpath="//span[@class='ui-icon ui-icon-circlesmall-plus tree-wrap-ltr']")
     private WebElement Recommendation_Add_button;
@@ -282,6 +292,12 @@ public class RequestforfinancingOBJ {
     public WebElement sendbacklevelmaintenancelevel() {
       return Sendbacklevel_Maintenancelevel;
     }
+    @FindBy(xpath="//label[@id='requestFinancingFormId_CSMRF00AC_Recommendation_key']")
+    private WebElement Approve_Recommendation;
+    public WebElement approverecommendation() {
+      return Approve_Recommendation;
+    }
+    
     @FindBy(xpath="//input[@id='_popup_path_sol_confirm_ok']")
     private WebElement Confirm_recommendation_popup;
     public WebElement confirmrecommendationpopup() {
@@ -297,15 +313,15 @@ public class RequestforfinancingOBJ {
    // public WebElement refreshpage() {
     //  return Refresh_page;
    // }
-    @FindBy(xpath="//span[text()='Maintenance']")
-	private WebElement Maintenance1;
-    public WebElement maintenance1() {
-		return Maintenance1;
-	}
+//    @FindBy(xpath="//span[text()='Maintenance']")
+//	private WebElement Maintenance;
+//    public WebElement maintenance() {
+//		return Maintenance;
+//	}
     @FindBy(xpath="//a[@id='infoBarSearchButton_CSMRF00MT']")
-    private WebElement Maintenance_Searchbox;
-    public WebElement maintenancesearchbox() {
-      return Maintenance_Searchbox;
+    private WebElement Requestforfinancing_Maintenance_Searchbox;
+    public WebElement requestforfinancingmaintenancesearchbox() {
+      return Requestforfinancing_Maintenance_Searchbox;
     }
     @FindBy(xpath="(//input[@name='fmsRequestFinancingVO.CODE'])[1]")
     private WebElement Maintenance_COde_Searchbox;
@@ -313,9 +329,9 @@ public class RequestforfinancingOBJ {
       return Maintenance_COde_Searchbox;
     }
     @FindBy(xpath="(//tr[@id='1'])[1]")
-    private WebElement Codevalue_Doubletap;
-    public WebElement codevaluedoubletap() {
-      return Codevalue_Doubletap;
+    private WebElement Maintenance_Codevalue_Doubletap;
+    public WebElement maintenancecodevaluedoubletap() {
+      return Maintenance_Codevalue_Doubletap;
     }
     
     
