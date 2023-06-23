@@ -14,142 +14,196 @@ public class FMS_Result_RequestForFinacing_610_obj {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath = "//td[text()='REQUEST FOR FINANCIN']/preceding-sibling::td/span/span")
-	private WebElement requestForFinancingMenu;
-	public WebElement requestForFinancingMenu() {
-		return requestForFinancingMenu;
+	@FindBy(xpath = "//td[text()='Request']")
+	private WebElement FMS_core_request_module;
+	public WebElement FMSCoreRequestModule_610() {
+		return FMS_core_request_module;
 	}
 	
-	@FindBy(xpath = "//td[text()='Request For Financing']/preceding-sibling::td/span/span")
-	private WebElement requestForFinancingSubMenu;
-	public WebElement requestForFinancingSubMenu() {
-		return requestForFinancingSubMenu;
+	@FindBy(xpath = "//td[text()='Request Financing']")
+	private WebElement request_financing_feature;
+	public WebElement requestFinancingFeature_610() {
+		return request_financing_feature;
 	}
 	
-	@FindBy(id = "CSMRF00MT")
-	private WebElement requestForFinancingMaintenanceScreen;
-	public WebElement requestForFinancingMaintenanceScreen() {
-		return requestForFinancingMaintenanceScreen;
+	@FindBy(xpath = "//div[@id='_selenuimRFFRF00']//td[contains(text(),'Request')]")
+	private WebElement request_for_financing_feature;
+	public WebElement requestForFinancingFeature_610() {
+		return request_for_financing_feature;
 	}
 	
-	@FindBy(id = "requestFinancingApplicationFor_CSMRF00MT")
-	private WebElement reasonForSubmissionSelect;
-	public WebElement reasonForSubmissionSelect() {
-		return reasonForSubmissionSelect;
-	}
-
-	@FindBy(id = "requestFinancingNewRequestDt_CSMRF00MT")
-	private WebElement requestDateValidation;
-	public WebElement requestDateValidation() {
-		return requestDateValidation;
+	@FindBy(xpath = "//a[@id='RFFRF00MT']")
+	private WebElement request_for_financing_maintanance;
+	public WebElement requestForFinancingMaintanance_610() {
+		return request_for_financing_maintanance;
 	}
 	
-	@FindBy(id = "lookuptxt_requestFinanacingCif_CSMRF00MT")
-	private WebElement customerCIF;
-	public WebElement customerCIF() {
-		return customerCIF;
+	@FindBy(xpath = "//select[@id='requestFinancingApplicationFor_RFFRF00MT']")
+	private WebElement request_for_financing_main_reason_for_dropdown;
+	public WebElement requestForFinancingMainReasonForDropdown_610() {
+		return request_for_financing_main_reason_for_dropdown;
 	}
 	
-	@FindBy(id = "REQUEST FOR FINANCIN / Request For Financing / Maintenance")
-	private WebElement randomClick;
-	public WebElement randomClick() {
-		return randomClick;
-	}
-
-	@FindBy(id = "lookuptxt_requestFinancingFacilityType_CSMRF00MT")
-	private WebElement facilityTypeInRequestForFinancingScreen;
-	public WebElement facilityTypeInRequestForFinancingScreen() {
-		return facilityTypeInRequestForFinancingScreen;
+	@FindBy(xpath = "//input[@id='lookuptxt_requestFinanacingCif_RFFRF00MT']")
+	private WebElement request_for_financing_main_customer_input;
+	public WebElement requestForFinancingMainCustomerInput_610() {
+		return request_for_financing_main_customer_input;
 	}
 	
-	@FindBy(id = "requestFinancingCifShortNameEng_CSMRF00MT")
-	private WebElement customerNameValidationInRequestForFinancingScreen;
-	public WebElement customerNameValidationInRequestForFinancingScreen() {
-		return customerNameValidationInRequestForFinancingScreen;
+	@FindBy(xpath = "(//input[@id='requestFinancingCifShortNameEng_RFFRF00MT'])[1]")
+	private WebElement request_for_financing_short_name_input;
+	public WebElement requestForFinancingMainShortNameInput_610() {
+		return request_for_financing_short_name_input;
 	}
 	
-	@FindBy(xpath = "//input[@name='requestFinancingCO.TOTAL_AMOUNT']")
-	private WebElement totalLimitInRequestForFinancingScreen;
-	public WebElement totalLimitInRequestForFinancingScreen() {
-		return totalLimitInRequestForFinancingScreen;
+	@FindBy(xpath = "//input[@id='lookuptxt_requestFinancingFacilityType_RFFRF00MT']")
+	private WebElement request_for_financing_main_facility_type_input;
+	public WebElement requestForFinancingMainFacilityTypeInput_610() {
+		return request_for_financing_main_facility_type_input;
 	}
 	
-	@FindBy(id = "requestFinancingFacilityTypeDesc_CSMRF00MT")
-	private WebElement facilityNameValidationInRequestForFinancingScreen;
-	public WebElement facilityNameValidationInRequestForFinancingScreen() {
-		return facilityNameValidationInRequestForFinancingScreen;
+	@FindBy(xpath = "//input[@id='lookuptxt_requestFinancingFacilityCurrency_RFFRF00MT']")
+	private WebElement request_for_financing_main_CY_input;
+	public WebElement requestForFinancingMainCYInput_610() {
+		return request_for_financing_main_CY_input;
 	}
 	
-	@FindBy(xpath = "requestFinancingCyRate_CSMRF00MT")
-	private WebElement cvValueValidationInRequestForFinancingScreen;
-	public WebElement cvValueValidationInRequestForFinancingScreen() {
-		return cvValueValidationInRequestForFinancingScreen;
+	@FindBy(xpath = "//input[@id='requestFinancingFacilityTotalvalue_RFFRF00MT']")
+	private WebElement request_for_financing_main_total_limit_input;
+	public WebElement requestForFinancingMainTotalLimitInput_610() {
+		return request_for_financing_main_total_limit_input;
 	}
 	
-	@FindBy(xpath ="//*[@id='requestFinancingLimitDtlsTabs_CSMRF00MT']")
-	private WebElement disbursementOrSublimitInRequestForFinancingScreen;
-	public WebElement disbursementOrSublimitInRequestForFinancingScreen() {
-		return disbursementOrSublimitInRequestForFinancingScreen;
+	@FindBy(xpath = "//li[@id='requestFinancingLimitDtlsTabs_RFFRF00MT']")
+	private WebElement request_for_financing_main_sublimit_tab;
+	public WebElement requestForFinancingMainSublimitTab_610() {
+		return request_for_financing_main_sublimit_tab;
 	}
 	
-	@FindBy(xpath = "//*[@id=\"add_RequestFinancingLimitDetailsGridId_CSMRF00MT\"]/div/span")
-	private WebElement addIconInDisbursementOrSublimitScreen;
-	public WebElement addIconInDisbursementOrSublimitScreen() {
-		return addIconInDisbursementOrSublimitScreen;
+	@FindBy(xpath = "//td[@id='add_RequestFinancingLimitDetailsGridId_RFFRF00MT']")
+	private WebElement request_for_financing_main_sublimit_tab_add_new_btn;
+	public WebElement requestForFinancingMainSublimitTabAddNewBtn_610() {
+		return request_for_financing_main_sublimit_tab_add_new_btn;
 	}
 	
-	@FindBy(xpath = "//input[@name='requestFinancingCO.requestFinancingLimitCO.fmsAppLimitDetVO.CLASS']")
-	private WebElement productClassInLimitDetailsPopUp;
-	public WebElement productClassInLimitDetailsPopUp() {
-		return productClassInLimitDetailsPopUp;
+	@FindBy(xpath = "//input[@id='lookuptxt_requestFinancingLimitDetailsGeneralFacilityProductClass_RFFRF00MT']")
+	private WebElement request_for_financing_main_sublimit_tab_productclass_input;
+	public WebElement requestForFinancingMainSublimitTabAddNewProductClassInput_610() {
+		return request_for_financing_main_sublimit_tab_productclass_input;
 	}
 	
-	@FindBy(id = "lookuptxt_requestFinancingLimitDetailsClassType_CSMRF00MT")
-	private WebElement productClassRandomClick;
-	public WebElement productClassRandomClick() {
-		return productClassRandomClick;
+	@FindBy(xpath = "//input[@id='requestFinancingLimitDetailsRfNewMargin_RFFRF00MT']")
+	private WebElement request_for_financing_main_sublimit_tab_margin_input;
+	public WebElement requestForFinancingMainSublimitTabAddNewMarginInput_610() {
+		return request_for_financing_main_sublimit_tab_margin_input;
 	}
 	
-	@FindBy(xpath ="//input[@id='requestFinancingLimitDetailsClassDesc_CSMRF00MT']")
-	private WebElement productClassNameValidationInRepaymentPlan;
-	public WebElement productClassNameValidationInRepaymentPlan() {
-		return productClassNameValidationInRepaymentPlan;
+	@FindBy(xpath = "//button[@id='limitDetails_add_btn_RFFRF00MT']")
+	private WebElement request_for_financing_main_sublimit_tab_add_btn;
+	public WebElement requestForFinancingMainSublimitTabAddBtn_610() {
+		return request_for_financing_main_sublimit_tab_add_btn;
 	}
 	
-	@FindBy(xpath = "//input[@id='requestFinancingLimitDetailsRfNewMargin_CSMRF00MT']")
-	private WebElement marginValueInLimitDetailsPopUp;
-	public WebElement marginValueInLimitDetailsPopUp() {
-		return marginValueInLimitDetailsPopUp;
+	@FindBy(xpath = "//button[@id='requestForFinance_save_as_draft_btn_RFFRF00MT']")
+	private WebElement request_for_financing_main_save_btn;
+	public WebElement requestForFinancingMainSaveBtn_610() {
+		return request_for_financing_main_save_btn;
 	}
 	
-	@FindBy(xpath = "//button[@id='limitDetails_add_btn_CSMRF00MT']")
-	private WebElement addButtonInLimitDetailsPopUp;
-	public WebElement addButtonInLimitDetailsPopUp() {
-		return addButtonInLimitDetailsPopUp;
+	@FindBy(xpath = "//button[@id='requestForFinance_save_btn_RFFRF00MT']")
+	private WebElement request_for_financing_main_validate_btn;
+	public WebElement requestForFinancingMainValidateBtn_610() {
+		return request_for_financing_main_validate_btn;
 	}
 	
-	@FindBy(xpath = "//button[@id='limitDetails_add_btn_WIFT001MT']")
-	private WebElement addButtonInLimitDetailsPopUpWifakapplication;
-	public WebElement addButtonInLimitDetailsPopUpWifakapplication() {
-		return addButtonInLimitDetailsPopUpWifakapplication;
+	@FindBy(xpath = "//div[@id='div__popup_path_sol_ok']/div[2]/div")
+	private WebElement success_popup_msg;
+	public WebElement successPopupMsg_610() {
+		return success_popup_msg;
+	}	
+	
+	@FindBy(xpath = "/html/body/div[46]/div")
+	private WebElement request_send_alert_popup;
+	public WebElement RequestSendAlertPopup_610() {
+		return request_send_alert_popup;
 	}
 	
-	@FindBy(xpath = "//*[@id=\"requestFinancingFormId_CSMRF00MT_save_key\"]")
-	private WebElement savebuttonInRequestForFinancingScreenMaintenance;
-	public WebElement savebuttonInRequestForFinancingScreenMaintenance() {
-		return savebuttonInRequestForFinancingScreenMaintenance;
+	@FindBy(xpath = "/html/body/div[46]/div[1]/a/span")
+	private WebElement request_send_alert_popup_close;
+	public WebElement RequestSendAlertPopupClose_610() {
+		return request_send_alert_popup_close;
+	}	
+	
+	@FindBy(xpath = "//a[@id='dismissbut_RFFRF00MT']")
+	private WebElement request_send_alert_popup_dismiss_btn;
+	public WebElement requestSendAlertPopupDismissBtn_610() {
+		return request_send_alert_popup_dismiss_btn;
 	}
 	
-	@FindBy(id = "_popup_path_sol_confirm_ok")
-	private WebElement okButtonInConfirmationPopUp;
-	public WebElement okButtonInConfirmationPopUp() {
-		return okButtonInConfirmationPopUp;
+	@FindBy(xpath = "//a[@id='RFFRF00P1']")
+	private WebElement request_for_financing_approve_level1;
+	public WebElement requestForFinancingApproveLevel1_610() {
+		return request_for_financing_approve_level1;
 	}
 	
-	@FindBy(id = "_popup_path_sol_ok")
-	private WebElement okButtonInSucessPopUp;
-	public WebElement okButtonInSucessPopUp() {
-		return okButtonInSucessPopUp;
+	@FindBy(xpath = "//input[@id='requestFinancingGridTbl_Id_RFFRF00P1_gs_fmsRequestFinancingVO.CODE']")
+	private WebElement request_for_financing_approve_level1_code;
+	public WebElement requestForFinancingApproveLevel1Code_610() {
+		return request_for_financing_approve_level1_code;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_requestFinancingGridTbl_Id_RFFRF00P1_1_fmsRequestFinancingVO.CODE']")
+	private WebElement request_for_financing_approve_level1_first_row;
+	public WebElement requestForFinancingApproveLevel1FirstRow_610() {
+		return request_for_financing_approve_level1_first_row;
+	}
+	
+	@FindBy(xpath = "//li[@id='customerGradingRecommendationsTab_RFFRF00P1']")
+	private WebElement approve_level1_customer_grading_tab;
+	public WebElement approveLevel1CustomerGradingTab_610() {
+		return approve_level1_customer_grading_tab;
+	}
+	
+	@FindBy(xpath = "//select[@id='requestDecisionForward_1_RFFRF00P1']")
+	private WebElement approve_level1_customer_grading_approve_decision;
+	public WebElement approveLevel1CustomerGradingApproveDecision_610() {
+		return approve_level1_customer_grading_approve_decision;
+	}
+	
+	@FindBy(xpath = "//select[@id='requestDecisionForwardP1_RFFRF00P1']")
+	private WebElement approve_level1_customer_grading_approve_forward_to;
+	public WebElement approveLevel1CustomerGradingApproveForwardTo_610() {
+		return approve_level1_customer_grading_approve_forward_to;
+	}
+	
+	@FindBy(xpath = "//select[@id='requestP1approvalCommitte_RFFRF00P1']")
+	private WebElement approve_level1_customer_grading_approve_committee;
+	public WebElement approveLevel1CustomerGradingApproveCommittee_610() {
+		return approve_level1_customer_grading_approve_committee;
+	}
+	
+	@FindBy(xpath = "//button[@id='requestForFinance_approve_btn_RFFRF00P1']")
+	private WebElement request_for_financing_approve_level1_approve_Btn;
+	public WebElement requestForFinancingApproveLevel1ApproveBtn_610() {
+		return request_for_financing_approve_level1_approve_Btn;
+	}	
+	
+	@FindBy(xpath = "//a[@id='RFFRF00AC']")
+	private WebElement request_for_financing_approval_committee_recom;
+	public WebElement requestForFinancingApprovalCommitteeRecom_610() {
+		return request_for_financing_approval_committee_recom;
+	}
+	
+	@FindBy(xpath = "//input[@id='requestFinancingGridTbl_Id_RFFRF00AC_gs_fmsRequestFinancingVO.CODE']")
+	private WebElement request_for_financing_approval_committee_recom_code;
+	public WebElement requestForFinancingApprovalCommitteeRecomCode_610() {
+		return request_for_financing_approval_committee_recom_code;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_requestFinancingGridTbl_Id_RFFRF00AC_1_fmsRequestFinancingVO.CODE']")
+	private WebElement request_for_financing_approval_committee_recom_row1;
+	public WebElement requestForFinancingApprovalCommitteeRecomRow1_610() {
+		return request_for_financing_approval_committee_recom_row1;
 	}
 	
 	

@@ -38,14 +38,19 @@ public class FMS_WifakApplication_Steps {
 	FMSLogin login = new FMSLogin(driver);
 	DropDownHelper DropDownhelper = new DropDownHelper(driver);
 	JavascriptHelper JavascriptHelper = new JavascriptHelper(driver);
-
 	String SuccessMsg;
 	String SuccessMsg2;
 	String SuccessMsgFM;
 
 	int FinanceAmt;
 	int FCAmount;
-
+	
+	int downPayment;
+	int totalValueWifak;
+	int financeAmount;
+	int facilityValueInLimit;
+	
+	int downpaymentAmountInDet;
 	String path = System.getProperty("user.dir") + "\\TestData\\FMSTestData.xlsx";
 	ExcelData fmsTransactionsExcelData = new ExcelData(path, "FMS_WIFAK_ApplicationTestData", "DataSet ID");
 	Map<String, String> testData;
@@ -57,13 +62,11 @@ public class FMS_WifakApplication_Steps {
 		clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.getWifak_Application_first());
 	}
 
-	@And("User_610 get the test data set id for AT_RF_155")
-	public void get_the_test_data_set_id_for_at_AT_RF_155() {
-		testData = fmsTransactionsExcelData.getTestdata("DS01_740790");
+	@And("User_610 get the test data set id for AT_FM_099")
+	public void get_the_test_data_set_id_for_at_AT_FM_099() {
+		testData = fmsTransactionsExcelData.getTestdata("DS01_1038991");
 
-		System.out.println("hai");
-
-	}
+			}
 
 	@And("User_610 get the test data set id for AT_AFF_037")
 	public void get_the_test_data_set_id_for_at_aff_037() {
@@ -121,17 +124,14 @@ public class FMS_WifakApplication_Steps {
 
 	@And("^User_610 Enter Code In Country of Financing$")
 	public void enter_code_in_country_of_financing() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver,
-				FMSWifakErrorWhileSavingObj.getEnterCodeIn_Country_of_Financing());
-		FMSWifakErrorWhileSavingObj.getEnterCodeIn_Country_of_Financing()
-				.sendKeys(testData.get("Country of Financing"));
+		waitHelper.waitForElementwithFluentwait(driver,FMSWifakErrorWhileSavingObj.getEnterCodeIn_Country_of_Financing());
+		FMSWifakErrorWhileSavingObj.getEnterCodeIn_Country_of_Financing().sendKeys(testData.get("Country of Financing"));
 
 	}
 
 	@And("^User_610 Enter line Code On Facility Rating$")
 	public void enter_line_code_on_facility_rating() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver,
-				FMSWifakErrorWhileSavingObj.getEnter_lineCodeOn_Facility_Rating());
+		waitHelper.waitForElementwithFluentwait(driver,FMSWifakErrorWhileSavingObj.getEnter_lineCodeOn_Facility_Rating());
 		FMSWifakErrorWhileSavingObj.getEnter_lineCodeOn_Facility_Rating().sendKeys(testData.get("Facility Rating"));
 
 		for (int i = 0; i <= 300; i++) {
@@ -145,28 +145,46 @@ public class FMS_WifakApplication_Steps {
 	@And("^User_610 Click on additional Details$")
 	public void click_on_additional_details() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.getClickon_additionalDetails());
-		clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.getClickon_additionalDetails());
+		
+		for (int i = 0; i < 200; i++) {
+			try {
+
+				clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.getClickon_additionalDetails());
+				break;
+			} catch (Exception e) {
+				if (i == 199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
 
 	}
 
 	@And("^User_610 Enter the Total Value$")
 	public void enter_the_total_value() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.getEnter_TotalValue());
-		clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.getEnter_TotalValue());
+	//	clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.getEnter_TotalValue());
 		clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.getEnter_TotalValue());
-		FMSWifakErrorWhileSavingObj.getEnter_TotalValue().sendKeys("10000");
+		FMSWifakErrorWhileSavingObj.getEnter_TotalValue().sendKeys(testData.get("Total value"));
+		FMSWifakErrorWhileSavingObj.getEnter_TotalValue().sendKeys(Keys.TAB);
+		Thread.sleep(4000);
+		
+		
 		// FMSWifakErrorWhileSavingObj.getEnter_TotalValue().sendKeys(testData.get("Total
 		// value"));
-
+		
+		String TotalValue = FMSWifakErrorWhileSavingObj.getEnter_TotalValue().getAttribute("prevvalue");
+		System.err.println("TotalValue: " + TotalValue);
+		totalValueWifak = Integer.parseInt(TotalValue);
+		System.out.println("totalValueWifak: " + totalValueWifak);
 	}
 
 	@And("^User_610 Click Offer Expiration SelectDate$")
 	public void click_offer_expiration_selectdate() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver,
-				FMSWifakErrorWhileSavingObj.getClick_Offer_Expiration_SelectDate());
-		clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.getClick_Offer_Expiration_SelectDate());
+		waitHelper.waitForElementwithFluentwait(driver,FMSWifakErrorWhileSavingObj.getClick_Offer_Expiration_SelectDate());
+	//	clicksAndActionsHelper.moveToElement(FMSWifakErrorWhileSavingObj.getClick_Offer_Expiration_SelectDate());
 		clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.getClick_Offer_Expiration_SelectDate());
-		// FMSWifakErrorWhileSavingObj.getClick_Offer_Expiration_SelectDate().sendKeys("06/06/2023");
+	//	 FMSWifakErrorWhileSavingObj.getClick_Offer_Expiration_SelectDate().sendKeys("06/06/2023");
 		FMSWifakErrorWhileSavingObj.getClick_Offer_Expiration_SelectDate().sendKeys(testData.get("Expire Date"));
 
 	}
@@ -263,9 +281,106 @@ public class FMS_WifakApplication_Steps {
 		clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.getEnter_ValueOn_Product_Class());
 		// FMSWifakErrorWhileSavingObj.getEnter_ValueOn_Product_Class().sendKeys("1");
 		FMSWifakErrorWhileSavingObj.getEnter_ValueOn_Product_Class().sendKeys(testData.get("Product Class"));
+		FMSWifakErrorWhileSavingObj.getEnter_ValueOn_Product_Class().sendKeys(Keys.TAB);
 		// Thread.sleep(10000);
 
 	}
+	
+	@And("User_{int} Enter down Payment amount")
+	public void user_enter_total_down_payment(Integer int1) throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.downPaymentAnount_InLimitsDetails());
+		
+		for (int i = 0; i < 200; i++) {
+			try {
+				clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.downPaymentAnount_InLimitsDetails());
+				break;
+			} catch (Exception e) {
+				if (i == 199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		 FMSWifakErrorWhileSavingObj.downPaymentAnount_InLimitsDetails().clear();
+		 FMSWifakErrorWhileSavingObj.downPaymentAnount_InLimitsDetails().sendKeys(testData.get("Total Down Payment"));
+		 FMSWifakErrorWhileSavingObj.downPaymentAnount_InLimitsDetails().sendKeys(Keys.TAB);
+		 
+		 Thread.sleep(10000);
+		 
+		 String downPaymentAnount_InLimitsDetails = FMSWifakErrorWhileSavingObj.downPaymentAnount_InLimitsDetails().getAttribute("prevvalue").toString().replace(",","").split("[.]")[0];
+			System.err.println("totaldownPayment_InLimitsDetails: " + downPaymentAnount_InLimitsDetails);
+			downpaymentAmountInDet = Integer.parseInt(downPaymentAnount_InLimitsDetails);
+			System.err.println("downpaymentAmountInDet: " + downpaymentAmountInDet);
+//		 FMSWifakErrorWhileSavingObj.totaldownPayment_InLimitsDetails().sendKeys(testData.get("Total Down Payment"));	}   TFA training needed
+		}
+	
+	@And("User_610 Validate Finance Amount")
+	public void user_610_validate_finance_amount() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.financeAmount_InAdditionalDetails_610());
+		clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.financeAmount_InAdditionalDetails_610());
+		String financeAmt = JavascriptHelper.executeScript("return document.getElementsByName('applicationFacilityCO.fmsApplVO.VALUE')[0].value").
+				toString().replace(",","").split("[.]")[0];
+				System.err.println("finaceamount :"+ financeAmt );
+		
+		int FinanceAmt = Integer.parseInt(financeAmt);
+		System.err.println("FinanceAmt :"+ FinanceAmt );
+		
+		Assert.assertEquals((Integer.parseInt(testData.get("Total value")) - Integer.parseInt(testData.get("Down Payment"))), FinanceAmt);
+		
+		Thread.sleep(8000);
+	
+	}
+	
+	@Then("User_{int} Validate Total Facility Value")
+	public void user_validate_total_facility_value(Integer int1) {
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.facilityValue_InAdditionalDetails_610());
+		String facilityValueInLimitDe = FMSWifakErrorWhileSavingObj.facilityValue_InAdditionalDetails_610().getAttribute("prevvalue");
+	//	System.err.println("TotalValue: " + facilityValueInLimitDe);
+		facilityValueInLimit = Integer.parseInt(facilityValueInLimitDe);
+		System.err.println("facilityValueInLimit: " + facilityValueInLimit);
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.TotalFacilityValue_InLImitDetails_SubMenu());
+		
+		String totalfacilityvalue = JavascriptHelper.executeScript("return document.getElementsByName('applicationFacilityCO.fmsAppLimitDetCO.TOTAl_FACILITY_VALUE')[0].value").
+				toString().replace(",","").split("[.]")[0];
+		
+	//	System.err.println("totalfacilityvalue: " + totalfacilityvalue);
+		int totalfacilityValue = Integer.parseInt(totalfacilityvalue);
+		
+		System.err.println("totalfacilityValue: " + totalfacilityValue);
+	//	System.err.println("FinanceAmt :"+ FinanceAmt );
+		System.err.println("downpaymentAmountInDet: " + downpaymentAmountInDet);
+		
+		Assert.assertEquals((downpaymentAmountInDet+facilityValueInLimit), totalfacilityValue);
+		
+	}
+	
+	@And("User_{int} enter Down Payment Value")
+	public void user_enter_down_payment_value(Integer int1) throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.downPayment_InAdditionalDetails());
+		for (int i = 0; i < 200; i++) {
+			try {
+				clicksAndActionsHelper.clickOnElement(FMSWifakErrorWhileSavingObj.downPayment_InAdditionalDetails());
+				break;
+			} catch (Exception e) {
+				if (i == 199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		 FMSWifakErrorWhileSavingObj.downPayment_InAdditionalDetails().sendKeys(testData.get("Down Payment"));
+		 FMSWifakErrorWhileSavingObj.downPayment_InAdditionalDetails().sendKeys(Keys.TAB);
+		 Thread.sleep(6000);
+		 
+		    String downpayment = FMSWifakErrorWhileSavingObj.downPayment_InAdditionalDetails().getAttribute("prevvalue");
+			System.err.println("downpayment: " + downpayment);
+			downPayment = Integer.parseInt(downpayment);
+			System.out.println("downPayment: " + downPayment);
+		 
+	//	FMSWifakErrorWhileSavingObj.downPayment_InAdditionalDetails().sendKeys(testData.get("Product Class"));
+	}
+
+	
 
 	@And("^Enter Facility Value$")
 	public void enter_facility_value() throws Throwable {
@@ -937,8 +1052,8 @@ public class FMS_WifakApplication_Steps {
 
 		// Facility already created popup
 		waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.confirmPopup());
-		waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.facilityAlreadyCreatedPopup());
-		FMSWifakErrorWhileSavingObj.facilityAlreadyCreatedPopup().click();
+		waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.facilityAlreadyCreatedPopup_610());
+		FMSWifakErrorWhileSavingObj.facilityAlreadyCreatedPopup_610().click();
 
 		waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.successPopup());
 		// String SuccessMsg =
@@ -2079,10 +2194,8 @@ public class FMS_WifakApplication_Steps {
 
 	@Given("User_610 Retrive Finance Amount in update after approvel")
 	public void retrive_finance_amount_in_update_after_approvel() {
-		waitHelper.waitForElementwithFluentwait(driver,
-				FMSWifakErrorWhileSavingObj.facilityManagementFinanceAmt_Validate_610());
-		String facilityFinanceAmt = FMSWifakErrorWhileSavingObj.facilityManagementFinanceAmt_Validate_610()
-				.getAttribute("prevvalue");
+		waitHelper.waitForElementwithFluentwait(driver,FMSWifakErrorWhileSavingObj.facilityManagementFinanceAmt_Validate_610());
+		String facilityFinanceAmt = FMSWifakErrorWhileSavingObj.facilityManagementFinanceAmt_Validate_610().getAttribute("prevvalue");
 		System.err.println("Finance Amount String: " + facilityFinanceAmt);
 		FinanceAmt = Integer.parseInt(facilityFinanceAmt);
 		System.out.println("Finance Amount: " + FinanceAmt);
@@ -2825,6 +2938,8 @@ public class FMS_WifakApplication_Steps {
 
 	@When("^User_610 clicks on the Approve button in Approve menu under Facility Type$")
 	public void user_clicks_on_the_approve_button_in_approve_menu_under_facility_type() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMSWifakErrorWhileSavingObj.facilityTypeApproveBtn_610());
+		
 		for (int i = 0; i <= 300; i++) {
 			try {
 				JavascriptHelper.scrollIntoView(FMSWifakErrorWhileSavingObj.facilityTypeApproveBtn_610());

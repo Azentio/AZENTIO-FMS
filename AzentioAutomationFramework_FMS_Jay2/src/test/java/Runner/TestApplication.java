@@ -10,13 +10,14 @@ import utilities.ExtentTestManager;
 
 @CucumberOptions(features = {"src/test/java/features/Wifak_Application.feature"},
                 glue = "stepdefinitions",
+                
                 //monochrome=false, //to make steps in color
                 plugin = { "pretty",
                            "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                            "rerun:ReRunScenarios/FailedReRun.txt"}
           //   ,  dryRun = true //to check compilation errors                                      
             //   , tags="@127788" 
-            		,   tags="@247933"
+            		,   tags="@247933_02"
 
 )
 public class TestApplication extends AbstractTestNGCucumberTests {
@@ -26,7 +27,7 @@ public class TestApplication extends AbstractTestNGCucumberTests {
 	 * @DataProvider(parallel = true) public Object[][] scenarios() { return
 	 * super.scenarios(); }  
 	 */
-	
+	                                                                                            
 
 	
 	@Before

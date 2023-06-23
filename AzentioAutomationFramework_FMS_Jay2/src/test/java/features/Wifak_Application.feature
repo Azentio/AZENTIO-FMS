@@ -116,13 +116,8 @@ Feature: Wifak Application
     And User_610 Enter ValueOn Product Class
     And Click Search Button In Account No
     And Enter Double Click Search Account No
-    Then Check Flag in Clean Level IN Limits Detalis SubMenu
-    #  And Enter Currency Button In Account No
-    #   And Enter GLCode Button In Account No
-    #   And Enter Serial Button In Account No
-    #   And Enter Account Number
-    #   And AfterEnter ValueOn Product Class Search
-    And Click Add button AfterEnter Value On Product Class
+    Then User_610 Check Flag in Clean Level IN Limits Detalis SubMenu
+    And User_610 Click Add button AfterEnter Value On Product Class
     And User Click Charges Details
     And User Check Flag In Collect At Fac Approvel
     And User Click Ok Button In Collect At Fac Approvel
@@ -635,33 +630,244 @@ Feature: Wifak Application
     Scenario: TSR-BMOI140488-Salary of the CIF is not defaulting in ‘Average salary for DBR Calc’ field upon doing a modify request for the approved facility.
     
     Given navigate to FMS application and login with valid credentials
-And User Click on REQUEST FOR FINANCIN under FMS application
-And User click the Request For Financing Sub Menu under REQUEST FOR FINANCIN
-And User Click on Maintenance under Request For Financing Sub Menu in REQUEST FOR FINANCIN
-And User Select New Request in Reason For Submission under Maintenance screen in REQUEST FOR FINANCIN
-And User Search the CIF Number in Customer under Maintenance screen in REQUEST FOR FINANCIN
-And User Search the Facility Type under Maintenance screen in REQUEST FOR FINANCIN
-And User Enter the value in Total Limit under Maintenance screen in REQUEST FOR FINANCIN
-And User Click on Disbursement or Sublimit under Maintenance screen in REQUEST FOR FINANCIN
-And User Click on Add button in Disbursement or Sublimit under Maintenance screen in REQUEST FOR FINANCIN
-And User Search Product Class in Limit Details Pop up Menu
-And User Enter the Margin value in New Tab Field in Limit Details Pop up Menu
-And User Click on Add button in Limit Details Pop up
-And User Click on Save button under Maintenance screen in REQUEST FOR FINANCIN
-And User Click on Ok button in Confirm Pop up Menu
-And User Click on Ok button in Success Pop up Menu
-And User Click on Validate button under Maintenance screen in REQUEST FOR FINANCIN
-And User Click on Ok button in Confirm Pop up Menu
-And User Click on Yes button in Confirm Pop up Menu
-And User Get the Code in Success Pop up Menu
-And User Click on Ok button in Success Pop up Menu
-And User Click on Approve Level 1 under REQUEST FOR FINANCIN
-And User Search the Code in Approve Level 1 under REQUEST FOR FINANCIN
-And User Select the Searched Code in Approve Level 1 under REQUEST FOR FINANCIN
-And User Click on Customer Grading and Recommendations in Approve Level 1 under REQUEST FOR FINANCIN
-And User Select the Decision Field as Forward and Approval Committee in Customer Grading and Recommendations under Approve Level 1
-And User Select the Approval Committee as Inverstment Committee in Customer Grading and Recommendations under Approve Level 1
-And User Click on Approve button in Customer Grading and Recommendations under Approve Level 1
-And User Click on Ok button in Confirm Pop up Menu
-And User Click on Ok button in Success Pop up Menu
-And User Click on Approval Committee Recommendations under Request For Financing Sub Menu in REQUEST FOR FINANCIN
+And User_610 get the test data for test case AT_FM_043_FMSCore
+And User_610 clicks on the Request module
+And User_610 clicks on the Request Financing under Request module
+And User_610 clicks on the Request for Financing under Request Financing feature
+And User_610 clicks on the Maintanance screen under Request for Financing
+And User_610 select the Reason for submission under main screen in Request for Financing
+And User_610 enter the CIF no in main screen under Request for Financing
+And User_610 enter the facility type in main screen under Request for Financing
+And User_610 enter the total limit in main screen under Request for Financing
+And User_610 move to the sublimit tab in main screen under Request for Financing
+And User_610 click the add new button in sublimit tab under main screen in Request for Financing
+And User_610 enter the product class in limit details tab under sublimit tab
+And User_610 enter the margin value in limit details tab under sublimit tab
+And User_610 click the add button in limit details tab under sublimit tab
+When User_610 click the Save button in main screen under Request for Financing
+And User_610 click the Validate button in main screen Request for Financing
+Then User_610 click the approve level1 under Request for Financing
+And User_610 enter the request code in approve level1 under Request for Financing
+And User_610 double click on the first row in approve level1 under Request for Financing
+And User_610 move to customer grading tab in approve level1 under Request for Financing
+And User_610 select the approve level1 recommendation decision in approve level1 under Request for Financing
+And User_610 select the decision forward to as approval committee in approve level1 under Request for Financing
+And User_610 select the approval committee in approve level1 under Request for Financing
+And User_610 click the Approve button in approve level1 under Request for Financing
+Then User_610 click the Approval committee recommendation under Request for Financing
+And User_610 enter the code in Approval committee recommendation under Request for Financing
+And User_610 double click on the first row in Approval committee recommendation under Request for Financing
+
+
+
+@1038991
+Scenario: Check at the Limit Details window, the existing fields “Facility Value” and “Total Facility Value” is reset as follows
+		Given navigate to FMS application2 and login with valid credentials
+		And User_610 get the test data set id for AT_FM_099
+    And User_610 Click Wifak Application first
+    And User_610 Click Wifak Application Second
+    And User_610 Click Application for financial facilities
+    And User_610 Click Maintenance
+    And User_610 Click and Select Application for
+    And User_610 Search CIF No
+    And User_610 Enter codeOn Facility Type
+    And User_610 Enter Code In Country of Financing
+    And User_610 Enter line Code On Facility Rating
+    And User_610 Click on additional Details
+    And User_610 Enter the Total Value
+    And User_610 enter Down Payment Value
+    And User_610 Click Offer Expiration SelectDate
+    And User_610 Validate Finance Amount
+    
+    And User_610 Select limit Details
+    And User_610 Click Add button on limit Detail
+    And User_610 Enter ValueOn Product Class
+    And User_610 Enter down Payment amount
+    Then User_610 Validate Total Facility Value 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

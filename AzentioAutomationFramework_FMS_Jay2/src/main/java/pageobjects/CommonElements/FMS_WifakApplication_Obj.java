@@ -193,6 +193,38 @@ public class FMS_WifakApplication_Obj {
 		return Enter_ValueOn_Product_Class;
 	}
 	
+	@FindBy(xpath =  "//input[@id='applicationFacilityfinancedamount_WIFT001MT']")
+	private WebElement financeAmount_InAdditionalDetails_610;
+	public WebElement financeAmount_InAdditionalDetails_610() {
+		return financeAmount_InAdditionalDetails_610;
+	}
+	
+	//input[@id='applicationfacilityLimitDetailsFACILITY_VALUE_WIFT001MT']
+	@FindBy(xpath =  "//input[@id='applicationfacilityLimitDetailsFACILITY_VALUE_WIFT001MT']")
+	private WebElement facilityValue_InAdditionalDetails_610;
+	public WebElement facilityValue_InAdditionalDetails_610() {
+		return facilityValue_InAdditionalDetails_610;
+	}
+	
+	@FindBy(xpath =  "//input[@id='applicationFacilitydownpayment_WIFT001MT']")
+	private WebElement downPayment_InAdditionalDetails;
+	public WebElement downPayment_InAdditionalDetails() {
+		return downPayment_InAdditionalDetails;
+	}
+	
+	@FindBy(xpath =  "//input[@id='applFacilityLimitDetailsTotalDownPayment_WIFT001MT']")
+	private WebElement totaldownPayment_InLimitsDetails;
+	public WebElement totaldownPayment_InLimitsDetails() {
+		return totaldownPayment_InLimitsDetails;
+	}
+	
+	//input[@id='applicationfacilityLimitDetailsDOWN_PAYMENT_AMT_WIFT001MT']
+	@FindBy(xpath =  "//input[@id='applicationfacilityLimitDetailsDOWN_PAYMENT_AMT_WIFT001MT']")
+	private WebElement downPaymentAnount_InLimitsDetails;
+	public WebElement downPaymentAnount_InLimitsDetails() {
+		return downPaymentAnount_InLimitsDetails;
+	}
+	
 	@FindBy(id =  "applicationfacilityLimitDetailsFACILITY_VALUE_WIFT001MT")
 	private WebElement Enter_ValueOn_FacilityValue;
 	public WebElement Enter_ValueOn_FacilityValue() {
@@ -668,7 +700,7 @@ public class FMS_WifakApplication_Obj {
 		return TotalDownPayment_InLImitDetails_SubMenu;
 	}
 	
-	@FindBy(id =  "applicationfacilityLimitPopupFormId_WIFT001MT_TotalFacilityValue_key")
+	@FindBy(xpath =  "//input[@id='applicationfacilityLimitDetailsTOTAl_FACILITY_VALUE_WIFT001MT']")
 	private WebElement TotalFacilityValue_InLImitDetails_SubMenu;
 	public WebElement TotalFacilityValue_InLImitDetails_SubMenu() {
 		return TotalFacilityValue_InLImitDetails_SubMenu;
@@ -1227,9 +1259,9 @@ public class FMS_WifakApplication_Obj {
     }
 
     @FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
-    private WebElement facility_already_created_popup;
-    public WebElement facilityAlreadyCreatedPopup() {
-        return facility_already_created_popup;
+    private WebElement facilityAlreadyCreatedPopup_610;
+    public WebElement facilityAlreadyCreatedPopup_610() {
+        return facilityAlreadyCreatedPopup_610;
     }
 
     @FindBy(xpath = "//div[text()='Success']")
