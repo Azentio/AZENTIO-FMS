@@ -1,36 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-20T18:39:02 IST" name="Default suite" finished-at="2023-06-20T18:41:37 IST" duration-ms="154371">
+  <suite started-at="2023-06-23T17:32:56 IST" name="Default suite" finished-at="2023-06-23T17:36:47 IST" duration-ms="231433">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5afa3c9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-06-20T18:39:02 IST" name="Default test" finished-at="2023-06-20T18:41:37 IST" duration-ms="154371">
+    <test started-at="2023-06-23T17:32:56 IST" name="Default test" finished-at="2023-06-23T17:36:47 IST" duration-ms="231433">
       <class name="Runner.TestApplication">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-06-20T18:39:02 IST" name="setUpClass" finished-at="2023-06-20T18:39:04 IST" duration-ms="1837" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-06-23T17:32:56 IST" name="setUpClass" finished-at="2023-06-23T17:32:59 IST" duration-ms="2757" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-06-20T18:39:04 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-06-20T18:41:05 IST" duration-ms="121343" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-06-23T17:32:59 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-06-23T17:34:38 IST" duration-ms="99478" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Check by default the option “Application From & To” is selected and user can choose the Facility No from the lookup"]]>
+                <![CDATA["IIS Param Application"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[User_608 to validate the Application for Financila Facility features]"]]>
+                <![CDATA["Optional[To check the Request For Financing Feature]"]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:98)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+at jdk.proxy2/jdk.proxy2.$Proxy46.sendKeys(Unknown Source)
+at stepdefinitions.RequestForFinancingSteps_608.user_enter_the_class_code_in_maintanance_under_product_class(RequestForFinancingSteps_608.java:105)
+at ✽.User_608 enter the class code in maintanance under product class(file:///C:/Users/inindc00608/git/Sankar_FMS/FMS_SankarS2/src/test/java/features/RequestForFinancing_608.feature:13)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-06-20T18:41:05 IST" name="tearDownClass" finished-at="2023-06-20T18:41:37 IST" duration-ms="31109" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-06-23T17:34:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-06-23T17:36:21 IST" duration-ms="102485" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["IIS Param Application"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[To check the Request For Financing Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "java.util.Map.get(Object)" because "this.testData" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.util.Map.get(Object)" because "this.testData" is null
+at stepdefinitions.ApplicationFinancialFacilitySteps_608.user_select_the_application_for_dropdown_as_new_facility(ApplicationFinancialFacilitySteps_608.java:187)
+at ✽.User_608 select the application for dropdown as new facility(file:///C:/Users/inindc00608/git/Sankar_FMS/FMS_SankarS2/src/test/java/features/RequestForFinancing_608.feature:31)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-06-23T17:36:21 IST" name="tearDownClass" finished-at="2023-06-23T17:36:47 IST" duration-ms="26602" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

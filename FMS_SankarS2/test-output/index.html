@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\inindc00608\AppData\Local\Temp\testng-eclipse--1128143419\testng-customsuite.xml</span>
+                    <span>C:\Users\inindc00608\AppData\Local\Temp\testng-eclipse--1139047173\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,21 +93,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods, 2 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content failed suite-Default_suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Check by default the option “Application From &amp; To” is selected and user can choose the Facility No...)">runScenario("Check by default the option “Application From & To” is selected and user can choose the Facility No...)</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;IIS Param Application&quot;, &quot;Optional[To check the Request For Financing Feature]&quot;)">runScenario("IIS Param Application", "Optional[To check the Request For Financing Feature]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;IIS Param Application&quot;, &quot;Optional[To check the Request For Financing Feature]&quot;)">runScenario("IIS Param Application", "Optional[To check the Request For Financing Feature]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,28 +124,55 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">Runner.TestApplication</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Check by default the option “Application From &amp; To” is selected and user can choose the Facility No...)">
-                  </a> <!-- runScenario("Check by default the option “Application From & To” is selected and user can choose the Facility No...) -->
+                  <a name="runScenario(&quot;IIS Param Application&quot;, &quot;Optional[To check the Request For Financing Feature]&quot;)">
+                  </a> <!-- runScenario("IIS Param Application", "Optional[To check the Request For Financing Feature]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Check by default the option “Application From & To” is selected and user can choose the Facility No from the lookup", "Optional[User_608 to validate the Application for Financila Facility features]")</span>
+                  <span class="parameters">("IIS Param Application", "Optional[To check the Request For Financing Feature]")</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.testData&quot; is null
+	at stepdefinitions.ApplicationFinancialFacilitySteps_608.user_select_the_application_for_dropdown_as_new_facility(ApplicationFinancialFacilitySteps_608.java:187)
+	at ✽.User_608 select the application for dropdown as new facility(file:///C:/Users/inindc00608/git/Sankar_FMS/FMS_SankarS2/src/test/java/features/RequestForFinancing_608.feature:31)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;IIS Param Application&quot;, &quot;Optional[To check the Request For Financing Feature]&quot;)">
+                  </a> <!-- runScenario("IIS Param Application", "Optional[To check the Request For Financing Feature]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("IIS Param Application", "Optional[To check the Request For Financing Feature]")</span>
+                  <div class="stack-trace">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:98)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy46.sendKeys(Unknown Source)
+	at stepdefinitions.RequestForFinancingSteps_608.user_enter_the_class_code_in_maintanance_under_product_class(RequestForFinancingSteps_608.java:105)
+	at ✽.User_608 enter the class code in maintanance under product class(file:///C:/Users/inindc00608/git/Sankar_FMS/FMS_SankarS2/src/test/java/features/RequestForFinancing_608.feature:13)
+
+</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
+          </div> <!-- suite-Default_suite-class-failed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\inindc00608\AppData\Local\Temp\testng-eclipse--1128143419\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\inindc00608\AppData\Local\Temp\testng-eclipse--1139047173\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -197,16 +229,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'Runner.TestApplication')
-data.setCell(0, 3, 121343);
+data.setCell(0, 3, 102485);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'Runner.TestApplication')
+data.setCell(1, 3, 99478);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -238,12 +274,20 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">runScenario("Check by default the option “Application From & To” is selected and user can choose the Facility No...)</span>
-                <span class="method-start">1871 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("IIS Param Application", "Optional[To check the Request For Financing Feature]")</span>
+                <span class="method-start">2792 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("IIS Param Application", "Optional[To check the Request For Financing Feature]")</span>
+                <span class="method-start">102280 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">123227 ms</span>
+                <span class="method-start">204775 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

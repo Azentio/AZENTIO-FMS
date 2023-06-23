@@ -9,10 +9,24 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">154,371</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">231,433</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Runner.TestApplication</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1687266544606</td><td rowspan="1">121343</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">Runner.TestApplication</td><td><a href="#m0">runScenario</a></td><td rowspan="2">1687521878789</td><td rowspan="2">102485</td></tr><tr class="failedeven"><td><a href="#m1">runScenario</a></td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">Runner.TestApplication#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Check by default the option “Application From &amp; To” is selected and user can choose the Facility No from the lookup&quot;</td><td>&quot;Optional[User_608 to validate the Application for Financila Facility features]&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">Runner.TestApplication#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;IIS Param Application&quot;</td><td>&quot;Optional[To check the Request For Financing Feature]&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.testData&quot; is null
+	at stepdefinitions.ApplicationFinancialFacilitySteps_608.user_select_the_application_for_dropdown_as_new_facility(ApplicationFinancialFacilitySteps_608.java:187)
+	at ✽.User_608 select the application for dropdown as new facility(file:///C:/Users/inindc00608/git/Sankar_FMS/FMS_SankarS2/src/test/java/features/RequestForFinancing_608.feature:31)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">Runner.TestApplication#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;IIS Param Application&quot;</td><td>&quot;Optional[To check the Request For Financing Feature]&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:98)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy46.sendKeys(Unknown Source)
+	at stepdefinitions.RequestForFinancingSteps_608.user_enter_the_class_code_in_maintanance_under_product_class(RequestForFinancingSteps_608.java:105)
+	at ✽.User_608 enter the class code in maintanance under product class(file:///C:/Users/inindc00608/git/Sankar_FMS/FMS_SankarS2/src/test/java/features/RequestForFinancing_608.feature:13)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

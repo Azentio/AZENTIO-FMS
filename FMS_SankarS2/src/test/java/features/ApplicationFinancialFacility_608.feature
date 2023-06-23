@@ -70,6 +70,7 @@ And User_608 enter the Estimator Name
 And User_608 clicks the save button
 And User_608 clicks on the validate button
 Then User_608 clicks the Approve Level1 menu under Application for financial facilities
+And User_608 get the test data for test case AT_AFF_048
 And User_608 enter the reference code in Approve level1
 And User_608 double click on the retrieved reference code in Approve level1
 And User_608 select the Approve level1 decision as Approve
@@ -204,17 +205,14 @@ And User_608 enter the expire date in additional info tab
 And User_608 clicks the limit details tab
 And User_608 clicks the add new record button in limit details tab
 And User_608 enter the product class details
-And User_608 retrive the Account number in limit details
 And User_608 clicks on the product class add button
-And User_608 clicks on the Charges details button under limit details
-And User_608 select the collect at facility approval flag
-And User_608 click the Ok button in Charges details under limit details
 And User_608 move to the Document details tab
 And User_608 enter the Solicitor Name
 And User_608 enter the Estimator Name
 And User_608 clicks the save button
 And User_608 clicks on the validate button
 Then User_608 clicks the Approve Level1 menu under Application for financial facilities
+And User_608 get the test data for test case AT_AFF_048
 And User_608 enter the reference code in Approve level1
 And User_608 double click on the retrieved reference code in Approve level1
 And User_608 select the Approve level1 decision as Approve

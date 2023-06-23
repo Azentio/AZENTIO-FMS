@@ -72,11 +72,7 @@ public class WIFAK_ApplicationSteps_608 {
     	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_102");
     }
     
-//  @AT_RF_014_FMSCore
-    @And("^User_608 get the test data for test case AT_RF_014_FMSCore$")
-    public void get_the_test_data_for_test_case_AT_RF_014fmscore() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_014");
-    }
+
     
 //	@AT_FM_038_FMSCore
 	@And("^User_608 get the test data for test case AT_FM_038_FMSCore$")
@@ -654,13 +650,13 @@ public class WIFAK_ApplicationSteps_608 {
 ////    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.approveLevel1SelectDecision_608());
 ////    	dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj608.approveLevel1SelectDecision_608(), testData.get("Decision3"));        
 ////    }
-////
-    @And("User_608 select the Approve level1 decision Forward to Approve level3")
-    public void user_select_the_approve_level1_decision_forward_to_approve_level3() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.approveLevel1DecisionForwardTo_608());
-    	dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj608.approveLevel1DecisionForwardTo_608(), testData.get("Forward To"));
-    }
-////
+//////
+//    @And("User_608 select the Approve level1 decision Forward to Approve level3")
+//    public void user_select_the_approve_level1_decision_forward_to_approve_level3() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.approveLevel1DecisionForwardTo_608());
+//    	dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj608.approveLevel1DecisionForwardTo_608(), testData.get("Forward To"));
+//    }
+//////
 ////    @When("User_608 clicks on the Approve level1 submit button")
 ////    public void user_clicks_on_the_approve_level1_submit_button() throws Throwable {
 ////    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.approveLevel1SubmitBtn_608());

@@ -26,7 +26,7 @@ public class FMSParam_Facility_Custom_Steps {
 	FMSLogin login = new FMSLogin(driver);
 	
 //	@AT_RF_024
-	@And("^User clicks on the Facility custom fields under Parameter$")
+	@And("^ User_608 clicks on the Facility custom fields under Parameter$")
     public void user_clicks_on_the_facility_custom_fields_under_parameter() throws Throwable {
 		for (int i = 0; i <= 300; i++) {
 			try {
@@ -42,25 +42,25 @@ public class FMSParam_Facility_Custom_Steps {
         facilityCustomFieldsObj.paramFacilityCustomFields().click();
     }
 
-    @And("^User clicks on the Maintain facility custom fields under facility custom fields$")
+    @And("^ User_608 clicks on the Maintain facility custom fields under facility custom fields$")
     public void user_clicks_on_the_maintain_facility_custom_fields_under_facility_custom_fields() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, facilityCustomFieldsObj.maintainFacilityCustomFields());
     	facilityCustomFieldsObj.maintainFacilityCustomFields().click();
     }
 
-    @And("^User clicks on the Update after approve in Maintain facility custom fields$")
+    @And("^ User_608 clicks on the Update after approve in Maintain facility custom fields$")
     public void user_clicks_on_the_update_after_approve_in_maintain_facility_custom_fields() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, facilityCustomFieldsObj.maintainFacilityCustomUpdateAterApprove());
     	facilityCustomFieldsObj.maintainFacilityCustomUpdateAterApprove().click();
     }
 
-    @And("^User double click on the one record under update after approve$")
+    @And("^ User_608 double click on the one record under update after approve$")
     public void user_double_click_on_the_one_record_under_update_after_approve() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, facilityCustomFieldsObj.updateAfterApproveSearchResult());
     	clicksAndActionsHelper.doubleClick(facilityCustomFieldsObj.updateAfterApproveSearchResult());
     }
 
-    @And("^User validate Facility Custom Fields screen are available$")
+    @And("^ User_608 validate Facility Custom Fields screen are available$")
     public void user_validate_facility_custom_fields_screen_are_available() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, facilityCustomFieldsObj.facilityCustomFieldsBox());
     	WebElement facilityCustomFieldsBox = facilityCustomFieldsObj.facilityCustomFieldsBox();

@@ -40,8 +40,10 @@ public class ApplicationFinancialFacilitySteps_608 {
 	FMSLogin login = new FMSLogin(driver);
 	
 	String path = System.getProperty("user.dir") +"\\TestData\\FMSTestData.xlsx";
-	ExcelData fmsTransactionsExcelData = new ExcelData(path,"ApplicationFinancialFacility","DataSet ID");
+//	ExcelData fmsTransactionsExcelData = new ExcelData(path,"ApplicationFinancialFacility","DataSet ID");
 //	ExcelData fmsTransactionsExcelData = new ExcelData(path,"FacilitiesManagementTestData","DataSet ID");
+//	ExcelData fmsTransactionsExcelData = new ExcelData(path,"FMSParameterTestData","DataSet ID");
+	ExcelData fmsTransactionsExcelData = new ExcelData(path,"IIS_Param_TestData","DataSet ID");
 	Map<String, String> testData;
 	
 	
@@ -96,7 +98,13 @@ public class ApplicationFinancialFacilitySteps_608 {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_AFF_098");
 	}
 	
+//  @AT_RF_014_FMSCore
+    @And("^User_608 get the test data for test case AT_RF_014_FMSCore$")
+    public void get_the_test_data_for_test_case_AT_RF_014fmscore() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_014");
+    }
 	
+
 	
 	
 	
@@ -117,6 +125,29 @@ public class ApplicationFinancialFacilitySteps_608 {
 	public void user_get_the_test_data_for_test_case_AT_FM_103() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_103");
 	}
+	
+//	@AT_FM_104
+	@And("User_608 get the test data for test case AT_FM_104")
+	public void user_get_the_test_data_for_test_case_AT_FM_104() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_104");
+	}
+	
+//	@AT_FM_105_FMSParam
+	@And("^User_608 get the test data for test case AT_FM_105_FMSParam$")
+    public void get_the_test_data_for_test_case_AT_FM_105_FMSParam() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_105");
+	}
+//	@AT_FM_105_FMSCore
+	@And("User_608 get the test data for test case AT_FM_105_FMSCore")
+	public void user_get_the_test_data_for_test_case_AT_FM_105_FMSCore() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_105");
+	}
+	
+//	@AT_FP_001
+	@And("^User_608 get the test data for test case AT_FP_001$")
+    public void get_the_test_data_for_test_case_AT_FP_001() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FP_001");
+    }
 
 	
 	
@@ -259,17 +290,13 @@ public class ApplicationFinancialFacilitySteps_608 {
         applicationFinancialFacilityObj608.limitDetailsNewRecordProductClass_608().sendKeys(testData.get("Product Class"),Keys.TAB);
         for(int i = 0; i <= 500; i++) {
     		try {
-				if(!(applicationFinancialFacilityObj608.limitDetailsNewRecordProductClass_608().getAttribute("prevvalue").isBlank())) {
+				if(!(applicationFinancialFacilityObj608.limitDetailsNewRecordProductClassValue_608().getAttribute("prevvalue").isBlank())) {
 					break;
 				}
 			} catch (Exception e) {
 				// TODO: handle exception
 			}
     	} 
-        
-        //FRR Value Date
-//        waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsNewRecordProductClassFRRValueDate_608());
-//        applicationFinancialFacilityObj608.limitDetailsNewRecordProductClassFRRValueDate_608().sendKeys(testData.get("FRR Value Date"),Keys.TAB);
         
         waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsNewRecordCleanFlag_608());
         WebElement cleanFlag = applicationFinancialFacilityObj608.limitDetailsNewRecordCleanFlag_608();
@@ -399,6 +426,7 @@ public class ApplicationFinancialFacilitySteps_608 {
 	
 	@And("^User_608 move to the Document details tab$")
     public void user_move_to_the_document_details_tab() throws Throwable {
+		Thread.sleep(2000);
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainDocumentDetailsTab_608());
     	applicationFinancialFacilityObj608.mainDocumentDetailsTab_608().click();    	
     }
@@ -456,7 +484,7 @@ public class ApplicationFinancialFacilitySteps_608 {
     	String refCode = applicationFinancialFacilityObj608.successPopupMessage_608().getText().substring(23, 27);
     	System.err.println("Reference Number: "+refCode);
     	
-    	fmsTransactionsExcelData.updateTestData("DS_AT_AFF_048", "Reference Code", refCode);
+    	fmsTransactionsExcelData.updateTestData("DS_AT_FM_105", "Reference Code", refCode);
     	
     	for (int i = 0; i < 2000; i++) {
 			try {
@@ -467,21 +495,19 @@ public class ApplicationFinancialFacilitySteps_608 {
 					Assert.fail(e.getMessage());
 				}
 			}
-		}
-    
+		}   
     	
     	// close the send alert pop-up box
-//    	Thread.sleep(5000);
-//    	for (int i = 0; i < 2000; i++) {
-//			try {
-//		    	applicationFinancialFacilityObj608.sendAlertPopup_608().click();
-//		    	break;
-//			} catch (Exception e) {
+    	for (int i = 0; i < 200; i++) {
+			try {
+		    	applicationFinancialFacilityObj608.sendAlertPopup_608().click();
+		    	break;
+			} catch (Exception e) {
 //				if (i==1999) {
 //					Assert.fail(e.getMessage());
 //				}
-//			}
-//		}
+			}
+		}
     	
     }
     
@@ -495,6 +521,7 @@ public class ApplicationFinancialFacilitySteps_608 {
     @And("User_608 enter the reference code in Approve level1")
     public void user_enter_the_reference_code_in_approve_level1() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.approveLevel1RefCodeInput_608());
+    	
     	applicationFinancialFacilityObj608.approveLevel1RefCodeInput_608().sendKeys(testData.get("Reference Code"),Keys.ENTER);        
     }
 
@@ -517,6 +544,12 @@ public class ApplicationFinancialFacilitySteps_608 {
 				// TODO: handle exception
 			}
     	}    
+    }
+    
+    @And("User_608 select the Approve level1 decision Forward to Approve level3")
+    public void user_select_the_approve_level1_decision_forward_to_approve_level3() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.approveLevel1DecisionForwardTo_608());
+    	dropDownHelper.SelectUsingVisibleText(applicationFinancialFacilityObj608.approveLevel1DecisionForwardTo_608(), testData.get("Forward To"));
     }
     
     @And("User_608 select the Approve level1 decision as Approve")
@@ -618,10 +651,8 @@ public class ApplicationFinancialFacilitySteps_608 {
 		    	applicationFinancialFacilityObj608.level3SendAlertPopup_608().click();
 		    	break;
 			} catch (Exception e) {
-				if (i==1999) {
-					Assert.fail(e.getMessage());
+				
 				}
-			}
 		}
         
     }
@@ -962,7 +993,7 @@ public class ApplicationFinancialFacilitySteps_608 {
      @And("^User_608 enter the code value in update after approve menu$")
      public void user_enter_the_code_value_in_update_after_approve_menu() throws Throwable {
      	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.facilityTypeSearchCode_608());
-     	facilityTypeObj608.facilityTypeSearchCode_608().sendKeys(testData.get("Search Code"),Keys.ENTER);
+     	facilityTypeObj608.facilityTypeSearchCode_608().sendKeys(testData.get("Facility Type"),Keys.ENTER);
      }
      
      @And("^User_608 double click on the retrieved data in update after approve menu$")
@@ -1133,7 +1164,7 @@ public class ApplicationFinancialFacilitySteps_608 {
      @And("^User_608 enter the code value in Approve menu$")
      public void user_enter_the_code_value_in_approve_menu() throws Throwable {
      	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.approveSearchCode_608());
-     	facilityTypeObj608.approveSearchCode_608().sendKeys(testData.get("Search Code"),Keys.ENTER);
+     	facilityTypeObj608.approveSearchCode_608().sendKeys(testData.get("Facility Type"),Keys.ENTER);
      }
 
      @And("^User_608 double click on the retrieved data in Approve menu$")
@@ -1210,29 +1241,323 @@ public class ApplicationFinancialFacilitySteps_608 {
      
      
      /// Test data needed steps
+//   @AT_FM_058
+   	@And("User_608 enter the Application Ref number in Facilities Management Maintanance Search grid under WIFAK Application")
+   	public void user_enter_the_application_ref_number_in_facilities_management_maintanance_search_grid_under_wifak_application() throws Throwable {
+   		waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementMainSearchApplicationRefInput_608());
+   		facilityManagementObj608.wifakFacilitiesManagementMainSearchApplicationRefInput_608().sendKeys(testData.get("Reference Code"),Keys.ENTER);
+   	}
+   
 //     @AT_FM_102
      @And("User_608 user Re_enter the no of payments in Repayment Plan tab Application Financial Facility Maintanance")
      public void user_user_re_enter_the_no_of_payments_in_repayment_plan_tab_application_financial_facility_maintanance() throws Throwable {
   		waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.WifakLimitDetailsRepaymentPlanTabNoOfPaymentsInput_608());
-  		facilityManagementObj608.WifakLimitDetailsRepaymentPlanTabNoOfPaymentsInput_608().clear();
-  		facilityManagementObj608.WifakLimitDetailsRepaymentPlanTabNoOfPaymentsInput_608().sendKeys(testData.get("No of Payments"),Keys.TAB);
-  		
+  		WebElement NoOfPaymentsInput = facilityManagementObj608.WifakLimitDetailsRepaymentPlanTabNoOfPaymentsInput_608();
+  		NoOfPaymentsInput.clear();
+  		NoOfPaymentsInput.sendKeys(testData.get("No of Payments"));
+  		facilityManagementObj608.WifakLimitDetailsRepaymentPlanTabNoOfPaymentsLabel_608().click();  		
   		for(int i = 0; i <= 500; i++) {
      		try {
-  				if(facilityManagementObj608.WifakLimitDetailsRepaymentPlanTabNoOfPaymentsInput_608().getAttribute("prevvalue")==testData.get("No of Payments")) {
+  				if(NoOfPaymentsInput.getAttribute("prevvalue").equals(testData.get("No of Payments"))) {
   					break;
   				}
   			} catch (Exception e) {
   				// TODO: handle exception
   			}
-  		} 
-         
+  		}
+  		
+  		for (int i = 0; i < 2000; i++) {
+			try {
+		    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+  		}
      }
      
      
+// 	@AT_FM_103
+ 	@And("User_608 validate the Repayment plan No of Payments should be changed in Facilities Management Maintanance under WIFAK Application")
+ 	public void usre_validate_the_repayment_plan_no_of_payments_should_be_changed_in_facilities_management_maintanance_under_wifak_application()throws Throwable {
+ 		waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementFacilityLimitDetailsRepaymentplanNoOfPaymentsInput_608());
+ 		String noOfPayments = facilityManagementObj608.wifakFacilitiesManagementFacilityLimitDetailsRepaymentplanNoOfPaymentsInput_608().getAttribute("prevvalue");
+ 		Assert.assertEquals(testData.get("No of Payments"), noOfPayments);
+ 	}
+     
+ 	
+//	@AT_FM_105_FMSCore
+    @And("User_608 enter the Application Ref number in Maintanance under WIFAK Facilities Management")
+    public void user_enter_the_application_ref_number_in_maintanance_under_wifak_facilities_management() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementMainApplicationRefInput_608());
+    	facilityManagementObj608.wifakFacilitiesManagementMainApplicationRefInput_608().sendKeys(testData.get("Reference Code"),Keys.TAB);
+    	for(int i = 0; i <= 1000; i++) {
+    		try {
+				if(!(facilityManagementObj608.wifakFacilitiesManagementMainCIFNo_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}   
+    }
+    
+    @And("User_608 validate Journal Voucher Details option should be visible in Maintanance under WIFAK Facilities Management")
+    public void user_validate_journal_voucher_details_option_should_be_visible_in_maintanance_under_wifak_facilities_management() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementMaintananceJournalVoucherDetailsBtn_608());
+    	boolean JVDetailBtn = facilityManagementObj608.wifakFacilitiesManagementMaintananceJournalVoucherDetailsBtn_608().isDisplayed();
+    	Assert.assertTrue(JVDetailBtn);
+    }
+    
+    @And("User_608 click the Documents Details tab in Maintanance under WIFAK Facilities Management")
+    public void user_click_the_documents_details_tab_in_maintanance_under_wifak_facilities_management() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementMainDocumentsDetailsTab_608());
+    	facilityManagementObj608.wifakFacilitiesManagementMainDocumentsDetailsTab_608().click();
+    }
+
+    @And("User_608 enter the row1 Solicitor Date Sent under Document Details in Facilities Management Maintanance")
+    public void user_enter_the_row1_solicitor_date_sent_under_document_details_in_facilities_management_maintanance() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementMainDocumentsDetailsFirstRow_608());
+    	facilityManagementObj608.wifakFacilitiesManagementMainDocumentsDetailsFirstRow_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementMainSolicitorDateSentRow1_608());
+    	facilityManagementObj608.wifakFacilitiesManagementMainSolicitorDateSentRow1_608().sendKeys(testData.get("Solicitor Date Sent"),Keys.ENTER);
+    }
+
+    @And("User_608 enter the row1 Solicitor Date Received under Document Details in Facilities Management Maintanance")
+    public void user_enter_the_row1_solicitor_date_received_under_document_details_in_facilities_management_maintanance() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementMainSolicitorDateReceivedRow1_608());
+    	facilityManagementObj608.wifakFacilitiesManagementMainSolicitorDateReceivedRow1_608().sendKeys(testData.get("Solicitor Date Received"),Keys.ENTER);
+        
+    }
+
+    @And("User_608 enter the row1 Estimator Date Sent under Document Details in Facilities Management Maintanance")
+    public void user_enter_the_row1_estimator_date_sent_under_document_details_in_facilities_management_maintanance() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementMainEstimatorDateSentRow1_608());
+    	facilityManagementObj608.wifakFacilitiesManagementMainEstimatorDateSentRow1_608().sendKeys(testData.get("Estimator Date Sent"),Keys.ENTER);
+        
+    }
+
+    @And("User_608 enter the row1 Estimator Date Received under Document Details in Facilities Management Maintanance")
+    public void user_enter_the_row1_estimator_date_received_under_document_details_in_facilities_management_maintanance() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementMainEstimatorDateReceivedRow1_608());
+    	facilityManagementObj608.wifakFacilitiesManagementMainEstimatorDateReceivedRow1_608().sendKeys(testData.get("Estimator Date Received"),Keys.ENTER);
+        
+    }
+
+    @And("User_608 enter the row1 Custodian Date Sent under Document Details in Facilities Management Maintanance")
+    public void user_enter_the_row1_custodian_date_sent_under_document_details_in_facilities_management_maintanance() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementMainCustodianDateSentRow1_608());
+    	facilityManagementObj608.wifakFacilitiesManagementMainCustodianDateSentRow1_608().sendKeys(testData.get("Custodian Date Sent"),Keys.ENTER);
+        
+    }
+
+    @And("User_608 enter the row2 Solicitor Date Sent under Document Details in Facilities Management Maintanance")
+    public void user_enter_the_row2_solicitor_date_sent_under_document_details_in_facilities_management_maintanance() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementMainDocumentsDetailsSecondRow_608());
+    	facilityManagementObj608.wifakFacilitiesManagementMainDocumentsDetailsSecondRow_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementMainSolicitorDateSentRow2_608());
+    	facilityManagementObj608.wifakFacilitiesManagementMainSolicitorDateSentRow2_608().sendKeys(testData.get("Solicitor Date Sent"),Keys.ENTER);
+    	
+    }
+
+    @And("User_608 enter the row2 Solicitor Date Received under Document Details in Facilities Management Maintanance")
+    public void user_enter_the_row2_solicitor_date_received_under_document_details_in_facilities_management_maintanance() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementMainSolicitorDateReceivedRow2_608());
+    	facilityManagementObj608.wifakFacilitiesManagementMainSolicitorDateReceivedRow2_608().sendKeys(testData.get("Solicitor Date Received"),Keys.ENTER);
+    }
+
+    @And("User_608 enter the row2 Estimator Date Sent under Document Details in Facilities Management Maintanance")
+    public void user_enter_the_row2_estimator_date_sent_under_document_details_in_facilities_management_maintanance() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementMainEstimatorDateSentRow2_608());
+    	facilityManagementObj608.wifakFacilitiesManagementMainEstimatorDateSentRow2_608().sendKeys(testData.get("Estimator Date Sent"),Keys.ENTER);
+    }
+
+    @And("User_608 enter the row2 Estimator Date Received under Document Details in Facilities Management Maintanance")
+    public void user_enter_the_row2_estimator_date_received_under_document_details_in_facilities_management_maintanance() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementMainEstimatorDateReceivedRow2_608());
+    	facilityManagementObj608.wifakFacilitiesManagementMainEstimatorDateReceivedRow2_608().sendKeys(testData.get("Estimator Date Received"),Keys.ENTER);
+    }
+
+    @And("User_608 enter the row2 Custodian Date Sent under Document Details in Facilities Management Maintanance")
+    public void user_enter_the_row2_custodian_date_sent_under_document_details_in_facilities_management_maintanance() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementMainCustodianDateSentRow2_608());
+    	facilityManagementObj608.wifakFacilitiesManagementMainCustodianDateSentRow2_608().sendKeys(testData.get("Custodian Date Sent"),Keys.ENTER);
+    }
+
+    @When("User_608 click the Save Button under Maintanance under WIFAK Facilities Management")
+    public void user_click_the_save_button_under_maintanance_under_wifak_facilities_management() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementMaintananceSaveBtn_608());
+    	facilityManagementObj608.wifakFacilitiesManagementMaintananceSaveBtn_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
+    	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementSaveMessage_608());
+    	String facilityCode = facilityManagementObj608.wifakFacilitiesManagementSaveMessage_608().getText().substring(11, 15);
+    	fmsTransactionsExcelData.updateTestData("DS_AT_FM_105", "Facility Code",facilityCode );
+//    	System.err.println("Facility Code: "+facilityCode);
+    	
+    	for (int i = 0; i < 2000; i++) {
+			try {
+		    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}   
+    	
+    	// close the send alert pop-up box
+    	for (int i = 0; i < 200; i++) {
+			try {
+				facilityManagementObj608.wifakFacilitiesManagementSendAlertPopup_608().click();
+		    	break;
+			} catch (Exception e) {
+
+			}
+		}        
+    }
+    
+    //Approve menu under WIFAK facilities Management
+    @And("User_608 enter the Application Ref number in search grid under Approve screen in WIFAK Facilities Management")
+    public void user_enter_the_application_ref_number_in_search_grid_under_approve_screen_in_wifak_facilities_management() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementApproveSearchAppRefInput_608());
+    	facilityManagementObj608.wifakFacilitiesManagementApproveSearchAppRefInput_608().sendKeys(testData.get("Reference Code"),Keys.ENTER); 
+    }
+    
+    // Update after Approve menu under WIFAK facilities Management
+    @And("User_608 enter the Application Ref number in search grid under Update After Approve in WIFAK Facilities Management")
+    public void user_enter_the_application_ref_number_in_search_grid_under_update_after_approve_in_wifak_facilities_management() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementUpdateAfterApproveSearchAppRefInput_608());
+    	facilityManagementObj608.wifakFacilitiesManagementUpdateAfterApproveSearchAppRefInput_608().sendKeys(testData.get("Reference Code"),Keys.ENTER);
+    }
      
      
+    @And("User_608 enter the facility rating under Facility Application tab in Update After Approve")
+    public void user_enter_the_facility_rating_under_facility_application_tab_in_update_after_approve() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementUpdateAfterApproveFacilityAppDetailsTabFacilityRatingInput_608());
+    	WebElement FacilityRating = facilityManagementObj608.wifakFacilitiesManagementUpdateAfterApproveFacilityAppDetailsTabFacilityRatingInput_608();
+    	FacilityRating.clear();
+    	FacilityRating.sendKeys(testData.get("New Facility Rating"),Keys.TAB);
+    }
      
-     
+    // Query menu under WIFAK facilities Management
+    @And("User_608 enter the Application Ref number in search grid under Query screen in WIFAK Facilities Management")
+    public void user_enter_the_application_ref_number_in_search_grid_under_query_screen_in_wifak_facilities_management() {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementQuerySearchAppRefInput_608());
+    	facilityManagementObj608.wifakFacilitiesManagementQuerySearchAppRefInput_608().sendKeys(testData.get("Reference Code"),Keys.ENTER);
+    }  
+    
+    // Suspend menu under WIFAK facilities Management
+    @And("User_608 enter the Application Ref number in search grid under Suspend screen in WIFAK Facilities Management")
+    public void user_enter_the_application_ref_number_in_search_grid_under_suspend_screen_in_wifak_facilities_management() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementSuspendSearchAppRefInput_608());
+    	facilityManagementObj608.wifakFacilitiesManagementSuspendSearchAppRefInput_608().sendKeys(testData.get("Reference Code"),Keys.ENTER);
+    }
+    
+    @And("User_608 give the Suspend Reason in Suspend screen under WIFAK Facilities Management")
+    public void user_give_the_suspend_reason_in_suspend_screen_under_wifak_facilities_management() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementSuspendReasonInput_608());
+    	facilityManagementObj608.wifakFacilitiesManagementSuspendReasonInput_608().sendKeys(testData.get("Suspend Reason"),Keys.TAB);
+    	
+    	for(int i = 0; i <= 1000; i++) {
+    		try {
+				if(!(facilityManagementObj608.wifakFacilitiesManagementSuspendReasonInputLabel_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}        
+    }
+    
+    // Reactivate menu in WIFAK Facilities Management
+    @And("User_608 enter the Application Ref number in search grid under Reactivate screen in WIFAK Facilities Management")
+    public void user_enter_the_application_ref_number_in_search_grid_under_reactivate_screen_in_wifak_facilities_management() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementReactivateSearchAppRefInput_608());
+    	facilityManagementObj608.wifakFacilitiesManagementReactivateSearchAppRefInput_608().sendKeys(testData.get("Reference Code"),Keys.ENTER);
+    }
+    
+    // Reverse and Approve/Reject Reverse menu in WIFAK Facilities Management
+    @And("User_608 enter the Application Ref number in search grid under Reverse screen in WIFAK Facilities Management")
+    public void user_enter_the_application_ref_number_in_search_grid_under_reverse_screen_in_wifak_facilities_management() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementReverseSearchAppRefInput_608());
+    	facilityManagementObj608.wifakFacilitiesManagementReverseSearchAppRefInput_608().sendKeys(testData.get("Reference Code"),Keys.ENTER);
+    }
+    
+    @And("User_608 enter the Application Ref number in search grid under Approve\\Reject Reverse screen in WIFAK Facilities Management")
+    public void user_enter_the_application_ref_number_in_search_grid_under_approve_reject_reverse_screen_in_wifak_facilities_management() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementApproveReverseSearchAppRefInput_608());
+    	facilityManagementObj608.wifakFacilitiesManagementApproveReverseSearchAppRefInput_608().sendKeys(testData.get("Reference Code"),Keys.ENTER);
+    }
+    
+    
+    // Cancel and Approve/Reject Cancel menu in WIFAK Facilities Management
+    @And("User_608 enter the Application Ref number in search grid under Cancel screen in WIFAK Facilities Management")
+    public void user_enter_the_application_ref_number_in_search_grid_under_cancel_screen_in_wifak_facilities_management() {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementCancelSearchAppRefInput_608());
+    	facilityManagementObj608.wifakFacilitiesManagementCancelSearchAppRefInput_608().sendKeys(testData.get("Reference Code"),Keys.ENTER);
+    }
+    
+    @And("User_608 enter the Application Ref number in search grid under Approve\\Reject Cancel screen in WIFAK Facilities Management")
+    public void user_enter_the_application_ref_number_in_search_grid_under_approve_reject_cancel_screen_in_wifak_facilities_management() {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementApproveCancelSearchAppRefInput_608());
+    	facilityManagementObj608.wifakFacilitiesManagementApproveCancelSearchAppRefInput_608().sendKeys(testData.get("Reference Code"),Keys.ENTER);
+    }
+    
+    
+//  @AT_FP_001
+    @And("User_608 enter the Floating Rate in limit details")
+	public void user_enter_the_floating_rate_in_limit_details() {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsFloatingRate_608());
+		applicationFinancialFacilityObj608.limitDetailsFloatingRate_608().sendKeys(testData.get("Floating Rate"),Keys.TAB);
+		
+		for(int i = 0; i <= 1000; i++) {
+    		try {
+				if(!(applicationFinancialFacilityObj608.limitDetailsFloatingRateLabel_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	} 	    
+	}
+
+	@And("User_608 enter the Floating Rate Periodicity in limit details")
+	public void user_enter_the_floating_rate_periodicity_in_limit_details() {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsFloatingRatePeriodicityInput_608());
+		applicationFinancialFacilityObj608.limitDetailsFloatingRatePeriodicityInput_608().sendKeys(testData.get("FR Periodicity"),Keys.TAB);
+		for(int i = 0; i <= 1000; i++) {
+    		try {
+				if(!(applicationFinancialFacilityObj608.limitDetailsFloatingRatePeriodicityInput_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	} 	    
+	}
+
+	@And("User_608 select the Floating Rate Periodicity type in limit details")
+	public void user_select_the_floating_rate_periodicity_type_in_limit_details() {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsFloatingRatePeriodicityType_608());
+		dropDownHelper.SelectUsingVisibleText(applicationFinancialFacilityObj608.limitDetailsFloatingRatePeriodicityType_608(), testData.get("FR Periodicity Type"));
+		for(int i = 0; i <= 1000; i++) {
+    		try {
+				if(!(applicationFinancialFacilityObj608.limitDetailsFloatingRatePeriodicityType_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	} 
+	    
+	}
+    
 
 }

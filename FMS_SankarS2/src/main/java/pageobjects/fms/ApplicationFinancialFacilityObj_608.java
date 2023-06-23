@@ -112,11 +112,11 @@ public class ApplicationFinancialFacilityObj_608 {
 		return limit_details_new_record_product_class;
 	}
 	
-	@FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsFacilityRiskRatingValueDate_WIFT001MT']")
-	private WebElement limit_details_new_record_product_class_FRR_value_date;
-	public WebElement limitDetailsNewRecordProductClassFRRValueDate_608() {
-		return limit_details_new_record_product_class_FRR_value_date;
-	}	
+	@FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsCLASSDesc_WIFT001MT']")
+	private WebElement limit_details_new_record_product_class_value;
+	public WebElement limitDetailsNewRecordProductClassValue_608() {
+		return limit_details_new_record_product_class_value;
+	}
 	
 	@FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsCLEAN_FLAG_WIFT001MT']")
 	private WebElement limit_details_new_record_clean_flag;
@@ -130,11 +130,30 @@ public class ApplicationFinancialFacilityObj_608 {
 		return limit_details_floating_rate;
 	}
 	
+	@FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsfloatRateDesc_WIFT001MT']")
+	private WebElement limit_details_floating_rate_label;
+	public WebElement limitDetailsFloatingRateLabel_608() {
+		return limit_details_floating_rate_label;
+	}
+	
+	@FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsFLOAT_RATE_PERIODICITY_NBR_WIFT001MT']")
+	private WebElement limit_details_floating_rate_periodicity_input;
+	public WebElement limitDetailsFloatingRatePeriodicityInput_608() {
+		return limit_details_floating_rate_periodicity_input;
+	}
+	
+	@FindBy(xpath = "//select[@id='applicationfacilityLimitDetailsFLOAT_RATE_PERIODICITY_TYPE_WIFT001MT']")
+	private WebElement limit_details_floating_rate_periodicity_type;
+	public WebElement limitDetailsFloatingRatePeriodicityType_608() {
+		return limit_details_floating_rate_periodicity_type;
+	}
+	
 	@FindBy(xpath="//input[@id='applicationFacilitylimityielddetrate_WIFT001MT']")
 	private WebElement limit_details_yield_details;
 	public WebElement limitDetailsYieldDetails_608() {
 		return limit_details_yield_details;
 	}
+	
 	
 	
 	
