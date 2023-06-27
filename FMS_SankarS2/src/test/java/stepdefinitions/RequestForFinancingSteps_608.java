@@ -36,8 +36,8 @@ public class RequestForFinancingSteps_608 {
 	
 	String path = System.getProperty("user.dir") +"\\TestData\\FMSTestData.xlsx";
 //	ExcelData fmsTransactionsExcelData = new ExcelData(path,"Request_For_FinancingTestData","DataSet ID");
-	ExcelData fmsTransactionsExcelData = new ExcelData(path,"IIS_Param_TestData","DataSet ID");
-	
+//	ExcelData fmsTransactionsExcelData = new ExcelData(path,"IIS_Param_TestData","DataSet ID");
+	ExcelData fmsTransactionsExcelData = new ExcelData(path,"DrawDownRequestTestData","DataSet ID");	
 	Map<String, String> testData;
 
 	
@@ -51,6 +51,9 @@ public class RequestForFinancingSteps_608 {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_043");
 	}
 	
+	
+	
+	
 ////	@AT_FM_058
 //	@And("User_608 get the test data for test case AT_FM_058")
 //	public void user_get_the_test_data_for_test_case_AT_FM_058() throws Throwable {
@@ -63,6 +66,12 @@ public class RequestForFinancingSteps_608 {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_014");
 	}
 	
+	 
+//	@AT_DDR_021
+	@And("^User_608 get the test data for test case AT_DDR_021$")
+	public void get_the_test_data_for_test_case_AT_DDR_021() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_DDR_021");
+	 } 
 	 
 	 
 	 
@@ -410,12 +419,12 @@ public class RequestForFinancingSteps_608 {
 
 	@And("User_608 enter the product class in limit details tab under sublimit tab")
 	public void user_enter_the_product_class_in_limit_details_tab_under_sublimit_tab() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.requestForFinancingMainSublimitTabAddNewProductClassInput_608());
-		requestForFinancingObj608.requestForFinancingMainSublimitTabAddNewProductClassInput_608().sendKeys(testData.get("Product Class"),Keys.TAB);
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.requestForFinancingMainSublimitTabProductClassInput_608());
+		requestForFinancingObj608.requestForFinancingMainSublimitTabProductClassInput_608().sendKeys(testData.get("Product Class"),Keys.TAB);
 		
 		for(int i = 0; i <= 500; i++) {
     		try {
-				if(!(requestForFinancingObj608.requestForFinancingMainSublimitTabAddNewProductClassInput_608().getAttribute("prevvalue").isBlank())) {
+				if(!(requestForFinancingObj608.requestForFinancingMainSublimitTabProductClassLabel_608().getAttribute("prevvalue").isBlank())) {
 					break;
 				}
 			} catch (Exception e) {
@@ -476,7 +485,7 @@ public class RequestForFinancingSteps_608 {
     	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.successPopup_608());
 		String RequestID = requestForFinancingObj608.successPopupMsg_608().getText().substring(10, 14);
     	System.err.println("Reference Number: "+RequestID);
-    	fmsTransactionsExcelData.updateTestData("DS_AT_FM_043", "Request Code", RequestID);
+    	fmsTransactionsExcelData.updateTestData(testData.get("DataSet ID"), "Request Code", RequestID);
     	
     	for (int i = 0; i < 2000; i++) {
 			try {
@@ -674,6 +683,33 @@ public class RequestForFinancingSteps_608 {
 			}
 		}
 	    
+	}
+	
+	
+	
+	
+//	@AT_DDR_021
+	@And("User_608 enter the Down Payment Percentage in main screen under Request for Financing")
+	public void user_enter_the_down_payment_percentage_in_main_screen_under_request_for_financing() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.requestForFinancingMainDownPaymentPercentInput_608());
+		requestForFinancingObj608.requestForFinancingMainDownPaymentPercentInput_608().click();
+		requestForFinancingObj608.requestForFinancingMainDownPaymentPercentInput_608().sendKeys(testData.get("Down Payment Percent"),Keys.TAB);
+		for(int i = 0; i <= 1000; i++) {
+    		try {
+				if(!(requestForFinancingObj608.requestForFinancingMainDownPaymentPercentInput_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}
+	}
+
+	@And("User_608 enter the product class Down Payment Percentage in limit details tab under sublimit tab")
+	public void user_enter_the_product_class_down_payment_percentage_in_limit_details_tab_under_sublimit_tab() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.requestForFinancingMainSublimitTabDownPaymentPercentInput_608());
+		requestForFinancingObj608.requestForFinancingMainSublimitTabDownPaymentPercentInput_608().clear();
+		requestForFinancingObj608.requestForFinancingMainSublimitTabDownPaymentPercentInput_608().sendKeys(testData.get("Down Payment Percent"),Keys.TAB);
 	}
 	
 	

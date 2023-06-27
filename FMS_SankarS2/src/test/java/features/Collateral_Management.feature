@@ -10,7 +10,7 @@ And User clicks on the the mortgage management module
 And User clicks on the Maintanance screen under mortgage management module
 And User verify the Maintanance screen should be arabic language
 
-
+@AT_RF_158
 @AT_RF_158_Param
 Scenario: TSR - AIBBI180226
 
@@ -30,6 +30,7 @@ And User double click on the searched result under Collateral Type approve scree
 When User clicks on the Approve button under Collateral Type approve screen
 
 
+@AT_RF_158
 @AT_RF_158_Core
 Scenario: TSR - AIBBI180226
 
@@ -40,9 +41,9 @@ And User click on the Maintanace screen under Collateral Management
 And User enter the Collateral type under main information in Collateral Management main Screen
 And User give the valid from date under main information in Collateral Management main Screen
 And User give the valid to date under main information in Collateral Management main Screen
+And User enter the Collateral currency under main information in Collateral Management main Screen
 And User enter the brief description under main information in Collateral Management main Screen
 And User enter the long description under main information in Collateral Management main Screen
-And User enter the Collateral currency under main information in Collateral Management main Screen
 And User move to the Collateral cash details tab in Collateral Management main Screen
 And User click the add new icon under Collateral cash details tab
 And User click the additional reference lookup under Collateral cash details tab

@@ -691,6 +691,56 @@ public class ApplicationFinancialFacilityObj_608 {
 	}
 	
 	
+//	@AT_DDR_020
+	@FindBy(xpath = "//input[@id='applicationFacilitydownpaymentperc_WIFT001MT']")
+	private WebElement additional_tab_down_payment_percent_input;
+	public WebElement additionalTabDownPaymentPercentInput_608() {
+		return additional_tab_down_payment_percent_input;
+	}
 	
+	@FindBy(xpath = "//input[@id='applicationFacilitydownpayment_WIFT001MT']")
+	private WebElement additional_tab_down_payment_amount_input;
+	public WebElement additionalTabDownPaymentAmountInput_608() {
+		return additional_tab_down_payment_amount_input;
+	}	
+	
+	@FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsDOWN_PAYMENT_PERCENTAGE_WIFT001MT']")
+	private WebElement product_class_down_payment_percent_input;
+	public WebElement productClassDownPaymentPercentInput_608() {
+		return product_class_down_payment_percent_input;
+	}
+	
+	@FindBy(xpath = "//input[@id='facilityMgtMainDownPayment_WIFT008MT']")
+	private WebElement wifak_facilities_management_main_down_payment_amount_input;
+	public WebElement wifakFacilitiesManagementMainDownPaymentAmountInput_608() {
+		return wifak_facilities_management_main_down_payment_amount_input;
+	}
+	
+	@FindBy(xpath = "//input[@id='facilityMgtMainDownPaymentPerc_WIFT008MT']")
+	private WebElement wifak_facilities_management_main_down_payment_percent_input;
+	public WebElement wifakFacilitiesManagementMainDownPaymentPercentInput_608() {
+		return wifak_facilities_management_main_down_payment_percent_input;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_FacilityManagementFacilityLimitDetailsGrid_WIFT008MT_1_fmsFacilityDetVO.GENERAL_FACILITY_TYPE']")
+	private WebElement wifak_facilities_management_facility_limit_details_product_class_row;
+	public WebElement wifakFacilitiesManagementFacilityLimitDetailsProductClassRow_608() {
+		return wifak_facilities_management_facility_limit_details_product_class_row;
+	}
+	
+	@FindBy(xpath = "//input[@id='facilityMgtLimitDetailsDOWN_PAYMENT_PERCENTAGE_WIFT008MT']")
+	private WebElement wifak_facilities_management_limit_details_down_payment_percent_input;
+	public WebElement wifakFacilitiesManagementLimitDetailsDownPaymentPercentInput_608() {
+		return wifak_facilities_management_limit_details_down_payment_percent_input;
+	}
+	
+	@FindBy(xpath = "//input[@id='facilityMgtLimitDetailsDOWN_PAYMENT_AMT_WIFT008MT']")
+	private WebElement wifak_facilities_management_limit_details_down_payment_amount_input;
+	public WebElement wifakFacilitiesManagementLimitDetailsDownPaymentAmountInput_608() {
+		return wifak_facilities_management_limit_details_down_payment_amount_input;
+	}
+	
+	
+
 	
 }

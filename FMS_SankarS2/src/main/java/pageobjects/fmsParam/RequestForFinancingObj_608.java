@@ -319,9 +319,15 @@ public class RequestForFinancingObj_608 {
 	}
 	
 	@FindBy(xpath = "//input[@id='lookuptxt_requestFinancingLimitDetailsGeneralFacilityProductClass_RFFRF00MT']")
-	private WebElement request_for_financing_main_sublimit_tab_productclass_input;
-	public WebElement requestForFinancingMainSublimitTabAddNewProductClassInput_608() {
-		return request_for_financing_main_sublimit_tab_productclass_input;
+	private WebElement request_for_financing_main_sublimit_tab_product_class_input;
+	public WebElement requestForFinancingMainSublimitTabProductClassInput_608() {
+		return request_for_financing_main_sublimit_tab_product_class_input;
+	}
+	
+	@FindBy(xpath = "//input[@id='requestFinancingLimitDetailsClassDesc_RFFRF00MT']")
+	private WebElement request_for_financing_main_sublimit_tab_product_class_label;
+	public WebElement requestForFinancingMainSublimitTabProductClassLabel_608() {
+		return request_for_financing_main_sublimit_tab_product_class_label;
 	}
 	
 	@FindBy(xpath = "//input[@id='requestFinancingLimitDetailsRfNewMargin_RFFRF00MT']")
@@ -475,7 +481,24 @@ public class RequestForFinancingObj_608 {
 	}
 	
 	
-
+//	@AT_DDR_021
+	@FindBy(xpath = "//input[@id='reqFinancingLimitDownpaymentperc_RFFRF00MT']")
+	private WebElement request_for_financing_main_down_payment_percent_input;
+	public WebElement requestForFinancingMainDownPaymentPercentInput_608() {
+		return request_for_financing_main_down_payment_percent_input;
+	}
+	
+	@FindBy(xpath = "//label[@id='lbl_reqFinancingLimitTotalDownPaymentPerc_RFFRF00MT']")
+	private WebElement request_for_financing_main_total_down_payment_percent_label;
+	public WebElement requestForFinancingMainTotalDownPaymentPercentLabel_608() {
+		return request_for_financing_main_total_down_payment_percent_label;
+	}
+	
+	@FindBy(xpath = "//input[@id='requestFinancingLimitDetailsDownPaymentPercentage_RFFRF00MT']")
+	private WebElement request_for_financing_main_sublimit_tab_DownPayment_percent_input;
+	public WebElement requestForFinancingMainSublimitTabDownPaymentPercentInput_608() {
+		return request_for_financing_main_sublimit_tab_DownPayment_percent_input;
+	}
 	
 	
 	

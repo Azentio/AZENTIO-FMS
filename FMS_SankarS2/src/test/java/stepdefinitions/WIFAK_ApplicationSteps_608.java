@@ -861,86 +861,86 @@ public class WIFAK_ApplicationSteps_608 {
 //
 //    
 ////  @AT_FM_059_User_608
-//    @And("User_608 clicks on the validate button and wait for Send Alert popup")
-//    public void user_clicks_on_the_validate_button_and_wait_for_send_alert_popup() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.limitDetailsValidateBtn_608());
-//    	WIFAKapplicationObj608.limitDetailsValidateBtn_608().click();
-//    	
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.WarningPopupOkBtn_608());
-//    	WIFAKapplicationObj608.WarningPopupOkBtn_608().click();
-//    	
-//    	// Facility already created popup
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.confirmPopup_608());
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.facilityAlreadyCreatedPopup_608());
-//    	WIFAKapplicationObj608.facilityAlreadyCreatedPopup_608().click();
-//    	
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.successPopup_608());
-////    	String SuccessMsg = WIFAKapplicationObj608.successPopupMessage().getText();
-//    	String refCode = WIFAKapplicationObj608.successPopupMessage_608().getText().substring(23, 27);
-//    	System.err.println("Reference Number: "+refCode);
-//    	fmsTransactionsExcelData.updateTestData("DS_AT_FM_038", "Reference Code", refCode);
-//    	
-//    	for (int i = 0; i < 2000; i++) {
-//			try {
-//		    	WIFAKapplicationObj608.SuccessPopupOkBtn_608().click();
-//		    	break;
-//			} catch (Exception e) {
-//				if (i==1999) {
-//					Assert.fail(e.getMessage());
-//				}
-//			}
-//		}
-//
-//        
-//    }
-//
-//    @And("User_608 search the VAK user in search grid under Send Alert popup")
-//    public void user_search_the_vak_user_in_search_grid_under_send_alert_popup() throws Throwable{
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.sendAlertPopup_608());
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.sendAlertSearchGridUserID());
-//    	WIFAKapplicationObj608.sendAlertSearchGridUserID().sendKeys(testData.get("Send Alert User"),Keys.ENTER);  
-//    }
-//
-//    @And("User_608 click the VAK User row in search grid under Send Alert popup")
-//    public void user_click_the_vak_user_row_in_search_grid_under_send_alert_popup() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.sendAlertSearchGridUserIDRow());
-//    	WIFAKapplicationObj608.sendAlertSearchGridUserIDRow().click();
-//    }
-//
-//    @And("User_608 click the Send button under Send Alert popup")
-//    public void user_click_the_send_button_under_send_alert_popup() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.sendAlertSendBtn());
-//    	WIFAKapplicationObj608.sendAlertSendBtn().click();
-//    }
-//
-//    @And("User_VAK Should be validate Alert popup is displayed")
-//    public void user_vak_should_be_validate_alert_popup_is_displayed() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.UserVakAlertPopup());
-//    	boolean alertisDisplayed = WIFAKapplicationObj608.UserVakAlertPopup().isDisplayed();
-//    	Assert.assertEquals(true, alertisDisplayed);
-//    }
-//
-//    @And("User_VAK click the open items under approve alert popup")
-//    public void user_vak_click_the_open_items_under_approve_alert_popup() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.sendAlertOpenItemLink());
-//    	WIFAKapplicationObj608.sendAlertOpenItemLink().click();
-//    }
-//
-//    @And("User_VAK Click the Approve button under Approve item popup")
-//    public void user_vak_click_the_approve_button_under_approve_item_popup() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.sendAlertApproveItemCode());
-//    	for (int i = 0; i <= 300; i++) {
-//			try {
-//				javaScriptHelper.scrollIntoView(WIFAKapplicationObj608.sendAlertApproveItemApproveBtn());
-//				break;
-//			} catch (Exception e) {
-//				if (i == 300) {
-//					Assert.fail(e.getMessage());
-//				}
-//			}
-//    	}
-//    	WIFAKapplicationObj608.sendAlertApproveItemApproveBtn().click();
-//    }
+    @And("User_608 clicks on the validate button and wait for Send Alert popup")
+    public void user_clicks_on_the_validate_button_and_wait_for_send_alert_popup() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.limitDetailsValidateBtn_608());
+    	WIFAKapplicationObj608.limitDetailsValidateBtn_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.WarningPopupOkBtn_608());
+    	WIFAKapplicationObj608.WarningPopupOkBtn_608().click();
+    	
+    	// Facility already created popup
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.confirmPopup_608());
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.facilityAlreadyCreatedPopup_608());
+    	WIFAKapplicationObj608.facilityAlreadyCreatedPopup_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.successPopup_608());
+//    	String SuccessMsg = WIFAKapplicationObj608.successPopupMessage().getText();
+    	String refCode = WIFAKapplicationObj608.successPopupMessage_608().getText().substring(23, 27);
+    	System.err.println("Reference Number: "+refCode);
+    	fmsTransactionsExcelData.updateTestData("DS_AT_FM_038", "Reference Code", refCode);
+    	
+    	for (int i = 0; i < 2000; i++) {
+			try {
+		    	WIFAKapplicationObj608.SuccessPopupOkBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+        
+    }
+
+    @And("User_608 search the VAK user in search grid under Send Alert popup")
+    public void user_search_the_vak_user_in_search_grid_under_send_alert_popup() throws Throwable{
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.sendAlertPopup_608());
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.sendAlertSearchGridUserID());
+    	WIFAKapplicationObj608.sendAlertSearchGridUserID().sendKeys(testData.get("Send Alert User"),Keys.ENTER);  
+    }
+
+    @And("User_608 click the VAK User row in search grid under Send Alert popup")
+    public void user_click_the_vak_user_row_in_search_grid_under_send_alert_popup() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.sendAlertSearchGridUserIDRow());
+    	WIFAKapplicationObj608.sendAlertSearchGridUserIDRow().click();
+    }
+
+    @And("User_608 click the Send button under Send Alert popup")
+    public void user_click_the_send_button_under_send_alert_popup() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.sendAlertSendBtn());
+    	WIFAKapplicationObj608.sendAlertSendBtn().click();
+    }
+
+    @And("User_VAK Should be validate Alert popup is displayed")
+    public void user_vak_should_be_validate_alert_popup_is_displayed() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.UserVakAlertPopup());
+    	boolean alertisDisplayed = WIFAKapplicationObj608.UserVakAlertPopup().isDisplayed();
+    	Assert.assertEquals(true, alertisDisplayed);
+    }
+
+    @And("User_VAK click the open items under approve alert popup")
+    public void user_vak_click_the_open_items_under_approve_alert_popup() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.sendAlertOpenItemLink());
+    	WIFAKapplicationObj608.sendAlertOpenItemLink().click();
+    }
+
+    @And("User_VAK Click the Approve button under Approve item popup")
+    public void user_vak_click_the_approve_button_under_approve_item_popup() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.sendAlertApproveItemCode());
+    	for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(WIFAKapplicationObj608.sendAlertApproveItemApproveBtn());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}
+    	WIFAKapplicationObj608.sendAlertApproveItemApproveBtn().click();
+    }
 //
 //
 //    

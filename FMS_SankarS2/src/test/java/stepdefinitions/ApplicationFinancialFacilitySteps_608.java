@@ -23,6 +23,7 @@ import io.cucumber.java.en.When;
 import pageobjects.fms.ApplicationFinancialFacilityObj_608;
 import pageobjects.fms.FacilitiesManagementObj_608;
 import pageobjects.fmsParam.Facility_TypeObj_608;
+import pageobjects.fmsParam.RequestForFinancingObj_608;
 import resources.BaseClass;
 
 public class ApplicationFinancialFacilitySteps_608 {
@@ -31,6 +32,7 @@ public class ApplicationFinancialFacilitySteps_608 {
 	ConfigFileReader configFileReader = new ConfigFileReader();
 	ApplicationFinancialFacilityObj_608 applicationFinancialFacilityObj608 = new ApplicationFinancialFacilityObj_608(driver);
 	FacilitiesManagementObj_608 facilityManagementObj608 = new FacilitiesManagementObj_608(driver);
+	RequestForFinancingObj_608 requestForFinancingObj608 = new RequestForFinancingObj_608(driver);
 	Facility_TypeObj_608 facilityTypeObj608 = new Facility_TypeObj_608(driver);
 	WaitHelper waitHelper = new WaitHelper(driver);
 	JavascriptHelper javaScriptHelper = new JavascriptHelper(driver);
@@ -43,7 +45,8 @@ public class ApplicationFinancialFacilitySteps_608 {
 //	ExcelData fmsTransactionsExcelData = new ExcelData(path,"ApplicationFinancialFacility","DataSet ID");
 //	ExcelData fmsTransactionsExcelData = new ExcelData(path,"FacilitiesManagementTestData","DataSet ID");
 //	ExcelData fmsTransactionsExcelData = new ExcelData(path,"FMSParameterTestData","DataSet ID");
-	ExcelData fmsTransactionsExcelData = new ExcelData(path,"IIS_Param_TestData","DataSet ID");
+//	ExcelData fmsTransactionsExcelData = new ExcelData(path,"IIS_Param_TestData","DataSet ID");
+	ExcelData fmsTransactionsExcelData = new ExcelData(path,"DrawDownRequestTestData","DataSet ID");
 	Map<String, String> testData;
 	
 	
@@ -104,7 +107,7 @@ public class ApplicationFinancialFacilitySteps_608 {
     	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_014");
     }
 	
-
+    
 	
 	
 	
@@ -149,6 +152,22 @@ public class ApplicationFinancialFacilitySteps_608 {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FP_001");
     }
 
+	
+//	@AT_DDR_020
+	@And("^User_608 get the test data for test case AT_DDR_020$")
+    public void get_the_test_data_for_test_case_AT_DDR_020() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_DDR_020");
+    }
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 //	@AT_AFF_036	
@@ -320,8 +339,11 @@ public class ApplicationFinancialFacilitySteps_608 {
 
 		Thread.sleep(2000);
 		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsFloatingRate_608());
-		String floatingRate = applicationFinancialFacilityObj608.limitDetailsFloatingRate_608().getAttribute("prevvalue");
-		Assert.assertEquals(Integer.parseInt(floatingRate)>0, true);
+		int floatingRate=0;
+        for (int i = 0; i <25; i++) {
+            floatingRate = Integer.parseInt(applicationFinancialFacilityObj608.limitDetailsFloatingRate_608().getAttribute("prevvalue"));
+        }
+        Assert.assertEquals(floatingRate>0, true);
 	}
 	
 	
@@ -484,7 +506,7 @@ public class ApplicationFinancialFacilitySteps_608 {
     	String refCode = applicationFinancialFacilityObj608.successPopupMessage_608().getText().substring(23, 27);
     	System.err.println("Reference Number: "+refCode);
     	
-    	fmsTransactionsExcelData.updateTestData("DS_AT_FM_105", "Reference Code", refCode);
+    	fmsTransactionsExcelData.updateTestData(testData.get("DataSet ID"),"Reference Code", refCode);
     	
     	for (int i = 0; i < 2000; i++) {
 			try {
@@ -646,7 +668,7 @@ public class ApplicationFinancialFacilitySteps_608 {
     	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
     	
     	// close the send alert pop-up box
-    	for (int i = 0; i < 2000; i++) {
+    	for (int i = 0; i < 100; i++) {
 			try {
 		    	applicationFinancialFacilityObj608.level3SendAlertPopup_608().click();
 		    	break;
@@ -1499,13 +1521,13 @@ public class ApplicationFinancialFacilitySteps_608 {
     
     // Cancel and Approve/Reject Cancel menu in WIFAK Facilities Management
     @And("User_608 enter the Application Ref number in search grid under Cancel screen in WIFAK Facilities Management")
-    public void user_enter_the_application_ref_number_in_search_grid_under_cancel_screen_in_wifak_facilities_management() {
+    public void user_enter_the_application_ref_number_in_search_grid_under_cancel_screen_in_wifak_facilities_management() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementCancelSearchAppRefInput_608());
     	facilityManagementObj608.wifakFacilitiesManagementCancelSearchAppRefInput_608().sendKeys(testData.get("Reference Code"),Keys.ENTER);
     }
     
     @And("User_608 enter the Application Ref number in search grid under Approve\\Reject Cancel screen in WIFAK Facilities Management")
-    public void user_enter_the_application_ref_number_in_search_grid_under_approve_reject_cancel_screen_in_wifak_facilities_management() {
+    public void user_enter_the_application_ref_number_in_search_grid_under_approve_reject_cancel_screen_in_wifak_facilities_management() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementApproveCancelSearchAppRefInput_608());
     	facilityManagementObj608.wifakFacilitiesManagementApproveCancelSearchAppRefInput_608().sendKeys(testData.get("Reference Code"),Keys.ENTER);
     }
@@ -1513,7 +1535,7 @@ public class ApplicationFinancialFacilitySteps_608 {
     
 //  @AT_FP_001
     @And("User_608 enter the Floating Rate in limit details")
-	public void user_enter_the_floating_rate_in_limit_details() {
+	public void user_enter_the_floating_rate_in_limit_details() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsFloatingRate_608());
 		applicationFinancialFacilityObj608.limitDetailsFloatingRate_608().sendKeys(testData.get("Floating Rate"),Keys.TAB);
 		
@@ -1529,7 +1551,7 @@ public class ApplicationFinancialFacilitySteps_608 {
 	}
 
 	@And("User_608 enter the Floating Rate Periodicity in limit details")
-	public void user_enter_the_floating_rate_periodicity_in_limit_details() {
+	public void user_enter_the_floating_rate_periodicity_in_limit_details() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsFloatingRatePeriodicityInput_608());
 		applicationFinancialFacilityObj608.limitDetailsFloatingRatePeriodicityInput_608().sendKeys(testData.get("FR Periodicity"),Keys.TAB);
 		for(int i = 0; i <= 1000; i++) {
@@ -1544,7 +1566,7 @@ public class ApplicationFinancialFacilitySteps_608 {
 	}
 
 	@And("User_608 select the Floating Rate Periodicity type in limit details")
-	public void user_select_the_floating_rate_periodicity_type_in_limit_details() {
+	public void user_select_the_floating_rate_periodicity_type_in_limit_details() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsFloatingRatePeriodicityType_608());
 		dropDownHelper.SelectUsingVisibleText(applicationFinancialFacilityObj608.limitDetailsFloatingRatePeriodicityType_608(), testData.get("FR Periodicity Type"));
 		for(int i = 0; i <= 1000; i++) {
@@ -1559,5 +1581,86 @@ public class ApplicationFinancialFacilitySteps_608 {
 	    
 	}
     
+	
+	
+//	@AT_DDR_020
+	@And("User_608 enter the Down Payment percentage in additional info tab")
+	public void user_enter_the_down_payment_percentage_in_additional_info_tab() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.additionalTabDownPaymentPercentInput_608());
+		applicationFinancialFacilityObj608.additionalTabDownPaymentPercentInput_608().sendKeys(testData.get("Down Payment Percent"),Keys.TAB);
+		for(int i = 0; i <= 1000; i++) {
+    		try {
+				if(!(applicationFinancialFacilityObj608.additionalTabDownPaymentPercentInput_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}
+		
+		// And User get and update the Down Payment amount in Excel sheet
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.additionalTabDownPaymentAmountInput_608());
+		String[] downPayment = javaScriptHelper.executeScript("return document.getElementsByName('applicationFacilityCO.fmsApplVO.DOWN_PAYMENT')[0].value").toString().replace(",", "").split("[.]");
+//		System.out.println("DownPayment Amount: "+downPayment[0]);
+		fmsTransactionsExcelData.updateTestData(testData.get("DataSet ID"), "Down Payment Amount", downPayment[0]);
+		
+	}
+
+	@And("User_608 enter the Down Payment percentage under product class details tab")
+	public void user_enter_the_down_payment_percentage_under_product_class_details_tab() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.productClassDownPaymentPercentInput_608());
+		applicationFinancialFacilityObj608.productClassDownPaymentPercentInput_608().clear();
+		applicationFinancialFacilityObj608.productClassDownPaymentPercentInput_608().sendKeys(testData.get("Down Payment Percent"),Keys.TAB);
+		for(int i = 0; i <= 1000; i++) {
+    		try {
+				if(applicationFinancialFacilityObj608.productClassDownPaymentPercentInput_608().getAttribute("prevvalue").equals(testData.get("Down Payment Percent"))) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}		
+	}
+	
+	@And("User_608 validate the Down Payment should be correctly in WIFAK Facilities Management Maintanance")
+	public void user_validate_the_down_payment_should_be_correctly_in_wifak_facilities_management_maintanance() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakFacilitiesManagementMainDownPaymentAmountInput_608());
+		String facilitiesDownPayment = applicationFinancialFacilityObj608.wifakFacilitiesManagementMainDownPaymentAmountInput_608().getAttribute("prevvalue");
+		Assert.assertEquals(testData.get("Down Payment Amount"), facilitiesDownPayment);
+	}
+
+	@And("User_608 validate the Down Payment percentage should be correctly in WIFAK Facilities Management Maintanance")
+	public void user_validate_the_down_payment_percentage_should_be_correctly_in_wifak_facilities_management_maintanance() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakFacilitiesManagementMainDownPaymentPercentInput_608());
+		String facilitiesDownPaymentPercent = applicationFinancialFacilityObj608.wifakFacilitiesManagementMainDownPaymentPercentInput_608().getAttribute("prevvalue");
+		Assert.assertEquals(testData.get("Down Payment Percent"), facilitiesDownPaymentPercent);
+	}
+	
+	@And("User_608 double click the limit details product class row in Facilities Management Maintanance under WIFAK Application")
+	public void user_double_click_the_limit_details_product_class_row_in_facilities_management_maintanance_under_wifak_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakFacilitiesManagementFacilityLimitDetailsProductClassRow_608());
+	    clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.wifakFacilitiesManagementFacilityLimitDetailsProductClassRow_608());
+	}
+
+	@And("User_608 validate the limit details product class Down Payment should be correctly in WIFAK Facilities Management Maintanance")
+	public void user_validate_the_limit_details_product_class_down_payment_should_be_correctly_in_wifak_facilities_management_maintanance() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakFacilitiesManagementLimitDetailsDownPaymentAmountInput_608());
+		String downPayment = applicationFinancialFacilityObj608.wifakFacilitiesManagementLimitDetailsDownPaymentAmountInput_608().getAttribute("prevvalue");
+		Assert.assertEquals(testData.get("Down Payment Amount"), downPayment);
+	}
+
+	@And("User_608 validate the limit details product class Down Payment percentage should be correctly in WIFAK Facilities Management Maintanance")
+	public void user_validate_the_limit_details_product_class_down_payment_percentage_should_be_correctly_in_wifak_facilities_management_maintanance() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakFacilitiesManagementLimitDetailsDownPaymentPercentInput_608());
+		String downPaymentPercent = applicationFinancialFacilityObj608.wifakFacilitiesManagementLimitDetailsDownPaymentPercentInput_608().getAttribute("prevvalue");
+		Assert.assertEquals(testData.get("Down Payment Percent"), downPaymentPercent);
+	    
+	}
+
+	
+
+	
+	
+	
 
 }

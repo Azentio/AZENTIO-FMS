@@ -338,8 +338,7 @@ public class Collateral_Management_Steps {
     }
 
     @And("^User move to the Collateral cash details tab in Collateral Management main Screen$")
-    public void user_move_to_the_collateral_cash_details_tab_in_collateral_management_main_screen() throws Throwable {
-    	   	
+    public void user_move_to_the_collateral_cash_details_tab_in_collateral_management_main_screen() throws Throwable {    	   	
     	waitHelper.waitForElementwithFluentwait(driver, collateralManagementObj.CollateralCashDetailsTab());
     	for (int i = 0; i < 2000; i++) {
 			try {
@@ -402,12 +401,22 @@ public class Collateral_Management_Steps {
     	
     	waitHelper.waitForElementwithFluentwait(driver, collateralManagementObj.successPopupTitle());
     	collateralManagementObj.SuccessPopupOkBtn().click();
+    	
+    	for (int i = 0; i < 500; i++) {
+			try {
+				collateralManagementObj.sendAlertPopupClose().click();
+		    	break;
+			} catch (Exception e) {
+
+			}
+		}
+
     }
     
     @And("^User move to the Approve screen undrer Collateral Management$")
     public void user_move_to_the_approve_screen_undrer_collateral_management() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, collateralManagementObj.collateralManagementApprove());
-    	collateralManagementObj.collateralManagementApprove().click();        
+    	collateralManagementObj.collateralManagementApprove().click();
     }
 
     @And("^User click the clear button under approve screen in Collateral Management$")

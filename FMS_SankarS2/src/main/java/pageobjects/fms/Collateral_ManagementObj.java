@@ -260,7 +260,7 @@ public class Collateral_ManagementObj {
 		return send_alert_popup;
 	}
 	
-	@FindBy(xpath = "//span[text()='close']")
+	@FindBy(xpath = "/html/body/div[22]/div[1]/a/span")
 	private WebElement send_alert_popup_close;
 	public WebElement sendAlertPopupClose() {
 		return send_alert_popup_close;

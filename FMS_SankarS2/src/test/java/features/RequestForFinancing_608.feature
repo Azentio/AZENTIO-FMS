@@ -130,6 +130,7 @@ And User_608 click the add button in limit details tab under sublimit tab
 When User_608 click the Save button in main screen under Request for Financing
 And User_608 click the Validate button in main screen Request for Financing
 Then User_608 click the approve level1 under Request for Financing
+And User_608 get the test data for test case AT_FM_043_FMSCore
 And User_608 enter the request code in approve level1 under Request for Financing
 And User_608 double click on the first row in approve level1 under Request for Financing
 And User_608 move to customer grading tab in approve level1 under Request for Financing
