@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Random;
 
@@ -39,6 +40,7 @@ public class Facilities_Management_Steps_609 extends BaseClass{
 	ExcelData fmsLoginExceldata = new ExcelData(TestDataPath, "FMS_Login", "UserType");
 	ExcelData fmsTransactionsExcelData = new ExcelData(TestDataPath, "FMS_WIFAK_ApplicationTestData", "DataSet ID");
 	ExcelData fmsFacilitiesManagementExcelData = new ExcelData(TestDataPath, "FMS_Facilities_Management", "DataSet ID");
+	ExcelData fmsDrawDownRequestExcelData = new ExcelData(TestDataPath, "FMS_DrawDownRequest_609", "DataSet ID");
 	Map<String, String> testData;
 	Map<String, String> fmsLoginTestData = new HashMap<>();
 
@@ -49,6 +51,10 @@ public class Facilities_Management_Steps_609 extends BaseClass{
 		testData = fmsFacilitiesManagementExcelData.getTestdata("DS01_535171");
 	}
 	
+	@And("User_609 get the test data set id for AT_DDR_075")
+	public void user_609_get_the_test_data_set_id_for_at_fm_075() {
+		testData = fmsDrawDownRequestExcelData.getTestdata("AT_DDR_075");
+	}
 	
 	
 	@And("User_609 get the test data set id for AT_FM_087")
@@ -383,7 +389,76 @@ public class Facilities_Management_Steps_609 extends BaseClass{
     public void user_609_select_the_reason_for_submission_field() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_ReasonForSubmission());
 		clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_ReasonForSubmission());
-		dropdownhelper.SelectUsingVisibleText(FacilitiesManagementPageObjects609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_ReasonForSubmission(), "New Request");
+		dropdownhelper.SelectUsingVisibleText(FacilitiesManagementPageObjects609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_ReasonForSubmission(), testData.get("Application For"));
+    }
+    
+    @And("^User_609 Select the Customer field$")
+    public void User_609_Select_the_Customer_field() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_Customer_Search());
+		clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_Customer_Search());
+		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_Customer_Search());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_Customer());
+		WebElement Customer = FacilitiesManagementPageObjects609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_Customer();
+		Customer.click();
+		Customer.sendKeys(testData.get("CIF No"),Keys.ENTER);
+		
+		String xpath ="//table[@id='gridtab_requestFinanacingCif_CSMRF00MT']/tbody/tr/td[text()='"+testData.get("CIF No")+"']";
+		for (int i = 0; i < 200; i++) {
+			try {
+				WebElement Code  = driver.findElement(By.xpath(xpath));
+				if (Code.isDisplayed()) {
+					clicksAndActionHelper.doubleClick(Code);
+				}
+				break;
+			} catch (Exception e) {
+				if (i==199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+    }
+    
+    @And("^User_609 Select the Facility Type$")
+    public void User_609_Select_the_Facility_Type() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_FacilityTypeSearch());
+		for(int i=0; i<200; i++) {
+			if (FacilitiesManagementPageObjects609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_FacilityTypeSearch().isDisplayed()) {
+				FacilitiesManagementPageObjects609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_FacilityTypeSearch().click();
+				break;
+			}
+		}
+		//clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_FacilityTypeSearch());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_FacilityType());
+		WebElement FacilityType = FacilitiesManagementPageObjects609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_FacilityType();
+		FacilityType.click();
+		FacilityType.sendKeys(testData.get("Facility Type"),Keys.ENTER);
+		
+		String xpath ="(//table[@id='gridtab_requestFinancingFacilityType_CSMRF00MT']/tbody/tr/td[text()='"+testData.get("Facility Type")+"'])[1]";
+		for (int i = 0; i < 200; i++) {
+			try {
+				WebElement Code  = driver.findElement(By.xpath(xpath));
+				if (Code.isDisplayed()) {
+					clicksAndActionHelper.doubleClick(Code);
+				}
+				break;
+			} catch (Exception e) {
+				if (i==199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+    }
+    
+    @And("^User_609 Enter the Total Limit$")
+    public void User_609_Enter_the_Total_Limit() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_Customer_Search());
+    	clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_TotalLimit());
+		WebElement TotalLimit = FacilitiesManagementPageObjects609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_TotalLimit();
+		TotalLimit.click();
+		TotalLimit.sendKeys(testData.get("Total value"),Keys.TAB);
     }
    
     //*********************************569729*****************************//

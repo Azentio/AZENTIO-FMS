@@ -39,12 +39,18 @@ public class RequestforFinancing_Steps extends BaseClass {
 	ExcelData fmsLoginExceldata = new ExcelData(TestDataPath, "FMS_Login", "UserType");
 	ExcelData fmsTransactionsExcelData = new ExcelData(TestDataPath, "FMS_WIFAK_ApplicationTestData", "DataSet ID");
 	ExcelData fmsFacilitiesManagementExcelData = new ExcelData(TestDataPath, "FMS_Facilities_Management", "DataSet ID");
+	ExcelData fmsDrawDownRequestExcelData = new ExcelData(TestDataPath, "FMS_DrawDownRequest_609", "DataSet ID");
+
 	Map<String, String> testData;
 	Map<String, String> fmsLoginTestData = new HashMap<>();
 
 	
 	
 	//**************************************TestData*****************************************//
+	@And("User_609 get the test data set id for AT_DDR_074")
+	public void user_609_get_the_test_data_set_id_for_at_ddr_074() {
+		testData = fmsDrawDownRequestExcelData.getTestdata("AT_DDR_074");
+	}
 	
 	@And("User_609 get the test data set id for AT_RF_192")
 	public void user_609_get_the_test_data_set_id_for_at_rf_192() {

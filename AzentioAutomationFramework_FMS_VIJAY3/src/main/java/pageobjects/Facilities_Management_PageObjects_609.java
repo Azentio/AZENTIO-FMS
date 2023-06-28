@@ -199,7 +199,7 @@ public class Facilities_Management_PageObjects_609 {
 		return REQUESTFORFINANCINRequestForFinancingMaintenance;
 	}
 	
-	@FindBy(xpath = "//select[@name='requestFinancingCO.fmsRequestFinancingVO.APPLICATION_FOR']")
+	@FindBy(xpath = "//select[@id='requestFinancingApplicationFor_CSMRF00MT']")
 	private WebElement REQUESTFORFINANCINRequestForFinancingMaintenanceReasonForSubmission;
 	public WebElement REQUESTFORFINANCIN_RequestForFinancing_Maintenance_ReasonForSubmission() {
 		return REQUESTFORFINANCINRequestForFinancingMaintenanceReasonForSubmission;
@@ -216,7 +216,7 @@ public class Facilities_Management_PageObjects_609 {
 	
 	
 	
-	@FindBy(xpath = "//input[@name='requestFinancingCO.fmsRequestFinancingVO.CIF']")
+	@FindBy(xpath = "//input[@id='gridtab_requestFinanacingCif_CSMRF00MT_gs_cifVO.CIF_NO']")
 	private WebElement REQUESTFORFINANCINRequestForFinancingMaintenanceCustomer;
 	public WebElement REQUESTFORFINANCIN_RequestForFinancing_Maintenance_Customer() {
 		return REQUESTFORFINANCINRequestForFinancingMaintenanceCustomer;
@@ -228,7 +228,7 @@ public class Facilities_Management_PageObjects_609 {
 		return REQUESTFORFINANCINRequestForFinancingMaintenanceCustomerSearch;
 	}
 	
-	@FindBy(xpath = "//input[@name='requestFinancingCO.fmsRequestFinancingVO.LOAN_TYPE']")
+	@FindBy(xpath = "//input[@id='gridtab_requestFinancingFacilityType_CSMRF00MT_gs_CODE']")
 	private WebElement REQUESTFORFINANCINRequestForFinancingMaintenanceFacilityType;
 	public WebElement REQUESTFORFINANCIN_RequestForFinancing_Maintenance_FacilityType() {
 		return REQUESTFORFINANCINRequestForFinancingMaintenanceFacilityType;
@@ -251,7 +251,7 @@ public class Facilities_Management_PageObjects_609 {
 	
 	
 	
-	@FindBy(xpath= "//input[@name='requestFinancingCO.TOTAL_AMOUNT']")
+	@FindBy(xpath= "//input[@id='requestFinancingFacilityTotalvalue_CSMRF00MT']")
 	private WebElement REQUESTFORFINANCINRequestForFinancingMaintenanceTotalLimit;
 	public WebElement REQUESTFORFINANCIN_RequestForFinancing_Maintenance_TotalLimit() {
 		return REQUESTFORFINANCINRequestForFinancingMaintenanceTotalLimit;
