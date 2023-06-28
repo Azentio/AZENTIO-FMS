@@ -16,63 +16,52 @@ public class FMS_Reports_Pagination_Obj {
 	}
 	
 	@FindBy(xpath ="//td[text()='Reports']")
-	private WebElement fms_Reports_Screen;
-	public WebElement fmsReportsScreen() {
-		return fms_Reports_Screen;
+	private WebElement fms_Reports_Screen_610;
+	public WebElement fms_Reports_Screen_610() {
+		return fms_Reports_Screen_610;
 	}
 	
 	@FindBy(xpath ="//span[text()='Availment Ticket']")
-	private WebElement fms_Availment_Ticket_SubMenu;
-	public WebElement fmsAvilmentTicketSubMenu() {
-		return fms_Availment_Ticket_SubMenu;
+	private WebElement fms_AvailmentTicket_SubMenu_610;
+	public WebElement fms_AvailmentTicket_SubMenu_610() {
+		return fms_AvailmentTicket_SubMenu_610;
 	}
 	
-	@FindBy(id="_popup_path_sol_confirm_ok")
-	private WebElement fms_CIF_No_popok;
-	public WebElement fmsCIFNopopok() {
-		return fms_CIF_No_popok;
+		
+	@FindBy(xpath="//input[@id='lookuptxt_p_param_RA_CIF_NO_NUMBER_U010']")
+	private WebElement enterCIFNO_InavalimentTicket_610;
+	public WebElement enterCIFNO_InavalimentTicket_610() {
+		return enterCIFNO_InavalimentTicket_610;
 	}
 	
-	@FindBy(xpath="//input[@name='param~RA_CIF_NO~NUMBER']")
-	private WebElement fms_CIF_No;
-	public WebElement fmsCIFNo() {
-		return fms_CIF_No;
-	}
-	
-	
-	@FindBy(id = "Reports / Availment Ticket")
-	private WebElement fms_Random_Click;
-	public WebElement fmsRandomClick() {
-		return fms_Random_Click;
-	}
 	
 	@FindBy(xpath="//label[text()='Retrieve ']/ancestor::button")
-	private WebElement fms_Retrieve_Key;
-	public WebElement fmsRetrieveKey() {
-		return fms_Retrieve_Key;
+	private WebElement fms_RetrieveKey_InavalimentTicket_610;
+	public WebElement fms_RetrieveKey_InavalimentTicket_610() {
+		return fms_RetrieveKey_InavalimentTicket_610;
 	}
 	
 	@FindBy(xpath="//span[text()='Page 1 of 4']")
-	private WebElement Availment_Page_1to4;
-	public WebElement AvailmentPage1to4() {
-		return Availment_Page_1to4;
+	private WebElement Availment_Page_1to4_InavalimentTicket_610;
+	public WebElement AvailmentPage1to4_InavalimentTicket_610() {
+		return Availment_Page_1to4_InavalimentTicket_610;
 	}
 	
 	@FindBy(xpath="//span[text()='Page 2 of 4']")
-	private WebElement Availment_Page_2to4;
-	public WebElement AvailmentPage2to4() {
-		return Availment_Page_2to4;
+	private WebElement Availment_Page_2to4_InavalimentTicket_610;
+	public WebElement AvailmentPage2to4_InavalimentTicket_610() {
+		return Availment_Page_2to4_InavalimentTicket_610;
 	}
 	
 	@FindBy(xpath="//span[text()='Page 3 of 4']")
-	private WebElement Availment_Page_3to4;
-	public WebElement AvailmentPage3to4() {
-		return Availment_Page_3to4;
+	private WebElement Availment_Page_3to4_InavalimentTicket_610;
+	public WebElement AvailmentPage3to4_InavalimentTicket_610() {
+		return Availment_Page_3to4_InavalimentTicket_610;
 	}
 	
 	@FindBy(xpath="//span[text()='Page 4 of 4']")
-	private WebElement Availment_Page_4to4;
-	public WebElement AvailmentPage4to4() {
-		return Availment_Page_4to4;
+	private WebElement Availment_Page_4to4_InavalimentTicket_610;
+	public WebElement AvailmentPage4to4_InavalimentTicket_610() {
+		return Availment_Page_4to4_InavalimentTicket_610;
 	}
 }

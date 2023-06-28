@@ -206,7 +206,37 @@ public class FMS_Result_RequestForFinacing_610_obj {
 		return request_for_financing_approval_committee_recom_row1;
 	}
 	
+	//---common steps
 	
+	@FindBy(xpath = "//a[@id='RFFRF00AC']")
+	private WebElement ButtonConfirmOk_610;
+	public WebElement ButtonConfirmOk_610() {
+		return ButtonConfirmOk_610;
+	}
+	
+	@FindBy(xpath = "//a[@id='RFFRF00AC']")
+	private WebElement confirmPopup_610;
+	public WebElement confirmPopup_610() {
+		return confirmPopup_610;
+	}
+	
+	@FindBy(xpath = "//a[@id='RFFRF00AC']")
+	private WebElement facilityAlreadyCreatedPopup_610;
+	public WebElement facilityAlreadyCreatedPopup_610() {
+		return facilityAlreadyCreatedPopup_610;
+	}
+	
+	@FindBy(xpath = "//a[@id='RFFRF00AC']")
+	private WebElement successPopup_610;
+	public WebElement successPopup_610() {
+		return successPopup_610;
+	}
+	
+	@FindBy(xpath = "//a[@id='RFFRF00AC']")
+	private WebElement ButtonSuccessOk_610;
+	public WebElement ButtonSuccessOk_610() {
+		return ButtonSuccessOk_610;
+	}
 	
 	
 	

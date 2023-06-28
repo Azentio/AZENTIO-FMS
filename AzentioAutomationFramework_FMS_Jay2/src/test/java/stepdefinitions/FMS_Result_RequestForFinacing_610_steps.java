@@ -1,6 +1,5 @@
 package stepdefinitions;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
@@ -282,7 +281,7 @@ public class FMS_Result_RequestForFinacing_610_steps {
 	@And("User_610 select the approval committee in approve level1 under Request for Financing")
 	public void user_select_the_approval_committee_in_approve_level1_under_request_for_financing() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_Result_RequestForFinacing_610_obj.approveLevel1CustomerGradingApproveCommittee_610()); 
-		DropDownhelper.SelectUsingVisibleText(FMS_Result_RequestForFinacing_610_obj.approveLevel1CustomerGradingApproveCommittee_610(), testData.get("Approval Committee"));
+	//	DropDownhelper.SelectUsingVisibleText(FMS_Result_RequestForFinacing_610_obj.approveLevel1CustomerGradingApproveCommittee_610(), testData.get("Approval Committee"));
 	    
 	}
 

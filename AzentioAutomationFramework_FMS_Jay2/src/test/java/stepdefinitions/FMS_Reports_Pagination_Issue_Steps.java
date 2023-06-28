@@ -1,10 +1,12 @@
 package stepdefinitions;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import dataProvider.ConfigFileReader;
 import helper.ClicksAndActionsHelper;
+import helper.JavascriptHelper;
 import helper.Selenium_Actions;
 import helper.WaitHelper;
 import io.cucumber.java.en.And;
@@ -22,6 +24,8 @@ public class FMS_Reports_Pagination_Issue_Steps {
 	ClicksAndActionsHelper clicksAndActionsHelper = new ClicksAndActionsHelper(driver);
 	Selenium_Actions selenium_Actions = new Selenium_Actions(driver);
 	FMSLogin login = new FMSLogin(driver);
+	JavascriptHelper JavascriptHelper = new JavascriptHelper(driver);
+	
 
 	@Given("^navigate to FMS application2 and login with valid credentials$")
 	public void navigate_to_fms_application2_and_login_with_valid_credentials() throws Throwable {
@@ -29,74 +33,50 @@ public class FMS_Reports_Pagination_Issue_Steps {
 		login.loginIntoFmsApplication2(configFileReader.getFMSApplicationUserType());
 	}
 
-	@And("^user click the reports menu$")
+	@And("^User_610 click the reports menu$")
 	public void user_click_the_reports_menu() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, fmsReportsPaginationObj.fmsReportsScreen());
-		clicksAndActionsHelper.moveToElement(fmsReportsPaginationObj.fmsReportsScreen());
-		clicksAndActionsHelper.clickOnElement(fmsReportsPaginationObj.fmsReportsScreen());
-		fmsReportsPaginationObj.fmsReportsScreen().click();
-		// _popup_path_sol_confirm_ok
-	}
-
-	@And("^user click the availment ticket sub menu$")
-	public void user_click_the_availment_ticket_sub_menu() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, fmsReportsPaginationObj.fmsAvilmentTicketSubMenu());
-		clicksAndActionsHelper.moveToElement(fmsReportsPaginationObj.fmsAvilmentTicketSubMenu());
-		clicksAndActionsHelper.clickOnElement(fmsReportsPaginationObj.fmsAvilmentTicketSubMenu());
-		fmsReportsPaginationObj.fmsAvilmentTicketSubMenu().click();
-		for (int i = 0; i < 200; i++) {
-			try {
-				clicksAndActionsHelper.moveToElement(fmsReportsPaginationObj.fmsCIFNopopok());
-				clicksAndActionsHelper.clickOnElement(fmsReportsPaginationObj.fmsCIFNopopok());
-				break;
-			} catch (Exception e) {
-				if (i == 199) {
-					Assert.fail(e.getMessage());
-				}
+		waitHelper.waitForElementwithFluentwait(driver, fmsReportsPaginationObj.fms_Reports_Screen_610());
+		clicksAndActionsHelper.moveToElement(fmsReportsPaginationObj.fms_Reports_Screen_610());
+		clicksAndActionsHelper.clickOnElement(fmsReportsPaginationObj.fms_Reports_Screen_610());
 			}
-		}
+
+	@And("^User_610 click the availment ticket sub menu$")
+	public void user_click_the_availment_ticket_sub_menu() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, fmsReportsPaginationObj.fms_AvailmentTicket_SubMenu_610());
+		clicksAndActionsHelper.moveToElement(fmsReportsPaginationObj.fms_AvailmentTicket_SubMenu_610());
+		clicksAndActionsHelper.clickOnElement(fmsReportsPaginationObj.fms_AvailmentTicket_SubMenu_610());
+		
 	}
 
-
-
-	@And("^user click the cif and enter the cif number in availment ticket sub menu$")
+	@And("^User_610 click the cif and enter the cif number in availment ticket sub menu$")
 	public void user_click_the_cif_and_enter_the_cif_number_in_availment_ticket_sub_menu() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, fmsReportsPaginationObj.fmsCIFNo());
-		clicksAndActionsHelper.moveToElement(fmsReportsPaginationObj.fmsCIFNo());
-		clicksAndActionsHelper.clickOnElement(fmsReportsPaginationObj.fmsCIFNo());
-		// Thread.sleep(3000000);
-		fmsReportsPaginationObj.fmsCIFNo().click();
-		fmsReportsPaginationObj.fmsCIFNo().sendKeys("77");
-		//Thread.sleep(3000);
+		waitHelper.waitForElementwithFluentwait(driver, fmsReportsPaginationObj.enterCIFNO_InavalimentTicket_610());
+		clicksAndActionsHelper.moveToElement(fmsReportsPaginationObj.enterCIFNO_InavalimentTicket_610());
+		clicksAndActionsHelper.clickOnElement(fmsReportsPaginationObj.enterCIFNO_InavalimentTicket_610());
+		fmsReportsPaginationObj.enterCIFNO_InavalimentTicket_610().sendKeys("77",Keys.TAB);
+		
 	}
 	
-
-	@Then("^user click retrieve button to view the report without error$")
+	@Then("^User_610 click retrieve button to view the report without error$")
 	public void user_click_retrieve_button_to_view_the_report_without_error() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, fmsReportsPaginationObj.fmsRetrieveKey());
-		// clicksAndActionsHelper.moveToElement(fmsReportsPaginationObj.fmsRetrieveKey());
-		// clicksAndActionsHelper.clickOnElement(fmsReportsPaginationObj.fmsRetrieveKey());
-		fmsReportsPaginationObj.fmsRetrieveKey().click();
-		for (int i = 0; i < 200; i++) {
-			try {
-				selenium_Actions.getClickAndActionsHelper().moveToElement(fmsReportsPaginationObj.fmsRetrieveKey());
-				selenium_Actions.getClickAndActionsHelper().doubleClick(fmsReportsPaginationObj.fmsRetrieveKey());
-				break;
-			} catch (Exception e) {
-				if (i == 199) {
-					Assert.fail(e.getMessage());
-
-				}
-			}
-		}
+		waitHelper.waitForElementwithFluentwait(driver, fmsReportsPaginationObj.fms_RetrieveKey_InavalimentTicket_610());
+		fmsReportsPaginationObj.fms_RetrieveKey_InavalimentTicket_610().click();
+	
 	}
 	  @Then("^verify system shoudl show the CIF details under availment ticket$")
 	    public void verify_system_shoudl_show_the_cif_details_under_availment_ticket() throws Throwable {
-	     waitHelper.waitForElementwithFluentwait(driver, fmsReportsPaginationObj.AvailmentPage1to4());
-	     Assert.assertTrue(fmsReportsPaginationObj.AvailmentPage1to4().isDisplayed());
-	     Assert.assertTrue(fmsReportsPaginationObj.AvailmentPage2to4().isDisplayed());
-	     Assert.assertTrue(fmsReportsPaginationObj.AvailmentPage3to4().isDisplayed());
-	     Assert.assertTrue(fmsReportsPaginationObj.AvailmentPage4to4().isDisplayed());
+	     waitHelper.waitForElementwithFluentwait(driver, fmsReportsPaginationObj.AvailmentPage1to4_InavalimentTicket_610());
+	     JavascriptHelper.scrollIntoView(fmsReportsPaginationObj.AvailmentPage1to4_InavalimentTicket_610());
+	     Assert.assertTrue(fmsReportsPaginationObj.AvailmentPage1to4_InavalimentTicket_610().isDisplayed());
+	     
+	     JavascriptHelper.scrollIntoView(fmsReportsPaginationObj.AvailmentPage1to4_InavalimentTicket_610());
+	     Assert.assertTrue(fmsReportsPaginationObj.AvailmentPage2to4_InavalimentTicket_610().isDisplayed());
+	     
+	     JavascriptHelper.scrollIntoView(fmsReportsPaginationObj.AvailmentPage1to4_InavalimentTicket_610());
+	     Assert.assertTrue(fmsReportsPaginationObj.AvailmentPage3to4_InavalimentTicket_610().isDisplayed());
+	     
+	     JavascriptHelper.scrollIntoView(fmsReportsPaginationObj.AvailmentPage1to4_InavalimentTicket_610());
+	     Assert.assertTrue(fmsReportsPaginationObj.AvailmentPage4to4_InavalimentTicket_610().isDisplayed());
 	     
 	    }
 

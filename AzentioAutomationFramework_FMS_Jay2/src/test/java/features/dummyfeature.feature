@@ -1,5 +1,5 @@
 Feature: test
 
   Scenario: test
-And User_610 Enter total down Payment
-    Then User_610 Validate Total Facility Value 
+    And User_610 click HJ Down Payment in Main Details
+    Then User_610 validate the HJ Down Payment Value Visiable or Not
