@@ -199,7 +199,7 @@ public class Facilities_Management_PageObjects_609 {
 		return REQUESTFORFINANCINRequestForFinancingMaintenance;
 	}
 	
-	@FindBy(xpath = "//select[@id='requestFinancingApplicationFor_CSMRF00MT']")
+	@FindBy(xpath = "//select[@name='requestFinancingCO.fmsRequestFinancingVO.APPLICATION_FOR']")
 	private WebElement REQUESTFORFINANCINRequestForFinancingMaintenanceReasonForSubmission;
 	public WebElement REQUESTFORFINANCIN_RequestForFinancing_Maintenance_ReasonForSubmission() {
 		return REQUESTFORFINANCINRequestForFinancingMaintenanceReasonForSubmission;
@@ -216,16 +216,18 @@ public class Facilities_Management_PageObjects_609 {
 	
 	
 	
-	@FindBy(xpath = "//input[@id='gridtab_requestFinanacingCif_CSMRF00MT_gs_cifVO.CIF_NO']")
-	private WebElement REQUESTFORFINANCINRequestForFinancingMaintenanceCustomer;
-	public WebElement REQUESTFORFINANCIN_RequestForFinancing_Maintenance_Customer() {
-		return REQUESTFORFINANCINRequestForFinancingMaintenanceCustomer;
-	}
+	
 	
 	@FindBy(xpath = "//span[@id='spanLookup_requestFinanacingCif_CSMRF00MT']/span")
 	private WebElement REQUESTFORFINANCINRequestForFinancingMaintenanceCustomerSearch;
 	public WebElement REQUESTFORFINANCIN_RequestForFinancing_Maintenance_Customer_Search() {
 		return REQUESTFORFINANCINRequestForFinancingMaintenanceCustomerSearch;
+	}
+	
+	@FindBy(xpath = "//input[@id='gridtab_requestFinanacingCif_CSMRF00MT_gs_cifVO.CIF_NO']")
+	private WebElement REQUESTFORFINANCINRequestForFinancingMaintenanceCustomer;
+	public WebElement REQUESTFORFINANCIN_RequestForFinancing_Maintenance_Customer() {
+		return REQUESTFORFINANCINRequestForFinancingMaintenanceCustomer;
 	}
 	
 	@FindBy(xpath = "//input[@id='gridtab_requestFinancingFacilityType_CSMRF00MT_gs_CODE']")

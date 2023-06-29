@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import dataProvider.ConfigFileReader;
@@ -45,181 +46,111 @@ public class DrawDownRequest_609 extends BaseClass{
 		ExcelData fmsDrawDownRequestExcelData = new ExcelData(TestDataPath, "FMS_DrawDownRequest_609", "DataSet ID");
 		Map<String, String> testData;
 		Map<String, String> fmsLoginTestData = new HashMap<>();
+		
+		 @And("User_609 click Technical details")
+	      public void user_609_click_technical_details() {
+			 waitHelper.waitForElementwithFluentwait(driver,DrawDownRequestPageobjects_609.technicalDetails_609());
+	    	  clicksAndActionHelper.moveToElement(DrawDownRequestPageobjects_609.technicalDetails_609());
+	    	  clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.technicalDetails_609());
+	      }
 
+	      @And("User_609 click clear caches")
+	      public void user_609_click_clear_caches() {
+	    	  waitHelper.waitForElementwithFluentwait(driver,DrawDownRequestPageobjects_609.FSM_ClearCacheInTechnicalDetailsIcon_609());
+	    	  clicksAndActionHelper.moveToElement(DrawDownRequestPageobjects_609.FSM_ClearCacheInTechnicalDetailsIcon_609());
+	    	  clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.FSM_ClearCacheInTechnicalDetailsIcon_609());
+	      }
 		
-		@And("^User_609 Check the Down Payment Percantage field is enabled$")
-		public void User_609_Check_the_Down_Payment_Percantage_field_is_enabled() throws Throwable {
-			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentPercantage());
-			try {
-				if (DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentPercantage().isEnabled()) {
-					clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentPercantage());
-					DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentPercantage().sendKeys(testData.get("Down Payment %"));
-					DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentPercantage().sendKeys(Keys.TAB);
-				}
-			} catch (Exception e) {
-				Assert.fail(e.getMessage());
-			}
+		
+	
+		
+		
+		
+		///**************************************************************************************///
+		
+		@And("User_609 Click on the Control Record submenu")
+		public void user_609_click_on_the_control_record_submenu() {
+			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Parameters_ControlRecord());
+			clicksAndActionHelper.moveToElement(DrawDownRequestPageobjects_609.Parameters_ControlRecord());
+			clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.Parameters_ControlRecord());
+		    
 		}
-		
-		@And("^User_609 Check the Down Payment field is enabled$")
-		public void User_609_Check_the_Down_Payment_field_is_enabled() throws Throwable {
-			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentPercantage());
-			try {
-				if (DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPayment().isEnabled()) {
-					DownPayment = DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPayment().getAttribute("prevvalue");
-					Assert.assertEquals(!(DownPayment.isBlank()), true);
-				}
-			} catch (Exception e) {
-				Assert.fail(e.getMessage());
-			}
-		}
-		
-		@And("^User_609 Check the Down Payment to vendor Percantage field is enabled$")
-		public void User_609_Check_the_Down_Payment_to_vendor_Percantage_field_is_enabled() throws Throwable {
-			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentToVendorPercentage());
-			try {
-				if (DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentToVendorPercentage().isEnabled()) {
-					clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentToVendorPercentage());
-					DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentToVendorPercentage().sendKeys(testData.get("Down Payment to Vendor %"));
-					DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentToVendorPercentage().sendKeys(Keys.TAB);
-				}
-			} catch (Exception e) {
-				Assert.fail(e.getMessage());
-			}
-		}
-		
-		@And("^User_609 Check the Down Payment to vendor field is enabled$")
-		public void User_609_Check_the_Down_Payment_to_vendor_field_is_enabled() throws Throwable {
-			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentToVendor());
-			try {
-				if (DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentToVendor().isEnabled()) {
-					DownPaymentToVendor = DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentToVendor().getAttribute("prevvalue");
-					Assert.assertEquals(!(DownPaymentToVendor.isBlank()), true);
-				}
-			} catch (Exception e) {
-				Assert.fail(e.getMessage());
-			}
-		}
-		
-		
-		@And("^User_609 Check the Total Down Payment Percantage field is Displayed$")
-		public void User_609_Check_the_Total_Down_Payment_Percantage_field_is_Displayed() throws Throwable {
-			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_TotalDownPaymentPercentage());
-			TotalDownPaymentPercentcalc = Integer.parseInt(testData.get("Down Payment %")) + Integer.parseInt(testData.get("Down Payment to Vendor %")) ;
-			 
-			try {
-				String TotalDownPaymentPercentage = javascripthelper.executeScript("return document.getElementsByName('applicationFacilityCO.totalDownPaymentPercentage')[0].value").toString().replace(",","").split("[.]")[0];
-				if (DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_TotalDownPaymentPercentage().isDisplayed()) {
-					Assert.assertEquals(String.valueOf(TotalDownPaymentPercentcalc), TotalDownPaymentPercentage);
-				}
-			} catch (Exception e) {
-				Assert.fail(e.getMessage());
-			}
-		}
-		
-		@And("^User_609 Check the Total Down Payment field is Displayed$")
-		public void User_609_Check_the_Total_Down_Payment_field_is_Displayed() throws Throwable {
-			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_TotalDownPayment());
-			TotalDownPaymentcalc = Integer.parseInt(DownPayment)+ Integer.parseInt(DownPaymentToVendor);
-			
-			String TotalDownPayment = javascripthelper.executeScript("return document.getElementsByName('applicationFacilityCO.totalDownPayment')[0].value").toString().replace(",","").split("[.]")[0];
-			
-		
-			try {
-				if (DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_TotalDownPayment().isDisplayed()) {
-					Assert.assertEquals(String.valueOf(TotalDownPaymentcalc),TotalDownPayment);
-				}
-			} catch (Exception e) {
-				Assert.fail(e.getMessage());
-			}
-		}
-		
-		
-		//************************************** 1038988 ****************************************************//
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		@And("^User_609 Check the Down Payment Percantage field is enabled in Request Screen$")
-		public void User_609_Check_the_Down_Payment_Percantage_field_is_enabled_in_Request_Screen() throws Throwable {
-			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.REQUESTFORFINANCIN_Maintenance_DownPaymentPercentage());
-			try {
-				if (DrawDownRequestPageobjects_609.REQUESTFORFINANCIN_Maintenance_DownPaymentPercentage().isEnabled()) {
-					
-					
-				}
-				
-			} catch (Exception e) {
-				Assert.fail(e.getMessage());
-			}
-			/*
-			try {
-				if (DrawDownRequestPageobjects_609.REQUESTFORFINANCIN_Maintenance_DownPaymentPercentage().isEnabled()) {
-					clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.REQUESTFORFINANCIN_Maintenance_DownPaymentPercentage());
-					DrawDownRequestPageobjects_609.REQUESTFORFINANCIN_Maintenance_DownPaymentPercentage().sendKeys(testData.get("Down Payment %"));
-					DrawDownRequestPageobjects_609.REQUESTFORFINANCIN_Maintenance_DownPaymentPercentage().sendKeys(Keys.TAB);
-				}
-			} catch (Exception e) {
-				Assert.fail(e.getMessage());
-			}
-			*/
+		@And("User_609 Click on Update After Approve screen in Control Record submenu")
+		public void user_609_click_on_update_after_approve_screen_in_control_record_submenu() {
+			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Parameters_ControlRecord_UpdateAfterApprove());
+			clicksAndActionHelper.moveToElement(DrawDownRequestPageobjects_609.Parameters_ControlRecord_UpdateAfterApprove());
+			clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.Parameters_ControlRecord_UpdateAfterApprove());
+		    
 		}
-		
-		@And("^User_609 Check the Down Payment field is enabled in Request Screen$")
-		public void User_609_Check_the_Down_Payment_field_is_enabled_in_Request_Screen() throws Throwable {
-			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.REQUESTFORFINANCIN_Maintenance_DownPayment());
-			try {
-				if (DrawDownRequestPageobjects_609.REQUESTFORFINANCIN_Maintenance_DownPayment().isEnabled()) {
-					//document.getElementsByName('requestFinancingCO.fmsRequestFinancingVO.DOWN_PAYMENT')[0].value
-					DownPayment = javascripthelper.executeScript("return document.getElementsByName('requestFinancingCO.fmsRequestFinancingVO.DOWN_PAYMENT')[0].value").toString().replace(",","").split("[.]")[0];
-					//DownPayment = DrawDownRequestPageobjects_609.REQUESTFORFINANCIN_Maintenance_DownPayment().getAttribute("prevvalue");
-					Assert.assertEquals((DownPayment.isBlank()), false);
+
+		@And("User_609 Enable the flag General Limit By Cif in Control Record")
+		public void user_609_enable_the_flag_general_limit_by_cif_in_control_record() {
+			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Parameters_ControlRecord_UpdateAfterApprove_GeneralLimitCif());
+			clicksAndActionHelper.moveToElement(DrawDownRequestPageobjects_609.Parameters_ControlRecord_UpdateAfterApprove_GeneralLimitCif());
+			clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.Parameters_ControlRecord_UpdateAfterApprove_GeneralLimitCif());
+			WebElement GeneralLimitCif = DrawDownRequestPageobjects_609.Parameters_ControlRecord_UpdateAfterApprove_GeneralLimitCif();
+		    try {
+				if (GeneralLimitCif.isEnabled() && GeneralLimitCif.isSelected()) {
+					Assert.assertTrue(true);
+				}
+				else {
+					GeneralLimitCif.click();
 				}
 			} catch (Exception e) {
 				Assert.fail(e.getMessage());
 			}
 		}
 		
-		@And("^User_609 Check the Down Payment to vendor Percantage field is enabled in Request Screen$")
-		public void User_609_Check_the_Down_Payment_to_vendor_Percantage_field_is_enabled_in_Request_Screen() throws Throwable {
-			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.REQUESTFORFINANCIN_Maintenance_DownPaymentToVendorPercentage());
-			try {
-				if (DrawDownRequestPageobjects_609.REQUESTFORFINANCIN_Maintenance_DownPaymentToVendorPercentage().isEnabled()) {
-					clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.REQUESTFORFINANCIN_Maintenance_DownPaymentToVendorPercentage());
-					DrawDownRequestPageobjects_609.REQUESTFORFINANCIN_Maintenance_DownPaymentToVendorPercentage().sendKeys(testData.get("Down Payment to Vendor %"));
-					DrawDownRequestPageobjects_609.REQUESTFORFINANCIN_Maintenance_DownPaymentToVendorPercentage().sendKeys(Keys.TAB);
+		@And("User_609 Disable the flag General Limit By Cif in Control Record")
+		public void user_609_disable_the_flag_general_limit_by_cif_in_control_record() {
+			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Parameters_ControlRecord_UpdateAfterApprove_GeneralLimitCif());
+			clicksAndActionHelper.moveToElement(DrawDownRequestPageobjects_609.Parameters_ControlRecord_UpdateAfterApprove_GeneralLimitCif());
+			clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.Parameters_ControlRecord_UpdateAfterApprove_GeneralLimitCif());
+			WebElement GeneralLimitCif = DrawDownRequestPageobjects_609.Parameters_ControlRecord_UpdateAfterApprove_GeneralLimitCif();
+		    try {
+				if (GeneralLimitCif.isSelected() && GeneralLimitCif.isEnabled()) {
+					GeneralLimitCif.click();
+				}
+				else {
+					Assert.assertTrue(true);
 				}
 			} catch (Exception e) {
 				Assert.fail(e.getMessage());
 			}
 		}
+
+		@And("User_609 Click on Update in Control Record")
+		public void user_609_click_on_update_in_control_record() {
+			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.ControlRecord_UpdateAfterApprove_Update());
+			clicksAndActionHelper.moveToElement(DrawDownRequestPageobjects_609.ControlRecord_UpdateAfterApprove_Update());
+			clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.ControlRecord_UpdateAfterApprove_Update());
+		    
+		}
+
+		@And("User_609 Click on the Approve Screen in Control Record submenu")
+		public void user_609_click_on_the_approve_screen_in_control_record_submenu() {
+			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Parameters_ControlRecord_Approve());
+			clicksAndActionHelper.moveToElement(DrawDownRequestPageobjects_609.Parameters_ControlRecord_Approve());
+			clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.Parameters_ControlRecord_Approve());
+		    
+		}
+
+		@And("User_609 Click on Approve in Approve Screen in Control Record submenu")
+		public void user_609_click_on_approve_in_approve_screen_in_control_record_submenu() {
+			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.ControlRecord_Approve_Approve());
+			clicksAndActionHelper.moveToElement(DrawDownRequestPageobjects_609.ControlRecord_Approve_Approve());
+			clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.ControlRecord_Approve_Approve());
+		    
+		}
 		
-		@And("^User_609 Check the Down Payment to vendor field is enabled in Request Screen$")
-		public void User_609_Check_the_Down_Payment_to_vendor_field_is_enabled_in_Request_Screen() throws Throwable {
-			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.REQUESTFORFINANCIN_Maintenance_DownPaymentToVendor());
+		@And("^User_609 Check the Fx Settlement Expiry date is Displayed$")
+		public void User_609_Check_the_Fx_Settlement_Expiry_date_is_Displayed() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver,DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetails_FXSettlementExpiryDate());
+			WebElement FXSettlementExpiryDate = DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetails_FXSettlementExpiryDate();
 			try {
-				if (DrawDownRequestPageobjects_609.REQUESTFORFINANCIN_Maintenance_DownPaymentToVendor().isEnabled()) {
-					//DownPaymentToVendor = DrawDownRequestPageobjects_609.REQUESTFORFINANCIN_Maintenance_DownPaymentToVendor().getAttribute("prevvalue");
-					Assert.assertEquals(!(DownPaymentToVendor.isBlank()), true);
+				if (FXSettlementExpiryDate.isEnabled()) {
+					Assert.assertEquals(FXSettlementExpiryDate.isEnabled(), true);
 				}
 			} catch (Exception e) {
 				Assert.fail(e.getMessage());
@@ -227,40 +158,4 @@ public class DrawDownRequest_609 extends BaseClass{
 		}
 		
 		
-		@And("^User_609 Check the Total Down Payment Percantage field is Displayed in Request Screen$")
-		public void User_609_Check_the_Total_Down_Payment_Percantage_field_is_Displayed_in_Request_Screen() throws Throwable {
-			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_TotalDownPaymentPercentage());
-			TotalDownPaymentPercentcalc = Integer.parseInt(testData.get("Down Payment %")) + Integer.parseInt(testData.get("Down Payment to Vendor %")) ;
-			 
-			try {
-				String TotalDownPaymentPercentage = javascripthelper.executeScript("return document.getElementsByName('applicationFacilityCO.totalDownPaymentPercentage')[0].value").toString().replace(",","").split("[.]")[0];
-				if (DrawDownRequestPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_TotalDownPaymentPercentage().isDisplayed()) {
-					Assert.assertEquals(String.valueOf(TotalDownPaymentPercentcalc), TotalDownPaymentPercentage);
-				}
-			} catch (Exception e) {
-				Assert.fail(e.getMessage());
-			}
-		}
-		
-		@And("^User_609 Check the Total Down Payment field is Displayed in Request Screen$")
-		public void User_609_Check_the_Total_Down_Payment_field_is_Displayed_in_Request_Screen() throws Throwable {
-			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_TotalDownPayment());
-			
-			/*
-			TotalDownPaymentcalc = Integer.parseInt(DownPayment)+ Integer.parseInt(DownPaymentToVendor);
-			String TotalDownPayment = javascripthelper.executeScript("return document.getElementsByName('applicationFacilityCO.totalDownPayment')[0].value").toString().replace(",","").split("[.]")[0];
-			try {
-				if (DrawDownRequestPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_TotalDownPayment().isDisplayed()) {
-					Assert.assertEquals(String.valueOf(TotalDownPaymentcalc),TotalDownPayment);
-				}
-			} catch (Exception e) {
-				Assert.fail(e.getMessage());
-			}
-			*/
-			
-			
-		}
-				
-				
-				
 }

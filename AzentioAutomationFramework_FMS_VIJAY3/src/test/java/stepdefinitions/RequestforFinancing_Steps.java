@@ -22,6 +22,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pageobjects.DrawDownRequest_PageObjects_609;
 import pageobjects.RequestforFinancing_Pageobjects;
 import resources.BaseClass;
 
@@ -30,6 +31,7 @@ public class RequestforFinancing_Steps extends BaseClass {
 	WaitHelper waitHelper = new WaitHelper(driver);
 	ClicksAndActionsHelper clicksAndActionHelper = new ClicksAndActionsHelper(driver);
 	RequestforFinancing_Pageobjects RequestforFinancingObj = new RequestforFinancing_Pageobjects(driver);
+	DrawDownRequest_PageObjects_609 DrawDownRequestPageobjects_609 =new DrawDownRequest_PageObjects_609(driver);
 	ConfigFileReader configFileReader = new ConfigFileReader();
 	FMSLogin FMSLogin = new FMSLogin(driver);
 	DropDownHelper dropdownhelper = new DropDownHelper(driver);
@@ -40,17 +42,24 @@ public class RequestforFinancing_Steps extends BaseClass {
 	ExcelData fmsTransactionsExcelData = new ExcelData(TestDataPath, "FMS_WIFAK_ApplicationTestData", "DataSet ID");
 	ExcelData fmsFacilitiesManagementExcelData = new ExcelData(TestDataPath, "FMS_Facilities_Management", "DataSet ID");
 	ExcelData fmsDrawDownRequestExcelData = new ExcelData(TestDataPath, "FMS_DrawDownRequest_609", "DataSet ID");
-
 	Map<String, String> testData;
 	Map<String, String> fmsLoginTestData = new HashMap<>();
 
 	
 	
 	//**************************************TestData*****************************************//
+	
+	@And("User_609 get the test data set id for AT_DDR_073")
+	public void user_609_get_the_test_data_set_id_for_AT_DDR_073() {
+		testData = fmsDrawDownRequestExcelData.getTestdata("AT_DDR_073");
+	}
+	
 	@And("User_609 get the test data set id for AT_DDR_074")
-	public void user_609_get_the_test_data_set_id_for_at_ddr_074() {
+	public void user_609_get_the_test_data_set_id_for_AT_DDR_074() {
 		testData = fmsDrawDownRequestExcelData.getTestdata("AT_DDR_074");
 	}
+	
+	
 	
 	@And("User_609 get the test data set id for AT_RF_192")
 	public void user_609_get_the_test_data_set_id_for_at_rf_192() {
@@ -109,7 +118,7 @@ public class RequestforFinancing_Steps extends BaseClass {
 		waitHelper.waitForElementwithFluentwait(driver,RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Applicationfor());
 		//clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Applicationfor());
 		//clicksAndActionHelper.clickOnElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Applicationfor());
-		dropdownhelper.SelectUsingVisibleText(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Applicationfor(), testData.get("Application For"));
+		dropdownhelper.SelectUsingVisibleText(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Applicationfor(),testData.get("Application For"));
 
 	}
 
@@ -182,6 +191,7 @@ public class RequestforFinancing_Steps extends BaseClass {
 		RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Facilitytype().sendKeys(Keys.ENTER);
 		
 		String xpath ="//table[@id='gridtab_applicationFacilityFacilityType_WIFT001MT']/tbody/tr[2]/td[text()='"+testData.get("Facility Type")+"']";
+		/*
 		for (int i = 0; i <= 200; i++) {
             try {
             	clicksAndActionHelper.moveToElement(driver.findElement(By.xpath(xpath)));
@@ -198,7 +208,8 @@ public class RequestforFinancing_Steps extends BaseClass {
                 }
             }
 		}
-		/*
+		*/
+		
 		for (int i = 0; i < 200; i++) {
 			try {
 				WebElement Code  = driver.findElement(By.xpath(xpath));
@@ -213,8 +224,8 @@ public class RequestforFinancing_Steps extends BaseClass {
 				}
 			}	
 		}
-		*/
 	}
+	
 	
 
 	@And("^User_609 Select the Country of Financing in Main Information tab$")
@@ -237,6 +248,7 @@ public class RequestforFinancing_Steps extends BaseClass {
 		RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_Countryoffinancing().sendKeys(Keys.ENTER);
 		
 		String xpath ="//table[@id='gridtab_applicationFacilityCountry_WIFT001MT']/tbody/tr/td[text()='"+testData.get("Country of Financing")+"']";
+		/*
 		for (int i = 0; i <= 200; i++) {
             try {
             	clicksAndActionHelper.moveToElement(driver.findElement(By.xpath(xpath)));
@@ -252,15 +264,15 @@ public class RequestforFinancing_Steps extends BaseClass {
                 }
             }
 		}
+		*/
 		
-		/*
 		for (int i = 0; i < 200; i++) {
 			try {
 				WebElement Code  = driver.findElement(By.xpath(xpath));
 				if (Code.isDisplayed()) {
 					clicksAndActionHelper.doubleClick(Code);
 				}
-				driver.findElement(By.xpath(xpath)).isDisplayed();
+				//driver.findElement(By.xpath(xpath)).isDisplayed();
 				break;
 			} catch (Exception e) {
 				if (i==199) {
@@ -268,8 +280,9 @@ public class RequestforFinancing_Steps extends BaseClass {
 				}
 			}	
 		}
-		*/
 	}
+		
+	
 
 	@Then("User_609 Check the Country of Financing field is filled")
 	public void user_609_check_the_country_of_financing_field_is_filled() {
@@ -837,5 +850,171 @@ public class RequestforFinancing_Steps extends BaseClass {
 	public void user_609_get_the_test_data_set_id_for_at_rf_196() {
 		testData = fmsTransactionsExcelData.getTestdata("DS01_834958");
 	}
-
+	
+	 @And("^User_609 Check the Down Payment Percantage field is enabled$")
+		public void User_609_Check_the_Down_Payment_Percantage_field_is_enabled() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentPercentage());
+			//clicksAndActionHelper.moveToElement(DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentPercentage());
+			//clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentPercentage());
+			WebElement DownPaymentPercentage = DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentPercentage();
+			try {
+				if (DownPaymentPercentage.isEnabled()) {
+					DownPaymentPercentage.sendKeys(testData.get("Down Payment %"),Keys.TAB);
+					Assert.assertEquals(DownPaymentPercentage.isEnabled(),true);
+				}
+			} catch (Exception e) {
+				Assert.fail(e.getMessage());
+			}
+			/*
+			try {
+				if (DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentPercantage().isEnabled()) {
+					clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentPercantage());
+					DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentPercantage().sendKeys(testData.get("Down Payment %"));
+					DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentPercantage().sendKeys(Keys.TAB);
+				}
+			} catch (Exception e) {
+				Assert.fail(e.getMessage());
+			}
+			*/
+		}
+		
+		@And("^User_609 Check the Down Payment field is enabled$")
+		public void User_609_Check_the_Down_Payment_field_is_enabled() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPayment());
+			WebElement DownPayment = DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPayment();
+			//clicksAndActionHelper.moveToElement(DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPayment());
+			//clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPayment());
+			try {
+				if (DownPayment.isEnabled()) {
+					Assert.assertEquals(DownPayment.isEnabled(), true);
+				}
+			} catch (Exception e) {
+				Assert.fail(e.getMessage());
+			}
+			/*
+			try {
+				if (DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPayment().isEnabled()) {
+					DownPayment = DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPayment().getAttribute("prevvalue");
+					Assert.assertEquals(!(DownPayment.isBlank()), true);
+				}
+			} catch (Exception e) {
+				Assert.fail(e.getMessage());
+			}
+			*/
+		}
+		
+		@And("^User_609 Check the Down Payment to vendor Percantage field is enabled$")
+		public void User_609_Check_the_Down_Payment_to_vendor_Percantage_field_is_enabled() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentToVendorPercentage());
+			WebElement DownPaymentToVendorPercentage = DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentToVendorPercentage();
+			//clicksAndActionHelper.moveToElement(DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentToVendorPercentage());
+			//clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentToVendorPercentage());
+			try {
+				if (DownPaymentToVendorPercentage.isEnabled()) {
+					DownPaymentToVendorPercentage.sendKeys(testData.get("Down Payment to Vendor %"),Keys.TAB);
+					Assert.assertEquals(DownPaymentToVendorPercentage.isEnabled(), true);
+				}
+			} catch (Exception e) {
+				Assert.fail(e.getMessage());
+			}
+			/*
+			try {
+				if (DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentToVendorPercentage().isEnabled()) {
+					clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentToVendorPercentage());
+					DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentToVendorPercentage().sendKeys(testData.get("Down Payment to Vendor %"));
+					DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentToVendorPercentage().sendKeys(Keys.TAB);
+				}
+			} catch (Exception e) {
+				Assert.fail(e.getMessage());
+			}
+			*/
+		}
+		
+		@And("^User_609 Check the Down Payment to vendor field is enabled$")
+		public void User_609_Check_the_Down_Payment_to_vendor_field_is_enabled() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentToVendor());
+			WebElement DownPaymentToVendor = DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentToVendor();
+			//clicksAndActionHelper.moveToElement(DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentToVendor());
+			//clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentToVendor());
+			try {
+				if (DownPaymentToVendor.isEnabled()) {
+					Assert.assertEquals(DownPaymentToVendor.isEnabled(), true);
+				}
+				
+			} catch (Exception e) {
+				Assert.fail(e.getMessage());
+			}
+			/*
+			try {
+				if (DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentToVendor().isEnabled()) {
+					DownPaymentToVendor = DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_DownPaymentToVendor().getAttribute("prevvalue");
+					Assert.assertEquals(!(DownPaymentToVendor.isBlank()), true);
+				}
+			} catch (Exception e) {
+				Assert.fail(e.getMessage());
+			}
+			*/
+		}
+		
+		
+		@And("^User_609 Check the Total Down Payment Percantage field is Displayed$")
+		public void User_609_Check_the_Total_Down_Payment_Percantage_field_is_Displayed() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_TotalDownPaymentPercentage());
+			WebElement TotalDownPaymentPercentage = DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_TotalDownPaymentPercentage();
+			try {
+				if (TotalDownPaymentPercentage.isDisplayed()) {
+					Assert.assertEquals(TotalDownPaymentPercentage.isDisplayed(), true);
+				}
+				
+			} catch (Exception e) {
+				Assert.fail(e.getMessage());
+			}
+			/*
+			TotalDownPaymentPercentcalc = Integer.parseInt(testData.get("Down Payment %")) + Integer.parseInt(testData.get("Down Payment to Vendor %")) ;
+			 
+			try {
+				String TotalDownPaymentPercentage = javascripthelper.executeScript("return document.getElementsByName('applicationFacilityCO.totalDownPaymentPercentage')[0].value").toString().replace(",","").split("[.]")[0];
+				if (DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_TotalDownPaymentPercentage().isDisplayed()) {
+					Assert.assertEquals(String.valueOf(TotalDownPaymentPercentcalc), TotalDownPaymentPercentage);
+				}
+			} catch (Exception e) {
+				Assert.fail(e.getMessage());
+			}
+			*/
+		}
+		
+		@And("^User_609 Check the Total Down Payment field is Displayed$")
+		public void User_609_Check_the_Total_Down_Payment_field_is_Displayed() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_TotalDownPayment());
+			WebElement TotalDownPayment = DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_TotalDownPayment();
+			try {
+				if (TotalDownPayment.isDisplayed()) {
+					Assert.assertEquals(TotalDownPayment.isDisplayed(), true);
+				}
+			} catch (Exception e) {
+				Assert.fail(e.getMessage());
+			}
+			/*
+			TotalDownPaymentcalc = Integer.parseInt(DownPayment)+ Integer.parseInt(DownPaymentToVendor);
+			
+			String TotalDownPayment = javascripthelper.executeScript("return document.getElementsByName('applicationFacilityCO.totalDownPayment')[0].value").toString().replace(",","").split("[.]")[0];
+			try {
+				if (DrawDownRequestPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_TotalDownPayment().isDisplayed()) {
+					Assert.assertEquals(String.valueOf(TotalDownPaymentcalc),TotalDownPayment);
+				}
+			} catch (Exception e) {
+				Assert.fail(e.getMessage());
+			}*/
+		}
+		
+		
+		//************************************** 1038988 ****************************************************//
+		
+		
+		
+		
+		///*****************************************************************************************************///
+		
+		
+		
 }

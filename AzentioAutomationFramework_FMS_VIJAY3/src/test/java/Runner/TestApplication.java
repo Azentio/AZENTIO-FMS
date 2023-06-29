@@ -14,7 +14,7 @@ import utilities.ExtentTestManager;
 				// monochrome=false, //to make steps in color
 				plugin = { "pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 							"rerun:ReRunScenarios/FailedReRun.txt" }
-				,tags = "@1038988"
+				,tags = "@827639"
 				
 
 )

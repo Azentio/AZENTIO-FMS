@@ -5,15 +5,14 @@ Feature: Title of your feature
 
   @tag1
   Scenario: Title of your scenario
-And User_609 Click on the Draw Down Request under Wifak Appliction Submenu
-And User_609 Click on the Maintenace Screen under Draw Down Request 
-And User_609 Select the Facility Reference
-And User_609 Select the Drawdown Type
-And User_609 Enter the Description in English
-And User_609 Enter the Description in Arab
-And User_609 Enter the Date Submitted
-And User_609 Enter the Value Date
-And User_609 Click on the Drawdown Additional Details tab
-And User_609 Select the product Class LN Key
-And User_609 Click on Save in Draw Down Request
+
+And User_609 Click on the Control Record submenu
+And User_609 Click on Update After Approve screen in Control Record submenu
+And User_609 Enable the flag General Limit By Cif in Control Record
+And User_609 Click on Update in Control Record
+
+
+And User_609 Click on the Approve Screen in Control Record submenu
+And User_609 Click on Approve in Approve Screen in Control Record submenu
+
 
