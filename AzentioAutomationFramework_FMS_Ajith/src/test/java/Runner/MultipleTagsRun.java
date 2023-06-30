@@ -19,7 +19,7 @@ public class MultipleTagsRun {
 		for (String tags : listOfTags) {
 			String[] parameter = {
 
-					"src/test/java/features/ApplicationForFinancialFacility.feature",
+					"src/test/java/features/FacilitiesManagement_482.feature",
 					"--glue", "stepdefinitions",
 					"--plugin", "pretty", 
 					"--plugin","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", 
@@ -45,16 +45,13 @@ public class MultipleTagsRun {
 	@Test()
 	public void test() {
 		List<String> testCaseTagsfromExcel1 = new LinkedList<String>();
-		testCaseTagsfromExcel1.add("AT_AFF_004_01");
-		testCaseTagsfromExcel1.add("AT_AFF_004_02");
-		testCaseTagsfromExcel1.add("AT_AFF_008");
-		testCaseTagsfromExcel1.add("AT_AFF_019");
-		testCaseTagsfromExcel1.add("AT_AFF_024");
-		testCaseTagsfromExcel1.add("AT_AFF_014");
-//		testCaseTagsfromExcel1.add("KUBS_TAX_UAT_07_001TC_001_PRQ_2");
-//		testCaseTagsfromExcel1.add("KUBS_TAX_UAT_009_001_TC_001");
-//		testCaseTagsfromExcel1.add("KUBS_TAX_UAT_009_001_TC_002");
-//		testCaseTagsfromExcel1.add("KUBS_TAX_UAT_009_001_TC_003");
+		testCaseTagsfromExcel1.add("AT_FM_062_postreq_01");
+		testCaseTagsfromExcel1.add("AT_FM_062_prereq_Facilitype");
+		testCaseTagsfromExcel1.add("AT_FM_062_PreReq_01");
+		testCaseTagsfromExcel1.add("AT_FM_062_Prereq_01");
+		testCaseTagsfromExcel1.add("AT_FM_062_01");
+		testCaseTagsfromExcel1.add("AT_FM_062");
+		testCaseTagsfromExcel1.add("AT_FM_062_02");
 //		testCaseTagsfromExcel1.add("KUBS_TAX_UAT_009_003TC_001");
 //		testCaseTagsfromExcel1.add("KUBS_TAX_UAT_009_003TC_002");
 //		testCaseTagsfromExcel1.add("KUBS_TAX_UAT_009_003TC_003");

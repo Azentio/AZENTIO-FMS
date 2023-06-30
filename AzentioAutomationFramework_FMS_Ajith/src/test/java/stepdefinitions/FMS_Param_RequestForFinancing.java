@@ -120,8 +120,8 @@ public class FMS_Param_RequestForFinancing {
 
     @And("^User click approve button in Approve screen Facility type$")
     public void user_click_approve_button_in_approve_screen_facility_type() throws Throwable {
-    	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,fmsParamObj.aprroveButtonInApproveScreen());
-		seleniumActions.getClickAndActionsHelper().moveToElement(fmsParamObj.aprroveButtonInApproveScreen());
-		seleniumActions.getClickAndActionsHelper().clickOnElement(fmsParamObj.aprroveButtonInApproveScreen());
+    	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,fmsParamObj.approveButtonInApproveScreen());
+		seleniumActions.getClickAndActionsHelper().moveToElement(fmsParamObj.approveButtonInApproveScreen());
+		seleniumActions.getClickAndActionsHelper().clickOnElement(fmsParamObj.approveButtonInApproveScreen());
 }
 }

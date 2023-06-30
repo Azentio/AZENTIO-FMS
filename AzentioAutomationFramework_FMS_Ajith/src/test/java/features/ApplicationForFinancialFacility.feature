@@ -40,17 +40,17 @@ And User Click ok button in Sucess pop up Sub Economic Sector Maintenace Screen
 Scenario: AIBBI190625 - Economic and Sub-Economic Sector code should be reflected in FMS
 Given navigate to FMS application and login with valid credentials
 And User Update test data set id for AT_AFF_004
-And User Click on REQUEST FOR FINANCIN under FMS application
-And User click the Request For Financing Sub Menu under REQUEST FOR FINANCIN
-And User Click on Maintenance under Request For Financing Sub Menu in REQUEST FOR FINANCIN
+And User_482 Click on REQUEST FOR FINANCIN under FMS application
+And User_482 click the Request For Financing Sub Menu under REQUEST FOR FINANCIN
+And User_482 Click on Maintenance under Request For Financing Sub Menu in REQUEST FOR FINANCIN
 And User Search and Validate created Economic sector code refletced in Application screen
 And User Search and Validate created Sub Economic sector code refletced in Application screen
 @AT_AFF_008
 Scenario: BMO190221 Exception error in Production FMS
 Given navigate to FMS application and login with valid credentials
-And User Click on REQUEST FOR FINANCIN under FMS application
-And User click the Request For Financing Sub Menu under REQUEST FOR FINANCIN
-And User Click on Maintenance under Request For Financing Sub Menu in REQUEST FOR FINANCIN
+And User_482 Click on REQUEST FOR FINANCIN under FMS application
+And User_482 click the Request For Financing Sub Menu under REQUEST FOR FINANCIN
+And User_482 Click on Maintenance under Request For Financing Sub Menu in REQUEST FOR FINANCIN
 And User Select New Request in Reason For Submission under Maintenance screen in REQUEST FOR FINANCIN
 And User Update test data set id for AT_AFF_008
 And User Search the CIF Number in Customer under Maintenance screen in REQUEST FOR FINANCIN
@@ -62,13 +62,13 @@ And User Search Product Class in Limit Details Pop up Menu
 And User Enter the Margin value in New Tab Field in Limit Details Pop up Menu
 And User Click on Add button in Limit Details Pop up
 And User Click on Save button under Maintenance screen in REQUEST FOR FINANCIN
-And User Click on Ok button in Confirm Pop up Menu
-And User Click on Ok button in Success Pop up Menu
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
 And User Click on Validate button under Maintenance screen in REQUEST FOR FINANCIN
-And User Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Confirm Pop up Menu
 And User Click on Yes button in Confirm Pop up Menu
 And User Get the Code in Success Pop up Menu
-And User Click on Ok button in Success Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
 And User Click on Approve Level 1 under REQUEST FOR FINANCIN
 And User Update test data set id for AT_AFF_008
 And User Search the Code in Approve Level 1 under REQUEST FOR FINANCIN
@@ -77,8 +77,8 @@ And User Click on Customer Grading and Recommendations in Approve Level 1 under 
 And User Select the Decision Field as Forward and Approval Committee in Customer Grading and Recommendations under Approve Level 1
 And User Select the Approval Committee as Investment Committee in Customer Grading and Recommendations under Approve Level 1
 And User Click on Approve button in Customer Grading and Recommendations under Approve Level 1
-And User Click on Ok button in Confirm Pop up Menu
-And User Click on Ok button in Success Pop up Menu
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
 And User Click on Approval Committee Recommendations under Request For Financing Sub Menu in REQUEST FOR FINANCIN
 And User Search the Code in Approval Committee Recommendations under Request For Financing Sub Menu in REQUEST FOR FINANCIN
 Then User Validate the Code is Displayed in Approval Committee Recommendations under Request For Financing Sub Menu in REQUEST FOR FINANCIN
@@ -102,16 +102,16 @@ Then User Validate Additional Details Tab is Disable in Maintenance screen under
 @AT_AFF_024
 Scenario: Not able to create application with value more than 9 digits
 Given navigate to FMS application and login with valid credentials
-And User Click on WIFAK Application Main Menu
-And User Click on WIFAK Application Sub Menu
-And User Click Application for financial facilities 
-And User Click Maintenance screen in WIFAK Application sub menu
-And User update test data set for AT_AFF_024
-And User Select Application For field in Maintenace Screen under WIRAK Application
-And User enter the CIF No in main info tab under WIRAK Application
-And User enter the facility type in main info tab under WIRAK Application
-And User enter the country of financing in main info tab under WIRAK Application
-And User clicks on the additional details tab under WIRAK Application
+And User_482 Click on WIFAK Application Main Menu
+And User_482 Click on WIFAK Application Sub Menu
+And User_482 Click Application for financial facilities 
+And User_482 Click Maintenance screen in WIFAK Application sub menu
+And User_482 update test data set for AT_AFF_024
+And User_482 Select Application For field in Maintenace Screen under WIRAK Application
+And User_482 enter the CIF No in main info tab under WIRAK Application
+And User_482 enter the facility type in main info tab under WIRAK Application
+And User_482 enter the country of financing in main info tab under WIRAK Application
+And User_482 clicks on the additional details tab under WIRAK Application
 And User Validate Min value configured in fms param facility type
 And User Validate Max value configured in fms param facility type
 
@@ -119,17 +119,17 @@ And User Validate Max value configured in fms param facility type
 Scenario: Check the behavior of the following fields under the Application and Request Screen and under Limit Details window down payment
 					percentage Down payment Downpayment to vendor percentage down payment total down payment percentage total down payment
 Given navigate to FMS application and login with valid credentials
-And User Click on WIFAK Application Main Menu
-And User Click on WIFAK Application Sub Menu
-And User Click Application for financial facilities 
-And User Click Maintenance screen in WIFAK Application sub menu
-And User update test data set for AT_AFF_024
-And User Select Application For field in Maintenace Screen under WIRAK Application
-And User enter the CIF No in main info tab under WIRAK Application
-And User enter the facility type in main info tab under WIRAK Application
-And User enter the country of financing in main info tab under WIRAK Application
-And User clicks on the additional details tab under WIRAK Application	
-And User Enter total value under additional details tab in WIFAK Application
+And User_482 Click on WIFAK Application Main Menu
+And User_482 Click on WIFAK Application Sub Menu
+And User_482 Click Application for financial facilities 
+And User_482 Click Maintenance screen in WIFAK Application sub menu
+And User_482 update test data set for AT_AFF_024
+And User_482 Select Application For field in Maintenace Screen under WIRAK Application
+And User_482 enter the CIF No in main info tab under WIRAK Application
+And User_482 enter the facility type in main info tab under WIRAK Application
+And User_482 enter the country of financing in main info tab under WIRAK Application
+And User_482 clicks on the additional details tab under WIRAK Application	
+And User_482 Enter total value under additional details tab in WIFAK Application
 Then User Enter downpayment value greater than total value system should throw validation
 Then User Enter downpayment percentage and validate downpayment value automatically adjusted
 Then User Enter downpayment value and validate downpayment percentage automatically adjusted
@@ -140,20 +140,20 @@ Then User Validate total downpayment percentage and total downpayment value
 @AT_AFF_014
 Scenario: ABSAI190419 - FMS 1704_System is forcing the user to enter a value in Rate field inorder to calculate Total Yield
 Given navigate to FMS application and login with valid credentials
-And User Click on WIFAK Application Main Menu
-And User Click on WIFAK Application Sub Menu
-And User Click Application for financial facilities 
-And User Click Maintenance screen in WIFAK Application sub menu
-And User update test data set for AT_AFF_024
-And User Select Application For field in Maintenace Screen under WIRAK Application
-And User enter the CIF No in main info tab under WIRAK Application
-And User enter the facility type in main info tab under WIRAK Application
-And User enter the country of financing in main info tab under WIRAK Application
-And User clicks on the additional details tab under WIRAK Application	
-And User Enter total value under additional details tab in WIFAK Application
-And User click Limit Details tab in WIFAK Application
-And User click add icon in limit details under WIFAK Application
-And User select the product class in limit details under WIFAK Application
+And User_482 Click on WIFAK Application Main Menu
+And User_482 Click on WIFAK Application Sub Menu
+And User_482 Click Application for financial facilities 
+And User_482 Click Maintenance screen in WIFAK Application sub menu
+And User_482 update test data set for AT_AFF_024
+And User_482 Select Application For field in Maintenace Screen under WIRAK Application
+And User_482 enter the CIF No in main info tab under WIRAK Application
+And User_482 enter the facility type in main info tab under WIRAK Application
+And User_482 enter the country of financing in main info tab under WIRAK Application
+And User_482 clicks on the additional details tab under WIRAK Application	
+And User_482 Enter total value under additional details tab in WIFAK Application
+And User_482 click Limit Details tab in WIFAK Application
+And User_482 click add icon in limit details under WIFAK Application
+And User_482 select the product class in limit details under WIFAK Application
 And User Enter Yield details value in limit details under WIFAK Application
 And User Validate Total Yield is Calculated based on Yield details and Margin Rate
 

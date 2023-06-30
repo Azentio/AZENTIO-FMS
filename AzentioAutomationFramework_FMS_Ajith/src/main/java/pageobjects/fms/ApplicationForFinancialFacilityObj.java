@@ -1400,21 +1400,238 @@ public class ApplicationForFinancialFacilityObj {
 		return searchUserIdInSendAlert; 
 	}
 	
-	@FindBy(xpath="//td[@id='td_alertsGrid_Id_WIFT001MT_1_alertsParamCO.userId']")
+	@FindBy(xpath="//input[@id='alertsGrid_Id_WIFT008MT_gs_alertsParamCO.userId']")
+	private WebElement searchUserIdInSendAlert_FacilitiesManagement;
+	public WebElement searchUserIdInSendAlert_FacilitiesManagement() {
+		return searchUserIdInSendAlert_FacilitiesManagement; 
+	}
+	
+	@FindBy(xpath="//td[@id='td_alertsGrid_Id_WIFT008MT_1_alertsParamCO.userId']")
+	private WebElement selectSearchedUserIdInSendAlert_FacilitiesManagement;
+	public WebElement selectSearchedUserIdInSendAlert_FacilitiesManagement() {
+		return selectSearchedUserIdInSendAlert_FacilitiesManagement; 
+	}
+	@FindBy(xpath="//td[@id='td_alertsGrid_Id_WIFT008MT_1_alertsParamCO.userId']")
 	private WebElement selectSearchedUserIdInSendAlert;
 	public WebElement selectSearchedUserIdInSendAlert() {
 		return selectSearchedUserIdInSendAlert; 
 	}
 	
+	@FindBy(xpath="//a[@id='sendBut_WIFT008MT']")
+	private WebElement sendButtonInSendAlert_FacilitiesManagement;
+	public WebElement sendButtonInSendAlert_FacilitiesManagement() {
+		return sendButtonInSendAlert_FacilitiesManagement; 
+	}
 	@FindBy(xpath="//a[@id='sendBut_WIFT001MT']")
 	private WebElement sendButtonInSendAlert;
 	public WebElement sendButtonInSendAlert() {
 		return sendButtonInSendAlert; 
 	}
+	// fms parameters
 	
+	@FindBy(xpath="//td[text()='Parameters']/preceding-sibling::td//span/span")
+	private WebElement parametersMenuInFSMParam_482;
+	public WebElement parametersMenuInFSMParam_482() {
+		return parametersMenuInFSMParam_482; 
+	}
 	
+	@FindBy(xpath="//a[@id='P007P']")
+	private WebElement approveScreen_ControlRecordInFSMParam_482;
+	public WebElement approveScreen_ControlRecordInFSMParam_482() {
+		return approveScreen_ControlRecordInFSMParam_482; 
+	}
+	@FindBy(xpath="//a[@id='P007UP']")
+	private WebElement updateAfterapproveScreen_ControlRecordInFSMParam_482;
+	public WebElement updateAfterapproveScreen_ControlRecordInFSMParam_482() {
+		return updateAfterapproveScreen_ControlRecordInFSMParam_482; 
+	}
 	
+	@FindBy(xpath="//td[text()='Control Record']/preceding-sibling::td//span/span")
+	private WebElement ControlRecordScrenInFSMParam_482;
+	public WebElement ControlRecordScreenInFSMParam_482() {
+		return ControlRecordScrenInFSMParam_482; 
+	}
+	// initialvalue checked
+	@FindBy(xpath="//input[@id='FmsCtrlRecord_alertStatus_P007UP']")
+	private WebElement enableAlertsCheckBox_482;
+	public WebElement enableAlertsCheckBox_482() {
+		return enableAlertsCheckBox_482; 
+	}
+	// initialvalue checked
+	@FindBy(xpath="//input[@id='FmsCtrlRecord_autoAlertAfterUpdate_P007UP']")
+	private WebElement AutoAlertsCheckBox_482;
+	public WebElement AutoAlertsCheckBox_482() {
+		return AutoAlertsCheckBox_482; 
+	}
 	
+	@FindBy(xpath="//button[@id='fmsControlRecordMaint_update_P007UP']")
+	private WebElement updateButton_UpdateAfterApproveInControlRecord_482;
+	public WebElement updateButton_UpdateAfterApproveInControlRecord_482() {
+		return updateButton_UpdateAfterApproveInControlRecord_482; 
+	}
+	
+	@FindBy(xpath="//button[@id='fmsControlRecordMaint_approve_P007P']")
+	private WebElement approveButtonInApproveScreenControlRecord_482;
+	public WebElement approveButtonInApproveScreenControlRecord_482() {
+		return approveButtonInApproveScreenControlRecord_482; 
+	}
+	// clear caches
+	
+	@FindBy(xpath="//a[@id='tech_details_icon_id']")
+	private WebElement technicalDetails_482;
+	public WebElement technicalDetails_482() {
+		return technicalDetails_482; 
+	}
+	
+	@FindBy(xpath = "//label[contains(text(),'Clear Cache ')]")
+    private WebElement FSM_ClearCacheInTechnicalDetailsIcon;
+    public WebElement FSM_ClearCacheInTechnicalDetailsIcon() {
+        return FSM_ClearCacheInTechnicalDetailsIcon;
+    }
+    
+    @FindBy(xpath = "(//a[text()='Open Item'])[1]")
+    private WebElement openItemInSendAlert;
+    public WebElement openItemInSendAlert() {
+        return openItemInSendAlert;
+    }
+    
+    @FindBy(xpath = "//button[@id='alertsOpenItemApprove_RCVALERT']")
+    private WebElement approveButtonInOpenItem;
+    public WebElement approveButtonInOpenItem() {
+        return approveButtonInOpenItem;
+    }
+    
+    @FindBy(xpath ="//td[text()='Facilities Management']/preceding-sibling::td/span/span")
+	private WebElement facilitiesManagementUnderWIFAK_482;
+	public WebElement facilitiesManagementUnderWIFAK_482() {
+		return facilitiesManagementUnderWIFAK_482;
+	}
+	
+	@FindBy(xpath ="//a[@id='WIFT008MT']")
+	private WebElement maintenance_facilitiesManagementUnderWIFAK_482;
+	public WebElement maintenance_facilitiesManagementUnderWIFAK_482() {
+		return maintenance_facilitiesManagementUnderWIFAK_482;
+	}
+	
+	@FindBy(xpath ="//input[@id='facilityManagementGridTbl_Id_WIFT008MT_gs_fmsFacilityVO.FROM_APPLICATION']")
+	private WebElement searchApplicationRefNum_facilitiesManagementUnderWIFAK_482;
+	public WebElement searchApplicationRefNum_facilitiesManagementUnderWIFAK_482() {
+		return searchApplicationRefNum_facilitiesManagementUnderWIFAK_482;
+	}
+	
+	@FindBy(xpath ="//td[@id='td_facilityManagementGridTbl_Id_WIFT008MT_1_fmsFacilityVO.CODE']")
+	private WebElement selectsearchedApplicationRefNum_facilitiesManagementUnderWIFAK_482;
+	public WebElement selectsearchedApplicationRefNum_facilitiesManagementUnderWIFAK_482() {
+		return selectsearchedApplicationRefNum_facilitiesManagementUnderWIFAK_482;
+	}
+	
+	@FindBy(xpath ="//a[@id='infoBarSearchButton_WIFT008MT']")
+	private WebElement searchIcon_facilitiesManagementUnderWIFAK_482;
+	public WebElement searchIcon_facilitiesManagementUnderWIFAK_482() {
+		return searchIcon_facilitiesManagementUnderWIFAK_482;
+	}
+	@FindBy(xpath ="//li[@id='facilityAdditionalDetailsTab_WIFT008MT']")
+	private WebElement additionalDetails_Maintenance_facilitiesManagementUnderWIFAK_482;
+	public WebElement additionalDetails_Maintenance_facilitiesManagementUnderWIFAK_482() {
+		return additionalDetails_Maintenance_facilitiesManagementUnderWIFAK_482;
+	}
+	
+	@FindBy(xpath ="//input[@id='facilityMgtAddDetDateEffectiveUntill_WIFT008MT']")
+	private WebElement effectiveDateUntil_482;
+	public WebElement effectiveDateUntil_482() {
+		return effectiveDateUntil_482;
+	}
+	
+	@FindBy(xpath ="//td[@id='td_FacilityManagementDocumentDetailsGrid_WIFT008MT_1_fmsFacDocumentsVO.SOL_DATE_SENT']")
+	private WebElement randomClickDocumentDate_482;
+	public WebElement randomClickDocumentDate_482() {
+		return randomClickDocumentDate_482;
+	}
+	
+	@FindBy(xpath ="//td[@id='td_FacilityManagementDocumentDetailsGrid_WIFT008MT_2_fmsFacDocumentsVO.SOL_DATE_SENT']")
+	private WebElement randomClickDocumentDate2_482;
+	public WebElement randomClickDocumentDate2_482() {
+		return randomClickDocumentDate2_482;
+	}
+	
+	@FindBy(xpath ="//input[@id='1_fmsFacDocumentsVO.SOL_DATE_SENT_FacilityManagementDocumentDetailsGrid_WIFT008MT']")
+	private WebElement solicitorDateSent_482;
+	public WebElement solicitorDateSent_482() {
+		return solicitorDateSent_482;
+	}
+	
+	@FindBy(xpath ="//input[@id='1_fmsFacDocumentsVO.SOL_DATE_REC_FacilityManagementDocumentDetailsGrid_WIFT008MT']")
+	private WebElement solicitorDateReceived_482;
+	public WebElement solicitorDateReceived_482() {
+		return solicitorDateReceived_482;
+	}
+	
+	@FindBy(xpath ="//input[@id='1_fmsFacDocumentsVO.EST_DATE_SENT_FacilityManagementDocumentDetailsGrid_WIFT008MT']")
+	private WebElement estimatorDateSent_482;
+	public WebElement estimatorDateSent_482() {
+		return estimatorDateSent_482;
+	}
+	
+	@FindBy(xpath ="//input[@id='1_fmsFacDocumentsVO.EST_DATE_REC_FacilityManagementDocumentDetailsGrid_WIFT008MT']")
+	private WebElement estimatorDateReceived_482;
+	public WebElement estimatorDateReceived_482() {
+		return estimatorDateReceived_482;
+	}
+	
+	@FindBy(xpath ="//input[@id='1_fmsFacDocumentsVO.CUSTODIAN_SENT_FacilityManagementDocumentDetailsGrid_WIFT008MT']")
+	private WebElement custodianDateSent_482;
+	public WebElement custodianDateSent_482() {
+		return custodianDateSent_482;
+	}
+	
+	@FindBy(xpath ="//input[@id='2_fmsFacDocumentsVO.SOL_DATE_SENT_FacilityManagementDocumentDetailsGrid_WIFT008MT']")
+	private WebElement solicitorDateSent_Document2_482;
+	public WebElement solicitorDateSent_Document2_482() {
+		return solicitorDateSent_Document2_482;
+	}
+	
+	@FindBy(xpath ="//input[@id='2_fmsFacDocumentsVO.SOL_DATE_REC_FacilityManagementDocumentDetailsGrid_WIFT008MT']")
+	private WebElement solicitorDateReceived_Document2_482;
+	public WebElement solicitorDateReceived_Document2_482() {
+		return solicitorDateReceived_Document2_482;
+	}
+	
+	@FindBy(xpath ="//input[@id='2_fmsFacDocumentsVO.EST_DATE_SENT_FacilityManagementDocumentDetailsGrid_WIFT008MT']")
+	private WebElement estimatorDateSent_Document2_482;
+	public WebElement estimatorDateSent_Document2_482() {
+		return estimatorDateSent_Document2_482;
+	}
+	
+	@FindBy(xpath ="//input[@id='2_fmsFacDocumentsVO.EST_DATE_REC_FacilityManagementDocumentDetailsGrid_WIFT008MT']")
+	private WebElement estimatorDateReceivedDocument2_482;
+	public WebElement estimatorDateReceivedDocument2_482() {
+		return estimatorDateReceivedDocument2_482;
+	}
+	
+	@FindBy(xpath ="//input[@id='2_fmsFacDocumentsVO.CUSTODIAN_SENT_FacilityManagementDocumentDetailsGrid_WIFT008MT']")
+	private WebElement custodianDateSent_Document2_482;
+	public WebElement custodianDateSent_Document2_482() {
+		return custodianDateSent_Document2_482;
+	}
+	
+	@FindBy(id="facilitymanagement_save_btn_WIFT008MT")
+	private WebElement saveButtonFacilitiesManagement_482;
+	public WebElement saveButtonFacilitiesManagement_482() {
+		return saveButtonFacilitiesManagement_482;
+	}
+	
+	@FindBy(id="DocumentDetailsTab_WIFT008MT")
+	private WebElement documentDetailsFacilitiesManagement_482;
+	public WebElement documentDetailsFacilitiesManagement_482() {
+		return documentDetailsFacilitiesManagement_482;
+	}
+	
+	@FindBy(xpath="//input[@id='facilityMangementCode_WIFT008MT']")
+	private WebElement storeFacilityCode_FacilitiesManagement_482;
+	public WebElement storeFacilityCode_FacilitiesManagement_482() {
+		return storeFacilityCode_FacilitiesManagement_482;
+	}
 
+	
 }
 

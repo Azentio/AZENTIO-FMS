@@ -3,6 +3,9 @@ package tests;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.Map;
+
+import dataProvider.ExcelData;
 
 
 
@@ -48,11 +51,13 @@ public static void main(String[] args) throws InterruptedException {
 //	  else {
 //		  currentDate =LocalDate.now().format(dtFormatter).toString();
 //	}
-	String sample ="Application Facility : 4134 saved successfully";
-	String substring = sample.substring(23, 28);
-	System.out.println(substring);
-	System.out.println(sample.indexOf('4'));
-	
+	String path = System.getProperty("user.dir") +"\\TestData\\FMSTestData.xlsx";
+	ExcelData facilityManagementData = new ExcelData(path,"FacilitiesManagement","DataSet ID");
+	Map<String, String> testdata = facilityManagementData.getTestdata("AT_FM_062_D1");
+	System.out.println(testdata.get("ApplicationFor"));
+	ExcelData testExecution = new ExcelData(path,"TestExecution","TestCaseID");
+	Map<String, String> testdata2 = testExecution.getTestdata("AT_FM_062");
+	System.out.println(testdata2.get("Data Set ID"));
 	  
 //	 Date date = new Date();
 //	 int day = date.getDay();

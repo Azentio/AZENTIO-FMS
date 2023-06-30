@@ -108,6 +108,13 @@ public String getCSMApplicationUrl() {
 		else
 			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
 	}
+	public String getFMSApplicationUserTypeSendAlert() {
+		String userType = properties.getProperty("FMS_Application_UserTypeSendAlert");
+		if (userType != null)
+			return userType;
+		else
+			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
+	}
 	public String getFMSParamApplicationUserType() {
 		String userType = properties.getProperty("FMS_ParamApplication_UserType");
 		if (userType != null)

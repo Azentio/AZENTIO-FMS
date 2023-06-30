@@ -1,6 +1,11 @@
 package stepdefinitions;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 
 import dataProvider.ConfigFileReader;
@@ -19,6 +24,12 @@ public class LoginTest extends BaseClass {
 	FMSCommonWebElements fmsCommonWebElements = new FMSCommonWebElements(driver);
 	ConfigFileReader configFileReader = new ConfigFileReader();
 	
+	@Given("navigate to FMS application and login with valid credentials for alert functionality")
+	public void navigate_to_fms_application_and_login_with_valid_credentials_for_alert_functionality() {
+		driver.get(configFileReader.getFMSApplicationUrl());
+		FMSLogin.loginIntoFmsApplication(configFileReader.getFMSApplicationUserTypeSendAlert());
+	}
+
 	@Given("^navigate to FMS application and login with valid credentials$")
     public void navigate_to_fms_application_and_login_with_valid_credentials() throws Throwable {
 		driver.get(configFileReader.getFMSApplicationUrl());

@@ -62,6 +62,53 @@ public class ApplicationForFinancialFacilityParamObj {
 		return checkBoxApprovalCommittee;
 	}
 	
+	@FindBy(xpath ="//input[@id='fmsFacilityType_credit_review_P008UP']")
+	private WebElement checkBoxCreditReview_482;
+	public WebElement checkBoxCreditReview_482() {
+		return checkBoxCreditReview_482;
+	}
+	
+	@FindBy(xpath ="//input[@id='fmsFacilityType_credit_authorize_P008UP']")
+	private WebElement checkBoxCreditAuthorization_482;
+	public WebElement checkBoxCreditAuthorization_482() {
+		return checkBoxCreditAuthorization_482;
+	}
+	
+	@FindBy(xpath ="//input[@id='fmsFacilityType_issue_offer_P008UP']")
+	private WebElement checkBoxIssueFacilityOffer_482;
+	public WebElement checkBoxIssueFacilityOffer_482() {
+		return checkBoxIssueFacilityOffer_482;
+	}
+	
+	@FindBy(xpath ="//input[@id='fmsFacilityType_client_response_P008UP']")
+	private WebElement checkBoxClientResponse_482;
+	public WebElement checkBoxClientResponse_482() {
+		return checkBoxClientResponse_482;
+	}
+	
+	@FindBy(xpath ="//input[@id='fmsFacilityType_document_validation_yn_P008UP']")
+	private WebElement checkBoxDocumentValidation_482;
+	public WebElement checkBoxDocumentValidation_482() {
+		return checkBoxDocumentValidation_482;
+	}
+	
+	@FindBy(xpath ="//input[@id='fmsFacilityType_final_approval_P008UP']")
+	private WebElement checkBoxFinalApproval_482;
+	public WebElement checkBoxFinalApproval_482() {
+		return checkBoxFinalApproval_482;
+	}
+	
+	@FindBy(xpath ="//input[@id='fmsFacilityType_active_facility_P008UP']")
+	private WebElement checkBoxCreateActiveFacilityIfWithinLimit_482;
+	public WebElement checkBoxCreateActiveFacilityIfWithinLimit_482() {
+		return checkBoxCreateActiveFacilityIfWithinLimit_482;
+	}
+	
+	@FindBy(xpath ="//input[@id='fmsFacilityType_auto_approve_P008UP']")
+	private WebElement checkBoxAutomaticallyApproveFacilityIfWithinLimits_482;
+	public WebElement checkBoxAutomaticallyApproveFacilityIfWithinLimits_482() {
+		return checkBoxAutomaticallyApproveFacilityIfWithinLimits_482;
+	}
 	@FindBy(xpath ="//button[@id='fmsFacilityTypeMaint_update_P008UP']")
 	private WebElement updateButtonInUpdateAfterApproveSubMenu;
 	public WebElement updateButtonInUpdateAfterApproveSubMenu() {
@@ -87,8 +134,21 @@ public class ApplicationForFinancialFacilityParamObj {
 	}
 	
 	@FindBy(xpath ="//button[@id='fmsFacilityTypeMaint_approve_P008P']")
-	private WebElement aprroveButtonInApproveScreen;
-	public WebElement aprroveButtonInApproveScreen() {
-		return aprroveButtonInApproveScreen;
+	private WebElement approveButtonInApproveScreen;
+	public WebElement approveButtonInApproveScreen() {
+		return approveButtonInApproveScreen;
+	}
+	
+	
+	@FindBy(xpath ="//td[text()='Facilities Management']/preceding-sibling::td/span/span")
+	private WebElement facilitiesManagementUnderWIFAK_482;
+	public WebElement facilitiesManagementUnderWIFAK_482() {
+		return facilitiesManagementUnderWIFAK_482;
+	}
+	
+	@FindBy(xpath ="//a[@id='WIFT008MT']")
+	private WebElement Maintenance_facilitiesManagementUnderWIFAK_482;
+	public WebElement Maintenance_facilitiesManagementUnderWIFAK_482() {
+		return Maintenance_facilitiesManagementUnderWIFAK_482;
 	}
 }

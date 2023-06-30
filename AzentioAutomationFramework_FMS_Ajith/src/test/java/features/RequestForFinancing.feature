@@ -2,9 +2,9 @@ Feature: Testing the Functionality of Request for financing
 @AT_RF_008
 Scenario: MFI190234 - Request for Financing & Application --->Limit Details-->Repayment Plan, Maturity dates not changing properly
 Given navigate to FMS application and login with valid credentials
-And User Click on REQUEST FOR FINANCIN under FMS application
-And User click the Request For Financing Sub Menu under REQUEST FOR FINANCIN
-And User Click on Maintenance under Request For Financing Sub Menu in REQUEST FOR FINANCIN
+And User_482 Click on REQUEST FOR FINANCIN under FMS application
+And User_482 click the Request For Financing Sub Menu under REQUEST FOR FINANCIN
+And User_482 Click on Maintenance under Request For Financing Sub Menu in REQUEST FOR FINANCIN
 And User get the system date
 And User Select New Request in Reason For Submission under Maintenance screen in REQUEST FOR FINANCIN
 And User Search the CIF Number in Customer under Maintenance screen in REQUEST FOR FINANCIN
@@ -16,13 +16,13 @@ And User Search Product Class in Limit Details Pop up Menu
 #And User Enter the Margin value in New Tab Field in Limit Details Pop up Menu
 And User Click on Add button in Limit Details Pop up
 And User Click on Save button under Maintenance screen in REQUEST FOR FINANCIN
-And User Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Confirm Pop up Menu
 And User Get the Code in Success Pop up Menu
-And User Click on Ok button in Success Pop up Menu
-And User click search icon in Maintenance screen Request for financing
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 click search icon in Maintenance screen Request for financing
 And User Search code in Maintenance screen Request for financing
 And User Select searched record in Maintenance screen Request for financing
-And User Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Confirm Pop up Menu
 And User Click on Disbursement or Sublimit under Maintenance screen in REQUEST FOR FINANCIN
 And User select sublimit details in Maintenance screen Request for financing
 And User click repayment plan in Maintenance screen Request for financing
@@ -55,9 +55,9 @@ And User click ok button in Information Pop up
 @AT_RF_064_02
 Scenario: MFI190234 - Request for Financing & Application --->Limit Details-->Repayment Plan, Maturity dates not changing properly
 Given navigate to FMS application and login with valid credentials
-And User Click on REQUEST FOR FINANCIN under FMS application
-And User click the Request For Financing Sub Menu under REQUEST FOR FINANCIN
-And User Click on Maintenance under Request For Financing Sub Menu in REQUEST FOR FINANCIN
+And User_482 Click on REQUEST FOR FINANCIN under FMS application
+And User_482 click the Request For Financing Sub Menu under REQUEST FOR FINANCIN
+And User_482 Click on Maintenance under Request For Financing Sub Menu in REQUEST FOR FINANCIN
 And User get the system date
 And User Select New Request in Reason For Submission under Maintenance screen in REQUEST FOR FINANCIN
 And User Search the CIF Number in Customer under Maintenance screen in REQUEST FOR FINANCIN
@@ -70,10 +70,10 @@ And User Validate the created purpose of financing record reflected in applicati
 @AT_RF_068
 Scenario: TSR - SUPT170524
 Given navigate to FMS application and login with valid credentials
-And User Click on REQUEST FOR FINANCIN under FMS application
-And User click the Request For Financing Sub Menu under REQUEST FOR FINANCIN
-And User Click on Maintenance under Request For Financing Sub Menu in REQUEST FOR FINANCIN
-And User click search icon in Maintenance screen Request for financing
+And User_482 Click on REQUEST FOR FINANCIN under FMS application
+And User_482 click the Request For Financing Sub Menu under REQUEST FOR FINANCIN
+And User_482 Click on Maintenance under Request For Financing Sub Menu in REQUEST FOR FINANCIN
+And User_482 click search icon in Maintenance screen Request for financing
 And User Click and search final approval record in maintenance screen
 And User Select searched record in Maintenance screen Request for financing
 And User Click on Disbursement or Sublimit under Maintenance screen in REQUEST FOR FINANCIN
@@ -112,9 +112,9 @@ And User Validate Weight field should accept decimal value
 @AT_RF_120
 Scenario: MFI190065 - Request for financing - Facility Application is not flowing to Approval Committee
 Given navigate to FMS application and login with valid credentials
-And User Click on REQUEST FOR FINANCIN under FMS application
-And User click the Request For Financing Sub Menu under REQUEST FOR FINANCIN
-And User Click on Maintenance under Request For Financing Sub Menu in REQUEST FOR FINANCIN
+And User_482 Click on REQUEST FOR FINANCIN under FMS application
+And User_482 click the Request For Financing Sub Menu under REQUEST FOR FINANCIN
+And User_482 Click on Maintenance under Request For Financing Sub Menu in REQUEST FOR FINANCIN
 And User Select New Request in Reason For Submission under Maintenance screen in REQUEST FOR FINANCIN
 And User Search the CIF Number in Customer under Maintenance screen in REQUEST FOR FINANCIN
 And User Search the Facility Type under Maintenance screen in REQUEST FOR FINANCIN
@@ -125,13 +125,13 @@ And User Search Product Class in Limit Details Pop up Menu
 And User Enter the Margin value in New Tab Field in Limit Details Pop up Menu
 And User Click on Add button in Limit Details Pop up
 And User Click on Save button under Maintenance screen in REQUEST FOR FINANCIN
-And User Click on Ok button in Confirm Pop up Menu
-And User Click on Ok button in Success Pop up Menu
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
 And User Click on Validate button under Maintenance screen in REQUEST FOR FINANCIN
-And User Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Confirm Pop up Menu
 And User Click on Yes button in Confirm Pop up Menu
 And User Get the Code in Success Pop up Menu
-And User Click on Ok button in Success Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
 And User Click on Approve Level 1 under REQUEST FOR FINANCIN
 And User Search the Code in Approve Level 1 under REQUEST FOR FINANCIN
 And User Select the Searched Code in Approve Level 1 under REQUEST FOR FINANCIN
@@ -139,8 +139,8 @@ And User Click on Customer Grading and Recommendations in Approve Level 1 under 
 And User Select the Decision Field as Forward and Approval Committee in Customer Grading and Recommendations under Approve Level 1
 And User Select the Approval Committee as Investment Committee in Customer Grading and Recommendations under Approve Level 1
 And User Click on Approve button in Customer Grading and Recommendations under Approve Level 1
-And User Click on Ok button in Confirm Pop up Menu
-And User Click on Ok button in Success Pop up Menu
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
 And User Click on Approval Committee Recommendations under Request For Financing Sub Menu in REQUEST FOR FINANCIN
 
 @AT_RF_119_01
@@ -226,59 +226,59 @@ And User click ok button in sucess pop up
 @AT_RF_164
 Scenario: To check the new modification @ FMS Modification in Request for Financing Screen.
 Given navigate to FMS application and login with valid credentials
-And User Click on WIFAK Application Main Menu
-And User Click on WIFAK Application Sub Menu
-And User Click Application for financial facilities 
-And User Click Maintenance screen in WIFAK Application sub menu
-And User update test data set for AT_AFF_024
-And User Select Application For field in Maintenace Screen under WIRAK Application
-And User enter the CIF No in main info tab under WIRAK Application
-And User enter the facility type in main info tab under WIRAK Application
-And User enter the country of financing in main info tab under WIRAK Application
-And User clicks on the additional details tab under WIRAK Application	
-And User Enter total value under additional details tab in WIFAK Application
-And User click Limit Details tab in WIFAK Application
-And User click add icon in limit details under WIFAK Application
-And User select the product class in limit details under WIFAK Application
-And User select the floating rate in limit details under WIFAK Application
-And User enter the floating rate periodicity in limit details under WIFAK Application
-And User select the floating rate periodicity type in limit details under WIFAK Application
+And User_482 Click on WIFAK Application Main Menu
+And User_482 Click on WIFAK Application Sub Menu
+And User_482 Click Application for financial facilities 
+And User_482 Click Maintenance screen in WIFAK Application sub menu
+And User_482 update test data set for AT_AFF_024
+And User_482 Select Application For field in Maintenace Screen under WIRAK Application
+And User_482 enter the CIF No in main info tab under WIRAK Application
+And User_482 enter the facility type in main info tab under WIRAK Application
+And User_482 enter the country of financing in main info tab under WIRAK Application
+And User_482 clicks on the additional details tab under WIRAK Application	
+And User_482 Enter total value under additional details tab in WIFAK Application
+And User_482 click Limit Details tab in WIFAK Application
+And User_482 click add icon in limit details under WIFAK Application
+And User_482 select the product class in limit details under WIFAK Application
+And User_482 select the floating rate in limit details under WIFAK Application
+And User_482 enter the floating rate periodicity in limit details under WIFAK Application
+And User_482 select the floating rate periodicity type in limit details under WIFAK Application
 
 @AT_RF_166
 Scenario: To check the new modification @ FMS Modification in Request for Financing Screen.
 Given navigate to FMS application and login with valid credentials
-And User Click on WIFAK Application Main Menu
-And User Click on WIFAK Application Sub Menu
-And User Click Application for financial facilities 
-And User Click Maintenance screen in WIFAK Application sub menu
-And User update test data set for AT_AFF_024
-And User Select Application For field in Maintenace Screen under WIRAK Application
-And User enter the CIF No in main info tab under WIRAK Application
-And User enter the facility type in main info tab under WIRAK Application
-And User enter the country of financing in main info tab under WIRAK Application
-And User enter facility rating in main info tab under WIRAK Application
-And User clicks on the additional details tab under WIRAK Application	
-And User Enter total value under additional details tab in WIFAK Application
-And User Enter offer Expiration in Additional details under WIFAK Application
-And User click Limit Details tab in WIFAK Application
-And User click add icon in limit details under WIFAK Application
-And User select the product class in limit details under WIFAK Application
-And User select the floating rate in limit details under WIFAK Application
-And User enter the floating rate periodicity in limit details under WIFAK Application
-And User select the floating rate periodicity type in limit details under WIFAK Application Approve screen
-And User click add icon in limit details popup under WIFAK Application
-And User click document details tab under WIFAK Application
-And User enter solicitor name to select from look up in document details under WIFAK Application 
-And User enter Estimator name to select from look up in document details under WIFAK Application
-And User click Maininformation tab in WIFAK Application
-And User click save button in Main Info tab under WIFAK Application
-And User Click on Ok button in Confirm Pop up Menu
-And User Get the Code in Success Pop up Menu under WIFAK Application
-And User Click on Ok button in Success Pop up Menu
-And User click Validate button in Main Info tab under WIFAK Application
-And User Click on Ok button in Confirm Pop up Menu
-And User Click on Ok button in Confirm Pop up Menu
-And User Click on Ok button in Success Pop up Menu
+And User_482 Click on WIFAK Application Main Menu
+And User_482 Click on WIFAK Application Sub Menu
+And User_482 Click Application for financial facilities 
+And User_482 Click Maintenance screen in WIFAK Application sub menu
+And User_482 update test data set for AT_AFF_024
+And User_482 Select Application For field in Maintenace Screen under WIRAK Application
+And User_482 enter the CIF No in main info tab under WIRAK Application
+And User_482 enter the facility type in main info tab under WIRAK Application
+And User_482 enter the country of financing in main info tab under WIRAK Application
+And User_482 enter facility rating in main info tab under WIRAK Application
+And User_482 clicks on the additional details tab under WIRAK Application	
+And User_482 Enter total value under additional details tab in WIFAK Application
+And User_482 Enter offer Expiration in Additional details under WIFAK Application
+And User_482 click Limit Details tab in WIFAK Application
+And User_482 click add icon in limit details under WIFAK Application
+And User_482 select the product class in limit details under WIFAK Application
+And User_482 select the floating rate in limit details under WIFAK Application
+And User_482 enter the floating rate periodicity in limit details under WIFAK Application
+And User_482 select the floating rate periodicity type in limit details under WIFAK Application Approve screen
+And User_482 click add icon in limit details popup under WIFAK Application
+And User_482 click document details tab under WIFAK Application
+And User_482 enter solicitor name to select from look up in document details under WIFAK Application 
+And User_482 enter Estimator name to select from look up in document details under WIFAK Application
+And User_482 click Maininformation tab in WIFAK Application
+And User_482 click save button in Main Info tab under WIFAK Application
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Get the Code in Success Pop up Menu under WIFAK Application
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 click Validate button in Main Info tab under WIFAK Application
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
 And User_482 Click close icon in sent alert under WIFAK Application
 And User_482 Click Approve Level 1 screen in application for financial facilities under WIFAK Application
 And User_482 Search code in Approve Level 1 screen in Application for financial facilities
