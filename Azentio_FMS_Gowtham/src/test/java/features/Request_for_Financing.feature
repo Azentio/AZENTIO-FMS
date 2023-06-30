@@ -84,12 +84,11 @@ Feature: Title of your feature
     Scenario: TSR - EWB180031
      Given navigate to FMS application2 and login with valid credentials
      And User update test data for test case no 636958
-     #excell pending
      And Click Request for financin
      And Click Request for financing
      And Goto maintenace
      And click the reason for submission search box
-     And click the customer search box
+    And click the customer search box
     And click the facility type details
     And Enter the facility type code under facility type
     And Enter the total limit under global limit
@@ -109,11 +108,11 @@ Feature: Title of your feature
     And Click the final validate popup
    
   
-    @6369582
+    @636958_2
     Scenario: TSR - EWB180031
     Given navigate to FMS application2 and login with valid credentials
-     And Click Request for financin
-     And Click Request for financing
+    And Click Request for financin
+    And Click Request for financing
     And Click the Approve level1 screen under request for financing
     And Search the value in approve1
     And Select the record in approve1
@@ -180,10 +179,11 @@ Feature: Title of your feature
     	
 	  @636898
    Scenario: TSR - BIPL180002
+   #excell pending
 		Given navigate to FMS application2 and login with valid credentials
     And Click Wifak Application first
     And Click Wifak Application Second
-    And User update test data for test case no 949677
+    And User update test data for test case no 636898
     And Click Application for financial facilities
     And Click Maintenance
     And User select the application for dropdown as decrease in main screen

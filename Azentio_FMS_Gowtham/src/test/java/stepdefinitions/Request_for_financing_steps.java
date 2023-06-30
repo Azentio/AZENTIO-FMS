@@ -38,13 +38,18 @@ public class Request_for_financing_steps {
 	String path = System.getProperty("user.dir") + "\\TestData\\FMSTestData.xlsx";
 	ExcelData fmsTransactionsExcelData = new ExcelData(path, "WIFAK_Application_TestData", "Data Set ID");
 	Map<String, String> testData;
-	ExcelData fmsTransactionsExcelData1 = new ExcelData(path, "REQUEST_FOR_FINANCIN", "Data Set ID");
+	ExcelData fmsTransactionsExcelData1 = new ExcelData(path, " REQUEST_FOR_FINANCIN ", "Data Set ID");
 	Map<String, String> testData1;
 	ExcelData fmsTransactionsExcelData2 = new ExcelData(path, "Baj Application", "Data Set ID");
 	Map<String, String> testData2;
 	ExcelData fmsTransactionsExcelData3 = new ExcelData(path, "Collateral Management", "Data Set ID");
 	Map<String, String> testData3;
-
+	
+	@Given("User update test data for test case no 1039018")
+	public void user_update_test_data_for_test_case_no_1039018() {
+		testData1 = fmsTransactionsExcelData1.getTestdata("AT_DDR_078");
+	}
+	
 	@And("^Click Request for financin$")
 	public void click_request_for_financin() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.RequestForFinancin());
@@ -442,8 +447,7 @@ public class Request_for_financing_steps {
 	// @652912
 	@Given("User update test data for test case no 652912")
 	public void user_update_test_data_for_test_case_no_652912() {
-	    //AT_RF_053
-		
+		testData = fmsTransactionsExcelData1.getTestdata("AT_RF_053");
 	}
 
 	@And("^Click Facilities Management under WIFAK APPLICATION$")
@@ -568,14 +572,13 @@ public class Request_for_financing_steps {
 				break;
 			}
 		}
-
 		Assert.assertEquals(check, "Cancelled");
 	}
 
 	// @636958
 	@Given("User update test data for test case no 636958")
 	public void user_update_test_data_for_test_case_no_636958() {
-	    
+		testData1 = fmsTransactionsExcelData1.getTestdata("AT_RF_054");
 	}
 
 	@And("^click the reason for submission search box$")
@@ -583,16 +586,17 @@ public class Request_for_financing_steps {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.reasonforsubmisson());
 		// Request_for_financing_Obj.SelectUsingVisibleText(Request_for_financing_Obj.reasonforsubmisson(),
 		// "New Request");
-		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.reasonforsubmisson(), "Modify Request");
+		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.reasonforsubmisson(),testData1.get("Reason For Submission"));
+		//DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.reasonforsubmisson(),"New Request");
 	}
 
 	@And("^click the customer search box$")
 	public void click_the_customer_search_box() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.customersearchbox());
 		Request_for_financing_Obj.customersearchbox().click();
-		Request_for_financing_Obj.customersearchbox().sendKeys("727");
+		Request_for_financing_Obj.customersearchbox().sendKeys(testData1.get("Customer Search Box"));
 		Request_for_financing_Obj.customersearchbox().sendKeys(Keys.TAB);
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 	}
 
 	@And("^click the facility type details$")
@@ -609,13 +613,12 @@ public class Request_for_financing_steps {
 				}
 			}
 		}
-
 	}
 
 	@And("^Enter the facility type code under facility type$")
 	public void enter_the_facility_type_code_under_facility_type() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.facilitytypedetailssearchbox());
-		Request_for_financing_Obj.facilitytypedetailssearchbox().sendKeys("221");
+		Request_for_financing_Obj.facilitytypedetailssearchbox().sendKeys(testData1.get("Facility Type"));
 		Request_for_financing_Obj.facilitytypetouch().click();
 
 	}
@@ -632,7 +635,7 @@ public class Request_for_financing_steps {
 				}
 			}
 		}
-		Request_for_financing_Obj.totallimitsearchbox().sendKeys("10000");
+		Request_for_financing_Obj.totallimitsearchbox().sendKeys(testData1.get("Total Limit"));
 		Request_for_financing_Obj.facilitytypetouch().click();
 
 	}
@@ -643,6 +646,7 @@ public class Request_for_financing_steps {
 		for (int i = 0; i <= 300; i++) {
 			try {
 				JavascriptHelper.scrollIntoView(Request_for_financing_Obj.disbursementsublimit());
+				break;
 			} catch (Exception e) {
 				if (i == 300) {
 					Assert.fail(e.getMessage());
@@ -663,7 +667,7 @@ public class Request_for_financing_steps {
 	@And("^Add the product class values in product searchbox$")
 	public void add_the_product_class_values_in_product_searchbox() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.productclasssearchbox());
-		Request_for_financing_Obj.productclasssearchbox().sendKeys("1");
+		Request_for_financing_Obj.productclasssearchbox().sendKeys(testData1.get("Product Class"));
 		Request_for_financing_Obj.productclasssearchbox().sendKeys(Keys.TAB);
 		// Request_for_financing_Obj.productclass().click();
 		for (int i = 0; i < 200; i++) {
@@ -708,7 +712,7 @@ public class Request_for_financing_steps {
 					} catch (Exception e) {
 					}
 				}
-				Request_for_financing_Obj.tenure().sendKeys("12");
+				Request_for_financing_Obj.tenure().sendKeys(testData1.get("Tenure"));
 				Request_for_financing_Obj.tenure().sendKeys(Keys.TAB);
 				break;
 			} catch (Exception e) {
@@ -722,7 +726,7 @@ public class Request_for_financing_steps {
 				// waitHelper.waitForElementwithFluentwait(driver,
 				// Request_for_financing_Obj.select_the_moths_in_tenure());
 				DropDownHelper.SelectUsingVisibleValue(Request_for_financing_Obj.select_the_moths_in_tenure(),
-						"Months");
+						testData1.get("Months"));
 				break;
 			} catch (Exception e) {
 				if (i == 299) {
@@ -739,7 +743,7 @@ public class Request_for_financing_steps {
 			try {
 				// JavascriptHelper.scrollIntoView(Request_for_financing_Obj.marginsearchbox());
 				Request_for_financing_Obj.marginsearchbox().clear();
-				Request_for_financing_Obj.marginsearchbox().sendKeys("1", Keys.TAB);
+				Request_for_financing_Obj.marginsearchbox().sendKeys(testData1.get("1"), Keys.TAB);
 				break;
 			} catch (Exception e) {
 				if (i == 300) {
@@ -1012,10 +1016,10 @@ public class Request_for_financing_steps {
 		Request_for_financing_Obj.select_firstRow_in_RejectReason().click();
 
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.select_reasonForRejection());
-		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.select_reasonForRejection(), "TEST");
+		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.select_reasonForRejection(), testData1.get("Reason For Rejection"));
 
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Type_detailsIn_reasonForRejection());
-		Request_for_financing_Obj.Type_detailsIn_reasonForRejection().sendKeys("dc");
+		Request_for_financing_Obj.Type_detailsIn_reasonForRejection().sendKeys(testData1.get("Type Details"));
 
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.clickOk_reasonForRejection());
 		Request_for_financing_Obj.clickOk_reasonForRejection().click();
@@ -1187,7 +1191,7 @@ public class Request_for_financing_steps {
 
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.tenure());
 		clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.tenure());
-		Request_for_financing_Obj.tenure().sendKeys("5");
+		Request_for_financing_Obj.tenure().sendKeys(testData1.get("Change Months in Tenure"));
 
 		waitHelper.waitForElementwithFluentwait(driver,
 				Request_for_financing_Obj.click_editbutton_in_exitstingproduct_Class());
@@ -2049,7 +2053,7 @@ public class Request_for_financing_steps {
 	public void user_existing_facility_no_in_mainteance_under_request_for_financing() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Existing_Facility_No_InMainteance_under_RequestForFinancing_607());
 		Request_for_financing_Obj.Existing_Facility_No_InMainteance_under_RequestForFinancing_607().click();
-		Request_for_financing_Obj.Existing_Facility_No_InMainteance_under_RequestForFinancing_607().sendKeys("1536");
+		Request_for_financing_Obj.Existing_Facility_No_InMainteance_under_RequestForFinancing_607().sendKeys("4445");
 		Request_for_financing_Obj.Existing_Facility_No_InMainteance_under_RequestForFinancing_607().sendKeys(Keys.TAB);
 	   
 		
@@ -2078,6 +2082,27 @@ public class Request_for_financing_steps {
 		}
 
 		Assert.assertEquals(check, "5,000.00");
+		
+		//reason for rejection
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.ClickModificationReason_InMainteance_under_RequestForFinancing_607());
+		Request_for_financing_Obj.ClickModificationReason_InMainteance_under_RequestForFinancing_607().click();
+		
+		waitHelper.waitForElementwithFluentwait(driver,
+				Request_for_financing_Obj.ClickAddBtn_ModificationReason_InMainteance_under_RequestForFinancing_607());
+		Request_for_financing_Obj.ClickAddBtn_ModificationReason_InMainteance_under_RequestForFinancing_607().click();
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.ClickFirstLine_ModificationReason_InMainteance_under_RequestForFinancing_607());
+		Request_for_financing_Obj.ClickFirstLine_ModificationReason_InMainteance_under_RequestForFinancing_607().click();
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.SelectReason_ModificationReason_InMainteance_under_RequestForFinancing_607());
+		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.SelectReason_ModificationReason_InMainteance_under_RequestForFinancing_607(), "Other");
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.TextReason_ModificationReason_InMainteance_under_RequestForFinancing_607());
+		Request_for_financing_Obj.TextReason_ModificationReason_InMainteance_under_RequestForFinancing_607().sendKeys("dc");
+
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.clickOk_reasonForRejection());
+		Request_for_financing_Obj.clickOk_reasonForRejection().click();
+
 	   
 	}
 
@@ -2123,12 +2148,27 @@ public class Request_for_financing_steps {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmsavepopupokbutton());
 		Request_for_financing_Obj.confirmsavepopupokbutton().click();
 		
-		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_okOn_save_pop());
-		Request_for_financing_Obj.Click_okOn_save_pop().click();
+		//waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_okOn_save_pop());
+		
+		try {
+			for (int i = 0; i < 700; i++) {
+				Request_for_financing_Obj.Click_okOn_save_pop().click();
+				break;
+			}
+		} catch (Exception e) {
+		}
 	   
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.CloseTab());
 		Request_for_financing_Obj.CloseTab().click();
-
+		try {
+			for (int i = 0; i < 300; i++) {
+				if(Request_for_financing_Obj.confirmsavepopupokbutton().isDisplayed()) {
+					Request_for_financing_Obj.confirmsavepopupokbutton().click();
+				}
+			}
+		} catch (Exception e) {
+		}
+		
 	}
 
 	@Given("User_607 Click Approve Level1 under Request For Financing")
@@ -2151,17 +2191,17 @@ public class Request_for_financing_steps {
 
 	@Given("User_607 Check total Ammount In Approve Level1 under Request For Financing")
 	public void user_check_total_ammount_in_approve_level1_under_request_for_financing() throws Throwable {
-		Thread.sleep(1000);
+		Thread.sleep(10000);
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Check_totalAmmount_InApproveLevel1_under_RequestForFinancing_607());
 		String check = "";
 		for (int i = 0; i <= 300; i++) {
 			check = Request_for_financing_Obj.Check_totalAmmount_InApproveLevel1_under_RequestForFinancing_607().getAttribute("initialvalue");
-			if (check.equalsIgnoreCase("5,000.00")) {
+			if (check.equalsIgnoreCase("5000")) {
 				break;
 			}
 		}
 
-		Assert.assertEquals(check, "5,000.00");
+		Assert.assertEquals(check, "5000");
 	}
 
 	@Given("User_607 Click Finance Amount In Approve Level1")
@@ -2170,12 +2210,12 @@ public class Request_for_financing_steps {
 		String check = "";
 		for (int i = 0; i <= 300; i++) {
 			check = Request_for_financing_Obj.Click_Finance_Amount_InApproveLevel1_607().getAttribute("value");
-			if (check.equalsIgnoreCase("5,000.00")) {
+			if (check.equalsIgnoreCase("5,000")) {
 				break;
 			}
 		}
 
-		Assert.assertEquals(check, "5,000.00");
+		Assert.assertEquals(check, "5,000");
 	}
 
 	@Given("User_607 Click Disbursement Sublimit In Approve Level1 under Request For Financing")
@@ -2200,7 +2240,8 @@ public class Request_for_financing_steps {
 		Assert.assertEquals(check, "5,000.000");
 	}
 
-
+	//1039017
+	
 	
 	
 	

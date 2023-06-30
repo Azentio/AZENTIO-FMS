@@ -5,4 +5,4 @@ Feature: Title of your feature
 
   @tag1
   Scenario: Title of your scenario
-  And Goto maintenace under request for financing under request financing
+  And User_607 Check duplicate Code not allow In Mainteance Under Financial Indicators

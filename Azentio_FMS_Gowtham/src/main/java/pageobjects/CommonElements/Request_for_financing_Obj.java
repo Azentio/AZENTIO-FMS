@@ -551,7 +551,7 @@ public class Request_for_financing_Obj {
 //			return Maintenance;
 //		}
 		
-	    @FindBy(xpath="//select[@id='requestFinancingApplicationFor_RFFRF00MT']")
+	    @FindBy(xpath="//*[@id='requestFinancingApplicationFor_CSMRF00MT']")
 		private WebElement Reason_For_Submission;
 	    public WebElement reasonforsubmisson() {
 			return Reason_For_Submission;
@@ -1555,6 +1555,37 @@ public class Request_for_financing_Obj {
 				return Existing_Facility_No_InMainteance_under_RequestForFinancing;
 			}
 			
+			@FindBy(xpath = "//label[text()='Modification Reason ']")
+			private WebElement ClickModificationReason_InMainteance_under_RequestForFinancing;
+			public WebElement ClickModificationReason_InMainteance_under_RequestForFinancing_607() {
+				return ClickModificationReason_InMainteance_under_RequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='add_reguestFinancingModificationRejectReasonGrid_RFFRF00MT']")
+			private WebElement ClickAddBtn_ModificationReason_InMainteance_under_RequestForFinancing;
+			public WebElement ClickAddBtn_ModificationReason_InMainteance_under_RequestForFinancing_607() {
+				return ClickAddBtn_ModificationReason_InMainteance_under_RequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='td_reguestFinancingModificationRejectReasonGrid_RFFRF00MT_1_rn']")
+			private WebElement ClickFirstLine_ModificationReason_InMainteance_under_RequestForFinancing;
+			public WebElement ClickFirstLine_ModificationReason_InMainteance_under_RequestForFinancing_607() {
+				return ClickFirstLine_ModificationReason_InMainteance_under_RequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='td_reguestFinancingModificationRejectReasonGrid_RFFRF00MT_1_fmsRequestFinancingModifyReasonVO.TRIGGER_TYPE']//select")
+			private WebElement SelectReason_ModificationReason_InMainteance_under_RequestForFinancing;
+			public WebElement SelectReason_ModificationReason_InMainteance_under_RequestForFinancing_607() {
+				return SelectReason_ModificationReason_InMainteance_under_RequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='td_reguestFinancingModificationRejectReasonGrid_RFFRF00MT_1_fmsRequestFinancingModifyReasonVO.DETAILS']//textarea")
+			private WebElement TextReason_ModificationReason_InMainteance_under_RequestForFinancing;
+			public WebElement TextReason_ModificationReason_InMainteance_under_RequestForFinancing_607() {
+				return TextReason_ModificationReason_InMainteance_under_RequestForFinancing;
+			}
+			
+			
 			@FindBy(xpath = "//*[@id='requestFinancingFacilityTotalvalue_RFFRF00MT']")
 			private WebElement EnterTotallimit_InMainteance_under_RequestForFinancing;
 			public WebElement EnterTotallimit_InMainteance_under_RequestForFinancing_607() {
@@ -1609,7 +1640,7 @@ public class Request_for_financing_Obj {
 				return Select_Record_InApproveLevel1_under_RequestForFinancing;
 			}
 			
-			@FindBy(xpath = "//*[@id='td_requestFinancingGridTbl_Id_RFFRF00P1_1_fmsRequestFinancingVO.CODE']")
+			@FindBy(xpath = "//*[@id='requestFinancingFacilityTotalvalue_RFFRF00P1']")
 			private WebElement Check_totalAmmount_InApproveLevel1_under_RequestForFinancing;
 			public WebElement Check_totalAmmount_InApproveLevel1_under_RequestForFinancing_607() {
 				return Check_totalAmmount_InApproveLevel1_under_RequestForFinancing;
@@ -1632,6 +1663,9 @@ public class Request_for_financing_Obj {
 			public WebElement Check_Totallimit_InDisbursementSublimit_ApproveLevel1_607() {
 				return Check_Totallimit_InDisbursementSublimit_ApproveLevel1;
 			}
+			
+	
+			
 			
 			
 			

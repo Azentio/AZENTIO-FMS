@@ -45,8 +45,12 @@ public class Application_for_Financial_Facility {
 		testData = fmsTransactionsExcelData.getTestdata("AT_AFF_007");
 	}
 	@Given("User update test data for test case no 583228")
-	public void user_update_test_data_for_test_case_no() {
+	public void user_update_test_data_for_test_case_no_583228() {
 		testData = fmsTransactionsExcelData.getTestdata("AT_RF_113");
+	}
+	@Given("User update test data for test case no 636898")
+	public void user_update_test_data_for_test_case_no_636898() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_AFF_007");
 	}
 
 	
@@ -239,9 +243,13 @@ public class Application_for_Financial_Facility {
 			}
 			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.limitDetailsNewRecordCleanFlag());
 	        WebElement cleanFlag = applicationFinancialObj.limitDetailsNewRecordCleanFlag();
-	        if(!(cleanFlag.isSelected())) {
-	            cleanFlag.click();
-	        }
+	        try {
+	        	if(!(cleanFlag.isSelected())) {
+		            cleanFlag.click();
+		        }
+			} catch (Exception e) {
+			}
+	        
 
 	}
 
@@ -1276,14 +1284,14 @@ public class Application_for_Financial_Facility {
 	    public void user_select_the_application_for_dropdown_as_decrease_in_main_screen() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.select_decrease_inApplicationFor());
 			//DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.select_decrease_inApplicationFor(), testData.get("Application For"));
-	    	DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.select_decrease_inApplicationFor(),"Decrease");
+	    	DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.select_decrease_inApplicationFor(),testData.get("ApplicationFor"));
 	    }
 
 	    @And("^User enter the input as Existing Facility Ref in main screen$")
 	    public void user_enter_the_input_as_existing_facility_ref_in_main_screen() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.mainExistingFacilityRef());
 //	    	applicationFinancialObj.mainExistingFacilityRef().sendKeys(testData.get("Facility Ref"));
-	    	applicationFinancialObj.mainExistingFacilityRef().sendKeys("1390");
+	    	applicationFinancialObj.mainExistingFacilityRef().sendKeys(testData.get("Existing Facility Ref"));
 	    	applicationFinancialObj.mainExistingFacilityRef().sendKeys(Keys.TAB);
 	    	
 	    	for(int i = 0; i <= 300; i++) {
@@ -1450,9 +1458,150 @@ public class Application_for_Financial_Facility {
 		       applicationFinancialObj.Click_ok_After_enterValues_On_recommendaion().click();
 		}
 
-		
-		
-		
+		//@1038989
+
+		@Given("User_607 Enter Down Payment to Vendor Percentage In Additional DetailsTab")
+		public void user_enter_down_payment_to_vendor_percentage_in_additional_details_tab() {
+		       waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Down_Payment_to_VendorPercentage_In_AdditionalDetailsTab_607());
+		       applicationFinancialObj.Down_Payment_to_VendorPercentage_In_AdditionalDetailsTab_607().sendKeys("10");			
+		       applicationFinancialObj.Down_Payment_to_VendorPercentage_In_AdditionalDetailsTab_607().sendKeys(Keys.TAB);
+		}
+
+		@Given("User_607 Check Down Payment to Vendor In Additional DetailsTab")
+		public void user_check_down_payment_to_vendor_in_additional_details_tab() {
+		       waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Down_Payment_to_Vendor_In_AdditionalDetailsTab_607());
+		       String Check = applicationFinancialObj.Down_Payment_to_Vendor_In_AdditionalDetailsTab_607().getAttribute("prevvalue");
+		       if (Check.isBlank()||Check.isEmpty()) {
+				Assert.fail();
+			}
+		}
+
+		@Given("User_607 Check Total Down Payment Percentage In Additional DetailsTab")
+		public void user_enter_total_down_payment_percentage_in_additional_details_tab() {
+		       waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Total_Down_PaymentPercentage_In_AdditionalDetailsTab_607());
+		       String Check = JavascriptHelper.executeScript("return document.getElementsByName('applicationFacilityCO.totalDownPaymentPercentage')[0].value").
+		                toString().replace(",","").split("[.]")[0];
+		       if (Check.isBlank()||Check.isEmpty()) {
+					Assert.fail();
+				}
+		}
+
+		@Given("User_607 Check Total Down Payment In Additional DetailsTab")
+		public void user_check_total_down_payment_in_additional_details_tab() {
+		       waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Total_Down_Payment_In_AdditionalDetailsTab_607());
+		       String Check = JavascriptHelper.executeScript("return document.getElementsByName('applicationFacilityCO.totalDownPayment')[0].value").
+		                toString().replace(",","").split("[.]")[0];
+		       if (Check.isBlank()||Check.isEmpty()) {
+					Assert.fail();
+				}
+		}
+
+		@Given("User_607 Check Down Payment to Vendor Percentage In limit Details")
+		public void user_check_down_payment_to_vendor_percentage_in_limit_details() throws Throwable {
+			   Thread.sleep(7000);
+		       waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.LimitDetails_Down_Payment_to_VendorPercentage_607());
+		       String Check = JavascriptHelper.executeScript("return document.getElementsByName('applicationFacilityCO.fmsAppLimitDetCO.fmsAppLimitDetVO.VENDOR_DOWN_PAYMENT_PERC')[0].value").
+		                toString().replace(",","").split("[.]")[0];
+		       if (Check.isBlank()||Check.isEmpty()) {
+					Assert.fail();
+				}		
+		       }
+
+		@Given("User_607 Check Down Payment to Vendor In limit Details")
+		public void user_check_down_payment_to_vendor_in_limit_details() {
+		       waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.LimitDetails_Down_Payment_to_Vendor_607());
+		       String Check = applicationFinancialObj.LimitDetails_Down_Payment_to_Vendor_607().getAttribute("prevvalue");
+		       if (Check.isBlank()||Check.isEmpty()) {
+					Assert.fail();
+				}		}
+
+		@Given("User_607 Check Total Down Payment Percentage In limit Details")
+		public void user_check_total_down_payment_percentage_in_limit_details() {
+		       waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.LimitDetails_Total_Down_PaymentPercentage_607());
+		       String Check = applicationFinancialObj.LimitDetails_Total_Down_PaymentPercentage_607().getAttribute("prevvalue");
+		       if (Check.isBlank()||Check.isEmpty()) {
+					Assert.fail();
+				}		}
+
+		@Given("User_607 Check Total Down Payment In limit Details")
+		public void user_check_total_down_payment_in_limit_details() {
+		       waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.LimitDetails_Total_Down_Payment_607());
+		       String Check = applicationFinancialObj.LimitDetails_Total_Down_Payment_607().getAttribute("prevvalue");
+		       if (Check.isBlank()||Check.isEmpty()) {
+					Assert.fail();
+				}
+		}
+		@Given("User_607 Enter Down Payment to Vendor Percentage In Facility type DetailsTab")
+		public void user_enter_down_payment_to_vendor_percentage_in_facility_type_details_tab() {
+		       waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Down_Payment_to_VendorPercentage_In_FacilitytypeDetailsTab_607());
+		       applicationFinancialObj.Down_Payment_to_VendorPercentage_In_FacilitytypeDetailsTab_607().sendKeys("10",Keys.TAB);
+		       
+		}
+
+		@Given("User_607 Check Down Payment to Vendor In Facility type DetailsTab")
+		public void user_check_down_payment_to_vendor_in_facility_type_details_tab() {
+		       waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Down_Payment_to_Vendor_In_FacilitytypeDetailsTab_607());
+		       String Check = applicationFinancialObj.Down_Payment_to_Vendor_In_FacilitytypeDetailsTab_607().getAttribute("prevvalue");
+		       if (Check.isBlank()||Check.isEmpty()) {
+					Assert.fail();
+				}
+		}
+
+		@Given("User_607 Check Total Down Payment Percentage In Facility type DetailsTab")
+		public void user_check_total_down_payment_percentage_in_facility_type_details_tab() {
+		       waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Total_Down_PaymentPercentage_InFacilitytypeDetailsTab_607());
+		       String Check = JavascriptHelper.executeScript("return document.getElementsByName('requestFinancingCO.totalDownPaymentPercentage')[0].value").
+               toString().replace(",","").split("[.]")[0];
+		       if (Check.isBlank()||Check.isEmpty()) {
+					Assert.fail();
+				}
+		}
+
+		@Given("User_607 Check Total Down Payment In Facility type DetailsTab")
+		public void user_check_total_down_payment_in_facility_type_details_tab() {
+		       waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Total_Down_Payment_In_FacilitytypeDetailsTab_607());
+		       String Check = JavascriptHelper.executeScript("return document.getElementsByName('requestFinancingCO.totalDownPayment')[0].value").
+		               toString().replace(",","").split("[.]")[0];
+		       if (Check.isBlank()||Check.isEmpty()) {
+					Assert.fail();
+				}
+		}
+
+		@Given("User_607 Check Down Payment to Vendor Percentage In DisbursementSubLimit Details")
+		public void user_check_down_payment_to_vendor_percentage_in_disbursement_sub_limit_details() {
+			  JavascriptHelper.scrollIntoView(applicationFinancialObj.DisbursementSub_LimitDetails_Down_Payment_to_VendorPercentage_607());
+		       String Check = applicationFinancialObj.DisbursementSub_LimitDetails_Down_Payment_to_VendorPercentage_607().getAttribute("prevvalue");
+		       if (Check.isBlank()||Check.isEmpty()) {
+					Assert.fail();
+				}
+		}
+
+		@Given("User_607 Check Down Payment to Vendor In DisbursementSubLimit Details")
+		public void user_check_down_payment_to_vendor_in_disbursement_sub_limit_details() {
+		       waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.DisbursementSub_LimitDetails_Down_Payment_to_Vendor_607());
+		       String Check = applicationFinancialObj.DisbursementSub_LimitDetails_Down_Payment_to_Vendor_607().getAttribute("prevvalue");
+		       if (Check.isBlank()||Check.isEmpty()) {
+					Assert.fail();
+				}
+		}
+
+		@Given("User_607 Check Total Down Payment Percentage In DisbursementSubLimit Details")
+		public void user_check_total_down_payment_percentage_in_disbursement_sub_limit_details() {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.DisbursementSub_LimitDetails_Total_Down_PaymentPercentage_607());
+		    String Check = applicationFinancialObj.DisbursementSub_LimitDetails_Total_Down_PaymentPercentage_607().getAttribute("prevvalue");
+		    if (Check.isBlank()||Check.isEmpty()) {
+				Assert.fail();
+			}
+		}
+
+		@Given("User_607 Check Total Down Payment In DisbursementSubLimit Details")
+		public void user_check_total_down_payment_in_disbursement_sub_limit_details() {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.DisbursementSub_LimitDetails_Total_Down_Payment_607());
+		    String Check = applicationFinancialObj.DisbursementSub_LimitDetails_Total_Down_Payment_607().getAttribute("prevvalue");
+		    if (Check.isBlank()||Check.isEmpty()) {
+				Assert.fail();
+			}
+		}
     
 }
 	

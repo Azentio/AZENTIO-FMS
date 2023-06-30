@@ -988,10 +988,113 @@ public class Application_for_Financial_FacilityObj {
 	      return Click_ok_After_enterValues_On_recommendaion;
 	    }
 	
-	
-	
-	
-	
-	
+	  //1038989
+		
+		@FindBy(xpath = "//*[@id='applicationFacilityDownPaymentToVendorPerc_WIFT001MT']")
+		private WebElement Down_Payment_to_VendorPercentage_In_AdditionalDetailsTab;
+		public WebElement Down_Payment_to_VendorPercentage_In_AdditionalDetailsTab_607() {
+			return Down_Payment_to_VendorPercentage_In_AdditionalDetailsTab;
+		}
+		
+		@FindBy(xpath = "//*[@id='applFacilityDownPaymentToVendor_WIFT001MT']")
+		private WebElement Down_Payment_to_Vendor_In_AdditionalDetailsTab;
+		public WebElement Down_Payment_to_Vendor_In_AdditionalDetailsTab_607() {
+			return Down_Payment_to_Vendor_In_AdditionalDetailsTab;
+		}
+		
+		@FindBy(xpath = "//*[@id='applFacilityTotalDownPaymentPerc_WIFT001MT']")
+		private WebElement Total_Down_PaymentPercentage_In_AdditionalDetailsTab;
+		public WebElement Total_Down_PaymentPercentage_In_AdditionalDetailsTab_607() {
+			return Total_Down_PaymentPercentage_In_AdditionalDetailsTab;
+		}
+		
+		@FindBy(xpath = "//*[@id='applFacilityTotalDownPayment_WIFT001MT']")
+		private WebElement Total_Down_Payment_In_AdditionalDetailsTab;
+		public WebElement Total_Down_Payment_In_AdditionalDetailsTab_607() {
+			return Total_Down_Payment_In_AdditionalDetailsTab;
+		}
+		
+		@FindBy(xpath = "//*[@id='applicationFacilityLimitDetailsDownPaymentToVendorPerc_WIFT001MT']")
+		private WebElement LimitDetails_Down_Payment_to_VendorPercentage;
+		public WebElement LimitDetails_Down_Payment_to_VendorPercentage_607() {
+			return LimitDetails_Down_Payment_to_VendorPercentage;
+		}
+		
+		@FindBy(xpath = "//*[@id='applFacilityLimitDetailsDownPaymentToVendorAmt_WIFT001MT']")
+		private WebElement LimitDetails_Down_Payment_to_Vendor;
+		public WebElement LimitDetails_Down_Payment_to_Vendor_607() {
+			return LimitDetails_Down_Payment_to_Vendor;
+		}
+		
+		@FindBy(xpath = "//*[@id='applFacilityLimitDetailsTotalDownPaymentPerc_WIFT001MT']")
+		private WebElement LimitDetails_Total_Down_PaymentPercentage;
+		public WebElement LimitDetails_Total_Down_PaymentPercentage_607() {
+			return LimitDetails_Total_Down_PaymentPercentage;
+		}
+		
+		@FindBy(xpath = "//*[@id='applFacilityLimitDetailsTotalDownPayment_WIFT001MT']")
+		private WebElement LimitDetails_Total_Down_Payment;
+		public WebElement LimitDetails_Total_Down_Payment_607() {
+			return LimitDetails_Total_Down_Payment;
+		}
+		
+		@FindBy(xpath = "//*[@id='reqFinancingLimitDownPaymentToVendorPerc_CSMRF00MT']")
+		private WebElement Down_Payment_to_VendorPercentage_In_FacilitytypeDetailsTab;
+		public WebElement Down_Payment_to_VendorPercentage_In_FacilitytypeDetailsTab_607() {
+			return Down_Payment_to_VendorPercentage_In_FacilitytypeDetailsTab;
+		}
+		
+		@FindBy(xpath = "//*[@id='reqFinancingLimitDownPaymentToVendor_CSMRF00MT']")
+		private WebElement Down_Payment_to_Vendor_In_FacilitytypeDetailsTab;
+		public WebElement Down_Payment_to_Vendor_In_FacilitytypeDetailsTab_607() {
+			return Down_Payment_to_Vendor_In_FacilitytypeDetailsTab;
+		}
+		
+		@FindBy(xpath = "//*[@id='reqFinancingLimitTotalDownPaymentPerc_CSMRF00MT']")
+		private WebElement Total_Down_PaymentPercentage_In_FacilitytypeDetailsTab;
+		public WebElement Total_Down_PaymentPercentage_InFacilitytypeDetailsTab_607() {
+			return Total_Down_PaymentPercentage_In_FacilitytypeDetailsTab;
+		}
+		
+		@FindBy(xpath = "//*[@id='reqFinancingLimitTotalDownPayment_CSMRF00MT']")
+		private WebElement Total_Down_Payment_In_FacilitytypeDetailsTab;
+		public WebElement Total_Down_Payment_In_FacilitytypeDetailsTab_607() {
+			return Total_Down_Payment_In_FacilitytypeDetailsTab;
+		}
+		
+		@FindBy(xpath = "//*[@id='requestFinanceLimitDetailsDownPaymentToVendorPerc_CSMRF00MT']")
+		private WebElement DisbursementSub_LimitDetails_Down_Payment_to_VendorPercentage;
+		public WebElement DisbursementSub_LimitDetails_Down_Payment_to_VendorPercentage_607() {
+			return DisbursementSub_LimitDetails_Down_Payment_to_VendorPercentage;
+		}
+		
+		@FindBy(xpath = "//*[@id='requestFinanceLimitDetailsDownPaymentToVendorAmt_CSMRF00MT']")
+		private WebElement DisbursementSub_LimitDetails_Down_Payment_to_Vendor;
+		public WebElement DisbursementSub_LimitDetails_Down_Payment_to_Vendor_607() {
+			return DisbursementSub_LimitDetails_Down_Payment_to_Vendor;
+		}
+		
+		@FindBy(xpath = "//*[@id='requestFinanceLimitDetailsTotalDownPaymentPerc_CSMRF00MT']")
+		private WebElement DisbursementSub_LimitDetails_Total_Down_PaymentPercentage;
+		public WebElement DisbursementSub_LimitDetails_Total_Down_PaymentPercentage_607() {
+			return DisbursementSub_LimitDetails_Total_Down_PaymentPercentage;
+		}
+		
+		@FindBy(xpath = "//*[@id='requestFinanceLimitDetailsTotalDownPayment_CSMRF00MT']")
+		private WebElement DisbursementSub_LimitDetails_Total_Down_Payment;
+		public WebElement DisbursementSub_LimitDetails_Total_Down_Payment_607() {
+			return DisbursementSub_LimitDetails_Total_Down_Payment;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	
 }
