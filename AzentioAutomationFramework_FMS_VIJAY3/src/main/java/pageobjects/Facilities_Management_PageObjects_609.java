@@ -872,7 +872,7 @@ public class Facilities_Management_PageObjects_609 {
 		return SearchButton;
 	}
 	
-	@FindBy(xpath = "//a[contains(text(),' Search ') and @id='infoBarSearchButton_WIFT008MT']")
+	@FindBy(xpath = "")
 	private WebElement ClearButton;
 	public WebElement ClearButton() {
 		return ClearButton;
@@ -977,7 +977,7 @@ public class Facilities_Management_PageObjects_609 {
 		return DrawDownRequest_Maintenanace_ValueDate;
 	}
 	
-	@FindBy(xpath = "//span[text()='Drawdown Additional Details']")
+	@FindBy(xpath = "//li[@id='drawDownRequestAdditionDetailsTabs_WIFT009MT']/a/span")
 	private WebElement DrawDownRequest_Maintenanace_DrawdownAdditionalDetails;
 	public WebElement DrawDownRequest_Maintenanace_DrawdownAdditionalDetails() {
 		return DrawDownRequest_Maintenanace_DrawdownAdditionalDetails;

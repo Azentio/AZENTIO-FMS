@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jun 29 15:48:21 IST 2023</td>
+<td>Started on:</td><td>Fri Jun 30 15:22:09 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>238 seconds (238399 ms)</td>
+<tr><td>Total time:</td><td>92 seconds (92648 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,9 +76,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "IIAB150404 - Modification In Draw Down Request Screen", "Optional[Draw Down Request]"</td>
-<td></td>
-<td>186</td>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "ABEI190325 - Missing Collateral Information Error upon Modifying Facility", "Optional[Draw Down Request]"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.testData&quot; is null
+	at stepdefinitions.Facilities_Management_Steps_609.user_609_select_the_code_in_update_after_approve_screen(Facilities_Management_Steps_609.java:97)
+	at ✽.User_609 Select the Code in Update After Approve Screen(file:///C:/Users/inindc00615/git/AZENTIO-FMS1/AzentioAutomationFramework_FMS_VIJAY3/src/test/java/features/DrawDownRequest_609.feature:128)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1250496477", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1250496477'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.testData&quot; is null
+	at stepdefinitions.Facilities_Management_Steps_609.user_609_select_the_code_in_update_after_approve_screen(Facilities_Management_Steps_609.java:97)
+	at ✽.User_609 Select the Code in Update After Approve Screen(file:///C:/Users/inindc00615/git/AZENTIO-FMS1/AzentioAutomationFramework_FMS_VIJAY3/src/test/java/features/DrawDownRequest_609.feature:128)
+</pre></div></td>
+<td>76</td>
 <td>Runner.TestApplication@5dafbe45</td></tr>
 </table><p>
 </body>

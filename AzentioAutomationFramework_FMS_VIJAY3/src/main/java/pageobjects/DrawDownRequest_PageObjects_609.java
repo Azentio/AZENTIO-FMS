@@ -182,4 +182,64 @@ public class DrawDownRequest_PageObjects_609 {
 	public WebElement Applicationforfinancialfacilities_Maintenance_AdditionalDetails_FXSettlementExpiryDate() {
 		return Applicationforfinancialfacilities_Maintenance_AdditionalDetails_FXSettlementExpiryDate;
 	}
+	
+	
+	
+	///***************************************************************************************///
+	
+	@FindBy(xpath = "//td[text()='Draw Down Request']")
+	private WebElement Wifakappliction_DrawDownRequest;
+	public WebElement Wifakappliction_DrawDownRequest() {
+		return Wifakappliction_DrawDownRequest;
+	}
+	
+	@FindBy(xpath = "//a[@id='WIFT009MT']/span[text()='Maintenance']")
+	private WebElement Wifakappliction_DrawDownRequest_Maintenance;
+	public WebElement Wifakappliction_DrawDownRequest_Maintenance() {
+		return Wifakappliction_DrawDownRequest_Maintenance;
+	}
+	
+	
+	@FindBy(xpath = "//a[@id='infoBarSearchButton_WIFT009MT']")
+	private WebElement Wifakappliction_DrawDownRequest_Maintenance_SearchBar;
+	public WebElement Wifakappliction_DrawDownRequest_Maintenance_SearchBar() {
+		return Wifakappliction_DrawDownRequest_Maintenance_SearchBar;
+	}
+	
+	@FindBy(xpath = "//td[text()='Clear']")
+	private WebElement Wifakappliction_DrawDownRequest_Maintenance_Clear;
+	public WebElement Wifakappliction_DrawDownRequest_Maintenance_Clear() {
+		return Wifakappliction_DrawDownRequest_Maintenance_Clear;
+	}
+	
+	
+	@FindBy(xpath = "//input[@id='drawDownRequestGridTbl_Id_WIFT009MT_gs_STATUSDESC']")
+	private WebElement Wifakappliction_DrawDownRequest_Maintenance_RetrieveActiveRecord;
+	public WebElement Wifakappliction_DrawDownRequest_Maintenance_RetrieveActiveRecord() {
+		return Wifakappliction_DrawDownRequest_Maintenance_RetrieveActiveRecord;
+	}
+	
+	
+	@FindBy(xpath = "//span[text()='Drawdown Additional Details']")
+	private WebElement Wifakappliction_DrawDownRequest_Maintenance_DrawdownAdditionalDetails;
+	public WebElement Wifakappliction_DrawDownRequest_Maintenance_DrawdownAdditionalDetails() {
+		return Wifakappliction_DrawDownRequest_Maintenance_DrawdownAdditionalDetails;
+	}
+	
+	@FindBy(xpath = "//input[@id='drawDownRequestIncludeProfit_WIFT009MT']")
+	private WebElement Wifakappliction_DrawDownRequest_Maintenance_DrawdownAdditionalDetails_IncludeProfit;
+	public WebElement Wifakappliction_DrawDownRequest_Maintenance_DrawdownAdditionalDetails_IncludeProfit() {
+		return Wifakappliction_DrawDownRequest_Maintenance_DrawdownAdditionalDetails_IncludeProfit;
+	}
+	
+	///**********************************834115***********************************************////
+	
+	
+	@FindBy(xpath = "//select[@id='fmsFacilityType_collateral_P008MT']")
+	private WebElement ApplicationRequirementsandDetails_Collateral;
+	public WebElement ApplicationRequirementsandDetails_Collateral() {
+		return ApplicationRequirementsandDetails_Collateral;	
+	}
+	
+	
 }

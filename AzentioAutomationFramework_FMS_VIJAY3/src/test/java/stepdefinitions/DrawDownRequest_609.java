@@ -3,6 +3,7 @@ package stepdefinitions;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,6 +16,7 @@ import helper.DropDownHelper;
 import helper.JavascriptHelper;
 import helper.WaitHelper;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import pageobjects.DrawDownRequest_PageObjects_609;
 import pageobjects.Facilities_Management_PageObjects_609;
 import resources.BaseClass;
@@ -157,5 +159,84 @@ public class DrawDownRequest_609 extends BaseClass{
 			}
 		}
 		
+		
+		///*****************************************************************************///
+		
+		@And("User_609 get the test data set id for AT_DDR_031")
+		public void user_609_get_the_test_data_set_id_for_AT_DDR_031() {
+			testData = fmsDrawDownRequestExcelData.getTestdata("AT_DDR_031");
+		    
+		}
+
+		@And("User_609 Click on Draw Down Request")
+		public void user_609_click_on_draw_down_request() {
+			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Wifakappliction_DrawDownRequest());
+			clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.Wifakappliction_DrawDownRequest());		    
+		}
+
+		@And("User_609 Click on Maintenance screen under Draw Down Request")
+		public void user_609_click_on_maintenance_screen_under_draw_down_request() {
+			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Wifakappliction_DrawDownRequest_Maintenance());
+			clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.Wifakappliction_DrawDownRequest_Maintenance());
+		}
+
+		@And("User_609 Click on the search Bar in Draw Down Request")
+		public void user_609_click_on_the_search_bar_in_draw_down_request() {
+			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Wifakappliction_DrawDownRequest_Maintenance_SearchBar());
+			clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.Wifakappliction_DrawDownRequest_Maintenance_SearchBar()); 
+		}
+
+		@And("User_609 Click on the Clear Button in Draw Down Request")
+		public void user_609_click_on_the_clear_button_in_draw_down_request() {
+			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Wifakappliction_DrawDownRequest_Maintenance_Clear());
+			clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.Wifakappliction_DrawDownRequest_Maintenance_Clear());
+		}
+
+		@And("User_609 Retrieve Any Active record in Draw Down Request")
+		public void user_609_retrieve_any_active_record_in_draw_down_request() {
+			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Wifakappliction_DrawDownRequest_Maintenance_RetrieveActiveRecord());
+			clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.Wifakappliction_DrawDownRequest_Maintenance_RetrieveActiveRecord());  
+			DrawDownRequestPageobjects_609.Wifakappliction_DrawDownRequest_Maintenance_RetrieveActiveRecord().sendKeys(testData.get("Record Status"),Keys.ENTER);
+			//td[4][text()='Active']
+			String xpath ="//table[@id='drawDownRequestGridTbl_Id_WIFT009MT']/tbody/tr[2]/td[text()='"+testData.get("Record Status")+"']";
+			for (int i = 0; i < 200; i++) {
+				try {
+					WebElement Code  = driver.findElement(By.xpath(xpath));
+					if (Code.isDisplayed()) {
+						clicksAndActionHelper.doubleClick(Code);
+					}
+					driver.findElement(By.xpath(xpath)).isDisplayed();
+					break;
+				} catch (Exception e) {
+					if (i==199) {
+						Assert.fail(e.getMessage());
+					}
+				}	
+			}
+		}
+
+		@Then("User_609 Validate the Include Profit is Displaying and Editable")
+		public void user_609_validate_the_include_profit_is_displaying_and_editable() {
+			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Wifakappliction_DrawDownRequest_Maintenance_DrawdownAdditionalDetails_IncludeProfit());
+			WebElement Include_Profit = DrawDownRequestPageobjects_609.Wifakappliction_DrawDownRequest_Maintenance_DrawdownAdditionalDetails_IncludeProfit();
+			try {
+				if (Include_Profit.isDisplayed()) {
+					Assert.assertEquals(Include_Profit.isEnabled(), true);	
+				}
+			} catch (Exception e) {
+				Assert.fail(e.getMessage());
+			}
+		}
+		
+		
+		//************************************834115*********************************************//
+		
+		@And("^User_609 Select the Collateral$")
+	    public void User_609_Select_the_Collateral() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.ApplicationRequirementsandDetails_Collateral());
+			WebElement Collateral = DrawDownRequestPageobjects_609.ApplicationRequirementsandDetails_Collateral();
+			dropdownhelper.SelectUsingVisibleText(Collateral, testData.get("Collateral"));
+			
+	    }
 		
 }

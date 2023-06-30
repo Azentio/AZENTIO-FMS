@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-29T15:48:21 IST" name="Default suite" finished-at="2023-06-29T15:52:19 IST" duration-ms="238399">
+  <suite started-at="2023-06-30T15:22:09 IST" name="Default suite" finished-at="2023-06-30T15:23:41 IST" duration-ms="92648">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5dafbe45]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-06-29T15:48:21 IST" name="Default test" finished-at="2023-06-29T15:52:19 IST" duration-ms="238399">
+    <test started-at="2023-06-30T15:22:09 IST" name="Default test" finished-at="2023-06-30T15:23:41 IST" duration-ms="92648">
       <class name="Runner.TestApplication">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@5dafbe45]" started-at="2023-06-29T15:48:21 IST" name="setUpClass" finished-at="2023-06-29T15:48:23 IST" duration-ms="2171" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@5dafbe45]" started-at="2023-06-30T15:22:09 IST" name="setUpClass" finished-at="2023-06-30T15:22:12 IST" duration-ms="2909" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5dafbe45]" started-at="2023-06-29T15:48:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-06-29T15:51:30 IST" duration-ms="186872" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5dafbe45]" started-at="2023-06-30T15:22:12 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-06-30T15:23:29 IST" duration-ms="76871" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["IIAB150404 - Modification In Draw Down Request Screen"]]>
+                <![CDATA["ABEI190325 - Missing Collateral Information Error upon Modifying Facility"]]>
               </value>
             </param>
             <param index="1">
@@ -27,10 +27,21 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "java.util.Map.get(Object)" because "this.testData" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.util.Map.get(Object)" because "this.testData" is null
+at stepdefinitions.Facilities_Management_Steps_609.user_609_select_the_code_in_update_after_approve_screen(Facilities_Management_Steps_609.java:97)
+at ✽.User_609 Select the Code in Update After Approve Screen(file:///C:/Users/inindc00615/git/AZENTIO-FMS1/AzentioAutomationFramework_FMS_VIJAY3/src/test/java/features/DrawDownRequest_609.feature:128)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@5dafbe45]" started-at="2023-06-29T15:51:30 IST" name="tearDownClass" finished-at="2023-06-29T15:52:19 IST" duration-ms="49210" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@5dafbe45]" started-at="2023-06-30T15:23:29 IST" name="tearDownClass" finished-at="2023-06-30T15:23:41 IST" duration-ms="12708" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

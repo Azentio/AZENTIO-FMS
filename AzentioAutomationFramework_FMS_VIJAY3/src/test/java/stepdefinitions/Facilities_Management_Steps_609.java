@@ -1109,7 +1109,8 @@ public class Facilities_Management_Steps_609 extends BaseClass{
     @And("User_609 Click on the Drawdown Additional Details tab")
     public void user_609_click_on_the_drawdown_additional_details_tab() {
     	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DrawdownAdditionalDetails());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DrawdownAdditionalDetails());
+		clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DrawdownAdditionalDetails());
+    	clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DrawdownAdditionalDetails());
         
     }
 
