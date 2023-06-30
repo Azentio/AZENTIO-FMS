@@ -169,5 +169,33 @@ public class Facility_TypeObj_608 {
 	public WebElement facilityTypeApproveBtn_608() {
 		return facility_type_approve_btn;
 	}
+	
+	
+//	@AT_RF_034_FMSParam
+	@FindBy(xpath = "//li[@id='fmsFacilityTypeReportTab_P008UP']")
+	private WebElement facility_type_facility_reports;
+	public WebElement facilityTypeFacilityReports_608() {
+		return facility_type_facility_reports;
+	}
+	
+	@FindBy(xpath = "//span[@id='spanLookup_fmsFacilityType_issue_facility_off_report_id_P008UP']")
+	private WebElement facility_reports_issue_facility_offer_lookup;
+	public WebElement facilityReportsIssueFacilityOfferLookup_608() {
+		return facility_reports_issue_facility_offer_lookup;
+	}
+	
+	@FindBy(xpath = "(//*[@id='4'])[2]")
+	private WebElement facility_reports_issue_facility_offer_lookup_data;
+	public WebElement facilityReportsIssueFacilityOfferLookupData_608() {
+		return facility_reports_issue_facility_offer_lookup_data;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmsFacilityType_issue_facility_off_auto_print_P008UP']")
+	private WebElement facility_reports_issue_facility_offer_auto_print_flag;
+	public WebElement facilityReportsIssueFacilityOfferAutoPrintFlag_608() {
+		return facility_reports_issue_facility_offer_auto_print_flag;
+	}
+	
+	
 
 }

@@ -1,17 +1,17 @@
 Feature: To check the WIFAK Application features
 
-@AT_AFF_040
-Scenario: MFI190130 - History Log is empty for Application for facility--Approval/Reject option
-
-Given navigate to FMS application and login with valid credentials
-And User clicks on the WIFAK_Application first link
-And User clicks on the WIFAK_Application second link
-And User clicks on the Application for financial facility link
-And User clicks on the Approve level1 link
-And get the test data for test case AT_AFF_040
-And User search the code
-And User double click searched record
-Then user clicks on the History log tap
+#@AT_AFF_040
+#Scenario: MFI190130 - History Log is empty for Application for facility--Approval/Reject option
+#
+#Given navigate to FMS application and login with valid credentials
+#And User clicks on the WIFAK_Application first link
+#And User clicks on the WIFAK_Application second link
+#And User clicks on the Application for financial facility link
+#And User clicks on the Approve level1 link
+#And get the test data for test case AT_AFF_040
+#And User search the code
+#And User double click searched record
+#Then user clicks on the History log tap
 
 
 #@AT_AFF_048
@@ -73,30 +73,30 @@ Then user clicks on the History log tap
 #Then User validate the BM Recommendations tab is editable or not
 
 
-@AT_RF_040
-Scenario: TSR - RIDB180129
-
-Given navigate to FMS application and login with valid credentials
-And get the test data for test case AT_RF_040
-And User clicks on the WIFAK_Application first link
-And User clicks on the WIFAK_Application second link
-And User clicks on the Application for financial facility link
-And User clicks the maintanance menu
-And User select the application for dropdown as new facility
-And User enter the CIF No in main info tab
-And User enter the facility type in main info tab
-And User enter the country of financing in main info tab
-And User enter the facility rating in main info tab
-And User clicks on the additional details tab
-And User enter the total value in additional info tab
-And User enter the expire date in additional info tab
-And User enter the down payment percentage in additional info tab
-And User enter the down payment to vendor percentage in additional info tab
-And User clicks the limit details tab
-And User clicks the add new record button in limit details tab
-And User enter the product class details
-Then User validate the visibility of Account No input box in limit details
-Then User validate the visibility of Fund Transfer rate input box in limit details
+#@AT_RF_040
+#Scenario: TSR - RIDB180129
+#
+#Given navigate to FMS application and login with valid credentials
+#And get the test data for test case AT_RF_040
+#And User clicks on the WIFAK_Application first link
+#And User clicks on the WIFAK_Application second link
+#And User clicks on the Application for financial facility link
+#And User clicks the maintanance menu
+#And User select the application for dropdown as new facility
+#And User enter the CIF No in main info tab
+#And User enter the facility type in main info tab
+#And User enter the country of financing in main info tab
+#And User enter the facility rating in main info tab
+#And User clicks on the additional details tab
+#And User enter the total value in additional info tab
+#And User enter the expire date in additional info tab
+#And User enter the down payment percentage in additional info tab
+#And User enter the down payment to vendor percentage in additional info tab
+#And User clicks the limit details tab
+#And User clicks the add new record button in limit details tab
+#And User enter the product class details
+#Then User validate the visibility of Account No input box in limit details
+#Then User validate the visibility of Fund Transfer rate input box in limit details
 
 
 
@@ -221,59 +221,59 @@ And User select the level3 decision as approve
 When User clicks on the level3 submit button
 
 
-@AT_RF_157
-Scenario: TSR - AMANA180702
-
+#@AT_RF_157
+#Scenario: TSR - AMANA180702
+#
 # Draw Down request
-Given navigate to FMS application and login with valid credentials
-And get the test data for test case AT_RF_157
-And User clicks on the WIFAK_Application first link
-And User clicks on the WIFAK_Application second link
-And User clicks on the Draw Down request module
-And User clicks on the Maintanance under Draw Down request
-And User enter the Facility Reference in main screen under Draw Down request
-And User select the draw down type in main screen under Draw Down request
-And User enter the Description in main screen under Draw Down request
-And User click on the draw down additional details tab
-And User select the product class in additional screen under Draw Down request
-And User give the FC Amount in additional screen under Draw Down request
-And User enter the value date in main screen under Draw Down request
-When User click the save button under in maintanance under Draw Down request
-Then User click on the Verify link under Draw Down request
-And User click on the clear button in verify under Draw Down request
-And User double click on the code in verify under Draw Down request
-When User click on the verify button in Verify link under Draw Down request
-Then User click on the Approve link under Draw Down request
-And User click on the clear button in Approve under Draw Down request
-And User double click on the code in Approve under Draw Down request
-When User click on the Approve button in Approve link under Draw Down request
-Then User again clicks on the Maintanance under Draw Down request
-And User clicks on the search button in main screen under Draw Down request
-And User click the clear button in main screen under Draw Down request
-And User double click on the first line code in main screen under Draw Down request
-And User click on the Status Details button in main screen under Draw Down request
-And User verify the Status Details tab User Name in main screen under Draw Down request
+#Given navigate to FMS application and login with valid credentials
+#And get the test data for test case AT_RF_157
+#And User clicks on the WIFAK_Application first link
+#And User clicks on the WIFAK_Application second link
+#And User clicks on the Draw Down request module
+#And User clicks on the Maintanance under Draw Down request
+#And User enter the Facility Reference in main screen under Draw Down request
+#And User select the draw down type in main screen under Draw Down request
+#And User enter the Description in main screen under Draw Down request
+#And User click on the draw down additional details tab
+#And User select the product class in additional screen under Draw Down request
+#And User give the FC Amount in additional screen under Draw Down request
+#And User enter the value date in main screen under Draw Down request
+#When User click the save button under in maintanance under Draw Down request
+#Then User click on the Verify link under Draw Down request
+#And User click on the clear button in verify under Draw Down request
+#And User double click on the code in verify under Draw Down request
+#When User click on the verify button in Verify link under Draw Down request
+#Then User click on the Approve link under Draw Down request
+#And User click on the clear button in Approve under Draw Down request
+#And User double click on the code in Approve under Draw Down request
+#When User click on the Approve button in Approve link under Draw Down request
+#Then User again clicks on the Maintanance under Draw Down request
+#And User clicks on the search button in main screen under Draw Down request
+#And User click the clear button in main screen under Draw Down request
+#And User double click on the first line code in main screen under Draw Down request
+#And User click on the Status Details button in main screen under Draw Down request
+#And User verify the Status Details tab User Name in main screen under Draw Down request
  ########  Facility Closure Request
-Then User clicks on the Facility Closure Request module
-And User click on the Maintanance under Facility Closure Request module
-And User enter the Facility ref in main screen under Facility Closure Request
-And User enter the Closure reason in main screen under Facility Closure Request
-And User click on the Save button in main screen under Facility Closure Request
-Then User clicks on the Approve under Facility Closure Request module
-And User click on the clear button in approve screen under Facility Closure Request
-And User double click on the code in approve screen under Facility Closure Request
-When User click on the Approve button in approve screen under Facility Closure Request
-Then User again click the Maintanance under Facility Closure Request module
-And User click on the search button in main screen under Facility Closure Request
-And User double click on the code in main screen under Facility Closure Request
-And User click the Status details button in main screen under Facility Closure Request
-Then User verify the Status details tab in main screen under Facility Closure Request
-Then User again clicks on the Maintanance under Draw Down request
-And User clicks on the search button in main screen under Draw Down request
-And User click the clear button in main screen under Draw Down request
-And User double click on the first line code in main screen under Draw Down request
-And User click on the Status Details button in main screen under Draw Down request
-And User verify the Status Details tab User Name in main screen under Draw Down request
+#Then User clicks on the Facility Closure Request module
+#And User click on the Maintanance under Facility Closure Request module
+#And User enter the Facility ref in main screen under Facility Closure Request
+#And User enter the Closure reason in main screen under Facility Closure Request
+#And User click on the Save button in main screen under Facility Closure Request
+#Then User clicks on the Approve under Facility Closure Request module
+#And User click on the clear button in approve screen under Facility Closure Request
+#And User double click on the code in approve screen under Facility Closure Request
+#When User click on the Approve button in approve screen under Facility Closure Request
+#Then User again click the Maintanance under Facility Closure Request module
+#And User click on the search button in main screen under Facility Closure Request
+#And User double click on the code in main screen under Facility Closure Request
+#And User click the Status details button in main screen under Facility Closure Request
+#Then User verify the Status details tab in main screen under Facility Closure Request
+#Then User again clicks on the Maintanance under Draw Down request
+#And User clicks on the search button in main screen under Draw Down request
+#And User click the clear button in main screen under Draw Down request
+#And User double click on the first line code in main screen under Draw Down request
+#And User click on the Status Details button in main screen under Draw Down request
+#And User verify the Status Details tab User Name in main screen under Draw Down request
 
 
 @AT_RF_139

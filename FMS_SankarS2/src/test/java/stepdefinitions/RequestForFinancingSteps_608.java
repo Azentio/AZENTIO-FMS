@@ -17,6 +17,7 @@ import helper.WaitHelper;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pageobjects.fms.ApplicationFinancialFacilityObj_608;
 import pageobjects.fmsParam.Facility_TypeObj_608;
 import pageobjects.fmsParam.RequestForFinancingObj_608;
 import resources.BaseClass;
@@ -26,6 +27,7 @@ public class RequestForFinancingSteps_608 {
 	WebDriver driver = BaseClass.driver;
 	ConfigFileReader configFileReader = new ConfigFileReader();
 	RequestForFinancingObj_608 requestForFinancingObj608 = new RequestForFinancingObj_608(driver);
+	ApplicationFinancialFacilityObj_608 applicationFinancialFacilityObj608 = new ApplicationFinancialFacilityObj_608(driver);
 	Facility_TypeObj_608 facilityTypeObj608 = new Facility_TypeObj_608(driver);
 	WaitHelper waitHelper = new WaitHelper(driver);
 	JavascriptHelper javaScriptHelper = new JavascriptHelper(driver);
@@ -35,7 +37,7 @@ public class RequestForFinancingSteps_608 {
 	FMSLogin login = new FMSLogin(driver);
 	
 	String path = System.getProperty("user.dir") +"\\TestData\\FMSTestData.xlsx";
-//	ExcelData fmsTransactionsExcelData = new ExcelData(path,"Request_For_FinancingTestData","DataSet ID");
+//	ExcelData fmsTransactionsExcelData = new ExcelData(path,"RequestForFinancingTestData","DataSet ID");
 //	ExcelData fmsTransactionsExcelData = new ExcelData(path,"IIS_Param_TestData","DataSet ID");
 	ExcelData fmsTransactionsExcelData = new ExcelData(path,"DrawDownRequestTestData","DataSet ID");	
 	Map<String, String> testData;
@@ -51,6 +53,14 @@ public class RequestForFinancingSteps_608 {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_043");
 	}
 	
+	
+//  @AT_RF_157
+    @And("User_608 get the test data for test case AT_RF_157")
+    public void get_the_test_data_for_test_case_at_rf_157() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_157");   
+    }
+    
+
 	
 	
 	
@@ -74,7 +84,7 @@ public class RequestForFinancingSteps_608 {
 	 } 
 	 
 	 
-	 
+//	@AT_RF_014
 	@And("^User_608 clicks on the parameter feature in IIS Param application$")
     public void user_clicks_on_the_parameter_feature_in_iis_param_application() throws Throwable {
         waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.IISParameterFeature_608());
@@ -212,6 +222,599 @@ public class RequestForFinancingSteps_608 {
     	Assert.assertEquals(testData.get("No of payment input"), NoOfPaymentsInput);
     }
 	
+    
+    
+//  @AT_RF_024 -- FMS Param
+    @And("^User_608 clicks on the Facility custom fields under Parameter$")
+    public void user_clicks_on_the_facility_custom_fields_under_parameter() throws Throwable {
+		for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(requestForFinancingObj608.paramFacilityCustomFields_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+        waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.paramFacilityCustomFields_608());
+        requestForFinancingObj608.paramFacilityCustomFields_608().click();
+    }
+
+    @And("^User_608 clicks on the Maintain facility custom fields under facility custom fields$")
+    public void user_clicks_on_the_maintain_facility_custom_fields_under_facility_custom_fields() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.maintainFacilityCustomFields_608());
+    	requestForFinancingObj608.maintainFacilityCustomFields_608().click();
+    }
+
+    @And("^User_608 clicks on the Update after approve in Maintain facility custom fields$")
+    public void user_clicks_on_the_update_after_approve_in_maintain_facility_custom_fields() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.maintainFacilityCustomUpdateAterApprove_608());
+    	requestForFinancingObj608.maintainFacilityCustomUpdateAterApprove_608().click();
+    }
+
+    @And("^User_608 double click on the one record under update after approve$")
+    public void user_double_click_on_the_one_record_under_update_after_approve() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.updateAfterApproveSearchResult_608());
+    	clicksAndActionsHelper.doubleClick(requestForFinancingObj608.updateAfterApproveSearchResult_608());
+    }
+
+    @And("^User_608 validate Facility Custom Fields screen are available$")
+    public void user_validate_facility_custom_fields_screen_are_available() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityCustomFieldsBox_608());
+    	boolean facilityCustomFieldsBox = requestForFinancingObj608.facilityCustomFieldsBox_608().isDisplayed();
+    	Assert.assertTrue(facilityCustomFieldsBox);
+    }
+    
+    
+    
+//  @AT_RF_034_FMSParam
+    @And("^User_608 uncheck the Issue Facility Offer flag$")
+    public void user_uncheck_the_issue_facility_offer_flag() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.issueFacilityOfferFlag_608());
+    	WebElement issueFacilityOfferFlag = facilityTypeObj608.issueFacilityOfferFlag_608();
+    	if(issueFacilityOfferFlag.isSelected()) {
+    		 issueFacilityOfferFlag.click();
+    	}
+    }
+
+    @And("^User_608 move to facility reports tab in update after approve$")
+    public void user_move_to_facility_reports_tab_in_update_after_approve() throws Throwable {
+    	Thread.sleep(5000);
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.facilityTypeFacilityReports_608());
+    	facilityTypeObj608.facilityTypeFacilityReports_608().click();
+    	}
+
+    @And("^User_608 clicks on the search option in issue facility offer under facility reports$")
+    public void user_clicks_on_the_search_option_in_issue_facility_offer_under_facility_reports() throws Throwable {
+    	for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(facilityTypeObj608.facilityReportsIssueFacilityOfferLookup_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.facilityReportsIssueFacilityOfferLookup_608());
+    	facilityTypeObj608.facilityReportsIssueFacilityOfferLookup_608().click();
+    }
+
+    @And("^User_608 double click on any one retrived data$")
+    public void user_double_click_on_any_one_retrived_data() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.facilityReportsIssueFacilityOfferLookupData_608());
+    	clicksAndActionsHelper.doubleClick(facilityTypeObj608.facilityReportsIssueFacilityOfferLookupData_608());
+    }
+
+    @And("^User_608 check the auto print flag under issue facility offer$")
+    public void user_check_the_auto_print_flag_under_issue_facility_offer() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.facilityReportsIssueFacilityOfferAutoPrintFlag_608());
+    	WebElement autoPrintFlag = facilityTypeObj608.facilityReportsIssueFacilityOfferAutoPrintFlag_608();
+    	if(!(autoPrintFlag.isSelected())) {
+    		autoPrintFlag.click();
+    	}
+    }
+    
+    
+    
+//  @AT_RF_034_FMSCore
+    @And("^User_608 clicks the issue facility offer under WIFAK Application$")
+    public void user_clicks_the_issue_facility_offer_under_wifak_application() throws Throwable {    	
+//    	System.out.println("Ref No: "+refID);
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.WIFAKAppIssueFacilityOffer_608());
+    	requestForFinancingObj608.WIFAKAppIssueFacilityOffer_608().click();
+    }
+
+    @And("^User_608 double click on the retrived data$")
+    public void user_double_click_on_the_retrived_data() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.issueFacilityOfferSearchResult_608());
+    	clicksAndActionsHelper.doubleClick(requestForFinancingObj608.issueFacilityOfferSearchResult_608());        
+    }
+    
+    @When("^User_608 clicks on the issue offer button under issue facility offer$")
+    public void user_clicks_on_the_issue_offer_button_under_issue_facility_offer() throws Throwable {
+    	for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(requestForFinancingObj608.issueFacilityOfferIssueOfferBtn_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.issueFacilityOfferIssueOfferBtn_608());
+    	requestForFinancingObj608.issueFacilityOfferIssueOfferBtn_608().click();
+    }
+    
+    
+    
+//  @AT_RF_035
+    @And("^User_608 clicks on the the mortgage management module$")
+    public void user_clicks_on_the_the_mortgage_management_module() throws Throwable {
+    	for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(requestForFinancingObj608.arabicMortgageManagementModule_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.arabicMortgageManagementModule_608());
+		requestForFinancingObj608.arabicMortgageManagementModule_608().click();
+    }
+
+    @And("^User_608 clicks on the Maintanance screen under mortgage management module$")
+    public void user_clicks_on_the_maintanance_screen_under_mortgage_management_module() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.mortgageManagementMain_608());
+    	requestForFinancingObj608.mortgageManagementMain_608().click();
+    }
+
+    @And("^User_608 verify the Maintanance screen should be arabic language$")
+    public void user_verify_the_maintanance_screen_should_be_arabic_language() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.mortgageManagementMainLabel_608());    	
+    	for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(requestForFinancingObj608.mortgageManagementMainEnd_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.mortgageManagementMainEnd_608());
+    	String saveBtnText = requestForFinancingObj608.mortgageManagementMainEnd_608().getText();
+//    	System.out.println("Text :"+saveBtnText);
+    	Assert.assertEquals(saveBtnText, "حفظ");	
+    }
+    
+    
+    
+//  @AT_RF_040  
+    @Then("^User_608 validate the visibility of Account No input box in limit details$")
+    public void user_validate_the_visibility_of_account_no_input_box_in_limit_details() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.limitDetailsAccNoInput_608());
+    	boolean accNoDisplayed = requestForFinancingObj608.limitDetailsAccNoInput_608().isDisplayed();
+    	Assert.assertEquals(true, accNoDisplayed);
+    }
+
+    @Then("^User_608 validate the visibility of Fund Transfer rate input box in limit details$")
+    public void user_validate_the_visibility_of_fund_transfer_rate_input_box_in_limit_details() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.limitDetailsFundTransferRateInput_608());
+    	boolean fundtransferdisplayed = requestForFinancingObj608.limitDetailsFundTransferRateInput_608().isDisplayed();
+    	Assert.assertEquals(true, fundtransferdisplayed);
+    }
+    
+    
+    
+//  @AT_RF_157
+    @And("^User_608 clicks on the Draw Down request module under WIFAK Application$")
+    public void user_clicks_on_the_draw_down_request_module_under_WIFAK_Application() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakApplicationDrawDownRequest_608());
+    	requestForFinancingObj608.wifakApplicationDrawDownRequest_608().click();
+    }
+
+    @And("^User_608 clicks on the Maintanance under Draw Down request in WIFAK Application$")
+    public void user_clicks_on_the_maintanance_under_draw_down_request_in_WIFAK_Application() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawDownRequestMaintanance_608());
+    	requestForFinancingObj608.drawDownRequestMaintanance_608().click();        
+    }
+
+    @And("^User_608 enter the Facility Reference in main screen under WIFAK Draw Down request$")
+    public void user_enter_the_facility_reference_in_main_screen_under_WIFAK_draw_down_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainFacilityRef_608());
+//    	requestForFinancingObj608.drawdownMainFacilityRef().sendKeys("1469",Keys.TAB);
+    	requestForFinancingObj608.drawdownMainFacilityRef_608().sendKeys(testData.get("Facility Ref"),Keys.TAB);
+    	
+    	for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(requestForFinancingObj608.drawdownMainDateSubmitted_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}
+    	
+//    	try {
+//    		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownPostApprovalYesBtn());
+//        	requestForFinancingObj608.drawdownPostApprovalYesBtn().click();
+//        	for(int i = 0; i <= 500; i++) {
+//        		try {
+//    				if(!(requestForFinancingObj608.drawdownMainDateSubmitted().getAttribute("prevvalue").isBlank())) {
+//    					break;
+//    				}
+//    			} catch (Exception e) {
+//    				// TODO: handle exception
+//    			}
+//        	}
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//		}
+
+    }
+
+    @And("^User_608 select the draw down type in main screen under Draw Down request$")
+    public void user_select_the_draw_down_type_in_main_screen_under_draw_down_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainDrawDownTypeLookup_608());
+    	requestForFinancingObj608.drawdownMainDrawDownTypeLookup_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainDrawdownTypeValue_608());
+    	clicksAndActionsHelper.doubleClick(requestForFinancingObj608.drawdownMainDrawdownTypeValue_608());
+    }
+
+    @And("^User_608 enter the Description in main screen under Draw Down request$")
+    public void user_enter_the_description_in_main_screen_under_draw_down_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainDescription_608());
+//    	requestForFinancingObj608.drawdownMainDescription().sendKeys("Test");
+    	requestForFinancingObj608.drawdownMainDescription_608().sendKeys(testData.get("Description"));
+    }
+    
+    @And("User_608 click on the draw down additional details tab")
+    public void user_click_on_the_draw_down_additional_details_tab() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownAdditionalDetailsTab_608());
+    	requestForFinancingObj608.drawdownAdditionalDetailsTab_608().click();
+    }
+
+    @And("^User_608 select the product class in additional screen under Draw Down request$")
+    public void user_select_the_product_class_in_additional_screen_under_draw_down_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownAdditionalProductClassLookup_608());
+    	requestForFinancingObj608.drawdownAdditionalProductClassLookup_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownAdditionalProductClassCode_608());
+    	clicksAndActionsHelper.doubleClick(requestForFinancingObj608.drawdownAdditionalProductClassCode_608());
+    	
+    	for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(requestForFinancingObj608.drawdownAdditionalProductClass_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}
+    }
+
+    @And("^User_608 give the FC Amount in additional screen under Draw Down request$")
+    public void user_give_the_fc_amount_in_additional_screen_under_draw_down_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownAdditionalFCAmount_608());
+    	requestForFinancingObj608.drawdownAdditionalFCAmount_608().clear();
+//    	requestForFinancingObj608.drawdownAdditionalFCAmount().sendKeys("500",Keys.TAB);
+    	requestForFinancingObj608.drawdownAdditionalFCAmount_608().sendKeys(testData.get("FC Amount"),Keys.TAB);
+    	
+    	for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(requestForFinancingObj608.drawdownAdditionalFCAmount_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}
+    }
+    
+    @And("^User_608 enter the value date in main screen under Draw Down request$")
+    public void user_enter_the_value_date_in_main_screen_under_draw_down_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainInfoTab_608());
+    	requestForFinancingObj608.drawdownMainInfoTab_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainValueDate_608());
+//    	requestForFinancingObj608.drawdownMainValueDate().sendKeys("05/01/2024",Keys.TAB);
+    	requestForFinancingObj608.drawdownMainValueDate_608().sendKeys(testData.get("Value Date"),Keys.TAB);
+    }
+    
+    @When("^User_608 click the save button under in maintanance under Draw Down request$")
+    public void user_click_the_save_button_under_in_maintanance_under_draw_down_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainSaveBtn_608());
+    	requestForFinancingObj608.drawdownMainSaveBtn_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
+    	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
+    	
+    	// Post Approval popup
+//    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownPostApprovalYesBtn_608());
+//    	requestForFinancingObj608.drawdownPostApprovalYesBtn_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.SuccessPopupOkBtn_608());
+    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+    	
+    	// Send Alert popup
+    	for (int i = 0; i < 2000; i++) {
+			try {
+		    	requestForFinancingObj608.drawdownMainSendAlertPopupClose_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}    	
+    }    
+    
+    @Then("User_608 click on the Verify link under Draw Down request")
+    public void user_click_on_the_verify_link_under_draw_down_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawDownRequestVerify_608());
+    	requestForFinancingObj608.drawDownRequestVerify_608().click();
+    }
+    @And("User_608 click on the clear button in verify under Draw Down request")
+    public void user_click_on_the_clear_button_in_verify_under_draw_down_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownVerifyClearBtn_608());
+    	requestForFinancingObj608.drawdownVerifyClearBtn_608().click();
+    }
+    @And("User_608 double click on the code in verify under Draw Down request")
+    public void user_double_click_on_the_code_in_verify_under_draw_down_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownVerifyCode_608());
+        clicksAndActionsHelper.doubleClick(requestForFinancingObj608.drawdownVerifyCode_608());
+    }
+    @When("User_608 click on the verify button in Verify link under Draw Down request")
+    public void user_click_on_the_verify_button_in_verify_link_under_draw_down_request() throws Throwable {
+    	for (int i = 0; i <= 300; i++) {
+        	try {
+        		javaScriptHelper.scrollIntoView(requestForFinancingObj608.drawDownRequestVerifyBtn_608());
+    				break;
+    			} catch (Exception e) {
+    				if (i == 300) {
+    					Assert.fail(e.getMessage());
+    				}
+    			}
+    	}
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawDownRequestVerifyBtn_608());
+    	requestForFinancingObj608.drawDownRequestVerifyBtn_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
+    	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
+    	
+    	// Post Approval popup
+//    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownPostApprovalYesBtn());
+//    	requestForFinancingObj608.drawdownPostApprovalYesBtn().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.SuccessPopupOkBtn_608());
+    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+    	
+    	// Send Alert popup
+    	for (int i = 0; i < 2000; i++) {
+			try {
+		    	requestForFinancingObj608.drawdownVerifySendAlertPopup_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+    	
+    }
+    	
+    @Then("User_608 click on the Approve link under Draw Down request")
+    public void user_click_on_the_approve_link_under_draw_down_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawDownRequestApprove_608());
+    	requestForFinancingObj608.drawDownRequestApprove_608().click();
+    }
+    @And("User_608 click on the clear button in Approve under Draw Down request")
+    public void user_click_on_the_clear_button_in_approve_under_draw_down_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownApproveClearBtn_608());
+    	requestForFinancingObj608.drawdownApproveClearBtn_608().click();
+    }
+    @And("User_608 double click on the code in Approve under Draw Down request")
+    public void user_double_click_on_the_code_in_approve_under_draw_down_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownApproveCode_608());
+        clicksAndActionsHelper.doubleClick(requestForFinancingObj608.drawdownApproveCode_608());
+    }
+    @When("User_608 click on the Approve button in Approve link under Draw Down request")
+    public void user_click_on_the_approve_button_in_approve_link_under_draw_down_request() throws Throwable {
+    	for (int i = 0; i <= 300; i++) {
+        	try {
+        		javaScriptHelper.scrollIntoView(requestForFinancingObj608.drawDownRequestApproveBtn_608());
+    				break;
+    			} catch (Exception e) {
+    				if (i == 300) {
+    					Assert.fail(e.getMessage());
+    				}
+    			}
+    	}
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawDownRequestApproveBtn_608());
+    	requestForFinancingObj608.drawDownRequestApproveBtn_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
+    	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
+    	
+    	// Post Approval pop-up
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownPostApprovalYesBtn_608());
+    	requestForFinancingObj608.drawdownPostApprovalYesBtn_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.SuccessPopupOkBtn_608());
+    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+    	
+    	
+    	
+        
+    }
+    @Then("User_608 again clicks on the Maintanance under Draw Down request")
+    public void user_again_clicks_on_the_maintanance_under_draw_down_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawDownRequestMaintanance_608());
+    	requestForFinancingObj608.drawDownRequestMaintanance_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
+    	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();        
+    }
+    @And("User_608 clicks on the search button in main screen under Draw Down request")
+    public void user_clicks_on_the_search_button_in_main_screen_under_draw_down_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainSearchBtn_608());
+    	requestForFinancingObj608.drawdownMainSearchBtn_608().click();
+    }
+    @And("User_608 click the clear button in main screen under Draw Down request")
+    public void user_click_the_clear_button_in_main_screen_under_draw_down_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainClearBtn_608());
+    	requestForFinancingObj608.drawdownMainClearBtn_608().click();        
+    }
+    @And("User_608 double click on the first line code in main screen under Draw Down request")
+    public void user_double_click_on_the_first_line_code_in_main_screen_under_draw_down_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainCode_608());
+    	requestForFinancingObj608.drawdownMainCode_608().click();    	
+    }
+    @And("User_608 click on the Status Details button in main screen under Draw Down request")
+    public void user_click_on_the_status_details_button_in_main_screen_under_draw_down_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainStatusDetailsBtn_608());
+    	requestForFinancingObj608.drawdownMainStatusDetailsBtn_608().click();        
+    }
+    @And("User_608 verify the Status Details tab User Name in main screen under Draw Down request")
+    public void user_verify_the_status_details_tab_user_name_in_main_screen_under_draw_down_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainStatusDetailsTab_608());
+    	String userName = requestForFinancingObj608.drawdownMainStatusDetailsUserName_608().getAttribute("title");
+    	System.out.println("User_608 Name: "+ userName);
+    }
+    
+    
+    @Then("User_608 clicks on the Facility Closure Request module")
+    public void user_clicks_on_the_facility_closure_request_module() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakApplicationFacilityClosureRequest_608());
+    	requestForFinancingObj608.wifakApplicationFacilityClosureRequest_608().click();
+    }
+    @And("User_608 click on the Maintanance under Facility Closure Request module")
+    public void user_click_on_the_maintanance_under_facility_closure_request_module() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityClosureRequestMaintanance_608());
+    	requestForFinancingObj608.facilityClosureRequestMaintanance_608().click();
+    }
+    @And("User_608 enter the Facility ref in main screen under Facility Closure Request")
+    public void user_enter_the_facility_ref_in_main_screen_under_facility_closure_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityClosureMainFacilityRef_608());
+    	requestForFinancingObj608.facilityClosureMainFacilityRef_608().sendKeys("1336",Keys.TAB);
+    }
+    @And("User_608 enter the Closure reason in main screen under Facility Closure Request")
+    public void user_enter_the_closure_reason_in_main_screen_under_facility_closure_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityClosureMainClosureReason_608());
+    	requestForFinancingObj608.facilityClosureMainClosureReason_608().sendKeys("test");
+    }
+    @And("User_608 click on the Save button in main screen under Facility Closure Request")
+    public void user_click_on_the_save_button_in_main_screen_under_facility_closure_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityClosureMainSaveBtn_608());
+    	requestForFinancingObj608.facilityClosureMainSaveBtn_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
+    	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.SuccessPopupOkBtn_608());
+    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityClosureMainSendAlertPopup_608());
+    	requestForFinancingObj608.facilityClosureMainSendAlertPopup_608().click();
+    }
+
+    @Then("User_608 clicks on the Approve under Facility Closure Request module")
+    public void user_clicks_on_the_approve_under_facility_closure_request_module() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityClosureRequestApprove_608());
+    	requestForFinancingObj608.facilityClosureRequestApprove_608().click();
+    }
+    @And("User_608 click on the clear button in approve screen under Facility Closure Request")
+    public void user_click_on_the_clear_button_in_approve_screen_under_facility_closure_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityClosureApproveClearBtn_608());
+    	requestForFinancingObj608.facilityClosureApproveClearBtn_608().click();
+    }
+    @And("User_608 double click on the code in approve screen under Facility Closure Request")
+    public void user_double_click_on_the_code_in_approve_screen_under_facility_closure_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityClosureApproveCode_608());
+    	clicksAndActionsHelper.doubleClick(requestForFinancingObj608.facilityClosureApproveCode_608());
+    }
+    @When("User_608 click on the Approve button in approve screen under Facility Closure Request")
+    public void user_click_on_the_approve_button_in_approve_screen_under_facility_closure_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityClosureApproveBtn_608());
+    	requestForFinancingObj608.facilityClosureApproveBtn_608().click();
+        
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
+    	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.SuccessPopupOkBtn_608());
+    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+    }
+    
+    @Then("User_608 again click the Maintanance under Facility Closure Request module")
+    public void user_again_click_the_maintanance_under_facility_closure_request_module() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityClosureRequestMaintanance_608());
+    	requestForFinancingObj608.facilityClosureRequestMaintanance_608().click();
+        
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
+    	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();        
+    }
+    @And("User_608 click on the search button in main screen under Facility Closure Request")
+    public void user_click_on_the_search_button_in_main_screen_under_facility_closure_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityClosureMainSearchBtn_608());
+    	requestForFinancingObj608.facilityClosureMainSearchBtn_608().click();
+        
+    }
+    @And("User_608 double click on the code in main screen under Facility Closure Request")
+    public void user_double_click_on_the_code_in_main_screen_under_facility_closure_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityClosureMainCode_608());
+    	clicksAndActionsHelper.doubleClick(requestForFinancingObj608.facilityClosureMainCode_608());
+        
+    }
+    @And("User_608 click the Status details button in main screen under Facility Closure Request")
+    public void user_click_the_status_details_button_in_main_screen_under_facility_closure_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityClosureMainStatusDetailsBtn_608());
+    	requestForFinancingObj608.facilityClosureMainStatusDetailsBtn_608().click();
+        
+    }
+    @Then("User_608 verify the Status details tab in main screen under Facility Closure Request")
+    public void user_verify_the_status_details_tab_in_main_screen_under_facility_closure_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityClosureMainStatusDetailsTab_608());
+    	requestForFinancingObj608.facilityClosureMainStatusDetailsTab_608().click();
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 	
 	
 //	@AT_RF_141
@@ -242,6 +845,8 @@ public class RequestForFinancingSteps_608 {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.requestForFinancingFeature_608());
 		requestForFinancingObj608.requestForFinancingFeature_608().click();	    
 	}
+	
+	
 
 	@And("User_608 clicks on the Maintanance screen under Request for Financing")
 	public void user_clicks_on_the_maintanance_screen_under_request_for_financing() throws Throwable {
@@ -442,7 +1047,16 @@ public class RequestForFinancingSteps_608 {
 
 	@And("User_608 click the add button in limit details tab under sublimit tab")
 	public void user_click_the_add_button_in_limit_details_tab_under_sublimit_tab() throws Throwable {
-		Thread.sleep(3000);
+		for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(requestForFinancingObj608.requestForFinancingMainSublimitTabAddBtn_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.requestForFinancingMainSublimitTabAddBtn_608());
 		requestForFinancingObj608.requestForFinancingMainSublimitTabAddBtn_608().click();		
 	}
@@ -477,22 +1091,31 @@ public class RequestForFinancingSteps_608 {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.ButtonConfirmOk_608());
 		requestForFinancingObj608.ButtonConfirmOk_608().click();
 		
-		// Facility already created popup
-    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.confirmPopup_608());
-    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityAlreadyCreatedPopupOkBtn_608());
-    	requestForFinancingObj608.facilityAlreadyCreatedPopupOkBtn_608().click();
+		// Facility already created pop-up
+		for (int i = 0; i < 2000; i++) {
+			try {
+				waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityAlreadyCreatedPopupOkBtn_608());
+				requestForFinancingObj608.facilityAlreadyCreatedPopupOkBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				
+				}
+			}
+//    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.confirmPopup_608());
+//    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityAlreadyCreatedPopupOkBtn_608());
+//    	requestForFinancingObj608.facilityAlreadyCreatedPopupOkBtn_608().click();
 		
     	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.successPopup_608());
 		String RequestID = requestForFinancingObj608.successPopupMsg_608().getText().substring(10, 14);
     	System.err.println("Reference Number: "+RequestID);
     	fmsTransactionsExcelData.updateTestData(testData.get("DataSet ID"), "Request Code", RequestID);
     	
-    	for (int i = 0; i < 2000; i++) {
+    	for (int j = 0; j < 2000; j++) {
 			try {
 				requestForFinancingObj608.ButtonSuccessOk_608().click();
 		    	break;
 			} catch (Exception e) {
-				if (i==1999) {
+				if (j==1999) {
 					Assert.fail(e.getMessage());
 				}
 			}
@@ -501,14 +1124,12 @@ public class RequestForFinancingSteps_608 {
     	
     	// close the send alert pop-up box
     	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.RequestSendAlertPopup_608());
-    	for (int i = 0; i < 2000; i++) {
+    	for (int k = 0; k < 2000; k++) {
 			try {
 				requestForFinancingObj608.requestSendAlertPopupDismissBtn_608().click();
 		    	break;
 			} catch (Exception e) {
-				if (i==1999) {
-					Assert.fail(e.getMessage());
-				}
+			
 			}
 		}
 	    
@@ -548,8 +1169,8 @@ public class RequestForFinancingSteps_608 {
 		
 	}
 
-	@And("User_608 select the approve level1 recommendation decision in approve level1 under Request for Financing")
-	public void user_select_the_approve_level1_recommendation_decision_in_approve_level1_under_request_for_financing() throws Throwable {
+	@And("User_608 select the approve level1 recommendation decision as forward in approve level1 under Request for Financing")
+	public void user_select_the_approve_level1_recommendation_decision_as_forward_in_approve_level1_under_request_for_financing() throws Throwable {
 		for (int i = 0; i <= 300; i++) {
 			try {
 				javaScriptHelper.scrollIntoView(requestForFinancingObj608.approveLevel1CustomerGradingApproveDecision_608());
@@ -710,9 +1331,38 @@ public class RequestForFinancingSteps_608 {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.requestForFinancingMainSublimitTabDownPaymentPercentInput_608());
 		requestForFinancingObj608.requestForFinancingMainSublimitTabDownPaymentPercentInput_608().clear();
 		requestForFinancingObj608.requestForFinancingMainSublimitTabDownPaymentPercentInput_608().sendKeys(testData.get("Down Payment Percent"),Keys.TAB);
+		for(int i = 0; i <= 1000; i++) {
+    		try {
+				if(requestForFinancingObj608.requestForFinancingMainDownPaymentPercentInput_608().getAttribute("prevvalue").equals(testData.get("Down Payment Percent"))) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}
 	}
 	
+	@And("User_608 select the approve level1 recommendation decision as approve in approve level1 under Request for Financing")
+	public void user_select_the_approve_level1_recommendation_decision_as_approve_in_approve_level1_under_request_for_financing() throws Throwable {
+		for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(requestForFinancingObj608.approveLevel1CustomerGradingApproveDecision_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}		
+		dropDownHelper.SelectUsingVisibleText(requestForFinancingObj608.approveLevel1CustomerGradingApproveDecision_608(), testData.get("Decision"));
+	}
 	
+	@And("User_608 validate the Down Payment percentage should be correctly in approve level1 under Request for Financing")
+	public void user_validate_the_down_payment_percentage_should_be_correctly_in_approve_level1_under_request_for_financing() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.requestForFinancingApproveLevel1DownPaymentPercentInput_608()); 
+		String downPaymentPercent = requestForFinancingObj608.requestForFinancingApproveLevel1DownPaymentPercentInput_608().getAttribute("prevvalue");
+		Assert.assertEquals(testData.get("Down Payment Percent"), downPaymentPercent);
+	}
 	
 
 

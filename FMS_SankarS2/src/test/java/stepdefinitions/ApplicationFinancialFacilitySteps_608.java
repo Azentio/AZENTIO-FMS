@@ -1,5 +1,7 @@
 package stepdefinitions;
 
+import static org.testng.Assert.assertEquals;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -107,16 +109,25 @@ public class ApplicationFinancialFacilitySteps_608 {
     	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_014");
     }
 	
-    
+//  @AT_RF_034_FMSParam
+	@And("^User_608 get the test data for test case AT_RF_034_FMSParam$")
+	public void get_the_test_data_for_test_case_AT_RF_034fmsparam() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_034");
+	}
 	
+//  @AT_RF_034_FMSCore    
+    @And("^User_608 get the test data for test case AT_RF_034_FMSCore$")
+    public void get_the_test_data_for_test_case_AT_RF_034fmscore() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_034");
+    }
 	
+//  @AT_RF_040
+    @And("^User_608 get the test data for test case AT_RF_040$")
+    public void get_the_test_data_for_test_case_AT_RF_040() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_040");
+    }
 	
-	
-	
-	
-	
-	
-	
+
 //	@AT_FM_102
 	@And("User_608 get the test data for test case AT_FM_102")
 	public void user_get_the_test_data_for_test_case_AT_FM_102() throws Throwable {
@@ -151,15 +162,31 @@ public class ApplicationFinancialFacilitySteps_608 {
     public void get_the_test_data_for_test_case_AT_FP_001() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FP_001");
     }
-
 	
 //	@AT_DDR_020
 	@And("^User_608 get the test data for test case AT_DDR_020$")
     public void get_the_test_data_for_test_case_AT_DDR_020() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_DDR_020");
+    }	
+
+//	@AT_DDR_022
+	@And("^User_608 get the test data for test case AT_DDR_022$")
+    public void get_the_test_data_for_test_case_AT_DDR_022() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_DDR_022");
     }
 	
-
+//	@AT_DDR_023
+	@And("^User_608 get the test data for test case AT_DDR_023$")
+    public void get_the_test_data_for_test_case_AT_DDR_023() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_DDR_023");
+    }
+	
+//	@AT_DDR_024
+	@And("^User_608 get the test data for test case AT_DDR_024$")
+    public void get_the_test_data_for_test_case_AT_DDR_024() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_DDR_024");
+    }
+	
 	
 	
 	
@@ -1420,7 +1447,7 @@ public class ApplicationFinancialFacilitySteps_608 {
     	
     	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementSaveMessage_608());
     	String facilityCode = facilityManagementObj608.wifakFacilitiesManagementSaveMessage_608().getText().substring(11, 15);
-    	fmsTransactionsExcelData.updateTestData("DS_AT_FM_105", "Facility Code",facilityCode );
+    	fmsTransactionsExcelData.updateTestData(testData.get("DataSet ID"), "Facility Code",facilityCode );
 //    	System.err.println("Facility Code: "+facilityCode);
     	
     	for (int i = 0; i < 2000; i++) {
@@ -1658,8 +1685,497 @@ public class ApplicationFinancialFacilitySteps_608 {
 	}
 
 	
+//	@AT_DDR_022
+	@And("User_608 Retrieve the Application Code value in Facilities Management Maintanance Screen under WIFAK Application")
+	public void user_retrieve_the_application_code_value_in_facilities_management_maintanance_screen_under_wifak_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakFacilitiesManagementMainCodeInput_608());
+		String applicationCode = applicationFinancialFacilityObj608.wifakFacilitiesManagementMainCodeInput_608().getAttribute("prevvalue");
+		fmsTransactionsExcelData.updateTestData(testData.get("DataSet ID"),"Facility Ref", applicationCode);
+	}
 
+	@And("User_608 validate the limit details Floating Rate should be correctlty in WIFAK Facilities Management Maintanance")
+	public void user_validate_the_limit_details_floating_rate_should_be_correctlty_in_wifak_facilities_management_maintanance() throws Throwable {
+		for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.wifakFacilitiesManagementLimitDetailsFloatingRateInput_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakFacilitiesManagementLimitDetailsFloatingRateInput_608());
+		String floatingRate = applicationFinancialFacilityObj608.wifakFacilitiesManagementLimitDetailsFloatingRateInput_608().getAttribute("prevvalue");
+		Assert.assertEquals(testData.get("Floating Rate"), floatingRate);
+	}
+
+	@And("User_608 validate the limit details Floating Rate Periodicity number should be correctlty in WIFAK Facilities Management Maintanance")
+	public void user_validate_the_limit_details_floating_rate_periodicity_number_should_be_correctlty_in_wifak_facilities_management_maintanance() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakFacilitiesManagementLimitDetailsFloatingRatePeriodicityInput_608());
+		String floatingPeridicity = applicationFinancialFacilityObj608.wifakFacilitiesManagementLimitDetailsFloatingRatePeriodicityInput_608().getAttribute("prevvalue");
+		Assert.assertEquals(testData.get("FR Periodicity"), floatingPeridicity);	    
+	}
+
+	@And("User_608 validate the limit details Floating Rate Periodicity type should be correctlty in WIFAK Facilities Management Maintanance")
+	public void user_validate_the_limit_details_floating_rate_periodicity_type_should_be_correctlty_in_wifak_facilities_management_maintanance() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakFacilitiesManagementLimitDetailsFloatingRatePeriodicityTypeDropdown_608());
+		boolean floatingPeridicityType = applicationFinancialFacilityObj608.wifakFacilitiesManagementLimitDetailsFloatingRatePeriodicityTypeDropdown_608().isDisplayed();
+		Assert.assertTrue(floatingPeridicityType);
+	}
+
+	@And("User_608 click the Close button in limit details tab under WIFAK Facilities Management Maintanance")
+	public void user_click_the_close_button_in_limit_details_tab_under_wifak_facilities_management_maintanance() throws Throwable {
+		for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.wifakFacilitiesManagementLimitDetailsCloseBtn_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakFacilitiesManagementLimitDetailsCloseBtn_608());
+		applicationFinancialFacilityObj608.wifakFacilitiesManagementLimitDetailsCloseBtn_608().click();
+	}
+
+	 @And("^User_608 clicks on the Draw Down request feature under WIFAK Application$")
+	    public void user_clicks_on_the_draw_down_request_feature_under_WIFAK_Application() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakApplicationDrawDownRequest_608());
+	    	requestForFinancingObj608.wifakApplicationDrawDownRequest_608().click();
+	    }
+
+	    @And("^User_608 clicks on the Maintanance under Draw Down request feature in WIFAK Application$")
+	    public void user_clicks_on_the_maintanance_under_draw_down_request_feature_in_WIFAK_Application() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawDownRequestMaintanance_608());
+	    	requestForFinancingObj608.drawDownRequestMaintanance_608().click();        
+	    }
+
+	    @And("^User_608 enter the Facility Reference in main screen under WIFAK Application Draw Down request$")
+	    public void user_enter_the_facility_reference_in_main_screen_under_WIFAK_application_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainFacilityRef_608());
+	    	requestForFinancingObj608.drawdownMainFacilityRef_608().sendKeys(testData.get("Facility Ref"),Keys.TAB);	    	
+	    	for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(requestForFinancingObj608.drawdownMainDateSubmitted_608().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+	    	}
+
+	    }
+
+	    @And("^User_608 select the draw down type in main screen under Draw Down request feature$")
+	    public void user_select_the_draw_down_type_in_main_screen_under_draw_down_request_feature() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainDrawDownTypeLookup_608());
+	    	requestForFinancingObj608.drawdownMainDrawDownTypeLookup_608().click();
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainDrawdownTypeValue_608());
+	    	clicksAndActionsHelper.doubleClick(requestForFinancingObj608.drawdownMainDrawdownTypeValue_608());
+	    }
+
+	    @And("^User_608 enter the Description in main screen under Draw Down request feature$")
+	    public void user_enter_the_description_in_main_screen_under_draw_down_request_feature() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainDescription_608());
+	    	requestForFinancingObj608.drawdownMainDescription_608().sendKeys(testData.get("Description"));
+	    }
+	    
+	    @And("^User_608 enter the value date in maintanance screen under WIFAK Application Draw Down request$")
+	    public void user_enter_the_value_date_in_maintanance_screen_under_WIFAK_application_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainValueDate_608());
+	    	requestForFinancingObj608.drawdownMainValueDate_608().sendKeys(testData.get("Value Date"),Keys.TAB);
+	    }
+	    
+	    @And("User_608 click on the Additional details tab in Draw Down request under WIFAK Application")
+	    public void user_click_on_the_additional_details_tab_in_draw_down_request_under_WIFAK_application() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownAdditionalDetailsTab_608());
+	    	requestForFinancingObj608.drawdownAdditionalDetailsTab_608().click();
+	    }
+
+	    @And("^User_608 select the product class in Additional details tab under Draw Down request$")
+	    public void user_select_the_product_class_in_additional_details_tab_under_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownAdditionalProductClassLookup_608());
+	    	requestForFinancingObj608.drawdownAdditionalProductClassLookup_608().click();
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownAdditionalProductClassCode_608());
+	    	clicksAndActionsHelper.doubleClick(requestForFinancingObj608.drawdownAdditionalProductClassCode_608());
+	    	
+	    	for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(requestForFinancingObj608.drawdownAdditionalProductClass_608().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+	    	}
+	    }
+
+	    @And("User_608 validate the Floating Rate displayed correctly in Additional details tab under Draw Down request")
+	    public void user_validate_the_floating_rate_displayed_correctly_in_additional_details_tab_under_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestAdditionaltDetailsFloatingRate_608());
+	    	String floatingRate = applicationFinancialFacilityObj608.wifakDrawDownRequestAdditionaltDetailsFloatingRate_608().getAttribute("prevvalue");
+	        assertEquals(testData.get("Floating Rate"), floatingRate);
+	    }
+
+	    @And("User_608 validate the Floating Rate Periodicity displayed correctly in Additional details tab under Draw Down request")
+	    public void user_validate_the_floating_rate_periodicity_displayed_correctly_in_additional_details_tab_under_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestAdditionaltDetailsFloatingRatePeriodicity_608());
+	    	String floatingRatePeriodicity = applicationFinancialFacilityObj608.wifakDrawDownRequestAdditionaltDetailsFloatingRatePeriodicity_608().getAttribute("prevvalue");
+	        assertEquals(testData.get("FR Periodicity"), floatingRatePeriodicity);
+	    }
+	    
+	    
+//	    @AT_DDR_023
+	    @When("User_608 click the Save button in maintanance under Draw Down request")
+	    public void user_click_the_save_button_in_maintanance_under_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainSaveBtn_608());
+	    	requestForFinancingObj608.drawdownMainSaveBtn_608().click();
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
+	    	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainSuccessPopupMsg_608());
+	    	String DDCode = requestForFinancingObj608.drawdownMainSuccessPopupMsg_608().getText().substring(11, 15);
+	    	System.err.println("Drawdown Code: "+DDCode);
+	    	
+	    	fmsTransactionsExcelData.updateTestData(testData.get("DataSet ID"),"DD Code", DDCode);
+	    	
+	    	for (int i = 0; i < 2000; i++) {
+				try {
+			    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+			    	break;
+				} catch (Exception e) {
+					if (i==1999) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}   
+	    	
+	    	// close the send alert pop-up box
+	    	for (int i = 0; i < 200; i++) {
+				try {
+					requestForFinancingObj608.drawdownMainSendAlertPopupClose_608().click();
+			    	break;
+				} catch (Exception e) {
+
+				}
+			}
+	    }
+
+	    @Then("User_608 click on the Verify\\Deny Menu under WIFAK Draw Down request")
+	    public void user_click_on_the_verify_deny_menu_under_wifak_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestVerifyMenu_608());
+	    	applicationFinancialFacilityObj608.wifakDrawDownRequestVerifyMenu_608().click();
+	    }
+
+	    @And("User_608 enter the DD code in Verify\\Deny search grid under WIFAK Draw down request")
+	    public void user_enter_the_dd_code_in_verify_deny_search_grid_under_wifak_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestVerifyMenuSearchgridCodeInput_608());
+	    	applicationFinancialFacilityObj608.wifakDrawDownRequestVerifyMenuSearchgridCodeInput_608().sendKeys(testData.get("DD Code"),Keys.ENTER);
+	    }
+
+	    @And("User_608 double click the DD code in Verify\\Deny search grid under WIFAK Draw down request")
+	    public void user_double_click_the_dd_code_in_verify_deny_search_grid_under_wifak_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestVerifyMenuSearchgridCodeRow1_608());
+	    	clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.wifakDrawDownRequestVerifyMenuSearchgridCodeRow1_608());
+	    	for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(applicationFinancialFacilityObj608.wifakDrawDownRequestVerifyMenuCodeInput_608().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+	    	}	    	
+	    }
+
+	    @And("User_608 click the Verify button in Verify\\Deny under WIFAK Draw down request")
+	    public void user_click_the_verify_button_in_verify_deny_under_wifak_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestVerifyMenuVerifyBtn_608());  
+	    	applicationFinancialFacilityObj608.wifakDrawDownRequestVerifyMenuVerifyBtn_608().click();
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
+	    	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
+	    	
+	    	for (int i = 0; i < 2000; i++) {
+				try {
+			    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+			    	break;
+				} catch (Exception e) {
+					if (i==1999) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}   
+	    	
+	    	// close the send alert pop-up box
+	    	for (int i = 0; i < 200; i++) {
+				try {
+					applicationFinancialFacilityObj608.wifakDrawDownRequestVerifyMenuSendAlertDismissBtn_608().click();
+			    	break;
+				} catch (Exception e) {
+
+				}
+			}
+	    }
+	    
+	    @Then("User_608 click the Approve\\Reject menu under WIFAK Draw Down request")
+	    public void user_click_the_approve_reject_menu_under_wifak_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectMenu_608());
+	    	applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectMenu_608().click();
+	    }
+
+	    @And("User_608 enter the DD code in Approve\\Reject search grid under WIFAK Draw down request")
+	    public void user_enter_the_dd_code_in_approve_reject_search_grid_under_wifak_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectSearchgridCodeInput_608());
+	    	applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectSearchgridCodeInput_608().sendKeys(testData.get("DD Code"),Keys.ENTER);
+	    }
+
+	    @And("User_608 double click the DD code in Approve\\Reject search grid under WIFAK Draw down request")
+	    public void user_double_click_the_dd_code_in_approve_reject_search_grid_under_wifak_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectSearchgridCodeRow1_608());
+	        clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectSearchgridCodeRow1_608());
+	        for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectCodeInput_608().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+	    	}
+	    }
+
+	    @When("User_608 click the Approve button in Approve\\Reject under WIFAK Draw down request")
+	    public void user_click_the_approve_button_in_approve_reject_under_wifak_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectApproveBtn_608());
+	    	applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectApproveBtn_608().click();
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
+	    	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
+	    	
+	    	for (int i = 0; i < 2000; i++) {
+				try {
+			    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+			    	break;
+				} catch (Exception e) {
+					if (i==1999) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}	    	
+	    }   	
+	    
+	    
+//	    @AT_DDR_024
+	    @And("User_608 click the Clear button in Facilities Management Maintanance under WIFAK Application")
+	    public void user_click_the_clear_button_in_facilities_management_maintanance_under_wifak_application() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakFacilitiesManagementMaintananceClearBtn_608());
+	    	applicationFinancialFacilityObj608.wifakFacilitiesManagementMaintananceClearBtn_608().click();
+	    }
+	    
+	    @Then("User_608 click the Query Menu under WIFAK Draw Down request")
+	    public void user_click_the_query_menu_under_wifak_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestQueryMenu_608());
+	    	applicationFinancialFacilityObj608.wifakDrawDownRequestQueryMenu_608().click();
+	    }
+
+	    @And("User_608 enter the DD code in Query search grid under WIFAK Draw down request")
+	    public void user_enter_the_dd_code_in_query_search_grid_under_wifak_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestQueryMenuSearchgridCodeInput_608());
+	    	applicationFinancialFacilityObj608.wifakDrawDownRequestQueryMenuSearchgridCodeInput_608().sendKeys(testData.get("DD Code"),Keys.ENTER);
+	    }
+
+	    @And("User_608 double click the DD code in Query search grid under WIFAK Draw down request")
+	    public void user_double_click_the_dd_code_in_query_search_grid_under_wifak_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestQueryMenuSearchgridCodeRow1_608());
+	        clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.wifakDrawDownRequestQueryMenuSearchgridCodeRow1_608());
+	        for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(applicationFinancialFacilityObj608.wifakDrawDownRequestQueryMenuCodeInput_608().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+	    	}
+	    }
+
+	    @And("User_608 click the Additional Details tab in Query Menu under WIFAK Draw Down request")
+	    public void user_click_the_additional_details_tab_in_query_menu_under_wifak_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestQueryMenuAdditionalDetailsTab_608());
+	    	applicationFinancialFacilityObj608.wifakDrawDownRequestQueryMenuAdditionalDetailsTab_608().click();
+	    }
+	    
+	    
+	    @Then("User_608 click the List Menu under WIFAK Draw Down request")
+	    public void user_click_the_list_menu_under_wifak_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestListMenu_608());
+	    	applicationFinancialFacilityObj608.wifakDrawDownRequestListMenu_608().click();
+	    }
+
+	    @And("User_608 enter From code in List menu under WIFAK Draw down request")
+	    public void user_enter_from_code_in_list_menu_under_wifak_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestListMenuFromCodeInput_608());
+	    	applicationFinancialFacilityObj608.wifakDrawDownRequestListMenuFromCodeInput_608().sendKeys(testData.get("From Code"),Keys.TAB);
+	    }
+
+	    @And("User_608 enter To code in List menu under WIFAK Draw down request")
+	    public void user_enter_to_code_in_list_menu_under_wifak_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestListMenuToCodeInput_608());
+	    	applicationFinancialFacilityObj608.wifakDrawDownRequestListMenuToCodeInput_608().sendKeys(testData.get("To Code"),Keys.TAB);
+	    	for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(applicationFinancialFacilityObj608.wifakDrawDownRequestListMenuToCodeInput_608().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+	    	}
+	    	
+	    }
+
+	    @And("User_608 click the Retrieve button in List menu under WIFAK Draw down request")
+	    public void user_click_the_retrieve_button_in_list_menu_under_wifak_draw_down_request() throws Throwable{
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestListMenurRetrieveBtn_608());
+	    	applicationFinancialFacilityObj608.wifakDrawDownRequestListMenurRetrieveBtn_608().click();
+	    }
+
+	    
+	    @Then("User_608 click the Reverse menu under WIFAK Draw Down request")
+	    public void user_click_the_reverse_menu_under_wifak_draw_down_request() {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestReverseMenu_608());
+	    	applicationFinancialFacilityObj608.wifakDrawDownRequestReverseMenu_608().click();
+	    }
+
+	    @And("User_608 enter the DD code in Reverse menu search grid under WIFAK Draw down request")
+	    public void user_enter_the_dd_code_in_reverse_menu_search_grid_under_wifak_draw_down_request() {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestReverseMenuSearchgridCodeInput_608());
+	    	applicationFinancialFacilityObj608.wifakDrawDownRequestReverseMenuSearchgridCodeInput_608().sendKeys(testData.get("DD Code"),Keys.ENTER);
+	    }
+
+	    @And("User_608 double click the DD code in Reverse menu search grid under WIFAK Draw down request")
+	    public void user_double_click_the_dd_code_in_reverse_menu_search_grid_under_wifak_draw_down_request() {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestReverseMenuSearchgridCodeRow1_608());
+	    	clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.wifakDrawDownRequestReverseMenuSearchgridCodeRow1_608());
+	    	for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(applicationFinancialFacilityObj608.wifakDrawDownRequestReverseMenuCodeInput_608().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+	    	}	    	
+	    }
+
+	    @When("User_608 click the Reverse button in Reverse menu under WIFAK Draw down request")
+	    public void user_click_the_reverse_button_in_reverse_menu_under_wifak_draw_down_request() {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestReverseMenuReverseBtn_608());
+	    	applicationFinancialFacilityObj608.wifakDrawDownRequestReverseMenuReverseBtn_608().click();
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
+	    	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
+	    	
+	    	for (int i = 0; i < 2000; i++) {
+				try {
+			    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+			    	break;
+				} catch (Exception e) {
+					if (i==1999) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+	    }
+	    
+	    
+	    @Then("User_608 click the Approve\\Reject Reverse menu under WIFAK Draw Down request")
+	    public void user_click_the_approve_reject_reverse_menu_under_wifak_draw_down_request() {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectReverseMenu_608());
+	    	applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectReverseMenu_608().click();
+	    }
+
+	    @And("User_608 enter the DD code in Approve\\Reject Reverse menu search grid under WIFAK Draw down request")
+	    public void user_enter_the_dd_code_in_approve_reject_reverse_menu_search_grid_under_wifak_draw_down_request() {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectReverseMenuSearchgridCodeInput_608());
+	    	applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectReverseMenuSearchgridCodeInput_608().sendKeys(testData.get("DD Code"),Keys.ENTER);
+	    }
+
+	    @And("User_608 double click the DD code in Approve\\Reject Reverse menu search grid under WIFAK Draw down request")
+	    public void user_double_click_the_dd_code_in_approve_reject_reverse_menu_search_grid_under_wifak_draw_down_request() {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectReverseMenuSearchgridCodeRow1_608());
+	    	clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectReverseMenuSearchgridCodeRow1_608());
+	    	for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectReverseMenuCodeInput_608().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+	    	}
+	    }
+
+	    @When("User_608 click the Approve Reverse button in Approve\\Reject Reverse menu under WIFAK Draw down request")
+	    public void user_click_the_approve_reverse_button_in_approve_reject_reverse_menu_under_wifak_draw_down_request() {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectReverseApproveReverseBtn_608());
+	    	applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectReverseApproveReverseBtn_608().click();
+	        
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
+	    	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
+	    	
+	    	for (int i = 0; i < 2000; i++) {
+				try {
+			    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+			    	break;
+				} catch (Exception e) {
+					if (i==1999) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+	    }
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+
+//  @AT_RF_034_FMSCore
+	@And("^User_608 search the code in issue facility offer$")
+    public void user_search_the_code_in_issue_facility_offer() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.issueFacilityOfferSearchCode_608());  	
+//    	requestForFinancingObj608.issueFacilityOfferSearchCode_608().sendKeys(refID);
+    	requestForFinancingObj608.issueFacilityOfferSearchCode_608().sendKeys(testData.get("Reference Code"),Keys.ENTER);
+    }
 	
+//  @AT_RF_040
+    @And("^User_608 enter the down payment percentage in additional info under main screen$")
+    public void user_enter_the_down_payment_percentage_in_additional_info_under_main_screen() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.additionalTabDownPayPercent_608());
+    	requestForFinancingObj608.additionalTabDownPayPercent_608().sendKeys(testData.get("Down Payment %"));
+    	requestForFinancingObj608.additionalTabDownPayPercent_608().sendKeys(Keys.TAB);
+    }
+
+    @And("^User_608 enter the down payment to vendor percentage in additional info tab$")
+    public void user_enter_the_down_payment_to_vendor_percentage_in_additional_info_tab() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.additionalTabDownPayToVendor_608());
+    	requestForFinancingObj608.additionalTabDownPayToVendor_608().sendKeys(testData.get("Down Payment to Vendor %"));
+    	requestForFinancingObj608.additionalTabDownPayToVendor_608().sendKeys(Keys.TAB);
+    }
 	
 	
 

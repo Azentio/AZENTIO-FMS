@@ -44,11 +44,7 @@ public class WIFAK_Application2_Steps {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_AFF_098");
     }
 	
-//  @AT_RF_034_FMSParam
-	@And("^get the test data for test case AT_RF_034_FMSParam$")
-	public void get_the_test_data_for_test_case_AT_RF_034fmsparam() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_034");
-	}
+
 
 //	@AT_RF_099_FMSParam
 	@And("^get the test data for test case AT_RF_099_FMSParam$")
@@ -308,54 +304,54 @@ public class WIFAK_Application2_Steps {
     
     
     
-//  @681303_FMSParam
-    @And("^User uncheck the Issue Facility Offer flag$")
-    public void user_uncheck_the_issue_facility_offer_flag() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.issueFacilityOfferFlag());
-    	WebElement issueFacilityOfferFlag = facilityTypeObj.issueFacilityOfferFlag();
-    	if(issueFacilityOfferFlag.isSelected()) {
-    		 issueFacilityOfferFlag.click();
-    	}
-    }
-
-    @And("^User move to facility reports tab in update after approve$")
-    public void user_move_to_facility_reports_tab_in_update_after_approve() throws Throwable {
-    	Thread.sleep(5000);
-    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.facilityTypeFacilityReports());
-    	facilityTypeObj.facilityTypeFacilityReports().click();
-    	}
-
-    @And("^User clicks on the search option in issue facility offer under facility reports$")
-    public void user_clicks_on_the_search_option_in_issue_facility_offer_under_facility_reports() throws Throwable {
-    	for (int i = 0; i <= 300; i++) {
-			try {
-				javaScriptHelper.scrollIntoView(facilityTypeObj.facilityReportsIssueFacilityOfferLookup());
-				break;
-			} catch (Exception e) {
-				if (i == 300) {
-					Assert.fail(e.getMessage());
-				}
-			}
-		}
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.facilityReportsIssueFacilityOfferLookup());
-    	facilityTypeObj.facilityReportsIssueFacilityOfferLookup().click();
-    }
-
-    @And("^User double click on any one retrived data$")
-    public void user_double_click_on_any_one_retrived_data() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.facilityReportsIssueFacilityOfferLookupData());
-    	clicksAndActionsHelper.doubleClick(facilityTypeObj.facilityReportsIssueFacilityOfferLookupData());
-    }
-
-    @And("^User check the auto print flag under issue facility offer$")
-    public void user_check_the_auto_print_flag_under_issue_facility_offer() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.facilityReportsIssueFacilityOfferAutoPrintFlag());
-    	WebElement autoPrintFlag = facilityTypeObj.facilityReportsIssueFacilityOfferAutoPrintFlag();
-    	if(!(autoPrintFlag.isSelected())) {
-    		autoPrintFlag.click();
-    	}
-    }
+////  @AT_RF_034_FMSParam
+//    @And("^User uncheck the Issue Facility Offer flag$")
+//    public void user_uncheck_the_issue_facility_offer_flag() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.issueFacilityOfferFlag());
+//    	WebElement issueFacilityOfferFlag = facilityTypeObj.issueFacilityOfferFlag();
+//    	if(issueFacilityOfferFlag.isSelected()) {
+//    		 issueFacilityOfferFlag.click();
+//    	}
+//    }
+//
+//    @And("^User move to facility reports tab in update after approve$")
+//    public void user_move_to_facility_reports_tab_in_update_after_approve() throws Throwable {
+//    	Thread.sleep(5000);
+//    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.facilityTypeFacilityReports());
+//    	facilityTypeObj.facilityTypeFacilityReports().click();
+//    	}
+//
+//    @And("^User clicks on the search option in issue facility offer under facility reports$")
+//    public void user_clicks_on_the_search_option_in_issue_facility_offer_under_facility_reports() throws Throwable {
+//    	for (int i = 0; i <= 300; i++) {
+//			try {
+//				javaScriptHelper.scrollIntoView(facilityTypeObj.facilityReportsIssueFacilityOfferLookup());
+//				break;
+//			} catch (Exception e) {
+//				if (i == 300) {
+//					Assert.fail(e.getMessage());
+//				}
+//			}
+//		}
+//    	
+//    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.facilityReportsIssueFacilityOfferLookup());
+//    	facilityTypeObj.facilityReportsIssueFacilityOfferLookup().click();
+//    }
+//
+//    @And("^User double click on any one retrived data$")
+//    public void user_double_click_on_any_one_retrived_data() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.facilityReportsIssueFacilityOfferLookupData());
+//    	clicksAndActionsHelper.doubleClick(facilityTypeObj.facilityReportsIssueFacilityOfferLookupData());
+//    }
+//
+//    @And("^User check the auto print flag under issue facility offer$")
+//    public void user_check_the_auto_print_flag_under_issue_facility_offer() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.facilityReportsIssueFacilityOfferAutoPrintFlag());
+//    	WebElement autoPrintFlag = facilityTypeObj.facilityReportsIssueFacilityOfferAutoPrintFlag();
+//    	if(!(autoPrintFlag.isSelected())) {
+//    		autoPrintFlag.click();
+//    	}
+//    }
  
 //  @681303_FMSCore
     @And("^User clicks on the validate button$")
@@ -411,42 +407,42 @@ public class WIFAK_Application2_Steps {
 		}
     }
    
-    @And("^User clicks the issue facility offer under WIFAK Application$")
-    public void user_clicks_the_issue_facility_offer_under_wifak_application() throws Throwable {    	
-    	System.out.println("Ref No: "+refID);
-    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.WIFAKAppIssueFacilityOffer());
-    	facilityTypeObj.WIFAKAppIssueFacilityOffer().click();
-    }
-
-    @And("^User search the code in issue facility offer$")
-    public void user_search_the_code_in_issue_facility_offer() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.issueFacilityOfferSearchCode());  	
-    	facilityTypeObj.issueFacilityOfferSearchCode().sendKeys(refID);
-    	facilityTypeObj.issueFacilityOfferSearchCode().sendKeys(Keys.ENTER);
-    }
-
-    @And("^User double click on the retrived data$")
-    public void user_double_click_on_the_retrived_data() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.issueFacilityOfferSearchResult());
-    	clicksAndActionsHelper.doubleClick(facilityTypeObj.issueFacilityOfferSearchResult());        
-    }
-    
-    @When("^User clicks on the issue offer button under issue facility offer$")
-    public void user_clicks_on_the_issue_offer_button_under_issue_facility_offer() throws Throwable {
-    	for (int i = 0; i <= 300; i++) {
-			try {
-				javaScriptHelper.scrollIntoView(facilityTypeObj.facilityReportsIssueFacilityOfferLookup());
-				break;
-			} catch (Exception e) {
-				if (i == 300) {
-					Assert.fail(e.getMessage());
-				}
-			}
-		}
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.issueFacilityOfferIssueOfferBtn());
-    	facilityTypeObj.issueFacilityOfferIssueOfferBtn().click();
-    }
+//    @And("^User clicks the issue facility offer under WIFAK Application$")
+//    public void user_clicks_the_issue_facility_offer_under_wifak_application() throws Throwable {    	
+//    	System.out.println("Ref No: "+refID);
+//    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.WIFAKAppIssueFacilityOffer());
+//    	facilityTypeObj.WIFAKAppIssueFacilityOffer().click();
+//    }
+//
+//    @And("^User search the code in issue facility offer$")
+//    public void user_search_the_code_in_issue_facility_offer() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.issueFacilityOfferSearchCode());  	
+//    	facilityTypeObj.issueFacilityOfferSearchCode().sendKeys(refID);
+//    	facilityTypeObj.issueFacilityOfferSearchCode().sendKeys(Keys.ENTER);
+//    }
+//
+//    @And("^User double click on the retrived data$")
+//    public void user_double_click_on_the_retrived_data() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.issueFacilityOfferSearchResult());
+//    	clicksAndActionsHelper.doubleClick(facilityTypeObj.issueFacilityOfferSearchResult());        
+//    }
+//    
+//    @When("^User clicks on the issue offer button under issue facility offer$")
+//    public void user_clicks_on_the_issue_offer_button_under_issue_facility_offer() throws Throwable {
+//    	for (int i = 0; i <= 300; i++) {
+//			try {
+//				javaScriptHelper.scrollIntoView(facilityTypeObj.facilityReportsIssueFacilityOfferLookup());
+//				break;
+//			} catch (Exception e) {
+//				if (i == 300) {
+//					Assert.fail(e.getMessage());
+//				}
+//			}
+//		}
+//    	
+//    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj.issueFacilityOfferIssueOfferBtn());
+//    	facilityTypeObj.issueFacilityOfferIssueOfferBtn().click();
+//    }
     
     
     

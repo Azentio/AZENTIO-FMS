@@ -63,11 +63,7 @@ public class WIFAK_Application_Steps {
 //		testData = fmsTransactionsExcelData.getTestdata("DS_AT_AFF_098");
 //	}
 	
-//  @AT_RF_034_FMSCore    
-    @And("^get the test data for test case AT_RF_034_FMSCore$")
-    public void get_the_test_data_for_test_case_AT_RF_034fmscore() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_034");
-    }
+
 	
 //  @AT_RF_014_FMSCore
     @And("^get the test data for test case AT_RF_014_FMSCore$")
@@ -75,11 +71,7 @@ public class WIFAK_Application_Steps {
     	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_014");
     }
     
-//  @AT_RF_040
-    @And("^get the test data for test case AT_RF_040$")
-    public void get_the_test_data_for_test_case_AT_RF_040() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_040");
-    }
+
     
 //  @AT_RF_098_User1
     @And("^get the test data for test case AT_RF_098_User1$")
@@ -117,11 +109,7 @@ public class WIFAK_Application_Steps {
     	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_102");
     }
     
-//  @AT_RF_157
-    @And("get the test data for test case AT_RF_157")
-    public void get_the_test_data_for_test_case_at_rf_157() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS01_AT_RF_157");   
-    }
+
     
 //  @AT_RF_139
     @And("get the test data for test case AT_RF_139")
@@ -673,34 +661,34 @@ public class WIFAK_Application_Steps {
 //    }
 
     
-//  @640861
-    @And("^User enter the down payment percentage in additional info tab$")
-    public void user_enter_the_down_payment_percentage_in_additional_info_tab() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.additionalTabDownPayPercent());
-    	WIFAKapplicationObj.additionalTabDownPayPercent().sendKeys(testData.get("Down Payment %"));
-    	WIFAKapplicationObj.additionalTabDownPayPercent().sendKeys(Keys.TAB);
-    }
-
-    @And("^User enter the down payment to vendor percentage in additional info tab$")
-    public void user_enter_the_down_payment_to_vendor_percentage_in_additional_info_tab() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.additionalTabDownPayToVendor());
-    	WIFAKapplicationObj.additionalTabDownPayToVendor().sendKeys(testData.get("Down Payment to Vendor %"));
-    	WIFAKapplicationObj.additionalTabDownPayToVendor().sendKeys(Keys.TAB);
-    }
-    
-    @Then("^User validate the visibility of Account No input box in limit details$")
-    public void user_validate_the_visibility_of_account_no_input_box_in_limit_details() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsAccNoInput());
-    	boolean accNoDisplayed = WIFAKapplicationObj.limitDetailsAccNoInput().isDisplayed();
-    	Assert.assertEquals(true, accNoDisplayed);
-    }
-
-    @Then("^User validate the visibility of Fund Transfer rate input box in limit details$")
-    public void user_validate_the_visibility_of_fund_transfer_rate_input_box_in_limit_details() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsFundTransferRateInput());
-    	boolean fundtransferdisplayed = WIFAKapplicationObj.limitDetailsFundTransferRateInput().isDisplayed();
-    	Assert.assertEquals(true, fundtransferdisplayed);
-    }
+////  @AT_RF_040
+//    @And("^User enter the down payment percentage in additional info tab$")
+//    public void user_enter_the_down_payment_percentage_in_additional_info_tab() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.additionalTabDownPayPercent());
+//    	WIFAKapplicationObj.additionalTabDownPayPercent().sendKeys(testData.get("Down Payment %"));
+//    	WIFAKapplicationObj.additionalTabDownPayPercent().sendKeys(Keys.TAB);
+//    }
+//
+//    @And("^User enter the down payment to vendor percentage in additional info tab$")
+//    public void user_enter_the_down_payment_to_vendor_percentage_in_additional_info_tab() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.additionalTabDownPayToVendor());
+//    	WIFAKapplicationObj.additionalTabDownPayToVendor().sendKeys(testData.get("Down Payment to Vendor %"));
+//    	WIFAKapplicationObj.additionalTabDownPayToVendor().sendKeys(Keys.TAB);
+//    }
+//    
+//    @Then("^User validate the visibility of Account No input box in limit details$")
+//    public void user_validate_the_visibility_of_account_no_input_box_in_limit_details() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsAccNoInput());
+//    	boolean accNoDisplayed = WIFAKapplicationObj.limitDetailsAccNoInput().isDisplayed();
+//    	Assert.assertEquals(true, accNoDisplayed);
+//    }
+//
+//    @Then("^User validate the visibility of Fund Transfer rate input box in limit details$")
+//    public void user_validate_the_visibility_of_fund_transfer_rate_input_box_in_limit_details() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.limitDetailsFundTransferRateInput());
+//    	boolean fundtransferdisplayed = WIFAKapplicationObj.limitDetailsFundTransferRateInput().isDisplayed();
+//    	Assert.assertEquals(true, fundtransferdisplayed);
+//    }
     
     
 //  @AT_RF_098_User1
@@ -1087,382 +1075,382 @@ public class WIFAK_Application_Steps {
     }
     
     
-//  @AT_RF_157
-    @And("^User clicks on the Draw Down request module$")
-    public void user_clicks_on_the_draw_down_request_module() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.wifakApplicationDrawDownRequest());
-    	WIFAKapplicationObj.wifakApplicationDrawDownRequest().click();
-    }
-
-    @And("^User clicks on the Maintanance under Draw Down request$")
-    public void user_clicks_on_the_maintanance_under_draw_down_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawDownRequestMaintanance());
-    	WIFAKapplicationObj.drawDownRequestMaintanance().click();        
-    }
-
-    @And("^User enter the Facility Reference in main screen under Draw Down request$")
-    public void user_enter_the_facility_reference_in_main_screen_under_draw_down_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainFacilityRef());
-//    	WIFAKapplicationObj.drawdownMainFacilityRef().sendKeys("1469",Keys.TAB);
-    	WIFAKapplicationObj.drawdownMainFacilityRef().sendKeys(testData.get("Facility Ref"),Keys.TAB);
-    	
-    	for(int i = 0; i <= 500; i++) {
-    		try {
-				if(!(WIFAKapplicationObj.drawdownMainDateSubmitted().getAttribute("prevvalue").isBlank())) {
-					break;
-				}
-			} catch (Exception e) {
-				// TODO: handle exception
-			}
-    	}
-    	
-//    	try {
-//    		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownPostApprovalYesBtn());
-//        	WIFAKapplicationObj.drawdownPostApprovalYesBtn().click();
-//        	for(int i = 0; i <= 500; i++) {
-//        		try {
-//    				if(!(WIFAKapplicationObj.drawdownMainDateSubmitted().getAttribute("prevvalue").isBlank())) {
-//    					break;
-//    				}
-//    			} catch (Exception e) {
-//    				// TODO: handle exception
-//    			}
-//        	}
-//		} catch (Exception e) {
-//			// TODO: handle exception
-//		}
-
-    }
-
-    @And("^User select the draw down type in main screen under Draw Down request$")
-    public void user_select_the_draw_down_type_in_main_screen_under_draw_down_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainDrawDownTypeLookup());
-    	WIFAKapplicationObj.drawdownMainDrawDownTypeLookup().click();
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainDrawdownTypeValue());
-    	clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.drawdownMainDrawdownTypeValue());
-    }
-
-    @And("^User enter the Description in main screen under Draw Down request$")
-    public void user_enter_the_description_in_main_screen_under_draw_down_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainDescription());
-//    	WIFAKapplicationObj.drawdownMainDescription().sendKeys("Test");
-    	WIFAKapplicationObj.drawdownMainDescription().sendKeys(testData.get("Description"));
-    }
-    
-    @And("User click on the draw down additional details tab")
-    public void user_click_on_the_draw_down_additional_details_tab() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownAdditionalDetailsTab());
-    	WIFAKapplicationObj.drawdownAdditionalDetailsTab().click();
-    }
-
-    @And("^User select the product class in additional screen under Draw Down request$")
-    public void user_select_the_product_class_in_additional_screen_under_draw_down_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownAdditionalProductClassLookup());
-    	WIFAKapplicationObj.drawdownAdditionalProductClassLookup().click();
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownAdditionalProductClassCode());
-    	clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.drawdownAdditionalProductClassCode());
-    	
-    	for(int i = 0; i <= 500; i++) {
-    		try {
-				if(!(WIFAKapplicationObj.drawdownAdditionalProductClass().getAttribute("prevvalue").isBlank())) {
-					break;
-				}
-			} catch (Exception e) {
-				// TODO: handle exception
-			}
-    	}
-    }
-
-    @And("^User give the FC Amount in additional screen under Draw Down request$")
-    public void user_give_the_fc_amount_in_additional_screen_under_draw_down_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownAdditionalFCAmount());
-    	WIFAKapplicationObj.drawdownAdditionalFCAmount().clear();
-//    	WIFAKapplicationObj.drawdownAdditionalFCAmount().sendKeys("500",Keys.TAB);
-    	WIFAKapplicationObj.drawdownAdditionalFCAmount().sendKeys(testData.get("FC Amount"),Keys.TAB);
-    	
-    	for(int i = 0; i <= 500; i++) {
-    		try {
-				if(!(WIFAKapplicationObj.drawdownAdditionalFCAmount().getAttribute("prevvalue").isBlank())) {
-					break;
-				}
-			} catch (Exception e) {
-				// TODO: handle exception
-			}
-    	}
-    }
-    
-    @And("^User enter the value date in main screen under Draw Down request$")
-    public void user_enter_the_value_date_in_main_screen_under_draw_down_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainInfoTab());
-    	WIFAKapplicationObj.drawdownMainInfoTab().click();
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainValueDate());
-//    	WIFAKapplicationObj.drawdownMainValueDate().sendKeys("05/01/2024",Keys.TAB);
-    	WIFAKapplicationObj.drawdownMainValueDate().sendKeys(testData.get("Value Date"),Keys.TAB);
-    }
-    
-    @When("^User click the save button under in maintanance under Draw Down request$")
-    public void user_click_the_save_button_under_in_maintanance_under_draw_down_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainSaveBtn());
-    	WIFAKapplicationObj.drawdownMainSaveBtn().click();
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.WarningPopupOkBtn());
-    	WIFAKapplicationObj.WarningPopupOkBtn().click();
-    	
-    	// Post Approval popup
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownPostApprovalYesBtn());
-    	WIFAKapplicationObj.drawdownPostApprovalYesBtn().click();
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.SuccessPopupOkBtn());
-    	WIFAKapplicationObj.SuccessPopupOkBtn().click();
-    	
-    	// Send Alert popup
-    	for (int i = 0; i < 2000; i++) {
-			try {
-		    	WIFAKapplicationObj.sendAlertPopup().click();
-		    	break;
-			} catch (Exception e) {
-				if (i==1999) {
-					Assert.fail(e.getMessage());
-				}
-			}
-		}
-    	
-    }
-    
-    
-    @Then("User click on the Verify link under Draw Down request")
-    public void user_click_on_the_verify_link_under_draw_down_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawDownRequestVerify());
-    	WIFAKapplicationObj.drawDownRequestVerify().click();
-    }
-    @And("User click on the clear button in verify under Draw Down request")
-    public void user_click_on_the_clear_button_in_verify_under_draw_down_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownVerifyClearBtn());
-    	WIFAKapplicationObj.drawdownVerifyClearBtn().click();
-    }
-    @And("User double click on the code in verify under Draw Down request")
-    public void user_double_click_on_the_code_in_verify_under_draw_down_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownVerifyCode());
-        clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.drawdownVerifyCode());
-    }
-    @When("User click on the verify button in Verify link under Draw Down request")
-    public void user_click_on_the_verify_button_in_verify_link_under_draw_down_request() throws Throwable {
-    	for (int i = 0; i <= 300; i++) {
-        	try {
-        		javaScriptHelper.scrollIntoView(WIFAKapplicationObj.drawDownRequestVerifyBtn());
-    				break;
-    			} catch (Exception e) {
-    				if (i == 300) {
-    					Assert.fail(e.getMessage());
-    				}
-    			}
-    	}
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawDownRequestVerifyBtn());
-    	WIFAKapplicationObj.drawDownRequestVerifyBtn().click();
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.WarningPopupOkBtn());
-    	WIFAKapplicationObj.WarningPopupOkBtn().click();
-    	
-    	// Post Approval popup
+////  @AT_RF_157
+//    @And("^User clicks on the Draw Down request module$")
+//    public void user_clicks_on_the_draw_down_request_module() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.wifakApplicationDrawDownRequest());
+//    	WIFAKapplicationObj.wifakApplicationDrawDownRequest().click();
+//    }
+//
+//    @And("^User clicks on the Maintanance under Draw Down request$")
+//    public void user_clicks_on_the_maintanance_under_draw_down_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawDownRequestMaintanance());
+//    	WIFAKapplicationObj.drawDownRequestMaintanance().click();        
+//    }
+//
+//    @And("^User enter the Facility Reference in main screen under Draw Down request$")
+//    public void user_enter_the_facility_reference_in_main_screen_under_draw_down_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainFacilityRef());
+////    	WIFAKapplicationObj.drawdownMainFacilityRef().sendKeys("1469",Keys.TAB);
+//    	WIFAKapplicationObj.drawdownMainFacilityRef().sendKeys(testData.get("Facility Ref"),Keys.TAB);
+//    	
+//    	for(int i = 0; i <= 500; i++) {
+//    		try {
+//				if(!(WIFAKapplicationObj.drawdownMainDateSubmitted().getAttribute("prevvalue").isBlank())) {
+//					break;
+//				}
+//			} catch (Exception e) {
+//				// TODO: handle exception
+//			}
+//    	}
+//    	
+////    	try {
+////    		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownPostApprovalYesBtn());
+////        	WIFAKapplicationObj.drawdownPostApprovalYesBtn().click();
+////        	for(int i = 0; i <= 500; i++) {
+////        		try {
+////    				if(!(WIFAKapplicationObj.drawdownMainDateSubmitted().getAttribute("prevvalue").isBlank())) {
+////    					break;
+////    				}
+////    			} catch (Exception e) {
+////    				// TODO: handle exception
+////    			}
+////        	}
+////		} catch (Exception e) {
+////			// TODO: handle exception
+////		}
+//
+//    }
+//
+//    @And("^User select the draw down type in main screen under Draw Down request$")
+//    public void user_select_the_draw_down_type_in_main_screen_under_draw_down_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainDrawDownTypeLookup());
+//    	WIFAKapplicationObj.drawdownMainDrawDownTypeLookup().click();
+//    	
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainDrawdownTypeValue());
+//    	clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.drawdownMainDrawdownTypeValue());
+//    }
+//
+//    @And("^User enter the Description in main screen under Draw Down request$")
+//    public void user_enter_the_description_in_main_screen_under_draw_down_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainDescription());
+////    	WIFAKapplicationObj.drawdownMainDescription().sendKeys("Test");
+//    	WIFAKapplicationObj.drawdownMainDescription().sendKeys(testData.get("Description"));
+//    }
+//    
+//    @And("User click on the draw down additional details tab")
+//    public void user_click_on_the_draw_down_additional_details_tab() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownAdditionalDetailsTab());
+//    	WIFAKapplicationObj.drawdownAdditionalDetailsTab().click();
+//    }
+//
+//    @And("^User select the product class in additional screen under Draw Down request$")
+//    public void user_select_the_product_class_in_additional_screen_under_draw_down_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownAdditionalProductClassLookup());
+//    	WIFAKapplicationObj.drawdownAdditionalProductClassLookup().click();
+//    	
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownAdditionalProductClassCode());
+//    	clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.drawdownAdditionalProductClassCode());
+//    	
+//    	for(int i = 0; i <= 500; i++) {
+//    		try {
+//				if(!(WIFAKapplicationObj.drawdownAdditionalProductClass().getAttribute("prevvalue").isBlank())) {
+//					break;
+//				}
+//			} catch (Exception e) {
+//				// TODO: handle exception
+//			}
+//    	}
+//    }
+//
+//    @And("^User give the FC Amount in additional screen under Draw Down request$")
+//    public void user_give_the_fc_amount_in_additional_screen_under_draw_down_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownAdditionalFCAmount());
+//    	WIFAKapplicationObj.drawdownAdditionalFCAmount().clear();
+////    	WIFAKapplicationObj.drawdownAdditionalFCAmount().sendKeys("500",Keys.TAB);
+//    	WIFAKapplicationObj.drawdownAdditionalFCAmount().sendKeys(testData.get("FC Amount"),Keys.TAB);
+//    	
+//    	for(int i = 0; i <= 500; i++) {
+//    		try {
+//				if(!(WIFAKapplicationObj.drawdownAdditionalFCAmount().getAttribute("prevvalue").isBlank())) {
+//					break;
+//				}
+//			} catch (Exception e) {
+//				// TODO: handle exception
+//			}
+//    	}
+//    }
+//    
+//    @And("^User enter the value date in main screen under Draw Down request$")
+//    public void user_enter_the_value_date_in_main_screen_under_draw_down_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainInfoTab());
+//    	WIFAKapplicationObj.drawdownMainInfoTab().click();
+//    	
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainValueDate());
+////    	WIFAKapplicationObj.drawdownMainValueDate().sendKeys("05/01/2024",Keys.TAB);
+//    	WIFAKapplicationObj.drawdownMainValueDate().sendKeys(testData.get("Value Date"),Keys.TAB);
+//    }
+//    
+//    @When("^User click the save button under in maintanance under Draw Down request$")
+//    public void user_click_the_save_button_under_in_maintanance_under_draw_down_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainSaveBtn());
+//    	WIFAKapplicationObj.drawdownMainSaveBtn().click();
+//    	
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.WarningPopupOkBtn());
+//    	WIFAKapplicationObj.WarningPopupOkBtn().click();
+//    	
+//    	// Post Approval popup
 //    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownPostApprovalYesBtn());
 //    	WIFAKapplicationObj.drawdownPostApprovalYesBtn().click();
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.SuccessPopupOkBtn());
-    	WIFAKapplicationObj.SuccessPopupOkBtn().click();
-    	
-    	// Send Alert popup
-    	for (int i = 0; i < 2000; i++) {
-			try {
-		    	WIFAKapplicationObj.drawdownVerifySendAlertPopup().click();
-		    	break;
-			} catch (Exception e) {
-				if (i==1999) {
-					Assert.fail(e.getMessage());
-				}
-			}
-		}
-    	
-    }
-    	
-    @Then("User click on the Approve link under Draw Down request")
-    public void user_click_on_the_approve_link_under_draw_down_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawDownRequestApprove());
-    	WIFAKapplicationObj.drawDownRequestApprove().click();
-    }
-    @And("User click on the clear button in Approve under Draw Down request")
-    public void user_click_on_the_clear_button_in_approve_under_draw_down_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownApproveClearBtn());
-    	WIFAKapplicationObj.drawdownApproveClearBtn().click();
-    }
-    @And("User double click on the code in Approve under Draw Down request")
-    public void user_double_click_on_the_code_in_approve_under_draw_down_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownApproveCode());
-        clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.drawdownApproveCode());
-    }
-    @When("User click on the Approve button in Approve link under Draw Down request")
-    public void user_click_on_the_approve_button_in_approve_link_under_draw_down_request() throws Throwable {
-    	for (int i = 0; i <= 300; i++) {
-        	try {
-        		javaScriptHelper.scrollIntoView(WIFAKapplicationObj.drawDownRequestApproveBtn());
-    				break;
-    			} catch (Exception e) {
-    				if (i == 300) {
-    					Assert.fail(e.getMessage());
-    				}
-    			}
-    	}
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawDownRequestApproveBtn());
-    	WIFAKapplicationObj.drawDownRequestApproveBtn().click();
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.WarningPopupOkBtn());
-    	WIFAKapplicationObj.WarningPopupOkBtn().click();
-    	
-    	// Post Approval pop-up
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownPostApprovalYesBtn());
-    	WIFAKapplicationObj.drawdownPostApprovalYesBtn().click();
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.SuccessPopupOkBtn());
-    	WIFAKapplicationObj.SuccessPopupOkBtn().click();
-    	
-    	
-    	
-        
-    }
-    @Then("User again clicks on the Maintanance under Draw Down request")
-    public void user_again_clicks_on_the_maintanance_under_draw_down_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawDownRequestMaintanance());
-    	WIFAKapplicationObj.drawDownRequestMaintanance().click();
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.WarningPopupOkBtn());
-    	WIFAKapplicationObj.WarningPopupOkBtn().click();        
-    }
-    @And("User clicks on the search button in main screen under Draw Down request")
-    public void user_clicks_on_the_search_button_in_main_screen_under_draw_down_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainSearchBtn());
-    	WIFAKapplicationObj.drawdownMainSearchBtn().click();
-    }
-    @And("User click the clear button in main screen under Draw Down request")
-    public void user_click_the_clear_button_in_main_screen_under_draw_down_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainClearBtn());
-    	WIFAKapplicationObj.drawdownMainClearBtn().click();        
-    }
-    @And("User double click on the first line code in main screen under Draw Down request")
-    public void user_double_click_on_the_first_line_code_in_main_screen_under_draw_down_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainCode());
-    	WIFAKapplicationObj.drawdownMainCode().click();    	
-    }
-    @And("User click on the Status Details button in main screen under Draw Down request")
-    public void user_click_on_the_status_details_button_in_main_screen_under_draw_down_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainStatusDetailsBtn());
-    	WIFAKapplicationObj.drawdownMainStatusDetailsBtn().click();        
-    }
-    @And("User verify the Status Details tab User Name in main screen under Draw Down request")
-    public void user_verify_the_status_details_tab_user_name_in_main_screen_under_draw_down_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainStatusDetailsTab());
-    	String userName = WIFAKapplicationObj.drawdownMainStatusDetailsUserName().getAttribute("title");
-    	System.out.println("User Name: "+ userName);
-    }
-    
-    
-    @Then("User clicks on the Facility Closure Request module")
-    public void user_clicks_on_the_facility_closure_request_module() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.wifakApplicationFacilityClosureRequest());
-    	WIFAKapplicationObj.wifakApplicationFacilityClosureRequest().click();
-    }
-    @And("User click on the Maintanance under Facility Closure Request module")
-    public void user_click_on_the_maintanance_under_facility_closure_request_module() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureRequestMaintanance());
-    	WIFAKapplicationObj.facilityClosureRequestMaintanance().click();
-    }
-    @And("User enter the Facility ref in main screen under Facility Closure Request")
-    public void user_enter_the_facility_ref_in_main_screen_under_facility_closure_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureMainFacilityRef());
-    	WIFAKapplicationObj.facilityClosureMainFacilityRef().sendKeys("1336",Keys.TAB);
-    }
-    @And("User enter the Closure reason in main screen under Facility Closure Request")
-    public void user_enter_the_closure_reason_in_main_screen_under_facility_closure_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureMainClosureReason());
-    	WIFAKapplicationObj.facilityClosureMainClosureReason().sendKeys("test");
-    }
-    @And("User click on the Save button in main screen under Facility Closure Request")
-    public void user_click_on_the_save_button_in_main_screen_under_facility_closure_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureMainSaveBtn());
-    	WIFAKapplicationObj.facilityClosureMainSaveBtn().click();
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.WarningPopupOkBtn());
-    	WIFAKapplicationObj.WarningPopupOkBtn().click();
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.SuccessPopupOkBtn());
-    	WIFAKapplicationObj.SuccessPopupOkBtn().click();
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureMainSendAlertPopup());
-    	WIFAKapplicationObj.facilityClosureMainSendAlertPopup().click();
-    }
-
-    @Then("User clicks on the Approve under Facility Closure Request module")
-    public void user_clicks_on_the_approve_under_facility_closure_request_module() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureRequestApprove());
-    	WIFAKapplicationObj.facilityClosureRequestApprove().click();
-    }
-    @And("User click on the clear button in approve screen under Facility Closure Request")
-    public void user_click_on_the_clear_button_in_approve_screen_under_facility_closure_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureApproveClearBtn());
-    	WIFAKapplicationObj.facilityClosureApproveClearBtn().click();
-    }
-    @And("User double click on the code in approve screen under Facility Closure Request")
-    public void user_double_click_on_the_code_in_approve_screen_under_facility_closure_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureApproveCode());
-    	clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.facilityClosureApproveCode());
-    }
-    @When("User click on the Approve button in approve screen under Facility Closure Request")
-    public void user_click_on_the_approve_button_in_approve_screen_under_facility_closure_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureApproveBtn());
-    	WIFAKapplicationObj.facilityClosureApproveBtn().click();
-        
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.WarningPopupOkBtn());
-    	WIFAKapplicationObj.WarningPopupOkBtn().click();
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.SuccessPopupOkBtn());
-    	WIFAKapplicationObj.SuccessPopupOkBtn().click();
-    }
-    
-    @Then("User again click the Maintanance under Facility Closure Request module")
-    public void user_again_click_the_maintanance_under_facility_closure_request_module() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureRequestMaintanance());
-    	WIFAKapplicationObj.facilityClosureRequestMaintanance().click();
-        
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.WarningPopupOkBtn());
-    	WIFAKapplicationObj.WarningPopupOkBtn().click();        
-    }
-    @And("User click on the search button in main screen under Facility Closure Request")
-    public void user_click_on_the_search_button_in_main_screen_under_facility_closure_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureMainSearchBtn());
-    	WIFAKapplicationObj.facilityClosureMainSearchBtn().click();
-        
-    }
-    @And("User double click on the code in main screen under Facility Closure Request")
-    public void user_double_click_on_the_code_in_main_screen_under_facility_closure_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureMainCode());
-    	clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.facilityClosureMainCode());
-        
-    }
-    @And("User click the Status details button in main screen under Facility Closure Request")
-    public void user_click_the_status_details_button_in_main_screen_under_facility_closure_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureMainStatusDetailsBtn());
-    	WIFAKapplicationObj.facilityClosureMainStatusDetailsBtn().click();
-        
-    }
-    @Then("User verify the Status details tab in main screen under Facility Closure Request")
-    public void user_verify_the_status_details_tab_in_main_screen_under_facility_closure_request() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureMainStatusDetailsTab());
-    	WIFAKapplicationObj.facilityClosureMainStatusDetailsTab().click();
-        
-    }
+//    	
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.SuccessPopupOkBtn());
+//    	WIFAKapplicationObj.SuccessPopupOkBtn().click();
+//    	
+//    	// Send Alert popup
+//    	for (int i = 0; i < 2000; i++) {
+//			try {
+//		    	WIFAKapplicationObj.sendAlertPopup().click();
+//		    	break;
+//			} catch (Exception e) {
+//				if (i==1999) {
+//					Assert.fail(e.getMessage());
+//				}
+//			}
+//		}
+//    	
+//    }
+//    
+//    
+//    @Then("User click on the Verify link under Draw Down request")
+//    public void user_click_on_the_verify_link_under_draw_down_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawDownRequestVerify());
+//    	WIFAKapplicationObj.drawDownRequestVerify().click();
+//    }
+//    @And("User click on the clear button in verify under Draw Down request")
+//    public void user_click_on_the_clear_button_in_verify_under_draw_down_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownVerifyClearBtn());
+//    	WIFAKapplicationObj.drawdownVerifyClearBtn().click();
+//    }
+//    @And("User double click on the code in verify under Draw Down request")
+//    public void user_double_click_on_the_code_in_verify_under_draw_down_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownVerifyCode());
+//        clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.drawdownVerifyCode());
+//    }
+//    @When("User click on the verify button in Verify link under Draw Down request")
+//    public void user_click_on_the_verify_button_in_verify_link_under_draw_down_request() throws Throwable {
+//    	for (int i = 0; i <= 300; i++) {
+//        	try {
+//        		javaScriptHelper.scrollIntoView(WIFAKapplicationObj.drawDownRequestVerifyBtn());
+//    				break;
+//    			} catch (Exception e) {
+//    				if (i == 300) {
+//    					Assert.fail(e.getMessage());
+//    				}
+//    			}
+//    	}
+//    	
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawDownRequestVerifyBtn());
+//    	WIFAKapplicationObj.drawDownRequestVerifyBtn().click();
+//    	
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.WarningPopupOkBtn());
+//    	WIFAKapplicationObj.WarningPopupOkBtn().click();
+//    	
+//    	// Post Approval popup
+////    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownPostApprovalYesBtn());
+////    	WIFAKapplicationObj.drawdownPostApprovalYesBtn().click();
+//    	
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.SuccessPopupOkBtn());
+//    	WIFAKapplicationObj.SuccessPopupOkBtn().click();
+//    	
+//    	// Send Alert popup
+//    	for (int i = 0; i < 2000; i++) {
+//			try {
+//		    	WIFAKapplicationObj.drawdownVerifySendAlertPopup().click();
+//		    	break;
+//			} catch (Exception e) {
+//				if (i==1999) {
+//					Assert.fail(e.getMessage());
+//				}
+//			}
+//		}
+//    	
+//    }
+//    	
+//    @Then("User click on the Approve link under Draw Down request")
+//    public void user_click_on_the_approve_link_under_draw_down_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawDownRequestApprove());
+//    	WIFAKapplicationObj.drawDownRequestApprove().click();
+//    }
+//    @And("User click on the clear button in Approve under Draw Down request")
+//    public void user_click_on_the_clear_button_in_approve_under_draw_down_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownApproveClearBtn());
+//    	WIFAKapplicationObj.drawdownApproveClearBtn().click();
+//    }
+//    @And("User double click on the code in Approve under Draw Down request")
+//    public void user_double_click_on_the_code_in_approve_under_draw_down_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownApproveCode());
+//        clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.drawdownApproveCode());
+//    }
+//    @When("User click on the Approve button in Approve link under Draw Down request")
+//    public void user_click_on_the_approve_button_in_approve_link_under_draw_down_request() throws Throwable {
+//    	for (int i = 0; i <= 300; i++) {
+//        	try {
+//        		javaScriptHelper.scrollIntoView(WIFAKapplicationObj.drawDownRequestApproveBtn());
+//    				break;
+//    			} catch (Exception e) {
+//    				if (i == 300) {
+//    					Assert.fail(e.getMessage());
+//    				}
+//    			}
+//    	}
+//    	
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawDownRequestApproveBtn());
+//    	WIFAKapplicationObj.drawDownRequestApproveBtn().click();
+//    	
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.WarningPopupOkBtn());
+//    	WIFAKapplicationObj.WarningPopupOkBtn().click();
+//    	
+//    	// Post Approval pop-up
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownPostApprovalYesBtn());
+//    	WIFAKapplicationObj.drawdownPostApprovalYesBtn().click();
+//    	
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.SuccessPopupOkBtn());
+//    	WIFAKapplicationObj.SuccessPopupOkBtn().click();
+//    	
+//    	
+//    	
+//        
+//    }
+//    @Then("User again clicks on the Maintanance under Draw Down request")
+//    public void user_again_clicks_on_the_maintanance_under_draw_down_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawDownRequestMaintanance());
+//    	WIFAKapplicationObj.drawDownRequestMaintanance().click();
+//    	
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.WarningPopupOkBtn());
+//    	WIFAKapplicationObj.WarningPopupOkBtn().click();        
+//    }
+//    @And("User clicks on the search button in main screen under Draw Down request")
+//    public void user_clicks_on_the_search_button_in_main_screen_under_draw_down_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainSearchBtn());
+//    	WIFAKapplicationObj.drawdownMainSearchBtn().click();
+//    }
+//    @And("User click the clear button in main screen under Draw Down request")
+//    public void user_click_the_clear_button_in_main_screen_under_draw_down_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainClearBtn());
+//    	WIFAKapplicationObj.drawdownMainClearBtn().click();        
+//    }
+//    @And("User double click on the first line code in main screen under Draw Down request")
+//    public void user_double_click_on_the_first_line_code_in_main_screen_under_draw_down_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainCode());
+//    	WIFAKapplicationObj.drawdownMainCode().click();    	
+//    }
+//    @And("User click on the Status Details button in main screen under Draw Down request")
+//    public void user_click_on_the_status_details_button_in_main_screen_under_draw_down_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainStatusDetailsBtn());
+//    	WIFAKapplicationObj.drawdownMainStatusDetailsBtn().click();        
+//    }
+//    @And("User verify the Status Details tab User Name in main screen under Draw Down request")
+//    public void user_verify_the_status_details_tab_user_name_in_main_screen_under_draw_down_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.drawdownMainStatusDetailsTab());
+//    	String userName = WIFAKapplicationObj.drawdownMainStatusDetailsUserName().getAttribute("title");
+//    	System.out.println("User Name: "+ userName);
+//    }
+//    
+//    
+//    @Then("User clicks on the Facility Closure Request module")
+//    public void user_clicks_on_the_facility_closure_request_module() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.wifakApplicationFacilityClosureRequest());
+//    	WIFAKapplicationObj.wifakApplicationFacilityClosureRequest().click();
+//    }
+//    @And("User click on the Maintanance under Facility Closure Request module")
+//    public void user_click_on_the_maintanance_under_facility_closure_request_module() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureRequestMaintanance());
+//    	WIFAKapplicationObj.facilityClosureRequestMaintanance().click();
+//    }
+//    @And("User enter the Facility ref in main screen under Facility Closure Request")
+//    public void user_enter_the_facility_ref_in_main_screen_under_facility_closure_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureMainFacilityRef());
+//    	WIFAKapplicationObj.facilityClosureMainFacilityRef().sendKeys("1336",Keys.TAB);
+//    }
+//    @And("User enter the Closure reason in main screen under Facility Closure Request")
+//    public void user_enter_the_closure_reason_in_main_screen_under_facility_closure_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureMainClosureReason());
+//    	WIFAKapplicationObj.facilityClosureMainClosureReason().sendKeys("test");
+//    }
+//    @And("User click on the Save button in main screen under Facility Closure Request")
+//    public void user_click_on_the_save_button_in_main_screen_under_facility_closure_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureMainSaveBtn());
+//    	WIFAKapplicationObj.facilityClosureMainSaveBtn().click();
+//    	
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.WarningPopupOkBtn());
+//    	WIFAKapplicationObj.WarningPopupOkBtn().click();
+//    	
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.SuccessPopupOkBtn());
+//    	WIFAKapplicationObj.SuccessPopupOkBtn().click();
+//    	
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureMainSendAlertPopup());
+//    	WIFAKapplicationObj.facilityClosureMainSendAlertPopup().click();
+//    }
+//
+//    @Then("User clicks on the Approve under Facility Closure Request module")
+//    public void user_clicks_on_the_approve_under_facility_closure_request_module() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureRequestApprove());
+//    	WIFAKapplicationObj.facilityClosureRequestApprove().click();
+//    }
+//    @And("User click on the clear button in approve screen under Facility Closure Request")
+//    public void user_click_on_the_clear_button_in_approve_screen_under_facility_closure_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureApproveClearBtn());
+//    	WIFAKapplicationObj.facilityClosureApproveClearBtn().click();
+//    }
+//    @And("User double click on the code in approve screen under Facility Closure Request")
+//    public void user_double_click_on_the_code_in_approve_screen_under_facility_closure_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureApproveCode());
+//    	clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.facilityClosureApproveCode());
+//    }
+//    @When("User click on the Approve button in approve screen under Facility Closure Request")
+//    public void user_click_on_the_approve_button_in_approve_screen_under_facility_closure_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureApproveBtn());
+//    	WIFAKapplicationObj.facilityClosureApproveBtn().click();
+//        
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.WarningPopupOkBtn());
+//    	WIFAKapplicationObj.WarningPopupOkBtn().click();
+//    	
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.SuccessPopupOkBtn());
+//    	WIFAKapplicationObj.SuccessPopupOkBtn().click();
+//    }
+//    
+//    @Then("User again click the Maintanance under Facility Closure Request module")
+//    public void user_again_click_the_maintanance_under_facility_closure_request_module() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureRequestMaintanance());
+//    	WIFAKapplicationObj.facilityClosureRequestMaintanance().click();
+//        
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.WarningPopupOkBtn());
+//    	WIFAKapplicationObj.WarningPopupOkBtn().click();        
+//    }
+//    @And("User click on the search button in main screen under Facility Closure Request")
+//    public void user_click_on_the_search_button_in_main_screen_under_facility_closure_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureMainSearchBtn());
+//    	WIFAKapplicationObj.facilityClosureMainSearchBtn().click();
+//        
+//    }
+//    @And("User double click on the code in main screen under Facility Closure Request")
+//    public void user_double_click_on_the_code_in_main_screen_under_facility_closure_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureMainCode());
+//    	clicksAndActionsHelper.doubleClick(WIFAKapplicationObj.facilityClosureMainCode());
+//        
+//    }
+//    @And("User click the Status details button in main screen under Facility Closure Request")
+//    public void user_click_the_status_details_button_in_main_screen_under_facility_closure_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureMainStatusDetailsBtn());
+//    	WIFAKapplicationObj.facilityClosureMainStatusDetailsBtn().click();
+//        
+//    }
+//    @Then("User verify the Status details tab in main screen under Facility Closure Request")
+//    public void user_verify_the_status_details_tab_in_main_screen_under_facility_closure_request() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj.facilityClosureMainStatusDetailsTab());
+//    	WIFAKapplicationObj.facilityClosureMainStatusDetailsTab().click();
+//        
+//    }
     
     
 //    @AT_RF_139

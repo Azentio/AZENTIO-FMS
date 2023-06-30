@@ -49,62 +49,62 @@ public class Collateral_Management_Steps {
 	
 	
 //	@AT_RF_035
-	@And("^User click on the language option in FMS core$")
-    public void user_click_on_the_language_option_in_fms_core() throws Throwable {
-        waitHelper.waitForElementwithFluentwait(driver, collateralManagementObj.FMSCoreLanguageBtn());
-        collateralManagementObj.FMSCoreLanguageBtn().click();
-    }
-
-    @And("^User click on the arabic under language option$")
-    public void user_click_on_the_arabic_under_language_option() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, collateralManagementObj.arabicLanguage());
-    	collateralManagementObj.arabicLanguage().click();
-    }
-
-    @And("^User clicks on the the mortgage management module$")
-    public void user_clicks_on_the_the_mortgage_management_module() throws Throwable {
-    	for (int i = 0; i <= 300; i++) {
-			try {
-				javaScriptHelper.scrollIntoView(collateralManagementObj.arabicMortgageManagementModule());
-				break;
-			} catch (Exception e) {
-				if (i == 300) {
-					Assert.fail(e.getMessage());
-				}
-			}
-		}
-		waitHelper.waitForElementwithFluentwait(driver, collateralManagementObj.arabicMortgageManagementModule());
-		collateralManagementObj.arabicMortgageManagementModule().click();
-    }
-
-    @And("^User clicks on the Maintanance screen under mortgage management module$")
-    public void user_clicks_on_the_maintanance_screen_under_mortgage_management_module() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, collateralManagementObj.mortgageManagementMain());
-    	collateralManagementObj.mortgageManagementMain().click();
-    }
-
-    @And("^User verify the Maintanance screen should be arabic language$")
-    public void user_verify_the_maintanance_screen_should_be_arabic_language() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, collateralManagementObj.mortgageManagementMainLabel());
-    	
-    	
-    	for (int i = 0; i <= 300; i++) {
-			try {
-				javaScriptHelper.scrollIntoView(collateralManagementObj.mortgageManagementMainEnd());
-				break;
-			} catch (Exception e) {
-				if (i == 300) {
-					Assert.fail(e.getMessage());
-				}
-			}
-		}
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, collateralManagementObj.mortgageManagementMainEnd());
-    	String saveBtnText = collateralManagementObj.mortgageManagementMainEnd().getText();
-//    	System.out.println("Text :"+saveBtnText);
-    	Assert.assertEquals(saveBtnText, "حفظ");	
-    }
-    
+//	@And("^User click on the language option in FMS core$")
+//    public void user_click_on_the_language_option_in_fms_core() throws Throwable {
+//        waitHelper.waitForElementwithFluentwait(driver, collateralManagementObj.FMSCoreLanguageBtn());
+//        collateralManagementObj.FMSCoreLanguageBtn().click();
+//    }
+//
+//    @And("^User click on the arabic under language option$")
+//    public void user_click_on_the_arabic_under_language_option() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, collateralManagementObj.arabicLanguage());
+//    	collateralManagementObj.arabicLanguage().click();
+//    }
+//
+//    @And("^User clicks on the the mortgage management module$")
+//    public void user_clicks_on_the_the_mortgage_management_module() throws Throwable {
+//    	for (int i = 0; i <= 300; i++) {
+//			try {
+//				javaScriptHelper.scrollIntoView(collateralManagementObj.arabicMortgageManagementModule());
+//				break;
+//			} catch (Exception e) {
+//				if (i == 300) {
+//					Assert.fail(e.getMessage());
+//				}
+//			}
+//		}
+//		waitHelper.waitForElementwithFluentwait(driver, collateralManagementObj.arabicMortgageManagementModule());
+//		collateralManagementObj.arabicMortgageManagementModule().click();
+//    }
+//
+//    @And("^User clicks on the Maintanance screen under mortgage management module$")
+//    public void user_clicks_on_the_maintanance_screen_under_mortgage_management_module() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, collateralManagementObj.mortgageManagementMain());
+//    	collateralManagementObj.mortgageManagementMain().click();
+//    }
+//
+//    @And("^User verify the Maintanance screen should be arabic language$")
+//    public void user_verify_the_maintanance_screen_should_be_arabic_language() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, collateralManagementObj.mortgageManagementMainLabel());
+//    	
+//    	
+//    	for (int i = 0; i <= 300; i++) {
+//			try {
+//				javaScriptHelper.scrollIntoView(collateralManagementObj.mortgageManagementMainEnd());
+//				break;
+//			} catch (Exception e) {
+//				if (i == 300) {
+//					Assert.fail(e.getMessage());
+//				}
+//			}
+//		}
+//    	
+//    	waitHelper.waitForElementwithFluentwait(driver, collateralManagementObj.mortgageManagementMainEnd());
+//    	String saveBtnText = collateralManagementObj.mortgageManagementMainEnd().getText();
+////    	System.out.println("Text :"+saveBtnText);
+//    	Assert.assertEquals(saveBtnText, "حفظ");	
+//    }
+//    
     
 //  @AT_RF_158_Param
     @And("^User clicks on the Collateral type module$")

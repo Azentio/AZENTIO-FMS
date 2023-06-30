@@ -454,30 +454,30 @@ public class WIFAK_ApplicationObj {
 	
 	
 	
-//	@640861
-	@FindBy(xpath = "//input[@id='applicationFacilitydownpaymentperc_WIFT001MT']")
-	private WebElement additional_tab_down_pay_percent;
-	public WebElement additionalTabDownPayPercent() {
-		return additional_tab_down_pay_percent;
-	}
-	
-	@FindBy(xpath = "//input[@id='applicationFacilityDownPaymentToVendorPerc_WIFT001MT']")
-	private WebElement additional_tab_down_pay_to_vendor;
-	public WebElement additionalTabDownPayToVendor() {
-		return additional_tab_down_pay_to_vendor;
-	}
-	
-	@FindBy(xpath = "//input[@id='lookuptxt_applicationfacilityLimitDetailsACC_Add_Det_WIFT001MT']")
-	private WebElement limit_details_acc_no_input;
-	public WebElement limitDetailsAccNoInput() {
-		return limit_details_acc_no_input;
-	}
-	
-	@FindBy(xpath = "//input[@id='lookuptxt_applicationfacilityLimitDetailsFUND_TRANSFER_RATE_WIFT001MT']")
-	private WebElement limit_details_fund_transfer_rate_input;
-	public WebElement limitDetailsFundTransferRateInput() {
-		return limit_details_fund_transfer_rate_input;
-	}
+////	@AT_RF_040
+//	@FindBy(xpath = "//input[@id='applicationFacilitydownpaymentperc_WIFT001MT']")
+//	private WebElement additional_tab_down_pay_percent;
+//	public WebElement additionalTabDownPayPercent() {
+//		return additional_tab_down_pay_percent;
+//	}
+//	
+//	@FindBy(xpath = "//input[@id='applicationFacilityDownPaymentToVendorPerc_WIFT001MT']")
+//	private WebElement additional_tab_down_pay_to_vendor;
+//	public WebElement additionalTabDownPayToVendor() {
+//		return additional_tab_down_pay_to_vendor;
+//	}
+//	
+//	@FindBy(xpath = "//input[@id='lookuptxt_applicationfacilityLimitDetailsACC_Add_Det_WIFT001MT']")
+//	private WebElement limit_details_acc_no_input;
+//	public WebElement limitDetailsAccNoInput() {
+//		return limit_details_acc_no_input;
+//	}
+//	
+//	@FindBy(xpath = "//input[@id='lookuptxt_applicationfacilityLimitDetailsFUND_TRANSFER_RATE_WIFT001MT']")
+//	private WebElement limit_details_fund_transfer_rate_input;
+//	public WebElement limitDetailsFundTransferRateInput() {
+//		return limit_details_fund_transfer_rate_input;
+//	}
 	
 	
 //	@AT_RF_098_User1
@@ -658,278 +658,278 @@ public class WIFAK_ApplicationObj {
     }
 	
     
-//  @AT_RF_157
-    @FindBy(xpath = "//td[text()='Draw Down Request']")
-    private WebElement wifak_application_draw_down_request;
-    public WebElement wifakApplicationDrawDownRequest() {
-    	return wifak_application_draw_down_request;
-    }
-    
-    @FindBy(xpath = "//a[@id='WIFT009MT']")
-    private WebElement draw_down_request_maintanance;
-    public WebElement drawDownRequestMaintanance() {
-    	return draw_down_request_maintanance;
-    }
-    
-    @FindBy(xpath = "//input[@id='lookuptxt_drawDownRequestFacilityReference_WIFT009MT']")
-    private WebElement drawdown_main_facility_ref;
-    public WebElement drawdownMainFacilityRef() {
-    	return drawdown_main_facility_ref;
-    }
-    
-    @FindBy(xpath = "//span[contains(text(),'Yes')]//parent::button")
-    private WebElement drawdown_post_approval_yes_btn;
-    public WebElement drawdownPostApprovalYesBtn() {
-    	return drawdown_post_approval_yes_btn;
-    }
-    
-    @FindBy(xpath = "//span[@id='spanLookup_drawDownRequestDrawDownType_WIFT009MT']")
-    private WebElement drawdown_main_drawdown_type_lookup;
-    public WebElement drawdownMainDrawDownTypeLookup() {
-    	return drawdown_main_drawdown_type_lookup;
-    }
-    
-    @FindBy(xpath = "//td[text()='Sukuk/Equity'][1]")
-    private WebElement drawdown_main_drawdown_type_value;
-    public WebElement drawdownMainDrawdownTypeValue() {
-    	return drawdown_main_drawdown_type_value;
-    }
-    
-    @FindBy(xpath = "//input[@id='drawDownRequestLongNameEnglish_WIFT009MT']")
-    private WebElement drawdown_main_description;
-    public WebElement drawdownMainDescription() {
-    	return drawdown_main_description;
-    }
-    
-    @FindBy(xpath = "//input[@id='drawDownRequestDateSubmitted_WIFT009MT']")
-    private WebElement drawdown_main_date_submitted;
-    public WebElement drawdownMainDateSubmitted() {
-    	return drawdown_main_date_submitted;
-    }
-    
-    @FindBy(xpath = "//li[@id='drawDownRequestMainInfoTabs_WIFT009MT']")
-    private WebElement drawdown_main_info_tab;
-    public WebElement drawdownMainInfoTab() {
-    	return drawdown_main_info_tab;
-    }
-    
-    @FindBy(xpath = "//input[@id='drawDownRequestValueDate_WIFT009MT']")
-    private WebElement drawdown_main_value_date;
-    public WebElement drawdownMainValueDate() {
-    	return drawdown_main_value_date;
-    }
-    
-    @FindBy(xpath = "//li[@id='drawDownRequestAdditionDetailsTabs_WIFT009MT']")
-    private WebElement drawdown_additional_details_tab;
-    public WebElement drawdownAdditionalDetailsTab() {
-    	return drawdown_additional_details_tab;
-    }
-    
-    @FindBy(xpath = "//input[@id='lookuptxt_drawDownRequestProduct_Class_WIFT009MT']")
-    private WebElement drawdown_additional_product_class;
-    public WebElement drawdownAdditionalProductClass() {
-    	return drawdown_additional_product_class;
-    }
-    
-    @FindBy(xpath = "//span[@id='spanLookup_drawDownRequestProduct_Class_WIFT009MT']")
-    private WebElement drawdown_additional_product_class_lookup;
-    public WebElement drawdownAdditionalProductClassLookup() {
-    	return drawdown_additional_product_class_lookup;
-    }
-    
-    @FindBy(xpath = "//td[@id='td_gridtab_drawDownRequestProduct_Class_WIFT009MT_1_viewDrawDownClassVO.CODE']")
-    private WebElement drawdown_additional_product_class_code;
-    public WebElement drawdownAdditionalProductClassCode() {
-    	return drawdown_additional_product_class_code;
-    }
-    
-    @FindBy(xpath = "//input[@id='drawDownRequestFC_Amount_WIFT009MT']")
-    private WebElement drawdown_additional_FC_amount;
-    public WebElement drawdownAdditionalFCAmount() {
-    	return drawdown_additional_FC_amount;
-    }
-    
-    @FindBy(xpath = "//button[@id='drawdownrequest_save_btn_WIFT009MT']")
-    private WebElement drawdown_main_save_btn;
-    public WebElement drawdownMainSaveBtn() {
-    	return drawdown_main_save_btn;
-    }
-    
-    @FindBy(xpath = "//a[@id='WIFT009VD']")
-    private WebElement draw_down_request_verify;
-    public WebElement drawDownRequestVerify() {
-    	return draw_down_request_verify;
-    }
-    
-    @FindBy(xpath = "//td[@id='drawDownRequestGridTbl_Id_WIFT009VD_pager_left']/table/tbody/tr/td[7]")
-    private WebElement drawdown_verify_clear_btn;
-    public WebElement drawdownVerifyClearBtn() {
-    	return drawdown_verify_clear_btn;
-    }
-    
-    @FindBy(xpath = "//td[@id='td_drawDownRequestGridTbl_Id_WIFT009VD_1_fmsDrawDownVO.CODE']")
-    private WebElement drawdown_verify_code;
-    public WebElement drawdownVerifyCode() {
-    	return drawdown_verify_code;
-    }
-    
-    @FindBy(xpath = "//span[contains(text(),'Verify')]//parent::button")
-    private WebElement draw_down_request_verify_btn;
-    public WebElement drawDownRequestVerifyBtn() {
-    	return draw_down_request_verify_btn;
-    }
-    
-    @FindBy(xpath = "/html/body/div[24]/div[1]/a")
-	private WebElement drawdown_verify_send_alert_popup;
-	public WebElement drawdownVerifySendAlertPopup() {
-		return drawdown_verify_send_alert_popup;
-	}
-    
-    @FindBy(xpath = "//a[@id='WIFT009AP']")
-    private WebElement draw_down_request_Approve;
-    public WebElement drawDownRequestApprove() {
-    	return draw_down_request_Approve;
-    }
-    
-    @FindBy(xpath = "//td[@id='drawDownRequestGridTbl_Id_WIFT009AP_pager_left']/table/tbody/tr/td[7]")
-    private WebElement drawdown_approve_clear_btn;
-    public WebElement drawdownApproveClearBtn() {
-    	return drawdown_approve_clear_btn;
-    }
-    
-    @FindBy(xpath = "//td[@id='td_drawDownRequestGridTbl_Id_WIFT009AP_1_fmsDrawDownVO.CODE']")
-    private WebElement drawdown_approve_code;
-    public WebElement drawdownApproveCode() {
-    	return drawdown_approve_code;
-    }
-    
-    @FindBy(xpath = "//span[contains(text(),'Approve')]//parent::button")
-    private WebElement draw_down_request_approve_btn;
-    public WebElement drawDownRequestApproveBtn() {
-    	return draw_down_request_approve_btn;
-    }
-    
-    @FindBy(xpath = "//a[@id='infoBarSearchButton_WIFT009MT']")
-    private WebElement drawdown_main_search_btn;
-    public WebElement drawdownMainSearchBtn() {
-    	return drawdown_main_search_btn;
-    }
-    
-    @FindBy(xpath = "//td[@id='drawDownRequestGridTbl_Id_WIFT009MT_pager_left']/table/tbody/tr/td[7]")
-    private WebElement drawdown_main_clear_btn;
-    public WebElement drawdownMainClearBtn() {
-    	return drawdown_main_clear_btn;
-    }
-    
-    @FindBy(xpath = "//td[@id='td_drawDownRequestGridTbl_Id_WIFT009MT_1_fmsDrawDownVO.CODE']")
-    private WebElement drawdown_main_code;
-    public WebElement drawdownMainCode() {
-    	return drawdown_main_code;
-    }
-  
-    @FindBy(xpath = "//span[contains(text(),'Status Details')]//parent::a")
-    private WebElement drawdown_main_status_details_btn;
-    public WebElement drawdownMainStatusDetailsBtn() {
-    	return drawdown_main_status_details_btn;
-    }
-    
-    @FindBy(xpath = "//div[@id='fms_status_div_WIFT009MT']")
-    private WebElement drawdown_main_status_details_tab;
-    public WebElement drawdownMainStatusDetailsTab() {
-    	return drawdown_main_status_details_tab;
-    }
-    
-    @FindBy(xpath = "//td[@id='td_fmsStatusGridTbl_Id_1_userName']")
-    private WebElement drawdown_main_status_details_user_name;
-    public WebElement drawdownMainStatusDetailsUserName() {
-    	return drawdown_main_status_details_user_name;
-    }
-    
-    //Facility Closure Request
-    @FindBy(xpath = "//td[text()='Facility Closure Request']")
-    private WebElement wifak_application_facility_closure_request;
-    public WebElement wifakApplicationFacilityClosureRequest() {
-    	return wifak_application_facility_closure_request;
-    }
-    
-    @FindBy(xpath = "//a[@id='WIFT010MT']")
-    private WebElement facility_closure_request_maintanance;
-    public WebElement facilityClosureRequestMaintanance() {
-    	return facility_closure_request_maintanance;
-    }
-    
-    @FindBy(xpath = "//input[@id='lookuptxt_facilityClosureRequestFacilityReference_WIFT010MT']")
-    private WebElement facility_closure_main_facility_ref;
-    public WebElement facilityClosureMainFacilityRef() {
-    	return facility_closure_main_facility_ref;
-    }
-    
-    @FindBy(xpath = "//input[@id='facilityClosureRequest_Closure_Reason_WIFT010MT']")
-    private WebElement facility_closure_main_closure_reason;
-    public WebElement facilityClosureMainClosureReason() {
-    	return facility_closure_main_closure_reason;
-    }
-    
-    @FindBy(xpath = "//button[@id='facilityClosureRequestSave_WIFT010MT']")
-    private WebElement facility_closure_main_save_btn;
-    public WebElement facilityClosureMainSaveBtn() {
-    	return facility_closure_main_save_btn;
-    }
-    
-    @FindBy(xpath = "/html/body/div[16]/div[1]/a")
-    private WebElement facility_closure_main_send_alert_popup;
-    public WebElement facilityClosureMainSendAlertPopup() {
-    	return facility_closure_main_send_alert_popup;
-    }
-    
-    @FindBy(xpath = "//a[@id='WIFT010AP']")
-    private WebElement facility_closure_request_approve;
-    public WebElement facilityClosureRequestApprove() {
-    	return facility_closure_request_approve;
-    }
-    
-    @FindBy(xpath = "//td[@id='facilityClosureRequestGridTbl_Id_WIFT010AP_pager_left']/table/tbody/tr/td[7]")
-    private WebElement facility_closure_approve_clear_btn;
-    public WebElement facilityClosureApproveClearBtn() {
-    	return facility_closure_approve_clear_btn;
-    }
-    
-    @FindBy(xpath = "//td[@id='td_facilityClosureRequestGridTbl_Id_WIFT010AP_1_fmsFacilityClosureVO.CODE']")
-    private WebElement facility_closure_approve_code;
-    public WebElement facilityClosureApproveCode() {
-    	return facility_closure_approve_code;
-    }
-    
-    @FindBy(xpath = "//button[@id='facilityClosureRequest_approve_btn_WIFT010AP']")
-    private WebElement facility_closure_approve_btn;
-    public WebElement facilityClosureApproveBtn() {
-    	return facility_closure_approve_btn;
-    }
-    
-    @FindBy(xpath = "//a[@id='infoBarSearchButton_WIFT010MT']")
-    private WebElement facility_closure_main_search_btn;
-    public WebElement facilityClosureMainSearchBtn() {
-    	return facility_closure_main_search_btn;
-    }
-    
-    @FindBy(xpath = "//td[@id='td_facilityClosureRequestGridTbl_Id_WIFT010MT_1_fmsFacilityClosureVO.CODE']")
-    private WebElement facility_closure_main_code;
-    public WebElement facilityClosureMainCode() {
-    	return facility_closure_main_code;
-    }
-    
-    @FindBy(xpath = "(//span[contains(text(),'Status')]//parent::a)[2]")
-    private WebElement facility_closure_main_status_details_btn;
-    public WebElement facilityClosureMainStatusDetailsBtn() {
-    	return facility_closure_main_status_details_btn;
-    }
-    
-    @FindBy(xpath = "//div[@id='gview_fmsStatusGridTbl_Id']")
-    private WebElement facility_closure_main_status_details_tab;
-    public WebElement facilityClosureMainStatusDetailsTab() {
-    	return facility_closure_main_status_details_tab;
-    }
-    
+////  @AT_RF_157
+//    @FindBy(xpath = "//td[text()='Draw Down Request']")
+//    private WebElement wifak_application_draw_down_request;
+//    public WebElement wifakApplicationDrawDownRequest() {
+//    	return wifak_application_draw_down_request;
+//    }
+//    
+//    @FindBy(xpath = "//a[@id='WIFT009MT']")
+//    private WebElement draw_down_request_maintanance;
+//    public WebElement drawDownRequestMaintanance() {
+//    	return draw_down_request_maintanance;
+//    }
+//    
+//    @FindBy(xpath = "//input[@id='lookuptxt_drawDownRequestFacilityReference_WIFT009MT']")
+//    private WebElement drawdown_main_facility_ref;
+//    public WebElement drawdownMainFacilityRef() {
+//    	return drawdown_main_facility_ref;
+//    }
+//    
+//    @FindBy(xpath = "//span[contains(text(),'Yes')]//parent::button")
+//    private WebElement drawdown_post_approval_yes_btn;
+//    public WebElement drawdownPostApprovalYesBtn() {
+//    	return drawdown_post_approval_yes_btn;
+//    }
+//    
+//    @FindBy(xpath = "//span[@id='spanLookup_drawDownRequestDrawDownType_WIFT009MT']")
+//    private WebElement drawdown_main_drawdown_type_lookup;
+//    public WebElement drawdownMainDrawDownTypeLookup() {
+//    	return drawdown_main_drawdown_type_lookup;
+//    }
+//    
+//    @FindBy(xpath = "//td[text()='Sukuk/Equity'][1]")
+//    private WebElement drawdown_main_drawdown_type_value;
+//    public WebElement drawdownMainDrawdownTypeValue() {
+//    	return drawdown_main_drawdown_type_value;
+//    }
+//    
+//    @FindBy(xpath = "//input[@id='drawDownRequestLongNameEnglish_WIFT009MT']")
+//    private WebElement drawdown_main_description;
+//    public WebElement drawdownMainDescription() {
+//    	return drawdown_main_description;
+//    }
+//    
+//    @FindBy(xpath = "//input[@id='drawDownRequestDateSubmitted_WIFT009MT']")
+//    private WebElement drawdown_main_date_submitted;
+//    public WebElement drawdownMainDateSubmitted() {
+//    	return drawdown_main_date_submitted;
+//    }
+//    
+//    @FindBy(xpath = "//li[@id='drawDownRequestMainInfoTabs_WIFT009MT']")
+//    private WebElement drawdown_main_info_tab;
+//    public WebElement drawdownMainInfoTab() {
+//    	return drawdown_main_info_tab;
+//    }
+//    
+//    @FindBy(xpath = "//input[@id='drawDownRequestValueDate_WIFT009MT']")
+//    private WebElement drawdown_main_value_date;
+//    public WebElement drawdownMainValueDate() {
+//    	return drawdown_main_value_date;
+//    }
+//    
+//    @FindBy(xpath = "//li[@id='drawDownRequestAdditionDetailsTabs_WIFT009MT']")
+//    private WebElement drawdown_additional_details_tab;
+//    public WebElement drawdownAdditionalDetailsTab() {
+//    	return drawdown_additional_details_tab;
+//    }
+//    
+//    @FindBy(xpath = "//input[@id='lookuptxt_drawDownRequestProduct_Class_WIFT009MT']")
+//    private WebElement drawdown_additional_product_class;
+//    public WebElement drawdownAdditionalProductClass() {
+//    	return drawdown_additional_product_class;
+//    }
+//    
+//    @FindBy(xpath = "//span[@id='spanLookup_drawDownRequestProduct_Class_WIFT009MT']")
+//    private WebElement drawdown_additional_product_class_lookup;
+//    public WebElement drawdownAdditionalProductClassLookup() {
+//    	return drawdown_additional_product_class_lookup;
+//    }
+//    
+//    @FindBy(xpath = "//td[@id='td_gridtab_drawDownRequestProduct_Class_WIFT009MT_1_viewDrawDownClassVO.CODE']")
+//    private WebElement drawdown_additional_product_class_code;
+//    public WebElement drawdownAdditionalProductClassCode() {
+//    	return drawdown_additional_product_class_code;
+//    }
+//    
+//    @FindBy(xpath = "//input[@id='drawDownRequestFC_Amount_WIFT009MT']")
+//    private WebElement drawdown_additional_FC_amount;
+//    public WebElement drawdownAdditionalFCAmount() {
+//    	return drawdown_additional_FC_amount;
+//    }
+//    
+//    @FindBy(xpath = "//button[@id='drawdownrequest_save_btn_WIFT009MT']")
+//    private WebElement drawdown_main_save_btn;
+//    public WebElement drawdownMainSaveBtn() {
+//    	return drawdown_main_save_btn;
+//    }
+//    
+//    @FindBy(xpath = "//a[@id='WIFT009VD']")
+//    private WebElement draw_down_request_verify;
+//    public WebElement drawDownRequestVerify() {
+//    	return draw_down_request_verify;
+//    }
+//    
+//    @FindBy(xpath = "//td[@id='drawDownRequestGridTbl_Id_WIFT009VD_pager_left']/table/tbody/tr/td[7]")
+//    private WebElement drawdown_verify_clear_btn;
+//    public WebElement drawdownVerifyClearBtn() {
+//    	return drawdown_verify_clear_btn;
+//    }
+//    
+//    @FindBy(xpath = "//td[@id='td_drawDownRequestGridTbl_Id_WIFT009VD_1_fmsDrawDownVO.CODE']")
+//    private WebElement drawdown_verify_code;
+//    public WebElement drawdownVerifyCode() {
+//    	return drawdown_verify_code;
+//    }
+//    
+//    @FindBy(xpath = "//span[contains(text(),'Verify')]//parent::button")
+//    private WebElement draw_down_request_verify_btn;
+//    public WebElement drawDownRequestVerifyBtn() {
+//    	return draw_down_request_verify_btn;
+//    }
+//    
+//    @FindBy(xpath = "/html/body/div[24]/div[1]/a")
+//	private WebElement drawdown_verify_send_alert_popup;
+//	public WebElement drawdownVerifySendAlertPopup() {
+//		return drawdown_verify_send_alert_popup;
+//	}
+//    
+//    @FindBy(xpath = "//a[@id='WIFT009AP']")
+//    private WebElement draw_down_request_Approve;
+//    public WebElement drawDownRequestApprove() {
+//    	return draw_down_request_Approve;
+//    }
+//    
+//    @FindBy(xpath = "//td[@id='drawDownRequestGridTbl_Id_WIFT009AP_pager_left']/table/tbody/tr/td[7]")
+//    private WebElement drawdown_approve_clear_btn;
+//    public WebElement drawdownApproveClearBtn() {
+//    	return drawdown_approve_clear_btn;
+//    }
+//    
+//    @FindBy(xpath = "//td[@id='td_drawDownRequestGridTbl_Id_WIFT009AP_1_fmsDrawDownVO.CODE']")
+//    private WebElement drawdown_approve_code;
+//    public WebElement drawdownApproveCode() {
+//    	return drawdown_approve_code;
+//    }
+//    
+//    @FindBy(xpath = "//span[contains(text(),'Approve')]//parent::button")
+//    private WebElement draw_down_request_approve_btn;
+//    public WebElement drawDownRequestApproveBtn() {
+//    	return draw_down_request_approve_btn;
+//    }
+//    
+//    @FindBy(xpath = "//a[@id='infoBarSearchButton_WIFT009MT']")
+//    private WebElement drawdown_main_search_btn;
+//    public WebElement drawdownMainSearchBtn() {
+//    	return drawdown_main_search_btn;
+//    }
+//    
+//    @FindBy(xpath = "//td[@id='drawDownRequestGridTbl_Id_WIFT009MT_pager_left']/table/tbody/tr/td[7]")
+//    private WebElement drawdown_main_clear_btn;
+//    public WebElement drawdownMainClearBtn() {
+//    	return drawdown_main_clear_btn;
+//    }
+//    
+//    @FindBy(xpath = "//td[@id='td_drawDownRequestGridTbl_Id_WIFT009MT_1_fmsDrawDownVO.CODE']")
+//    private WebElement drawdown_main_code;
+//    public WebElement drawdownMainCode() {
+//    	return drawdown_main_code;
+//    }
+//  
+//    @FindBy(xpath = "//span[contains(text(),'Status Details')]//parent::a")
+//    private WebElement drawdown_main_status_details_btn;
+//    public WebElement drawdownMainStatusDetailsBtn() {
+//    	return drawdown_main_status_details_btn;
+//    }
+//    
+//    @FindBy(xpath = "//div[@id='fms_status_div_WIFT009MT']")
+//    private WebElement drawdown_main_status_details_tab;
+//    public WebElement drawdownMainStatusDetailsTab() {
+//    	return drawdown_main_status_details_tab;
+//    }
+//    
+//    @FindBy(xpath = "//td[@id='td_fmsStatusGridTbl_Id_1_userName']")
+//    private WebElement drawdown_main_status_details_user_name;
+//    public WebElement drawdownMainStatusDetailsUserName() {
+//    	return drawdown_main_status_details_user_name;
+//    }
+//    
+//    //Facility Closure Request
+//    @FindBy(xpath = "//td[text()='Facility Closure Request']")
+//    private WebElement wifak_application_facility_closure_request;
+//    public WebElement wifakApplicationFacilityClosureRequest() {
+//    	return wifak_application_facility_closure_request;
+//    }
+//    
+//    @FindBy(xpath = "//a[@id='WIFT010MT']")
+//    private WebElement facility_closure_request_maintanance;
+//    public WebElement facilityClosureRequestMaintanance() {
+//    	return facility_closure_request_maintanance;
+//    }
+//    
+//    @FindBy(xpath = "//input[@id='lookuptxt_facilityClosureRequestFacilityReference_WIFT010MT']")
+//    private WebElement facility_closure_main_facility_ref;
+//    public WebElement facilityClosureMainFacilityRef() {
+//    	return facility_closure_main_facility_ref;
+//    }
+//    
+//    @FindBy(xpath = "//input[@id='facilityClosureRequest_Closure_Reason_WIFT010MT']")
+//    private WebElement facility_closure_main_closure_reason;
+//    public WebElement facilityClosureMainClosureReason() {
+//    	return facility_closure_main_closure_reason;
+//    }
+//    
+//    @FindBy(xpath = "//button[@id='facilityClosureRequestSave_WIFT010MT']")
+//    private WebElement facility_closure_main_save_btn;
+//    public WebElement facilityClosureMainSaveBtn() {
+//    	return facility_closure_main_save_btn;
+//    }
+//    
+//    @FindBy(xpath = "/html/body/div[16]/div[1]/a")
+//    private WebElement facility_closure_main_send_alert_popup;
+//    public WebElement facilityClosureMainSendAlertPopup() {
+//    	return facility_closure_main_send_alert_popup;
+//    }
+//    
+//    @FindBy(xpath = "//a[@id='WIFT010AP']")
+//    private WebElement facility_closure_request_approve;
+//    public WebElement facilityClosureRequestApprove() {
+//    	return facility_closure_request_approve;
+//    }
+//    
+//    @FindBy(xpath = "//td[@id='facilityClosureRequestGridTbl_Id_WIFT010AP_pager_left']/table/tbody/tr/td[7]")
+//    private WebElement facility_closure_approve_clear_btn;
+//    public WebElement facilityClosureApproveClearBtn() {
+//    	return facility_closure_approve_clear_btn;
+//    }
+//    
+//    @FindBy(xpath = "//td[@id='td_facilityClosureRequestGridTbl_Id_WIFT010AP_1_fmsFacilityClosureVO.CODE']")
+//    private WebElement facility_closure_approve_code;
+//    public WebElement facilityClosureApproveCode() {
+//    	return facility_closure_approve_code;
+//    }
+//    
+//    @FindBy(xpath = "//button[@id='facilityClosureRequest_approve_btn_WIFT010AP']")
+//    private WebElement facility_closure_approve_btn;
+//    public WebElement facilityClosureApproveBtn() {
+//    	return facility_closure_approve_btn;
+//    }
+//    
+//    @FindBy(xpath = "//a[@id='infoBarSearchButton_WIFT010MT']")
+//    private WebElement facility_closure_main_search_btn;
+//    public WebElement facilityClosureMainSearchBtn() {
+//    	return facility_closure_main_search_btn;
+//    }
+//    
+//    @FindBy(xpath = "//td[@id='td_facilityClosureRequestGridTbl_Id_WIFT010MT_1_fmsFacilityClosureVO.CODE']")
+//    private WebElement facility_closure_main_code;
+//    public WebElement facilityClosureMainCode() {
+//    	return facility_closure_main_code;
+//    }
+//    
+//    @FindBy(xpath = "(//span[contains(text(),'Status')]//parent::a)[2]")
+//    private WebElement facility_closure_main_status_details_btn;
+//    public WebElement facilityClosureMainStatusDetailsBtn() {
+//    	return facility_closure_main_status_details_btn;
+//    }
+//    
+//    @FindBy(xpath = "//div[@id='gview_fmsStatusGridTbl_Id']")
+//    private WebElement facility_closure_main_status_details_tab;
+//    public WebElement facilityClosureMainStatusDetailsTab() {
+//    	return facility_closure_main_status_details_tab;
+//    }
+//    
     
 //    @AT_RF_139
     @FindBy(xpath = "//td[@tdlabel='Critical']//input")
