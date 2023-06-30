@@ -66,7 +66,7 @@ public class ApplicationForFinancialFacility_obj {
 		return Apply_Corporate_Package;
 	}
 	
-	@FindBy(id = "fmsFacilityTypeMaintFormId_P008UP_Update_key")
+	@FindBy(xpath = "//label[@id='fmsFacilityTypeMaintFormId_P008UP_Update_key']")
 	private WebElement Application_Requirement_Updatebutton;
 	public WebElement ApplicationRequirement_Updatebutton() {
 		return Application_Requirement_Updatebutton;
@@ -157,9 +157,9 @@ public class ApplicationForFinancialFacility_obj {
 	}
 	
 	@FindBy(xpath =  "//select[@id='applicationFacilityApplicationfor_WIFT001MT']")
-	private WebElement Application_for;
+	private WebElement getApplication_for;
 	public WebElement getApplication_for() {
-		return Application_for;
+		return getApplication_for;
 	}
 	
 	@FindBy(xpath =  "//input[@id='lookuptxt_applicationFacilitycif_WIFT001MT']")
@@ -180,7 +180,7 @@ public class ApplicationForFinancialFacility_obj {
 		return Enter_codeOn_Facility_Type;
 	}
 	
-	@FindBy(id =  "ApplycooratepackageChkBox_WIFT001MT")   
+	@FindBy(xpath =  "//label[@id='lbl_ApplycooratepackageChkBox_WIFT001MT']")   
 	private WebElement Apply_Corporate_Package_button_IsDisabled;
 	public WebElement ApplyCorporatePackagebuttonIsDisabled() {
 		return Apply_Corporate_Package_button_IsDisabled;

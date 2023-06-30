@@ -63,7 +63,7 @@ public class FMS_Reports_Pagination_Issue_Steps {
 		fmsReportsPaginationObj.fms_RetrieveKey_InavalimentTicket_610().click();
 	
 	}
-	  @Then("^verify system shoudl show the CIF details under availment ticket$")
+	  @Then("^User_610 verify system shoudl show the CIF details under availment ticket$")
 	    public void verify_system_shoudl_show_the_cif_details_under_availment_ticket() throws Throwable {
 	     waitHelper.waitForElementwithFluentwait(driver, fmsReportsPaginationObj.AvailmentPage1to4_InavalimentTicket_610());
 	     JavascriptHelper.scrollIntoView(fmsReportsPaginationObj.AvailmentPage1to4_InavalimentTicket_610());

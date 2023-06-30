@@ -8,7 +8,7 @@ import io.cucumber.testng.CucumberOptions;
 import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
-@CucumberOptions(features = {"src/test/java/features/ApplicationForFinancialFacility.feature"},
+@CucumberOptions(features = {"src/test/java/features/Collateral_Management_610.feature"},
                 glue = "stepdefinitions",
                 
                 //monochrome=false, //to make steps in color
@@ -17,7 +17,7 @@ import utilities.ExtentTestManager;
                            "rerun:ReRunScenarios/FailedReRun.txt"}
           //   ,  dryRun = true //to check compilation errors                                      
             //   , tags="@127788" 
-            		,   tags="@592279"
+            		,   tags="@930369"
 
 )
 public class TestApplication extends AbstractTestNGCucumberTests {

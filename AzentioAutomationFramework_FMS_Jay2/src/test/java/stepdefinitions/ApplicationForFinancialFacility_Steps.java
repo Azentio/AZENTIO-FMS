@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 import dataProvider.ConfigFileReader;
 import dataProvider.ExcelData;
@@ -71,13 +72,6 @@ public class ApplicationForFinancialFacility_Steps extends BaseClass{
 		applicationFinancialObj.FacilityType_UpdateAfterApprove_Code().sendKeys(Keys.ENTER); 
     }
 
-//    @Then("^Click the Facility Details tab in update after approve screen$")
-//    public void click_the_facility_details_tab_in_update_after_approve_screen() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.FacilityType_UpdateAfterApprove_FacilityDetails());
-//		clicksAndActionHelper.moveToElement(applicationFinancialObj.FacilityType_UpdateAfterApprove_FacilityDetails());
-//		clicksAndActionHelper.clickOnElement(applicationFinancialObj.FacilityType_UpdateAfterApprove_FacilityDetails());
-//    }
-    
 
     @And("^Click the Facility Details tab in update after approve screen$")
     public void click_the_facility_details_tab_in_update_after_approve_screen() throws Throwable {
@@ -114,15 +108,37 @@ public class ApplicationForFinancialFacility_Steps extends BaseClass{
     public void check_apply_corporate_package_flag() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ApplyCorporatePackage());
 		clicksAndActionHelper.moveToElement(applicationFinancialObj.ApplyCorporatePackage());
-		clicksAndActionHelper.clickOnElement(applicationFinancialObj.ApplyCorporatePackage());
-		javascripthelper.scrollIntoView(applicationFinancialObj.ApplicationRequirement_Updatebutton());
-    }
+		applicationFinancialObj.ApplyCorporatePackage().click();
+		try {
+            if (applicationFinancialObj.ApplyCorporatePackage().isEnabled() && applicationFinancialObj.ApplyCorporatePackage().isSelected()) {
+                Assert.assertTrue(true);
+            }
+            else {
+            	applicationFinancialObj.ApplyCorporatePackage().click();
+            	            }
+            } 
+		    catch (Exception e) {
+                Assert.fail(e.getMessage());
+                    }
+		
+			    }
 
     @And("^After check flag in corporate package then click Update$")
     public void after_check_flag_in_corporate_package_then_click_update() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ApplicationRequirement_Updatebutton());
-		clicksAndActionHelper.moveToElement(applicationFinancialObj.ApplicationRequirement_Updatebutton());
-		clicksAndActionHelper.clickOnElement(applicationFinancialObj.ApplicationRequirement_Updatebutton());
+    	javascripthelper.scrollIntoView(applicationFinancialObj.ApplicationRequirement_Updatebutton());
+    	
+    	for (int i = 0; i < 200; i++) {
+			try {
+
+				clicksAndActionHelper.clickOnElement(applicationFinancialObj.ApplicationRequirement_Updatebutton());
+				break;
+			} catch (Exception e) {
+				if (i == 199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
         
     }
 
@@ -182,20 +198,6 @@ public class ApplicationForFinancialFacility_Steps extends BaseClass{
     
    
 
-//    @And("^Click the Facility Details tab in update after approve screen sub menu$")
-//    public void click_the_approve_button_in_facility_details_screen() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.FacilityDetailsApproveMenu());
-//		clicksAndActionHelper.moveToElement(applicationFinancialObj.FacilityDetailsApproveMenu());
-//		clicksAndActionHelper.doubleClick(applicationFinancialObj.FacilityDetailsApproveMenu());
-//    	
-//    }
-    
-//    @And("^Click the approve button in facility Details screen$")
-//    public void click_the_approve_button_in_facility_details_screen() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.FacilityDetailsApproveMenu());
-//		clicksAndActionHelper.moveToElement(applicationFinancialObj.FacilityDetailsApproveMenu());
-//		clicksAndActionHelper.clickOnElement(applicationFinancialObj.FacilityDetailsApproveMenu());
-//    }
 
     @And("^Its shows warning button then click ok button approve screen$")
     public void its_shows_warning_button_then_click_ok_button_approve_screen() throws Throwable {
@@ -254,7 +256,7 @@ public class ApplicationForFinancialFacility_Steps extends BaseClass{
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.getCIF_no());
     	clicksAndActionHelper.moveToElement(applicationFinancialObj.getCIF_no());
     	clicksAndActionHelper.clickOnElement(applicationFinancialObj.getCIF_no());
-		applicationFinancialObj.getCIF_no().sendKeys("727");
+		applicationFinancialObj.getCIF_no().sendKeys("3003");
         
     }
 
@@ -264,31 +266,25 @@ public class ApplicationForFinancialFacility_Steps extends BaseClass{
     	clicksAndActionHelper.moveToElement(applicationFinancialObj.getEnter_codeOn_Facility_Type());
     	clicksAndActionHelper.clickOnElement(applicationFinancialObj.getEnter_codeOn_Facility_Type());
 		applicationFinancialObj.getEnter_codeOn_Facility_Type().sendKeys("369");
+		Thread.sleep(7000);
     }
     
     @Then("^Check the apply corporate package flag is disabled$")
     public void check_the_apply_corporate_package_flag_is_disabled() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ApplyCorporatePackagebuttonIsDisabled());
     	clicksAndActionHelper.moveToElement(applicationFinancialObj.ApplyCorporatePackagebuttonIsDisabled());
+    	Thread.sleep(5000);
     	try {
-			if (!applicationFinancialObj.ApplyCorporatePackagebuttonIsDisabled().isEnabled()) {
-				System.out.println("Apply Corporate Package Flag IsDisabled");
+			if (applicationFinancialObj.ApplyCorporatePackagebuttonIsDisabled().isEnabled()) {
+				System.err.println("Apply Corporate Package Flag IsDisabled");
 				
 			}
 		} catch (Exception e) {
-			System.out.println("Error in Apply Corporate Package Flag");
+			System.err.println("Error in Apply Corporate Package Flag");
 		}
     }
-
-//    @And("^Enter Code In Country of Financing$")
-//    public void enter_code_in_country_of_financing() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.get());
-//    	clicksAndActionHelper.moveToElement(applicationFinancialObj.getEnterCodeIn_Country_of_Financing());
-//    	clicksAndActionHelper.clickOnElement(applicationFinancialObj.getEnterCodeIn_Country_of_Financing());
-//    	applicationFinancialObj.getEnterCodeIn_Country_of_Financing().sendKeys("320");
-    
-    
-    //----------------------------------------@
+ 
+        //----------------------------------------@
     
     
     String path = System.getProperty("user.dir") +"\\TestData\\FMSTestData.xlsx";

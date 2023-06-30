@@ -133,7 +133,7 @@ Feature: TC to check the modification in the Maintain Application Facility Scree
     And User_610 Check The Level Of  Add Button In LImit Details SubMenu
     Then User_610 Check The Level Of  Close Button In LImit Details SubMenu
     
-  @127788
+  @127788_01
   Scenario: TC to check the modification in the Maintain Application Facility Screen(T001)
     Given navigate to FMS param application and login with valid credentials2
     And Click on the Parameters menu
@@ -155,7 +155,7 @@ Feature: TC to check the modification in the Maintain Application Facility Scree
     And Its shows warning button then click ok button approve screen
     And Its shows Information button then click ok button approve screen
 
-  @127788_01
+  @127788_02
   Scenario: TC to check the modification in the Maintain Application Facility Screen(T001)
     Given navigate to FMS application and login with valid credentials2
     And Click Wifak Application first01
@@ -167,7 +167,7 @@ Feature: TC to check the modification in the Maintain Application Facility Scree
     And Enter codeOn Facility Type01
     Then Check the apply corporate package flag is disabled
 
-  @834957
+  @834957_01
   Scenario: Check a new field “Marketed By” is added under the Main Information Tab in Application for Financial Facilities – Maintenance screen
     Given navigate to FMS param application and login with valid credentials2
     And User clicks on the Parameter module
@@ -178,20 +178,19 @@ Feature: TC to check the modification in the Maintain Application Facility Scree
     And User clicks on the approve menu
     Then User clicks on the approve button
 
-  @834957_01
+  @834957_02
   Scenario: Check a new field “Marketed By” is added under the Main Information Tab in Application for Financial Facilities – Maintenance screen
     Given navigate to FMS application and login with valid credentials2
-    And Click Wifak Application first
-    And Click Wifak Application Second
-    And Click Application for financial facilities
-    And Click Maintenance
-    And Click and Select Application for
-    And Search CIF No
-    And Enter codeOn Facility Type
-    And Enter Code In Country of Financing
-    #  And Enter line Code On Facility Rating
-    And Click on additional Details
-    And Enter the Total Value
+    And User_610 Click Wifak Application first
+    And User_610 Click Wifak Application Second
+    And User_610 Click Application for financial facilities
+    And User_610 Click Maintenance
+    And User_610 Click and Select Application for
+    And User_610 Search CIF No
+    And User_610 Enter codeOn Facility Type
+    And User_610 Enter Code In Country of Financing
+    And User_610 Enter line Code On Facility Rating
+    And User_610 Click on additional Details
     And User Check Fx Settlement Expery Date
     And User Enter Date above current Date
     Then User Enter Date Below to this current Date
