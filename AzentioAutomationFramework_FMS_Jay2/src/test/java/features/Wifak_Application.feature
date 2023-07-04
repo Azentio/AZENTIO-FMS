@@ -181,73 +181,31 @@ Feature: Wifak Application
     Then User_610 Click Ok Button In Waring Screen In Limits Details
     And User_610 Click OK  Button In Sucess Screen In Limits Details
     Then User_610 Click the Product Class In Limits Details
-    And Click Repayment Plan In Limits Details
-    Then Enter the value in No Of Payments  In Repayment Plan
-    And Click Create Schedule In Repayment Plan
-    Then Click Warning popup No In Repayment Plan
-    And Click Save Button After In Repayment Plan
-    Then Click Ok Button In Waring Screen In Repayment Plan
-    And Click OK  Button In Sucess Screen In Repayment Plan
+    And User_610 Click Repayment Plan In Limits Details
+    Then User_610 Enter the value in No Of Payments  In Repayment Plan
+    And User_610 Click Create Schedule In Repayment Plan
+    Then User_610 Click Warning popup No In Repayment Plan
+    And User_610 Click Save Button After In Repayment Plan
+    Then User_610 Click Ok Button In Waring Screen In Repayment Plan
+    And User_610 Click OK  Button In Sucess Screen In Repayment Plan
     And User_610 Click Document Details
     And User_610 Enter The Value Solicitor Name
     And User_610 Enter The Value Estimator Name
     And User_610 Click Validate Button in Document Details
-    And User clicks the Approve Level1 link
-    And User retrive the first data in approve level1
-    And select the Approve level1 decision as approve
-    And User clicks on the level1 submit button
-    And User clicks the Approve Level2 link
-    And User retrive the first data in approve level2
-    And User select the level2 decision as approve
-    And User clicks on the level2 submit button
-    And User clicks the Approve Level3 link
-    And User retrive the first data in approve level3
-    And User select the level3 decision as approve
-    When User clicks on the level3 submit button
+    And User_610 clicks the Approve Level1 link
+    And User_610 retrive the first data in approve level1
+    And User_610 select the Approve level1 decision as approve
+    And User_610 clicks on the level1 submit button
+    And User_610 clicks the Approve Level2 link
+    And User_610 retrive the first data in approve level2
+    And User_610 select the level2 decision as approve
+    And User_610 clicks on the level2 submit button
+    And User_610 clicks the Approve Level3 link
+    And User_610 retrive the first data in approve level3
+    And User_610 select the level3 decision as approve
+    When User_610 clicks on the level3 submit button
 
-  @740790
-  Scenario: TSR - AIBBI180271
-    Given navigate to FMS application2 and login with valid credentials
- #   And get the test data set id for AT_RF_192
-    And User_610 Click Wifak Application first
-    And User_610 Click Wifak Application Second
-    And User_610 Click Application for financial facilities
-    And User_610 Click Maintenance
-    And User_610 Click and Select Application for
-    And User_610 Search CIF No
-    And User_610 Enter codeOn Facility Type
-    And User_610 Enter Code In Country of Financing
-    And User_610 Enter line Code On Facility Rating
-    And User_610 Click on additional Details
-    And User_610 Enter the Total Value
-    And User_610 Click Offer Expiration SelectDate
-    And User_610 Select limit Details
-    And User_610 Click Add button on limit Detail
-    And User_610 Enter ValueOn Product Class
-    And Enter Facility Value
-    Then Enter the value on  Purpose Of Finacing
-    Then User_610 Check Flag in Clean Level IN Limits Detalis SubMenu
-    And User_610 Click Add button AfterEnter Value On Product Class
-    And Click Second Add button on limit Detail
-    And Enter second ValueOn Product Class
-    Then Enter second ValueOn Facility Value
-    And Enter the second value on  Purpose Of Finacing
-    Then User_610 Check Flag in Clean Level IN Limits Detalis SubMenu
-    And User_610 Click Add button AfterEnter Value On Product Class
-    And Click third Add button on limit Detail
-    And Enter third ValueOn Product Class
-    Then Enter third ValueOn Facility Value
-    And Enter the third value on  Purpose Of Finacing
-    Then User_610 Check Flag in Clean Level IN Limits Detalis SubMenu
-    And User_610 Click Add button AfterEnter Value On Product Class
-    And Click Fourth Add button on limit Detail
-    And Enter Fourth ValueOn Product Class
-    Then Enter Fourth ValueOn Facility Value
-    And Enter the Fourth value on  Purpose Of Finacing
-    Then Check Flag in Clean Level IN Limits Detalis SubMenu
-    And Click Add button AfterEnter Value On Product Class
-    Then Validate how many product class in limits details
-
+  
   @740809
   Scenario: TSR-AIBBI180258
     Given navigate to FMS application2 and login with valid credentials
@@ -272,29 +230,29 @@ Feature: Wifak Application
     Then User_610 Click Ok Button In Waring Screen In Limits Details
     And User_610 Click OK  Button In Sucess Screen In Limits Details
     Then User_610 Click the Product Class In Limits Details
-    And Click Repayment Plan In Limits Details
-    Then Enter the value in No Of Payments  In Repayment Plan
-    And Click Create Schedule In Repayment Plan
-    Then Click Warning popup No In Repayment Plan
-    And Click Save Button After In Repayment Plan
-    Then Click Ok Button In Waring Screen In Repayment Plan
-    And Click OK  Button In Sucess Screen In Repayment Plan
+    And User_610 Click Repayment Plan In Limits Details
+    Then User_610 Enter the value in No Of Payments  In Repayment Plan
+    And User_610 Click Create Schedule In Repayment Plan
+    Then User_610 Click Warning popup No In Repayment Plan
+    And User_610 Click Save Button After In Repayment Plan
+    Then User_610 Click Ok Button In Waring Screen In Repayment Plan
+    And User_610 Click OK  Button In Sucess Screen In Repayment Plan
     And User_610 Click Document Details
     And User_610 Enter The Value Solicitor Name
     And User_610 Enter The Value Estimator Name
     And User_610 Click Validate Button in Document Details
-    And User clicks the Approve Level1 link
-    And User retrive the first data in approve level1
-    And select the Approve level1 decision as approve
-    And User clicks on the level1 submit button
-    And User clicks the Approve Level2 link
-    And User retrive the first data in approve level2
-    And User select the level2 decision as approve
-    And User clicks on the level2 submit button
-    And User clicks the Approve Level3 link
-    And User retrive the first data in approve level3
-    And User select the level3 decision as approve
-    When User clicks on the level3 submit button
+    And User_610 clicks the Approve Level1 link
+    And User_610 retrive the first data in approve level1
+    And User_610 select the Approve level1 decision as approve
+    And User_610 clicks on the level1 submit button
+    And User_610 clicks the Approve Level2 link
+    And User_610 retrive the first data in approve level2
+    And User_610 select the level2 decision as approve
+    And User_610 clicks on the level2 submit button
+    And User_610 clicks the Approve Level3 link
+    And User_610 retrive the first data in approve level3
+    And User_610 select the level3 decision as approve
+    When User_610 clicks on the level3 submit button
 
   # Then Click Update After Approve in Application For Finacial Facilities
   # facilityManagement

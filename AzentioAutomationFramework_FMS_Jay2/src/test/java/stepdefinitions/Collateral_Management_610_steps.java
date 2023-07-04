@@ -98,9 +98,9 @@ public class Collateral_Management_610_steps extends BaseClass{
 		clicksAndActionHelper.clickOnElement(CollateralManagement_610_obj.cifNoIN_CollateralManagementScreen_610());
 		CollateralManagement_610_obj.cifNoIN_CollateralManagementScreen_610().sendKeys("727",Keys.TAB);
 		
-		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ButtonConfirmOk1());
-		clicksAndActionHelper.moveToElement(FMS_WifakApplication_Obj.ButtonConfirmOk1());
-		clicksAndActionHelper.clickOnElement(FMS_WifakApplication_Obj.ButtonConfirmOk1());
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ButtonConfirmOk1_610());
+		clicksAndActionHelper.moveToElement(FMS_WifakApplication_Obj.ButtonConfirmOk1_610());
+		clicksAndActionHelper.clickOnElement(FMS_WifakApplication_Obj.ButtonConfirmOk1_610());
 	}
 	
 	@And("User_{int} enter Collateral Currency in Collateral Management Screen")

@@ -194,3 +194,46 @@ Feature: TC to check the modification in the Maintain Application Facility Scree
     And User Check Fx Settlement Expery Date
     And User Enter Date above current Date
     Then User Enter Date Below to this current Date
+
+    @740790
+  Scenario: TSR - AIBBI180271
+    Given navigate to FMS application2 and login with valid credentials
+ #   And get the test data set id for AT_RF_192
+    And User_610 Click Wifak Application first
+    And User_610 Click Wifak Application Second
+    And User_610 Click Application for financial facilities
+    And User_610 Click Maintenance
+    And User_610 Click and Select Application for
+    And User_610 Search CIF No
+    And User_610 Enter codeOn Facility Type
+    And User_610 Enter Code In Country of Financing
+    And User_610 Enter line Code On Facility Rating
+    And User_610 Click on additional Details
+    And User_610 Enter the Total Value
+    And User_610 Click Offer Expiration SelectDate
+    And User_610 Select limit Details
+    And User_610 Click Add button on limit Detail
+    And User_610 Enter ValueOn Product Class
+    And User_610 Enter Facility Value
+ #   Then Enter the value on  Purpose Of Finacing
+    Then User_610 Check Flag in Clean Level IN Limits Detalis SubMenu
+    And User_610 Click Add button AfterEnter Value On Product Class
+    And User_610 Click Second Add button on limit Detail
+    And User_610 Enter second ValueOn Product Class
+    Then User_610 Enter second ValueOn Facility Value
+#    And Enter the second value on  Purpose Of Finacing
+    Then User_610 Check Flag in Clean Level IN Limits Detalis SubMenu
+    And User_610 Click Add button AfterEnter Value On Product Class
+    And User_610 Click third Add button on limit Detail
+    And User_610 Enter third ValueOn Product Class
+    Then User_610 Enter third ValueOn Facility Value
+ #   And Enter the third value on  Purpose Of Finacing
+    Then User_610 Check Flag in Clean Level IN Limits Detalis SubMenu
+    And User_610 Click Add button AfterEnter Value On Product Class
+    And User_610 Click Fourth Add button on limit Detail
+    And User_610 Enter Fourth ValueOn Product Class
+    Then User_610 Enter Fourth ValueOn Facility Value
+ #   And Enter the Fourth value on  Purpose Of Finacing
+    Then User_610 Check Flag in Clean Level IN Limits Detalis SubMenu
+    And User_610 Click Add button AfterEnter Value On Product Class
+    Then User_610 Validate how many product class in limits details

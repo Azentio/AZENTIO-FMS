@@ -234,7 +234,7 @@ public class FMS_WifakApplication_Obj {
 	
 	@FindBy(id =  "applicationfacilityLimitDetailsFACILITY_VALUE_WIFT001MT")
 	private WebElement Enter_ValueOn_FacilityValue;
-	public WebElement Enter_ValueOn_FacilityValue() {
+	public WebElement Enter_ValueOn_FacilityValue_610() {
 		return Enter_ValueOn_FacilityValue;
 	}
 	
@@ -265,7 +265,7 @@ public class FMS_WifakApplication_Obj {
 	
 	@FindBy(id =  "ApplicationFacilityLimitDetailsGrid_WIFT001MT")
 	private WebElement TableHead_LimitDetails;
-	public WebElement TableHead_LimitDetails() {
+	public WebElement TableHead_LimitDetails_610() {
 		return TableHead_LimitDetails;
 	}
 	
@@ -1148,7 +1148,7 @@ public class FMS_WifakApplication_Obj {
 	
 	@FindBy(id =  "applicationfacility_repayplan_btn_WIFT001MT")
 	private WebElement RepaymentPlan_btn_In_LimitsDetails;
-	public WebElement RepaymentPlan_btn_In_LimitsDetails() {
+	public WebElement RepaymentPlan_btn_In_LimitsDetails_610() {
 		return RepaymentPlan_btn_In_LimitsDetails;
 	}
 	
@@ -1161,7 +1161,7 @@ public class FMS_WifakApplication_Obj {
 	
 	@FindBy(xpath =  "//button[@id='savebutton_WIFT001MT']")
 	private WebElement SaveButton_RepaymentPlan;
-	public WebElement SaveButton_RepaymentPlan() {
+	public WebElement SaveButton_RepaymentPlan_610() {
 		return SaveButton_RepaymentPlan;
 	}
 	
@@ -1181,7 +1181,7 @@ public class FMS_WifakApplication_Obj {
 	
     @FindBy(id =  "_popup_path_sol_confirm_ok")
 	private WebElement WaringButton_OnLimitDetails_Tab;
-	public WebElement WaringButton_OnLimitDetails_Tab() {
+	public WebElement WaringButton_OnLimitDetails_Tab_610() {
 	return WaringButton_OnLimitDetails_Tab;
 	}
 	
@@ -1200,7 +1200,7 @@ public class FMS_WifakApplication_Obj {
 	
 	@FindBy(id =  "No_Of_Payments_WIFT001MT")
 	private WebElement No_Of_Payments_InRepaymentPlan;
-	public WebElement No_Of_Payments_InRepaymentPlan() {
+	public WebElement No_Of_Payments_InRepaymentPlan_610() {
 	return No_Of_Payments_InRepaymentPlan;
 	}
 	//_popup_path_sol_ok
@@ -1212,7 +1212,7 @@ public class FMS_WifakApplication_Obj {
 	
 	@FindBy(xpath =  "//button[@id='createSchedule_WIFT001MT']")
 	private WebElement createSchedule_InRepaymentPlan;
-	public WebElement createSchedule_InRepaymentPlan() {
+	public WebElement createSchedule_InRepaymentPlan_610() {
 	return createSchedule_InRepaymentPlan;
 	}
 	
@@ -1237,7 +1237,7 @@ public class FMS_WifakApplication_Obj {
 	
 	@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
     private WebElement warning_popup_ok_btn;
-    public WebElement WarningPopupOkBtn() {
+    public WebElement WarningPopupOkBtn_610() {
         return warning_popup_ok_btn;
     }
 
@@ -1249,13 +1249,13 @@ public class FMS_WifakApplication_Obj {
 
     @FindBy(xpath = "//button[@id='applicationfacility_save_btn_WIFT001MT']")
     private WebElement limit_details_validate_btn;
-    public WebElement limitDetailsValidateBtn() {
+    public WebElement limitDetailsValidateBtn_610() {
         return limit_details_validate_btn;
     }
 
     @FindBy(xpath = "//div[text()='CONFIRM']")
     private WebElement confirm_popup;
-    public WebElement confirmPopup() {
+    public WebElement confirmPopup_610() {
         return confirm_popup;
     }
 
@@ -1273,14 +1273,14 @@ public class FMS_WifakApplication_Obj {
 
     @FindBy(xpath = "//div[text()='Success']")
     private WebElement success_popup;
-    public WebElement successPopup() {
+    public WebElement successPopup_610() {
         return success_popup;
     }
 
     //class
     @FindBy(xpath = "//div[@class='jMsgbox-contentWrap']")
     private WebElement success_popup_msg;
-    public WebElement successPopupMessage() {
+    public WebElement successPopupMessage_610() {
         return success_popup_msg;
     }
 
@@ -1325,136 +1325,136 @@ public class FMS_WifakApplication_Obj {
 	
 	@FindBy(xpath = "//a[@id='WIFT001AP1']")
     private WebElement application_financial_facility_approve1;
-    public WebElement applicationFinancialFacilityApproveLevel1() {
+    public WebElement applicationFinancialFacilityApproveLevel1_610() {
         return application_financial_facility_approve1;
     }
 	@FindBy(xpath = "//*[@id=\"applicationFacilityGridTbl_Id_WIFT001AP1_pager_left\"]/table/tbody/tr/td[7]")
 	private WebElement approve1_clear_btn;
-	public WebElement approve1ClearBtn() {
+	public WebElement approve1ClearBtn_610() {
 		return approve1_clear_btn;
 	}
 	
 	@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT001AP1_1_fmsApplVO.CODE']")
 	private WebElement approve_level1_retrive_data;
-	public WebElement approveLevel1RetriveData() {
+	public WebElement approveLevel1RetriveData_610() {
 		return approve_level1_retrive_data;
 	}
 	
 	@FindBy(xpath = "//select[@id='applicationFacilityDecision_1_WIFT001AP1']")
 	private WebElement approve_level1_select_decision;
-	public WebElement approveLevel1SelectDecision() {
+	public WebElement approveLevel1SelectDecision_610() {
 		return approve_level1_select_decision;
 	}
 	
 	@FindBy(xpath = "//button[@id='applicationfacility_approvelevel1_btn_WIFT001AP1']")
 	private WebElement approve_level1_submit_btn;
-	public WebElement approveLevel1SubmitBtn() {
+	public WebElement approveLevel1SubmitBtn_610() {
 		return approve_level1_submit_btn;
 	}
 	
 	@FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT001AP1_gs_fmsApplVO.CODE']")
 	private WebElement Enter_ValidateCode_approve_level1;
-	public WebElement Enter_ValidateCode_approve_level1() {
+	public WebElement Enter_ValidateCode_approve_level1_610() {
 		return Enter_ValidateCode_approve_level1;
 	}
 	
 	@FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT001AP2_gs_fmsApplVO.CODE']")
 	private WebElement Enter_ValidateCode_approve_level2;
-	public WebElement Enter_ValidateCode_approve_level2() {
+	public WebElement Enter_ValidateCode_approve_level2_610() {
 		return Enter_ValidateCode_approve_level2;
 	}
 	
 	@FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT001AP3_gs_fmsApplVO.CODE']")
 	private WebElement Enter_ValidateCode_approve_level3;
-	public WebElement Enter_ValidateCode_approve_level3() {
+	public WebElement Enter_ValidateCode_approve_level3_610() {
 		return Enter_ValidateCode_approve_level3;
 	}
 	
 	@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT001AP1_1_fmsApplVO.CODE']")
 	private WebElement ClickTheValue_ValidateCode_approve_level1;
-	public WebElement ClickTheValue_ValidateCode_approve_level1() {
+	public WebElement ClickTheValue_ValidateCode_approve_level1_610() {
 		return ClickTheValue_ValidateCode_approve_level1;
 	}
 	
 	@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT001AP2_1_fmsApplVO.CODE']")
 	private WebElement ClickTheValue_ValidateCode_approve_level2;
-	public WebElement ClickTheValue_ValidateCode_approve_level2() {
+	public WebElement ClickTheValue_ValidateCode_approve_level2_610() {
 		return ClickTheValue_ValidateCode_approve_level2;
 	}
 	
 	@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT001AP3_1_fmsApplVO.CODE']")
 	private WebElement ClickTheValue_ValidateCode_approve_level3;
-	public WebElement ClickTheValue_ValidateCode_approve_level3() {
+	public WebElement ClickTheValue_ValidateCode_approve_level3_610() {
 		return ClickTheValue_ValidateCode_approve_level3;
 	}
 	
     @FindBy(xpath = "//a[@id='WIFT001AP2']")
 	private WebElement application_financial_facility_approve2;
-	public WebElement applicationFinancialFacilityApproveLevel2() {
+	public WebElement applicationFinancialFacilityApproveLevel2_610() {
 		return application_financial_facility_approve2;
 	} 
 	
     @FindBy(xpath = "//*[@id=\"applicationFacilityGridTbl_Id_WIFT001AP2_pager_left\"]/table/tbody/tr/td[7]")
 	private WebElement approve2_clear_btn;
-	public WebElement approve2ClearBtn() {
+	public WebElement approve2ClearBtn_610() {
 		return approve2_clear_btn;
 	} 
 	
 	@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT001AP2_1_fmsApplVO.CODE']")
 	private WebElement approve_level2_retrive_data;
-	public WebElement approveLevel2RetriveData() {
+	public WebElement approveLevel2RetriveData_610() {
 		return approve_level2_retrive_data;
 	}
 	
 	@FindBy(xpath = "//select[@id='applicationFacilityDecision2_WIFT001AP2']")
 	private WebElement approve_level2_select_devision;
-	public WebElement approveLevel2SelectDecision() {
+	public WebElement approveLevel2SelectDecision_610() {
 		return approve_level2_select_devision;
 	}
 	
 	@FindBy(xpath = "//button[@id='applicationfacility_approvelevel2_btn_WIFT001AP2']")
 	private WebElement approve_level2_submit_btn;
-	public WebElement approveLevel2SubmitBtn() {
+	public WebElement approveLevel2SubmitBtn_610() {
 		return approve_level2_submit_btn;
 	}
 	@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
 	private WebElement button_confirm_ok;
-	public WebElement ButtonConfirmOk1() {
+	public WebElement ButtonConfirmOk1_610() {
 		return button_confirm_ok;
 	}
 	
 	@FindBy(xpath = "//*[@id='_popup_path_sol_ok']")
 	private WebElement button_success_ok;
-	public WebElement ButtonSuccessOk1() {
+	public WebElement ButtonSuccessOk1_610() {
 		return button_success_ok;
 	}
 
     @FindBy(xpath = "//a[@id='WIFT001AP3']")
 	private WebElement application_financial_facility_approve3;
-	public WebElement applicationFinancialFacilityApproveLevel3() {
+	public WebElement applicationFinancialFacilityApproveLevel3_610() {
 		return application_financial_facility_approve3;
 	}
 
     @FindBy(xpath = "//*[@id=\"applicationFacilityGridTbl_Id_WIFT001AP3_pager_left\"]/table/tbody/tr/td[7]")
 	private WebElement approve3_clear_btn;
-	public WebElement approve3ClearBtn() {
+	public WebElement approve3ClearBtn_610() {
 		return approve3_clear_btn;
 	}
 	
 	@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT001AP3_1_fmsApplVO.CODE']")
 	private WebElement approve_level3_retrive_data;
-	public WebElement approveLevel3RetriveData() {
+	public WebElement approveLevel3RetriveData_610() {
 		return approve_level3_retrive_data;
 	}
 	
 	@FindBy(xpath = "//select[@id='applicationFacilityDecision3_WIFT001AP3']")
 	private WebElement approve_level3_select_devision;
-	public WebElement approveLevel3SelectDecision() {
+	public WebElement approveLevel3SelectDecision_610() {
 		return approve_level3_select_devision;
 	}
 	@FindBy(xpath = "//button[@id='applicationfacility_approvelevel3_btn_WIFT001AP3']")
 	private WebElement approve_level3_submit_btn;
-	public WebElement approveLevel3SubmitBtn() {
+	public WebElement approveLevel3SubmitBtn_610() {
 		return approve_level3_submit_btn;
 	}
 	
