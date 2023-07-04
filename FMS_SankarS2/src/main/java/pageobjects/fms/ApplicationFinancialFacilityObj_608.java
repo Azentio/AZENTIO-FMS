@@ -645,6 +645,10 @@ public class ApplicationFinancialFacilityObj_608 {
 	}
 	
 	
+	
+	
+	
+	
 	// @AT_AFF_098_FMSCore
 	@FindBy(xpath = "//span[@id='spanLookup_applicationFacilityMarketedBy_WIFT001MT']")
 	private WebElement main_marketed_by_field_search;
@@ -976,6 +980,12 @@ public class ApplicationFinancialFacilityObj_608 {
 		return wifak_draw_down_request_update_after_approve_menu;
 	}
 	
+	@FindBy(xpath = "//td[@id='drawDownRequestGridTbl_Id_WIFT009UP_pager_left']/table/tbody/tr/td[7]")
+	private WebElement wifak_draw_down_request_update_after_approve_clear_btn;
+	public WebElement wifakDrawDownRequestUpdateAfterApproveClearBtn_608() {
+		return wifak_draw_down_request_update_after_approve_clear_btn;
+	}
+	
 	@FindBy(xpath = "//input[@id='drawDownRequestGridTbl_Id_WIFT009UP_gs_fmsDrawDownVO.CODE']")
 	private WebElement wifak_draw_down_request_update_after_approve_menu_searchgrid_code_input;
 	public WebElement wifakDrawDownRequestUpdateAfterApproveMenuSearchgridCodeInput_608() {
@@ -998,6 +1008,12 @@ public class ApplicationFinancialFacilityObj_608 {
 	private WebElement wifak_draw_down_request_update_after_approve_menu_additional_details_tab;
 	public WebElement wifakDrawDownRequestUpdateAfterApproveMenuAdditionalDetailsTab_608() {
 		return wifak_draw_down_request_update_after_approve_menu_additional_details_tab;
+	}
+	
+	@FindBy(xpath = "//input[@id='drawDownRequestFC_Amount_WIFT009UP']")
+	private WebElement wifak_draw_down_request_update_after_approve_additional_details_tab_FC_amt;
+	public WebElement wifakDrawDownRequestUpdateAfterApproveAdditionalDetailsTabFCAmtInput_608() {
+		return wifak_draw_down_request_update_after_approve_additional_details_tab_FC_amt;
 	}
 	
 	@FindBy(xpath = "//button[@id='drawdownrequest_save_btn_WIFT009UP']")
@@ -1042,8 +1058,114 @@ public class ApplicationFinancialFacilityObj_608 {
 	private WebElement wifak_draw_down_request_approve_or_reject_approve_btn;
 	public WebElement wifakDrawDownRequestApproveOrRejectApproveBtn_608() {
 		return wifak_draw_down_request_approve_or_reject_approve_btn;
+	}	
+	
+	@FindBy(xpath = "//button[@id='applicationfacility_collateralDetails_btn_WIFT001MT']")
+	private WebElement limit_details_collateral_details_btn;
+	public WebElement limitDetailsCollateralDetailsBtn_608() {
+		return limit_details_collateral_details_btn;
+	}	
+	
+	
+//	@AT_RF_100
+	@FindBy(xpath = "//input[@id='lookuptxt_applicationFacilityExistingFacilityRef_WIFT001MT']")
+	private WebElement main_existing_facility_ref;
+	public WebElement mainExistingFacilityRef_608() {
+		return main_existing_facility_ref;
 	}
 	
+	@FindBy(xpath = "//input[@id='applicationFacilityfinancedamount_WIFT001MT']")
+	private WebElement additional_tab_finance_amount;
+	public WebElement additionalTabFinanceAmount_608() {
+		return additional_tab_finance_amount;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_ApplicationFacilityLimitDetailsGrid_WIFT001MT_1_fmsAppLimitDetVO.FACILITY_VALUE']")
+	private WebElement limit_details_product_facility_value;
+	public WebElement limitDetailsProductFacilityValue_608() {
+		return limit_details_product_facility_value;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_ApplicationFacilityLimitDetailsGrid_WIFT001MT_1_fmsAppLimitDetVO.CV_VALUE']")
+	private WebElement limit_details_product_CV_value;
+	public WebElement limitDetailsProductCVValue_608() {
+		return limit_details_product_CV_value;
+	}
+	
+	@FindBy(xpath = "//button[@id='limitDetails_edit_btn_WIFT001MT']")
+	private WebElement limit_details_product_edit_btn;
+	public WebElement limitDetailsProductEditBtn_608() {
+		return limit_details_product_edit_btn;
+	}
+	
+//  @AT_RF_101_FMSCore
+    @FindBy(xpath = "//button[@id='applicationfacility_documentchecklist_btn_WIFT001MT']")
+    private WebElement limit_details_document_checklist_btn;
+    public WebElement limitDetailsDocumentChecklistBtn_608() {
+    	return limit_details_document_checklist_btn;
+    }
+    
+    @FindBy(xpath = "//td[@id='td_FacilityDocumentCheckListGrid_WIFT001MT_1_rn']")
+    private WebElement limit_details_document_checklist_second_row;
+    public WebElement limitDetailsdocumentChecklistSecondRow_608() {
+    	return limit_details_document_checklist_second_row;
+    }
+    
+    @FindBy(xpath = "//td[@id='del_FacilityDocumentCheckListGrid_WIFT001MT']")
+    private WebElement limit_details_document_checklist_delete_btn;
+    public WebElement limitDetailsDocumentChecklistDeleteBtn_608() {
+    	return limit_details_document_checklist_delete_btn;
+    }
+    
+    @FindBy(xpath = "//td[@id='add_FacilityDocumentCheckListGrid_WIFT001MT']")
+    private WebElement limit_details_document_checklist_add_btn;
+    public WebElement limitDetailsDocumentChecklistAddBtn_608() {
+    	return limit_details_document_checklist_add_btn;
+    }
+    
+    @FindBy(xpath = "//input[@name='lookupTxt_DOC_CODE']")
+    private WebElement limit_details_document_checklist_document_code_input;
+    public WebElement limitDetailsDocumentChecklistDocumentCodeInput_608() {
+    	return limit_details_document_checklist_document_code_input;
+    }
+    
+    @FindBy(xpath = "//input[@name='lookupTxt_LINE_NO']")
+    private WebElement limit_details_document_checklist_line_no_input;
+    public WebElement limitDetailsDocumentChecklistLineNoInput_608() {
+    	return limit_details_document_checklist_line_no_input;
+    }
+       
+    @FindBy(xpath = "//span[text()='Ok']")
+    private WebElement limit_details_document_checklist_Ok_btn;
+    public WebElement limitDetailsDocumentChecklistOkBtn_608() {
+    	return limit_details_document_checklist_Ok_btn;
+    }
+	
+    
+//  @AT_RF_102
+    @FindBy(xpath = "//select[@id='applicationfacilityLimitDetailsGENERAL_FACILITY_TYPE_WIFT001MT']")
+    private WebElement limit_details_item;
+    public WebElement limitDetailsItem_608() {
+    	return limit_details_item;
+    }
+    
+    @FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsMATURITY_DATE_WIFT001MT']/following-sibling::img")
+    private WebElement limit_details_maturity_date_calender;
+    public WebElement limitDetailsMaturityDateCalender_608() {
+    	return limit_details_maturity_date_calender;
+    }
+    
+    @FindBy(xpath = "//*[@id='ui-datepicker-div']/table/tbody/tr[5]/td[6]")
+    private WebElement limit_details_maturity_date;
+    public WebElement limitDetailsMaturityDate_608() {
+    	return limit_details_maturity_date;
+    }
+    
+    @FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsMARGIN_RATE_WIFT001MT']")
+    private WebElement limit_details_margin_rate_input;
+    public WebElement limitDetailsMarginRateInput_608() {
+    	return limit_details_margin_rate_input;
+    }
 	
 	
 }

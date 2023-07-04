@@ -5,42 +5,42 @@ Feature: To check the WIFAK Application Features
 
 
 
-@AT_RF_098_User_VAK
-Scenario: TSR - BTII170041
+#@AT_RF_098_User_VAK
+#Scenario: TSR - BTII170041
+#
+#Given User_VAK navigate to FMS application and login with valid credentials
+#And User_VAK get the test data for test case AT_RF_098_User_VAK
+#And User_VAK clicks on the WIFAK_Application first link
+#And User_VAK clicks on the WIFAK_Application second link
+#And User_VAK clicks on the approval committe recommedation menu
+#And User_VAK clicks on the clear button in approval committe recommedations menu
+#And User_VAK double click on the any one record in approval committe recommedations menu
+#And User_VAK clicks on the Recommend button in approval committe recommedations menu
+#And User_VAK click the User_VAK recommended by name in recommend box
+#And User_VAK select the recommendation as approve in recommend box
+#And User_VAK click the comment code lookup option in recommend box
+#And User_VAK double click the first row of comment code lookup in recommend box
+#And User_VAK clicks the more comments button in recommend box
+#And User_VAK enter the some comments in more comments
+#And User_VAK click the Ok button in more comments
+#When User_VAK click the Ok button in recommend box
 
-Given User_VAK navigate to FMS application and login with valid credentials
-And User_VAK get the test data for test case AT_RF_098_User_VAK
-And User_VAK clicks on the WIFAK_Application first link
-And User_VAK clicks on the WIFAK_Application second link
-And User_VAK clicks on the approval committe recommedation menu
-And User_VAK clicks on the clear button in approval committe recommedations menu
-And User_VAK double click on the any one record in approval committe recommedations menu
-And User_VAK clicks on the Recommend button in approval committe recommedations menu
-And User_VAK click the User_VAK recommended by name in recommend box
-And User_VAK select the recommendation as approve in recommend box
-And User_VAK click the comment code lookup option in recommend box
-And User_VAK double click the first row of comment code lookup in recommend box
-And User_VAK clicks the more comments button in recommend box
-And User_VAK enter the some comments in more comments
-And User_VAK click the Ok button in more comments
-When User_VAK click the Ok button in recommend box
-
-
-@AT_RF_098_User_608
-Scenario: TSR - BTII170041
-Given navigate to FMS application and login with valid credentials
-And User_608 get the test data for test case AT_RF_098_User_608
-And User_608 clicks on the WIFAK_Application first link
-And User_608 clicks on the WIFAK_Application second link
-And User_608 clicks on the Application for financial facility link
-And User_608 clicks the maintanance menu under Application for financial facility
-And User_608 clicks on the search button in Application for financial facility main screen
-And User_608 search the code in Application for financial facility main screen
-And User_608 double click searched record in Application for financial facility main screen
-And User_608 clicks on the Approval committee button
-And User_608 click the User1 name in Recommented by column
-And User_608 clicks on the more comments button
-Then User_608 validate the more comments text in input field
+#
+#@AT_RF_098_User_608
+#Scenario: TSR - BTII170041
+#Given navigate to FMS application and login with valid credentials
+#And User_608 get the test data for test case AT_RF_098_User_608
+#And User_608 clicks on the WIFAK_Application first link
+#And User_608 clicks on the WIFAK_Application second link
+#And User_608 clicks on the Application for financial facility link
+#And User_608 clicks the maintanance menu under Application for financial facility
+#And User_608 clicks on the search button in Application for financial facility main screen
+#And User_608 search the code in Application for financial facility main screen
+#And User_608 double click searched record in Application for financial facility main screen
+#And User_608 clicks on the Approval committee button
+#And User_608 click the User1 name in Recommented by column
+#And User_608 clicks on the more comments button
+#Then User_608 validate the more comments text in input field
 
 
 #//No data available in FMSCore

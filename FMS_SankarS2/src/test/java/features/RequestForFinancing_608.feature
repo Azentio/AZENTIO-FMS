@@ -90,7 +90,7 @@ And User_608 move to facility reports tab in update after approve
 And User_608 clicks on the search option in issue facility offer under facility reports
 And User_608 double click on any one retrived data
 And User_608 check the auto print flag under issue facility offer
-When User_608 clicks on the Update button
+When User_608 clicks on the Update button under update after approve menu in Facility type
 And User_608 after the update go to the Approve menu
 And User_608 enter the code value in Approve menu
 And User_608 double click on the retrieved data in Approve menu
@@ -184,6 +184,268 @@ Then User_608 validate the visibility of Account No input box in limit details
 Then User_608 validate the visibility of Fund Transfer rate input box in limit details
 
 
+@AT_RF_098
+@AT_RF_098_User_VAK
+Scenario: TSR - BTII170041
+
+Given User_VAK navigate to FMS application and login with valid credentials
+And User_VAK get the test data for test case AT_RF_098_User_VAK
+And User_VAK clicks on the WIFAK_Application first link
+And User_VAK clicks on the WIFAK_Application second link
+And User_VAK clicks on the approval committe recommedation menu
+And User_VAK clicks on the clear button in approval committe recommedations menu
+And User_VAK double click on the any one record in approval committe recommedations menu
+And User_VAK clicks on the Recommend button in approval committe recommedations menu
+And User_VAK click the User_VAK recommended by name in recommend box
+And User_VAK select the recommendation as approve in recommend box
+And User_VAK click the comment code lookup option in recommend box
+And User_VAK double click the first row of comment code lookup in recommend box
+And User_VAK clicks the more comments button in recommend box
+And User_VAK enter the some comments in more comments
+And User_VAK click the Ok button in more comments
+When User_VAK click the Ok button in recommend box
+
+
+@AT_RF_098
+@AT_RF_098_User_608
+Scenario: TSR - BTII170041
+
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_RF_098_User_608
+And User_608 clicks on the WIFAK_Application first link
+And User_608 clicks on the WIFAK_Application second link
+And User_608 clicks on the Application for financial facility link
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 clicks on the search button in Application for financial facility main screen
+And User_608 search the code in Application for financial facility main screen
+And User_608 double click searched record in Application for financial facility main screen
+And User_608 clicks on the Approval committee button
+And User_608 click the User1 name in Recommented by column
+And User_608 clicks on the more comments button
+Then User_608 validate the more comments text in input field
+
+
+@AT_RF_099
+@AT_RF_099_FMSParam
+Scenario: TSR - BTII170059
+
+Given navigate to FMS param application and login with valid credentials
+And User_608 get the test data for test case AT_RF_099_FMSParam
+And User_608 clicks on the Parameter module in FMS Param
+And User_608 clicks on the Facility Type feature
+And User_608 clicks on the update after approve menu in Facility type
+And User_608 enter the code value in update after approve menu
+And User_608 double click on the retrieved data in update after approve menu
+And User_608 clicks on the facility details tab in update after approve
+And User_608 clicks the Application Requirements Details option
+And User_608 select the collateral as application level
+And User_608 select the Collaterals defined at the level of as sublimit
+When User_608 clicks on the Update button under update after approve menu in Facility type
+And User_608 after the update go to the Approve menu
+And User_608 enter the code value in Approve menu
+And User_608 double click on the retrieved data in Approve menu
+When User_608 clicks on the Approve button in Approve menu under Facility Type
+
+
+@AT_RF_099
+@AT_RF_099_FMSCore
+Scenario: TSR - BTII170059
+
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_RF_099_FMSCore
+And User_608 clicks on the WIFAK_Application first link
+And User_608 clicks on the WIFAK_Application second link
+And User_608 clicks on the Application for financial facility link
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 select the application for dropdown as new facility
+And User_608 enter the CIF No in main info tab
+And User_608 enter the facility type in main info tab
+And User_608 enter the country of financing in main info tab
+And User_608 enter the facility rating in main info tab
+And User_608 clicks on the additional details tab
+And User_608 enter the total value in additional info tab
+And User_608 enter the expire date in additional info tab
+And User_608 clicks the limit details tab
+And User_608 clicks the add new record button in limit details tab
+And User_608 enter the product class details
+And User_608 clicks on the product class add button
+And User_608 validate visibility of Collateral details button under limit details tab
+And User_608 move to the Document details tab
+And User_608 enter the Solicitor Name
+And User_608 enter the Estimator Name
+And User_608 clicks the save button
+And User_608 clicks on the validate button
+Then User_608 clicks the Approve Level1 menu under Application for financial facilities
+And User_608 get the test data for test case AT_RF_099_FMSCore
+And User_608 enter the reference code in Approve level1
+And User_608 double click on the retrieved reference code in Approve level1
+And User_608 select the Approve level1 decision as Approve
+When User_608 clicks on the Approve level1 submit button
+Then User_608 clicks the Approve Level2 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level2
+And User_608 double click on the retrieved reference code in Approve level2
+And User_608 select the Approve level2 decision as Approve
+When User_608 clicks on the Approve level2 submit button
+Then User_608 clicks the Approve Level3 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level3
+And User_608 double click on the retrieved reference code in Approve level3
+And User_608 select the Approve level3 decision as Approve
+When User_608 clicks on the Approve level3 submit button
+
+
+# No data available in FMSCore
+@AT_RF_100
+Scenario: TSR-AMANAUPG170045
+
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_RF_100
+And User_608 clicks on the WIFAK_Application first link
+And User_608 clicks on the WIFAK_Application second link
+And User_608 clicks on the Application for financial facility link
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 select the application for dropdown as decrease in main screen
+And User_608 enter the input as Existing Facility Ref in main screen
+And User_608 enter the facility rating in main info tab
+And User_608 clicks on the additional details tab
+And User_608 enter the total value under additional info tab
+And User_608 validate the finance amount should be decresed based on total value
+And User_608 enter the expire date in additional info tab
+And User_608 clicks the limit details tab
+And User_608 validate the Facility value and CV value should be changed same as decreased finance amount under limit details
+And User_608 double click on the product class under limit details
+And User_608 click the clean flag under product calss in limit details tab
+And User_608 click the edit button under product class in limit details tab
+And User_608 move to the Document details tab
+And User_608 enter the Solicitor Name
+And User_608 enter the Estimator Name
+And User_608 clicks the save button
+And User_608 clicks on the validate button
+Then User_608 clicks the Approve Level1 menu under Application for financial facilities
+And User_608 get the test data for test case AT_RF_100
+And User_608 enter the reference code in Approve level1
+And User_608 double click on the retrieved reference code in Approve level1
+And User_608 select the Approve level1 decision as Approve
+When User_608 clicks on the Approve level1 submit button
+Then User_608 clicks the Approve Level2 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level2
+And User_608 double click on the retrieved reference code in Approve level2
+And User_608 select the Approve level2 decision as Approve
+When User_608 clicks on the Approve level2 submit button
+Then User_608 clicks the Approve Level3 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level3
+And User_608 double click on the retrieved reference code in Approve level3
+And User_608 select the Approve level3 decision as Approve
+When User_608 clicks on the Approve level3 submit button
+
+
+@AT_RF_101
+@AT_RF_101_FMSParam
+Scenario: TSR-AMANAUPG170107
+
+Given navigate to FMS param application and login with valid credentials
+And User_608 get the test data for test case AT_RF_101_FMSParam
+And User_608 clicks on the Parameter module in FMS Param
+And User_608 clicks on the Document checklist feature
+And User_608 clicks on the update after approve menu in Document checklist
+And User_608 retrive the one data in update after approve in Document checklist
+And User_608 click the add new button under update after approve in Document checklist
+And User_608 add the new record under Document details in update after approve
+And User_608 clicks on the update button under the update after approve in Document checklist
+And User_608 move to the approve menu under Document checklist
+And User_608 retrive the first data in approve under Document checklist
+And User_608 clicks on the Approve button under approve in Document checklist
+And User_608 clicks on the Facility Type feature
+And User_608 clicks on the update after approve menu in Facility type
+And User_608 enter the code value in update after approve menu
+And User_608 double click on the retrieved data in update after approve menu
+And User_608 clicks on the Document management tab in update after approve menu
+And User_608 check the Application creation checkbox under Document management tab
+When User_608 clicks on the Update button under update after approve menu in Facility type
+And User_608 after the update go to the Approve menu
+And User_608 enter the code value in Approve menu
+And User_608 double click on the retrieved data in Approve menu
+When User_608 clicks on the Approve button in Approve menu under Facility Type
+
+
+@AT_RF_101
+@AT_RF_101_FMSCore
+Scenario: TSR-AMANAUPG170107
+
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_RF_101_FMSCore
+And User_608 clicks on the WIFAK_Application first link
+And User_608 clicks on the WIFAK_Application second link
+And User_608 clicks on the Application for financial facility link
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 select the application for dropdown as new facility
+And User_608 enter the CIF No in main info tab
+And User_608 enter the facility type in main info tab
+And User_608 enter the country of financing in main info tab
+And User_608 enter the facility rating in main info tab
+And User_608 clicks on the additional details tab
+And User_608 enter the total value in additional info tab
+And User_608 enter the expire date in additional info tab
+And User_608 clicks the limit details tab
+And User_608 clicks the add new record button in limit details tab
+And User_608 enter the product class details
+And User_608 clicks on the product class add button
+And User_608 clicks on the document checklist button under limit details
+And User_608 clicks on the add new button under document checklist
+And User_608 give the Document Code under document checklist
+And User_608 give the Line No under document checklist
+And User_608 click the Ok button under document checklist
+And User_608 move to the Document details tab
+And User_608 enter the Solicitor Name
+And User_608 enter the Estimator Name
+And User_608 clicks the save button
+And User_608 clicks on the validate button
+Then User_608 clicks the Approve Level1 menu under Application for financial facilities
+And User_608 get the test data for test case AT_RF_101_FMSCore
+And User_608 enter the reference code in Approve level1
+And User_608 double click on the retrieved reference code in Approve level1
+And User_608 select the Approve level1 decision as Approve
+When User_608 clicks on the Approve level1 submit button
+Then User_608 clicks the Approve Level2 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level2
+And User_608 double click on the retrieved reference code in Approve level2
+And User_608 select the Approve level2 decision as Approve
+When User_608 clicks on the Approve level2 submit button
+Then User_608 clicks the Approve Level3 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level3
+And User_608 double click on the retrieved reference code in Approve level3
+And User_608 select the Approve level3 decision as Approve
+When User_608 clicks on the Approve level3 submit button
+
+
+
+@AT_RF_102
+Scenario: TSR-AMANAUPG170105
+
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_RF_102
+And User_608 clicks on the WIFAK_Application first link
+And User_608 clicks on the WIFAK_Application second link
+And User_608 clicks on the Application for financial facility link
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 select the application for dropdown as new facility
+And User_608 enter the CIF No in main info tab
+And User_608 enter the facility type in main info tab
+And User_608 enter the country of financing in main info tab
+And User_608 enter the facility rating in main info tab
+And User_608 clicks on the additional details tab
+And User_608 enter the total value in additional info tab
+And User_608 enter the expire date in additional info tab
+And User_608 clicks the limit details tab
+And User_608 clicks the add new record button in limit details tab
+And User_608 select the Item in limit Details
+And User_608 select the Maturity date in limit Details
+And User_608 enter the Margin rate in limit Details
+
+
+
+
+
+
 #Sprint 5
 @AT_RF_157
 Scenario: TSR - AMANA180702
@@ -241,10 +503,50 @@ And User_608 verify the Status Details tab User Name in main screen under Draw D
 
 
 
+@AT_RF_158
+@AT_RF_158_Param
+Scenario: TSR - AIBBI180226
+
+Given navigate to FMS param application and login with valid credentials
+And User_608 get the test data for test case AT_RF_158_Param
+And User_608 clicks on the Parameter module in FMS Param
+And User_608 clicks on the Collateral type module
+And User_608 clicks on the Maintanance screen under Collateral type
+And User_608 enter the code under Collateral Type main screen
+And User_608 enter the Brief description under Collateral Type main screen
+And User_608 enter the Long description under Collateral Type main screen
+And User_608 select the Asset type as cash under Collateral Type main screen
+When User_608 clicks on the save button under Collateral Type main screen
+And User_608 clicks on the Approve screen under Collateral Type
+And User_608 search the code under Collateral Type approve screen
+And User_608 double click on the searched result under Collateral Type approve screen
+When User_608 clicks on the Approve button under Collateral Type approve screen
 
 
+@AT_RF_158
+@AT_RF_158_Core
+Scenario: TSR - AIBBI180226
 
-
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_RF_158_Core
+And User_608 click on the Collateral Management feature
+And User_608 click on the Maintanace screen under Collateral Management
+And User_608 enter the Collateral type under main information in Collateral Management main Screen
+And User_608 give the valid from date under main information in Collateral Management main Screen
+And User_608 give the valid to date under main information in Collateral Management main Screen
+And User_608 enter the Collateral currency under main information in Collateral Management main Screen
+And User_608 enter the brief description under main information in Collateral Management main Screen
+And User_608 enter the long description under main information in Collateral Management main Screen
+And User_608 move to the Collateral cash details tab in Collateral Management main Screen
+And User_608 click the add new icon under Collateral cash details tab
+And User_608 click the additional reference lookup under Collateral cash details tab
+And User_608 select the any cy value under additional reference lookup
+And User_608 enter the amount value under Collateral cash details tab
+When User_608 click the save button under Collateral Management main Screen
+And User_608 move to the Approve screen under Collateral Management
+And User_608 click the clear button under approve screen in Collateral Management
+And User_608 double click on the first row in approve screen
+When User_608 click the approve button under Collateral Management approve screen
 
 
 
@@ -319,7 +621,7 @@ And User_608 check the Final Approval flag
 And User_608 check the Create Active Facility If Within Limits flag
 And User_608 Check the Automatically Approve Facility If Within Limits flag
 And User_608 check the Issue Facility Offer flag
-When User_608 clicks on the Update button
+When User_608 clicks on the Update button under update after approve menu in Facility type
 And User_608 after the update go to the Approve menu
 And User_608 enter the code value in Approve menu
 And User_608 double click on the retrieved data in Approve menu

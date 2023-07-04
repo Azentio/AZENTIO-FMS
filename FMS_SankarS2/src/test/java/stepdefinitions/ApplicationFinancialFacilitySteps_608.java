@@ -99,9 +99,53 @@ public class ApplicationFinancialFacilitySteps_608 {
 	
 //  @AT_AFF_098_FMS_Core
 	@And("^get the test data for test case AT_AFF_098_FMSCore$")
-	public void get_the_test_data_for_test_case_AT_AFF_098fmscore() throws Throwable {
+	public void user_get_the_test_data_for_test_case_AT_AFF_098fmscore() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_AFF_098");
 	}
+	
+//	@AT_RF_099_FMSParam
+	@And("^User_608 get the test data for test case AT_RF_099_FMSParam$")
+    public void user_get_the_test_data_for_test_case_AT_RF_099fmsparam() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_099");
+    }
+	
+//	@AT_RF_099_FMSCore
+    @And("^User_608 get the test data for test case AT_RF_099_FMSCore$")
+    public void user_get_the_test_data_for_test_case_AT_RF_099fmscore() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_099");
+    }
+    
+    
+//  @AT_RF_100
+    @And("^User_608 get the test data for test case AT_RF_100$")
+    public void user_get_the_test_data_for_test_case_AT_RF_100() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_100");
+    }
+    
+//	@AT_RF_101_FMSParam
+	@And("^User_608 get the test data for test case AT_RF_101_FMSParam$")
+    public void user_get_the_test_data_for_test_case_AT_RF_101fmsparam() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_101");
+    }
+	
+//  @AT_RF_101_FMSCore
+    @And("^User_608 get the test data for test case AT_RF_101_FMSCore$")
+    public void user_get_the_test_data_for_test_case_AT_RF_101fmscore() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS01_582480");
+    }
+    
+    
+//  @AT_RF_102
+    @And("^User_608 get the test data for test case AT_RF_102$")
+    public void user_get_the_test_data_for_test_case_AT_RF_102() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_102");
+    }
+    
+    
+    
+    
+	
+	
 	
 //  @AT_RF_014_FMSCore
     @And("^User_608 get the test data for test case AT_RF_014_FMSCore$")
@@ -187,8 +231,8 @@ public class ApplicationFinancialFacilitySteps_608 {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_DDR_024");
     }
 	
-	
-	
+    
+
 	
 	
 	
@@ -1183,8 +1227,8 @@ public class ApplicationFinancialFacilitySteps_608 {
       	}
      }
      
-     @When("^User_608 clicks on the Update button$")
-     public void user_clicks_on_the_update_button() throws Throwable {
+     @When("^User_608 clicks on the Update button under update after approve menu in Facility type$")
+     public void user_clicks_on_the_update_button_under_update_after_approve_menu_in_facility_type() throws Throwable {
      	for (int i = 0; i <= 300; i++) {
  			try {
  				javaScriptHelper.scrollIntoView(facilityTypeObj608.updateAfterApproveUpdateBtn_608());
@@ -2041,26 +2085,26 @@ public class ApplicationFinancialFacilitySteps_608 {
 	    }
 
 	    @And("User_608 click the Retrieve button in List menu under WIFAK Draw down request")
-	    public void user_click_the_retrieve_button_in_list_menu_under_wifak_draw_down_request() throws Throwable{
+	    public void user_click_the_retrieve_button_in_list_menu_under_wifak_draw_down_request() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestListMenurRetrieveBtn_608());
 	    	applicationFinancialFacilityObj608.wifakDrawDownRequestListMenurRetrieveBtn_608().click();
 	    }
 
 	    
 	    @Then("User_608 click the Reverse menu under WIFAK Draw Down request")
-	    public void user_click_the_reverse_menu_under_wifak_draw_down_request() {
+	    public void user_click_the_reverse_menu_under_wifak_draw_down_request() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestReverseMenu_608());
 	    	applicationFinancialFacilityObj608.wifakDrawDownRequestReverseMenu_608().click();
 	    }
 
 	    @And("User_608 enter the DD code in Reverse menu search grid under WIFAK Draw down request")
-	    public void user_enter_the_dd_code_in_reverse_menu_search_grid_under_wifak_draw_down_request() {
+	    public void user_enter_the_dd_code_in_reverse_menu_search_grid_under_wifak_draw_down_request() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestReverseMenuSearchgridCodeInput_608());
 	    	applicationFinancialFacilityObj608.wifakDrawDownRequestReverseMenuSearchgridCodeInput_608().sendKeys(testData.get("DD Code"),Keys.ENTER);
 	    }
 
 	    @And("User_608 double click the DD code in Reverse menu search grid under WIFAK Draw down request")
-	    public void user_double_click_the_dd_code_in_reverse_menu_search_grid_under_wifak_draw_down_request() {
+	    public void user_double_click_the_dd_code_in_reverse_menu_search_grid_under_wifak_draw_down_request() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestReverseMenuSearchgridCodeRow1_608());
 	    	clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.wifakDrawDownRequestReverseMenuSearchgridCodeRow1_608());
 	    	for(int i = 0; i <= 500; i++) {
@@ -2075,7 +2119,7 @@ public class ApplicationFinancialFacilitySteps_608 {
 	    }
 
 	    @When("User_608 click the Reverse button in Reverse menu under WIFAK Draw down request")
-	    public void user_click_the_reverse_button_in_reverse_menu_under_wifak_draw_down_request() {
+	    public void user_click_the_reverse_button_in_reverse_menu_under_wifak_draw_down_request() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestReverseMenuReverseBtn_608());
 	    	applicationFinancialFacilityObj608.wifakDrawDownRequestReverseMenuReverseBtn_608().click();
 	    	
@@ -2096,19 +2140,19 @@ public class ApplicationFinancialFacilitySteps_608 {
 	    
 	    
 	    @Then("User_608 click the Approve\\Reject Reverse menu under WIFAK Draw Down request")
-	    public void user_click_the_approve_reject_reverse_menu_under_wifak_draw_down_request() {
+	    public void user_click_the_approve_reject_reverse_menu_under_wifak_draw_down_request() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectReverseMenu_608());
 	    	applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectReverseMenu_608().click();
 	    }
 
 	    @And("User_608 enter the DD code in Approve\\Reject Reverse menu search grid under WIFAK Draw down request")
-	    public void user_enter_the_dd_code_in_approve_reject_reverse_menu_search_grid_under_wifak_draw_down_request() {
+	    public void user_enter_the_dd_code_in_approve_reject_reverse_menu_search_grid_under_wifak_draw_down_request() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectReverseMenuSearchgridCodeInput_608());
 	    	applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectReverseMenuSearchgridCodeInput_608().sendKeys(testData.get("DD Code"),Keys.ENTER);
 	    }
 
 	    @And("User_608 double click the DD code in Approve\\Reject Reverse menu search grid under WIFAK Draw down request")
-	    public void user_double_click_the_dd_code_in_approve_reject_reverse_menu_search_grid_under_wifak_draw_down_request() {
+	    public void user_double_click_the_dd_code_in_approve_reject_reverse_menu_search_grid_under_wifak_draw_down_request() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectReverseMenuSearchgridCodeRow1_608());
 	    	clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectReverseMenuSearchgridCodeRow1_608());
 	    	for(int i = 0; i <= 500; i++) {
@@ -2123,7 +2167,7 @@ public class ApplicationFinancialFacilitySteps_608 {
 	    }
 
 	    @When("User_608 click the Approve Reverse button in Approve\\Reject Reverse menu under WIFAK Draw down request")
-	    public void user_click_the_approve_reverse_button_in_approve_reject_reverse_menu_under_wifak_draw_down_request() {
+	    public void user_click_the_approve_reverse_button_in_approve_reject_reverse_menu_under_wifak_draw_down_request() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectReverseApproveReverseBtn_608());
 	    	applicationFinancialFacilityObj608.wifakDrawDownRequestApproveOrRejectReverseApproveReverseBtn_608().click();
 	        
@@ -2143,7 +2187,83 @@ public class ApplicationFinancialFacilitySteps_608 {
 	    }
 	    
 	    
+	    @Then("User_608 click the Update After Approve menu under WIFAK Draw Down request")
+	    public void user_click_the_update_after_approve_menu_under_wifak_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveMenu_608());
+	    	applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveMenu_608().click();
+	    }
+
+	    @And("User_608 click the clear button in Update After Approve under WIFAK Draw Down request")
+	    public void user_click_the_clear_button_in_update_after_approve_under_wifak_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveClearBtn_608());
+	    	applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveClearBtn_608().click();
+	    }
+
+	    @And("User_608 double click the any one record in Update After Approve under WIFAK Draw Down request")
+	    public void user_double_click_the_any_one_record_in_update_after_approve_under_wifak_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveMenuSearchgridCodeRow1_608());
+	        clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveMenuSearchgridCodeRow1_608());
+	        for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveMenuCodeInput_608().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+	    	}
+	    }
+
+	    @And("User_608 click the Additional Details tab in Update After Approve under WIFAK Draw Down request")
+	    public void user_click_the_additional_details_tab_in_update_after_approve_under_wifak_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveMenuAdditionalDetailsTab_608());
+	    	applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveMenuAdditionalDetailsTab_608().click();
+	    }
 	    
+	    @And("User_608 edit the FC Amount in Additional Details tab under Update After Approve in WIFAK Draw Down request")
+	    public void user_edit_the_fc_amount_in_additional_details_tab_under_update_after_approve_in_wifak_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveAdditionalDetailsTabFCAmtInput_608());
+	    	WebElement FCAmtInput_608 = applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveAdditionalDetailsTabFCAmtInput_608();
+	    	FCAmtInput_608.sendKeys(testData.get("FC Amount"),Keys.TAB);
+	    	for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(FCAmtInput_608.getAttribute("prevvalue").equals(testData.get("FC Amount"))) {
+						break;
+					}
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+	    	}
+	    }
+
+	    @When("User_608 click the Save button in Update After Approve under WIFAK Draw Down request")
+	    public void user_click_the_save_button_in_update_after_approve_under_wifak_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveMenuSaveBtn_608());
+	    	applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveMenuSaveBtn_608().click();
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
+	    	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
+	    	
+	    	for (int i = 0; i < 2000; i++) {
+				try {
+			    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+			    	break;
+				} catch (Exception e) {
+					if (i==1999) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}	    	
+	    	// close the send alert pop-up box
+	    	for (int i = 0; i < 200; i++) {
+				try {
+			    	applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveSendAlertDismissBtn_608().click();
+			    	break;
+				} catch (Exception e) {
+					
+				}
+			}	        
+	    }
 	    
 	    
 	    
@@ -2177,6 +2297,229 @@ public class ApplicationFinancialFacilitySteps_608 {
     	requestForFinancingObj608.additionalTabDownPayToVendor_608().sendKeys(Keys.TAB);
     }
 	
+    
+//  @AT_RF_100
+    @And("^User_608 select the application for dropdown as decrease in main screen$")
+    public void user_select_the_application_for_dropdown_as_decrease_in_main_screen() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainApplicationForDropdown_608());
+		dropDownHelper.SelectUsingVisibleText(applicationFinancialFacilityObj608.mainApplicationForDropdown_608(), testData.get("Application For"));
+    }
+
+    @And("^User_608 enter the input as Existing Facility Ref in main screen$")
+    public void user_enter_the_input_as_existing_facility_ref_in_main_screen() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainExistingFacilityRef_608());
+//    	applicationFinancialFacilityObj608.mainExistingFacilityRef().sendKeys(testData.get("Facility Ref"),Keys.TAB);
+    	applicationFinancialFacilityObj608.mainExistingFacilityRef_608().sendKeys("1390",Keys.TAB);
+    	
+    	for(int i = 0; i <= 300; i++) {
+    		try {
+				if(!(applicationFinancialFacilityObj608.mainExistingFacilityRef_608().getAttribute("readonly").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}    	
+
+    }
+    
+    @And("^User_608 enter the total value under additional info tab$")
+    public void user_enter_the_total_value_under_additional_info_tab() throws Throwable {    	
+    	// First We get the Finance amount without total amount
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.additionalTabFinanceAmount_608());
+    	String beforeFinanceAmount = applicationFinancialFacilityObj608.additionalTabFinanceAmount_608().getAttribute("prevvalue");
+//    	System.out.println("Before Finance Amount: "+ beforeFinanceAmount);
+    	fmsTransactionsExcelData.updateTestData(testData.get("DataSet ID"), "Finance Amount", beforeFinanceAmount);
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainAdditionalTabTotalValue_608());
+		applicationFinancialFacilityObj608.mainAdditionalTabTotalValue_608().sendKeys(testData.get("Total value"),Keys.TAB);
+		Thread.sleep(3000);
+    }
+
+    @And("^User_608 validate the finance amount should be decresed based on total value$")
+    public void user_validate_the_finance_amount_should_be_decresed_based_on_total_value() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata(testData.get("DataSet ID"));
+    	String financeAmount = testData.get("Finance Amount");
+    	String totalValue = testData.get("Total value");
+    	
+    	String afterFinanceAmount = applicationFinancialFacilityObj608.additionalTabFinanceAmount_608().getAttribute("prevvalue");
+    	String[] splitFinaceAmount  = afterFinanceAmount.split("[.]");
+    	String finalFinaceAmount = splitFinaceAmount[0].replace(",", "");
+//    	System.out.println("Finance Amount: "+finalFinaceAmount);
+//    	System.out.println("After Finance Amount: "+afterFinanceAmount);
+    	
+    	int cvValue = Integer.parseInt(financeAmount)-Integer.parseInt(totalValue);
+    	String cvValueText = String.valueOf(cvValue);
+    	fmsTransactionsExcelData.updateTestData(testData.get("DataSet ID"), "CV Value", cvValueText);
+    	
+    	Assert.assertEquals(cvValueText, finalFinaceAmount);
+    	
+    }
+
+    @And("^User_608 validate the Facility value and CV value should be changed same as decreased finance amount under limit details$")
+    public void user_validate_the_facility_value_and_cv_value_should_be_changed_same_as_decreased_finance_amount_under_limit_details() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsProductFacilityValue_608());
+    	String facilityValue = applicationFinancialFacilityObj608.limitDetailsProductFacilityValue_608().getAttribute("title");
+    	String[] splitFacilityValue  = facilityValue.split("[.]");
+    	String finalFacilityValue = splitFacilityValue[0].replace(",", "");
+    	
+    	testData = fmsTransactionsExcelData.getTestdata("DS01_582426");
+    	Assert.assertEquals(testData.get("CV Value"), finalFacilityValue);
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsProductCVValue_608());
+    	String CVValue = applicationFinancialFacilityObj608.limitDetailsProductCVValue_608().getAttribute("title");
+    	String[] splitCVValue  = CVValue.split("[.]");
+    	String finalCVValue = splitCVValue[0].replace(",", "");
+    	
+    	Assert.assertEquals(testData.get("CV Value"), finalCVValue);
+    	
+    }
+
+    @And("^User_608 double click on the product class under limit details$")
+    public void user_double_click_on_the_product_class_under_limit_details() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsProductFacilityValue_608());
+    	clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.limitDetailsProductFacilityValue_608());
+    }
+    
+    @And("^User_608 click the clean flag under product calss in limit details tab$")
+    public void user_click_the_clean_flag_under_product_calss_in_limit_details_tab() throws Throwable {
+    	// check the clean flag
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsNewRecordCleanFlag_608());
+        WebElement cleanFlag = applicationFinancialFacilityObj608.limitDetailsNewRecordCleanFlag_608();
+        if(!(cleanFlag.isSelected())) {
+        	cleanFlag.click();
+    	}
+    }
+    
+    @And("^User_608 click the edit button under product class in limit details tab$")
+    public void user_click_the_edit_button_under_product_class_in_limit_details_tab() throws Throwable {
+    	
+    	for (int i = 0; i <= 300; i++) {
+        	try {
+        		javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.limitDetailsProductEditBtn_608());
+    				break;
+    			} catch (Exception e) {
+    				if (i == 300) {
+    					Assert.fail(e.getMessage());
+    				}
+    			}
+    	}
+        waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsProductEditBtn_608());
+        applicationFinancialFacilityObj608.limitDetailsProductEditBtn_608().click();
+    }
+    
+    
+    
+//  @AT_RF_101_FMSCore
+    @And("^User_608 clicks on the document checklist button under limit details$")
+    public void user_clicks_on_the_document_checklist_button_under_limit_details() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsDocumentChecklistBtn_608());
+    	applicationFinancialFacilityObj608.limitDetailsDocumentChecklistBtn_608().click();
+    }
+
+    @And("^User_608 clicks on the add new button under document checklist$")
+    public void user_clicks_on_the_add_new_button_under_document_checklist() throws Throwable {
+    	// delete the second row 
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsdocumentChecklistSecondRow_608());
+    	applicationFinancialFacilityObj608.limitDetailsdocumentChecklistSecondRow_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsDocumentChecklistDeleteBtn_608());
+    	applicationFinancialFacilityObj608.limitDetailsDocumentChecklistDeleteBtn_608().click();    	
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsDocumentChecklistAddBtn_608());
+    	applicationFinancialFacilityObj608.limitDetailsDocumentChecklistAddBtn_608().click();    	
+    }
+
+    @And("^User_608 give the Document Code under document checklist$")
+    public void user_give_the_document_code_under_document_checklist() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsdocumentChecklistSecondRow_608());
+    	applicationFinancialFacilityObj608.limitDetailsdocumentChecklistSecondRow_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsDocumentChecklistDocumentCodeInput_608());
+//    	applicationFinancialFacilityObj608.limitDetailsDocumentChecklistDocumentCodeInput_608().sendKeys("3455");
+    	applicationFinancialFacilityObj608.limitDetailsDocumentChecklistDocumentCodeInput_608().sendKeys(testData.get("Document Code"));
+    	applicationFinancialFacilityObj608.limitDetailsDocumentChecklistDocumentCodeInput_608().sendKeys(Keys.TAB);
+    	
+    }
+
+    @And("^User_608 give the Line No under document checklist$")
+    public void user_give_the_line_no_under_document_checklist() throws Throwable {    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsDocumentChecklistLineNoInput_608());
+    	applicationFinancialFacilityObj608.limitDetailsDocumentChecklistLineNoInput_608().sendKeys(testData.get("Line No"));
+    	applicationFinancialFacilityObj608.limitDetailsDocumentChecklistLineNoInput_608().sendKeys(Keys.TAB); 
+    	for(int i = 0; i <= 300; i++) {
+    		try {
+				if(!(applicationFinancialFacilityObj608.limitDetailsDocumentChecklistLineNoInput_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}
+    }
+
+    @And("^User_608 click the Ok button under document checklist$")
+    public void user_click_the_ok_button_under_document_checklist() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsDocumentChecklistOkBtn_608());
+    	applicationFinancialFacilityObj608.limitDetailsDocumentChecklistOkBtn_608().click();
+    }
+    
+    
+//  @AT_RF_102
+    @And("^User_608 select the Item in limit Details$")
+    public void user_select_the_item_in_limit_details() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsItem_608());
+//    	dropDownHelper.SelectUsingVisibleText(applicationFinancialFacilityObj608.limitDetailsItem(), "Import L/C");
+    	dropDownHelper.SelectUsingVisibleText(applicationFinancialFacilityObj608.limitDetailsItem_608(), testData.get("Limit Details Item"));
+    	
+    	for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(applicationFinancialFacilityObj608.limitDetailsNewRecordProductClass_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}
+    }
+
+    @And("^User_608 select the Maturity date in limit Details$")
+    public void user_select_the_maturity_date_in_limit_details() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsMaturityDateCalender_608());
+    	applicationFinancialFacilityObj608.limitDetailsMaturityDateCalender_608().click();
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsItem_608());
+    	applicationFinancialFacilityObj608.limitDetailsMaturityDate_608().click();
+    	
+    	// check the Clean flag
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsNewRecordCleanFlag_608());
+        WebElement cleanFlag = applicationFinancialFacilityObj608.limitDetailsNewRecordCleanFlag_608();
+        if(!(cleanFlag.isSelected())) {
+        	cleanFlag.click();
+    	}
+    }
+
+    @And("^User_608 enter the Margin rate in limit Details$")
+    public void user_enter_the_margin_rate_in_limit_details() throws Throwable {
+    	for (int i = 0; i <= 300; i++) {
+        	try {
+        		javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.limitDetailsMarginRateInput_608());
+    				break;
+    			} catch (Exception e) {
+    				if (i == 300) {
+    					Assert.fail(e.getMessage());
+    				}
+    			}
+    	}
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsMarginRateInput_608());
+//    	applicationFinancialFacilityObj608.limitDetailsMarginRateInput().sendKeys("2");
+    	applicationFinancialFacilityObj608.limitDetailsMarginRateInput_608().sendKeys(testData.get("Margin Rate"));
+    	applicationFinancialFacilityObj608.limitDetailsMarginRateInput_608().sendKeys(Keys.TAB);
+        
+    }
+    
+    
+
+    
 	
 
 }

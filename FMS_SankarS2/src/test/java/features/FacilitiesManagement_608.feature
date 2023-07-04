@@ -276,7 +276,7 @@ And User_608 check the Document Validation flag
 And User_608 check the Final Approval flag
 And User_608 uncheck the Create Active Facility If Within Limits flag
 And User_608 uncheck the Automatically Approve Facility If Within Limits flag
-When User_608 clicks on the Update button
+When User_608 clicks on the Update button under update after approve menu in Facility type
 And User_608 after the update go to the Approve menu
 And User_608 enter the code value in Approve menu
 And User_608 double click on the retrieved data in Approve menu

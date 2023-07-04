@@ -233,6 +233,130 @@ public class RequestForFinancingObj_608 {
 		return limit_details_fund_transfer_rate_input;
 	}
 	
+//	@AT_RF_098_User_VAK
+	@FindBy(xpath = "//a[@id='WIFT002MT']")
+	private WebElement wifak_application_child_approval_committee_recommend_menu;
+	public WebElement wifakApprovalCommitteeRecommendationsMenu_608() {
+		return wifak_application_child_approval_committee_recommend_menu;
+	}
+	
+	@FindBy(xpath = "//*[@id='applicationFacilityGridTbl_Id_WIFT002MT_pager_left']/table/tbody/tr/td[7]")
+	private WebElement wifak_approval_committee_clear_btn;
+	public WebElement wifakApprovalCommitteeClearBtn() {
+		return wifak_approval_committee_clear_btn;
+	}
+	
+	@FindBy(xpath = "//tr[@id='2']")
+	private WebElement wifak_approval_committee_select_row;
+	public WebElement wifakApprovalCommitteeSelectRow() {
+		return wifak_approval_committee_select_row;
+	}
+	
+	@FindBy(xpath = "//input[@id='code_WIFT002MT']")
+	private WebElement wifak_approval_committee_recommend_code;
+	public WebElement wifakApprovalCommitteeRecommendationsCode() {
+		return wifak_approval_committee_recommend_code;
+	}
+	
+	@FindBy(xpath = "//button[@id='applicationfacility_recommend_btn_WIFT002MT']")
+	private WebElement wifak_approval_committee_recommendations_recommend_btn;
+	public WebElement wifakApprovalCommitteeRecommendationsRecommendBtn_608() {
+		return wifak_approval_committee_recommendations_recommend_btn;
+	}
+	
+	@FindBy(xpath = "//span[text()='OK']")
+	private WebElement wifak_approval_committee_recommendations_user_popup_OK_btn;
+	public WebElement wifakApprovalCommitteeRecommendationsUserPopupOkBtn_608() {
+		return wifak_approval_committee_recommendations_user_popup_OK_btn;
+	}	
+	
+	@FindBy(xpath = "//td[text()='VAK']")
+	private WebElement wifak_approval_committee_recommend_by_label;
+	public WebElement wifakApprovalCommitteeRecommendByLabel_VAK() {
+		return wifak_approval_committee_recommend_by_label;
+	}
+	
+	@FindBy(xpath = "//select[@gridid='ApplicationFacilityRecommendationGrid_WIFT002MT']")
+	private WebElement wifak_approval_committee_recommendation_dropdown;
+	public WebElement wifakApprovalCommitteeRecommendationDropdown_608() {
+		return wifak_approval_committee_recommendation_dropdown;
+	}
+		
+	@FindBy(xpath = "//*[@id='23_fmsApplRecommendVO.RECOMMENDATION_ApplicationFacilityRecommendationGrid_WIFT002MT']/option[1]")
+	private WebElement wifak_approval_committee_recommendation_dropdown_option;
+	public WebElement wifakApprovalCommitteeRecommendationDropdownOption_608() {
+		return wifak_approval_committee_recommendation_dropdown_option;
+	}
+	
+	@FindBy(xpath = "//*[@id='23_fmsApplRecommendVO.COMMENT_CODE_spanLookup_ApplicationFacilityRecommendationGrid_WIFT002MT']/span")
+	private WebElement wifak_approval_committee_comment_code_lookup;
+	public WebElement approvalCommitteeCommentCodeLookup_608() {
+		return wifak_approval_committee_comment_code_lookup;
+	}
+	
+	@FindBy(xpath = "//*[@id='td_gridtab_23_fmsApplRecommendVO_COMMENT_CODE_ApplicationFacilityRecommendationGrid_WIFT002MT_1_CODE']")
+	private WebElement wifak_approval_committee_comment_code_lookup_first_row;
+	public WebElement wifakApprovalCommitteeCommentCodeLookupFirstRow_608() {
+		return wifak_approval_committee_comment_code_lookup_first_row;
+	}
+	
+	@FindBy(xpath = "//button[@id='more_comments_btn_WIFT002MT']")
+	private WebElement wifak_approval_committee_more_comments_btn;
+	public WebElement wifakApprovalCommitteeMoreCommentsBtn_608() {
+		return wifak_approval_committee_more_comments_btn;
+	}
+	
+	@FindBy(xpath = "//textarea[@id='more_comments_WIFT002MT']")
+	private WebElement wifak_approval_committee_more_comments_input;
+	public WebElement wifakApprovalCommitteeMoreCommentsInput_608() {
+		return wifak_approval_committee_more_comments_input;
+	}
+	
+	@FindBy(xpath = "(//span[text()='OK'])[2]")
+	private WebElement wifak_approval_committee_more_comments_Ok_btn;
+	public WebElement wifakApprovalCommitteeMoreCommentsOkBtn_608() {
+		return wifak_approval_committee_more_comments_Ok_btn;
+	}
+	
+	@FindBy(xpath = "(//span[text()='OK'])[1]")
+	private WebElement wifak_approval_committee_Ok_btn;
+	public WebElement wifakApprovalCommitteeOkBtn_608() {
+		return wifak_approval_committee_Ok_btn;
+	}
+
+	
+//	@AT_RF_098_User_608
+	@FindBy(xpath = "//a[@id='infoBarSearchButton_WIFT001MT']")
+	private WebElement application_financial_facility_search_btn;
+	public WebElement applicationFinancialFacilitySearchBtn_608() {
+		return application_financial_facility_search_btn;
+	}
+	
+	@FindBy(xpath = "//button[@id='applicationfacility_approvalcommittiee_btn_WIFT001MT']")
+	private WebElement application_financial_facility_approval_committiee_btn;
+	public WebElement applicationFinancialFacilityApprovalCommittieeBtn_608() {
+		return application_financial_facility_approval_committiee_btn;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_ApplicationFacilityRecommendationGrid_WIFT001MT_23_fmsApplRecommendVO.RECOMMENDED_BY']")
+	private WebElement application_financial_facility_approval_committiee_recommend_by_label;
+	public WebElement applicationFinancialFacilityApprovalCommittieeRecommendByLabel_608() {
+		return application_financial_facility_approval_committiee_recommend_by_label;
+	}
+	
+	@FindBy(xpath = "//button[@id='more_comments_btn_WIFT001MT']")
+	private WebElement application_financial_facility_approval_committiee_more_comments_btn;
+	public WebElement applicationFinancialFacilityApprovalCommittieeMoreCommentsBtn_608() {
+		return application_financial_facility_approval_committiee_more_comments_btn;
+	}
+	
+	@FindBy(xpath = "//textarea[@id='more_comments_WIFT001MT']")
+	private WebElement application_financial_facility_approval_committiee_more_comments_text;
+	public WebElement applicationFinancialFacilityApprovalCommittieeMoreCommentsText_608() {
+		return application_financial_facility_approval_committiee_more_comments_text;
+	}
+	
+	
 	
 	
 //  @AT_RF_157
@@ -902,6 +1026,274 @@ public class RequestForFinancingObj_608 {
 	private WebElement request_for_financing_approve_level1_down_payment_percent_input;
 	public WebElement requestForFinancingApproveLevel1DownPaymentPercentInput_608() {
 		return request_for_financing_approve_level1_down_payment_percent_input;
+	}
+	
+	
+	
+//	@AT_RF_158_Param - Collateral Type
+	@FindBy(xpath = "//td[text()='Collateral Type']")
+	private WebElement parameter_collateral_type;
+	public WebElement parameterCollateralType_608() {
+		return parameter_collateral_type;
+	}
+	
+	@FindBy(xpath = "//a[@id='P002MT']")
+	private WebElement collateral_type_maintanance;
+	public WebElement collateralTypeMaintanance_608() {
+		return collateral_type_maintanance;
+	}
+	
+	@FindBy(xpath = "//input[@id='txt_code_P002MT']")
+	private WebElement collateral_type_main_code;
+	public WebElement collateralTypeMainCode_608() {
+		return collateral_type_main_code;
+	}
+	
+	@FindBy(xpath = "//input[@id='txt_brief_description_eng_P002MT']")
+	private WebElement collateral_type_main_brief_descrip;
+	public WebElement collateralTypeMainBriefDescrip_608() {
+		return collateral_type_main_brief_descrip;
+	}
+	
+	@FindBy(xpath = "//input[@id='txt_long_description_eng_P002MT']")
+	private WebElement collateral_type_main_long_descrip;
+	public WebElement collateralTypeMainLongDescrip_608() {
+		return collateral_type_main_long_descrip;
+	}
+	
+	@FindBy(xpath = "//select[@id='txt_asset_type_P002MT']")
+	private WebElement collateral_type_main_asset_type_dropdown;
+	public WebElement collateralTypeMainAssetTypeDropdown_608() {
+		return collateral_type_main_asset_type_dropdown;
+	}
+	
+	@FindBy(xpath = "//button[@id='collateralTypeMaint_save_P002MT']")
+	private WebElement collateral_type_main_save_btn;
+	public WebElement collateralTypeMainSaveBtn_608() {
+		return collateral_type_main_save_btn;
+	}
+	
+	@FindBy(xpath = "//a[@id='P002P']")
+	private WebElement collateral_type_approve;
+	public WebElement collateralTypeApprove_608() {
+		return collateral_type_approve;
+	}
+	
+	@FindBy(xpath = "//input[@id='collateralTypeListGridTbl_Id_P002P_gs_fmsColatTypeVo.CODE']")
+	private WebElement collateral_type_approve_code;
+	public WebElement collateralTypeApproveCode_608() {
+		return collateral_type_approve_code;
+	}
+	
+	@FindBy(linkText = "//*[@id='1']")
+	private WebElement collateral_type_approve_code_row1;
+	public WebElement collateralTypeApproveCodeRow1_608() {
+		return collateral_type_approve_code_row1;
+	}
+	
+	@FindBy(xpath = "//button[@id='collateralTypeMaint_approve_P002P']")
+	private WebElement collateral_type_approve_btn;
+	public WebElement collateralTypeApproveBtn_608() {
+		return collateral_type_approve_btn;
+	}
+	
+	
+//	@AT_RF_158_Core
+	@FindBy(xpath = "//td[text()='Collateral Management']")
+	private WebElement FMS_collateral_management;
+	public WebElement FMSCollateralManagement_608() {
+		return FMS_collateral_management;
+	}
+	
+	@FindBy(xpath = "//a[@id='T014MT']")
+	private WebElement collateral_management_maintanance;
+	public WebElement collateralManagementMaintanance_608() {
+		return collateral_management_maintanance;
+	}
+	
+	@FindBy(xpath = "//input[@id='lookuptxt_collateralManagementCollateralType_T014MT']")
+	private WebElement main_info_collateral_type;
+	public WebElement mainInfoCollateralType_608() {
+		return main_info_collateral_type;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmscollateralValidFrom_T014MT']//following-sibling::img")
+	private WebElement main_info_valid_from_date_calender;
+	public WebElement mainInfoValidFromDateCalender_608() {
+		return main_info_valid_from_date_calender;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmscollateralValidFrom_T014MT']")
+	private WebElement main_info_valid_from_date;
+	public WebElement mainInfoValidFromDate_608() {
+		return main_info_valid_from_date;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmscollateralValidTo_T014MT']")
+	private WebElement main_info_valid_to_date;
+	public WebElement mainInfoValidToDate_608() {
+		return main_info_valid_to_date;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmscollateralBriefNameEng_T014MT']")
+	private WebElement main_info_brief_descrip;
+	public WebElement mainInfoBriefDescrip_608() {
+		return main_info_brief_descrip;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmscollateralLongNameEng_T014MT']")
+	private WebElement main_info_long_descrip;
+	public WebElement mainInfoLongDescrip_608() {
+		return main_info_long_descrip;
+	}
+	
+	@FindBy(xpath = "//input[@id='lookuptxt_fmscollateralCurrency_T014MT']")
+	private WebElement main_info_collateral_currency;
+	public WebElement mainInfoCollateralCurrency_608() {
+		return main_info_collateral_currency;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmscollateralCurrency_Brief_Desc_Eng_T014MT']")
+	private WebElement main_info_collateral_currency_label;
+	public WebElement mainInfoCollateralCurrencyLabel_608() {
+		return main_info_collateral_currency_label;
+	}
+	
+	@FindBy(xpath = "//li[@id='collateralManagementCashGuaranteeDetailsTabs_T014MT']")
+	private WebElement collateral_cash_details_tab;
+	public WebElement CollateralCashDetailsTab_608() {
+		return collateral_cash_details_tab;
+	}
+	
+	@FindBy(xpath = "//td[@id='add_CollateralManagementCashGuarantorGrid_T014MT']")
+	private WebElement collateral_cash_details_add_icon;
+	public WebElement CollateralCashDetailsAddIcon_608() {
+		return collateral_cash_details_add_icon;
+	}
+	
+	@FindBy(xpath = "//input[@name='lookupTxt_accAdditionalRef']/following-sibling::span")
+	private WebElement collateral_cash_details_additional_ref_lookup;
+	public WebElement CollateralCashDetailsAdditionalRefLookup_608() {
+		return collateral_cash_details_additional_ref_lookup;
+	}
+	
+	@FindBy(xpath = "//*[@id='1']")
+	private WebElement collateral_cash_details_additional_ref_row1;
+	public WebElement CollateralCashDetailsAdditionalRefRow1_608() {
+		return collateral_cash_details_additional_ref_row1;
+	}
+	
+	@FindBy(xpath = "//*[@id='1']/td[2]")
+	private WebElement collateral_cash_details_additional_ref_cy;
+	public WebElement CollateralCashDetailsAdditionalRefCy_608() {
+		return collateral_cash_details_additional_ref_cy;
+	}
+
+	@FindBy(xpath = "//td[@id='td_CollateralManagementCashGuarantorGrid_T014MT_1_fmsCollateralDetVO.AMOUNT']/div/input")
+	private WebElement collateral_cash_details_amount;
+	public WebElement CollateralCashDetailsAmount_608() {
+		return collateral_cash_details_amount;
+	}
+
+	@FindBy(xpath = "//button[@id='collateralManagement_save_btn_T014MT']")
+	private WebElement collateral_management_maintanance_save_btn;
+	public WebElement collateralManagementMaintananceSaveBtn_608() {
+		return collateral_management_maintanance_save_btn;
+	}
+	
+	@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
+	private WebElement warning_popup_ok_btn;
+	public WebElement warningPopupOkBtn_608() {
+		return warning_popup_ok_btn;
+	}
+	
+	@FindBy(xpath = "//div[text()='Success']")
+	private WebElement success_popup_title;
+	public WebElement successPopupTitle_608() {
+		return success_popup_title;
+	}
+	
+	@FindBy(xpath = "//div[@id='div__popup_path_sol_ok']/div[2]/div")
+	private WebElement collateral_success_popup_msg;
+	public WebElement collateralSuccessPopupMsg_608() {
+		return collateral_success_popup_msg;
+	}
+	
+	
+	@FindBy(xpath = "//span[text()='Send Alert']")
+	private WebElement send_alert_popup;
+	public WebElement sendAlertPopup_608() {
+		return send_alert_popup;
+	}
+	
+	@FindBy(xpath = "//a[@id='dismissbut_T014MT']")
+	private WebElement collateral_send_alert_popup_dismiss_btn;
+	public WebElement collateralSendAlertPopupDismissBtn_608() {
+		return collateral_send_alert_popup_dismiss_btn;
+	}
+	
+	@FindBy(xpath = "//a[@id='T014AP']")
+	private WebElement collateral_management_approve;
+	public WebElement collateralManagementApprove_608() {
+		return collateral_management_approve;
+	}
+	                          
+	@FindBy(xpath = "//input[@name='fmsCollateralVO.CODE']")
+	private WebElement collateral_management_approve_menu_searchgrid_code_input;
+	public WebElement collateralManagementApproveMenuSearchgridCodeInput_608() {		       
+		return collateral_management_approve_menu_searchgrid_code_input;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_collateralManagementGridTbl_Id_T014AP_1_fmsCollateralVO.CODE']")
+	private WebElement collateral_management_approve_menu_searchgrid_row1;
+	public WebElement collateralManagementApproveMenuSearchgridRow1_608() {
+		return collateral_management_approve_menu_searchgrid_row1;
+	}
+	
+	@FindBy(xpath = "//input[@id='collateralCode_T014AP']")
+	private WebElement collateral_management_approve_menu_Code;
+	public WebElement collateralManagementApproveMenuCode_608() {
+		return collateral_management_approve_menu_Code;
+	}
+	
+	
+	@FindBy(xpath = "//*[@id='collateralManagementGridTbl_Id_T014AP_pager_left']/table/tbody/tr/td[7]")
+	private WebElement collateral_management_approve_clear_btn;
+	public WebElement collateralManagementApproveClearBtn_608() {
+		return collateral_management_approve_clear_btn;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_collateralManagementGridTbl_Id_T014AP_1_fmsCollateralVO.CODE']")
+	private WebElement collateral_management_approve_first_row;
+	public WebElement collateralManagementApproveFirstRow_608() {
+		return collateral_management_approve_first_row;
+	}
+	
+	@FindBy(xpath = "//button[@id='collateralManagement_approve_btn_T014AP']")
+	private WebElement collateral_management_approve_btn;
+	public WebElement collateralManagementApproveBtn_608() {
+		return collateral_management_approve_btn;
+	}
+	
+	
+//	@AT_DDR_025
+	// [2968] CIF Already BlackListed, Do You Want To Proceed? BlackList Nbr: 12 ,Blacklist Type : 0-,Source : 0-
+	@FindBy(xpath = "//div[@class='jMsgbox-contentWrap']")
+	private WebElement cif_blaklist_popup_msg ;
+	public WebElement CIFBlacklistPopupMsg_608() {
+		return cif_blaklist_popup_msg;
+	}
+	
+	@FindBy(xpath = "//input[@id='_popup_path_sol_confirm']")
+	private WebElement cif_blaklist_popup_cancel_btn ;
+	public WebElement CIFBlacklistPopupCancelBtn_608() {
+		return cif_blaklist_popup_cancel_btn;
+	}
+	
+	@FindBy(xpath = "//input[@id='lookuptxt_fmscollateralCif_T014MT']")
+	private WebElement collateral_management_main_info_cif_no;
+	public WebElement CollateralManagementMainInfoCIFNoInput_608() {
+		return collateral_management_main_info_cif_no;
 	}
 	
 }

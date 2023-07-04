@@ -100,84 +100,84 @@ Feature: To check the WIFAK Application features
 
 
 
-@AT_RF_098_User1
-Scenario: TSR - BTII170041
-
-Given User_VAK navigate to FMS application and login with valid credentials
-And get the test data for test case AT_RF_098_User1
-And User1 clicks on the WIFAK_Application first link
-And User1 clicks on the WIFAK_Application second link
-And User1 clicks on the approval committe recommedation menu
-And User1 clicks on the clear button in approval committe recommedations menu
-And User1 double click on the any one record in approval committe recommedations menu
-And User1 clicks on the Recommend button in approval committe recommedations menu
-And User1 click the User1 recommended by name in recommend box
-And User1 select the recommendation as approve in recommend box
-And User1 click the comment code lookup option in recommend box
-And User1 double click the first row of comment code lookup in recommend box
-And User1 clicks the more comments button in recommend box
-And User1 enter the some comments in more comments
-And User1 click the Ok button in more comments
-When User1 click the Ok button in recommend box
-
-
-@AT_RF_098_User2
-Scenario: TSR - BTII170041
-
-Given navigate to FMS application and login with valid credentials
-And get the test data for test case AT_RF_098_User2
-And User clicks on the WIFAK_Application first link
-And User clicks on the WIFAK_Application second link
-And User clicks on the Application for financial facility link
-And User clicks the maintanance menu
-And User clicks on the search button in Application for financial facility main screen
-And User search the code in Application for financial facility main screen
-And User double click searched record in Application for financial facility main screen
-And User clicks on the Approval committee button
-And User click the User1 name in Recommented by column
-And User clicks on the more comments button
-Then User validate the more comments text in input field
+#@AT_RF_098_User1
+#Scenario: TSR - BTII170041
+#
+#Given User_VAK navigate to FMS application and login with valid credentials
+#And get the test data for test case AT_RF_098_User1
+#And User1 clicks on the WIFAK_Application first link
+#And User1 clicks on the WIFAK_Application second link
+#And User1 clicks on the approval committe recommedation menu
+#And User1 clicks on the clear button in approval committe recommedations menu
+#And User1 double click on the any one record in approval committe recommedations menu
+#And User1 clicks on the Recommend button in approval committe recommedations menu
+#And User1 click the User1 recommended by name in recommend box
+#And User1 select the recommendation as approve in recommend box
+#And User1 click the comment code lookup option in recommend box
+#And User1 double click the first row of comment code lookup in recommend box
+#And User1 clicks the more comments button in recommend box
+#And User1 enter the some comments in more comments
+#And User1 click the Ok button in more comments
+#When User1 click the Ok button in recommend box
+#
+#
+#@AT_RF_098_User2
+#Scenario: TSR - BTII170041
+#
+#Given navigate to FMS application and login with valid credentials
+#And get the test data for test case AT_RF_098_User2
+#And User clicks on the WIFAK_Application first link
+#And User clicks on the WIFAK_Application second link
+#And User clicks on the Application for financial facility link
+#And User clicks the maintanance menu
+#And User clicks on the search button in Application for financial facility main screen
+#And User search the code in Application for financial facility main screen
+#And User double click searched record in Application for financial facility main screen
+#And User clicks on the Approval committee button
+#And User click the User1 name in Recommented by column
+#And User clicks on the more comments button
+#Then User validate the more comments text in input field
 
 
  #//No data available in FMSCore
-@AT_RF_100
-Scenario: TSR-AMANAUPG170045
-
-Given navigate to FMS application and login with valid credentials
-And get the test data for test case AT_RF_100
-And User clicks on the WIFAK_Application first link
-And User clicks on the WIFAK_Application second link
-And User clicks on the Application for financial facility link
-And User clicks the maintanance menu
-And User select the application for dropdown as decrease in main screen
-And User enter the input as Existing Facility Ref in main screen
-And User enter the facility rating in main info tab
-And User clicks on the additional details tab
-And User enter the total value under additional info tab
-And User validate the finance amount should be decresed based on total value
-And User enter the expire date in additional info tab
-And User clicks the limit details tab
-And User validate the Facility value and CV value should be changed same as decreased finance amount under limit details
-And User double click on the product class under limit details
-And User click the clean flag under product calss in limit details tab
-And User click the edit button under product class in limit details tab
-And User move to the Document details tab
-And User enter the Solicitor Name
-And User enter the Estimator Name
-And User clicks the save button
-And User clicks the validate button
-And User clicks the Approve Level1 link
-And User retrive the first data in approve level1
-And User select the level1 decision as approve
-And User clicks on the level1 submit button
-And User clicks the Approve Level2 link
-And User retrive the first data in approve level2
-And User select the level2 decision as approve
-And User clicks on the level2 submit button
-And User clicks the Approve Level3 link
-And User retrive the first data in approve level3
-And User select the level3 decision as approve
-When User clicks on the level3 submit button
+#@AT_RF_100
+#Scenario: TSR-AMANAUPG170045
+#
+#Given navigate to FMS application and login with valid credentials
+#And get the test data for test case AT_RF_100
+#And User clicks on the WIFAK_Application first link
+#And User clicks on the WIFAK_Application second link
+#And User clicks on the Application for financial facility link
+#And User clicks the maintanance menu
+#And User select the application for dropdown as decrease in main screen
+#And User enter the input as Existing Facility Ref in main screen
+#And User enter the facility rating in main info tab
+#And User clicks on the additional details tab
+#And User enter the total value under additional info tab
+#And User validate the finance amount should be decresed based on total value
+#And User enter the expire date in additional info tab
+#And User clicks the limit details tab
+#And User validate the Facility value and CV value should be changed same as decreased finance amount under limit details
+#And User double click on the product class under limit details
+#And User click the clean flag under product calss in limit details tab
+#And User click the edit button under product class in limit details tab
+#And User move to the Document details tab
+#And User enter the Solicitor Name
+#And User enter the Estimator Name
+#And User clicks the save button
+#And User clicks the validate button
+#And User clicks the Approve Level1 link
+#And User retrive the first data in approve level1
+#And User select the level1 decision as approve
+#And User clicks on the level1 submit button
+#And User clicks the Approve Level2 link
+#And User retrive the first data in approve level2
+#And User select the level2 decision as approve
+#And User clicks on the level2 submit button
+#And User clicks the Approve Level3 link
+#And User retrive the first data in approve level3
+#And User select the level3 decision as approve
+#When User clicks on the level3 submit button
 
 @AT_RF_102
 Scenario: TSR-AMANAUPG170105
@@ -201,24 +201,24 @@ And User clicks the add new record button in limit details tab
 And User select the Item in limit Details
 And User select the Maturity date in limit Details
 And User enter the Margin rate in limit Details
-And User clicks on the add button
-And User move to the Document details tab
-And User enter the Solicitor Name
-And User enter the Estimator Name
-And User clicks the save button
-And User clicks the validate button
-And User clicks the Approve Level1 link
-And User retrive the first data in approve level1
-And User select the level1 decision as approve
-And User clicks on the level1 submit button
-And User clicks the Approve Level2 link
-And User retrive the first data in approve level2
-And User select the level2 decision as approve
-And User clicks on the level2 submit button
-And User clicks the Approve Level3 link
-And User retrive the first data in approve level3
-And User select the level3 decision as approve
-When User clicks on the level3 submit button
+#And User clicks on the add button
+#And User move to the Document details tab
+#And User enter the Solicitor Name
+#And User enter the Estimator Name
+#And User clicks the save button
+#And User clicks the validate button
+#And User clicks the Approve Level1 link
+#And User retrive the first data in approve level1
+#And User select the level1 decision as approve
+#And User clicks on the level1 submit button
+#And User clicks the Approve Level2 link
+#And User retrive the first data in approve level2
+#And User select the level2 decision as approve
+#And User clicks on the level2 submit button
+#And User clicks the Approve Level3 link
+#And User retrive the first data in approve level3
+#And User select the level3 decision as approve
+#When User clicks on the level3 submit button
 
 
 #@AT_RF_157

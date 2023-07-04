@@ -273,88 +273,88 @@ public class WIFAK_ApplicationSteps2_608 {
 //    
     
 //  @AT_FM_038_FMSCore
-    @And("User_608 clicks on the Approval committe recommedations menu")
-    public void user_clicks_on_the_approval_committe_recommedations_menu() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsMenu_608());
-    	WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsMenu_608().click();
-    }
-
-    @And("User_608 enter the Facility type in search grid under Approval committe recommedations")
-    public void user_enter_the_facility_type_in_search_grid_under_approval_committe_recommedations() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsFacilityTypeInput_608());
-    	WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsFacilityTypeInput_608().sendKeys(testData.get("Facility Type"),Keys.ENTER);
-    }
-
-    @And("User_608 retrieve the first row in search grid under Approval committe recommedations")
-    public void user_retrieve_the_first_row_in_search_grid_under_approval_committe_recommedations() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsRetrievedFirstRow_608());
-        clicksAndActionsHelper.doubleClick(WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsRetrievedFirstRow_608());
-    }
-
-    @And("User_608 click the Recommend button under Approval committe recommedations")
-    public void user_click_the_recommend_button_under_approval_committe_recommedations() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsCode());
-    	for (int i = 0; i <= 300; i++) {
-			try {
-				javaScriptHelper.scrollIntoView(WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsRecommendBtn_608());
-				break;
-			} catch (Exception e) {
-				if (i == 300) {
-					Assert.fail(e.getMessage());
-				}
-			}
-		}
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsRecommendBtn_608());
-    	WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsRecommendBtn_608().click();
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.confirmPopupOkBtn_608());
-    	facilityTypeObj608.confirmPopupOkBtn_608().click();
-    }
-    
-    @And("User_608 click the User recommended by name in approval committee user popup under Approval committe recommedations")
-    public void user_click_the_user_recommended_by_name_in_approval_committee_user_popup_under_approval_committe_recommedations() throws Throwable {
-    	for (int i = 0; i <= 300; i++) {
-			try {
-				javaScriptHelper.scrollIntoView(WIFAKapplicationObj608.approvalCommitteeRecommendByLabel_608());
-				break;
-			} catch (Exception e) {
-				if (i == 300) {
-					Assert.fail(e.getMessage());
-				}
-			}
-		}
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.approvalCommitteeRecommendByLabel_608());
-    	WIFAKapplicationObj608.approvalCommitteeRecommendByLabel_608().click();
-    }
-
-    @And("User_608 select the recommendation as approve in approval committee user popup under Approval committe recommedations")
-    public void user_select_the_recommendation_as_approve_in_approval_committee_user_popup_under_approval_committe_recommedations() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationDropdown_608());
-    	dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationDropdown_608(), testData.get("Decision3"));
-    }
-    
-    @And("User_608 click the OK button in approval committee user popup under Approval committe recommedations")
-    public void user_click_the_ok_button_in_approval_committee_user_popup_under_approval_committe_recommedations() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsUserPopupOkBtn_608());
-    	WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsUserPopupOkBtn_608().click();
-    }
-
-    @Then("User_608 Successfully Approve the Recommendations")
-    public void user_successfully_approve_the_recommendations() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.successPopup_608());
-    	
-    	for (int i = 0; i < 2000; i++) {
-			try {
-		    	WIFAKapplicationObj608.SuccessPopupOkBtn_608().click();
-		    	break;
-			} catch (Exception e) {
-				if (i==1999) {
-					Assert.fail(e.getMessage());
-				}
-			}
-		}
-        
-    }
-
+//    @And("User_608 clicks on the Approval committe recommedations menu")
+//    public void user_clicks_on_the_approval_committe_recommedations_menu() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsMenu_608());
+//    	WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsMenu_608().click();
+//    }
+//
+//    @And("User_608 enter the Facility type in search grid under Approval committe recommedations")
+//    public void user_enter_the_facility_type_in_search_grid_under_approval_committe_recommedations() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsFacilityTypeInput_608());
+//    	WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsFacilityTypeInput_608().sendKeys(testData.get("Facility Type"),Keys.ENTER);
+//    }
+//
+//    @And("User_608 retrieve the first row in search grid under Approval committe recommedations")
+//    public void user_retrieve_the_first_row_in_search_grid_under_approval_committe_recommedations() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsRetrievedFirstRow_608());
+//        clicksAndActionsHelper.doubleClick(WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsRetrievedFirstRow_608());
+//    }
+//
+//    @And("User_608 click the Recommend button under Approval committe recommedations")
+//    public void user_click_the_recommend_button_under_approval_committe_recommedations() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsCode());
+//    	for (int i = 0; i <= 300; i++) {
+//			try {
+//				javaScriptHelper.scrollIntoView(WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsRecommendBtn_608());
+//				break;
+//			} catch (Exception e) {
+//				if (i == 300) {
+//					Assert.fail(e.getMessage());
+//				}
+//			}
+//		}
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsRecommendBtn_608());
+//    	WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsRecommendBtn_608().click();
+//    	
+//    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.confirmPopupOkBtn_608());
+//    	facilityTypeObj608.confirmPopupOkBtn_608().click();
+//    }
+//    
+//    @And("User_608 click the User recommended by name in approval committee user popup under Approval committe recommedations")
+//    public void user_click_the_user_recommended_by_name_in_approval_committee_user_popup_under_approval_committe_recommedations() throws Throwable {
+//    	for (int i = 0; i <= 300; i++) {
+//			try {
+//				javaScriptHelper.scrollIntoView(WIFAKapplicationObj608.approvalCommitteeRecommendByLabel_608());
+//				break;
+//			} catch (Exception e) {
+//				if (i == 300) {
+//					Assert.fail(e.getMessage());
+//				}
+//			}
+//		}
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.approvalCommitteeRecommendByLabel_608());
+//    	WIFAKapplicationObj608.approvalCommitteeRecommendByLabel_608().click();
+//    }
+//
+//    @And("User_608 select the recommendation as approve in approval committee user popup under Approval committe recommedations")
+//    public void user_select_the_recommendation_as_approve_in_approval_committee_user_popup_under_approval_committe_recommedations() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationDropdown_608());
+//    	dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationDropdown_608(), testData.get("Decision3"));
+//    }
+//    
+//    @And("User_608 click the OK button in approval committee user popup under Approval committe recommedations")
+//    public void user_click_the_ok_button_in_approval_committee_user_popup_under_approval_committe_recommedations() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsUserPopupOkBtn_608());
+//    	WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsUserPopupOkBtn_608().click();
+//    }
+//
+//    @Then("User_608 Successfully Approve the Recommendations")
+//    public void user_successfully_approve_the_recommendations() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.successPopup_608());
+//    	
+//    	for (int i = 0; i < 2000; i++) {
+//			try {
+//		    	WIFAKapplicationObj608.SuccessPopupOkBtn_608().click();
+//		    	break;
+//			} catch (Exception e) {
+//				if (i==1999) {
+//					Assert.fail(e.getMessage());
+//				}
+//			}
+//		}
+//        
+//    }
+//
 
 }

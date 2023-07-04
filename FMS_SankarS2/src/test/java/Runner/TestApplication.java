@@ -8,14 +8,14 @@ import io.cucumber.testng.CucumberOptions;
 import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
-@CucumberOptions(features = {"src/test/java/features/DrawDownRequest_608.feature"},
+@CucumberOptions(features = {"src/test/java/features/CollateralManagement_608.feature"},
                 glue = "stepdefinitions",
                 monochrome=true, //to make steps in color
                 plugin = { "pretty",
                            "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                            "rerun:ReRunScenarios/FailedReRun.txt"}
 //               	,dryRun = true //to check compilation errors
-				, tags= "@AT_DDR_024"
+				, tags= "@AT_CM_043"
 //               , tags= "@582480_FMSParam or @582480_FMSCore"
 
 )

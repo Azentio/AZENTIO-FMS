@@ -185,11 +185,7 @@ public class WIFAK_ApplicationObj {
 		return clicks_add_btn;
 	}
 	
-	@FindBy(xpath = "//button[@id='applicationfacility_collateralDetails_btn_WIFT001MT']")
-	private WebElement limit_details_collateral_details_btn;
-	public WebElement limitDetailsCollateralDetailsBtn() {
-		return limit_details_collateral_details_btn;
-	}	
+		
 	
 	@FindBy(xpath = "//button[@id='applicationfacility_chargesdtls_btn_WIFT001MT']")
 	private WebElement limit_details_charges_details_btn;
@@ -632,30 +628,7 @@ public class WIFAK_ApplicationObj {
 	
 	
 	
-//  @AT_RF_102
-    @FindBy(xpath = "//select[@id='applicationfacilityLimitDetailsGENERAL_FACILITY_TYPE_WIFT001MT']")
-    private WebElement limit_details_item;
-    public WebElement limitDetailsItem() {
-    	return limit_details_item;
-    }
-    
-    @FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsMATURITY_DATE_WIFT001MT']/following-sibling::img")
-    private WebElement limit_details_maturity_date_calender;
-    public WebElement limitDetailsMaturityDateCalender() {
-    	return limit_details_maturity_date_calender;
-    }
-    
-    @FindBy(xpath = "//*[@id='ui-datepicker-div']/table/tbody/tr[5]/td[6]")
-    private WebElement limit_details_maturity_date;
-    public WebElement limitDetailsMaturityDate() {
-    	return limit_details_maturity_date;
-    }
-    
-    @FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsMARGIN_RATE_WIFT001MT']")
-    private WebElement limit_details_margin_rate_input;
-    public WebElement limitDetailsMarginRateInput() {
-    	return limit_details_margin_rate_input;
-    }
+
 	
     
 ////  @AT_RF_157

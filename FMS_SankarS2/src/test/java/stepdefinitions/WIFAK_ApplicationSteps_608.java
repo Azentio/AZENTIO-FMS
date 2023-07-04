@@ -48,29 +48,19 @@ public class WIFAK_ApplicationSteps_608 {
 	
 	
 
-//  @AT_RF_098_User_VAK
-    @And("^User_VAK get the test data for test case AT_RF_098_User_VAK$")
-    public void User_VAK_get_the_test_data_for_test_case_AT_RF_098User_VAK() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_098");
-    }
-	
-//    @AT_RF_098_User_608
-    @And("^User_608 get the test data for test case AT_RF_098_User_608$")
-    public void get_the_test_data_for_test_case_AT_RF_098user2() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_098");
-    }
 
-//  @AT_RF_100
-    @And("^User_608 get the test data for test case AT_RF_100$")
-    public void get_the_test_data_for_test_case_AT_RF_100() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_100");
-    }
+//
+////  @AT_RF_100
+//    @And("^User_608 get the test data for test case AT_RF_100$")
+//    public void get_the_test_data_for_test_case_AT_RF_100() throws Throwable {
+//    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_100");
+//    }
     
-//  @AT_RF_102
-    @And("^User_608 get the test data for test case AT_RF_102$")
-    public void get_the_test_data_for_test_case_AT_RF_102() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_102");
-    }
+////  @AT_RF_102
+//    @And("^User_608 get the test data for test case AT_RF_102$")
+//    public void get_the_test_data_for_test_case_AT_RF_102() throws Throwable {
+//    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_102");
+//    }
     
 
     
@@ -90,227 +80,7 @@ public class WIFAK_ApplicationSteps_608 {
 	}
 	
 	
-	
-	
-//	@AT_AFF_036	
-	
-	
-	
-
-	
-
-////  @AT_RF_098_User_VAK
-//	@And("^User_VAK clicks on the WIFAK_Application first link$")
-//    public void User_VAK_clicks_on_the_wifakapplication_first_link() throws Throwable {
-//    	for (int i = 0; i <= 300; i++) {
-//			try {
-//				javaScriptHelper.scrollIntoView(WIFAKapplicationObj608.wifakApplicationFirst_608());
-//				break;
-//			} catch (Exception e) {
-//				if (i == 300) {
-//					Assert.fail(e.getMessage());
-//				}
-//			}
-//		}
-//		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApplicationFirst_608());
-//		WIFAKapplicationObj608.wifakApplicationFirst_608().click();
-//    }
-//
-//    @And("^User_VAK clicks on the WIFAK_Application second link$")
-//    public void User_VAK_clicks_on_the_wifakapplication_second_link() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApplicationSecond_608());
-//		WIFAKapplicationObj608.wifakApplicationSecond_608().click();
-//    }
-//
-//    @And("^User_VAK clicks on the approval committe recommedation menu$")
-//    public void User_VAK_clicks_on_the_approval_committe_recommedation_menu() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsMenu_608());
-//    	WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsMenu_608().click();
-//    }
-//
-//    @And("^User_VAK clicks on the clear button in approval committe recommedations menu$")
-//    public void User_VAK_clicks_on_the_clear_button_in_approval_committe_recommedations_menu() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeClearBtn());
-//    	WIFAKapplicationObj608.wifakApprovalCommitteeClearBtn().click();
-//    }
-//
-//    @And("^User_VAK double click on the any one record in approval committe recommedations menu$")
-//    public void User_VAK_double_click_on_the_any_one_record_in_approval_committe_recommedations_menu() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeSelectRow());
-//    	clicksAndActionsHelper.doubleClick(WIFAKapplicationObj608.wifakApprovalCommitteeSelectRow());
-//    }
-//
-//    @And("^User_VAK clicks on the Recommend button in approval committe recommedations menu$")
-//    public void User_VAK_clicks_on_the_recommend_button_in_approval_committe_recommedations_menu() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsCode());
-//    	for (int i = 0; i <= 500; i++) {
-//			try {
-//				javaScriptHelper.scrollIntoView(WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsRecommendBtn_608());
-//				break;
-//			} catch (Exception e) {
-//				if (i == 500) {
-//					Assert.fail(e.getMessage());
-//				}
-//			}
-//		}
-//		waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsRecommendBtn_608());
-//		WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationsRecommendBtn_608().click();
-//		
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.WarningPopupOkBtn_608());
-//    	WIFAKapplicationObj608.WarningPopupOkBtn_608().click();
-//    	
-//    }
-//
-//    @And("^User_VAK click the User_VAK recommended by name in recommend box$")
-//    public void User_VAK_click_the_User_VAK_recommended_by_name_in_recommend_box() throws Throwable {
-//    	for (int i = 0; i <= 300; i++) {
-//			try {
-//				javaScriptHelper.scrollIntoView(WIFAKapplicationObj608.wifakApprovalCommitteeRecommendByLabel_VAK());
-//				break;
-//			} catch (Exception e) {
-//				if (i == 300) {
-//					Assert.fail(e.getMessage());
-//				}
-//			}
-//		}
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeRecommendByLabel_VAK());
-//    	WIFAKapplicationObj608.wifakApprovalCommitteeRecommendByLabel_VAK().click();
-//    }
-//
-//    @And("^User_VAK select the recommendation as approve in recommend box$")
-//    public void User_VAK_select_the_recommendation_as_approve_in_recommend_box() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationDropdown_608());
-//    	dropDownHelper.SelectUsingVisibleText(WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationDropdown_608(), testData.get("Decision3"));
-//    }
-//
-//    @And("^User_VAK click the comment code lookup option in recommend box$")
-//    public void User_VAK_click_the_comment_code_lookup_option_in_recommend_box() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeRecommendationDropdownOption_608());
-//    	for (int i = 0; i < 2000; i++) {
-//			try {
-//		    	WIFAKapplicationObj608.approvalCommitteeCommentCodeLookup_608().click();
-//		    	break;
-//			} catch (Exception e) {
-//				if (i==1999) {
-//					Assert.fail(e.getMessage());
-//				}
-//			}
-//		}
-//
-//    }
-//
-//    @And("^User_VAK double click the first row of comment code lookup in recommend box$")
-//    public void User_VAK_double_click_the_first_row_of_comment_code_lookup_in_recommend_box() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeCommentCodeLookupFirstRow_608());
-//    	clicksAndActionsHelper.doubleClick(WIFAKapplicationObj608.wifakApprovalCommitteeCommentCodeLookupFirstRow_608());
-//    }
-//
-//    @And("^User_VAK clicks the more comments button in recommend box$")
-//    public void User_VAK_clicks_the_more_comments_button_in_recommend_box() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeMoreCommentsBtn_608());
-//    	WIFAKapplicationObj608.wifakApprovalCommitteeMoreCommentsBtn_608().click();
-//    }
-//
-//    @And("^User_VAK enter the some comments in more comments$")
-//    public void User_VAK_enter_the_some_comments_in_more_comments() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.wifakApprovalCommitteeMoreCommentsInput_608());
-//    	WIFAKapplicationObj608.wifakApprovalCommitteeMoreCommentsInput_608().sendKeys(testData.get("More Comments"));
-//    }
-//
-//    @And("^User_VAK click the Ok button in more comments$")
-//    public void User_VAK_click_the_ok_button_in_more_comments() throws Throwable {
-//    	for (int i = 0; i < 2000; i++) {
-//			try {
-//		    	WIFAKapplicationObj608.wifakApprovalCommitteeMoreCommentsOkBtn_608().click();
-//		    	break;
-//			} catch (Exception e) {
-//				if (i==1999) {
-//					Assert.fail(e.getMessage());
-//				}
-//			}
-//		}
-//
-//    }
-//    
-//    @When("^User_VAK click the Ok button in recommend box$")
-//    public void User_VAK_click_the_ok_button_in_recommend_box() throws Throwable {
-//    	for (int i = 0; i < 2000; i++) {
-//			try {
-//		    	WIFAKapplicationObj608.wifakApprovalCommitteeOkBtn_608().click();
-//		    	break;
-//			} catch (Exception e) {
-//				if (i==1999) {
-//					Assert.fail(e.getMessage());
-//				}
-//			}
-//		}    	
-//
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.successPopup_608());
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.successPopupMessage_608());
-//    	String SuccessMsg = WIFAKapplicationObj608.successPopupMessage_608().getText().substring(23, 27);
-//    	fmsTransactionsExcelData.updateTestData("DS_AT_RF_098", "Search Code", SuccessMsg);
-//    	
-//    	WIFAKapplicationObj608.SuccessPopupOkBtn_608().click();
-//    }
-//
-//    
-//    
-////  @AT_RF_098_User_608
-//    @And("^User_608 clicks on the search button in Application for financial facility main screen$")
-//    public void user_clicks_on_the_search_button_in_application_for_financial_facility_main_screen() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.applicationFinancialFacilitySearchBtn_608());
-//    	WIFAKapplicationObj608.applicationFinancialFacilitySearchBtn_608().click();
-//    }
-//
-//    @And("^User_608 search the code in Application for financial facility main screen$")
-//    public void user_search_the_code_in_application_for_financial_facility_main_screen() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.applicationFinancialFacilitySearchCode_608());
-//    	WIFAKapplicationObj608.applicationFinancialFacilitySearchCode_608().sendKeys(testData.get("Search Code"),Keys.ENTER);
-//    }
-//
-//    @And("^User_608 double click searched record in Application for financial facility main screen$")
-//    public void user_double_click_searched_record_in_application_for_financial_facility_main_screen() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.applicationFinancialFacilitySearchResult_608());
-//    	clicksAndActionsHelper.doubleClick(WIFAKapplicationObj608.applicationFinancialFacilitySearchResult_608());
-//    }
-//
-//    @And("^User_608 clicks on the Approval committee button$")
-//    public void user_clicks_on_the_approval_committee_button() throws Throwable {
-//    	for (int i = 0; i <= 500; i++) {
-//			try {
-//				javaScriptHelper.scrollIntoView(WIFAKapplicationObj608.applicationFinancialFacilityApprovalCommittieeBtn_608());
-//				break;
-//			} catch (Exception e) {
-//				if (i == 500) {
-//					Assert.fail(e.getMessage());
-//				}
-//			}
-//		}
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.applicationFinancialFacilityApprovalCommittieeBtn_608());
-//    	WIFAKapplicationObj608.applicationFinancialFacilityApprovalCommittieeBtn_608().click();
-//    }
-//
-//    @And("^User_608 click the User1 name in Recommented by column$")
-//    public void user_click_the_user1_name_in_recommented_by_column() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.applicationFinancialFacilityApprovalCommittieeRecommendByLabel_608());
-//    	WIFAKapplicationObj608.applicationFinancialFacilityApprovalCommittieeRecommendByLabel_608().click();
-//    }
-//
-//    @And("^User_608 clicks on the more comments button$")
-//    public void user_clicks_on_the_more_comments_button() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.applicationFinancialFacilityApprovalCommittieeMoreCommentsBtn_608());
-//    	WIFAKapplicationObj608.applicationFinancialFacilityApprovalCommittieeMoreCommentsBtn_608().click();
-//    }
-//
-//    @Then("^User_608 validate the more comments text in input field$")
-//    public void user_validate_the_more_comments_text_in_input_field() throws Throwable {
-//    	waitHelper.waitForElementwithFluentwait(driver, WIFAKapplicationObj608.applicationFinancialFacilityApprovalCommittieeMoreCommentsText_608());
-//    	String text = WIFAKapplicationObj608.applicationFinancialFacilityApprovalCommittieeMoreCommentsText_608().getAttribute("prevvalue");
-//    	System.out.println("More Comments Text: "+ text);
-//    	Assert.assertEquals(testData.get("More Comments"), text);
-//    }
-//    
-//	
+  
 //	
 ////   @AT_RF_100
 //    @And("^User_608 select the application for dropdown as decrease in main screen$")

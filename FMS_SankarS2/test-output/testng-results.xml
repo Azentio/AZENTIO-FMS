@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-30T14:30:07 IST" name="Default suite" finished-at="2023-06-30T14:31:34 IST" duration-ms="87316">
+  <suite started-at="2023-07-04T15:34:32 IST" name="Default suite" finished-at="2023-07-04T15:36:12 IST" duration-ms="99959">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5afa3c9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-06-30T14:30:07 IST" name="Default test" finished-at="2023-06-30T14:31:34 IST" duration-ms="87316">
+    <test started-at="2023-07-04T15:34:32 IST" name="Default test" finished-at="2023-07-04T15:36:12 IST" duration-ms="99959">
       <class name="Runner.TestApplication">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-06-30T14:30:07 IST" name="setUpClass" finished-at="2023-06-30T14:30:09 IST" duration-ms="1970" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-07-04T15:34:32 IST" name="setUpClass" finished-at="2023-07-04T15:34:34 IST" duration-ms="2074" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-06-30T14:30:09 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-06-30T14:31:17 IST" duration-ms="68386" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-07-04T15:34:35 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-04T15:35:55 IST" duration-ms="80366" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Draw down Request"]]>
+                <![CDATA["Open the facility management screen and link a collateral"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[User_608 to validate the Draw down request features]"]]>
+                <![CDATA["Optional[To check the Collateral Management features]"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-06-30T14:31:17 IST" name="tearDownClass" finished-at="2023-06-30T14:31:34 IST" duration-ms="16879" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-07-04T15:35:55 IST" name="tearDownClass" finished-at="2023-07-04T15:36:12 IST" duration-ms="17408" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
