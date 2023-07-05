@@ -181,6 +181,7 @@ public class Facilities_Management_PageObjects_609 {
 	
 	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/*
 	@FindBy(xpath = "//td[text()='REQUEST FOR FINANCIN']")
 	private WebElement FmsCoreREQUESTFORFINANCIN;
 	public WebElement FmsCore_REQUESTFORFINANCIN() {
@@ -241,7 +242,7 @@ public class Facilities_Management_PageObjects_609 {
 	public WebElement REQUESTFORFINANCIN_RequestForFinancing_Maintenance_FacilityTypeSearch() {
 		return REQUESTFORFINANCINRequestForFinancingMaintenanceFacilityTypeSearch;
 	}
-	
+	*/
 	@FindBy(xpath= "//select[@name='requestFinancingCO.fmsRequestFinancingVO.REVOLVING_ONEOFF']")
 	private WebElement REQUESTFORFINANCINRequestForFinancingMaintenanceRevolvingOneOff;
 	public WebElement REQUESTFORFINANCIN_RequestForFinancing_Maintenance_RevolvingOneOff() {

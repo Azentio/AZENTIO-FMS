@@ -28,13 +28,10 @@ import resources.BaseClass;
 public class Application_Financial_Facility extends BaseClass {
 
 	WebDriver driver=BaseClass.driver;
-	//FMSCommonWebElements fmsCommonWebElements;
 	String TestDataPath = System.getProperty("user.dir") + "\\TestData\\FMSTestData.xlsx";
-	//String TestDataPath = System.getProperty("user.dir") + "\\TestData\\FMSTestData.xls";
 	ExcelData fmsParamLoginTestData = new ExcelData(TestDataPath, "FMSParam_login", "UserType");
 	ExcelData fmsLoginExceldata = new ExcelData(TestDataPath, "FMS_Login", "UserType");
 	ExcelData sadsLoginExceldata = new ExcelData(TestDataPath, "SadsLogin", "UserType");
-	//ExcelData FmsParamsApplicationFacility = new ExcelData(TestDataPath, "FMS_Params_ApplicationFinancialFacility","TestCaseID" );
 	Map<String, String> fmsLoginTestData = new HashMap<>();
 	WaitHelper waitHelper = new WaitHelper(driver);
 	ClicksAndActionsHelper clicksAndActionHelper = new ClicksAndActionsHelper(driver);

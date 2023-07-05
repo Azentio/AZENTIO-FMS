@@ -487,6 +487,7 @@ public class RequestforFinancing_Steps extends BaseClass {
             }
 		}
 		*/
+	
 		for (int i = 0; i < 200; i++) {
 			try {
 				WebElement Code  = driver.findElement(By.xpath(xpath));
@@ -640,6 +641,7 @@ public class RequestforFinancing_Steps extends BaseClass {
 		clicksAndActionHelper.doubleClick(RequestforFinancingObj.validate());
 	}
 
+	/*
 	@Given("User_609 Click the ok button to proceed")
 	public void user_609_click_the_ok_button_to_proceed() {
 		waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.Confirmok());
@@ -665,7 +667,7 @@ public class RequestforFinancing_Steps extends BaseClass {
 			Assert.fail(e.getMessage());
 		}
 	}
-
+*/
 	@And("^Click the Approve Level1 link$")
 	public void click_the_approve_level1_link() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,RequestforFinancingObj.applicationFinancialFacilityApproveLevel1());
