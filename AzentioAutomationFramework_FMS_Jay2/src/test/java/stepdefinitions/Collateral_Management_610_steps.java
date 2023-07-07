@@ -56,7 +56,7 @@ public class Collateral_Management_610_steps extends BaseClass{
 		waitHelper.waitForElementwithFluentwait(driver, CollateralManagement_610_obj.collateralType_INCollateralManagementScreen_610());
 		clicksAndActionHelper.moveToElement(CollateralManagement_610_obj.collateralType_INCollateralManagementScreen_610());
 		clicksAndActionHelper.clickOnElement(CollateralManagement_610_obj.collateralType_INCollateralManagementScreen_610());
-		CollateralManagement_610_obj.collateralType_INCollateralManagementScreen_610().sendKeys("6");
+		CollateralManagement_610_obj.collateralType_INCollateralManagementScreen_610().sendKeys("6",Keys.TAB);
 	}
 
 	@And("User_{int} enter Valid From Date in Collateral Management Screen")
@@ -64,7 +64,7 @@ public class Collateral_Management_610_steps extends BaseClass{
 		waitHelper.waitForElementwithFluentwait(driver, CollateralManagement_610_obj.ValidFromDateIN_CollateralManagementScreen_610());
 		clicksAndActionHelper.moveToElement(CollateralManagement_610_obj.ValidFromDateIN_CollateralManagementScreen_610());
 		clicksAndActionHelper.clickOnElement(CollateralManagement_610_obj.ValidFromDateIN_CollateralManagementScreen_610());
-		CollateralManagement_610_obj.ValidFromDateIN_CollateralManagementScreen_610().sendKeys("16/01/2021");
+		CollateralManagement_610_obj.ValidFromDateIN_CollateralManagementScreen_610().sendKeys("16/01/2021",Keys.TAB);
 	}
 
 	@And("User_{int} enter Valid To Date in Collateral Management Screen")
@@ -72,7 +72,7 @@ public class Collateral_Management_610_steps extends BaseClass{
 		waitHelper.waitForElementwithFluentwait(driver, CollateralManagement_610_obj.ValidToDateIN_CollateralManagementScreen_610());
 		clicksAndActionHelper.moveToElement(CollateralManagement_610_obj.ValidToDateIN_CollateralManagementScreen_610());
 		clicksAndActionHelper.clickOnElement(CollateralManagement_610_obj.ValidToDateIN_CollateralManagementScreen_610());
-		CollateralManagement_610_obj.ValidToDateIN_CollateralManagementScreen_610().sendKeys("16/01/2021");
+		CollateralManagement_610_obj.ValidToDateIN_CollateralManagementScreen_610().sendKeys("16/01/2021,Keys.TAB");
 	}
 
 	@And("User_{int} enter Brief Description in Collateral Management Screen")

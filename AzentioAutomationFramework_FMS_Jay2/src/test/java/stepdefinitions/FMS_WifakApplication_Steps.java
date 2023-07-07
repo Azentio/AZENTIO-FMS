@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -24,7 +25,7 @@ import pageobjects.CommonElements.FMS_WifakApplication_Obj;
 import resources.BaseClass;
 
 public class FMS_WifakApplication_Steps {
-
+		
 	WebDriver driver = BaseClass.driver;
 	ConfigFileReader configFileReader = new ConfigFileReader();
 	FMS_WifakApplication_Obj FMS_WifakApplication_Obj = new FMS_WifakApplication_Obj(driver);
@@ -34,7 +35,8 @@ public class FMS_WifakApplication_Steps {
 	FMSLogin login = new FMSLogin(driver);
 	DropDownHelper DropDownhelper = new DropDownHelper(driver);
 	JavascriptHelper JavascriptHelper = new JavascriptHelper(driver);
-	String SuccessMsg;
+	
+    String SuccessMsg;
 	String SuccessMsg2;
 	String SuccessMsgFM;
 
@@ -51,7 +53,7 @@ public class FMS_WifakApplication_Steps {
 	
 	ExcelData fmsTransactionsExcelData = new ExcelData(path, "FMS_WIFAK_ApplicationTestData", "DataSet ID");
 	Map<String, String> testData;
-	
+	Map<String, String> User;
 	ExcelData  DrawDownPayment = new ExcelData(path, "DrawDownPayment_TestData", "DataSet ID");
 	
 	@And("User_610 get the test data set id for AT_DDR_083")
@@ -60,6 +62,27 @@ public class FMS_WifakApplication_Steps {
 	}
 
 	
+	@And("User_609 click Technical details")
+    public void user_609_click_technical_details() {
+		 waitHelper.waitForElementwithFluentwait(driver,FMS_WifakApplication_Obj.technicalDetails_609());
+		 clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.technicalDetails_609());
+		 clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.technicalDetails_609());
+    }
+    @And("User_609 click clear caches")
+    public void user_609_click_clear_caches() {
+  	  waitHelper.waitForElementwithFluentwait(driver,FMS_WifakApplication_Obj.FSM_ClearCacheInTechnicalDetailsIcon_609());
+  	clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.FSM_ClearCacheInTechnicalDetailsIcon_609());
+  	clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.FSM_ClearCacheInTechnicalDetailsIcon_609());
+    }
+ 
+
+   @And("^User_609 Click the ok button$")
+  public void user_609_click_the_ok_button() throws Throwable {
+  	waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Ok());
+  	clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.Ok());         
+  }
+
+
 	@And("^User_610 Click Wifak Application first$")
 	public void click_wifak_application_first() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.getWifak_Application_first_610());
@@ -91,6 +114,18 @@ public class FMS_WifakApplication_Steps {
 	@And("User_610 get the test data set id for AT_RF_011")
 	public void get_the_test_data_set_id_for_at_at_rf_011() {
 		testData = fmsTransactionsExcelData.getTestdata("DS01_592279");
+	}
+	
+	//--------- Committee recommendation
+	
+	@And("User_610 get the test data set id for AT_CA_010")
+	public void get_the_test_data_set_id_for_at_ca_010() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_CA_010");
+	}
+	
+	@And("User_610 get the test data set id for AT_CA_011")
+	public void get_the_test_data_set_id_for_at_ca_011() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_CA_011");
 	}
 	
 	@And("^User_610 Click Wifak Application Second$")
@@ -983,24 +1018,20 @@ public class FMS_WifakApplication_Steps {
 	@And("^User_610 Enter The Value Estimator Name$")
 	public void enter_the_value_estimator_name() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.EnterTheValue_Estimator_Name_610());
-//			clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.EnterTheValue_Estimator_Name());
-//			clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.EnterTheValue_Estimator_Name());
 
 		for (int i = 0; i < 1000; i++) {
 			try {
 				clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.EnterTheValue_Estimator_Name_610());
-				// FMS_WifakApplication_Obj.EnterTheValue_Estimator_Name().sendKeys("1");
 				FMS_WifakApplication_Obj.EnterTheValue_Estimator_Name_610().sendKeys(testData.get("Estimator Name"));
+				FMS_WifakApplication_Obj.EnterTheValue_Estimator_Name_610().sendKeys(Keys.TAB);
 				break;
 			} catch (Exception e) {
 				if (i == 199) {
 					Assert.fail(e.getMessage());
 				}
-
 			}
 		}
-		Thread.sleep(5000);
-	}
+			}
 
 	@And("^Click Save Button After Document Details$")
 	public void click_save_button_after_document_details() throws Throwable {
@@ -1119,22 +1150,6 @@ public class FMS_WifakApplication_Steps {
 	@And("^User_610 Click Validate Button in Document Details$")
 	public void click_validate_button_in_document_details() throws Throwable {
 
-//		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.limitDetailsValidateBtn());
-//		FMS_WifakApplication_Obj.limitDetailsValidateBtn().click();
-//
-//		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.SeverReruest_Popup());
-//		for (int i = 0; i < 2000; i++) {
-//			try {
-//				if (FMS_WifakApplication_Obj.SeverReruest_Popup().isDisplayed()) {
-//					FMS_WifakApplication_Obj.ServerReuestOK().click();
-//				}
-//				break;
-//			} catch (Exception e) {
-//				if (i == 1999) {
-//					Assert.fail(e.getMessage());
-//				}
-//			}
-//		}
 
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.limitDetailsValidateBtn_610());
 		FMS_WifakApplication_Obj.limitDetailsValidateBtn_610().click();
@@ -1147,14 +1162,11 @@ public class FMS_WifakApplication_Steps {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.facilityAlreadyCreatedPopup_610());
 		FMS_WifakApplication_Obj.facilityAlreadyCreatedPopup_610().click();
 
+		//get facility code
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.successPopup_610());
-		// String SuccessMsg =
-		// FMS_WifakApplication_Obj.successPopupMessage().getText();
 		SuccessMsg = FMS_WifakApplication_Obj.successPopupMessage_610().getText().substring(23, 27);
 		System.err.println("Reference Number: " + SuccessMsg);
-		// fmsTransactionsExcelData.updateTestData("DS_AT_RF_139", "Approve Code",
-		// SuccessMsg);
-
+		
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.successPopup_610());
 		for (int i = 0; i < 2000; i++) {
 			try {
@@ -1166,10 +1178,11 @@ public class FMS_WifakApplication_Steps {
 				}
 			}
 		}
-		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.sendAlertPopup());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.sendAlertPopup_610());
 		for (int i = 0; i < 2000; i++) {
 			try {
-				FMS_WifakApplication_Obj.sendAlertPopup().click();
+				FMS_WifakApplication_Obj.sendAlertPopup_610().click();
 				break;
 			} catch (Exception e) {
 				if (i == 1999) {
@@ -1961,8 +1974,6 @@ public class FMS_WifakApplication_Steps {
 	@Then("^User_610 Check Flag in Clean Level IN Limits Detalis SubMenu$")
 	public void check_flag_in_clean_level_in_limits_detalis_submenu() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.CLEAN_FLAG_In_LimitsDetails_610());
-//			clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.CLEAN_FLAG_In_LimitsDetails());
-//			clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.CLEAN_FLAG_In_LimitsDetails());
 
 		for (int i = 0; i < 200; i++) {
 			try {
@@ -1974,11 +1985,8 @@ public class FMS_WifakApplication_Steps {
 				}
 			}
 		}
-
-//		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.FRRValueDate_In_LimitsDetails());
-//		FMS_WifakApplication_Obj.FRRValueDate_In_LimitsDetails().sendKeys("04/01/2021");
 	}
-
+	
 	@Then("^User_610 Click the Product Class In Limits Details$")
 	public void click_the_product_class_in_limits_details() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ProductClass_In_LimitsDetails_610());
@@ -2107,6 +2115,7 @@ public class FMS_WifakApplication_Steps {
 	@And("^User_610 retrive the first data in approve level1$")
 	public void user_retrive_the_first_data_in_approve_level1() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,FMS_WifakApplication_Obj.Enter_ValidateCode_approve_level1_610());
+		System.out.println("SuccessMsg:"+SuccessMsg);
 		FMS_WifakApplication_Obj.Enter_ValidateCode_approve_level1_610().sendKeys(SuccessMsg, Keys.ENTER);
 
 		waitHelper.waitForElementwithFluentwait(driver,FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_approve_level1_610());
@@ -2165,13 +2174,11 @@ public class FMS_WifakApplication_Steps {
 
 	@And("^User_610 retrive the first data in approve level2$")
 	public void user_retrive_the_first_data_in_approve_level2() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver,
-				FMS_WifakApplication_Obj.Enter_ValidateCode_approve_level2_610());
+		waitHelper.waitForElementwithFluentwait(driver,FMS_WifakApplication_Obj.Enter_ValidateCode_approve_level2_610());
 //	    	FMS_WifakApplication_Obj.approve1ClearBtn().click();
 		FMS_WifakApplication_Obj.Enter_ValidateCode_approve_level2_610().sendKeys(SuccessMsg, Keys.ENTER);
 
-		waitHelper.waitForElementwithFluentwait(driver,
-				FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_approve_level2_610());
+		waitHelper.waitForElementwithFluentwait(driver,FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_approve_level2_610());
 		clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_approve_level2_610());
 	}
 
@@ -2190,8 +2197,19 @@ public class FMS_WifakApplication_Steps {
 
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ButtonConfirmOk1_610());
 		FMS_WifakApplication_Obj.ButtonConfirmOk1_610().click();
+		
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ButtonConfirmOk1_610());
-		FMS_WifakApplication_Obj.ButtonConfirmOk1_610().click();
+		for (int i = 0; i < 2000; i++) {
+			try {
+				FMS_WifakApplication_Obj.ButtonSuccessOk1_610().click();
+				break;
+			} catch (Exception e) {
+				if (i == 1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
 	}
 
 	// --------------------approvel 3
@@ -2204,13 +2222,11 @@ public class FMS_WifakApplication_Steps {
 
 	@And("^User_610 retrive the first data in approve level3$")
 	public void user_retrive_the_first_data_in_approve_level3() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver,
-				FMS_WifakApplication_Obj.Enter_ValidateCode_approve_level3_610());
+		waitHelper.waitForElementwithFluentwait(driver,FMS_WifakApplication_Obj.Enter_ValidateCode_approve_level3_610());
 //	    	FMS_WifakApplication_Obj.approve1ClearBtn().click();
 		FMS_WifakApplication_Obj.Enter_ValidateCode_approve_level3_610().sendKeys(SuccessMsg, Keys.ENTER);
 
-		waitHelper.waitForElementwithFluentwait(driver,
-				FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_approve_level3_610());
+		waitHelper.waitForElementwithFluentwait(driver,FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_approve_level3_610());
 		clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_approve_level3_610());
 	}
 
@@ -2230,8 +2246,31 @@ public class FMS_WifakApplication_Steps {
 
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ButtonConfirmOk1_610());
 		FMS_WifakApplication_Obj.ButtonConfirmOk1_610().click();
-		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ButtonSuccessOk1_610());
-		FMS_WifakApplication_Obj.ButtonSuccessOk1_610().click();
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ButtonConfirmOk1_610());
+		for (int i = 0; i < 2000; i++) {
+			try {
+				FMS_WifakApplication_Obj.ButtonSuccessOk1_610().click();
+				break;
+			} catch (Exception e) {
+				if (i == 1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.sendAlertPopup1_610());
+		for (int i = 0; i < 2000; i++) {
+			try {
+				FMS_WifakApplication_Obj.sendAlertPopup1_610().click();
+				break;
+			} catch (Exception e) {
+				if (i == 1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
 	}
 
 	// ------- @814762 facility management screen
@@ -2830,11 +2869,13 @@ public class FMS_WifakApplication_Steps {
 	@And("^User_610 enter the code value in update after approve menu$")
 	public void user_enter_the_code_value_in_update_after_approve_menu() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.facilityTypeSearchCode_610());
-		String string = testData.get("Facility Type In Facility Limits");
-		System.err.println(string);
-//		FMS_WifakApplication_Obj.facilityTypeSearchCode_610().sendKeys("19", Keys.ENTER);
+//		String string = testData.get("Facility Type In Facility Limits");
+//		System.err.println(string);
+		
+		FMS_WifakApplication_Obj.facilityTypeSearchCode_610().sendKeys("369", Keys.ENTER);
+		
 //		FMS_WifakApplication_Obj.facilityTypeSearchCode_610().sendKeys(testData.get("Facility Type"));
-		FMS_WifakApplication_Obj.facilityTypeSearchCode_610().sendKeys(testData.get("Facility Type In Facility Limits"), Keys.ENTER);
+//		FMS_WifakApplication_Obj.facilityTypeSearchCode_610().sendKeys(testData.get("Facility Type In Facility Limits"), Keys.ENTER);
 	}
 
 	@And("^User_610 double click on the retrieved data in update after approve menu$")
@@ -2918,12 +2959,30 @@ public class FMS_WifakApplication_Steps {
 			committeeApprovalFlag.click();
 		}
 	}
+	
+	@And("^User_610 Uncheck the Committee Approval flag$")
+	public void user_uncheck_the_committee_approval_flag() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.committeeApprovalFlag_610());
+		WebElement committeeApprovalFlag = FMS_WifakApplication_Obj.committeeApprovalFlag_610();
+		if ((committeeApprovalFlag.isSelected())) {
+			committeeApprovalFlag.click();
+		}
+	}
 
 	@And("^User_610 check the Credit Authorization flag$")
 	public void user_check_the_credit_authorization_flag() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.creditAuthorzieFlag_610());
 		WebElement creditAuthorzieFlag = FMS_WifakApplication_Obj.creditAuthorzieFlag_610();
 		if (!(creditAuthorzieFlag.isSelected())) {
+			creditAuthorzieFlag.click();
+		}
+	}
+	
+	@And("^User_610 Uncheck the Credit Authorization flag$")
+	public void user_uncheck_the_credit_authorization_flag() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.creditAuthorzieFlag_610());
+		WebElement creditAuthorzieFlag = FMS_WifakApplication_Obj.creditAuthorzieFlag_610();
+		if ((creditAuthorzieFlag.isSelected())) {
 			creditAuthorzieFlag.click();
 		}
 	}
@@ -3014,7 +3073,7 @@ public class FMS_WifakApplication_Steps {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approveSearchCode_610());
 		// FMS_WifakApplication_Obj.approveSearchCode_610().sendKeys(testData.get("Search
 		// Code"),Keys.ENTER);
-		FMS_WifakApplication_Obj.approveSearchCode_610().sendKeys("19", Keys.ENTER);
+		FMS_WifakApplication_Obj.approveSearchCode_610().sendKeys("369", Keys.ENTER);
 	}
 
 	@And("^User_610 double click on the retrieved data in Approve menu$")
@@ -3037,6 +3096,7 @@ public class FMS_WifakApplication_Steps {
 				}
 			}
 		}
+		
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.facilityTypeApproveBtn_610());
 		FMS_WifakApplication_Obj.facilityTypeApproveBtn_610().click();
 
@@ -3046,6 +3106,207 @@ public class FMS_WifakApplication_Steps {
 		FMS_WifakApplication_Obj.successPopupOkBtn_610().click();
 	}
 	
+	//----------------Committee Approval 
+
+	@And("User_{int} select the level3 decision as forward to Approvel Committee")
+	public void user_select_the_level3_decision_as_forward_to_approvel_committee(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approveLevel3ForwardDecision_610());
+		DropDownhelper.SelectUsingVisibleText(FMS_WifakApplication_Obj.approveLevel3ForwardDecision_610(), "Forward");
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approveLevel3RecommendationCmt_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approveLevel3RecommendationCmt_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approveLevel3RecommendationCmt_610());
+		FMS_WifakApplication_Obj.approveLevel3RecommendationCmt_610().sendKeys("hbv");
+	}
+
+	@And("User_{int} click Approval Committee Recommendations Menu")
+	public void user_click_approval_committee_recommendations_menu(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ApprovalCommitteeRecommendationsScreen_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.ApprovalCommitteeRecommendationsScreen_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.ApprovalCommitteeRecommendationsScreen_610());
+	}
+
+	@And("User_{int} enter facility code in  Approval Committee Recommendations Menu")
+	public void user_enter_facility_code_in_approval_committee_recommendations_menu(Integer int1) throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.enterFacilityCodeIn_ApprovalCommitteeRecommendationsScreen_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.enterFacilityCodeIn_ApprovalCommitteeRecommendationsScreen_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.enterFacilityCodeIn_ApprovalCommitteeRecommendationsScreen_610());
+		FMS_WifakApplication_Obj.enterFacilityCodeIn_ApprovalCommitteeRecommendationsScreen_610().sendKeys(SuccessMsg, Keys.ENTER);
+		
+	}
+	
+	@And("User_{int} enter facility code Approval Committee Recommendations Menu")
+	public void user_enter_facility_approval_committee_recommendations_menu(Integer int1) throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.enterFacilityCodeIn_ApprovalCommitteeRecommendationsScreen_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.enterFacilityCodeIn_ApprovalCommitteeRecommendationsScreen_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.enterFacilityCodeIn_ApprovalCommitteeRecommendationsScreen_610());
+		FMS_WifakApplication_Obj.enterFacilityCodeIn_ApprovalCommitteeRecommendationsScreen_610().sendKeys(SuccessMsg, Keys.TAB);
+		
+	}
 	
 
+	@Then("User_{int} validate the facility code is displaying in  Approval Committee Recommendations Menu")
+	public void user_validate_the_facility_code_is_displaying_in_approval_committee_recommendations_menu(Integer int1) throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ApprovalCommitteeRecommendationsScreen_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.ApprovalCommitteeRecommendationsScreen_610());
+		Assert.assertEquals(true,FMS_WifakApplication_Obj.ApprovalCommitteeRecommendationsScreen_610().isDisplayed());
+		Thread.sleep(5000);
+	//	clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.ApprovalCommitteeRecommendationsScreen_610());
+	}
+	
+	//--------------------------
+	
+	@And("User_{int} enter CIF code in  Approval Committee Recommendations Menu")
+	public void user_enter_cif_code_in_approval_committee_recommendations_menu(Integer int1) throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.enterCIFCodeIn_ApprovalCommitteeRecommendationsScreen_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.enterCIFCodeIn_ApprovalCommitteeRecommendationsScreen_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.enterCIFCodeIn_ApprovalCommitteeRecommendationsScreen_610());
+		FMS_WifakApplication_Obj.enterCIFCodeIn_ApprovalCommitteeRecommendationsScreen_610().sendKeys(testData.get("CIF NO IN Approval Committee"), Keys.ENTER);
+		Thread.sleep(5000);
+	}
+
+	@Then("User_{int} validate facility with CIF code displaying in  Approval Committee Recommendations Menu")
+	public void user_validate_facility_with_cif_code_displaying_in_approval_committee_recommendations_menu(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ApprovalCommitteeRecommendationsScreen_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.ApprovalCommitteeRecommendationsScreen_610());
+		Assert.assertEquals(true,FMS_WifakApplication_Obj.ApprovalCommitteeRecommendationsScreen_610().isDisplayed());
+		
+		String xpath ="//table[@id='applicationFacilityGridTbl_Id_WIFT002MT']/tbody/tr[2]/td[text()='"+"000000"+SuccessMsg+"']";
+		                for (int i = 0; i < 200; i++) {
+		                    try {
+		                        WebElement Code  = driver.findElement(By.xpath(xpath));
+		                        if (Code.isDisplayed()) {
+		                            Assert.assertEquals(Code.isDisplayed(), true);
+		                            clicksAndActionsHelper.doubleClick(Code);
+		                        }
+		                        break;
+		                    } catch (Exception e) {
+		                        if (i==199) {
+		                            Assert.fail(e.getMessage());
+		                        }
+		                    }
+		                }
+		
+	//	clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.ApprovalCommitteeRecommendationsScreen_610());
+		
+	}
+	
+	//---------
+	
+	@And("^User_610 Click on Approval Committee Recommendations in Wifak Application$")
+	public void User_609_Click_on_Approval_Committee_Recommendations_in_Wifak_Application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.WifakApplication_ApprovalCommitteeRecommendations());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.WifakApplication_ApprovalCommitteeRecommendations());
+	}
+	
+//	@And("^User_609 Select the Code in Approval Committee Recommendations$")
+//	public void User_609_Select_the_Code_in_Approval_Committee_Recommendations() throws Throwable {
+//		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.WifakApplication_ApprovalCommitteeRecommendations_Code());
+//		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.WifakApplication_ApprovalCommitteeRecommendations_Code());		
+//		String ApplicationCode = ApplicationNO;
+//		int ApplicationCodelen = 10 - ApplicationCode.length();
+//	    for(int i = 1; i <=ApplicationCodelen ; i++){
+//	    	ApplicationCode= "0" + ApplicationCode;
+//	    }
+//	  
+//		String xpath ="//table[@id='applicationFacilityGridTbl_Id_WIFT002MT']/tbody/tr[2]/td[text()='"+ApplicationCode+"']";
+//		for (int i = 0; i < 200; i++) {
+//			try {
+//				WebElement Code  = driver.findElement(By.xpath(xpath));
+//				if (Code.isDisplayed()) {
+//					Assert.assertEquals(Code.isDisplayed(), true);
+//					clicksAndActionsHelper.doubleClick(Code);
+//				}
+//				break;
+//			} catch (Exception e) {
+//				if (i==199) {
+//					Assert.fail(e.getMessage());
+//				}
+//			}
+//		}
+//	}
+	
+	@And("^User_610 Click Recommend button in Approval Committee Recommendations$")
+	public void User_609_Click_Recommend_button_in_Approval_Committee_Recommendations() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.WifakApplication_ApprovalCommitteeRecommendations_Recommend());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.WifakApplication_ApprovalCommitteeRecommendations_Recommend());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.facilityAlreadyCreatedPopup_610());
+		FMS_WifakApplication_Obj.facilityAlreadyCreatedPopup_610().click();
+	}
+
+	@And("^User_610 Select the decision in Approval Committee Recommendations$")
+	public void User_609_Select_the_decision_in_Approval_Committee_Recommendations() throws Throwable {
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ApprovalCommitteesRecommendationPopup_610());
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.selectUserJAY_ApprovalCommitteesRecommendationPopup_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.selectUserJAY_ApprovalCommitteesRecommendationPopup_610());
+		
+		//User = fmsLoginExceldata.getTestdata("FMS_User11");	
+	//	(//table[@id='ApplicationFacilityRecommendationGrid_WIFT002MT']//td[text()='JAY'])[1]
+//		String RecommendedBy = "(//table[@id='ApplicationFacilityRecommendationGrid_WIFT002MT']//td[text()='"+"JAY"+"'])[1]";
+//		WebElement RecommendedBy_user = driver.findElement(By.xpath(RecommendedBy));
+//		RecommendedBy_user.click();
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation());
+		DropDownhelper.SelectUsingVisibleText(FMS_WifakApplication_Obj.WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation(), testData.get("Committee Recommendations"));
+	}
+	
+	@And("^User_610 Click on Ok in Approval Committee Recommendations$")
+	public void User_609_Click_on_Ok_in_Approval_Committee_Recommendations() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation_Ok());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation_Ok());
+	}
+	
+	@And("User_{int} Enter the comments in Approval Committee Recommendations")
+	public void user_enter_the_comments_in_approval_committee_recommendations(Integer int1) throws Throwable {
+		String num="0123456789", comments="";
+		for (int i = 1 ;i<=30;i++ ) {
+			comments=comments+num;
+					}
+		System.err.println(comments);
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.enterCMT_UserJAY_ApprovalCommitteesRecommendationPopup_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.enterCMT_UserJAY_ApprovalCommitteesRecommendationPopup_610());
+		Thread.sleep(5000);
+		
+		
+		FMS_WifakApplication_Obj.enterCMT_UserJAY_ApprovalCommitteesRecommendationPopup_610().sendKeys(comments);
+		
+	}
+	
+	//---Authorize Reject Application
+	
+	@And("User_{int} Click Authorize Reject Application For Financial Facilities screen")
+	public void user_click_authorize_reject_application_for_financial_facilities_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.AuthorizeRejectApplicationForFinancialFacilitiesscreen_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.AuthorizeRejectApplicationForFinancialFacilitiesscreen_610());
+	}
+	
+	@And("User_{int} retrive the first data in Authorize Reject Application For Financial Facilities screen")
+	public void user_retrive_the_first_data_in_authorize_reject_application_for_financial_facilities_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver,FMS_WifakApplication_Obj.Enter_ValidateCode_AuthorizeRejectApplication_610());
+	    FMS_WifakApplication_Obj.Enter_ValidateCode_AuthorizeRejectApplication_610().sendKeys(SuccessMsg, Keys.ENTER);
+
+	waitHelper.waitForElementwithFluentwait(driver,FMS_WifakApplication_Obj.ClickTheValue_AuthorizeRejectApplication_610());
+	clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.ClickTheValue_AuthorizeRejectApplication_610());
+	}
+
+	@And("User_{int} Click Approval Committiees button in Authorize Reject Application For Financial Facilities screen")
+	public void user_click_approval_committiees_button_in_authorize_reject_application_for_financial_facilities_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvalcommittieeskey_AuthorizeRejectApplication_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvalcommittieeskey_AuthorizeRejectApplication_610());
+		
+	}
+
+	@And("User_{int} Validate the Approval Committee Recommendations comments displayed or not in Authorize Reject screen")
+	public void user_validate_the_approval_committee_recommendations_comments_displayed_or_not_in_authorize_reject_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ApprovalCommitteesRecommendationPopup_610());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.enterCMT_UserJAY_AuthorizeRejectApplication_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.enterCMT_UserJAY_AuthorizeRejectApplication_610());	
+		Assert.assertEquals(true, FMS_WifakApplication_Obj.enterCMT_UserJAY_AuthorizeRejectApplication_610().isDisplayed());
+		
+	}
+	
 }

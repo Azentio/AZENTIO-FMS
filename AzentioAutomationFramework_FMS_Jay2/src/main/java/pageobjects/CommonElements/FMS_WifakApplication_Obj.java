@@ -35,6 +35,26 @@ public class FMS_WifakApplication_Obj {
 		return Wifak_Application_second;
 	}
 	
+	@FindBy(xpath = "//a[@id='tech_details_icon_id']")
+	private WebElement technicalDetails_609;
+	public WebElement technicalDetails_609() {
+		return technicalDetails_609; 
+	}
+
+    @FindBy(xpath = "//label[contains(text(),'Clear Cache ')]")
+	private WebElement FSM_ClearCacheInTechnicalDetailsIcon_609;
+	public WebElement FSM_ClearCacheInTechnicalDetailsIcon_609() {
+        return FSM_ClearCacheInTechnicalDetailsIcon_609;
+    }
+
+
+    @FindBy(id = "_popup_path_sol_ok")
+	private WebElement Ok;
+	public WebElement Ok() {
+		return Ok;
+	}
+	
+	
 	//-----Facilities Management  in application for facility
 	@FindBy(xpath =  "//td[text()='Facilities Management']")
 	private WebElement Click_Facilities_Management;
@@ -240,13 +260,13 @@ public class FMS_WifakApplication_Obj {
 	
 	@FindBy(xpath =  "//div[text()='Please wait while server request completes']")
 	private WebElement SeverReruest_Popup;
-	public WebElement SeverReruest_Popup() {
+	public WebElement SeverReruest_Popup_610() {
 		return SeverReruest_Popup;
 	}
 	
 	@FindBy(xpath =  "//input[@id='_popup_path_sol_ok']")
 	private WebElement ServerReuestOK;
-	public WebElement ServerReuestOK() {
+	public WebElement ServerReuestOK_610() {
 		return ServerReuestOK;
 	}
 	
@@ -1235,11 +1255,7 @@ public class FMS_WifakApplication_Obj {
 	
 	
 	
-	@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
-    private WebElement warning_popup_ok_btn;
-    public WebElement WarningPopupOkBtn_610() {
-        return warning_popup_ok_btn;
-    }
+	
 
 //    @FindBy(xpath = "//input[@id='_popup_path_sol_ok']")
 //    private WebElement success_popup_ok_btn;
@@ -1247,12 +1263,21 @@ public class FMS_WifakApplication_Obj {
 //        return success_popup_ok_btn;
 //    }
 
+    
+    //-----limitDetailsValidateButton
+    
     @FindBy(xpath = "//button[@id='applicationfacility_save_btn_WIFT001MT']")
     private WebElement limit_details_validate_btn;
     public WebElement limitDetailsValidateBtn_610() {
         return limit_details_validate_btn;
     }
 
+    @FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
+    private WebElement warning_popup_ok_btn;
+    public WebElement WarningPopupOkBtn_610() {
+        return warning_popup_ok_btn;
+    } 
+    
     @FindBy(xpath = "//div[text()='CONFIRM']")
     private WebElement confirm_popup;
     public WebElement confirmPopup_610() {
@@ -1286,8 +1311,16 @@ public class FMS_WifakApplication_Obj {
 
     @FindBy(xpath = "//a[@id='dismissbut_WIFT001MT']/span")
     private WebElement sendAlertPopup;
-    public WebElement sendAlertPopup() {
+    public WebElement sendAlertPopup_610() {
         return sendAlertPopup;
+    }
+    
+    //-----------------
+    
+    @FindBy(xpath = "//a[@id='dismissbut_WIFT001AP3']")
+    private WebElement sendAlertPopup1_610;
+    public WebElement sendAlertPopup1_610() {
+        return sendAlertPopup1_610;
     }
 	
     @FindBy(xpath = "//a[@id='dismissbut_WIFT008UP']/span")
@@ -1452,6 +1485,7 @@ public class FMS_WifakApplication_Obj {
 	public WebElement approveLevel3SelectDecision_610() {
 		return approve_level3_select_devision;
 	}
+	
 	@FindBy(xpath = "//button[@id='applicationfacility_approvelevel3_btn_WIFT001AP3']")
 	private WebElement approve_level3_submit_btn;
 	public WebElement approveLevel3SubmitBtn_610() {
@@ -1954,6 +1988,130 @@ public class FMS_WifakApplication_Obj {
 		return facility_type_approve_btn;
 	}
 
+//----Committee Approval
 	
+	//-------------approvel level 3 
 	
+		@FindBy(xpath =  "//select[@id='applicationFacilityDecision3_WIFT001AP3']")
+		private WebElement approveLevel3ForwardDecision_610;
+		public WebElement approveLevel3ForwardDecision_610() {
+			return approveLevel3ForwardDecision_610;
+		} 
+		
+		@FindBy(xpath =  "//textarea[@id='applicationFacilityReommemdation3_WIFT001AP3']")
+		private WebElement approveLevel3RecommendationCmt_610;
+		public WebElement approveLevel3RecommendationCmt_610() {
+			return approveLevel3RecommendationCmt_610;
+		} 
+		
+		//---------
+		
+		@FindBy(xpath =  "//a[@id='WIFT002MT']//span[text()='Approval Committee Recommendations ']")
+		private WebElement ApprovalCommitteeRecommendationsScreen_610;
+		public WebElement ApprovalCommitteeRecommendationsScreen_610() {
+			return ApprovalCommitteeRecommendationsScreen_610;
+		} 
+		
+		@FindBy(xpath =  "//input[@id='applicationFacilityGridTbl_Id_WIFT002MT_gs_fmsApplVO.CODE']")
+		private WebElement enterFacilityCodeIn_ApprovalCommitteeRecommendationsScreen_610;
+		public WebElement enterFacilityCodeIn_ApprovalCommitteeRecommendationsScreen_610() {
+			return enterFacilityCodeIn_ApprovalCommitteeRecommendationsScreen_610;
+		} 
+		
+		@FindBy(xpath =  "//input[@id='applicationFacilityGridTbl_Id_WIFT002MT_gs_fmsApplVO.CIF']")
+		private WebElement enterCIFCodeIn_ApprovalCommitteeRecommendationsScreen_610;
+		public WebElement enterCIFCodeIn_ApprovalCommitteeRecommendationsScreen_610() {
+			return enterCIFCodeIn_ApprovalCommitteeRecommendationsScreen_610;
+		} 
+	
+		//---------------------
+		
+		@FindBy(xpath = "//span[contains(text(),'Approval Committee Recommendations ')]")
+		private WebElement WifakApplication_ApprovalCommitteeRecommendations;
+		public WebElement WifakApplication_ApprovalCommitteeRecommendations() {
+			return WifakApplication_ApprovalCommitteeRecommendations;
+		}
+		
+		@FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT002MT_gs_fmsApplVO.CODE']")
+		private WebElement WifakApplication_ApprovalCommitteeRecommendations_Code;
+		public WebElement WifakApplication_ApprovalCommitteeRecommendations_Code() {
+			return WifakApplication_ApprovalCommitteeRecommendations_Code;
+		}
+		
+		@FindBy(xpath = "//span[contains(text(),' Recommend ')]")
+		private WebElement WifakApplication_ApprovalCommitteeRecommendations_Recommend;
+		public WebElement WifakApplication_ApprovalCommitteeRecommendations_Recommend() {
+			return WifakApplication_ApprovalCommitteeRecommendations_Recommend;
+		}
+		
+		@FindBy(xpath = "//span[text()='Approval Committees Recommendation User Id : JAY']")
+		private WebElement ApprovalCommitteesRecommendationPopup_610;
+		public WebElement ApprovalCommitteesRecommendationPopup_610() {
+			return ApprovalCommitteesRecommendationPopup_610;
+		}
+		
+		@FindBy(xpath = "(//td[@tdlabel='Recommended By' and text()='JAY'])[1]")
+		private WebElement selectUserJAY_ApprovalCommitteesRecommendationPopup_610;
+		public WebElement selectUserJAY_ApprovalCommitteesRecommendationPopup_610() {
+			return selectUserJAY_ApprovalCommitteesRecommendationPopup_610;
+		}
+		
+		@FindBy(xpath = "(//td[@tdlabel='Recommended By' and text()='JAY'])[1]//parent::tr/td[@tdlabel='Comments']")
+		private WebElement enterCMT_UserJAY_ApprovalCommitteesRecommendationPopup_610;
+		public WebElement enterCMT_UserJAY_ApprovalCommitteesRecommendationPopup_610() {
+			return enterCMT_UserJAY_ApprovalCommitteesRecommendationPopup_610;
+		}
+		
+		@FindBy(xpath = "(//td[text()='JAY' and @tdlabel='Recommended By'])[1]")
+		private WebElement selectUserJAy_InApprovalCommitteesRecommendationPopup_610;
+		public WebElement selectUserJAy_InApprovalCommitteesRecommendationPopup_610() {
+			return selectUserJAy_InApprovalCommitteesRecommendationPopup_610;
+		}
+		
+		
+		@FindBy(xpath = "//select[@gridid='ApplicationFacilityRecommendationGrid_WIFT002MT']")
+		private WebElement WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation;
+		public WebElement WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation() {
+			return WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation;
+		}
+		
+		@FindBy(xpath = "//span[text()='OK']")
+		private WebElement WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation_Ok;
+		public WebElement WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation_Ok() {
+			return WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation_Ok;
+		}
+		
+		//-------------------------Authorize Reject Application For Financial Facilities screen
+		
+		@FindBy(xpath = "//span[text()='Authorize/Reject Application For Financial Facilities']")
+		private WebElement AuthorizeRejectApplicationForFinancialFacilitiesscreen_610;
+		public WebElement AuthorizeRejectApplicationForFinancialFacilitiesscreen_610() {
+			return AuthorizeRejectApplicationForFinancialFacilitiesscreen_610;
+		}
+		
+		@FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT004MT_gs_fmsApplVO.CODE']")
+		private WebElement Enter_ValidateCode_AuthorizeRejectApplication_610;
+		public WebElement Enter_ValidateCode_AuthorizeRejectApplication_610() {
+			return Enter_ValidateCode_AuthorizeRejectApplication_610;
+		}
+		
+		@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT004MT_1_fmsApplVO.CODE']")
+		private WebElement ClickTheValue_AuthorizeRejectApplication_610;
+		public WebElement ClickTheValue_AuthorizeRejectApplication_610() {
+			return ClickTheValue_AuthorizeRejectApplication_610;
+		}
+		
+		@FindBy(xpath = "//label[@id='applicationfacilityFormId_WIFT004MT_approvalcommittiees_key']")
+		private WebElement approvalcommittieeskey_AuthorizeRejectApplication_610;
+		public WebElement approvalcommittieeskey_AuthorizeRejectApplication_610() {
+			return approvalcommittieeskey_AuthorizeRejectApplication_610;
+		}
+		
+		//Approval commitee comments => (//td[@tdlabel='Recommended By' and text()='JAY'])[1]//parent::tr/td[@tdlabel='Comments']
+		
+		@FindBy(xpath = "(//td[@tdlabel='Recommended By' and text()='JAY'])[1]//parent::tr/td[@tdlabel='Comments']")
+		private WebElement enterCMT_UserJAY_AuthorizeRejectApplication_610;
+		public WebElement enterCMT_UserJAY_AuthorizeRejectApplication_610() {
+			return enterCMT_UserJAY_AuthorizeRejectApplication_610;
+		}
 }

@@ -8,16 +8,16 @@ import io.cucumber.testng.CucumberOptions;
 import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
-@CucumberOptions(features = {"src/test/java/features/ApplicationForFinancialFacility.feature"},
+@CucumberOptions(features = {"src/test/java/features/CommitteeApproval_610.feature"},
                 glue = "stepdefinitions",
                 
                 //monochrome=false, //to make steps in color
-                plugin = { "pretty",
+                plugin = { "pretty", 
                            "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                            "rerun:ReRunScenarios/FailedReRun.txt"}
           //   ,  dryRun = true //to check compilation errors                                      
             //   , tags="@127788" 
-            		,   tags="@740790"
+            		,   tags="@288531_01"
 
 )
 public class TestApplication extends AbstractTestNGCucumberTests {

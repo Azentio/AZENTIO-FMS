@@ -1,6 +1,5 @@
 Feature: Wifak Application
 
-    
   @285052
   Scenario: System giving error on updating an application
     Given navigate to FMS application2 and login with valid credentials
@@ -109,7 +108,7 @@ Feature: Wifak Application
     And User_610 Click Facilities Management
     And User_610 Click Maintence Screen
     And User_610 Click and Enter Application Ref No
-    And User_610 Click facility Limit Details in Facilities Management 
+    And User_610 Click facility Limit Details in Facilities Management
     And User_610 Click ProductClass In facility Limit Details
     Then User_610 Enter Previous data In MaturityDate
 
@@ -140,10 +139,9 @@ Feature: Wifak Application
     Then Enter Holiday date in Expected Payment Date in Limit Details SubMenu
     And Validate holiday day allow or not
     And Confirm the Requested Holiday date in Limit Details SubMenu
-    #   And  Confirm the Requested Holiday date in Limit Details SubMenu
-   # And Click Add button AfterEnter Value On Product Class
 
-  
+  #   And  Confirm the Requested Holiday date in Limit Details SubMenu
+  # And Click Add button AfterEnter Value On Product Class
   @579604
   Scenario: TSR - KCB170047
     Given navigate to FMS application2 and login with valid credentials
@@ -205,7 +203,6 @@ Feature: Wifak Application
     And User_610 select the level3 decision as approve
     When User_610 clicks on the level3 submit button
 
-  
   @740809
   Scenario: TSR-AIBBI180258
     Given navigate to FMS application2 and login with valid credentials
@@ -280,9 +277,37 @@ Feature: Wifak Application
     And User_610 validate the product class screen
     And User_610 validate the document details screen
 
-  @828238
+  @828238_01
   Scenario: ABEI190282 - Facility Closure Error
-    Given navigate to FMS application2 and login with valid credentials
+  
+    Given navigate to FMS param application and login with valid credentials2
+    And User_610 clicks on the parameter module
+    And User_610 clicks on the Facility Type feature
+    And User_610 clicks on the update after approve menu in Facility type
+    And User_610 enter the code value in update after approve menu
+    And User_610 double click on the retrieved data third row in update after approve menu
+    And User_610 clicks on the facility details tab in update after approve
+    And User_610 clicks on the STP Facility Requirements option
+    And User_610 check the Customer Grading flag
+    And User_610 check the Overwrite Grading flag
+    And User_610 check the Credit Review flag
+    And User_610 check the Committee Approval flag
+    And User_610 check the Credit Authorization flag
+    And User_610 check the Issue Facility Offer flag
+    And User_610 check the Client Response flag
+    And User_610 check the Document Validation flag
+    And User_610 check the Final Approval flag
+    And User_610 check the Create Active Facility If Within Limits flag
+    And User_610 Check the Automatically Approve Facility If Within Limits flag
+    When User_610 clicks on the Update button
+    And User_610 after the update go to the Approve menu
+    And User_610 enter the code value in Approve menu
+    And User_610 double click on the retrieved data in Approve menu
+    When User_610 clicks on the Approve button in Approve menu under Facility Type
+
+  @828238_02
+  Scenario: ABEI190282 - Facility Closure Error
+    Given navigate to FMS application2 and login with valid credentials 
     And User_610 get the test data set id for AT_AFF_037
     And User_610 Click Wifak Application first
     And User_610 Click Wifak Application Second
@@ -308,25 +333,24 @@ Feature: Wifak Application
     And User_610 Click Document Details
     And User_610 Enter The Value Solicitor Name
     And User_610 Enter The Value Estimator Name
- #   And User_610 Save button
+    #   And User_610 Save button
     And User_610 Click Validate Button in Document Details
-    And User clicks the Approve Level1 link
-    And User retrive the first data in approve level1
-    And select the Approve level1 decision as approve
-    And User clicks on the level1 submit button
-    And User clicks the Approve Level2 link
-    And User retrive the first data in approve level2
-    And User select the level2 decision as approve
-    And User clicks on the level2 submit button
-    And User clicks the Approve Level3 link
-    And User retrive the first data in approve level3
-    And User select the level3 decision as approve
-    When User clicks on the level3 submit button
+    And User_610 clicks the Approve Level1 link
+    And User_610 retrive the first data in approve level1
+    And User_610 select the Approve level1 decision as approve
+    And User_610 clicks on the level1 submit button
+    And User_610 clicks the Approve Level2 link
+    And User_610 retrive the first data in approve level2
+    And User_610 select the level2 decision as approve
+    And User_610 clicks on the level2 submit button
+    And User_610 clicks the Approve Level3 link
+    And User_610 retrive the first data in approve level3
+    And User_610 select the level3 decision as approve
+    When User_610 clicks on the level3 submit button
 
   #check flag FMS params
   @315144
   Scenario: Remaining Cash margin updation after complete utilization of facility value -IIAB150154
-    
     Given navigate to FMS param application and login with valid credentials2
     And User_610 clicks on the parameter module
     And User_610 clicks on the Facility Type feature
@@ -351,12 +375,10 @@ Feature: Wifak Application
     And User_610 enter the code value in Approve menu
     And User_610 double click on the retrieved data in Approve menu
     When User_610 clicks on the Approve button in Approve menu under Facility Type
-    
-      
-    #create facility num
-    @315144_02
-    
-    Scenario: Remaining Cash margin updation after complete utilization of facility value -IIAB150154
+
+  #create facility num
+  @315144_02
+  Scenario: Remaining Cash margin updation after complete utilization of facility value -IIAB150154
     Given navigate to FMS application2 and login with valid credentials
     And User_610 get the test data set id for AT_AFF_037
     And User_610 Click Wifak Application first
@@ -383,7 +405,7 @@ Feature: Wifak Application
     And User_610 Click Document Details
     And User_610 Enter The Value Solicitor Name
     And User_610 Enter The Value Estimator Name
-#    And User_610 Save button
+    #    And User_610 Save button
     And User_610 Click Validate Button in Document Details
     And User clicks the Approve Level1 link
     And User retrive the first data in approve level1
@@ -397,11 +419,10 @@ Feature: Wifak Application
     And User retrive the first data in approve level3
     And User select the level3 decision as approve
     When User clicks on the level3 submit button
-    
-    @315144_03
-    
-    Scenario: Remaining Cash margin updation after complete utilization of facility value -IIAB150154
-		 Given navigate to FMS application2 and login with valid credentials
+
+  @315144_03
+  Scenario: Remaining Cash margin updation after complete utilization of facility value -IIAB150154
+    Given navigate to FMS application2 and login with valid credentials
     And User_610 Click Wifak Application first
     And User_610 Click Wifak Application Second
     And User_610 click facility management
@@ -425,13 +446,12 @@ Feature: Wifak Application
     And User_610 enter Description Arab in Draw Down Request screen
     And User_610 enter Date Submitted in Draw Down Request screen
     And User_610 enter Date ValueDate in Draw Down Request screen
-    And User_610 click Drawdown Additional Details 
+    And User_610 click Drawdown Additional Details
     And User_610  validate Accepting or not extra amount in FC Amount
-    
-    @247933
-    Scenario: TSR-BMOI140488-Salary of the CIF is not defaulting in ‘Average salary for DBR Calc’ field upon doing a modify request for the approved facility.
 
-		Given navigate to FMS param application and login with valid credentials2
+  @247933
+  Scenario: TSR-BMOI140488-Salary of the CIF is not defaulting in ‘Average salary for DBR Calc’ field upon doing a modify request for the approved facility.
+    Given navigate to FMS param application and login with valid credentials2
     And User_610 clicks on the parameter module
     And User_610 clicks on the Facility Type feature
     And User_610 clicks on the update after approve menu in Facility type
@@ -455,45 +475,42 @@ Feature: Wifak Application
     And User_610 enter the code value in Approve menu
     And User_610 double click on the retrieved data in Approve menu
     When User_610 clicks on the Approve button in Approve menu under Facility Type
-    
-    @247933_02
-    Scenario: TSR-BMOI140488-Salary of the CIF is not defaulting in ‘Average salary for DBR Calc’ field upon doing a modify request for the approved facility.
-    
+
+  @247933_02
+  Scenario: TSR-BMOI140488-Salary of the CIF is not defaulting in ‘Average salary for DBR Calc’ field upon doing a modify request for the approved facility.
     Given navigate to FMS application and login with valid credentials
-And User_610 get the test data for test case AT_FM_043_FMSCore
-And User_610 clicks on the Request module
-And User_610 clicks on the Request Financing under Request module
-And User_610 clicks on the Request for Financing under Request Financing feature
-And User_610 clicks on the Maintanance screen under Request for Financing
-And User_610 select the Reason for submission under main screen in Request for Financing
-And User_610 enter the CIF no in main screen under Request for Financing
-And User_610 enter the facility type in main screen under Request for Financing
-And User_610 enter the total limit in main screen under Request for Financing
-And User_610 move to the sublimit tab in main screen under Request for Financing
-And User_610 click the add new button in sublimit tab under main screen in Request for Financing
-And User_610 enter the product class in limit details tab under sublimit tab
-And User_610 enter the margin value in limit details tab under sublimit tab
-And User_610 click the add button in limit details tab under sublimit tab
-When User_610 click the Save button in main screen under Request for Financing
-And User_610 click the Validate button in main screen Request for Financing
-Then User_610 click the approve level1 under Request for Financing
-And User_610 enter the request code in approve level1 under Request for Financing
-And User_610 double click on the first row in approve level1 under Request for Financing
-And User_610 move to customer grading tab in approve level1 under Request for Financing
-And User_610 select the approve level1 recommendation decision in approve level1 under Request for Financing
-And User_610 select the decision forward to as approval committee in approve level1 under Request for Financing
-And User_610 select the approval committee in approve level1 under Request for Financing
-And User_610 click the Approve button in approve level1 under Request for Financing
-Then User_610 click the Approval committee recommendation under Request for Financing
-And User_610 enter the code in Approval committee recommendation under Request for Financing
-And User_610 double click on the first row in Approval committee recommendation under Request for Financing
+    And User_610 get the test data for test case AT_FM_043_FMSCore
+    And User_610 clicks on the Request module
+    And User_610 clicks on the Request Financing under Request module
+    And User_610 clicks on the Request for Financing under Request Financing feature
+    And User_610 clicks on the Maintanance screen under Request for Financing
+    And User_610 select the Reason for submission under main screen in Request for Financing
+    And User_610 enter the CIF no in main screen under Request for Financing
+    And User_610 enter the facility type in main screen under Request for Financing
+    And User_610 enter the total limit in main screen under Request for Financing
+    And User_610 move to the sublimit tab in main screen under Request for Financing
+    And User_610 click the add new button in sublimit tab under main screen in Request for Financing
+    And User_610 enter the product class in limit details tab under sublimit tab
+    And User_610 enter the margin value in limit details tab under sublimit tab
+    And User_610 click the add button in limit details tab under sublimit tab
+    When User_610 click the Save button in main screen under Request for Financing
+    And User_610 click the Validate button in main screen Request for Financing
+    Then User_610 click the approve level1 under Request for Financing
+    And User_610 enter the request code in approve level1 under Request for Financing
+    And User_610 double click on the first row in approve level1 under Request for Financing
+    And User_610 move to customer grading tab in approve level1 under Request for Financing
+    And User_610 select the approve level1 recommendation decision in approve level1 under Request for Financing
+    And User_610 select the decision forward to as approval committee in approve level1 under Request for Financing
+    And User_610 select the approval committee in approve level1 under Request for Financing
+    And User_610 click the Approve button in approve level1 under Request for Financing
+    Then User_610 click the Approval committee recommendation under Request for Financing
+    And User_610 enter the code in Approval committee recommendation under Request for Financing
+    And User_610 double click on the first row in Approval committee recommendation under Request for Financing
 
-
-
-@1038991
-Scenario: Check at the Limit Details window, the existing fields “Facility Value” and “Total Facility Value” is reset as follows
-		Given navigate to FMS application2 and login with valid credentials
-		And User_610 get the test data set id for AT_FM_099
+  @1038991
+  Scenario: Check at the Limit Details window, the existing fields “Facility Value” and “Total Facility Value” is reset as follows
+    Given navigate to FMS application2 and login with valid credentials
+    And User_610 get the test data set id for AT_FM_099
     And User_610 Click Wifak Application first
     And User_610 Click Wifak Application Second
     And User_610 Click Application for financial facilities
@@ -508,196 +525,8 @@ Scenario: Check at the Limit Details window, the existing fields “Facility Val
     And User_610 enter Down Payment Value
     And User_610 Click Offer Expiration SelectDate
     And User_610 Validate Finance Amount
-    
     And User_610 Select limit Details
     And User_610 Click Add button on limit Detail
     And User_610 Enter ValueOn Product Class
     And User_610 Enter down Payment amount
-    Then User_610 Validate Total Facility Value 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    Then User_610 Validate Total Facility Value
