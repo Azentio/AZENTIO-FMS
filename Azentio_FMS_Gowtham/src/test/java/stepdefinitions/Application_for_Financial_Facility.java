@@ -233,8 +233,8 @@ public class Application_for_Financial_Facility {
 	@And("^Enter ValueOn Product Class$")
 	public void enter_valueon_product_class() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.getEnter_ValueOn_Product_Class());
-		// applicationFinancialObj.getEnter_ValueOn_Product_Class().sendKeys("160");
-		applicationFinancialObj.getEnter_ValueOn_Product_Class().sendKeys(testData.get("Product Class"));
+		 applicationFinancialObj.getEnter_ValueOn_Product_Class().sendKeys("1");
+		//applicationFinancialObj.getEnter_ValueOn_Product_Class().sendKeys(testData.get("Product Class"));
 		applicationFinancialObj.getEnter_ValueOn_Product_Class().sendKeys(Keys.TAB);
 		 for (int i = 0; i <= 300; i++) {
 				if (!(applicationFinancialObj.getEnter_ValueOn_Product_Class().getAttribute("prevvalue").isBlank())) {
@@ -1602,6 +1602,53 @@ public class Application_for_Financial_Facility {
 				Assert.fail();
 			}
 		}
+		
+		
+		
+		//127735
+
+		@Given("User_607 Click Collateral details in application For Financial Facilites")
+		public void click_collateral_details_in_application_for_financial_facilites() {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Click_collateral_details_in_applicationForFinancialFacilites_607());
+			applicationFinancialObj.Click_collateral_details_in_applicationForFinancialFacilites_607().click();
+		}
+
+		@Given("User_607 Click AddButtonn In Collateral details in application For Financial Facilites")
+		public void click_add_buttonn_in_collateral_details_in_application_for_financial_facilites() {
+			//waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ClickAddBtn_In_collateral_details_in_applicationForFinancialFacilites_607());
+			for (int i = 0; i < 900; i++) {
+				try {
+					applicationFinancialObj.ClickAddBtn_In_collateral_details_in_applicationForFinancialFacilites_607().click();
+					break;
+				} catch (Exception e) {
+				}
+			}
+			//applicationFinancialObj.ClickAddBtn_In_collateral_details_in_applicationForFinancialFacilites_607().click();
+			
+		}
+
+		@Given("User_607 Select First Row In Collateral details in application For Financial Facilites")
+		public void select_first_row_in_collateral_details_in_application_for_financial_facilites() {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.SelectFirstRow_In_collateral_details_in_applicationForFinancialFacilites_607());
+			applicationFinancialObj.SelectFirstRow_In_collateral_details_in_applicationForFinancialFacilites_607().click();
+			
+		}
+
+		@Given("User_607 Enter Collateral In collateral details in application For Financial Facilites")
+		public void enter_collateral_in_collateral_details_in_application_for_financial_facilites() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.EnterCollateral_In_collateral_details_in_applicationForFinancialFacilites_607());
+			applicationFinancialObj.EnterCollateral_In_collateral_details_in_applicationForFinancialFacilites_607().sendKeys("1112");
+			applicationFinancialObj.EnterCollateral_In_collateral_details_in_applicationForFinancialFacilites_607().sendKeys(Keys.TAB);
+			Thread.sleep(4000);
+		}
+
+		@Given("User_607 Click Ok After Link collateral In Collateral details")
+		public void click_ok_after_link_collateral_in_collateral_details() {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Clickok_AfterLinkcollateral_In_collateral_details_607());
+			applicationFinancialObj.Clickok_AfterLinkcollateral_In_collateral_details_607().click();
+		}
+		
+		
     
 }
 	

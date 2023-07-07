@@ -63,8 +63,8 @@ public final class CucumberRunTime {
 	private final CucumberExecutionContext context;
 
 	private CucumberRunTime(final ExitStatus exitStatus, final CucumberExecutionContext context,
-			final Predicate<Pickle> filter, final int limit, final FeatureSupplier featureSupplier,
-			final ExecutorService executor, final PickleOrder pickleOrder) {
+		final Predicate<Pickle> filter, final int limit, final FeatureSupplier featureSupplier,
+		final ExecutorService executor, final PickleOrder pickleOrder) {
 		this.filter = filter;
 		this.context = context;
 		this.limit = limit;

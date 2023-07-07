@@ -29,10 +29,14 @@ public class FMS_Parameter_Steps {
 	DropDownHelper DropDownHelper = new DropDownHelper(driver);
 	
 	String path = System.getProperty("user.dir") + "\\TestData\\FMSTestData.xlsx";
-	ExcelData fmsTransactionsExcelData1 = new ExcelData(path, "REQUEST_FOR_FINANCIN", "Data Set ID");
-	Map<String, String> testData1;
+	ExcelData fmsTransactionsExcelData = new ExcelData(path, "Financial_Indicators", "Data Set ID");
+	Map<String, String> testData;
 
 	// @586488
+	@Given("User_607 Update test data for test case no 586488")
+	public void user_update_test_data_for_test_case_no_586488() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_FP_035");
+	}
 	
 	@Given("User_607 Click Financial Indicators under Parameters")
 	public void user_click_financial_indicators_under_parameters() {
@@ -49,14 +53,14 @@ public class FMS_Parameter_Steps {
 	@Given("User_607 Check Code In Mainteance Under Financial Indicators")
 	public void user_check_code_in_mainteance_under_financial_indicators() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_Parameter_Obj.Enter_Code_InMainteance_Under_FinancialIndicators_607());
-		FMS_Parameter_Obj.Enter_Code_InMainteance_Under_FinancialIndicators_607().sendKeys("dgs");
+		FMS_Parameter_Obj.Enter_Code_InMainteance_Under_FinancialIndicators_607().sendKeys(testData.get("Check CodeAlp"));
 		FMS_Parameter_Obj.Enter_Code_InMainteance_Under_FinancialIndicators_607().sendKeys(Keys.TAB);
 		String Check = FMS_Parameter_Obj.Enter_Code_InMainteance_Under_FinancialIndicators_607().getAttribute("prevvalue");
 		if(!Check.isBlank()||!Check.isEmpty()) {
 			Assert.fail();
 		}
 		FMS_Parameter_Obj.Enter_Code_InMainteance_Under_FinancialIndicators_607().click();
-		FMS_Parameter_Obj.Enter_Code_InMainteance_Under_FinancialIndicators_607().sendKeys("654");
+		FMS_Parameter_Obj.Enter_Code_InMainteance_Under_FinancialIndicators_607().sendKeys(testData.get("Code"));
 		FMS_Parameter_Obj.Enter_Code_InMainteance_Under_FinancialIndicators_607().sendKeys(Keys.TAB);
 		for (int i = 0; i <= 300; i++) {
 			if (!(FMS_Parameter_Obj.Enter_Code_InMainteance_Under_FinancialIndicators_607().getAttribute("prevvalue").isBlank())) {
@@ -69,13 +73,18 @@ public class FMS_Parameter_Steps {
 		}
 	}
 	
-	//@586449
+	//@586449 
+	@Given("User_607 Update test data for test case no 586449")
+	public void user_update_test_data_for_test_case_no_586449() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_FP_010");
+	}
+
 	
 	@Given("User_607 Check duplicate Code not allow In Mainteance Under Financial Indicators")
 	public void user_check_duplicate_code_not_allow_in_mainteance_under_financial_indicators() {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_Parameter_Obj.Enter_Code_InMainteance_Under_FinancialIndicators_607());
 		FMS_Parameter_Obj.Enter_Code_InMainteance_Under_FinancialIndicators_607().click();
-		FMS_Parameter_Obj.Enter_Code_InMainteance_Under_FinancialIndicators_607().sendKeys("1");
+		FMS_Parameter_Obj.Enter_Code_InMainteance_Under_FinancialIndicators_607().sendKeys(testData.get("Code"));
 		FMS_Parameter_Obj.Enter_Code_InMainteance_Under_FinancialIndicators_607().sendKeys(Keys.TAB);
 		waitHelper.waitForElementwithFluentwait(driver, FMS_Parameter_Obj.Duplicate_Value_popup());
 		if(!FMS_Parameter_Obj.Duplicate_Value_popup().isDisplayed()) {

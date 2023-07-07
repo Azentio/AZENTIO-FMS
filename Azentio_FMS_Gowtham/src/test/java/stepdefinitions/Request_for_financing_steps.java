@@ -743,7 +743,7 @@ public class Request_for_financing_steps {
 			try {
 				// JavascriptHelper.scrollIntoView(Request_for_financing_Obj.marginsearchbox());
 				Request_for_financing_Obj.marginsearchbox().clear();
-				Request_for_financing_Obj.marginsearchbox().sendKeys(testData1.get("1"), Keys.TAB);
+				Request_for_financing_Obj.marginsearchbox().sendKeys(testData1.get("Margin"), Keys.TAB);
 				break;
 			} catch (Exception e) {
 				if (i == 300) {

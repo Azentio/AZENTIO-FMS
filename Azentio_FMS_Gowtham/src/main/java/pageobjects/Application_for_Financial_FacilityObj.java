@@ -827,6 +827,7 @@ public class Application_for_Financial_FacilityObj {
 	
 	
 	
+	
 	@FindBy(xpath = "//input[@id='lookuptxt_applicationFacilityExistingFacilityRef_WIFT001MT']")
 	private WebElement Existing_Facility_Ref_near_Application_for;
 	public WebElement Existing_Facility_Ref_near_Application_for() {
@@ -855,6 +856,7 @@ public class Application_for_Financial_FacilityObj {
 	public WebElement floatingrateperiodicitytypesearchbox() {
 		return Floatingrate_PeriodicityType_Searchbox;
 	}
+	
 	
 	
 	//@636898
@@ -1086,8 +1088,76 @@ public class Application_for_Financial_FacilityObj {
 			return DisbursementSub_LimitDetails_Total_Down_Payment;
 		}
 		
+		//127735
+		
+		@FindBy(xpath = "//*[@id='applicationfacility_collateralDetails_btn_WIFT001MT']")
+		private WebElement Click_collateral_details_in_applicationForFinancialFacilites;
+		public WebElement Click_collateral_details_in_applicationForFinancialFacilites_607() {
+			return Click_collateral_details_in_applicationForFinancialFacilites;
+		}
+		
+		@FindBy(xpath = "//*[@id='add_FacilityCollateralGrid_WIFT001MT']")
+		private WebElement ClickAddBtn_In_collateral_details_in_applicationForFinancialFacilites;
+		public WebElement ClickAddBtn_In_collateral_details_in_applicationForFinancialFacilites_607() {
+			return ClickAddBtn_In_collateral_details_in_applicationForFinancialFacilites;
+		}
 		
 		
+		@FindBy(xpath = "//*[@id='td_FacilityCollateralGrid_WIFT001MT_1_rn']")
+		private WebElement SelectFirstRow_In_collateral_details_in_applicationForFinancialFacilites;
+		public WebElement SelectFirstRow_In_collateral_details_in_applicationForFinancialFacilites_607() {
+			return SelectFirstRow_In_collateral_details_in_applicationForFinancialFacilites;
+		}
+		
+		
+		@FindBy(xpath = "//*[@name='lookupTxt_fmsAppcollateralsVO.COLLATERAL']")
+		private WebElement EnterCollateral_In_collateral_details_in_applicationForFinancialFacilites;
+		public WebElement EnterCollateral_In_collateral_details_in_applicationForFinancialFacilites_607() {
+			return EnterCollateral_In_collateral_details_in_applicationForFinancialFacilites;
+		}
+		
+		@FindBy(xpath = "//span[text()='Ok']")
+		private WebElement Clickok_AfterLinkcollateral_In_collateral_details;
+		public WebElement Clickok_AfterLinkcollateral_In_collateral_details_607() {
+			return Clickok_AfterLinkcollateral_In_collateral_details;
+		}
+		
+		
+		@FindBy(xpath = "//*[@id='facilityLimitDetailsTab_WIFT008MT']")
+		private WebElement Click_facilityLimitDetails;
+		public WebElement Click_facilityLimitDetails_607() {
+			return Click_facilityLimitDetails;
+		}
+		
+		@FindBy(xpath = "//*[@id='facilityManagement_collateralDetails_btn_WIFT008MT']")
+		private WebElement Click_collateralDetails_in_mainteance_under_FacilityManagement;
+		public WebElement Click_collateralDetails_in_mainteance_under_FacilityManagement_607() {
+			return Click_collateralDetails_in_mainteance_under_FacilityManagement;
+		}
+		
+		@FindBy(xpath = "//*[@id='td_FacilityManagementFacilityLimitDetailsGrid_WIFT008MT_0_rn']")
+		private WebElement selectRow_InfacilityLimitDetailsTabin_mainteance_under_FacilityManagement;
+		public WebElement selectRow_InfacilityLimitDetailsTabin_mainteance_under_FacilityManagement_607() {
+			return selectRow_InfacilityLimitDetailsTabin_mainteance_under_FacilityManagement;
+		}
+		
+		@FindBy(xpath = "//*[@id='td_FacilityCollateralGrid_WIFT008MT_0_rn']")
+		private WebElement selectRow_InCollateralDetails_mainteance_under_FacilityManagement;
+		public WebElement selectRow_InCollateralDetails_mainteance_under_FacilityManagement_607() {
+			return selectRow_InCollateralDetails_mainteance_under_FacilityManagement;
+		}
+		
+		@FindBy(xpath = "//*[@id='collateral_query_btn_WIFT008MT']")
+		private WebElement ClickQuerybtn_InCollateralDetails_mainteance_under_FacilityManagement;
+		public WebElement ClickQuerybtn_InCollateralDetails_mainteance_under_FacilityManagement_607() {
+			return ClickQuerybtn_InCollateralDetails_mainteance_under_FacilityManagement;
+		}
+		
+		@FindBy(xpath = "//*[@id='collateralCode_WIFT008MT']")
+		private WebElement CheckCode_InCollateralDetails_mainteance_under_FacilityManagement;
+		public WebElement CheckCode_InCollateralDetails_mainteance_under_FacilityManagement_607() {
+			return CheckCode_InCollateralDetails_mainteance_under_FacilityManagement;
+		}
 		
 		
 		

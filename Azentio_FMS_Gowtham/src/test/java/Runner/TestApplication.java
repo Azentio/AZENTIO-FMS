@@ -9,12 +9,12 @@ import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
 @CucumberOptions(features = {
-		"src/test/java/features/FMS_Parameter.feature"}, glue = "stepdefinitions",
+		"src/test/java/features/Collateral_Management.feature"}, glue = "stepdefinitions",
 		// monochrome=false, //to make steps in color
 		plugin = { "pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"rerun:ReRunScenarios/FailedReRun.txt" }
 //, dryRun = true //to check compilation errors
-		, tags = "@586449"
+		, tags = "@127765"
 		
 )
 public class TestApplication extends AbstractTestNGCucumberTests {

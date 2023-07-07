@@ -2,23 +2,23 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-30T16:11:59 IST" name="Default suite" finished-at="2023-06-30T16:13:22 IST" duration-ms="82998">
+  <suite started-at="2023-07-07T17:18:03 IST" name="Default suite" finished-at="2023-07-07T17:21:48 IST" duration-ms="225308">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5149d738]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-06-30T16:11:59 IST" name="Default test" finished-at="2023-06-30T16:13:22 IST" duration-ms="82998">
+    <test started-at="2023-07-07T17:18:03 IST" name="Default test" finished-at="2023-07-07T17:21:48 IST" duration-ms="225308">
       <class name="Runner.TestApplication">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@5149d738]" started-at="2023-06-30T16:11:59 IST" name="setUpClass" finished-at="2023-06-30T16:12:01 IST" duration-ms="2055" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@5149d738]" started-at="2023-07-07T17:18:03 IST" name="setUpClass" finished-at="2023-07-07T17:18:06 IST" duration-ms="2735" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5149d738]" started-at="2023-06-30T16:12:01 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-06-30T16:13:12 IST" duration-ms="70976" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5149d738]" started-at="2023-07-07T17:18:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-07T17:21:19 IST" duration-ms="193115" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["5. Check that user cannot able to enter the duplicate value in code field"]]>
+                <![CDATA["Open the facility management screen and link a collateral"]]>
               </value>
             </param>
             <param index="1">
@@ -30,7 +30,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@5149d738]" started-at="2023-06-30T16:13:12 IST" name="tearDownClass" finished-at="2023-06-30T16:13:22 IST" duration-ms="9882" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@5149d738]" started-at="2023-07-07T17:21:19 IST" name="tearDownClass" finished-at="2023-07-07T17:21:48 IST" duration-ms="29334" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
