@@ -649,9 +649,9 @@ public class Facilities_Management_Steps_609 extends BaseClass{
     	WebElement SuspendButton = FacilitiesManagementPageObjects609.FacilitiesManagement_SuspendBtn();
     	SuspendButton.click();
     	Thread.sleep(2000);
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.Confirmok());
-    	clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.Confirmok());
-    	FacilitiesManagementPageObjects609.Confirmok().click();
+//    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.Application_Confirmok());
+//    	clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.Application_Confirmok());
+//    	FacilitiesManagementPageObjects609.Application_Confirmok().click();
     	Thread.sleep(2000);
     	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.FacilitiesManagement_SuspendReasonCannotProceed());
     	clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.FacilitiesManagement_SuspendReasonCannotProceed());
@@ -864,10 +864,26 @@ public class Facilities_Management_Steps_609 extends BaseClass{
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     @And("^User_609 Click Yes if Confirm Alert appears$")
     public void User_609_Click_Yes_if_Confirm_Alert_appears() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.ConfirmAlert_Ok());
-		for(int i= 0; i< 200;i++) {
+    	//waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.ConfirmAlert_Ok());
+    	//FacilitiesManagementPageObjects609.ConfirmAlert_Ok().click();
+		/*
+    	for(int i= 0; i< 200;i++) {
 			try {
 				if(FacilitiesManagementPageObjects609.ConfirmAlert_Ok().isDisplayed()) {
 					FacilitiesManagementPageObjects609.ConfirmAlert_Ok().click();
@@ -878,81 +894,115 @@ public class Facilities_Management_Steps_609 extends BaseClass{
 				}			
 			}
 		}
+		*/
     }
     
     
-    @And("^User_609 Click on Dismiss if Send Alert pop up appears$")
-    public void User_609_Click_on_Dismiss_if_Send_Alert_pop_up_appears() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.SendAlert_Ok());
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.SendAlert_Ok());
-		for(int i= 0; i< 200;i++) {
-			try {
-				if(FacilitiesManagementPageObjects609.SendAlert_Ok().isDisplayed()) {
-					FacilitiesManagementPageObjects609.SendAlert_Ok().click();
-				}
-			} catch (Exception e) {
-				if(i==199) {
-					Assert.fail(e.getMessage());
-				}			
-			}
-		}
-    }
+   
     
-    @And("^User_609 Click on the Approve level1 Screen$")
-    public void User_609_Click_on_the_Approve_level1_Screen() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.ApproveLevel1());
-		clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.ApproveLevel1());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.ApproveLevel1());
-    }
+//    @And("^User_609 Click on the Approve level1 Screen$")
+//    public void User_609_Click_on_the_Approve_level1_Screen() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.ApproveLevel1());
+//		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.ApproveLevel1());
+//    }
+//    
+//    @And("^User_609 Select the Code in Approve level1$")
+//    public void User_609_Select_the_Code_in_Approve_level1() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.ApproveLevel1_Code());
+//		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.ApproveLevel1_Code());
+//		
+//		String ApplicationCode = ApplicationNo;
+//		int ApplicationCodeLen = 10 - ApplicationCode.length();
+//	    for(int i = 1; i <=ApplicationCodeLen ; i++){
+//	    	ApplicationCode= "0" + ApplicationCode;
+//	    }
+//		String xpath ="//table[@id='gridtab_drawDownRequestFacilityReference_WIFT009MT']/tbody/tr/td[text()='"+String.valueOf(randomNumber)+"']";
+//		for (int i = 0; i < 200; i++) {
+//			try {
+//				WebElement Code  = driver.findElement(By.xpath(xpath));
+//				if (Code.isDisplayed()) {
+//					Assert.assertEquals(Code.isDisplayed(), true);
+//					clicksAndActionHelper.doubleClick(Code);
+//				}
+//				break;
+//			} catch (Exception e) {
+//				if (i==199) {
+//					Assert.fail(e.getMessage());
+//				}
+//			}
+//		}
+//    }
+//    
+//    @And("^User_609 Select the Decision in Approve level1$")
+//    public void User_609_Select_the_Decision_in_Approve_level1() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.ApproveLevel1_Decision());
+//		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.ApproveLevel1_Decision());
+//		dropdownhelper.SelectUsingVisibleText(FacilitiesManagementPageObjects609.ApproveLevel1_Decision(), testData.get("Approve level1 Decision"));
+//    }
+//    
+//    @And("^User_609 Select the More Decision in Approve level1$")
+//    public void User_609_Select_the_More_Decision_in_Approve_level1() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.ApproveLevel1_MoreDecision());
+//		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.ApproveLevel1_MoreDecision());
+//		dropdownhelper.SelectUsingVisibleText(FacilitiesManagementPageObjects609.ApproveLevel1_MoreDecision(), testData.get("Forward To"));
+//    }
+//    
+//    @And("^User_609 Click on Submit in Approve Level1$")
+//    public void User_609_Click_on_Submit_in_Approve_Level1() throws Throwable {
+//    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.ApproveLevel1_Submit());
+//		clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.ApproveLevel1_Submit());
+//		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.ApproveLevel1_Submit());
+//    }
+//    
+//    
     
-    @And("^User_609 Select the Code in Approve level1$")
-    public void User_609_Select_the_Code_in_Approve_level1() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.ApproveLevel1_Code());
-		clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.ApproveLevel1_Code());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.ApproveLevel1_Code());
-    }
     
-    @And("^User_609 Select the Decision in Approve level1$")
-    public void User_609_Select_the_Decision_in_Approve_level1() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.ApproveLevel1_Decision());
-		clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.ApproveLevel1_Decision());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.ApproveLevel1_Decision());
-    }
     
-    @And("^User_609 Click on ApproveLevel1 Submit$")
-    public void User_609_Click_on_ApproveLevel1_Submit() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.ApproveLevel1_Submit());
-		clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.ApproveLevel1_Submit());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.ApproveLevel1_Submit());
-    }
     
-    @And("^User_609 Click on the Approve level3 Screen$")
-    public void User_609_Click_on_the_Approve_level3_Screen() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.ApproveLevel3());
-		clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.ApproveLevel3());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.ApproveLevel3());
-    }
     
-    @And("^User_609 Select the Code in Approve level3$")
-    public void User_609_Select_the_Code_in_Approve_level3() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.ApproveLevel3_Code());
-		clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.ApproveLevel3_Code());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.ApproveLevel3_Code());
-    }
     
-    @And("^User_609 Select the Decision in Approve level3$")
-    public void User_609_Select_the_Decision_in_Approve_level3() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.ApproveLevel3_Decision());
-		clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.ApproveLevel3_Decision());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.ApproveLevel3_Decision());
-    }
     
-    @And("^User_609 Click on ApproveLevel3 Submit$")
-    public void User_609_Click_on_ApproveLevel3_Submit() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.ApproveLevel3_Submit());
-		clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.ApproveLevel3_Submit());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.ApproveLevel3_Submit());
-    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
     
     @And("User_609 Click on the Facilities Management submenu")
     public void user_609_click_on_the_facilities_management_submenu() throws Throwable {

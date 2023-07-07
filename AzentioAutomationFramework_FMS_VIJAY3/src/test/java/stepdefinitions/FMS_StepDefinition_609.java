@@ -26,7 +26,8 @@ import pageobjects.Facilities_Management_PageObjects_609;
 import resources.BaseClass;
 
 public class FMS_StepDefinition_609 extends BaseClass{
-	
+	String ApplicationNo;
+	//String ApplicationNO;
 	int randomNumber;
 	String FacilityCode;
 	String DateSubmitted;
@@ -53,85 +54,130 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	ExcelData fmsDrawDownRequestExcelData = new ExcelData(TestDataPath, "FMS_DrawDownRequest_609", "DataSet ID");
 	ExcelData fmsCommitteeApprovalExcelData = new ExcelData(TestDataPath, "FMS_CommitteeApproval_609", "DataSet ID");
 
-	
+	Map<String, String> User;
 
 	Map<String, String> testData;
 	Map<String, String> fmsLoginTestData = new HashMap<>();
 
-	String ApplicationNo;
+	 
+	
 	
 	 @And("^User_609 get the test data set id for AT_CA_006$")
 	    public void User_609_get_the_test_data_set_id_for_AT_CA_006() throws Throwable {
 	    	testData = fmsCommitteeApprovalExcelData.getTestdata("AT_CA_006");	
+	    	
+	    }
+	 
+	 @And("^User_609 get the test data set id for AT_CA_003$")
+	    public void User_609_get_the_test_data_set_id_for_AT_CA_003() throws Throwable {
+	    	testData = fmsCommitteeApprovalExcelData.getTestdata("AT_CA_003");	
+	    	User = fmsLoginExceldata.getTestdata("FMS_User11");
+	    	System.out.println(User.get("UserName"));
+	    }
+	 
+	 @And("^User_609 get the test data set id for AT_CA_004$")
+	    public void User_609_get_the_test_data_set_id_for_AT_CA_004() throws Throwable {
+	    	testData = fmsCommitteeApprovalExcelData.getTestdata("AT_CA_004");	
+	    	User = fmsLoginExceldata.getTestdata("FMS_User11");
+	    	System.out.println(User.get("UserName"));
+	    }
+	 
+	 @And("^User_609 get the test data set id for AT_CA_005$")
+	    public void User_609_get_the_test_data_set_id_for_AT_CA_005() throws Throwable {
+	    	testData = fmsCommitteeApprovalExcelData.getTestdata("AT_CA_005");	
+	    	User = fmsLoginExceldata.getTestdata("FMS_User11");
+	    	System.out.println(User.get("UserName"));
+	    }
+	 
+	 @And("^User_609 get the test data set id for AT_CA_007$")
+	    public void User_609_get_the_test_data_set_id_for_AT_CA_007() throws Throwable {
+	    	testData = fmsCommitteeApprovalExcelData.getTestdata("AT_CA_007");	
+	    	User = fmsLoginExceldata.getTestdata("FMS_User11");
+	    	System.out.println(User.get("UserName"));
 	    }
 	
+///*********************************************************FMS_PARAMS*************************************************************///
+	 
+	 
 	@And("^User_609 Click on the Parameters menu$")
 	public void user_609_click_on_the_parameters_menu() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.Parameters());
-		clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.Parameters());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.Parameters());
+		waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Parameters());
+		clicksAndActionHelper.moveToElement(FmsPageobjects_609.Parameters());
+		clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Parameters());
 	}
 
 	@And("^User_609 Click on the Facility Type Submenu$")
     public void user_609_click_on_the_facility_type_submenu() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.Parameters_FacilityType());
-		clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.Parameters_FacilityType());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.Parameters_FacilityType());
+    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Parameters_FacilityType());
+		clicksAndActionHelper.moveToElement(FmsPageobjects_609.Parameters_FacilityType());
+		clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Parameters_FacilityType());
     }
         
     @And("^User_609 Click on Update After Approve Screen$")
     public void user_609_click_on_update_after_approve_screen() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.FacilityType_UpdateAfterApprove());
-		clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.FacilityType_UpdateAfterApprove());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.FacilityType_UpdateAfterApprove());
+    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.FacilityType_UpdateAfterApprove());
+		clicksAndActionHelper.moveToElement(FmsPageobjects_609.FacilityType_UpdateAfterApprove());
+		clicksAndActionHelper.clickOnElement(FmsPageobjects_609.FacilityType_UpdateAfterApprove());
     }
 
     @And("^User_609 Select the Code in Update After Approve Screen$")
    	public void user_609_select_the_code_in_update_after_approve_screen() throws Throwable {	
-       	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.FacilityType_UpdateAfterApprove_SearchCode());
-   		clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.FacilityType_UpdateAfterApprove_SearchCode());
-   		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.FacilityType_UpdateAfterApprove_SearchCode());
-   		FacilitiesManagementPageObjects609.FacilityType_UpdateAfterApprove_SearchCode().sendKeys(testData.get("Code"));
-   		FacilitiesManagementPageObjects609.FacilityType_UpdateAfterApprove_SearchCode().sendKeys(Keys.ENTER);
-   		
-   		String xpath ="//td[text()='"+String.valueOf(testData.get("Code"))+"']";
+       	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.FacilityType_UpdateAfterApprove_Code());
+   		clicksAndActionHelper.clickOnElement(FmsPageobjects_609.FacilityType_UpdateAfterApprove_Code());
+   		FmsPageobjects_609.FacilityType_UpdateAfterApprove_Code().sendKeys(testData.get("Code"));
+   		FmsPageobjects_609.FacilityType_UpdateAfterApprove_Code().sendKeys(Keys.ENTER);
+   		String xpath ="//table[@id='fmsFacilityTypeListGridTbl_Id_P008UP']/tbody/tr[2]/td[text()='"+testData.get("Code")+"']";
    		for (int i = 0; i < 200; i++) {
    			try {
    				WebElement Code  = driver.findElement(By.xpath(xpath));
    				if (Code.isDisplayed()) {
    					clicksAndActionHelper.doubleClick(Code);
-   				}
-   				driver.findElement(By.xpath(xpath)).isDisplayed();
-   				break;
+   					break;
+   				}	
    			} catch (Exception e) {
    				if (i==199) {
    					Assert.fail(e.getMessage());
    				}
    			}	
-   		}
+   		  }
        }
 	
 	 @And("^User_609 Click on the Facility Details Tab$")
 	    public void user_609_click_on_the_facility_details_tab() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.FacilityType_UpdateAfterApprove_FacilityDetails());
-			clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.FacilityType_UpdateAfterApprove_FacilityDetails());
-			clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.FacilityType_UpdateAfterApprove_FacilityDetails());
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.FacilityType_UpdateAfterApprove_FacilityDetails());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.FacilityType_UpdateAfterApprove_FacilityDetails());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.FacilityType_UpdateAfterApprove_FacilityDetails());
 	    }
 
 	    @And("^User_609 Click on the STP Facility Requirements in Facility Details Tab$")
 		public void user_609_click_on_the_stp_facility_requirements_in_facility_details_tab() throws Throwable {
-			waitHelper.waitForElementwithFluentwait(driver,FacilitiesManagementPageObjects609.FacilityType_Facilitydetails_STPFacilityRequirements());
-			clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.FacilityType_Facilitydetails_STPFacilityRequirements());
-			clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.FacilityType_Facilitydetails_STPFacilityRequirements());
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.FacilityType_Facilitydetails_STPFacilityRequirements());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.FacilityType_Facilitydetails_STPFacilityRequirements());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.FacilityType_Facilitydetails_STPFacilityRequirements());
 		}
+	    
+	    @And("^User_609 Enable Mandatory Customer Grading flag$")
+	    public void User_609_Enable_Mandatory_Customer_Grading_flag() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.STPFacilityRequirements_Mandatory_Customer_Grading());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.STPFacilityRequirements_Mandatory_Customer_Grading());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.STPFacilityRequirements_Mandatory_Customer_Grading());
+
+			WebElement Mandatory_Customer_Grading = FmsPageobjects_609.STPFacilityRequirements_Mandatory_Customer_Grading();
+			if (Mandatory_Customer_Grading.isSelected()) {
+				Assert.assertTrue(true);
+			}
+			else {
+				Mandatory_Customer_Grading.click();
+			}
+	    }
 	    
 	    @And("^User_609 Disable Mandatory Customer Grading flag$")
 	    public void User_609_Disable_Mandatory_Customer_Grading_flag() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.STPFacilityRequirements_Mandatory_Customer_Grading());
-			clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.STPFacilityRequirements_Mandatory_Customer_Grading());
-			clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.STPFacilityRequirements_Mandatory_Customer_Grading());
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.STPFacilityRequirements_Mandatory_Customer_Grading());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.STPFacilityRequirements_Mandatory_Customer_Grading());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.STPFacilityRequirements_Mandatory_Customer_Grading());
 
-			WebElement Mandatory_Customer_Grading = FacilitiesManagementPageObjects609.STPFacilityRequirements_Mandatory_Customer_Grading();
+			WebElement Mandatory_Customer_Grading = FmsPageobjects_609.STPFacilityRequirements_Mandatory_Customer_Grading();
 			if (Mandatory_Customer_Grading.isSelected()) {
 				Mandatory_Customer_Grading.click();
 			}
@@ -142,9 +188,9 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	    
 	    @And("^User_609 Enable Customer Grading flag$")
 	    public void user_609_enable_customer_grading_flag () throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.STPFacilityRequirements_CustomerGrading());
-			clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.STPFacilityRequirements_CustomerGrading());
-			WebElement CustomerGrading = FacilitiesManagementPageObjects609.STPFacilityRequirements_CustomerGrading();
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.STPFacilityRequirements_CustomerGrading());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.STPFacilityRequirements_CustomerGrading());
+			WebElement CustomerGrading = FmsPageobjects_609.STPFacilityRequirements_CustomerGrading();
 			if (CustomerGrading.isSelected()) {
 				Assert.assertTrue(true);
 			}
@@ -155,9 +201,9 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	   
 	    @And("^User_609 Enable Overwrite Grading flag$")
 	    public void User609_Enable_Overwrite_Grading_flag() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.STPFacilityRequirements_OverwriteGrading());
-			clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.STPFacilityRequirements_OverwriteGrading());
-			WebElement OverwriteGrading = FacilitiesManagementPageObjects609.STPFacilityRequirements_OverwriteGrading();
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.STPFacilityRequirements_OverwriteGrading());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.STPFacilityRequirements_OverwriteGrading());
+			WebElement OverwriteGrading = FmsPageobjects_609.STPFacilityRequirements_OverwriteGrading();
 			if (OverwriteGrading.isSelected()) {
 				Assert.assertTrue(true);
 			}
@@ -168,9 +214,9 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	 
 	    @And("^User_609 Enable Credit Review flag$")
 	    public void User_609_Enable_Credit_Review_flag() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.STPFacilityRequirements_CreditReview());
-			clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.STPFacilityRequirements_CreditReview());
-			WebElement CreditReview = FacilitiesManagementPageObjects609.STPFacilityRequirements_CreditReview();
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.STPFacilityRequirements_CreditReview());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.STPFacilityRequirements_CreditReview());
+			WebElement CreditReview = FmsPageobjects_609.STPFacilityRequirements_CreditReview();
 			if (CreditReview.isSelected()) {
 				Assert.assertTrue(true);
 			}
@@ -181,9 +227,9 @@ public class FMS_StepDefinition_609 extends BaseClass{
 
 	    @And("^User_609 Disable Committee Approval flag$")
 	    public void User_609_Disable_Committee_Approval_flag() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.STPFacilityRequirements_CommitteeApproval());
-			clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.STPFacilityRequirements_CommitteeApproval());
-			WebElement CommitteeApproval = FacilitiesManagementPageObjects609.STPFacilityRequirements_CommitteeApproval();
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.STPFacilityRequirements_CommitteeApproval());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.STPFacilityRequirements_CommitteeApproval());
+			WebElement CommitteeApproval = FmsPageobjects_609.STPFacilityRequirements_CommitteeApproval();
 			if (!(CommitteeApproval.isSelected())) {
 				Assert.assertTrue(true);
 			}
@@ -194,9 +240,9 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	    
 	    @And("^User_609 Enable Committee Approval flag$")
 	    public void User_609_enable_Committee_Approval_flag() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.STPFacilityRequirements_CommitteeApproval());
-			clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.STPFacilityRequirements_CommitteeApproval());
-			WebElement CommitteeApproval = FacilitiesManagementPageObjects609.STPFacilityRequirements_CommitteeApproval();
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.STPFacilityRequirements_CommitteeApproval());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.STPFacilityRequirements_CommitteeApproval());
+			WebElement CommitteeApproval = FmsPageobjects_609.STPFacilityRequirements_CommitteeApproval();
 			if (!(CommitteeApproval.isSelected())) {
 				CommitteeApproval.click();
 			}
@@ -204,9 +250,9 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	    
 	    @And("^User_609 Enable Credit Authorization flag$")
 	    public void User_609_Enable_Credit_Authorization_flag() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.STPFacilityRequirements_CreditAuthorization());
-			clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.STPFacilityRequirements_CreditAuthorization());
-			WebElement CreditAuthorization = FacilitiesManagementPageObjects609.STPFacilityRequirements_CreditAuthorization();
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.STPFacilityRequirements_CreditAuthorization());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.STPFacilityRequirements_CreditAuthorization());
+			WebElement CreditAuthorization = FmsPageobjects_609.STPFacilityRequirements_CreditAuthorization();
 			if (CreditAuthorization.isSelected()) {
 				Assert.assertTrue(true);
 			}
@@ -217,9 +263,9 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	    
 	    @And("^User_609 Enable IssueFacilityOffer flag$")
 	    public void User_609_Enable_IssueFacilityOffer_flag() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.STPFacilityRequirements_IssueFacilityOffer());
-			clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.STPFacilityRequirements_IssueFacilityOffer());
-			WebElement IssueFacilityOffer = FacilitiesManagementPageObjects609.STPFacilityRequirements_IssueFacilityOffer();
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.STPFacilityRequirements_IssueFacilityOffer());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.STPFacilityRequirements_IssueFacilityOffer());
+			WebElement IssueFacilityOffer = FmsPageobjects_609.STPFacilityRequirements_IssueFacilityOffer();
 			if (IssueFacilityOffer.isSelected()) {
 				Assert.assertTrue(true);
 			}
@@ -230,9 +276,9 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	    
 	    @And("^User_609 Enable Client Response flag$")
 	    public void User_609_Enable_Client_Response_flag() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.STPFacilityRequirements_ClientResponse());
-			clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.STPFacilityRequirements_ClientResponse());
-			WebElement ClientResponse = FacilitiesManagementPageObjects609.STPFacilityRequirements_ClientResponse();
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.STPFacilityRequirements_ClientResponse());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.STPFacilityRequirements_ClientResponse());
+			WebElement ClientResponse = FmsPageobjects_609.STPFacilityRequirements_ClientResponse();
 			if (ClientResponse.isSelected()) {
 				Assert.assertTrue(true);
 			}
@@ -243,9 +289,9 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	    
 	    @And("^User_609 Enable Document Validation flag$")
 	    public void User_609_Enable_Document_Validation_flag() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.STPFacilityRequirements_DocumentValidation());
-			clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.STPFacilityRequirements_DocumentValidation());
-			WebElement DocumentValidation = FacilitiesManagementPageObjects609.STPFacilityRequirements_DocumentValidation();
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.STPFacilityRequirements_DocumentValidation());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.STPFacilityRequirements_DocumentValidation());
+			WebElement DocumentValidation = FmsPageobjects_609.STPFacilityRequirements_DocumentValidation();
 			if (DocumentValidation.isSelected()) {
 				Assert.assertTrue(true);
 			}
@@ -257,9 +303,9 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	    
 	    @And("^User_609 Enable Final Approval flag$")
 	    public void User_609_Enable_Final_Approval_flag() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.STPFacilityRequirements_FinalApproval());
-			clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.STPFacilityRequirements_FinalApproval());
-			WebElement FinalApproval = FacilitiesManagementPageObjects609.STPFacilityRequirements_FinalApproval();
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.STPFacilityRequirements_FinalApproval());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.STPFacilityRequirements_FinalApproval());
+			WebElement FinalApproval = FmsPageobjects_609.STPFacilityRequirements_FinalApproval();
 			if (FinalApproval.isSelected()) {
 				Assert.assertTrue(true);
 			}
@@ -270,9 +316,9 @@ public class FMS_StepDefinition_609 extends BaseClass{
 
 	    @And("^User_609 Enable Create Active Facility If Within Limits flag$")
 	    public void User_609_Enable_Create_Active_Facility_If_Within_Limits_flag() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.STPFacilityRequirements_CreateActiveFacilityIfWithinLimits());
-			clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.STPFacilityRequirements_CreateActiveFacilityIfWithinLimits());
-			WebElement CreateActiveFacilityIfWithinLimits = FacilitiesManagementPageObjects609.STPFacilityRequirements_CreateActiveFacilityIfWithinLimits();
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.STPFacilityRequirements_CreateActiveFacilityIfWithinLimits());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.STPFacilityRequirements_CreateActiveFacilityIfWithinLimits());
+			WebElement CreateActiveFacilityIfWithinLimits = FmsPageobjects_609.STPFacilityRequirements_CreateActiveFacilityIfWithinLimits();
 			if (CreateActiveFacilityIfWithinLimits.isSelected()) {
 				Assert.assertTrue(true);
 			}
@@ -283,9 +329,9 @@ public class FMS_StepDefinition_609 extends BaseClass{
 
 	    @And("^User_609 Enable Automatically Approve Facility If Within Limits flag$")
 	    public void User_609_Enable_Automatically_Approve_Facility_If_Within_Limits_flag() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.STPFacilityRequirements_AutomaticallyApproveFacilityIfWithinLimits());
-			clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.STPFacilityRequirements_AutomaticallyApproveFacilityIfWithinLimits());
-			WebElement AutomaticallyApproveFacilityIfWithinLimits = FacilitiesManagementPageObjects609.STPFacilityRequirements_AutomaticallyApproveFacilityIfWithinLimits();
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.STPFacilityRequirements_AutomaticallyApproveFacilityIfWithinLimits());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.STPFacilityRequirements_AutomaticallyApproveFacilityIfWithinLimits());
+			WebElement AutomaticallyApproveFacilityIfWithinLimits = FmsPageobjects_609.STPFacilityRequirements_AutomaticallyApproveFacilityIfWithinLimits();
 			if (AutomaticallyApproveFacilityIfWithinLimits.isSelected()) {
 				Assert.assertTrue(true);
 			}
@@ -296,28 +342,26 @@ public class FMS_StepDefinition_609 extends BaseClass{
 
 		@And("^User_609 Click on Update$")
 		public void user_609_click_on_update() throws Throwable {
-			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.FacilityType_Update());
-			clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.FacilityType_Update());
-			clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.FacilityType_Update());
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.FacilityType_Update());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.FacilityType_Update());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.FacilityType_Update());
 		}
 	    
 	    @And("^User_609 Click on Approve Screen$")
 	    public void user_609_click_on_approve_screen() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.FacilityType_Approvescreen());
-			clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.FacilityType_Approvescreen());
-			clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.FacilityType_Approvescreen());     
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.FacilityType_Approvescreen());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.FacilityType_Approvescreen());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.FacilityType_Approvescreen());     
 	    }
 
 	    @And("^User_609 Select the Code in Approve Screen$")
 	    public void user_609_select_the_code_in_approve_screen() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.FacilityType_ApproveScreen_Searchcode());
-			clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.FacilityType_ApproveScreen_Searchcode());
-			clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.FacilityType_ApproveScreen_Searchcode());  
-			//FacilitiesManagementPageObjects609.FacilityType_ApproveScreen_Searchcode().sendKeys("19");
-			FacilitiesManagementPageObjects609.FacilityType_ApproveScreen_Searchcode().sendKeys(testData.get("Code"));
-			FacilitiesManagementPageObjects609.FacilityType_ApproveScreen_Searchcode().sendKeys(Keys.ENTER);
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.FacilityType_ApproveScreen_Code());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.FacilityType_ApproveScreen_Code());  
+			FmsPageobjects_609.FacilityType_ApproveScreen_Code().sendKeys(testData.get("Code"));
+			FmsPageobjects_609.FacilityType_ApproveScreen_Code().sendKeys(Keys.ENTER);
 	    	
-			String xpath ="//table[@id='fmsFacilityTypeListGridTbl_Id_P008P']/tbody/tr[2]/td[text()='"+String.valueOf(testData.get("Code"))+"']";
+			String xpath ="//table[@id='fmsFacilityTypeListGridTbl_Id_P008P']/tbody/tr[2]/td[text()='"+testData.get("Code")+"']";
 			for (int i = 0; i < 200; i++) {
 				try {
 					WebElement Code  = driver.findElement(By.xpath(xpath));
@@ -332,38 +376,31 @@ public class FMS_StepDefinition_609 extends BaseClass{
 					}
 				}	
 			}
-			/*
-	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.FacilityType_ApproveScreen_Selectcode());
-			clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.FacilityType_ApproveScreen_Selectcode());
-			clicksAndActionHelper.doubleClick(FacilitiesManagementPageObjects609.FacilityType_ApproveScreen_Selectcode()); 
-			*/
 	    }
 	    
 	    @And("^User_609 Click on Approve$")
 	    public void user_609_Click_on_Approve() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.FacilityType_ApproveScreen_Approve());
-			clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.FacilityType_ApproveScreen_Approve());
-			clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.FacilityType_ApproveScreen_Approve());         
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.FacilityType_ApproveScreen_Approve());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.FacilityType_ApproveScreen_Approve());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.FacilityType_ApproveScreen_Approve());         
 	    }
 	    
-	    @And("^User_609 Click the confirm ok button$")
-	    public void user_609_click_the_confirm_ok_button() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.Confirmok());
-			clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.Confirmok());
-			clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.Confirmok());  
+	    @And("^User_609 Click the Application confirm ok button$")
+	    public void user_609_click_the_Application_confirm_ok_button() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Application_Confirmok());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Application_Confirmok());  
+	    }
+	    
+	    @And("^User_609 Click the Application ok button$")
+	    public void user_609_click_the_Application_ok_button() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Application_Ok());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Application_Ok());         
 	    }
 	    
 	    @And("^User_609 Click the ok button$")
 	    public void user_609_click_the_ok_button() throws Throwable {
-	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.ApplicationNo_609());
-	    	String ApplicationNO;
-	    	ApplicationNO = FmsPageobjects_609.ApplicationNo_609().getText().substring(10, 14);
-	    	System.err.println("Reference Number: " + ApplicationNO);
-	    	
-	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.Ok());
-			clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.Ok());
-			clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.Ok());         
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Ok());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Ok());         
 	    }
 	    
 	    
@@ -453,7 +490,6 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	    @And("^User_609 Enter the Total Limit$")
 	    public void User_609_Enter_the_Total_Limit() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_TotalLimit_609());
-	    	clicksAndActionHelper.moveToElement(FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_TotalLimit_609());
 			WebElement TotalLimit = FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_Maintenance_TotalLimit_609();
 			TotalLimit.sendKeys(testData.get("Total value"),Keys.TAB);
 	    }
@@ -468,7 +504,17 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	    @And("^User_609 Click on Add icon in Disbursement or sublimit tab$")
 	    public void User_609_Click_on_Add_icon_in_Disbursement_or_sublimit_tab() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.REQUESTFORFINANCIN_Sublimit_Addicon_609());
-			FmsPageobjects_609.REQUESTFORFINANCIN_Sublimit_Addicon_609().click();
+			WebElement AddIcon = FmsPageobjects_609.REQUESTFORFINANCIN_Sublimit_Addicon_609();
+	    	try {
+				for(int i= 0;i<=200;i++) {
+					if (AddIcon.isDisplayed()) {
+						AddIcon.click();
+						break;
+					}
+				}
+			} catch (Exception e) {
+				Assert.fail(e.getMessage());
+			}
 			
 	    }
 	    
@@ -520,6 +566,7 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.REQUESTFORFINANCIN_Sublimit_ProductClass_NewMargin_609());
 			WebElement NewMargin = FmsPageobjects_609.REQUESTFORFINANCIN_Sublimit_ProductClass_NewMargin_609();
 	    	NewMargin.click();
+	    	NewMargin.clear();
 	    	NewMargin.sendKeys(testData.get("Margin Rate"),Keys.TAB);
 			
 	    }
@@ -575,21 +622,975 @@ public class FMS_StepDefinition_609 extends BaseClass{
 			}
 		}
 
-	    @And("User_609 Click Dismiss in Send Alert")
-		public void user_609_click_dismiss_in_send_alert() {
-			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.SendAlert_609());
-			clicksAndActionHelper.moveToElement(FmsPageobjects_609.SendAlert_609());
+	    @And("^User_609 Click on Dismiss if Send Alert pop up appears$")
+	    public void User_609_Click_on_Dismiss_if_Send_Alert_pop_up_appears() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.SendAlert_Ok_609());  	
+			for(int i= 0; i< 200;i++) {
+				try {
+					FmsPageobjects_609.SendAlert_Ok_609().click();
+					break;
+				} catch (Exception e) {
+					if(i==199) {
+						Assert.fail(e.getMessage());
+					}			
+				}
+			}
+	    }
+	    
+	    @And("^User_609 Click on Dismiss if Send Alert pop up1 appears$")
+	    public void User_609_Click_on_Dismiss_if_Send_Alert_pop_up1_appears() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.sendAlertPopup1_609());  	
+			for(int i= 0; i< 200;i++) {
+				try {
+					FmsPageobjects_609.sendAlertPopup1_609().click();
+					break;
+				} catch (Exception e) {
+					if(i==199) {
+						Assert.fail(e.getMessage());
+					}			
+				}
+			}
+	    }
+
+	    @And("^User_609 Click on Approve Level1 in Request Screen$")
+	    public void User_609_Click_on_Approve_Level1_in_Request_Screen() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_ApproveLevel1_609());
+			FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_ApproveLevel1_609().click();	
+	    }
+	 
+	    @And("User_609 Select the Code in Approve Level1 in Request Screen")
+	    public void User_609_Select_the_Code_in_Approve_Level1_in_Request_Screen() {
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_ApproveLevel1_Code_609());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_ApproveLevel1_Code_609());
+			FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_ApproveLevel1_Code_609().sendKeys(ApplicationNo,Keys.ENTER);
+			//FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_ApproveLevel1_Code_609().sendKeys(Keys.ENTER);
+			
+			String ApplicationCode = FacilityCode;
+			int ApplicationCodelen = 10 - ApplicationCode.length();
+		    for(int i = 1; i <=ApplicationCodelen ; i++){
+		    	ApplicationCode= "0" + ApplicationCode;
+		    }
+			String xpath ="//table[@id='requestFinancingGridTbl_Id_CSMRF00P1']/tbody/tr[2]/td[text()='"+ApplicationCode+"']";
+			for (int i = 0; i < 200; i++) {
+				try {
+					WebElement Code  = driver.findElement(By.xpath(xpath));
+					if (Code.isDisplayed()) {
+						Assert.assertEquals(Code.isDisplayed(), true);
+						clicksAndActionHelper.doubleClick(Code);
+					}
+					break;
+				} catch (Exception e) {
+					if (i==199) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+	        
+	    }
+	    
+	    @And("^User_609 Click on Customer Grading Recommendations in Approve Level1 in Request Screen$")
+	    public void User_609_Click_on_Customer_Grading_Recommendations_in_Approve_Level1_in_Request_Screen() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_ApproveLevel1_CustomerGradingRecommendations_609());
+			FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_ApproveLevel1_CustomerGradingRecommendations_609().click();
+	    }
+	    
+	    @And("^User_609 Select the Decision in Approve Level1 in Request Screen$")
+	    public void User_609_Select_the_Decision_in_Approve_Level1_in_Request_Screen() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing__ApproveLevel1_CustomerGradingRecommendations_Decision_609());
+			WebElement Approvelevel1_Decision = FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing__ApproveLevel1_CustomerGradingRecommendations_Decision_609();
+			Approvelevel1_Decision.click();
+			dropdownhelper.SelectUsingVisibleText(Approvelevel1_Decision,testData.get("Decision"));
+	    }
+	    
+	    @And("^User_609 Click on Approve in Approve Level1 in Request Screen$")
+	    public void User_609_Click_on_Approve_in_Approve_Level1_in_Request_Screen() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.REQUESTFORFINANCIN_Approve_609());
+			FmsPageobjects_609.REQUESTFORFINANCIN_Approve_609().click();
+	    }
+
+	    
+///********************************************************Wifak Application********************************************************///
+  
+	    
+	    @And("User_609 Enable the clean flag in Product class")
+		public void user_609_Enable_the_clean_flag_in_Product_class() {
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_Clean());
+			//WebElement Clean = FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_Clean();
+			for(int i= 0; i<200;i++) {
+				try {
+					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_Clean());
+					break;
+				} catch (Exception e) {
+					if(i==199) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+ 
+	    @And("^User_609 Click on the WIFAK APPLICATION menu$")
+		public void user_609_click_on_the_wifak_application_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Fms_Wifakappliction());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Fms_Wifakappliction());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Fms_Wifakappliction());
+		}
+
+		@And("^User_609 Click on the WIFAK APPLICATION submenu under WIFAK APPLICATION$")
+		public void user_609_click_on_the_wifak_application_submenu_under_wifak_application() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Wifakappliction_WifakapplictionSubmenu());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Wifakappliction_WifakapplictionSubmenu());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Wifakappliction_WifakapplictionSubmenu());
+		}
+
+		@And("^User_609 Click on the Application For Financial Facilities under WIFAK APPLICATION submenu$")
+		public void user_609_click_on_the_application_for_financial_facilities_under_wifak_application_submenu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.WifakapplictionSubmenu_Applicationforfinancialfacilities());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.WifakapplictionSubmenu_Applicationforfinancialfacilities());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakapplictionSubmenu_Applicationforfinancialfacilities());
+		}
+
+		@And("^User_609 Click on the Maintenance screen under Application For Financial Facilities$")
+		public void user_609_click_on_the_maintenance_screen_under_application_for_financial_facilities() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.WifakapplictionSubmenu_Applicationforfinancialfacilities_Maintenance());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.WifakapplictionSubmenu_Applicationforfinancialfacilities_Maintenance());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakapplictionSubmenu_Applicationforfinancialfacilities_Maintenance());
+		}
+
+		@And("^User_609 Select the Application For field in Maintenance screen$")
+		public void user_609_select_the_application_for_field_in_maintenance_screen() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Applicationfor());
+			//clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Applicationfor());
+			//clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Applicationfor());
+			dropdownhelper.SelectUsingVisibleText(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Applicationfor(),testData.get("Application For"));
+
+		}
+
+		@And("^User_609 Select the CIF No in Main Information tab$")
+		public void user_609_select_the_cif_no_in_main_information_tab() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_CifnoSearch());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_CifnoSearch());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_CifnoSearch());
+					
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Cifno());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Cifno());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Cifno());
+			
+			FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Cifno().sendKeys(testData.get("CIF No"));
+			FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Cifno().sendKeys(Keys.ENTER);
+
+			String CifNo = testData.get("CIF No");
+			int CifNoLen = 8 - CifNo.length();
+		    for(int i = 1; i <=CifNoLen ; i++){
+		        CifNo= "0" + CifNo;
+		    }
+		
+		    String xpath ="//table[@id='gridtab_applicationFacilitycif_WIFT001MT']/tbody/tr[2]/td[text()='"+CifNo+"']";
+	        for (int i = 0; i <= 200; i++) {
+	            try {
+	            	clicksAndActionHelper.moveToElement(driver.findElement(By.xpath(xpath)));
+	            	clicksAndActionHelper.doubleClick(driver.findElement(By.xpath(xpath)));
+	                break;
+	            } catch (Exception e) {
+	                if (i % 5 == 0) {
+	                	clicksAndActionHelper.moveToElement(FmsPageobjects_609.CifnoGridNext());
+	                	clicksAndActionHelper.clickOnElement(FmsPageobjects_609.CifnoGridNext());
+	                }
+	                if (i == 200) {
+	                    Assert.fail(e.getMessage());
+	                }
+	            }
+	        }
+
+		 
+		    /*
+			String xpath ="//table[@id='gridtab_applicationFacilitycif_WIFT001MT']/tbody/tr[2]/td[text()='"+CifNo+"']";
+			for (int i = 0; i < 200; i++) {
+				try {
+					WebElement Code  = driver.findElement(By.xpath(xpath));
+					if (Code.isDisplayed()) {
+						clicksAndActionHelper.doubleClick(Code);
+					}
+					driver.findElement(By.xpath(xpath)).isDisplayed();
+					break;
+				} catch (Exception e) {
+					if (i==199) {
+						Assert.fail(e.getMessage());
+					}
+				}	
+			}
+			*/
+		}
+
+		@And("^User_609 Select the Facility Type in Main Information tab$")
+		public void user_609_select_the_facility_type_in_main_information_tab() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_FacilitytypeSearch());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_FacilitytypeSearch());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_FacilitytypeSearch());
+			
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Facilitytype());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Facilitytype());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Facilitytype());
+			FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Facilitytype().sendKeys(testData.get("Facility Type"));
+			FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Facilitytype().sendKeys(Keys.ENTER);
+			
+			String xpath ="//table[@id='gridtab_applicationFacilityFacilityType_WIFT001MT']/tbody/tr[2]/td[text()='"+testData.get("Facility Type")+"']";
+			for (int i = 0; i < 200; i++) {
+				try {
+					WebElement Code  = driver.findElement(By.xpath(xpath));
+					if (Code.isDisplayed()) {
+						clicksAndActionHelper.doubleClick(Code);
+					}
+					driver.findElement(By.xpath(xpath)).isDisplayed();
+					break;
+				} catch (Exception e) {
+					if (i==199) {
+						Assert.fail(e.getMessage());
+					}
+				}	
+			}
+		}
+
+		@And("^User_609 Select the Country of Financing in Main Information tab$")
+		public void user_609_select_the_country_of_financing_in_main_information_tab() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_CountryoffinancingSearch());
+			for (int x = 0; x <= 200; x++) {
+	            try {
+	        		clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_CountryoffinancingSearch());
+	                break;
+	            } catch (Exception e) {
+	                if (x==200) {
+	                	 Assert.fail(e.getMessage());
+	                }
+	            }
+			}
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Countryoffinancing());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Countryoffinancing());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Countryoffinancing());
+			FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Countryoffinancing().sendKeys(testData.get("Country of Financing"));
+			FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Countryoffinancing().sendKeys(Keys.ENTER);
+			
+			String xpath ="//table[@id='gridtab_applicationFacilityCountry_WIFT001MT']/tbody/tr/td[text()='"+testData.get("Country of Financing")+"']";	
+			for (int i = 0; i < 200; i++) {
+				try {
+					WebElement Code  = driver.findElement(By.xpath(xpath));
+					if (Code.isDisplayed()) {
+						clicksAndActionHelper.doubleClick(Code);
+					}
+					break;
+				} catch (Exception e) {
+					if (i==199) {
+						Assert.fail(e.getMessage());
+					}
+				}	
+			}
+		}
+			
+		@Then("User_609 Check the Country of Financing field is filled")
+		public void user_609_check_the_country_of_financing_field_is_filled() {
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Countryoffinancing());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Countryoffinancing());
 			try {
-				if (FmsPageobjects_609.SendAlert_609().isDisplayed()) {
-					FmsPageobjects_609.SendAlert_609().click();
+				Assert.assertEquals(false,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Countryoffinancing().getAttribute("prevvalue").isBlank());
+			} catch (Exception e) {
+				Assert.fail(e.getMessage());
+			}
+		}
+
+		@And("^User_609 Select the Facility Rating$")
+		public void user_609_select_the_facility_rating() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_FacilityRatingSearch());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_FacilityRatingSearch());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_FacilityRatingSearch());
+			
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_FacilityRating());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_FacilityRating());
+			FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_FacilityRating().sendKeys(testData.get("Facility Rating"));
+			FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_FacilityRating().sendKeys(Keys.ENTER);
+
+			String xpath ="//table[@id='gridtab_applicationFacilityRating_WIFT001MT']/tbody/tr[2]/td[text()='"+testData.get("Facility Rating")+"']";
+			for (int i = 0; i < 200; i++) {
+				try {
+					WebElement Code  = driver.findElement(By.xpath(xpath));
+					if (Code.isDisplayed()) {
+						clicksAndActionHelper.doubleClick(Code);
+						break;
+					}	
+				} catch (Exception e) {
+					if (i==199) {
+						Assert.fail(e.getMessage());
+					}
+				}	
+			}	
+		}
+
+		@And("^User_609 Click on the Additional Details tab$")
+		public void user_609_click_on_the_additional_details_tab() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab());
+		}
+
+		@And("^User_609 Select the Currency Code$")
+		public void user_609_select_the_currency_code() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_CurrencyCodeSearch());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_CurrencyCodeSearch());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_CurrencyCodeSearch());
+			
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_CurrencyCode());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_CurrencyCode());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_CurrencyCode());
+			FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_CurrencyCode().sendKeys(testData.get("Currency Code"));
+			FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_CurrencyCode().sendKeys(Keys.ENTER);
+			
+			String xpath ="//table[@id='gridtab_applicationFacilitylimitcurrency_WIFT001MT']/tbody/tr[2]/td[text()='"+testData.get("Currency Code")+"']";
+			for (int i = 0; i < 200; i++) {
+				try {
+					WebElement Code  = driver.findElement(By.xpath(xpath));
+					if (Code.isDisplayed()) {
+						clicksAndActionHelper.doubleClick(Code);
+					}
+					driver.findElement(By.xpath(xpath)).isDisplayed();
+					break;
+				} catch (Exception e) {
+					if (i==199) {
+						Assert.fail(e.getMessage());
+					}
+				}	
+			}
+			Thread.sleep(1000);
+		}
+
+		@And("^User_609 Enter the Total Value$")
+		public void user_609_enter_the_total_value() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_TotalValue());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_TotalValue());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_TotalValue());
+			FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_TotalValue().sendKeys(testData.get("Total value"));
+			FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_TotalValue().sendKeys(Keys.TAB);
+		}
+
+		@And("^User_609 Select the Offer/Expiration$")
+		public void user_609_select_the_offerexpiration() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_OfferExpiration());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_OfferExpiration());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_OfferExpiration());
+			FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_OfferExpiration().sendKeys(testData.get("Expire Date"));
+			FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab_OfferExpiration().sendKeys(Keys.TAB);
+		}
+
+		@And("^User_609 Click on the Limit Details tab$")
+		public void user_609_click_on_the_limit_details_tab() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab());
+		}
+
+		@And("^User_609 Click on the add new row icon$")
+		public void user_609_click_on_the_add_new_row_icon() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_AddIcon());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_AddIcon());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_AddIcon());
+		}
+/*
+		@And("^User_609 Click on Product Class search icon$")
+		public void user_609_click_on_product_class_search_icon() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ProductClass_Search());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ProductClass_Search());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ProductClass_Search());
+		}
+*/
+		@And("^User_609 Select the Product Class$")
+		public void user_609_select_the_product_class() throws Throwable {
+			
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ProductClass_Search());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ProductClass_Search());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ProductClass_Search());
+		
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ProductClass());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ProductClass());
+			WebElement ProductClass = FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ProductClass();
+			ProductClass.click();
+			ProductClass.sendKeys(testData.get("Product Class"));
+			ProductClass.sendKeys(Keys.ENTER);
+		
+			String xpath ="//table[@id='gridtab_applicationfacilityLimitDetailsCLASS_WIFT001MT']/tbody/tr[2]/td[text()='"+String.valueOf(testData.get("Product Class"))+"']";
+			for (int i = 0; i < 200; i++) {
+				try {
+					WebElement Code  = driver.findElement(By.xpath(xpath));
+					if (Code.isDisplayed()) {
+						clicksAndActionHelper.doubleClick(Code);
+					}
+					driver.findElement(By.xpath(xpath)).isDisplayed();
+					break;
+				} catch (Exception e) {
+					if (i==199) {
+						Assert.fail(e.getMessage());
+					}
+				}	
+			}
+		}
+
+		@Given("User_609 Select the Purpose Of Financing")
+		public void user_609_select_the_purpose_of_financing() {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancing());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancing());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancing());
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancingValue());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancingValue());
+			clicksAndActionHelper.doubleClick(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancingValue());
+		}
+
+		
+
+		@And("^User_609 Click on the add button$")
+		public void user_609_click_on_the_add_button() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_Add());
+			for (int i=0;i<200;i++) {
+				try {
+					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_Add());
+					break;
+				} catch (Exception e) {
+					if (i==199) {
+						Assert.fail(e.getMessage());
+					}
+				}			
+			}
+		}
+
+		@And("^User_609 Click on the Document Details tab$")
+		public void user_609_click_on_the_document_details_tab() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_DocumentDetailsTab());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_DocumentDetailsTab());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_DocumentDetailsTab());
+		}
+
+		@And("^User_609 Select the Solicitor Name$")
+		public void user_609_select_the_solicitor_name() throws Throwable {
+			
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_DocumentDetailsTab_SolicitorName_Search());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_DocumentDetailsTab_SolicitorName_Search());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_DocumentDetailsTab_SolicitorName_Search());
+
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_DocumentDetailsTab_SolicitorName());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_DocumentDetailsTab_SolicitorName());
+			WebElement ProductClass = FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_DocumentDetailsTab_SolicitorName();
+			ProductClass.click();
+			ProductClass.sendKeys(testData.get("Solicitor Name"));
+			ProductClass.sendKeys(Keys.ENTER);
+		
+			String xpath ="//table[@id='gridtab_applicationFacilitysolicitor_WIFT001MT']/tbody/tr[2]/td[text()='"+String.valueOf(testData.get("Solicitor Name"))+"']";
+			 for (int i = 0; i <= 200; i++) {
+		            try {
+		            	clicksAndActionHelper.moveToElement(driver.findElement(By.xpath(xpath)));
+		            	clicksAndActionHelper.doubleClick(driver.findElement(By.xpath(xpath)));
+		                break;
+		            } catch (Exception e) {
+		                if (i % 5 == 0) {
+		                	clicksAndActionHelper.moveToElement(FmsPageobjects_609.SolicitorNameGridNext());
+		                	clicksAndActionHelper.clickOnElement(FmsPageobjects_609.SolicitorNameGridNext());
+		                }
+		                if (i == 200) {
+		                    Assert.fail(e.getMessage());
+		                }
+		            }
+			 }
+		}
+
+		@And("^User_609 Select the Estimator Name$")
+		public void user_609_select_the_estimator_name() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_DocumentDetailsTab_EstimatorName_Search());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_DocumentDetailsTab_EstimatorName_Search());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_DocumentDetailsTab_EstimatorName_Search());
+			
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_DocumentDetailsTab_EstimatorName());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_DocumentDetailsTab_EstimatorName());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_DocumentDetailsTab_EstimatorName());
+			FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_DocumentDetailsTab_EstimatorName().sendKeys(testData.get("Estimator Name"));
+			FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_DocumentDetailsTab_EstimatorName().sendKeys(Keys.ENTER);
+			
+			String xpath ="//table[@id='gridtab_applicationFacilityEstimator_WIFT001MT']/tbody/tr[2]/td[text()='"+String.valueOf(testData.get("Estimator Name"))+"']";
+			 for (int i = 0; i <= 200; i++) {
+		            try {
+		            	clicksAndActionHelper.moveToElement(driver.findElement(By.xpath(xpath)));
+		            	clicksAndActionHelper.doubleClick(driver.findElement(By.xpath(xpath)));
+		                break;
+		            } catch (Exception e) {
+		                if (i % 5 == 0) {
+		                	clicksAndActionHelper.moveToElement(FmsPageobjects_609.EstimatorNameGridNext());
+		                	clicksAndActionHelper.clickOnElement(FmsPageobjects_609.EstimatorNameGridNext());
+		                }
+		                if (i == 200) {
+		                    Assert.fail(e.getMessage());
+		                }
+		            }
+			 }
+		}
+
+		@Given("User_609 Click the save button")
+		public void user_609_click_the_save_button() {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.save());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.save());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.save());
+		}
+
+		@Given("User_609 Click the validate button")
+		public void user_609_click_the_validate_button() {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.validate());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.validate());
+			
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Application_Confirmok());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Application_Confirmok()); 
+			
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.confirmPopup_609());
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.ConfirmAlert_Ok());
+	    	FmsPageobjects_609.ConfirmAlert_Ok().click();
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.ApplicationNo_609());
+	    	ApplicationNo = FmsPageobjects_609.ApplicationNo_609().getText().substring(23, 27);
+	    	System.err.println("Reference Number: " + ApplicationNo); 
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Application_Ok());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Application_Ok());  
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		 @And("^User_609 Click on the Approve level1 Screen$")
+		    public void User_609_Click_on_the_Approve_level1_Screen() throws Throwable {
+		    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApproveLevel1());
+				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApproveLevel1());
+		    }
+		    
+		    @And("^User_609 Select the Code in Approve level1$")
+		    public void User_609_Select_the_Code_in_Approve_level1() throws Throwable {
+		    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApproveLevel1_Code());
+				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApproveLevel1_Code());
+
+				System.out.println("ApplicationNo  :"+ApplicationNo);
+				FmsPageobjects_609.WifakApplication_ApproveLevel1_Code().sendKeys(ApplicationNo,Keys.ENTER);
+				String xpath ="//table[@id='applicationFacilityGridTbl_Id_WIFT001AP1']/tbody/tr[2]/td[text()='"+"000000"+ApplicationNo+"']";
+				
+				for (int i = 0; i < 200; i++) {
+					try {
+						WebElement Code  = driver.findElement(By.xpath(xpath));
+						if (Code.isDisplayed()) {
+							clicksAndActionHelper.doubleClick(Code);
+							break;
+						}
+					} catch (Exception e) {
+						if (i==199) {
+							Assert.fail(e.getMessage());
+						}
+					}
+				}
+				/*
+				try {
+					WebElement Code  = driver.findElement(By.xpath(xpath));
+					waitHelper.waitForElementwithFluentwait(driver,Code);
+					if (Code.isDisplayed()) {
+						clicksAndActionHelper.doubleClick(Code);
+					}
+				} catch (Exception e) {
+						Assert.fail(e.getMessage());
+					}
+					*/
+		    }
+		    
+		    @And("^User_609 Select the Decision in Approve level1$")
+		    public void User_609_Select_the_Decision_in_Approve_level1() throws Throwable {
+		    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApproveLevel1_Decision());
+				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApproveLevel1_Decision());
+				dropdownhelper.SelectUsingVisibleText(FmsPageobjects_609.WifakApplication_ApproveLevel1_Decision(), testData.get("Approve level1 Decision"));
+		    }
+		    
+		    @And("^User_609 Select the More Decision in Approve level1$")
+		    public void User_609_Select_the_More_Decision_in_Approve_level1() throws Throwable {
+		    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApproveLevel1_MoreDecision());
+				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApproveLevel1_MoreDecision());
+				dropdownhelper.SelectUsingVisibleText(FmsPageobjects_609.WifakApplication_ApproveLevel1_MoreDecision(), testData.get("Forward To"));
+		    }
+		    
+		    @And("^User_609 Click on Submit in Approve Level1$")
+		    public void User_609_Click_on_Submit_in_Approve_Level1() throws Throwable {
+		    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApproveLevel1_Submit());
+				clicksAndActionHelper.moveToElement(FmsPageobjects_609.WifakApplication_ApproveLevel1_Submit());
+				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApproveLevel1_Submit());
+		    }
+		
+		
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    @And("^User_609 Click on the Approve level2 Screen$")
+		    public void User_609_Click_on_the_Approve_level2_Screen() throws Throwable {
+		    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApproveLevel2());
+				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApproveLevel2());
+		    }
+		    
+		    @And("^User_609 Select the Code in Approve level2$")
+		    public void User_609_Select_the_Code_in_Approve_level2() throws Throwable {	
+				waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApproveLevel2_Code());
+				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApproveLevel2_Code());
+				System.out.println("ApplicationNo  :"+ApplicationNo);
+				FmsPageobjects_609.WifakApplication_ApproveLevel2_Code().sendKeys(ApplicationNo,Keys.ENTER);
+				String xpath ="//table[@id='applicationFacilityGridTbl_Id_WIFT001AP2']/tbody/tr[2]/td[text()='"+"000000"+ApplicationNo+"']";
+				
+				for (int i = 0; i < 200; i++) {
+					try {
+						WebElement Code  = driver.findElement(By.xpath(xpath));
+						if (Code.isDisplayed()) {
+							clicksAndActionHelper.doubleClick(Code);
+							break;
+						}
+					} catch (Exception e) {
+						if (i==199) {
+							Assert.fail(e.getMessage());
+						}
+					}
+				}
+				
+			
+		    }
+		    
+		    @And("^User_609 Select the Decision in Approve level2$")
+		    public void User_609_Select_the_Decision_in_Approve_level2() throws Throwable {
+		    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApproveLevel2_Decision());
+				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApproveLevel2_Decision());
+				dropdownhelper.SelectUsingVisibleText(FmsPageobjects_609.WifakApplication_ApproveLevel2_Decision(), testData.get("Approve level2 Decision"));
+		    }
+		    
+		   
+		    
+		    @And("^User_609 Click on Submit in Approve Level2$")
+		    public void User_609_Click_on_Submit_in_Approve_Level2() throws Throwable {
+		    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApproveLevel2_Submit());
+				clicksAndActionHelper.moveToElement(FmsPageobjects_609.WifakApplication_ApproveLevel2_Submit());
+				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApproveLevel2_Submit());
+		    }
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+			 @And("^User_609 Click on the Approve level3 Screen$")
+			    public void User_609_Click_on_the_Approve_level3_Screen() throws Throwable {
+			    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApproveLevel3());
+					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApproveLevel3());
+			    }
+			    
+			    @And("^User_609 Select the Code in Approve level3$")
+			    public void User_609_Select_the_Code_in_Approve_level3() throws Throwable {
+					waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApproveLevel3_Code());
+					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApproveLevel3_Code());
+					System.out.println("ApplicationNo  :"+ApplicationNo);
+					FmsPageobjects_609.WifakApplication_ApproveLevel3_Code().sendKeys(ApplicationNo,Keys.ENTER);
+					String xpath ="//table[@id='applicationFacilityGridTbl_Id_WIFT001AP3']/tbody/tr[2]/td[text()='"+"000000"+ApplicationNo+"']";
+					for (int i = 0; i < 200; i++) {
+						try {
+							WebElement Code  = driver.findElement(By.xpath(xpath));
+							if (Code.isDisplayed()) {
+								clicksAndActionHelper.doubleClick(Code);
+								break;
+							}
+						} catch (Exception e) {
+							if (i==199) {
+								Assert.fail(e.getMessage());
+							}
+						}
+					}
+					/*
+						try {
+							WebElement Code  = driver.findElement(By.xpath(xpath));
+							waitHelper.waitForElementwithFluentwait(driver,Code);
+							if (Code.isDisplayed()) {
+								clicksAndActionHelper.doubleClick(Code);
+							}
+						} catch (Exception e) {
+								Assert.fail(e.getMessage());
+							}
+							*/
+			    }
+			    
+			    @And("^User_609 Select the Decision in Approve level3$")
+			    public void User_609_Select_the_Decision_in_Approve_level3() throws Throwable {
+			    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApproveLevel3_Decision());
+					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApproveLevel3_Decision());
+					dropdownhelper.SelectUsingVisibleText(FmsPageobjects_609.WifakApplication_ApproveLevel3_Decision(), testData.get("Approve level3  Decision"));
+			    }
+			    
+			    @And("^User_609 Select the More Decision in Approve level3$")
+			    public void User_609_Select_the_More_Decision_in_Approve_level3() throws Throwable {
+			    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApproveLevel3_MoreDecision());
+					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApproveLevel3_MoreDecision());
+					dropdownhelper.SelectUsingVisibleText(FmsPageobjects_609.WifakApplication_ApproveLevel3_MoreDecision(), testData.get("Approve level3 More Decision"));
+			    }
+			    
+			    @And("^User_609 Click on Submit in Approve Level3$")
+			    public void User_609_Click_on_Submit_in_Approve_Level3() throws Throwable {
+			    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApproveLevel3_Submit());
+	
+					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApproveLevel3_Submit());
+			    }
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+
+		/*
+		@Given("User_609 Click the ok button to proceed")
+		public void user_609_click_the_ok_button_to_proceed() {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Confirmok());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Confirmok());
+			try {
+				if (FmsPageobjects_609.Confirmok().isDisplayed()) {
+					FmsPageobjects_609.Confirmok().click();
 				}
 			} catch (Exception e) {
 				Assert.fail(e.getMessage());
 			}
 		}
-	    
-	    
-	    
-	    
-	 
+
+		@Given("User_609 Click Dismiss in Send Alert")
+		public void user_609_click_dismiss_in_send_alert() {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.SendAlert());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.SendAlert());
+			try {
+				if (FmsPageobjects_609.SendAlert().isDisplayed()) {
+					FmsPageobjects_609.SendAlert().click();
+				}
+			} catch (Exception e) {
+				Assert.fail(e.getMessage());
+			}
+		}
+	*/
+		
+
+		
+		
+		
+		
+		@And("^User_609 Click on Approval Committee Recommendations in Wifak Application$")
+		public void User_609_Click_on_Approval_Committee_Recommendations_in_Wifak_Application() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApprovalCommitteeRecommendations());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApprovalCommitteeRecommendations());
+		}
+		
+		@And("^User_609 Select the Code in Approval Committee Recommendations$")
+		public void User_609_Select_the_Code_in_Approval_Committee_Recommendations() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApprovalCommitteeRecommendations_Code());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApprovalCommitteeRecommendations_Code());
+			System.out.println("ApplicationNo  :"+ApplicationNo);
+			
+			FmsPageobjects_609.WifakApplication_ApprovalCommitteeRecommendations_Code().sendKeys(ApplicationNo,Keys.ENTER);
+			
+			String xpath ="//table[@id='applicationFacilityGridTbl_Id_WIFT002MT']/tbody/tr[2]/td[text()='"+"000000"+ApplicationNo+"']";
+			for (int i = 0; i < 200; i++) {
+				try {
+					WebElement Code  = driver.findElement(By.xpath(xpath));
+					if (Code.isDisplayed()) {
+						clicksAndActionHelper.doubleClick(Code);
+						break;
+					}
+				} catch (Exception e) {
+					if (i==199) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}	
+		}
+		
+		@And("^User_609 Click Recommend button in Approval Committee Recommendations$")
+		public void User_609_Click_Recommend_button_in_Approval_Committee_Recommendations() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApprovalCommitteeRecommendations_Recommend());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApprovalCommitteeRecommendations_Recommend());
+		}
+
+		@And("^User_609 Select the decision in Approval Committee Recommendations$")
+		public void User_609_Select_the_decision_in_Approval_Committee_Recommendations() throws Throwable {
+			 
+			
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.ApprovalCommitteesRecommendation_Popup_609());
+			String RecommendedBy = "(//table[@id='ApplicationFacilityRecommendationGrid_WIFT002MT']//td[text()='"+User.get("UserName")+"'])[1]";
+			for(int  i= 0 ; i<500;i++) {
+				try {
+					WebElement RecommendedBy_user = driver.findElement(By.xpath(RecommendedBy));
+					RecommendedBy_user.click();
+					break;
+				} catch (Exception e) {
+					if (i==499) {
+						Assert.fail(e.getMessage());
+					}	
+				}
+				
+			}
+			
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation());
+			dropdownhelper.SelectUsingVisibleText(FmsPageobjects_609.WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation(), testData.get("Committee Recommendations"));
+		}
+		
+		
+		@And("^User_609 Validate the Committee Recommendation is Enabled$")
+		public void User_609_Validate_the_Committee_Recommendation_is_Enabled() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation());
+			Assert.assertEquals(FmsPageobjects_609.WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation().isEnabled(), true);
+			System.out.println("True");
+		}
+		
+		
+		@And("^User_609 Click on Ok in Approval Committee Recommendations$")
+		public void User_609_Click_on_Ok_in_Approval_Committee_Recommendations() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation_Ok());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation_Ok());
+		}
+		
+		
+///****************************************************Grading**********************************************************************///
+		
+		@And("^User_609 Click on Grading under WIFAK APPLICATION submenu$")
+		public void User_609_Click_on_Grading_under_WIFAK_APPLICATION_submenu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_Grading_609());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_Grading_609());
+		}
+		
+		@And("^User_609 click on the Maintenance Screen in Grading$")
+		public void User_609_click_on_the_Maintenance_Screen_in_Grading() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_Grading_Maintenance_609());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_Grading_Maintenance_609());
+		}
+		
+		@And("^User_609 Select the Application Refernece in Grading$")
+		public void User_609_Select_the_Application_Refernece_in_Grading() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_Grading_Maintenance_SearchCode_609());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_Grading_Maintenance_SearchCode_609());
+			
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_Grading_Maintenance_Code_609());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_Grading_Maintenance_Code_609());
+			FmsPageobjects_609.WifakApplication_Grading_Maintenance_Code_609().sendKeys(ApplicationNo,Keys.ENTER);
+			
+			String xpath ="//table[@id='gridtab_Application_Ref_WIFT003MT']/tbody/tr[2]/td[text()='"+"000000"+ApplicationNo+"']";
+			for (int i = 0; i < 200; i++) {
+				try {
+					WebElement Code  = driver.findElement(By.xpath(xpath));
+					if (Code.isDisplayed()) {
+						clicksAndActionHelper.doubleClick(Code);
+						break;
+					}
+				} catch (Exception e) {
+					if (i==199) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+		
+		
+		@And("^User_609 Click on Save Button in Grading$")
+		public void User_609_Click_on_Save_Button_in_Grading () throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_Grading_Maintenance_Save_609());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_Grading_Maintenance_Save_609());
+		}
+		
+		@And("^User_609 Click on Approve in Grading$")
+		public void User_609_Click_on_Approve_in_Grading() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_Grading_Approvee_609());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_Grading_Approvee_609());
+		}
+		
+		@And("^User_609 Select the Code in Approve screen in grading$")
+		public void User_609_Select_the_Code_in_Approve_screen_in_grading() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_Grading_Approve_Code_609());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_Grading_Approve_Code_609());
+			FmsPageobjects_609.WifakApplication_Grading_Approve_Code_609().sendKeys(ApplicationNo,Keys.ENTER);
+			
+			String xpath ="//table[@id='cust_grade_maint_WIFT003AP']/tbody/tr[2]/td[text()='"+"000000"+ApplicationNo+"']";
+			for (int i = 0; i < 200; i++) {
+				try {
+					WebElement Code  = driver.findElement(By.xpath(xpath));
+					if (Code.isDisplayed()) {
+						clicksAndActionHelper.doubleClick(Code);
+						break;
+					}
+				} catch (Exception e) {
+					if (i==199) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+		
+		@And("^User_609 Click on Approve in Approve screen in Grading$")
+		public void User_609_Click_on_Approve_in_Approve_screen_in_Grading() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_Grading_Approve_ApproveButton_609());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_Grading_Approve_ApproveButton_609());
+		}
+		
+		
+		@And("^User_609 Click on Dismiss if Send Alert pop up appears in Grading$")
+	    public void User_609_Click_on_Dismiss_if_Send_Alert_pop_up_appears_in_grading() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Grading_sendAlertPopup_609());  	
+			for(int i= 0; i< 200;i++) {
+				try {
+					FmsPageobjects_609.Grading_sendAlertPopup_609().click();
+					break;
+				} catch (Exception e) {
+					if(i==199) {
+						Assert.fail(e.getMessage());
+					}			
+				}
+			}
+	    }
+		
+		
 }
