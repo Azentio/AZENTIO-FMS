@@ -5,6 +5,7 @@ Scenario: ABSAI190084 - Floating Yield Issue at FMS
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_AFF_036
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link
@@ -29,6 +30,7 @@ Scenario: MFI190130 - History Log is empty for Application for facility--Approva
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_AFF_040
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link
@@ -44,6 +46,7 @@ Scenario: BIM140064 - Nous voulons mettre les frais au niveau de FMS Comment peu
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_AFF_048
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link
@@ -93,6 +96,7 @@ Scenario: NBADAD150041 - Field to update Branch Manager comments while approving
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_AFF_052
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link
@@ -189,6 +193,7 @@ Scenario: Check by default the option “Application From & To” is selected an
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_AFF_048
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link

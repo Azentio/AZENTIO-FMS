@@ -175,6 +175,12 @@ public class RequestForFinancingObj_608 {
 		return issue_facility_offer_search_result;
 	}
 	
+	@FindBy(xpath = "//input[@id='code_WIFT005MT']")
+	private WebElement issue_facility_offer_code;
+	public WebElement issueFacilityOfferCode_608() {
+		return issue_facility_offer_code;
+	}
+	
 	@FindBy(xpath = "//button[@id='applicationfacility_issueoffer_btn_WIFT005MT']")
 	private WebElement issue_facility_offer_issue_offer_btn;
 	public WebElement issueFacilityOfferIssueOfferBtn_608() {
@@ -1171,6 +1177,12 @@ public class RequestForFinancingObj_608 {
 		return collateral_cash_details_add_icon;
 	}
 	
+	@FindBy(xpath = "//input[@name='lookupTxt_accAdditionalRef']")
+	private WebElement collateral_cash_details_additional_ref_input;
+	public WebElement CollateralCashDetailsAdditionalRefInput_608() {
+		return collateral_cash_details_additional_ref_input;
+	}
+	
 	@FindBy(xpath = "//input[@name='lookupTxt_accAdditionalRef']/following-sibling::span")
 	private WebElement collateral_cash_details_additional_ref_lookup;
 	public WebElement CollateralCashDetailsAdditionalRefLookup_608() {
@@ -1238,7 +1250,7 @@ public class RequestForFinancingObj_608 {
 		return collateral_management_approve;
 	}
 	                          
-	@FindBy(xpath = "//input[@name='fmsCollateralVO.CODE']")
+	@FindBy(xpath = "//input[@id='collateralManagementGridTbl_Id_T014AP_gs_fmsCollateralVO.CODE']")
 	private WebElement collateral_management_approve_menu_searchgrid_code_input;
 	public WebElement collateralManagementApproveMenuSearchgridCodeInput_608() {		       
 		return collateral_management_approve_menu_searchgrid_code_input;
@@ -1295,5 +1307,89 @@ public class RequestForFinancingObj_608 {
 	public WebElement CollateralManagementMainInfoCIFNoInput_608() {
 		return collateral_management_main_info_cif_no;
 	}
+	
+	
+	//AT_CM_043
+	@FindBy(xpath = "//input[@id='facilityManagementGridTbl_Id_WIFT008MT_gs_statusDesc']")
+	private WebElement wifak_facilities_management_main_searchgrid_status_input;
+	public WebElement wifakFacilitiesManagementMainSearchgridStatusInput_608() {
+		return wifak_facilities_management_main_searchgrid_status_input;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_facilityManagementGridTbl_Id_WIFT008MT_2_fmsFacilityVO.CODE']")
+	private WebElement wifak_facilities_management_main_searchgrid_rows;
+	public WebElement wifakFacilitiesManagementMainSearchgridRow_608() {
+		return wifak_facilities_management_main_searchgrid_rows;
+	}
+	
+	@FindBy(xpath = "//button[@id='facilityManagement_collateralDetails_btn_WIFT008MT']")
+	private WebElement wifak_facilities_management_main_limit_details_tab_collateral_details_btn;
+	public WebElement wifakFacilitiesManagementMainLimitDetailsTabCollateralDetailsBtn_608() {
+		return wifak_facilities_management_main_limit_details_tab_collateral_details_btn;
+	}
+	
+	@FindBy(xpath = "//div[@id='facilitySubLimitCollateralDetailsDiv_id_WIFT008MT']")
+	private WebElement wifak_facilities_management_main_collateral_details_tab;
+	public WebElement wifakFacilitiesManagementMainCollateralDetailsTab_608() {
+		return wifak_facilities_management_main_collateral_details_tab;
+	}
+	
+	@FindBy(xpath = "//td[@id='add_FacilityCollateralGrid_WIFT008MT']/div/span")
+	private WebElement wifak_facilities_management_main_collateral_details_tab_add_icon;
+	public WebElement wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_608() {
+		return wifak_facilities_management_main_collateral_details_tab_add_icon;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_FacilityCollateralGrid_WIFT008MT_1_rn']")
+	private WebElement wifak_facilities_management_main_collateral_details_tab_first_row;
+	public WebElement wifakFacilitiesManagementMainCollateralDetailsTabFirstRow_608() {
+		return wifak_facilities_management_main_collateral_details_tab_first_row;
+	}
+	
+	@FindBy(xpath = "//input[@name='lookupTxt_fmsAppcollateralsVO.COLLATERAL']")
+	private WebElement wifak_facilities_management_main_collateral_details_tab_first_row_collateral_input;
+	public WebElement wifakFacilitiesManagementMainCollateralDetailsTabFirstRowCollateralInput_608() {
+		return wifak_facilities_management_main_collateral_details_tab_first_row_collateral_input;
+	}	
+	
+	@FindBy(xpath = "//span[text()='Ok']")
+	private WebElement wifak_facilities_management_main_collateral_details_tab_Ok_btn;
+	public WebElement wifakFacilitiesManagementMainCollateralDetailsTabOkBtn_608() {
+		return wifak_facilities_management_main_collateral_details_tab_Ok_btn;
+	}
+	
+	
+	//AT_CM_044
+	@FindBy(xpath = "//li[@id='facilityAdditionalDetailsTab_WIFT008MT']")
+	private WebElement wifak_facilities_management_main_additional_details_tab;
+	public WebElement wifakFacilitiesManagementMainAdditionalDetailsTab_608() {
+		return wifak_facilities_management_main_additional_details_tab;
+	}
+	
+	@FindBy(xpath = "//input[@id='facilityMgtAddDetDateEffectiveFrom_WIFT008MT']")
+	private WebElement wifak_facilities_management_main_additional_details_tab_effective_date_from_input;
+	public WebElement wifakFacilitiesManagementMainAdditionalDetailsTabEffectiveDateFromInput_608() {
+		return wifak_facilities_management_main_additional_details_tab_effective_date_from_input;
+	}
+	
+	@FindBy(xpath = "//input[@id='facilityMgtAddDetDateEffectiveUntill_WIFT008MT']")
+	private WebElement wifak_facilities_management_main_additional_details_tab_effective_until_input;
+	public WebElement wifakFacilitiesManagementMainAdditionalDetailsTabEffectivenUntilInput_608() {
+		return wifak_facilities_management_main_additional_details_tab_effective_until_input;
+	}
+	
+	@FindBy(xpath = "//input[@id='facilityMgtAddDetUnutilizedExpiryDate_WIFT008MT']")
+	private WebElement wifak_facilities_management_main_additional_details_tab_unutilize_expire_date_input;
+	public WebElement wifakFacilitiesManagementMainAdditionalDetailsTabUnutilizeExpireDateInput_608() {
+		return wifak_facilities_management_main_additional_details_tab_unutilize_expire_date_input;
+	}
+
+	@FindBy(xpath = "//a[@id='dismissbut_WIFT008MT']")
+	private WebElement wifak_facilities_management_main_send_alert_popup_dismiss_btn;
+	public WebElement wifakFacilitiesManagementMainSendAlertPopupDismissBtn_608() {
+		return wifak_facilities_management_main_send_alert_popup_dismiss_btn;
+	}
+	
+	
 	
 }

@@ -25,6 +25,7 @@ Scenario: IIS Param Application
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_RF_014_FMSCore
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link
@@ -67,7 +68,7 @@ And User_608 validate Facility Custom Fields screen are available
 Scenario: TSR - CDMI180093
 
 Given navigate to FMS param application and login with valid credentials
-And User_608 get the test data for test case AT_RF_034_FMSParam
+And User_608 get the test data for test case AT_RF_034
 And User_608 clicks on the Parameter module in FMS Param
 And User_608 clicks on the Facility Type feature
 And User_608 clicks on the update after approve menu in Facility type
@@ -97,12 +98,14 @@ And User_608 double click on the retrieved data in Approve menu
 When User_608 clicks on the Approve button in Approve menu under Facility Type
 
 
+# Create a new application and go to issue facility offer menu and click the issue offer button
 @AT_RF_034
 @AT_RF_034_FMSCore
 Scenario: TSR - CDMI180093
 
 Given navigate to FMS application and login with valid credentials
-And User_608 get the test data for test case AT_RF_034_FMSCore
+And User_608 get the test data for test case AT_RF_034
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link
@@ -125,7 +128,7 @@ And User_608 enter the Estimator Name
 And User_608 clicks the save button
 And User_608 clicks on the validate button
 Then User_608 clicks the Approve Level1 menu under Application for financial facilities
-And User_608 get the test data for test case AT_RF_034_FMSCore
+And User_608 get the test data for test case AT_RF_034
 And User_608 enter the reference code in Approve level1
 And User_608 double click on the retrieved reference code in Approve level1
 And User_608 select the Approve level1 decision as Approve
@@ -158,11 +161,14 @@ And User_608 verify the Maintanance screen should be arabic language
 
 
 # Sprint 4
+#  In application for financial facility To check the down payment and vendor should be editable.
+# limit details product class tab account label and found transfer label should be visible
 @AT_RF_040
 Scenario: TSR - RIDB180129
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_RF_040
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link
@@ -190,6 +196,7 @@ Scenario: TSR - BTII170041
 
 Given User_VAK navigate to FMS application and login with valid credentials
 And User_VAK get the test data for test case AT_RF_098_User_VAK
+And User_VAK clear the caches in FMS Application
 And User_VAK clicks on the WIFAK_Application first link
 And User_VAK clicks on the WIFAK_Application second link
 And User_VAK clicks on the approval committe recommedation menu
@@ -212,6 +219,7 @@ Scenario: TSR - BTII170041
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_RF_098_User_608
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link
@@ -253,6 +261,7 @@ Scenario: TSR - BTII170059
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_RF_099_FMSCore
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link
@@ -299,6 +308,7 @@ Scenario: TSR-AMANAUPG170045
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_RF_100
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link
@@ -373,6 +383,7 @@ Scenario: TSR-AMANAUPG170107
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_RF_101_FMSCore
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link
@@ -423,6 +434,7 @@ Scenario: TSR-AMANAUPG170105
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_RF_102
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link
@@ -453,6 +465,7 @@ Scenario: TSR - AMANA180702
 # Draw Down request
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_RF_157
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Draw Down request module under WIFAK Application
@@ -529,6 +542,7 @@ Scenario: TSR - AIBBI180226
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_RF_158_Core
+And User_608 clear the caches in FMS Application
 And User_608 click on the Collateral Management feature
 And User_608 click on the Maintanace screen under Collateral Management
 And User_608 enter the Collateral type under main information in Collateral Management main Screen
@@ -633,6 +647,7 @@ Scenario: JAIZ150014 INABILITY TO CRAETE A LIMIT ON APPROVE FACILITY
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_FM_043_FMSCore
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the Request module
 And User_608 clicks on the Request Financing under Request module
 And User_608 clicks on the Request for Financing under Request Financing feature

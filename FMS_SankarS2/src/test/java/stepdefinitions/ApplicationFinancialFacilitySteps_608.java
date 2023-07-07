@@ -46,9 +46,11 @@ public class ApplicationFinancialFacilitySteps_608 {
 	String path = System.getProperty("user.dir") +"\\TestData\\FMSTestData.xlsx";
 //	ExcelData fmsTransactionsExcelData = new ExcelData(path,"ApplicationFinancialFacility","DataSet ID");
 //	ExcelData fmsTransactionsExcelData = new ExcelData(path,"FacilitiesManagementTestData","DataSet ID");
+	ExcelData fmsTransactionsExcelData = new ExcelData(path,"RequestForFinancingTestData","DataSet ID");
 //	ExcelData fmsTransactionsExcelData = new ExcelData(path,"FMSParameterTestData","DataSet ID");
 //	ExcelData fmsTransactionsExcelData = new ExcelData(path,"IIS_Param_TestData","DataSet ID");
-	ExcelData fmsTransactionsExcelData = new ExcelData(path,"DrawDownRequestTestData","DataSet ID");
+//	ExcelData fmsTransactionsExcelData = new ExcelData(path,"DrawDownRequestTestData","DataSet ID");
+//	ExcelData fmsTransactionsExcelData = new ExcelData(path,"CommiteeApprovalTestData","DataSet ID");
 	Map<String, String> testData;
 	
 	
@@ -153,15 +155,9 @@ public class ApplicationFinancialFacilitySteps_608 {
     	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_014");
     }
 	
-//  @AT_RF_034_FMSParam
-	@And("^User_608 get the test data for test case AT_RF_034_FMSParam$")
-	public void get_the_test_data_for_test_case_AT_RF_034fmsparam() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_034");
-	}
-	
-//  @AT_RF_034_FMSCore    
-    @And("^User_608 get the test data for test case AT_RF_034_FMSCore$")
-    public void get_the_test_data_for_test_case_AT_RF_034fmscore() throws Throwable {
+//  @AT_RF_034  
+    @And("^User_608 get the test data for test case AT_RF_034$")
+    public void get_the_test_data_for_test_case_AT_RF_034() throws Throwable {
     	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_034");
     }
 	
@@ -171,6 +167,14 @@ public class ApplicationFinancialFacilitySteps_608 {
     	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_040");
     }
 	
+    
+//	@AT_FM_038
+	@And("^User_608 get the test data for test case AT_FM_038$")
+    public void get_the_test_data_for_test_case_AT_FM_038() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_038");
+    }
+    
+    
 
 //	@AT_FM_102
 	@And("User_608 get the test data for test case AT_FM_102")
@@ -232,12 +236,58 @@ public class ApplicationFinancialFacilitySteps_608 {
     }
 	
     
-
+//  Committee Approval Feature Test Data
+//	@AT_CA_008
+	@And("^User_608 get the test data for test case AT_CA_008$")
+    public void get_the_test_data_for_test_case_AT_CA_008() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_CA_008");
+    }	
 	
 	
 	
 	
 	
+	
+	// Clear cache step
+	@And("User_608 clear the caches in FMS Application")
+	public void user_clear_the_caches_in_fms_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.FMSCoreTechDetailsIcon_608());
+		applicationFinancialFacilityObj608.FMSCoreTechDetailsIcon_608().click();
+		
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.FMSCoreClearCacheBtn_608());
+		applicationFinancialFacilityObj608.FMSCoreClearCacheBtn_608().click();
+		
+		for (int i = 0; i < 2000; i++) {
+			try {
+		    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+	
+	@And("User_VAK clear the caches in FMS Application")
+	public void user_vak_clear_the_caches_in_fms_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.FMSCoreTechDetailsIcon_608());
+		applicationFinancialFacilityObj608.FMSCoreTechDetailsIcon_608().click();
+		
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.FMSCoreClearCacheBtn_608());
+		applicationFinancialFacilityObj608.FMSCoreClearCacheBtn_608().click();
+		
+		for (int i = 0; i < 2000; i++) {
+			try {
+		    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
 	
 	
 	
@@ -575,8 +625,7 @@ public class ApplicationFinancialFacilitySteps_608 {
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.successPopup_608());
 //    	String SuccessMsg = applicationFinancialFacilityObj608.successPopupMessage().getText();
     	String refCode = applicationFinancialFacilityObj608.successPopupMessage_608().getText().substring(23, 27);
-    	System.err.println("Reference Number: "+refCode);
-    	
+    	System.err.println("Reference Number: "+refCode);    	
     	fmsTransactionsExcelData.updateTestData(testData.get("DataSet ID"),"Reference Code", refCode);
     	
     	for (int i = 0; i < 2000; i++) {
@@ -739,13 +788,13 @@ public class ApplicationFinancialFacilitySteps_608 {
     	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
     	
     	// close the send alert pop-up box
-    	for (int i = 0; i < 100; i++) {
+    	for (int i = 0; i < 500; i++) {
 			try {
 		    	applicationFinancialFacilityObj608.level3SendAlertPopup_608().click();
 		    	break;
 			} catch (Exception e) {
 				
-				}
+			}
 		}
         
     }
@@ -1264,6 +1313,15 @@ public class ApplicationFinancialFacilitySteps_608 {
      public void user_double_click_on_the_retrieved_data_in_approve_menu() throws Throwable {
      	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.approveSearchCodeResult_608());
      	clicksAndActionsHelper.doubleClick(facilityTypeObj608.approveSearchCodeResult_608());
+     	for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(facilityTypeObj608.facilityTypeApproveMenuCode_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}
      }
      
      @When("^User_608 clicks on the Approve button in Approve menu under Facility Type$")
@@ -1489,9 +1547,9 @@ public class ApplicationFinancialFacilitySteps_608 {
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
     	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
     	
-    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementSaveMessage_608());
-    	String facilityCode = facilityManagementObj608.wifakFacilitiesManagementSaveMessage_608().getText().substring(11, 15);
-    	fmsTransactionsExcelData.updateTestData(testData.get("DataSet ID"), "Facility Code",facilityCode );
+//    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementSaveMessage_608());
+//    	String facilityCode = facilityManagementObj608.wifakFacilitiesManagementSaveMessage_608().getText().substring(11, 15);
+//    	fmsTransactionsExcelData.updateTestData(testData.get("DataSet ID"), "Facility Code",facilityCode );
 //    	System.err.println("Facility Code: "+facilityCode);
     	
     	for (int i = 0; i < 2000; i++) {
@@ -2465,6 +2523,99 @@ public class ApplicationFinancialFacilitySteps_608 {
     }
     
     
+    
+//    @AT_FM_038_FMSCore
+    @And("User_608 clicks on the Approval committe recommedations menu")
+    public void user_clicks_on_the_approval_committe_recommedations_menu() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakApprovalCommitteeRecommendationsMenu_608());
+    	requestForFinancingObj608.wifakApprovalCommitteeRecommendationsMenu_608().click();
+    }
+
+    @And("User_608 enter the Facility type in search grid under Approval committe recommedations")
+    public void user_enter_the_facility_type_in_search_grid_under_approval_committe_recommedations() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakApprovalCommitteeRecommendationsFacilityTypeInput_608());
+    	applicationFinancialFacilityObj608.wifakApprovalCommitteeRecommendationsFacilityTypeInput_608().sendKeys(testData.get("Facility Type"),Keys.ENTER);
+    }
+
+    @And("User_608 double the first row in search grid under Approval committe recommedations")
+    public void user_double_the_first_row_in_search_grid_under_approval_committe_recommedations() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakApprovalCommitteeRecommendationsRetrievedFirstRow_608());
+        clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.wifakApprovalCommitteeRecommendationsRetrievedFirstRow_608());
+        for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(applicationFinancialFacilityObj608.wifakApprovalCommitteeRecommendationsCodeInput_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}
+    }
+
+    @And("User_608 click the Recommend button under Approval committe recommedations")
+    public void user_click_the_recommend_button_under_approval_committe_recommedations() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakApprovalCommitteeRecommendationsCode());
+    	for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(requestForFinancingObj608.wifakApprovalCommitteeRecommendationsRecommendBtn_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakApprovalCommitteeRecommendationsRecommendBtn_608());
+    	requestForFinancingObj608.wifakApprovalCommitteeRecommendationsRecommendBtn_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.confirmPopupOkBtn_608());
+    	facilityTypeObj608.confirmPopupOkBtn_608().click();
+    }
+    
+    @And("User_608 click the User recommended by name in approval committee user popup under Approval committe recommedations")
+    public void user_click_the_user_recommended_by_name_in_approval_committee_user_popup_under_approval_committe_recommedations() throws Throwable {
+    	for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.approvalCommitteeRecommendByLabel_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.approvalCommitteeRecommendByLabel_608());
+    	applicationFinancialFacilityObj608.approvalCommitteeRecommendByLabel_608().click();
+    }
+
+    @And("User_608 select the recommendation as approve in approval committee user popup under Approval committe recommedations")
+    public void user_select_the_recommendation_as_approve_in_approval_committee_user_popup_under_approval_committe_recommedations() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakApprovalCommitteeRecommendationDropdown_608());
+    	dropDownHelper.SelectUsingVisibleText(requestForFinancingObj608.wifakApprovalCommitteeRecommendationDropdown_608(), testData.get("Decision3"));
+    }
+    
+    @And("User_608 click the OK button in approval committee user popup under Approval committe recommedations")
+    public void user_click_the_ok_button_in_approval_committee_user_popup_under_approval_committe_recommedations() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakApprovalCommitteeRecommendationsUserPopupOkBtn_608());
+    	requestForFinancingObj608.wifakApprovalCommitteeRecommendationsUserPopupOkBtn_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.successPopup_608());    	
+    	for (int i = 0; i < 2000; i++) {
+			try {
+		    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+    }
+    
+    
+    
+    
+    
 //  @AT_RF_102
     @And("^User_608 select the Item in limit Details$")
     public void user_select_the_item_in_limit_details() throws Throwable {
@@ -2518,8 +2669,139 @@ public class ApplicationFinancialFacilitySteps_608 {
     }
     
     
-
+//  @AT_CA_008_Core
+    @And("User_608 enter the reference code in search grid under Approval committe recommedations")
+    public void user_enter_the_reference_code_in_search_grid_under_approval_committe_recommedations() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakApprovalCommitteeRecommendationsSearchgridCodeInput_608());
+    	applicationFinancialFacilityObj608.wifakApprovalCommitteeRecommendationsSearchgridCodeInput_608().sendKeys(testData.get("Reference Code"),Keys.ENTER);
+    }
     
+    @And("User_608 select the recommendation as Reject in approval committee user popup under Approval committe recommedations")
+    public void user_select_the_recommendation_as_reject_in_approval_committee_user_popup_under_approval_committe_recommedations() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakApprovalCommitteeRecommendationDropdown_608());
+    	dropDownHelper.SelectUsingVisibleText(requestForFinancingObj608.wifakApprovalCommitteeRecommendationDropdown_608(), testData.get("Committee Recommendation"));
+    }
 	
+    @Then("User_608 click the Reopen Rejected Applications menu under WIFAK Application")
+    public void user_click_the_reopen_rejected_applications_menu_under_wifak_application() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakReopenRejectedApplicationsMenu_608());
+    	applicationFinancialFacilityObj608.wifakReopenRejectedApplicationsMenu_608().click();
+    }
+
+    @And("User_608 click the maintanance in Reopen Rejected Applications menu under WIFAK Application")
+    public void user_click_the_maintanance_in_reopen_rejected_applications_menu_under_wifak_application() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakReopenRejectedMenuMaintanance_608());
+    	applicationFinancialFacilityObj608.wifakReopenRejectedMenuMaintanance_608().click();
+    }
+
+    @And("User_608 enter the reference code in searchgrid under WIFAK Reopen Rejected Applications maintanance")
+    public void user_enter_the_reference_code_in_searchgrid_under_wifak_reopen_rejected_applications_maintanance() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakReopenRejectedMaintananceSearchgridCodeInput_608());
+    	applicationFinancialFacilityObj608.wifakReopenRejectedMaintananceSearchgridCodeInput_608().sendKeys(testData.get("Reference Code"),Keys.ENTER);
+    }
+
+    @And("User_608 double click the first row in searchgrid under WIFAK Reopen Rejected Applications maintanance")
+    public void user_double_click_the_first_row_in_searchgrid_under_wifak_reopen_rejected_applications_maintanance() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakReopenRejectedMaintananceSearchgridFirstRowCode_608());
+        clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.wifakReopenRejectedMaintananceSearchgridFirstRowCode_608());
+        for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(applicationFinancialFacilityObj608.wifakReopenRejectedMaintananceCodeInput_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}
+    }
+
+    @And("User_608 click the Reopen button in WIFAK Reopen Rejected Applications maintanance")
+    public void user_click_the_reopen_button_in_wifak_reopen_rejected_applications_maintanance() throws Throwable {
+    	for (int i = 0; i <= 300; i++) {
+        	try {
+        		javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.wifakReopenRejectedMaintananceReopenBtn_608());
+    				break;
+    			} catch (Exception e) {
+    				if (i == 300) {
+    					Assert.fail(e.getMessage());
+    				}
+    			}
+    	}
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakReopenRejectedMaintananceReopenBtn_608());
+    	applicationFinancialFacilityObj608.wifakReopenRejectedMaintananceReopenBtn_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
+    	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
+    	
+    	for (int i = 0; i < 2000; i++) {
+			try {
+		    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}   	 
+    }
+    
+    
+    @Then("User_608 click the Approve\\Reject menu in Reopen Rejected Applications under WIFAK Application")
+    public void user_click_the_approve_reject_menu_in_reopen_rejected_applications_under_wifak_application() {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakReopenRejectedMenuApproveOrReject_608()); 
+    	applicationFinancialFacilityObj608.wifakReopenRejectedMenuApproveOrReject_608().click();
+    }
+
+    @And("User_608 enter the reference code in Approve\\Reject searchgrid under WIFAK Reopen Rejected Applications")
+    public void user_enter_the_reference_code_in_approve_reject_searchgrid_under_wifak_reopen_rejected_applications() {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakReopenRejectedMenuApproveOrRejectSearchgridCodeInput_608());
+    	applicationFinancialFacilityObj608.wifakReopenRejectedMenuApproveOrRejectSearchgridCodeInput_608().sendKeys(testData.get("Reference Code"),Keys.ENTER);
+    }
+
+    @And("User_608 double click the first row in Approve\\Reject searchgrid under WIFAK Reopen Rejected Applications maintanance")
+    public void user_double_click_the_first_row_in_approve_reject_searchgrid_under_wifak_reopen_rejected_applications_maintanance() {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakReopenRejectedMenuApproveOrRejectSearchgridFirstRowCode_608());
+        clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.wifakReopenRejectedMenuApproveOrRejectSearchgridFirstRowCode_608());
+        for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(applicationFinancialFacilityObj608.wifakReopenRejectedMenuApproveOrRejectCodeInput_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}
+    }
+
+    @And("User_608 click the Approve button in Approve\\Reject under WIFAK Reopen Rejected Applications maintanance")
+    public void user_click_the_approve_button_in_approve_reject_under_wifak_reopen_rejected_applications_maintanance() {
+    	for (int i = 0; i <= 300; i++) {
+        	try {
+        		javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.wifakReopenRejectedMenuApproveOrRejectApproveBtn_608());
+    				break;
+    			} catch (Exception e) {
+    				if (i == 300) {
+    					Assert.fail(e.getMessage());
+    				}
+    			}
+    	}
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakReopenRejectedMenuApproveOrRejectApproveBtn_608());
+    	applicationFinancialFacilityObj608.wifakReopenRejectedMenuApproveOrRejectApproveBtn_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
+    	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
+    	
+    	for (int i = 0; i < 2000; i++) {
+			try {
+		    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		} 
+    }
+
 
 }

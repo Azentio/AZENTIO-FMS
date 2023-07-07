@@ -39,6 +39,7 @@ Scenario: Define the value in the new added field
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_DDR_020
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link
@@ -97,6 +98,7 @@ Scenario: Define the value in the new added field
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_DDR_021
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the Request module
 And User_608 clicks on the Request Financing under Request module
 And User_608 clicks on the Request for Financing under Request Financing feature
@@ -128,6 +130,7 @@ Scenario: Check the values are defaulted in the Draw Down screen, and also check
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_DDR_022
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link
@@ -198,6 +201,7 @@ Scenario: Check the values are defaulted in the Draw Down screen, and also check
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_DDR_023
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link
@@ -272,6 +276,7 @@ Scenario: Draw down Request
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_DDR_024
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link
@@ -364,6 +369,7 @@ Scenario: Draw Down Request
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_DDR_025
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link

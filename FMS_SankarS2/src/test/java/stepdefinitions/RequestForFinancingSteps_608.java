@@ -18,6 +18,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageobjects.fms.ApplicationFinancialFacilityObj_608;
+import pageobjects.fms.FacilitiesManagementObj_608;
 import pageobjects.fmsParam.Facility_TypeObj_608;
 import pageobjects.fmsParam.RequestForFinancingObj_608;
 import resources.BaseClass;
@@ -27,8 +28,8 @@ public class RequestForFinancingSteps_608 {
 	WebDriver driver = BaseClass.driver;
 	ConfigFileReader configFileReader = new ConfigFileReader();
 	RequestForFinancingObj_608 requestForFinancingObj608 = new RequestForFinancingObj_608(driver);
-	ApplicationFinancialFacilityObj_608 applicationFinancialFacilityObj608 = new ApplicationFinancialFacilityObj_608(
-			driver);
+	FacilitiesManagementObj_608 facilityManagementObj608 = new FacilitiesManagementObj_608(driver);
+	ApplicationFinancialFacilityObj_608 applicationFinancialFacilityObj608 = new ApplicationFinancialFacilityObj_608(driver);
 	Facility_TypeObj_608 facilityTypeObj608 = new Facility_TypeObj_608(driver);
 	WaitHelper waitHelper = new WaitHelper(driver);
 	JavascriptHelper javaScriptHelper = new JavascriptHelper(driver);
@@ -96,6 +97,18 @@ public class RequestForFinancingSteps_608 {
 	@And("^User_608 get the test data for test case AT_CM_043$")
 	public void get_the_test_data_for_test_case_AT_CM_043() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_CM_043");
+	}
+	
+//	@AT_CM_044
+	@And("^User_608 get the test data for test case AT_CM_044$")
+	public void get_the_test_data_for_test_case_AT_CM_044() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_CM_044");
+	}
+	
+//	@AT_CM_045
+	@And("^User_608 get the test data for test case AT_CM_045$")
+	public void get_the_test_data_for_test_case_AT_CM_045() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_CM_045");
 	}
 
 ////	@AT_FM_058
@@ -364,6 +377,15 @@ public class RequestForFinancingSteps_608 {
 	public void user_double_click_on_the_retrived_data() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.issueFacilityOfferSearchResult_608());
 		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.issueFacilityOfferSearchResult_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				if (!(requestForFinancingObj608.issueFacilityOfferCode_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
 	}
 
 	@When("^User_608 clicks on the issue offer button under issue facility offer$")
@@ -378,10 +400,22 @@ public class RequestForFinancingSteps_608 {
 				}
 			}
 		}
-
-		waitHelper.waitForElementwithFluentwait(driver,
-				requestForFinancingObj608.issueFacilityOfferIssueOfferBtn_608());
+		waitHelper.waitForElementwithFluentwait(driver,requestForFinancingObj608.issueFacilityOfferIssueOfferBtn_608());
 		requestForFinancingObj608.issueFacilityOfferIssueOfferBtn_608().click();
+		
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
+    	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
+    	
+    	for (int i = 0; i < 2000; i++) {
+			try {
+		    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
 	}
 
 //  @AT_RF_035
@@ -531,8 +565,7 @@ public class RequestForFinancingSteps_608 {
 	public void User_VAK_select_the_recommendation_as_approve_in_recommend_box() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.wifakApprovalCommitteeRecommendationDropdown_608());
-		dropDownHelper.SelectUsingVisibleText(
-				requestForFinancingObj608.wifakApprovalCommitteeRecommendationDropdown_608(),
+		dropDownHelper.SelectUsingVisibleText(requestForFinancingObj608.wifakApprovalCommitteeRecommendationDropdown_608(),
 				testData.get("Decision3"));
 	}
 
@@ -606,7 +639,7 @@ public class RequestForFinancingSteps_608 {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.successPopup_608());
 		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.successPopupMessage_608());
 		String SuccessMsg = applicationFinancialFacilityObj608.successPopupMessage_608().getText().substring(23, 27);
-		fmsTransactionsExcelData.updateTestData("DS_AT_RF_098", "Search Code", SuccessMsg);
+		fmsTransactionsExcelData.updateTestData(testData.get("DataSet ID"), "Search Code", SuccessMsg);
 
 		applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
 	}
@@ -1246,14 +1279,14 @@ public class RequestForFinancingSteps_608 {
 	}
 
 //	@AT_FM_043_FMSParam
-	@And("User_608 uncheck the Committee Approval flag")
-	public void user_uncheck_the_committee_approval_flag() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.committeeApprovalFlag_608());
-		WebElement committeeApprovalFlag = facilityTypeObj608.committeeApprovalFlag_608();
-		if (committeeApprovalFlag.isSelected()) {
-			committeeApprovalFlag.click();
-		}
-	}
+//	@And("User_608 uncheck the Committee Approval flag")
+//	public void user_uncheck_the_committee_approval_flag() throws Throwable {
+//		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.committeeApprovalFlag_608());
+//		WebElement committeeApprovalFlag = facilityTypeObj608.committeeApprovalFlag_608();
+//		if (committeeApprovalFlag.isSelected()) {
+//			committeeApprovalFlag.click();
+//		}
+//	}
 
 	@And("User_608 select the member as atleast one under Committee approval flag")
 	public void user_select_the_member_as_atleast_one_under_committee_approval_flag() throws Throwable {
@@ -2134,6 +2167,16 @@ public class RequestForFinancingSteps_608 {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.CollateralCashDetailsAdditionalRefCy_608());
 		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.CollateralCashDetailsAdditionalRefRow1_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				if (!(requestForFinancingObj608.CollateralCashDetailsAdditionalRefInput_608().getAttribute("prevvalue")
+						.isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
 	}
 
 	@And("^User_608 enter the amount value under Collateral cash details tab$")
@@ -2302,5 +2345,155 @@ public class RequestForFinancingSteps_608 {
 //    	System.err.println("CIF Blacklist Message in Collateral: "+CIFblacklistMsg);
 		Assert.assertEquals(testData.get("CIF Blacklist Msg"), CIFblacklistMsg);
 	}
+	
+	
+//	@AT_CM_043
+	@And("User_608 enter the Status in Facilities Management Maintanance Search grid under WIFAK Application")
+	public void user_enter_the_status_in_facilities_management_maintanance_search_grid_under_wifak_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakFacilitiesManagementMainSearchgridStatusInput_608());
+		requestForFinancingObj608.wifakFacilitiesManagementMainSearchgridStatusInput_608().sendKeys(testData.get("Status"),Keys.ENTER);
+	}
 
+	@And("User_608 double click the any one row in Facilities Management Maintanance Search grid under WIFAK Application")
+	public void user_double_click_the_any_one_row_in_facilities_management_maintanance_search_grid_under_wifak_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakFacilitiesManagementMainSearchgridRow_608());
+		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.wifakFacilitiesManagementMainSearchgridRow_608());
+		for(int i = 0; i <= 500; i++) {
+	 		try {
+					if(!(facilityManagementObj608.wifakFacilitiesManagementMainApplicationRefInput_608().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+	 	}
+		String RefCode = facilityManagementObj608.wifakFacilitiesManagementMainApplicationRefInput_608().getAttribute("prevvalue");
+		fmsTransactionsExcelData.updateTestData(testData.get("DataSet ID"), "Reference Code", RefCode);
+		
+	}
+
+	@And("User_608 click the Collateral details button in Facilities Management Maintanance under WIFAK Application")
+	public void user_click_the_collateral_details_button_in_facilities_management_maintanance_under_wifak_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakFacilitiesManagementMainLimitDetailsTabCollateralDetailsBtn_608());
+		requestForFinancingObj608.wifakFacilitiesManagementMainLimitDetailsTabCollateralDetailsBtn_608().click();
+	}
+
+	@And("User_608 click the add new icon in collateral details tab Facilities Management Maintanance under WIFAK Application")
+	public void user_click_the_add_new_icon_in_collateral_details_tab_facilities_management_maintanance_under_wifak_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTab_608());
+//		for (int i = 0; i <= 300; i++) {
+//			try {
+//				javaScriptHelper.scrollIntoView(requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_608());
+//				javaScriptHelper.JSEClick(requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_608());
+////				requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_608().click();
+//				System.err.println("Element clicked..........");
+//				break;
+//			} catch (Exception e) {
+//				if (i == 300) {
+//					Assert.fail(e.getMessage());
+//				}
+//			}
+//		}
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_608());
+		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_608());
+//		requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_608().click();
+//		requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_608().click();
+	}
+
+	@And("User_608 enter the Collateral code in collateral details tab Facilities Management Maintanance under WIFAK Application")
+	public void user_enter_the_collateral_code_in_collateral_details_tab_facilities_management_maintanance_under_wifak_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabFirstRow_608());
+		requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabFirstRow_608().click();
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabFirstRowCollateralInput_608());
+		requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabFirstRowCollateralInput_608().sendKeys(testData.get("Collateral Code"),Keys.TAB);
+		for (int i = 0; i <= 500; i++) {
+			try {
+				if (!(requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabFirstRowCollateralInput_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}		
+	}
+
+	@And("User_608 Click the OK button in collateral details tab Facilities Management Maintanance under WIFAK Application")
+	public void user_click_the_ok_button_in_collateral_details_tab_facilities_management_maintanance_under_wifak_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabOkBtn_608());
+		requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabOkBtn_608().click();
+	}
+	
+	@And("User_608 enter the Application Ref code in search grid under Approve screen in WIFAK Facilities Management")
+    public void user_enter_the_application_ref_code_in_search_grid_under_approve_screen_in_wifak_facilities_management() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementApproveSearchAppRefInput_608());
+    	facilityManagementObj608.wifakFacilitiesManagementApproveSearchAppRefInput_608().sendKeys(testData.get("Reference Code"),Keys.ENTER); 
+    }
+
+	
+//	@AT_CM_044
+	@And("User_608 click the Additional details tab in Facilities Management Maintanance under WIFAK Application")
+	public void user_click_the_additional_details_tab_in_facilities_management_maintanance_under_wifak_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakFacilitiesManagementMainAdditionalDetailsTab_608());
+		requestForFinancingObj608.wifakFacilitiesManagementMainAdditionalDetailsTab_608().click();
+	}
+
+	@And("User_608 Validate Effective Date From field should be available in Additional details tab in Facilities Management under WIFAK Application")
+	public void user_validate_effective_date_from_field_should_be_available_in_additional_details_tab_in_facilities_management_under_wifak_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakFacilitiesManagementMainAdditionalDetailsTabEffectiveDateFromInput_608());
+		boolean effDateFrom = requestForFinancingObj608.wifakFacilitiesManagementMainAdditionalDetailsTabEffectiveDateFromInput_608().isDisplayed();
+		Assert.assertTrue(effDateFrom);
+	}
+
+	@And("User_608 Validate Effective until field should be available in Additional details tab in Facilities Management under WIFAK Application")
+	public void user_validate_effective_until_field_should_be_available_in_additional_details_tab_in_facilities_management_under_wifak_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakFacilitiesManagementMainAdditionalDetailsTabEffectivenUntilInput_608());
+		boolean effUntil = requestForFinancingObj608.wifakFacilitiesManagementMainAdditionalDetailsTabEffectivenUntilInput_608().isDisplayed();
+		Assert.assertTrue(effUntil);	    
+	}
+
+	@And("User_608 Validate Unutilized Expiry Date field should be available in Additional details tab in Facilities Management under WIFAK Application")
+	public void user_validate_unutilized_expiry_date_field_should_be_available_in_additional_details_tab_in_facilities_management_under_wifak_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakFacilitiesManagementMainAdditionalDetailsTabUnutilizeExpireDateInput_608());
+		boolean unutilizeExpiryDate = requestForFinancingObj608.wifakFacilitiesManagementMainAdditionalDetailsTabUnutilizeExpireDateInput_608().isDisplayed();
+		Assert.assertTrue(unutilizeExpiryDate);
+	}
+
+	
+//	@AT_CM_045
+	@And("User_608 change the Effective until field in Additional details tab in Facilities Management under WIFAK Application")
+	public void user_change_the_effective_until_field_in_additional_details_tab_in_facilities_management_under_wifak_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakFacilitiesManagementMainAdditionalDetailsTabEffectivenUntilInput_608());
+		WebElement EffectivenUntilInput_608 = requestForFinancingObj608.wifakFacilitiesManagementMainAdditionalDetailsTabEffectivenUntilInput_608();
+		EffectivenUntilInput_608.clear();
+		EffectivenUntilInput_608.sendKeys(testData.get("Effective Until"),Keys.TAB);
+		for (int i = 0; i <= 500; i++) {
+			try {
+				if (EffectivenUntilInput_608.getAttribute("prevvalue").equals(testData.get("Effective Until"))) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+
+	@And("User_608 change the Unutilized Expiry Date field in Additional details tab in Facilities Management under WIFAK Application")
+	public void user_change_the_unutilized_expiry_date_field_in_additional_details_tab_in_facilities_management_under_wifak_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakFacilitiesManagementMainAdditionalDetailsTabUnutilizeExpireDateInput_608());
+		WebElement UnutilizeExpireDateInput_608 = requestForFinancingObj608.wifakFacilitiesManagementMainAdditionalDetailsTabUnutilizeExpireDateInput_608();
+		UnutilizeExpireDateInput_608.clear();
+		UnutilizeExpireDateInput_608.sendKeys(testData.get("Unutilized Expiry Date"),Keys.TAB);
+		for (int i = 0; i <= 500; i++) {
+			try {
+				if (UnutilizeExpireDateInput_608.getAttribute("prevvalue").equals(testData.get("Unutilized Expiry Date"))) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+	
+	
+	
 }

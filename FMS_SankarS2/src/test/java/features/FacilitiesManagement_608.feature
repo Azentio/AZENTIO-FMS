@@ -5,6 +5,7 @@ Scenario: BMO180223 - Exception Error during Facility Opening from Search Field 
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_FM_035_FMSCore
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the Request module
 And User_608 clicks on the Request Financing under Request module
 And User_608 clicks the Facilities Management feature under Request Financing
@@ -14,12 +15,93 @@ And User_608 search the facility with CIF number in maintanance screen under Fac
 Then User_608 retrieve the facility in maintanance screen under Facilities Management
 
 
+@AT_FM_038
+@AT_FM_038_FMSParam
+Scenario: Uncheck the Committe approval flag in FMS Param Facility type
+
+Given navigate to FMS param application and login with valid credentials
+And User_608 get the test data for test case AT_FM_038
+And User_608 clicks on the Parameter module in FMS Param
+And User_608 clicks on the Facility Type feature
+And User_608 clicks on the update after approve menu in Facility type
+And User_608 enter the code value in update after approve menu
+And User_608 double click on the retrieved data in update after approve menu
+And User_608 clicks on the facility details tab in update after approve
+And User_608 clicks on the STP Facility Requirements option
+And User_608 check the Customer Grading flag
+And User_608 check the Overwrite Grading flag
+And User_608 check the Credit Review flag
+And User_608 uncheck the Committee Approval flag
+And User_608 check the Credit Authorization flag
+And User_608 check the Client Response flag
+And User_608 check the Document Validation flag
+And User_608 check the Final Approval flag
+And User_608 check the Create Active Facility If Within Limits flag
+And User_608 Check the Automatically Approve Facility If Within Limits flag
+And User_608 check the Issue Facility Offer flag
+When User_608 clicks on the Update button under update after approve menu in Facility type
+And User_608 after the update go to the Approve menu
+And User_608 enter the code value in Approve menu
+And User_608 double click on the retrieved data in Approve menu
+When User_608 clicks on the Approve button in Approve menu under Facility Type
+
+
+@AT_FM_038
+@AT_FM_038_FMSCore
+Scenario: JAIZ150014 - INABILITY TO CRAETE A LIMIT ON APPROVE FACILITY
+
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_FM_038
+And User_608 clear the caches in FMS Application
+And User_608 clicks on the WIFAK_Application first link
+And User_608 clicks on the WIFAK_Application second link
+And User_608 clicks on the Application for financial facility link
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 select the application for dropdown as new facility
+And User_608 enter the CIF No in main info tab
+And User_608 enter the facility type in main info tab
+And User_608 enter the country of financing in main info tab
+And User_608 enter the facility rating in main info tab
+And User_608 clicks on the additional details tab
+And User_608 enter the total value in additional info tab
+And User_608 enter the expire date in additional info tab
+And User_608 clicks the limit details tab
+And User_608 clicks the add new record button in limit details tab
+And User_608 enter the product class details
+And User_608 clicks on the product class add button
+And User_608 move to the Document details tab
+And User_608 enter the Solicitor Name
+And User_608 enter the Estimator Name
+And User_608 clicks the save button
+And User_608 clicks on the validate button
+Then User_608 clicks the Approve Level1 menu under Application for financial facilities
+And User_608 get the test data for test case AT_FM_038
+And User_608 enter the reference code in Approve level1
+And User_608 double click on the retrieved reference code in Approve level1
+And User_608 select the Approve level1 decision as Forward
+And User_608 select the Approve level1 decision Forward to Approve level3
+When User_608 clicks on the Approve level1 submit button
+Then User_608 clicks the Approve Level3 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level3
+And User_608 double click on the retrieved reference code in Approve level3
+And User_608 select the Approve level3 decision as Approve
+When User_608 clicks on the Approve level3 submit button
+And User_608 clicks on the Approval committe recommedations menu
+And User_608 enter the Facility type in search grid under Approval committe recommedations
+And User_608 double the first row in search grid under Approval committe recommedations
+And User_608 click the Recommend button under Approval committe recommedations
+And User_608 click the User recommended by name in approval committee user popup under Approval committe recommedations
+And User_608 select the recommendation as approve in approval committee user popup under Approval committe recommedations
+And User_608 click the OK button in approval committee user popup under Approval committe recommedations
+
+
 
 @AT_FM_058
 Scenario: Create a facility from Request for Finance
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_FM_058
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link
@@ -77,6 +159,7 @@ Scenario: Check when the charge code is created with the flag “Charge per inst
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_FM_102
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link
@@ -127,6 +210,7 @@ Scenario: Check the changes in ‘Charges at deal plan’ and ‘repayment plan�
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_FM_103
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link
@@ -196,6 +280,7 @@ Scenario: Create the Facility and check the JV entries posted based on the trans
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_FM_104
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link
@@ -289,6 +374,7 @@ Scenario: Check the modification changes in Facility Management screen
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_FM_105_FMSCore
+And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link

@@ -164,6 +164,12 @@ public class Facility_TypeObj_608 {
 		return approve_search_code_result;
 	}
 	
+	@FindBy(xpath = "//input[@id='fmsFacilityType_code_P008P']")
+	private WebElement facility_type_approve_menu_code;
+	public WebElement facilityTypeApproveMenuCode_608() {
+		return facility_type_approve_menu_code;
+	}
+	
 	@FindBy(xpath = "//*[@id=\"fmsFacilityTypeMaint_approve_P008P\"]")
 	private WebElement facility_type_approve_btn;
 	public WebElement facilityTypeApproveBtn_608() {

@@ -434,25 +434,7 @@ public class WIFAK_ApplicationObj_608 {
 	}
 	
 	
-//	@AT_FM_038_FMSCore	
-	@FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT002MT_gs_fmsFacilityTypeVO.CODE']")
-	private WebElement wifak_approval_committee_recommend_facility_type_input;
-	public WebElement wifakApprovalCommitteeRecommendationsFacilityTypeInput_608() {
-		return wifak_approval_committee_recommend_facility_type_input;
-	}
-	
-	@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT002MT_1_fmsApplVO.CODE']")
-	private WebElement wifak_approval_committee_recommend_retrieved_first_row;
-	public WebElement wifakApprovalCommitteeRecommendationsRetrievedFirstRow_608() {
-		return wifak_approval_committee_recommend_retrieved_first_row;
-	}
-	
-	
-	@FindBy(xpath = "//td[text()='SANKAR']")
-	private WebElement approval_committee_recommend_by_label_608;
-	public WebElement approvalCommitteeRecommendByLabel_608() {
-		return approval_committee_recommend_by_label_608;
-	}
+
 	
 	
 	

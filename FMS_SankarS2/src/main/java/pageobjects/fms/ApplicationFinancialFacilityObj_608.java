@@ -14,6 +14,20 @@ public class ApplicationFinancialFacilityObj_608 {
 	}
 	
 	
+	// Clear cache for FMS Core
+	@FindBy(xpath = "//span[@id='tech_details_icon']")
+	private WebElement FMS_core_tech_details_icon;
+	public WebElement FMSCoreTechDetailsIcon_608() {
+		return FMS_core_tech_details_icon;
+	}
+	
+	@FindBy(xpath = "//label[@id='clear_cache_key']")
+	private WebElement FMS_core_clear_cache_btn;
+	public WebElement FMSCoreClearCacheBtn_608() {
+		return FMS_core_clear_cache_btn;
+	}
+	
+		
 	
 //	@AT_AFF_036
 	@FindBy(xpath = "(//td[text()='WIFAK APPLICATION'])[1]")
@@ -1142,6 +1156,39 @@ public class ApplicationFinancialFacilityObj_608 {
     }
 	
     
+//	@AT_FM_038_FMSCore	
+    @FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT002MT_gs_fmsApplVO.CODE']")
+    private WebElement wifak_approval_committee_recommend_searchgrid_code_input;
+	public WebElement wifakApprovalCommitteeRecommendationsSearchgridCodeInput_608() {
+		return wifak_approval_committee_recommend_searchgrid_code_input;
+	}
+    
+	@FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT002MT_gs_fmsFacilityTypeVO.CODE']")
+	private WebElement wifak_approval_committee_recommend_facility_type_input;
+	public WebElement wifakApprovalCommitteeRecommendationsFacilityTypeInput_608() {
+		return wifak_approval_committee_recommend_facility_type_input;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT002MT_1_fmsApplVO.CODE']")
+	private WebElement wifak_approval_committee_recommend_retrieved_first_row;
+	public WebElement wifakApprovalCommitteeRecommendationsRetrievedFirstRow_608() {
+		return wifak_approval_committee_recommend_retrieved_first_row;
+	}
+	
+	@FindBy(xpath = "//input[@id='code_WIFT002MT']")
+	private WebElement wifak_approval_committee_recommend_code_input;
+	public WebElement wifakApprovalCommitteeRecommendationsCodeInput_608() {
+		return wifak_approval_committee_recommend_code_input;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_ApplicationFacilityRecommendationGrid_WIFT002MT_61_fmsApplRecommendVO.RECOMMENDED_BY']")
+	private WebElement approval_committee_recommend_by_label_608;
+	public WebElement approvalCommitteeRecommendByLabel_608() {
+		return approval_committee_recommend_by_label_608;
+	}
+    
+    
+    
 //  @AT_RF_102
     @FindBy(xpath = "//select[@id='applicationfacilityLimitDetailsGENERAL_FACILITY_TYPE_WIFT001MT']")
     private WebElement limit_details_item;
@@ -1166,6 +1213,80 @@ public class ApplicationFinancialFacilityObj_608 {
     public WebElement limitDetailsMarginRateInput_608() {
     	return limit_details_margin_rate_input;
     }
+    
+    
+    
+    
+    
+    
+//  AT_CA_008_Core
+    @FindBy(xpath = "//div[@id='_selenuimWIFT0063']")
+    private WebElement wifak_reopen_rejected_applications_menu;
+    public WebElement wifakReopenRejectedApplicationsMenu_608() {
+    	return wifak_reopen_rejected_applications_menu;
+    }
+    
+    @FindBy(xpath = "//a[@id='WIFT0063MT']")
+    private WebElement wifak_reopen_rejected_menu_maintanance;
+    public WebElement wifakReopenRejectedMenuMaintanance_608() {
+    	return wifak_reopen_rejected_menu_maintanance;
+    }
+    
+    @FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT0063MT_gs_fmsApplVO.CODE']")
+    private WebElement wifak_reopen_rejected_maintanance_searchgrid_code_input;
+    public WebElement wifakReopenRejectedMaintananceSearchgridCodeInput_608() {
+    	return wifak_reopen_rejected_maintanance_searchgrid_code_input;
+    }
+    
+    @FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT0063MT_1_fmsApplVO.CODE']")
+    private WebElement wifak_reopen_rejected_maintanance_searchgrid_first_row_code;
+    public WebElement wifakReopenRejectedMaintananceSearchgridFirstRowCode_608() {
+    	return wifak_reopen_rejected_maintanance_searchgrid_first_row_code;
+    }
+    
+    @FindBy(xpath = "//input[@id='code_WIFT0063MT']")
+    private WebElement wifak_reopen_rejected_maintanance_code_input;
+    public WebElement wifakReopenRejectedMaintananceCodeInput_608() {
+    	return wifak_reopen_rejected_maintanance_code_input;
+    }
+    
+    @FindBy(xpath = "//button[@id='applicationfacility_reopenReject_btn_WIFT0063MT']")
+    private WebElement wifak_reopen_rejected_maintanance_reopen_btn;
+    public WebElement wifakReopenRejectedMaintananceReopenBtn_608() {
+    	return wifak_reopen_rejected_maintanance_reopen_btn;
+    }
+    
+    @FindBy(xpath = "//a[@id='WIFT0063AP']")
+    private WebElement wifak_reopen_rejected_menu_approve_or_reject;
+    public WebElement wifakReopenRejectedMenuApproveOrReject_608() {
+    	return wifak_reopen_rejected_menu_approve_or_reject;
+    }
+    
+    @FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT0063AP_gs_fmsApplVO.CODE']")
+    private WebElement wifak_reopen_rejected_menu_approve_or_reject_searchgrid_code_input;
+    public WebElement wifakReopenRejectedMenuApproveOrRejectSearchgridCodeInput_608() {
+    	return wifak_reopen_rejected_menu_approve_or_reject_searchgrid_code_input;
+    }
 	
-	
+    @FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT0063AP_1_fmsApplVO.CODE']")
+    private WebElement wifak_reopen_rejected_menu_approve_or_reject_searchgrid_first_row_code;
+    public WebElement wifakReopenRejectedMenuApproveOrRejectSearchgridFirstRowCode_608() {
+    	return wifak_reopen_rejected_menu_approve_or_reject_searchgrid_first_row_code;
+    }
+    
+    @FindBy(xpath = "//input[@id='code_WIFT0063AP']")
+    private WebElement wifak_reopen_rejected_menu_approve_or_reject_code_input;
+    public WebElement wifakReopenRejectedMenuApproveOrRejectCodeInput_608() {
+    	return wifak_reopen_rejected_menu_approve_or_reject_code_input;
+    }
+    
+    @FindBy(xpath = "//button[@id='applicationfacility_approveReopen_btn_WIFT0063AP']")
+    private WebElement wifak_reopen_rejected_menu_approve_or_reject_approve_btn;
+    public WebElement wifakReopenRejectedMenuApproveOrRejectApproveBtn_608() {
+    	return wifak_reopen_rejected_menu_approve_or_reject_approve_btn;
+    }
+    
+    
+    
+    
 }
