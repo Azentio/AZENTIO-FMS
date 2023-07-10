@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\inindc00611\AppData\Local\Temp\testng-eclipse--154603734\testng-customsuite.xml</span>
+                    <span>C:\Users\inindc00611\AppData\Local\Temp\testng-eclipse-433316689\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;IIAB150095 - Error while updating collateral.&quot;, &quot;Optional[Colletral Management]&quot;)">runScenario("IIAB150095 - Error while updating collateral.", "Optional[Colletral Management]")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;To check the new modification @ FMS Standard screens in the  Application for finance screen.&quot;, &quot;Opt...)">runScenario("To check the new modification @ FMS Standard screens in the  Application for finance screen.", "Opt...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -127,19 +127,66 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;IIAB150095 - Error while updating collateral.&quot;, &quot;Optional[Colletral Management]&quot;)">
-                  </a> <!-- runScenario("IIAB150095 - Error while updating collateral.", "Optional[Colletral Management]") -->
+                  <a name="runScenario(&quot;To check the new modification @ FMS Standard screens in the  Application for finance screen.&quot;, &quot;Opt...)">
+                  </a> <!-- runScenario("To check the new modification @ FMS Standard screens in the  Application for finance screen.", "Opt...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("IIAB150095 - Error while updating collateral.", "Optional[Colletral Management]")</span>
-                  <div class="stack-trace">io.cucumber.core.runner.AmbiguousStepDefinitionsException: &quot;User_611 Click the ok button&quot; matches more than one step definition:
-  &quot;User_611 Click the ok button&quot; in stepdefinitions.ApplicationforfinancialfacilitySTEPS_611.user_click_the_ok_button()
-  &quot;^User_611 Click the ok button$&quot; in stepdefinitions.CollateralManagementSteps_611.user_611_click_the_ok_button()
-	at io.cucumber.core.runner.CachingGlue.findStepDefinitionMatch(CachingGlue.java:373)
-	at io.cucumber.core.runner.CachingGlue.stepDefinitionMatch(CachingGlue.java:341)
-	at io.cucumber.core.runner.Runner.matchStepToStepDefinition(Runner.java:146)
-	at io.cucumber.core.runner.Runner.createTestStepsForPickleSteps(Runner.java:126)
-	at io.cucumber.core.runner.Runner.createTestCaseForPickle(Runner.java:109)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:70)
+                  <span class="parameters">("To check the new modification @ FMS Standard screens in the  Application for finance screen.", "Optional[To Test the Financial facilities in FMS Application]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //div[text()=&apos;CONFIRM&apos;]&apos; (tried for 60 second(s) with 5 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at helper.WaitHelper.waitForElementwithFluentwait(WaitHelper.java:95)
+	at stepdefinitions.ApplicationforfinancialfacilitySTEPS_611.user_clicks_the_validate_button(ApplicationforfinancialfacilitySTEPS_611.java:375)
+	at ✽.User_611 clicks the validate button(file:///C:/Users/inindc00611/git/FMS1/AzentioAutomationFramework_FMS_kowsalyaa/src/test/java/features/Applicationforfinancialfacility_611.feature:144)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[text()=&apos;CONFIRM&apos;]&quot;}
+  (Session info: chrome=114.0.5735.199)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fb8c20450b41fc4c3a351510565233cb, findElement {using=xpath, value=//div[text()=&apos;CONFIRM&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ININDC~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57741}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57741/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fb8c20450b41fc4c3a351510565233cb
+	at jdk.internal.reflect.GeneratedConstructorAccessor41.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy46.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	at helper.WaitHelper.waitForElementwithFluentwait(WaitHelper.java:95)
+	at stepdefinitions.ApplicationforfinancialfacilitySTEPS_611.user_clicks_the_validate_button(ApplicationforfinancialfacilitySTEPS_611.java:375)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:64)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:104)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:71)
 	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$0(TestNGCucumberRunner.java:116)
 	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:117)
 	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:113)
@@ -183,7 +230,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\inindc00611\AppData\Local\Temp\testng-eclipse--154603734\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\inindc00611\AppData\Local\Temp\testng-eclipse-433316689\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -244,12 +291,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'Runner.TestApplication')
-data.setCell(0, 3, 46811);
+data.setCell(0, 3, 225279);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 46 seconds</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -283,12 +330,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("IIAB150095 - Error while updating collateral.", "Optional[Colletral Management]")</span>
-                <span class="method-start">1950 ms</span>
+                <span class="method-name">runScenario("To check the new modification @ FMS Standard screens in the  Application for finance screen.", "Opt...)</span>
+                <span class="method-start">2158 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">48793 ms</span>
+                <span class="method-start">227454 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

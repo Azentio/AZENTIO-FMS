@@ -6,4 +6,4 @@ Feature: Title of your feature
   @tag1
   Scenario: Title of your scenario
   
-And User_inin72 click the Accoun Currency Select Transfer Account
+And User_611 Click the Clean flag check box

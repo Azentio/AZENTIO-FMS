@@ -687,7 +687,7 @@ public class ApplicationforfinancialfacilityOBJ_611 {
     public WebElement disbursementsublimitaddbutton_611() {
 		return Disbursement_SUBlimit_aDD_Button;
 	}
-    @FindBy(xpath="//input[@id=\'lookuptxt_requestFinancingLimitDetailsGeneralFacilityProductClass_CSMRF00MT\']")
+    @FindBy(xpath="//input[@id='lookuptxt_applicationfacilityLimitDetailsCLASS_WIFT001MT']")
 	private WebElement Product_class_searchbox;
     public WebElement productclasssearchbox_611() {
 		return Product_class_searchbox;
@@ -828,12 +828,12 @@ public class ApplicationforfinancialfacilityOBJ_611 {
     }
     @FindBy(xpath="(//span[text()='Credit Committee Recommendations'])[2]")
     private WebElement Credit_committee_recommendation;
-    public WebElement creditcommitterecommendation_611() {
+    public WebElement creditcommitterecommendationtab_611() {
       return Credit_committee_recommendation;
     }
     @FindBy(xpath="//div[@id='requestFinancingCreditReviewRecommandations_CSMRF00AC']/div/span[text()='Recommendations']")
     private WebElement Recommendations;
-    public WebElement recommendations_611() {
+    public WebElement recommendationsbtn_611() {
       return Recommendations;
     }
     @FindBy(xpath="//span[@class='ui-icon ui-icon-circlesmall-plus tree-wrap-ltr']")
@@ -879,13 +879,23 @@ public class ApplicationforfinancialfacilityOBJ_611 {
     }
     @FindBy(xpath="(//input[@name='fmsRequestFinancingVO.CODE'])[1]")
     private WebElement Maintenance_COde_Searchbox;
-    public WebElement maintenancecodesearchbox_611() {
+    public WebElement codesearchbox_611() {
       return Maintenance_COde_Searchbox;
     }
     @FindBy(xpath="(//tr[@id='1'])[1]")
     private WebElement Maintenance_Codevalue_Doubletap;
     public WebElement maintenancecodevaluedoubletap_611() {
       return Maintenance_Codevalue_Doubletap;
+    }
+    @FindBy(xpath="//input[@id='statusDesc_CSMRF00MT']")
+    private WebElement Sendback_from_ApprovalCommittee;
+    public WebElement sendbackfromapprovalcommittee_611() {
+      return Sendback_from_ApprovalCommittee;
+    }
+    @FindBy(xpath="//input[@id='requestFinancingLimitDetailsCleanFlagdChkBox_CSMRF00MT']")
+    private WebElement CleanFlag_Checkbox;
+    public WebElement cleanflagcheckbox() {
+      return CleanFlag_Checkbox;
     }
     //@127917
     @FindBy(xpath = "//input[@id='lookuptxt_applicationfacilityLimitDetailsCLASS_WIFT001MT']")
@@ -1184,6 +1194,103 @@ public class ApplicationforfinancialfacilityOBJ_611 {
 	public WebElement facmanMaintAddDetTabFinancialPeriodConstriantsintervalrepaymentNBR_611() {
 		return FacMan_Maint_AddDetTab_FinancialPeriodConstriants_IntervalRepaymentNbr;
 	}
+	//585803
+	@FindBy(xpath="//td[text()='Parameters']")
+	private WebElement PaRam_ParaMeters;
+	public WebElement paramparameters_611() {
+		return PaRam_ParaMeters;
+	}
+	@FindBy(xpath="//td[text()='Estimators']")
+	private WebElement ParaMeters_Estimators;
+	public WebElement parametersestimators_611() {
+		return ParaMeters_Estimators;
+	}
+	@FindBy(xpath="//span[text()='Maintenance']")
+	private WebElement Estimators_maintenance;
+	public WebElement estimatorsmaintenance_611() {
+		return Estimators_maintenance;
+	}
+	@FindBy(xpath="(//input[@class='path-theme-cust-input textCompSize ui-state-focus ui-corner-all'])[1]")
+	private WebElement Estimators_COde;
+	public WebElement estimatorscode_611() {
+		return Estimators_COde;
+	}
+	@FindBy(xpath="//label[@id='lbl_fmsEstimators_code_P034MT']")
+	private WebElement Estimators_COde_touch;
+	public WebElement estimatorscodetouch_611() {
+		return Estimators_COde_touch;
+	}
+	@FindBy(xpath="//input[@id='fmsEstimators_brief_name_eng_P034MT']")
+	private WebElement Brief_DISCription;
+	public WebElement briefdiscription_611() {
+		return Brief_DISCription;
+	}
+	@FindBy(xpath="//input[@id='fmsEstimators_long_name_eng_P034MT']")
+	private WebElement Long_DISCription;
+	public WebElement longdiscription_611() {
+		return Long_DISCription;
+	}
+	@FindBy(xpath="//input[@id='fmsEstimators_brief_name_arab_P034MT']")
+	private WebElement Brief_DISCription_arabic;
+	public WebElement briefdiscriptionarabic_611() {
+		return Brief_DISCription_arabic;
+	}
+	@FindBy(xpath="//input[@id='fmsEstimators_long_name_arab_P034MT']")
+	private WebElement Long_DISCription_arabic;
+	public WebElement longdiscriptionarabic_611() {
+		return Long_DISCription_arabic;
+	}
+	@FindBy(xpath="//input[@id='fmsEstimators_address_1_P034MT']")
+	private WebElement DISCription_AddRess;
+	public WebElement discriptionaddress_611() {
+		return DISCription_AddRess;
+	}
+	@FindBy(xpath="//input[@id='fmsEstimators_mobile_P034MT']")
+	private WebElement moBILE_Number;
+	public WebElement mobilenumber_611() {
+		return moBILE_Number;
+	}
+	@FindBy(xpath="//input[@id='lookuptxt_fmsEstimators_postal_code_P034MT']")
+	private WebElement POStal_Code;
+	public WebElement postalcode_611() {
+		return POStal_Code;
+	}
+	@FindBy(xpath="//label[@id='fmsEstimatorsFormId_P034MT_Save_key']")
+	private WebElement paramSave_button;
+	public WebElement paramsavebutton_611() {
+		return paramSave_button;
+	}
+	@FindBy(xpath="//input[@id='_popup_path_sol_confirm_ok']")
+	private WebElement Confirm_Save_Process_param;
+	public WebElement confirmsaveprocessparam_611() {
+		return Confirm_Save_Process_param;
+	}
+	@FindBy(xpath="//input[@id='_popup_path_sol_ok']")
+	private WebElement Record_Updated_SuccessfullyParam;
+	public WebElement RecordUpdatedSuccessfullyParam611() {
+		return Record_Updated_SuccessfullyParam;
+	}
+	@FindBy(xpath="//*[@id=\"P034P\"]/span[2]")
+	private WebElement Approve_screen;
+	public WebElement approvescreen_611() {
+		return Approve_screen;
+	}
+	@FindBy(xpath="//input[@id='fmsEstimatorsParamListGridTbl_Id_P034P_gs_CODE']")
+	private WebElement Approve_screenclick_Searchbox;
+	public WebElement approvescreenclicksearchbox_611() {
+		return Approve_screenclick_Searchbox;
+	}
+	@FindBy(xpath="//td[@id='td_fmsEstimatorsParamListGridTbl_Id_P034P_1_CODE']")
+	private WebElement Approve_searchbox_doubleclick;
+	public WebElement searchboxdoubleclick_611() {
+		return Approve_searchbox_doubleclick;
+	}
+	@FindBy(xpath="//label[@id='fmsEstimatorsFormId_P034P_approve_key']")
+	private WebElement Final_Approve;
+	public WebElement finalapprove_611() {
+		return Final_Approve;
+	}
+	
    
    
    

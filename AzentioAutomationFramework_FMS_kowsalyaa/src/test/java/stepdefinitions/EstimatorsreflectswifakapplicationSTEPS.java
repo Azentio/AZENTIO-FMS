@@ -58,7 +58,7 @@ public class EstimatorsreflectswifakapplicationSTEPS {
 	    @And("^create a estimator code$")
 	    public void create_a_estimator_code() throws Throwable {
 	    	waithelper.waitForElementwithFluentwait(driver, paramestimatesreflects.estimatorscode());
-			 paramestimatesreflects.estimatorscode().sendKeys("4444");
+			 paramestimatesreflects.estimatorscode().sendKeys("9999");
 			 paramestimatesreflects.estimatorscodetouch().click();
 			 
 	        
@@ -130,7 +130,7 @@ public class EstimatorsreflectswifakapplicationSTEPS {
 	    @And("^Enter a code under approve menu$")
 	    public void enter_a_code_under_approve_menu() throws Throwable {
 	    	waithelper.waitForElementwithFluentwait(driver, paramestimatesreflects.approvescreenclicksearchbox());
-			 paramestimatesreflects.approvescreenclicksearchbox().sendKeys("4444");
+			 paramestimatesreflects.approvescreenclicksearchbox().sendKeys("9999");
 			 paramestimatesreflects.approvescreenclicksearchbox().sendKeys(Keys.ENTER);
 			 clickandactionhelper.doubleClick(paramestimatesreflects.searchboxdoubleclick());
 	        

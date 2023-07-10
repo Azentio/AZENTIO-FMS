@@ -16,6 +16,7 @@ Feature: To Test the Financial facilities in FMS Application
     And User_611 Add the product class values in product searchbox
     #And User_611 Enter the Facility risk rating value
     #And User_611 Enter the date of FRR value date
+    #And User_611 Click the Clean flag check box
     And User_611 Add the Margin values in Margin
     And User_611 Add all the Above limit values
     And User_611 Save all the values when limits are add
@@ -23,48 +24,51 @@ Feature: To Test the Financial facilities in FMS Application
     And User_611 Click the Approve level1 screen under request for financing
     And User_611 Enter the request code in search box
     And User_611 Double tap the request code value
-    #And User_611 Click the customer grading recommendation under maintenance screen
-    #And User_611 Click the decision dropdown and select forward menu
-    #And User_611 click the Approval committe dropdown
-    #And User_611 Click the investment committe under Approval committe
-    #And User_611 Approve the decision under relationship
-    #And User_611Click the Approval Committee Recommendation under request for financing
-    #And User_611 Enter the request code in approval committe search box
-    #And User_611 double tap the request code
-    #And User_611 Click the credit committee recommendation
-    #And User_611 Click the recommendation under credit committee recommendation
-    #And User_611 Click the recommendation add symbol under recommendation
-    #And User_611 double tap all the value we created
-    #And User_611 send back the recommendation  value
-    #And User_611 Click the Maitenance level in send back level
-    #And User_611 Confirm the recommendation popup menu
-    #And User_611 Accept the recommendation popup menu
-    #And User_611 Click the maintenance screen under request for financing
-    #And User_611 Enter the created request code in search box
-    #Then User_611 double tap the  created request code
+    And User_611 Click the customer grading recommendation under maintenance screen
+    And User_611 Click the decision dropdown and select forward menu
+    And User_611 click the Approval committe dropdown
+    And User_611 Click the investment committe under Approval committe
+    And User_611 Approve the decision under relationship
+    And User_611 Click the Approval Committee Recommendation tab under request for financing
+    And User_611 Enter the request code in approval committe search box
+    And User_611 double tap the request code
+    And User_611 Click the credit committee recommendation
+    And User_611 Click the recommendation under credit committee recommendation
+    And User_611 Click the recommendation add symbol under recommendation
+    And User_611 double tap all the value we created
+    And User_611 send back the recommendation  value
+    And User_611 Click the Maitenance level in send back level
+    And User_611 Confirm the final recommendation button
+    And User_611 Confirm the recommendation button menu
+    And User_611 click the maintenence under request for financing
+    And User_611 Enter the created request code in search box
+    And User_611 double tap the created request code
+    And User_611 validate the sendback from approval committee in Request for financing
     
     @585803_FMS_Param
   Scenario: Check that the “Estimators” are reflected at the level of Application for Financial Facilities
     Given navigate to FMS param application and login with valid credentials
-    And Click the parameters menu in param application
-    And click the estimators menu under parameters
-    And click  the maintenance under estimators
-    And create a estimator code
-    And Enter the value of firstbrief discription
-    And Enter the value of firstlong discription
-    And Enter the value of secondbrief discription
-    And Enter the value of secondlong discription
-    And Enter the discription address
-    And Enter the mobile number
-    And Enter the postal code
-    Then Save all the estimators details
-    And Click the approve Menu
-    And Enter a code under approve menu
-    Then Approve the final status
+    
+    And User_611 Click the parameters menu in param application
+    And User_611 click the estimators menu under parameters
+    And User_611 click  the maintenance under estimators
+    And User_611 create a estimator code
+    And User_611 Enter the value of firstbrief discription
+    And User_611 Enter the value of firstlong discription
+    And User_611 Enter the value of secondbrief discription
+    And User_611 Enter the value of secondlong discription
+    And User_611 Enter the discription address
+    And User_611 Enter the mobile number
+    And User_611 Enter the postal code
+    And User_611 Save all the estimators details
+    And User_611 Click the approve Menu
+    And User_611 Enter a code under approve menu
+    And User_611 Approve the final status
 
   @585803_FMS_Core
   Scenario: Check that the “Estimators” are reflected at the level of Application for Financial Facilities
     Given navigate to FMS application and login with valid credentials
+    #And User_611 Get the data set Id for AT_CA_091
     And User_611 Click the first Wifak Application
     And User_611 Click the second Wifak Application
     And User_611 Click the application for financial facilities under second Wifak Appliaction
@@ -81,7 +85,8 @@ Feature: To Test the Financial facilities in FMS Application
     And User_611 Enter the Expiry date
     And User_611 Click the doucmentdetailstab
     And User_611 Click the estimators search box
-    Then User_611 Enter the estimators code
+    And User_611 Enter the estimators code
+    And User_611 validate the estimators code is displayed from param application
     
     @127917
   Scenario: Check the floating rate,floatingrate periodicity and floatingrate periodicitytype retrived from IIs param screen
@@ -106,6 +111,7 @@ Feature: To Test the Financial facilities in FMS Application
     And User_611 Enter the floating rate
     And User_611 Enter the floating rate periodicity
     And User_611 Enter the floating rate periodicity type
+    #And User_611 Validate all the floating Rate details is displayed or Not
     
     @127925
   Scenario: To check the new modification @ FMS Standard screens in the  Application for finance screen.

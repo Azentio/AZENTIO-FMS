@@ -3,7 +3,9 @@ package stepdefinitions;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.util.Map;
+import java.util.Random;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,6 +25,7 @@ import pageobjects.fms.ApplicationforfinancialfacilityOBJ_611;
 import resources.BaseClass;
 
 public class ApplicationforfinancialfacilitySTEPS_611 {
+	int randomNumber;
 	WebDriver driver = BaseClass.driver;
 	ApplicationforfinancialfacilityOBJ_611 wifakapplicationobj_611 = new ApplicationforfinancialfacilityOBJ_611(driver);
 	
@@ -60,7 +63,10 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
     public void User_611_Get_the_data_set_Id_for_AT_CA_021$() throws Throwable {
 		testData = FMS_AppforFinancialfacilityExcelData.getTestdata("AT_CA_021");
     }
-	
+	@And("^User_611 Get the data set Id for AT_CA_091$")
+    public void User_611_Get_the_data_set_Id_for_AT_CA_091$() throws Throwable {
+		testData = FMS_AppforFinancialfacilityExcelData.getTestdata("AT_CA_091");
+    }
 	@And("^User_611 Click the first Wifak Application$")
     public void click_the_first_wifak_appliaction() throws Throwable {
 		waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.wifakapplication1_611());
@@ -107,42 +113,41 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
     @And("^User_611 Enter the CIF num under cif details$")
     public void enter_the_cif_num_under_cif_details() throws Throwable {
     	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.cifnumsearchbox_611());
-    	/*
     	wifakapplicationobj_611.cifnumsearchbox_611().sendKeys("727");
     	wifakapplicationobj_611.cifnumsearchbox_611().sendKeys(Keys.TAB);
-    	*/
-    	wifakapplicationobj_611.cifnumsearchbox_611().click();
-    	wifakapplicationobj_611.cifnumsearchbox_611().sendKeys(testData.get("CIF NO"),Keys.TAB);
-    	Thread.sleep(3000);
+//    	*/
+//    	wifakapplicationobj_611.cifnumsearchbox_611().click();
+//    	wifakapplicationobj_611.cifnumsearchbox_611().sendKeys(testData.get("CIF NO"),Keys.TAB);
+//    	Thread.sleep(3000);
         
     }
 
     @And("^User_611 Enter the facility type under facility type details$")
     public void enter_the_facility_type_under_facility_type_details() throws Throwable {
     	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.facilitytypedetailsfacilitytype_611());
-//    	wifakapplicationobj_611.facilitytypedetailsfacilitytype_611().sendKeys("369");
-//    	wifakapplicationobj_611.facilitytypedetailsfacilitytype_611().sendKeys(Keys.TAB);
-    	wifakapplicationobj_611.facilitytypedetailsfacilitytype_611().sendKeys(testData.get("Facility Type"),Keys.TAB);
-    	Thread.sleep(3000);
+    	wifakapplicationobj_611.facilitytypedetailsfacilitytype_611().sendKeys("369");
+   	wifakapplicationobj_611.facilitytypedetailsfacilitytype_611().sendKeys(Keys.TAB);
+    	//wifakapplicationobj_611.facilitytypedetailsfacilitytype_611().sendKeys(testData.get("Facility Type"),Keys.TAB);
+    	//Thread.sleep(3000);
         
     }
 
     @And("^User_611 Enter the country of financing under facility type details$")
     public void enter_the_country_of_financing_under_facility_type_details() throws Throwable {
     	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.facilitytypedetailscountryoffinancing_611());
-//    	wifakapplicationobj_611.facilitytypedetailscountryoffinancing_611().sendKeys("320");
-//    	wifakapplicationobj_611.facilitytypedetailscountryoffinancing_611().sendKeys(Keys.TAB);
-    	wifakapplicationobj_611.facilitytypedetailscountryoffinancing_611().sendKeys(testData.get("Country of Financing"),Keys.TAB);
-    	Thread.sleep(3000);
+   	wifakapplicationobj_611.facilitytypedetailscountryoffinancing_611().sendKeys("320");
+   	wifakapplicationobj_611.facilitytypedetailscountryoffinancing_611().sendKeys(Keys.TAB);
+    	//wifakapplicationobj_611.facilitytypedetailscountryoffinancing_611().sendKeys(testData.get("Country of Financing"),Keys.TAB);
+    	//Thread.sleep(3000);
     }
 
     @And("^User_611 Enter the facility rating under facility type details$")
     public void enter_the_facility_rating_under_facility_type_details() throws Throwable {
     	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.facilitytypedetailsfacilityrating_611());
-//    	wifakapplicationobj_611.facilitytypedetailsfacilityrating_611().sendKeys("2");
-//    	wifakapplicationobj_611.facilitytypedetailsfacilityrating_611().sendKeys(Keys.TAB);
-    	wifakapplicationobj_611.facilitytypedetailsfacilityrating_611().sendKeys(testData.get("Facility Rating"),Keys.TAB);
-    	Thread.sleep(3000);
+    	wifakapplicationobj_611.facilitytypedetailsfacilityrating_611().sendKeys("2",Keys.TAB);
+    	//wifakapplicationobj_611.facilitytypedetailsfacilityrating_611().sendKeys(Keys.TAB);
+    	//wifakapplicationobj_611.facilitytypedetailsfacilityrating_611().sendKeys(testData.get("Facility Rating"),Keys.TAB);
+    //	Thread.sleep(3000);
 //    	 for(int i = 0; i <= 500; i++) {
 //             try {
 //                 if(!(wifakapplicationobj_611.facilitytypedetailsfacilityrating_611().getAttribute("prevvalue").isBlank())) {
@@ -158,10 +163,13 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
     @And("^User_611 Click the Additional details$")
     public void click_the_additional_details() throws Throwable {
     	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.secondtabadditionaldetails_611());
+    	clickandactionhelper.moveToElement(wifakapplicationobj_611.secondtabadditionaldetails_611());
         for (int i = 0; i < 300; i++) {
             try {
-            	wifakapplicationobj_611.secondtabadditionaldetails_611().click();
-                break;
+            	if (wifakapplicationobj_611.secondtabadditionaldetails_611().isDisplayed()) {
+            		wifakapplicationobj_611.secondtabadditionaldetails_611().click();
+                    break;
+				}
             } catch (Exception e) {
                 if (i==299) {
                     Assert.fail(e.getMessage());
@@ -213,15 +221,16 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 
         
     
-    @Then("^User_611 Enter the estimators code$")
+    @And("^User_611 Enter the estimators code$")
     public void enter_the_estimators_code() throws Throwable {
-    	Thread.sleep(5000);
+    	//Thread.sleep(5000);
     	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.estimatorsnamesecondsearchbox_611());
-    	wifakapplicationobj_611.estimatorsnamesecondsearchbox_611().sendKeys("4444");
-    	Thread.sleep(5000);
+    	System.out.println("random no : "+randomNumber);
+    	wifakapplicationobj_611.estimatorsnamesecondsearchbox_611().sendKeys(String.valueOf(randomNumber),Keys.ENTER);
+    	Thread.sleep(3000);
     	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.retrivedvaluedoubleclick_611());
     	clickandactionhelper.doubleClick(wifakapplicationobj_611.retrivedvaluedoubleclick_611());
-        Thread.sleep(10000);
+        Thread.sleep(3000);
     }
     
     @And("^User_611 Enter the Expiry date$")
@@ -1048,10 +1057,18 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 
 	    @And("^User_611 Enter the floating rate$")
 	    public void enter_the_floating_rate() throws Throwable {
-	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.floatingRateSearchbox());
-	    	wifakapplicationobj_611.floatingRateSearchbox().click();
-	    	wifakapplicationobj_611.floatingRateSearchbox().sendKeys("98");
-	    	wifakapplicationobj_611.floatingRateSearchbox().sendKeys(Keys.TAB);
+	    	for(int i = 0; i <= 300; i++) {
+	    		try {
+	    			javascripthelper.scrollIntoView(wifakapplicationobj_611.floatingRateSearchbox());
+	    			break;
+				} catch (Exception e) {
+					if(i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}
+	    	Thread.sleep(3000);
+	    	wifakapplicationobj_611.floatingRateSearchbox().sendKeys("98",Keys.TAB);
 	    	for (int i = 0; i <= 1000; i++) {
 	    		if (!(wifakapplicationobj_611.floatingRateSearchbox().getAttribute("prevvalue").isBlank())) {
 	    		break;
@@ -1064,8 +1081,8 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 	    @And("^User_611 Enter the floating rate periodicity$")
 	    public void enter_the_floating_rate_periodicity() throws Throwable {
 	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.floatingrateperiodicitysearchbox());
-	    	wifakapplicationobj_611.floatingrateperiodicitysearchbox().sendKeys("2");
-	    	wifakapplicationobj_611.floatingrateperiodicitysearchbox().sendKeys(Keys.TAB);
+	    	wifakapplicationobj_611.floatingrateperiodicitysearchbox().sendKeys("2",Keys.TAB);
+	    	
 	        
 	    }
 	    @And("^User_611 Enter the floating rate periodicity type$")
@@ -1078,8 +1095,8 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 	    @And("^User_611 Enter the Product class value two$")
 	    public void enter_the_product_class_value_two() throws Throwable {
 	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.productclasssearchbox_611());
-	    	wifakapplicationobj_611.productclasssearchbox_611().sendKeys("2");
-	    	wifakapplicationobj_611.productclasssearchbox_611().sendKeys(Keys.TAB);
+	    	wifakapplicationobj_611.productclasssearchbox_611().sendKeys("2",Keys.TAB);
+	    	//wifakapplicationobj_611.productclasssearchbox_611().sendKeys();
 	    	
 	    	
 	    }
@@ -1196,24 +1213,35 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 	    public void add_the_product_class_values_in_product_searchbox() throws Throwable {
 	    	waithelper.waitForElementwithFluentwait(driver,wifakapplicationobj_611.productclasssearchbox_611());
 	    	wifakapplicationobj_611.productclasssearchbox_611().sendKeys("1",Keys.TAB);
+	    	for(int i = 0; i <= 500; i++) {
+	             try {
+	                 if(!(wifakapplicationobj_611.productclasssearchbox_611().getAttribute("prevvalue").isBlank())) {
+	                     break;
+	                 }
+	             } catch (Exception e) {
+	                 // TODO: handle exception
+	             }
+	         }
+	 	 waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.cleanflagcheckbox());
+	      WebElement cleanFlag = wifakapplicationobj_611.cleanflagcheckbox();
+	      if(!(cleanFlag.isSelected())) {
+	          cleanFlag.click();
+	      }
 	    	
 	    }
 	    @Given("User_611 Enter the Facility risk rating value")
-	    public void user_enter_the_facility_risk_rating_value() {
+	    public void user_enter_the_facility_risk_rating_value() throws Throwable {
 	    	waithelper.waitForElementwithFluentwait(driver,wifakapplicationobj_611.Productclscreenfacilityriskrating_611());
 	    	wifakapplicationobj_611.Productclscreenfacilityriskrating_611().sendKeys("1",Keys.TAB);
 	    }
 
 	    @Given("User_611 Enter the date of FRR value date")
-	    public void user_enter_the_date_of_frr_value_date() {
+	    public void user_enter_the_date_of_frr_value_date() throws Throwable {
 	    	waithelper.waitForElementwithFluentwait(driver,wifakapplicationobj_611.frrvaluedate_611());
 	    	wifakapplicationobj_611.frrvaluedate_611().sendKeys("04/01/2021",Keys.TAB);
 	        
 	    }
-	    
-
-
-
+	   
 	    @And("^User_611 Add the Margin values in Margin$")
 	    public void add_the_margin_values_in_margin() throws Throwable {
 	    	for(int i = 0; i <= 300; i++) {
@@ -1340,109 +1368,147 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 	        
 	    }
 
-	    @And("^Click the decision dropdown and select forward menu$")
+	    @And("^User_611 Click the decision dropdown and select forward menu$")
 	    public void click_the_decision_dropdown_and_select_forward_menu() throws Throwable {
-	    	
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.decisionselectforward_611());
+	    	wifakapplicationobj_611.decisionselectforward_611().click();
 	        
 	    }
 
 	    @And("^User_611 click the Approval committe dropdown$")
 	    public void click_the_approval_committe_dropdown() throws Throwable {
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.selectapprovalcommittee_611());
+	    	wifakapplicationobj_611.selectapprovalcommittee_611().click();
 	        
 	    }
 
-	    @And("^Click the investment committe under Approval committe$")
+	    @And("^User_611 Click the investment committe under Approval committe$")
 	    public void click_the_investment_committe_under_approval_committe() throws Throwable {
-	        
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.approvalcommitteeinvestmentcommittee_611());
+	    	wifakapplicationobj_611.approvalcommitteeinvestmentcommittee_611().click();
 	    }
 
 	    @And("^User_611 Approve the decision under relationship$")
 	    public void approve_the_decision_under_relationship() throws Throwable {
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.approvalcommitteeinvestmentcommittee_611());
+	    	wifakapplicationobj_611.approvalcommitteeinvestmentcommittee_611().click();
+	    	
 	        
 	    }
 
-	    @And("^Confirm the Approve popup message$")
+	    @And("^User_611 Confirm the Approve popup message$")
 	    public void confirm_the_approve_popup_message() throws Throwable {
-	        
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.approvebutton_611());
+	    	wifakapplicationobj_611.approvebutton_611().click();
+	    	
 	    }
 
 	    @And("^User_611 Click the final Approve popup$")
 	    public void click_the_final_approve_popup() throws Throwable {
-	        
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.confirmapproveprocessokpopup_611());
+	    	wifakapplicationobj_611.confirmapproveprocessokpopup_611().click();
+	    	
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.approvedsuccessfullypopup_611());
+	    	wifakapplicationobj_611.approvedsuccessfullypopup_611().click();
 	    }
 
-	    @And("^Click the Approval Committee Recommendation under request for financing$")
+	    @And("^User_611 Click the Approval Committee Recommendation tab under request for financing$")
 	    public void click_the_approval_committee_recommendation_under_request_for_financing() throws Throwable {
-	        
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.approvalcommitteerecommendation_611());
+	    	wifakapplicationobj_611.approvalcommitteerecommendation_611().click();  
 	    }
 
 	    @And("^User_611 Enter the request code in approval committe search box$")
 	    public void enter_the_request_code_in_approval_committe_search_box() throws Throwable {
-	        
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.approvalcommitteerecommendationretrivedatasearchbox_611());
+	    	wifakapplicationobj_611.approvalcommitteerecommendationretrivedatasearchbox_611().sendKeys(RefCode,Keys.ENTER);
 	    }
 	    
 	    @And("^User_611 double tap the request code$")
 	    public void double_tap_the_request_code() throws Throwable {
-	        
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.approvalcommitteerecommendationretrivedatasearchboxdoubletap_611());
+	    	clickandactionhelper.doubleClick(wifakapplicationobj_611.approvalcommitteerecommendationretrivedatasearchboxdoubletap_611());
 	    }
 
 	    @And("^User_611 Click the credit committee recommendation$")
 	    public void click_the_credit_committee_recommendation() throws Throwable {
-	        
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.creditcommitterecommendationtab_611());
+	    	wifakapplicationobj_611.creditcommitterecommendationtab_611().click();  
 	    }
 
 	    @And("^User_611 Click the recommendation under credit committee recommendation$")
 	    public void click_the_recommendation_under_credit_committee_recommendation() throws Throwable {
-	        
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.recommendationsbtn_611());
+	    	wifakapplicationobj_611.recommendationsbtn_611().click(); 
 	    }
 
-	    @And("^Click the recommendation add symbol under recommendation$")
+	    @And("^User_611 Click the recommendation add symbol under recommendation$")
 	    public void click_the_recommendation_add_symbol_under_recommendation() throws Throwable {
-	        
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.recommendationaddbutton_611());
+	    	wifakapplicationobj_611.recommendationaddbutton_611().click(); 
 	    }
 
 	    @And("^User_611 double tap all the value we created$")
 	    public void double_tap_all_the_value_we_created() throws Throwable {
-	        
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.recommendationaddbuttonnamedoubletap_611());
+	    	wifakapplicationobj_611.recommendationaddbuttonnamedoubletap_611().click(); 
 	    }
 
 	    @And("^User_611 send back the recommendation  value$")
 	    public void send_back_the_recommendation_value() throws Throwable {
-	        
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.recommendationsendback_611());
+	    	wifakapplicationobj_611.recommendationsendback_611().click(); 
 	    }
 
 	    @And("^User_611 Click the Maitenance level in send back level$")
 	    public void click_the_maitenance_level_in_send_back_level() throws Throwable {
-	        
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.sendbacklevelmaintenancelevel_611());
+	    	wifakapplicationobj_611.sendbacklevelmaintenancelevel_611().click(); 
 	    }
 
-	    @And("^Confirm the recommendation popup menu$")
+	    @And("^User_611 Confirm the final recommendation button$")
 	    public void confirm_the_recommendation_popup_menu() throws Throwable {
-	        
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.approverecommendation_611());
+	    	wifakapplicationobj_611.approverecommendation_611().click(); 
 	    }
 
-	    @And("^User_611 Accept the recommendation popup menu$")
+	    @And("^User_611 Confirm the recommendation button menu$")
 	    public void accept_the_recommendation_popup_menu() throws Throwable {
-	        
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.confirmrecommendationpopup_611());
+	    	wifakapplicationobj_611.confirmrecommendationpopup_611().click();
+	    	
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.confirmrecommendationpopupsuccessfully_611());
+	    	wifakapplicationobj_611.confirmrecommendationpopupsuccessfully_611().click(); 
 	    }
 
-	    @And("^Click the maintenance screen under request for financing$")
-	    public void click_the_maintenance_screen_under_request_for_financing() throws Throwable {
-	        
-	    }
-
+//	    @And("^User_611 Click the maintenance screen under request for financing$")
+//	    public void click_the_maintenance_screen_under_request_for_financing() throws Throwable {
+//	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.requestforfinancingmaintenance_611());
+//	    	wifakapplicationobj_611.requestforfinancingmaintenance_611().click();
+//	    }
 	    @And("^User_611 Click the search button$")
 	    public void click_the_search_button() throws Throwable {
-	        
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.requestforfinancingmaintenancesearchbox_611());
+	    	wifakapplicationobj_611.requestforfinancingmaintenancesearchbox_611().click(); 
+	    
 	    }
 
 	    @And("^User_611 Enter the created request code in search box$")
 	    public void enter_the_created_request_code_in_search_box() throws Throwable {
-	        
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.codesearchbox_611());
+	    	wifakapplicationobj_611.codesearchbox_611().sendKeys(RefCode,Keys.ENTER); 
 	    }
-	    @Then("^User_611 double tap the  created request code$")
+	    @And("^User_611 double tap the created request code$")
 	    public void double_tap_the_created_request_code() throws Throwable {
-	        
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.maintenancecodevaluedoubletap_611());
+	    	wifakapplicationobj_611.maintenancecodevaluedoubletap_611().click(); 
+	    }
+	    @Given("User_611 validate the sendback from approval committee in Request for financing")
+	    public void user_validate_the_sendback_from_approval_committee_in_request_for_financing() throws Throwable {
+	    	WebElement Sendbackfromapprovalcommittee = wifakapplicationobj_611.sendbackfromapprovalcommittee_611();
+	        if (Sendbackfromapprovalcommittee.isDisplayed()) {
+				Assert.assertEquals(wifakapplicationobj_611.sendbackfromapprovalcommittee_611(), true);
+			}
 	    }
 	    
 	  //616977
@@ -1860,7 +1926,155 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 	     	
 	     	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.successPopupOkBtn_611());
 	     	wifakapplicationobj_611.successPopupOkBtn_611().click();        
-	     }	
+	     }
+	     //585803
+	     @And("^User_611 Click the parameters menu in param application$")
+		    public void click_the_parameters_menu_in_param_application() throws Throwable {
+			 waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.paramparameters_611());
+			 wifakapplicationobj_611.paramparameters_611().click();
+		        
+		    }
+
+		    @And("^User_611 click the estimators menu under parameters$")
+		    public void click_the_estimators_menu_under_parameters() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.parametersestimators_611());
+				 wifakapplicationobj_611.parametersestimators_611().click();
+		        
+		    }
+
+		    @And("^User_611 click  the maintenance under estimators$")
+		    public void click_the_maintenance_under_estimators() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.estimatorsmaintenance_611());
+				 wifakapplicationobj_611.estimatorsmaintenance_611().click();
+		        
+		        
+		    }
+
+		    @And("^User_611 create a estimator code$")
+		    public void create_a_estimator_code() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.estimatorscode_611());
+		    	Random random = new Random();
+		        randomNumber = random.nextInt(8999)+1000;
+		        wifakapplicationobj_611.estimatorscode_611().sendKeys(String.valueOf(randomNumber),Keys.TAB); 
+		    	//wifakapplicationobj_611.estimatorscode_611().sendKeys("7969");
+				// wifakapplicationobj_611.estimatorscodetouch_611().click();
+		        
+				 
+		        
+		    }
+
+		    @And("^User_611 Enter the value of firstbrief discription$")
+		    public void enter_the_value_of_firstbrief_discription() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.briefdiscription_611());
+				 wifakapplicationobj_611.briefdiscription_611().sendKeys("testdata");
+		        
+		    }
+
+		    @And("^User_611 Enter the value of firstlong discription$")
+		    public void enter_the_value_of_firstlong_discription() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.longdiscription_611());
+				 wifakapplicationobj_611.longdiscription_611().sendKeys("testdata");
+		        
+		    }
+
+		    @And("^User_611 Enter the value of secondbrief discription$")
+		    public void enter_the_value_of_secondbrief_discription() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.briefdiscriptionarabic_611());
+				 wifakapplicationobj_611.briefdiscriptionarabic_611().sendKeys("testdata");
+		        
+		    }
+
+		    @And("^User_611 Enter the value of secondlong discription$")
+		    public void enter_the_value_of_secondlong_discription() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.longdiscriptionarabic_611());
+				 wifakapplicationobj_611.longdiscriptionarabic_611().sendKeys("testdata");
+		        
+		        
+		    }
+
+		    @And("^User_611 Enter the discription address$")
+		    public void enter_the_discription_address() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.discriptionaddress_611());
+				 wifakapplicationobj_611.discriptionaddress_611().sendKeys("estimators");
+		        
+		    }
+
+		    @And("^User_611 Enter the mobile number$")
+		    public void enter_the_mobile_number() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.mobilenumber_611());
+				 wifakapplicationobj_611.mobilenumber_611().sendKeys("3542186");
+		        
+		    }
+
+		    @And("^User_611 Enter the postal code$")
+		    public void enter_the_postal_code() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.postalcode_611());
+				 wifakapplicationobj_611.postalcode_611().sendKeys("1",Keys.TAB);
+		        
+		    }
+		    @Then("^User_611 Save all the estimators details$")
+		    public void save_all_the_estimators_details() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.paramsavebutton_611());
+				 wifakapplicationobj_611.paramsavebutton_611().click();
+		       
+				 waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.confirmsaveprocessparam_611());
+				 wifakapplicationobj_611.confirmsaveprocessparam_611().click();
+				 
+				 waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.RecordUpdatedSuccessfullyParam611());
+				 wifakapplicationobj_611.RecordUpdatedSuccessfullyParam611().click();
+		    }
+
+		    @And("^User_611 Click the approve Menu$")
+		    public void click_the_approve_menu() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.approvescreen_611());
+				 wifakapplicationobj_611.approvescreen_611().click();
+		        
+		    }
+
+		    @And("^User_611 Enter a code under approve menu$")
+		    public void enter_a_code_under_approve_menu() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.approvescreenclicksearchbox_611());
+		    	wifakapplicationobj_611.approvescreenclicksearchbox_611().sendKeys(String.valueOf(randomNumber),Keys.ENTER);
+		    	//wifakapplicationobj_611.approvescreenclicksearchbox_611().sendKeys(Keys.ENTER);
+		    	
+		    	String xpath ="//td[text()='"+String.valueOf(randomNumber)+"']";
+		        for (int i = 0; i < 200; i++) {
+	                try {
+	                    WebElement Code  = driver.findElement(By.xpath(xpath));
+	                    if (Code.isDisplayed()) {
+	                    	clickandactionhelper.doubleClick(Code);
+	                    	
+	                        break;
+	                    }
+	                }
+	                catch (Exception e) {
+						Assert.fail(e.getMessage());
+					}
+		        }
+//		    	wifakapplicationobj_611.approvescreenclicksearchbox_611().sendKeys("7969");
+//				 Thread.sleep(3000);
+//				 wifakapplicationobj_611.approvescreenclicksearchbox_611().sendKeys(Keys.ENTER);
+//				 Thread.sleep(3000);
+//				 
+//				 for (int i = 0; i < 300; i++) {
+//					try {
+						//clickandactionhelper.doubleClick(wifakapplicationobj_611.searchboxdoubleclick_611());
+//						break;
+//					} catch (Exception e) {
+//						// TODO: handle exception
+//					}
+//				}
+//				
+				 
+		        
+		    }
+		    @Then("^User_611 Approve the final status$")
+		    public void approve_the_final_status() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.finalapprove_611());
+		    	Thread.sleep(3000);
+				 wifakapplicationobj_611.finalapprove_611().click();
+		       
+		    }
 	     
 	    	
 	    
