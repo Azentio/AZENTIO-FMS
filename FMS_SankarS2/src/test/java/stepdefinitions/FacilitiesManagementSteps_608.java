@@ -557,8 +557,8 @@ public class FacilitiesManagementSteps_608 {
     	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementApproveMenu_608());
     	facilityManagementObj608.wifakFacilitiesManagementApproveMenu_608().click();
     	
-//    	waitHelper.waitForElementwithFluentwait(driver,applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
-//    	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();        
+    	waitHelper.waitForElementwithFluentwait(driver,applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
+    	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();        
     }
 
     @And("User_608 click the Suspend menu under Facilities Management in WIFAK Application")

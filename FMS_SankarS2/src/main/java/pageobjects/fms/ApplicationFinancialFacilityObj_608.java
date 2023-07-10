@@ -54,6 +54,18 @@ public class ApplicationFinancialFacilityObj_608 {
 		return app_financial_facility_main;
 	}
 	
+	@FindBy(xpath = "//input[@id='statusDesc_WIFT001MT']")
+	private WebElement wifak_app_financial_facility_main_status;
+	public WebElement wifakAppFinancialFacilityMaintananceStatus_608() {
+		return wifak_app_financial_facility_main_status;
+	}
+	
+	@FindBy(xpath = "//input[@id='savedAsReopened_WIFT001MT']")
+	private WebElement wifak_app_financial_facility_main_reopen_status;
+	public WebElement wifakAppFinancialFacilityMaintananceReopenStatus_608() {
+		return wifak_app_financial_facility_main_reopen_status;
+	}
+	
 	@FindBy(xpath = "//select[@id='applicationFacilityApplicationfor_WIFT001MT']")
 	private WebElement main_application_for_dropdown;
 	public WebElement mainApplicationForDropdown_608() {
@@ -178,6 +190,12 @@ public class ApplicationFinancialFacilityObj_608 {
 //	public WebElement applicationFinancialFacilityApproveLevel1_608() {
 //		return application_financial_facility_approve1;
 //	}	
+	
+	@FindBy(xpath = "//div[@id='gbox_applicationFacilityGridTbl_Id_WIFT001MT']")
+	private WebElement wifak_application_financial_facility_searchgrid;
+	public WebElement wifakApplicationFinancialFacilitySearchGrid_608() {
+		return wifak_application_financial_facility_searchgrid;
+	}
 	
 	@FindBy(xpath = "//input[@name='fmsApplVO.CODE']")
 	private WebElement application_financial_facility_search_code;

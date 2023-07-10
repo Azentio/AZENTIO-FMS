@@ -241,7 +241,19 @@ public class Facility_TypeObj_608 {
 		return document_checklist_update_after_approve;
 	}
 	
-	@FindBy(xpath = "//td[@id='td_fmsDocumentChecklistParamListGridTbl_Id_P0031UP_2_CODE']")
+	@FindBy(xpath = "//input[@id='fmsDocumentChecklistParamListGridTbl_Id_P0031UP_gs_CODE']")
+	private WebElement document_checklist_searchgrid_code;
+	public WebElement documentChecklistSearchgridCode_608() {
+		return document_checklist_searchgrid_code;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_fmsDocumentChecklistParamListGridTbl_Id_P0031UP_1_CODE']")
+	private WebElement document_checklist_searchgrid_first_row_code;
+	public WebElement documentChecklistSearchgridFirstRowCode_608() {
+		return document_checklist_searchgrid_first_row_code;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmsDocumentChecklist_code_P0031UP']")
 	private WebElement document_checklist_code;
 	public WebElement documentChecklistCode_608() {
 		return document_checklist_code;
@@ -319,6 +331,75 @@ public class Facility_TypeObj_608 {
 	public WebElement applicationCreationCheckbox_608() {
 		return application_creation_checkbox;
 	}
+	
+	
+	///// Country limit module
+	@FindBy(xpath = "//td[text()='Country Limit']")
+	private WebElement param_country_limit_module;
+	public WebElement paramCountryLimitModule_608() {
+		return param_country_limit_module;
+	}
+	
+	@FindBy(xpath = "//a[@id='P035MT']")
+	private WebElement param_country_limit_maintanance_menu;
+	public WebElement paramCountryLimitMaintananceMenu_608() {
+		return param_country_limit_maintanance_menu;
+	}	
+	
+	@FindBy(xpath = "//input[@id='lookuptxt_fmsCountryLimit_country_code_P035MT']")
+	private WebElement param_country_limit_main_country_code_input;
+	public WebElement paramCountryLimitMainCountryCodeInput_608() {
+		return param_country_limit_main_country_code_input;
+	}
+	
+	@FindBy(xpath = "//input[@id='lookuptxt_fmsCountryLimit_currency_code_P035MT']")
+	private WebElement param_country_limit_main_currency_code_input;
+	public WebElement paramCountryLimitMainCurrencyCodeInput_608() {
+		return param_country_limit_main_currency_code_input;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmsCountryLimit_limit_P035MT']")
+	private WebElement param_country_limit_main_limit_input;
+	public WebElement paramCountryLimitMainLimitInput_608() {
+		return param_country_limit_main_limit_input;
+	}
+	
+	@FindBy(xpath = "//button[@id='fmsCountryLimitMaint_save_P035MT']")
+	private WebElement param_country_limit_main_save_btn;
+	public WebElement paramCountryLimitMainSaveBtn_608() {
+		return param_country_limit_main_save_btn;
+	}
+	
+	@FindBy(xpath = "//a[@id='P035P']")
+	private WebElement param_country_limit_approve_menu;
+	public WebElement paramCountryLimitApproveMenu_608() {
+		return param_country_limit_approve_menu;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmsCountryLimitListGridTbl_Id_P035P_gs_FMSCOUNTRYLIMITVO.COUNTRY_CODE']")	
+	private WebElement param_country_limit_approve_searchgrid_country_code;
+	public WebElement paramCountryLimitApproveSearchgridCountryCode_608() {
+		return param_country_limit_approve_searchgrid_country_code;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_fmsCountryLimitListGridTbl_Id_P035P_1_FMSCOUNTRYLIMITVO.COUNTRY_CODE']")
+	private WebElement param_country_limit_approve_searchgrid_country_code_row1;
+	public WebElement paramCountryLimitApproveSearchgridCountryCodeRow1_608() {
+		return param_country_limit_approve_searchgrid_country_code_row1;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmsCountryLimit_available_limit_P035P']")
+	private WebElement param_country_limit_approve_available_limit_input;
+	public WebElement paramCountryLimitApproveAvailableLimitInput_608() {
+		return param_country_limit_approve_available_limit_input;
+	}	
+	
+	@FindBy(xpath = "//button[@id='fmsCountryLimitMaint_approve_P035P']")
+	private WebElement param_country_limit_approve_menu_approve_btn;
+	public WebElement paramCountryLimitApproveMenuApproveBtn_608() {
+		return param_country_limit_approve_menu_approve_btn;
+	}
+	
 	
 
 }

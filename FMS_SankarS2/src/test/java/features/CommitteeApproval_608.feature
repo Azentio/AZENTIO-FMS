@@ -93,8 +93,11 @@ Then User_608 click the Approve\Reject menu in Reopen Rejected Applications unde
 And User_608 enter the reference code in Approve\Reject searchgrid under WIFAK Reopen Rejected Applications
 And User_608 double click the first row in Approve\Reject searchgrid under WIFAK Reopen Rejected Applications maintanance
 And User_608 click the Approve button in Approve\Reject under WIFAK Reopen Rejected Applications maintanance
-
-
+And User_608 again click the maintanance menu under Application for financial facility
+And User_608 clicks on the search button in Application for financial facility main screen
+And User_608 enter the reference code in searchgrid under Application for financial facility main screen
+And User_608 double click searched record in Application for financial facility main screen
+Then User_608 validate Application status should be Active in Application for financial facility main screen
 
 
 

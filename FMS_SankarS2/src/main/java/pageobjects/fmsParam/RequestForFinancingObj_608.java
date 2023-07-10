@@ -287,23 +287,11 @@ public class RequestForFinancingObj_608 {
 	public WebElement wifakApprovalCommitteeRecommendationDropdown_608() {
 		return wifak_approval_committee_recommendation_dropdown;
 	}
-		
-	@FindBy(xpath = "//*[@id='23_fmsApplRecommendVO.RECOMMENDATION_ApplicationFacilityRecommendationGrid_WIFT002MT']/option[1]")
-	private WebElement wifak_approval_committee_recommendation_dropdown_option;
-	public WebElement wifakApprovalCommitteeRecommendationDropdownOption_608() {
-		return wifak_approval_committee_recommendation_dropdown_option;
-	}
 	
-	@FindBy(xpath = "//*[@id='23_fmsApplRecommendVO.COMMENT_CODE_spanLookup_ApplicationFacilityRecommendationGrid_WIFT002MT']/span")
-	private WebElement wifak_approval_committee_comment_code_lookup;
-	public WebElement approvalCommitteeCommentCodeLookup_608() {
-		return wifak_approval_committee_comment_code_lookup;
-	}
-	
-	@FindBy(xpath = "//*[@id='td_gridtab_23_fmsApplRecommendVO_COMMENT_CODE_ApplicationFacilityRecommendationGrid_WIFT002MT_1_CODE']")
-	private WebElement wifak_approval_committee_comment_code_lookup_first_row;
-	public WebElement wifakApprovalCommitteeCommentCodeLookupFirstRow_608() {
-		return wifak_approval_committee_comment_code_lookup_first_row;
+	@FindBy(xpath = "//input[@gridid='ApplicationFacilityRecommendationGrid_WIFT002MT']")
+	private WebElement wifak_approval_committee_comment_code_input;
+	public WebElement wifakapprovalCommitteeCommentCodeInput_608() {
+		return wifak_approval_committee_comment_code_input;
 	}
 	
 	@FindBy(xpath = "//button[@id='more_comments_btn_WIFT002MT']")
@@ -344,7 +332,8 @@ public class RequestForFinancingObj_608 {
 		return application_financial_facility_approval_committiee_btn;
 	}
 	
-	@FindBy(xpath = "//td[@id='td_ApplicationFacilityRecommendationGrid_WIFT001MT_23_fmsApplRecommendVO.RECOMMENDED_BY']")
+
+	@FindBy(xpath = "//td[@title='1']//preceding-sibling::td[@title='VAK']")
 	private WebElement application_financial_facility_approval_committiee_recommend_by_label;
 	public WebElement applicationFinancialFacilityApprovalCommittieeRecommendByLabel_608() {
 		return application_financial_facility_approval_committiee_recommend_by_label;

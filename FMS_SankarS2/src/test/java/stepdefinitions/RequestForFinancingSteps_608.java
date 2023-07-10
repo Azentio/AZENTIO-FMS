@@ -39,10 +39,10 @@ public class RequestForFinancingSteps_608 {
 	FMSLogin login = new FMSLogin(driver);
 
 	String path = System.getProperty("user.dir") + "\\TestData\\FMSTestData.xlsx";
-//	ExcelData fmsTransactionsExcelData = new ExcelData(path,"RequestForFinancingTestData","DataSet ID");
+	ExcelData fmsTransactionsExcelData = new ExcelData(path,"RequestForFinancingTestData","DataSet ID");
 //	ExcelData fmsTransactionsExcelData = new ExcelData(path,"IIS_Param_TestData","DataSet ID");
 //	ExcelData fmsTransactionsExcelData = new ExcelData(path,"DrawDownRequestTestData","DataSet ID");
-	ExcelData fmsTransactionsExcelData = new ExcelData(path, "CollateralManagementTestData", "DataSet ID");
+//	ExcelData fmsTransactionsExcelData = new ExcelData(path, "CollateralManagementTestData", "DataSet ID");
 
 	Map<String, String> testData;
 
@@ -57,17 +57,12 @@ public class RequestForFinancingSteps_608 {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_043");
 	}
 
-//  @AT_RF_098_User_VAK
-	@And("^User_VAK get the test data for test case AT_RF_098_User_VAK$")
-	public void User_VAK_get_the_test_data_for_test_case_AT_RF_098User_VAK() throws Throwable {
+//  @AT_RF_098
+	@And("^User get the test data for test case AT_RF_098$")
+	public void User_VAK_get_the_test_data_for_test_case_AT_RF_098() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_098");
 	}
 
-//    @AT_RF_098_User_608
-	@And("^User_608 get the test data for test case AT_RF_098_User_608$")
-	public void get_the_test_data_for_test_case_AT_RF_098user2() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_098");
-	}
 
 //  @AT_RF_157
 	@And("User_608 get the test data for test case AT_RF_157")
@@ -566,32 +561,22 @@ public class RequestForFinancingSteps_608 {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.wifakApprovalCommitteeRecommendationDropdown_608());
 		dropDownHelper.SelectUsingVisibleText(requestForFinancingObj608.wifakApprovalCommitteeRecommendationDropdown_608(),
-				testData.get("Decision3"));
+				testData.get("Recommendation"));
 	}
 
-	@And("^User_VAK click the comment code lookup option in recommend box$")
-	public void User_VAK_click_the_comment_code_lookup_option_in_recommend_box() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver,
-				requestForFinancingObj608.wifakApprovalCommitteeRecommendationDropdownOption_608());
-		for (int i = 0; i < 2000; i++) {
+	@And("^User_VAK enter the comment code in recommend box$")
+	public void User_VAK_enter_the_comment_code_in_recommend_box() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakapprovalCommitteeCommentCodeInput_608());
+		requestForFinancingObj608.wifakapprovalCommitteeCommentCodeInput_608().sendKeys(testData.get("Comment Code"),Keys.TAB);
+		for (int i = 0; i <= 500; i++) {
 			try {
-				requestForFinancingObj608.approvalCommitteeCommentCodeLookup_608().click();
-				break;
-			} catch (Exception e) {
-				if (i == 1999) {
-					Assert.fail(e.getMessage());
+				if (!(requestForFinancingObj608.wifakapprovalCommitteeCommentCodeInput_608().getAttribute("prevvalue").isBlank())) {
+					break;
 				}
+			} catch (Exception e) {
+				// TODO: handle exception
 			}
 		}
-
-	}
-
-	@And("^User_VAK double click the first row of comment code lookup in recommend box$")
-	public void User_VAK_double_click_the_first_row_of_comment_code_lookup_in_recommend_box() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver,
-				requestForFinancingObj608.wifakApprovalCommitteeCommentCodeLookupFirstRow_608());
-		clicksAndActionsHelper
-				.doubleClick(requestForFinancingObj608.wifakApprovalCommitteeCommentCodeLookupFirstRow_608());
 	}
 
 	@And("^User_VAK clicks the more comments button in recommend box$")
@@ -623,8 +608,8 @@ public class RequestForFinancingSteps_608 {
 
 	}
 
-	@When("^User_VAK click the Ok button in recommend box$")
-	public void User_VAK_click_the_ok_button_in_recommend_box() throws Throwable {
+	@When("^User_VAK click the Ok button and get the reference code in recommend box$")
+	public void User_VAK_click_the_ok_button_and_get_the_reference_code_in_recommend_box() throws Throwable {
 		for (int i = 0; i < 2000; i++) {
 			try {
 				requestForFinancingObj608.wifakApprovalCommitteeOkBtn_608().click();
@@ -639,7 +624,7 @@ public class RequestForFinancingSteps_608 {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.successPopup_608());
 		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.successPopupMessage_608());
 		String SuccessMsg = applicationFinancialFacilityObj608.successPopupMessage_608().getText().substring(23, 27);
-		fmsTransactionsExcelData.updateTestData(testData.get("DataSet ID"), "Search Code", SuccessMsg);
+		fmsTransactionsExcelData.updateTestData(testData.get("DataSet ID"), "Reference Code", SuccessMsg);
 
 		applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
 	}
@@ -652,12 +637,12 @@ public class RequestForFinancingSteps_608 {
 		requestForFinancingObj608.applicationFinancialFacilitySearchBtn_608().click();
 	}
 
-	@And("^User_608 search the code in Application for financial facility main screen$")
-	public void user_search_the_code_in_application_for_financial_facility_main_screen() throws Throwable {
+	@And("^User_608 enter the reference code in Application for financial facility main screen$")
+	public void user_enter_the_reference_code_in_application_for_financial_facility_main_screen() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				applicationFinancialFacilityObj608.applicationFinancialFacilitySearchCode_608());
 		applicationFinancialFacilityObj608.applicationFinancialFacilitySearchCode_608()
-				.sendKeys(testData.get("Search Code"), Keys.ENTER);
+				.sendKeys(testData.get("Reference Code"), Keys.ENTER);
 	}
 
 	@And("^User_608 double click searched record in Application for financial facility main screen$")
@@ -710,34 +695,11 @@ public class RequestForFinancingSteps_608 {
 		Assert.assertEquals(testData.get("More Comments"), text);
 	}
 
-//  @AT_RF_099_FMSParam
+//  @AT_RF_099
 	@And("^User_608 clicks the Application Requirements Details option$")
 	public void user_clicks_the_application_requirements_details_option() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.applicationReqDetails_608());
 		facilityTypeObj608.applicationReqDetails_608().click();
-	}
-
-	@And("^User_608 select the collateral as application level$")
-	public void user_select_the_collateral_as_application_level() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.selectCollateral_608());
-		facilityTypeObj608.selectCollateral_608().click();
-		dropDownHelper.SelectUsingVisibleText(facilityTypeObj608.selectCollateral_608(), testData.get("Collateral"));
-	}
-
-	@And("^User_608 select the Collaterals defined at the level of as sublimit$")
-	public void user_select_the_collaterals_defined_at_the_level_of_as_sublimit() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.selectCollateralDefinedLevel_608());
-		facilityTypeObj608.selectCollateralDefinedLevel_608().click();
-		dropDownHelper.SelectUsingVisibleText(facilityTypeObj608.selectCollateralDefinedLevel_608(),
-				testData.get("Collaterals defined"));
-
-		// Dummy step
-		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.checkCollateralFacility_608());
-		WebElement checkCollateralFacility = facilityTypeObj608.checkCollateralFacility_608();
-		facilityTypeObj608.checkCollateralFacility_608().click();
-		if (!(checkCollateralFacility.isSelected())) {
-			checkCollateralFacility.click();
-		}
 	}
 
 	@And("^User_608 validate visibility of Collateral details button under limit details tab$")
@@ -1784,20 +1746,29 @@ public class RequestForFinancingSteps_608 {
 		facilityTypeObj608.documentChecklistUpdateAfterApprove_608().click();
 	}
 
-	@And("^User_608 retrive the one data in update after approve in Document checklist$")
-	public void user_retrive_the_one_data_in_update_after_approve_in_document_checklist() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.documentChecklistCode_608());
-		for (int i = 0; i <= 300; i++) {
-			try {
-				clicksAndActionsHelper.doubleClick(facilityTypeObj608.documentChecklistCode_608());
-				break;
-			} catch (Exception e) {
-				if (i == 300) {
-					Assert.fail(e.getMessage());
-				}
-			}
-		}
 
+	@And("User_608 double click on the first row in update after approve in Document checklist")
+	public void user_double_click_on_the_first_row_in_update_after_approve_in_document_checklist() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.documentChecklistSearchgridFirstRowCode_608());
+		clicksAndActionsHelper.doubleClick(facilityTypeObj608.documentChecklistSearchgridFirstRowCode_608());
+//		for(int i = 0; i <= 500; i++) {
+//    		try {
+//    			clicksAndActionsHelper.doubleClick(facilityTypeObj608.documentChecklistSearchgridFirstRowCode_608());
+//    			break;
+//			} catch (Exception e) {
+//				// TODO: handle exception
+//			}
+//    	}
+		
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(facilityTypeObj608.documentChecklistCode_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}
 	}
 
 	@And("^User_608 click the add new button under update after approve in Document checklist$")

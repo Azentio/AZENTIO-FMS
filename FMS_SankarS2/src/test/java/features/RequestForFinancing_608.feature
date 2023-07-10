@@ -190,12 +190,15 @@ Then User_608 validate the visibility of Account No input box in limit details
 Then User_608 validate the visibility of Fund Transfer rate input box in limit details
 
 
+## 1. Login VAK User and go to wifak Approval commitee recommendation menu give recommend select the VAK user give approve and go to more comment give the some comments
+## 2. Login SANKAR User and go to wifak Application for financial facilities Main screen search the Ref Code and click the approval commitees button.
+## 2. select the VAK User and click the More comments button validate the comment
 @AT_RF_098
 @AT_RF_098_User_VAK
 Scenario: TSR - BTII170041
 
 Given User_VAK navigate to FMS application and login with valid credentials
-And User_VAK get the test data for test case AT_RF_098_User_VAK
+And User get the test data for test case AT_RF_098
 And User_VAK clear the caches in FMS Application
 And User_VAK clicks on the WIFAK_Application first link
 And User_VAK clicks on the WIFAK_Application second link
@@ -205,12 +208,11 @@ And User_VAK double click on the any one record in approval committe recommedati
 And User_VAK clicks on the Recommend button in approval committe recommedations menu
 And User_VAK click the User_VAK recommended by name in recommend box
 And User_VAK select the recommendation as approve in recommend box
-And User_VAK click the comment code lookup option in recommend box
-And User_VAK double click the first row of comment code lookup in recommend box
+And User_VAK enter the comment code in recommend box
 And User_VAK clicks the more comments button in recommend box
 And User_VAK enter the some comments in more comments
 And User_VAK click the Ok button in more comments
-When User_VAK click the Ok button in recommend box
+When User_VAK click the Ok button and get the reference code in recommend box
 
 
 @AT_RF_098
@@ -218,14 +220,14 @@ When User_VAK click the Ok button in recommend box
 Scenario: TSR - BTII170041
 
 Given navigate to FMS application and login with valid credentials
-And User_608 get the test data for test case AT_RF_098_User_608
+And User get the test data for test case AT_RF_098
 And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
 And User_608 clicks on the Application for financial facility link
 And User_608 clicks the maintanance menu under Application for financial facility
 And User_608 clicks on the search button in Application for financial facility main screen
-And User_608 search the code in Application for financial facility main screen
+And User_608 enter the reference code in Application for financial facility main screen
 And User_608 double click searched record in Application for financial facility main screen
 And User_608 clicks on the Approval committee button
 And User_608 click the User1 name in Recommented by column
@@ -238,7 +240,7 @@ Then User_608 validate the more comments text in input field
 Scenario: TSR - BTII170059
 
 Given navigate to FMS param application and login with valid credentials
-And User_608 get the test data for test case AT_RF_099_FMSParam
+And User_608 get the test data for test case AT_RF_099
 And User_608 clicks on the Parameter module in FMS Param
 And User_608 clicks on the Facility Type feature
 And User_608 clicks on the update after approve menu in Facility type
@@ -255,12 +257,13 @@ And User_608 double click on the retrieved data in Approve menu
 When User_608 clicks on the Approve button in Approve menu under Facility Type
 
 
+## Validate the Collateral Details button under Wifak Application for financial facilities main screen --> Limit details tab
 @AT_RF_099
 @AT_RF_099_FMSCore
 Scenario: TSR - BTII170059
 
 Given navigate to FMS application and login with valid credentials
-And User_608 get the test data for test case AT_RF_099_FMSCore
+And User_608 get the test data for test case AT_RF_099
 And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
@@ -285,7 +288,7 @@ And User_608 enter the Estimator Name
 And User_608 clicks the save button
 And User_608 clicks on the validate button
 Then User_608 clicks the Approve Level1 menu under Application for financial facilities
-And User_608 get the test data for test case AT_RF_099_FMSCore
+And User_608 get the test data for test case AT_RF_099
 And User_608 enter the reference code in Approve level1
 And User_608 double click on the retrieved reference code in Approve level1
 And User_608 select the Approve level1 decision as Approve
@@ -302,7 +305,10 @@ And User_608 select the Approve level3 decision as Approve
 When User_608 clicks on the Approve level3 submit button
 
 
-# No data available in FMSCore
+# Some Time data not available in FMSCore
+# If run the scenario must change the Existing Facility Ref Code in Excel sheet
+# Create a application for 'decrease' and validate the FC amount are decreased based on Total value--> limit details Validate CV Value --> validate and approve
+
 @AT_RF_100
 Scenario: TSR-AMANAUPG170045
 
@@ -321,6 +327,7 @@ And User_608 enter the total value under additional info tab
 And User_608 validate the finance amount should be decresed based on total value
 And User_608 enter the expire date in additional info tab
 And User_608 clicks the limit details tab
+And User_608 get the test data for test case AT_RF_100
 And User_608 validate the Facility value and CV value should be changed same as decreased finance amount under limit details
 And User_608 double click on the product class under limit details
 And User_608 click the clean flag under product calss in limit details tab
@@ -348,16 +355,19 @@ And User_608 select the Approve level3 decision as Approve
 When User_608 clicks on the Approve level3 submit button
 
 
+## FMS Param --> Document Checklist --> update after approve --> Search one record --> add new document details --> update and approve
+## FMS Param --> Facility Type --> update after approve --> Document management tab --> check Application creation checkbox --> update and approve
 @AT_RF_101
 @AT_RF_101_FMSParam
 Scenario: TSR-AMANAUPG170107
 
 Given navigate to FMS param application and login with valid credentials
-And User_608 get the test data for test case AT_RF_101_FMSParam
+And User_608 get the test data for test case AT_RF_101
 And User_608 clicks on the Parameter module in FMS Param
 And User_608 clicks on the Document checklist feature
 And User_608 clicks on the update after approve menu in Document checklist
-And User_608 retrive the one data in update after approve in Document checklist
+And User_608 enter the code in search grid under update after approve menu in Document checklist
+And User_608 double click on the first row in update after approve in Document checklist
 And User_608 click the add new button under update after approve in Document checklist
 And User_608 add the new record under Document details in update after approve
 And User_608 clicks on the update button under the update after approve in Document checklist
@@ -377,12 +387,13 @@ And User_608 double click on the retrieved data in Approve menu
 When User_608 clicks on the Approve button in Approve menu under Facility Type
 
 
+## FMS core --> wifak application financial facility --> main --> create application --> limit details tab --> document chekclist tab --> add new record & save --> validate & Approve
 @AT_RF_101
 @AT_RF_101_FMSCore
 Scenario: TSR-AMANAUPG170107
 
 Given navigate to FMS application and login with valid credentials
-And User_608 get the test data for test case AT_RF_101_FMSCore
+And User_608 get the test data for test case AT_RF_101
 And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
@@ -411,7 +422,7 @@ And User_608 enter the Estimator Name
 And User_608 clicks the save button
 And User_608 clicks on the validate button
 Then User_608 clicks the Approve Level1 menu under Application for financial facilities
-And User_608 get the test data for test case AT_RF_101_FMSCore
+And User_608 get the test data for test case AT_RF_101
 And User_608 enter the reference code in Approve level1
 And User_608 double click on the retrieved reference code in Approve level1
 And User_608 select the Approve level1 decision as Approve
@@ -428,7 +439,7 @@ And User_608 select the Approve level3 decision as Approve
 When User_608 clicks on the Approve level3 submit button
 
 
-
+## FMS core --> wifak application financial facility --> main --> create application with limit details product class item 'Import L/C',Maturity date ,margin rate --> update & Approve
 @AT_RF_102
 Scenario: TSR-AMANAUPG170105
 
@@ -452,8 +463,28 @@ And User_608 clicks the add new record button in limit details tab
 And User_608 select the Item in limit Details
 And User_608 select the Maturity date in limit Details
 And User_608 enter the Margin rate in limit Details
-
-
+And User_608 clicks on the product class add button
+And User_608 move to the Document details tab
+And User_608 enter the Solicitor Name
+And User_608 enter the Estimator Name
+And User_608 clicks the save button
+And User_608 clicks on the validate button
+Then User_608 clicks the Approve Level1 menu under Application for financial facilities
+And User_608 get the test data for test case AT_RF_102
+And User_608 enter the reference code in Approve level1
+And User_608 double click on the retrieved reference code in Approve level1
+And User_608 select the Approve level1 decision as Approve
+When User_608 clicks on the Approve level1 submit button
+Then User_608 clicks the Approve Level2 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level2
+And User_608 double click on the retrieved reference code in Approve level2
+And User_608 select the Approve level2 decision as Approve
+When User_608 clicks on the Approve level2 submit button
+Then User_608 clicks the Approve Level3 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level3
+And User_608 double click on the retrieved reference code in Approve level3
+And User_608 select the Approve level3 decision as Approve
+When User_608 clicks on the Approve level3 submit button
 
 
 

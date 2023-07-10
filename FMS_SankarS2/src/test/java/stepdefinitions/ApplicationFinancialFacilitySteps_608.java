@@ -105,18 +105,12 @@ public class ApplicationFinancialFacilitySteps_608 {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_AFF_098");
 	}
 	
-//	@AT_RF_099_FMSParam
-	@And("^User_608 get the test data for test case AT_RF_099_FMSParam$")
-    public void user_get_the_test_data_for_test_case_AT_RF_099fmsparam() throws Throwable {
+//	@AT_RF_099
+	@And("^User_608 get the test data for test case AT_RF_099$")
+    public void user_get_the_test_data_for_test_case_AT_RF_099() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_099");
     }
 	
-//	@AT_RF_099_FMSCore
-    @And("^User_608 get the test data for test case AT_RF_099_FMSCore$")
-    public void user_get_the_test_data_for_test_case_AT_RF_099fmscore() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_099");
-    }
-    
     
 //  @AT_RF_100
     @And("^User_608 get the test data for test case AT_RF_100$")
@@ -124,16 +118,10 @@ public class ApplicationFinancialFacilitySteps_608 {
     	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_100");
     }
     
-//	@AT_RF_101_FMSParam
-	@And("^User_608 get the test data for test case AT_RF_101_FMSParam$")
-    public void user_get_the_test_data_for_test_case_AT_RF_101fmsparam() throws Throwable {
+//	@AT_RF_101
+	@And("^User_608 get the test data for test case AT_RF_101$")
+    public void user_get_the_test_data_for_test_case_AT_RF_101() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_101");
-    }
-	
-//  @AT_RF_101_FMSCore
-    @And("^User_608 get the test data for test case AT_RF_101_FMSCore$")
-    public void user_get_the_test_data_for_test_case_AT_RF_101fmscore() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS01_582480");
     }
     
     
@@ -1392,6 +1380,31 @@ public class ApplicationFinancialFacilitySteps_608 {
      
      
      /// Test data needed steps
+// @AT_RF_099_FMSParam
+   @And("^User_608 select the collateral as application level$")
+	public void user_select_the_collateral_as_application_level() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.selectCollateral_608());
+		facilityTypeObj608.selectCollateral_608().click();
+		dropDownHelper.SelectUsingVisibleText(facilityTypeObj608.selectCollateral_608(), testData.get("Collateral"));
+	}
+
+	@And("^User_608 select the Collaterals defined at the level of as sublimit$")
+	public void user_select_the_collaterals_defined_at_the_level_of_as_sublimit() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.selectCollateralDefinedLevel_608());
+		facilityTypeObj608.selectCollateralDefinedLevel_608().click();
+		dropDownHelper.SelectUsingVisibleText(facilityTypeObj608.selectCollateralDefinedLevel_608(),
+				testData.get("Collaterals defined"));
+
+		// Dummy step
+		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.checkCollateralFacility_608());
+		WebElement checkCollateralFacility = facilityTypeObj608.checkCollateralFacility_608();
+		facilityTypeObj608.checkCollateralFacility_608().click();
+		if (!(checkCollateralFacility.isSelected())) {
+			checkCollateralFacility.click();
+		}
+	}
+   
+   
 //   @AT_FM_058
    	@And("User_608 enter the Application Ref number in Facilities Management Maintanance Search grid under WIFAK Application")
    	public void user_enter_the_application_ref_number_in_facilities_management_maintanance_search_grid_under_wifak_application() throws Throwable {
@@ -2366,9 +2379,8 @@ public class ApplicationFinancialFacilitySteps_608 {
     @And("^User_608 enter the input as Existing Facility Ref in main screen$")
     public void user_enter_the_input_as_existing_facility_ref_in_main_screen() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainExistingFacilityRef_608());
-//    	applicationFinancialFacilityObj608.mainExistingFacilityRef().sendKeys(testData.get("Facility Ref"),Keys.TAB);
-    	applicationFinancialFacilityObj608.mainExistingFacilityRef_608().sendKeys("1390",Keys.TAB);
-    	
+//    	applicationFinancialFacilityObj608.mainExistingFacilityRef_608().sendKeys(testData.get("Facility Ref"),Keys.TAB);
+    	applicationFinancialFacilityObj608.mainExistingFacilityRef_608().sendKeys("1539",Keys.TAB);	
     	for(int i = 0; i <= 300; i++) {
     		try {
 				if(!(applicationFinancialFacilityObj608.mainExistingFacilityRef_608().getAttribute("readonly").isBlank())) {
@@ -2391,7 +2403,17 @@ public class ApplicationFinancialFacilitySteps_608 {
     	
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainAdditionalTabTotalValue_608());
 		applicationFinancialFacilityObj608.mainAdditionalTabTotalValue_608().sendKeys(testData.get("Total value"),Keys.TAB);
-		Thread.sleep(3000);
+		
+		for(int i = 0; i <= 300; i++) {
+    		try {
+				if(!(applicationFinancialFacilityObj608.mainAdditionalTabTotalValue_608().getAttribute("readonly").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}
+		
     }
 
     @And("^User_608 validate the finance amount should be decresed based on total value$")
@@ -2421,7 +2443,7 @@ public class ApplicationFinancialFacilitySteps_608 {
     	String[] splitFacilityValue  = facilityValue.split("[.]");
     	String finalFacilityValue = splitFacilityValue[0].replace(",", "");
     	
-    	testData = fmsTransactionsExcelData.getTestdata("DS01_582426");
+//    	testData = fmsTransactionsExcelData.getTestdata("DataSet ID");
     	Assert.assertEquals(testData.get("CV Value"), finalFacilityValue);
     	
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsProductCVValue_608());
@@ -2467,6 +2489,12 @@ public class ApplicationFinancialFacilitySteps_608 {
     }
     
     
+//  @AT_RF_101_FMSParam
+    @And("User_608 enter the code in search grid under update after approve menu in Document checklist")
+	public void user_enter_the_code_in_search_grid_under_update_after_approve_menu_in_document_checklist() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.documentChecklistSearchgridCode_608());
+		facilityTypeObj608.documentChecklistSearchgridCode_608().sendKeys(testData.get("Document Code"),Keys.ENTER);
+	}
     
 //  @AT_RF_101_FMSCore
     @And("^User_608 clicks on the document checklist button under limit details$")
@@ -2802,6 +2830,41 @@ public class ApplicationFinancialFacilitySteps_608 {
 			}
 		} 
     }
+    
+    
+    @And("User_608 again click the maintanance menu under Application for financial facility")
+    public void user_again_click_the_maintanance_menu_under_application_for_financial_facility() {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.appFinancialFacilityMaintanance_608());
+		applicationFinancialFacilityObj608.appFinancialFacilityMaintanance_608().click();
+        
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
+    	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
+    	
+    	for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(applicationFinancialFacilityObj608.wifakApplicationFinancialFacilitySearchGrid_608().isDisplayed())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}
+    }
+
+    @And("User_608 enter the reference code in searchgrid under Application for financial facility main screen")
+    public void user_enter_the_reference_code_in_searchgrid_under_application_for_financial_facility_main_screen() {
+    	waitHelper.waitForElementwithFluentwait(driver,	applicationFinancialFacilityObj608.applicationFinancialFacilitySearchCode_608());
+		applicationFinancialFacilityObj608.applicationFinancialFacilitySearchCode_608().sendKeys(testData.get("Reference Code"), Keys.ENTER);        
+    }
+
+    @Then("User_608 validate Application status should be Active in Application for financial facility main screen")
+    public void user_validate_application_status_should_be_active_in_application_for_financial_facility_main_screen() {
+    	waitHelper.waitForElementwithFluentwait(driver,	applicationFinancialFacilityObj608.wifakAppFinancialFacilityMaintananceReopenStatus_608());    	
+    	waitHelper.waitForElementwithFluentwait(driver,	applicationFinancialFacilityObj608.wifakAppFinancialFacilityMaintananceStatus_608());
+    	String getStatus = applicationFinancialFacilityObj608.wifakAppFinancialFacilityMaintananceStatus_608().getAttribute("prevvalue");
+    	Assert.assertEquals(testData.get("Status"), getStatus);
+    }
+    
 
 
 }
