@@ -24,7 +24,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageobjects.fms.ApplicationFinancialFacilityObj_608;
 import pageobjects.fms.FacilitiesManagementObj_608;
-import pageobjects.fmsParam.Facility_TypeObj_608;
+import pageobjects.fmsParam.FMSParamObj_608;
 import pageobjects.fmsParam.RequestForFinancingObj_608;
 import resources.BaseClass;
 
@@ -35,7 +35,7 @@ public class ApplicationFinancialFacilitySteps_608 {
 	ApplicationFinancialFacilityObj_608 applicationFinancialFacilityObj608 = new ApplicationFinancialFacilityObj_608(driver);
 	FacilitiesManagementObj_608 facilityManagementObj608 = new FacilitiesManagementObj_608(driver);
 	RequestForFinancingObj_608 requestForFinancingObj608 = new RequestForFinancingObj_608(driver);
-	Facility_TypeObj_608 facilityTypeObj608 = new Facility_TypeObj_608(driver);
+	FMSParamObj_608 fmsParamObj608 = new FMSParamObj_608(driver);
 	WaitHelper waitHelper = new WaitHelper(driver);
 	JavascriptHelper javaScriptHelper = new JavascriptHelper(driver);
 	ClicksAndActionsHelper clicksAndActionsHelper = new ClicksAndActionsHelper(driver);
@@ -232,7 +232,12 @@ public class ApplicationFinancialFacilitySteps_608 {
     }	
 	
 	
-	
+//	FacilityApplication - Increase/Decrease feature
+//	@AT_FAID_002
+	@And("User_608 get the test data for test case AT_FAID_002")
+	public void user_get_the_test_data_for_test_case_at_faid_002() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FAID_002");   
+	}
 	
 	
 	
@@ -650,8 +655,7 @@ public class ApplicationFinancialFacilitySteps_608 {
 
     @And("User_608 enter the reference code in Approve level1")
     public void user_enter_the_reference_code_in_approve_level1() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.approveLevel1RefCodeInput_608());
-    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.approveLevel1RefCodeInput_608());    	
     	applicationFinancialFacilityObj608.approveLevel1RefCodeInput_608().sendKeys(testData.get("Reference Code"),Keys.ENTER);        
     }
 
@@ -848,46 +852,46 @@ public class ApplicationFinancialFacilitySteps_608 {
  // @AT_AFF_056	
  	@And("^User_608 clicks on the Parameter module in FMS Param$")
      public void user_clicks_on_the_parameter_module() throws Throwable {
-         waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.fmsParamParameter_608());
-         applicationFinancialFacilityObj608.fmsParamParameter_608().click();
+         waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.fmsParamParameter_608());
+         fmsParamObj608.fmsParamParameter_608().click();
      }
 
      @And("^User_608 clicks on the Facility category feature under Parameter$")
      public void user_clicks_on_the_facility_category_feature() throws Throwable {
-     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.parameterFacilityCategory_608());
-     	applicationFinancialFacilityObj608.parameterFacilityCategory_608().click();
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.parameterFacilityCategory_608());
+     	fmsParamObj608.parameterFacilityCategory_608().click();
      }
 
      @And("^User_608 clicks on the maintanance menu under Facility category$")
      public void user_clicks_on_the_maintanance_menu() throws Throwable {
-     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.facilityCategoryMaintanance_608());
-     	applicationFinancialFacilityObj608.facilityCategoryMaintanance_608().click();        
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.facilityCategoryMaintanance_608());
+     	fmsParamObj608.facilityCategoryMaintanance_608().click();        
      }
 
      @And("^User_608 clicks on the search button under Facility category maintanance$")
      public void user_clicks_on_the_search_button() throws Throwable {
-     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.facilityCategoryMainSearchBtn_608());
-     	applicationFinancialFacilityObj608.facilityCategoryMainSearchBtn_608().click();
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.facilityCategoryMainSearchBtn_608());
+     	fmsParamObj608.facilityCategoryMainSearchBtn_608().click();
      }
 
      @And("^User_608 double clicks on the any one row in Maintanance under Facility category$")
      public void user_double_clicks_on_the_any_one_row() throws Throwable {
-     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.facilityCategoryMainSearchResult());
-     	clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.facilityCategoryMainSearchResult());        
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.facilityCategoryMainSearchResult());
+     	clicksAndActionsHelper.doubleClick(fmsParamObj608.facilityCategoryMainSearchResult());        
      }
 
      @And("^User_608 clicks the CIF type search option in Maintanance under Facility category$")
      public void user_clicks_the_cif_type_search_option() throws Throwable {
      	Thread.sleep(3000);
-     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.facilityCategoryMainCIFTypeSearchOption());
-     	applicationFinancialFacilityObj608.facilityCategoryMainCIFTypeSearchOption().click();
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.facilityCategoryMainCIFTypeSearchOption());
+     	fmsParamObj608.facilityCategoryMainCIFTypeSearchOption().click();
      }
 
      @And("^User_608 double click on the any one value in Maintanance under Facility category$")
      public void user_double_click_on_the_any_one_value() throws Throwable {
      	for (int i = 0; i <= 300; i++) {
  			try {
- 				javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.facilityCategoryMainCIFTypeData());
+ 				javaScriptHelper.scrollIntoView(fmsParamObj608.facilityCategoryMainCIFTypeData());
  				break;
  			} catch (Exception e) {
  				if (i == 300) {
@@ -896,13 +900,13 @@ public class ApplicationFinancialFacilitySteps_608 {
  			}
  		}
 //     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainCIFTypeData());
-     	clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.facilityCategoryMainCIFTypeData());
+     	clicksAndActionsHelper.doubleClick(fmsParamObj608.facilityCategoryMainCIFTypeData());
      }
      
      @Then("^User_608 clicks on the save button and save the record in Maintanance under Facility category$")
      public void user_clicks_on_the_save_button_and_save_the_record() throws Throwable {
-     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.facilityCategoryMainSaveBtn());
-     	applicationFinancialFacilityObj608.facilityCategoryMainSaveBtn().click();
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.facilityCategoryMainSaveBtn());
+     	fmsParamObj608.facilityCategoryMainSaveBtn().click();
      	
      	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.ConfirmPopupOkBtn_608());
      	applicationFinancialFacilityObj608.ConfirmPopupOkBtn_608().click();
@@ -915,30 +919,30 @@ public class ApplicationFinancialFacilitySteps_608 {
 // 	@AT_AFF_075
  	@And("^User_608 clicks on the control records feature under Parameter$")
      public void user_clicks_on_the_control_records_feature() throws Throwable {
-         waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.parameterControlRecords_608());
-         applicationFinancialFacilityObj608.parameterControlRecords_608().click();
+         waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.parameterControlRecords_608());
+         fmsParamObj608.parameterControlRecords_608().click();
      }
 
      @And("^User_608 clicks on the update after approve menu under control records$")
      public void user_clicks_on_the_update_after_approve_menu() throws Throwable {
-         waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.controlRecordsUpdateAfterApprove_608());
-         applicationFinancialFacilityObj608.controlRecordsUpdateAfterApprove_608().click();
+         waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.controlRecordsUpdateAfterApprove_608());
+         fmsParamObj608.controlRecordsUpdateAfterApprove_608().click();
      }
 
      @And("^User_608 validate the Officer Assigned Required checkbox$")
      public void user_validate_the_officer_assigned_required_checkbox() throws Throwable {
-     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.controlRecordsMainInfoOfficerAssignReqCheck_608());
-     	WebElement mainInfoOfficerAssignReqCheck = applicationFinancialFacilityObj608.controlRecordsMainInfoOfficerAssignReqCheck_608();
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.controlRecordsMainInfoOfficerAssignReqCheck_608());
+     	WebElement mainInfoOfficerAssignReqCheck = fmsParamObj608.controlRecordsMainInfoOfficerAssignReqCheck_608();
      	Assert.assertEquals(true, mainInfoOfficerAssignReqCheck.isDisplayed());
      	
-     	WebElement mainInfoOfficerAssignReqLabel = applicationFinancialFacilityObj608.controlRecordsMainInfoOfficerAssignReqLabel_608();
+     	WebElement mainInfoOfficerAssignReqLabel = fmsParamObj608.controlRecordsMainInfoOfficerAssignReqLabel_608();
      	Assert.assertEquals(true, mainInfoOfficerAssignReqLabel.isDisplayed());
      }
 
      @And("^User_608 uncheck the Officer Assigned Required flag$")
      public void user_uncheck_the_officer_assigned_required_flag() throws Throwable {
-     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.controlRecordsMainInfoOfficerAssignReqCheck_608());
-     	WebElement mainInfoOfficerAssignReqCheck = applicationFinancialFacilityObj608.controlRecordsMainInfoOfficerAssignReqCheck_608();
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.controlRecordsMainInfoOfficerAssignReqCheck_608());
+     	WebElement mainInfoOfficerAssignReqCheck = fmsParamObj608.controlRecordsMainInfoOfficerAssignReqCheck_608();
      	if(!(mainInfoOfficerAssignReqCheck.isSelected())) {
      		mainInfoOfficerAssignReqCheck.click();
      	}
@@ -948,7 +952,7 @@ public class ApplicationFinancialFacilitySteps_608 {
      public void user_validate_the_enable_markup_type_checkbox() throws Throwable {
      	for (int i = 0; i <= 300; i++) {
  			try {
- 				javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.controlRecordsMainInfoEnableMarkupCheck_608());
+ 				javaScriptHelper.scrollIntoView(fmsParamObj608.controlRecordsMainInfoEnableMarkupCheck_608());
  				break;
  			} catch (Exception e) {
  				if (i == 300) {
@@ -956,18 +960,18 @@ public class ApplicationFinancialFacilitySteps_608 {
  				}
  			}
  		}
-     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.controlRecordsMainInfoEnableMarkupCheck_608());
-     	WebElement mainInfoEnableMarkupCheck = applicationFinancialFacilityObj608.controlRecordsMainInfoEnableMarkupCheck_608();
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.controlRecordsMainInfoEnableMarkupCheck_608());
+     	WebElement mainInfoEnableMarkupCheck = fmsParamObj608.controlRecordsMainInfoEnableMarkupCheck_608();
      	Assert.assertEquals(true, mainInfoEnableMarkupCheck.isDisplayed());
      	
-     	WebElement mainInfoOfficerAssignReqLabel = applicationFinancialFacilityObj608.controlRecordsMainInfoOfficerAssignReqLabel_608();
+     	WebElement mainInfoOfficerAssignReqLabel = fmsParamObj608.controlRecordsMainInfoOfficerAssignReqLabel_608();
      	Assert.assertEquals(true, mainInfoOfficerAssignReqLabel.isDisplayed());
      }
 
      @And("^User_608 uncheck the Enable Markup Type flag$")
      public void user_uncheck_the_enable_markup_type_flag() throws Throwable {
-     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.controlRecordsMainInfoEnableMarkupCheck_608());
-     	WebElement mainInfoEnableMarkupCheck = applicationFinancialFacilityObj608.controlRecordsMainInfoEnableMarkupCheck_608();
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.controlRecordsMainInfoEnableMarkupCheck_608());
+     	WebElement mainInfoEnableMarkupCheck = fmsParamObj608.controlRecordsMainInfoEnableMarkupCheck_608();
      	if(mainInfoEnableMarkupCheck.isSelected()) {
      		mainInfoEnableMarkupCheck.click();
      	}
@@ -977,7 +981,7 @@ public class ApplicationFinancialFacilitySteps_608 {
      public void user_validate_the_roll_of_officers_assigned_menu() throws Throwable {
      	for (int i = 0; i <= 300; i++) {
  			try {
- 				javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.controlRecordsUpdateAfterRoleOfOfficersAssigned_608());
+ 				javaScriptHelper.scrollIntoView(fmsParamObj608.controlRecordsUpdateAfterRoleOfOfficersAssigned_608());
  				break;
  			} catch (Exception e) {
  				if (i == 300) {
@@ -985,21 +989,21 @@ public class ApplicationFinancialFacilitySteps_608 {
  				}
  			}
  		}
-     	WebElement updateAfterRoleOfOfficersAssigned = applicationFinancialFacilityObj608.controlRecordsUpdateAfterRoleOfOfficersAssigned_608();
+     	WebElement updateAfterRoleOfOfficersAssigned = fmsParamObj608.controlRecordsUpdateAfterRoleOfOfficersAssigned_608();
      	Assert.assertEquals(true, updateAfterRoleOfOfficersAssigned.isDisplayed());
      }
 
      @And("^User_608 validate the Party s History with Company menu$")
      public void user_validate_the_party_s_history_with_company_menu() throws Throwable {
-     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.controlRecordsUpdateAfterPartysHistory_608());
-     	WebElement updateAfterPartysHistory = applicationFinancialFacilityObj608.controlRecordsUpdateAfterPartysHistory_608();
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.controlRecordsUpdateAfterPartysHistory_608());
+     	WebElement updateAfterPartysHistory = fmsParamObj608.controlRecordsUpdateAfterPartysHistory_608();
      	Assert.assertEquals(true, updateAfterPartysHistory.isDisplayed());
      }
 
      @And("^User_608 validate the Member Countries$")
      public void user_validate_the_member_countries() throws Throwable {
-     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.controlRecordsUpdateAferMemberCountries_608());
-     	WebElement updateAferMemberCountries = applicationFinancialFacilityObj608.controlRecordsUpdateAferMemberCountries_608();
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.controlRecordsUpdateAferMemberCountries_608());
+     	WebElement updateAferMemberCountries = fmsParamObj608.controlRecordsUpdateAferMemberCountries_608();
      	Assert.assertEquals(true, updateAferMemberCountries.isDisplayed());
      }
 
@@ -1007,7 +1011,7 @@ public class ApplicationFinancialFacilitySteps_608 {
      public void user_clicks_on_the_update_button_under_Update_after_approve_menu_in_control_records() throws Throwable {
      	for (int i = 0; i <= 300; i++) {
  			try {
- 				javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.controlRecordsUpdateAfterUpdateBtn_608());
+ 				javaScriptHelper.scrollIntoView(fmsParamObj608.controlRecordsUpdateAfterUpdateBtn_608());
  				break;
  			} catch (Exception e) {
  				if (i == 300) {
@@ -1015,8 +1019,8 @@ public class ApplicationFinancialFacilitySteps_608 {
  				}
  			}
  		}
-     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.controlRecordsUpdateAfterUpdateBtn_608());
-     	applicationFinancialFacilityObj608.controlRecordsUpdateAfterUpdateBtn_608().click();
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.controlRecordsUpdateAfterUpdateBtn_608());
+     	fmsParamObj608.controlRecordsUpdateAfterUpdateBtn_608().click();
      	
      	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.ConfirmPopupOkBtn_608());
      	applicationFinancialFacilityObj608.ConfirmPopupOkBtn_608().click();
@@ -1027,8 +1031,8 @@ public class ApplicationFinancialFacilitySteps_608 {
      
      @And("^User_608 check the Officer Assigned Required flag$")
      public void user_check_the_officer_assigned_required_flag() throws Throwable {
-     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.controlRecordsMainInfoOfficerAssignReqCheck_608());
-     	WebElement mainInfoOfficerAssignReqCheck = applicationFinancialFacilityObj608.controlRecordsMainInfoOfficerAssignReqCheck_608();
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.controlRecordsMainInfoOfficerAssignReqCheck_608());
+     	WebElement mainInfoOfficerAssignReqCheck = fmsParamObj608.controlRecordsMainInfoOfficerAssignReqCheck_608();
      	if(mainInfoOfficerAssignReqCheck.isSelected()) {
      		mainInfoOfficerAssignReqCheck.click();
      	}
@@ -1036,15 +1040,15 @@ public class ApplicationFinancialFacilitySteps_608 {
 
      @And("^User_608 clicks on the approve menu under control records$")
      public void user_clicks_on_the_approve_feature() throws Throwable {
-     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.controlRecordsApproveMenu_608());
-     	applicationFinancialFacilityObj608.controlRecordsApproveMenu_608().click();
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.controlRecordsApproveMenu_608());
+     	fmsParamObj608.controlRecordsApproveMenu_608().click();
      }
 
-     @Then("^User_608 clicks on the approve button in Approve menu under control records$")
+     @When("^User_608 clicks on the approve button in Approve menu under control records$")
      public void user_clicks_on_the_approve_button() throws Throwable {
      	for (int i = 0; i <= 300; i++) {
  			try {
- 				javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.controlRecordsApproveButton_608());
+ 				javaScriptHelper.scrollIntoView(fmsParamObj608.controlRecordsApproveButton_608());
  				break;
  			} catch (Exception e) {
  				if (i == 300) {
@@ -1052,7 +1056,7 @@ public class ApplicationFinancialFacilitySteps_608 {
  				}
  			}
  		}
-     	applicationFinancialFacilityObj608.controlRecordsApproveButton_608().click();
+     	fmsParamObj608.controlRecordsApproveButton_608().click();
      	
      	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.ConfirmPopupOkBtn_608());
      	applicationFinancialFacilityObj608.ConfirmPopupOkBtn_608().click();
@@ -1066,35 +1070,35 @@ public class ApplicationFinancialFacilitySteps_608 {
 //    @AT_AFF_074    
      @And("^User_608 clicks on the member countries tab in update after approve under control records$")
      public void user_clicks_on_the_member_countries_menu() throws Throwable {
-         waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.controlRecordsUpdateAferMemberCountries_608());
-         applicationFinancialFacilityObj608.controlRecordsUpdateAferMemberCountries_608().click();
+         waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.controlRecordsUpdateAferMemberCountries_608());
+         fmsParamObj608.controlRecordsUpdateAferMemberCountries_608().click();
      }
 
      @And("^User_608 clicks the add new row button under member countries tab in update after approve$")
      public void user_clicks_the_add_new_row_button() throws Throwable {
-     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.controlRecordsMemberCountriesAddNewRowBtn_608());
-     	applicationFinancialFacilityObj608.controlRecordsMemberCountriesAddNewRowBtn_608().click();
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.controlRecordsMemberCountriesAddNewRowBtn_608());
+     	fmsParamObj608.controlRecordsMemberCountriesAddNewRowBtn_608().click();
      }
      
 
      @And("^User_608 enter the country code under member countries tab in update after approve$")
      public void user_enter_the_country_code() throws Throwable {
-     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.controlRecordsMemberCountriesCountryCodeLabel_608());
-     	applicationFinancialFacilityObj608.controlRecordsMemberCountriesCountryCodeLabel_608().click();
-     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.controlRecordsMemberCountriesCountryCode_608());
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.controlRecordsMemberCountriesCountryCodeLabel_608());
+     	fmsParamObj608.controlRecordsMemberCountriesCountryCodeLabel_608().click();
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.controlRecordsMemberCountriesCountryCode_608());
 //     	applicationFinancialFacilityObj608.countryCode().sendKeys("320");
-     	applicationFinancialFacilityObj608.controlRecordsMemberCountriesCountryCode_608().sendKeys(testData.get("Country Code"),Keys.ENTER);     	
+     	fmsParamObj608.controlRecordsMemberCountriesCountryCode_608().sendKeys(testData.get("Country Code"),Keys.ENTER);     	
      }
      
      @SuppressWarnings("unlikely-arg-type")
 	@And("^User_608 clicks on the membership type dropdown under member countries tab in update after approve$")
      public void user_clicks_on_the_membership_type_dropdown() throws Throwable {
-     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.controlRecordsMemberCountriesMembershipTypeLabel_608());
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.controlRecordsMemberCountriesMembershipTypeLabel_608());
      	List<String> membershipType = Arrays.asList("ITFC","IDB Member","Both");
-     	applicationFinancialFacilityObj608.controlRecordsMemberCountriesMembershipTypeLabel_608().click();     	
-     	applicationFinancialFacilityObj608.controlRecordsMemberCountriesMembershipTypeLabel_608().click();
+     	fmsParamObj608.controlRecordsMemberCountriesMembershipTypeLabel_608().click();     	
+     	fmsParamObj608.controlRecordsMemberCountriesMembershipTypeLabel_608().click();
      	
-     	WebElement membershipTypeDD = applicationFinancialFacilityObj608.controlRecordsMemberCountriesMembershipTypeDropDown_608();
+     	WebElement membershipTypeDD = fmsParamObj608.controlRecordsMemberCountriesMembershipTypeDropDown_608();
      	Select getValue = new Select(membershipTypeDD);
      	List<WebElement> allOptions = getValue.getOptions();
      	
@@ -1110,28 +1114,28 @@ public class ApplicationFinancialFacilitySteps_608 {
 //   @AT_AFF_098_FMSParam
      @And("^User_608 clicks on the Facility Type feature$")
      public void user_clicks_on_the_facility_type_feature() throws Throwable {
-     	 waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.paramFacilityType_608());
-     	 facilityTypeObj608.paramFacilityType_608().click();
+     	 waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.paramFacilityType_608());
+     	 fmsParamObj608.paramFacilityType_608().click();
      }
      
      @And("^User_608 clicks on the update after approve menu in Facility type$")
      public void user_clicks_on_the_update_after_approve_menu_in_facility_type() throws Throwable {
-     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.facilityTypeUpdateAfterApprove_608());
-    	 	facilityTypeObj608.facilityTypeUpdateAfterApprove_608().click();
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.facilityTypeUpdateAfterApprove_608());
+    	 	fmsParamObj608.facilityTypeUpdateAfterApprove_608().click();
      }
      
      @And("^User_608 enter the code value in update after approve menu$")
      public void user_enter_the_code_value_in_update_after_approve_menu() throws Throwable {
-     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.facilityTypeSearchCode_608());
-     	facilityTypeObj608.facilityTypeSearchCode_608().sendKeys(testData.get("Facility Type"),Keys.ENTER);
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.facilityTypeSearchCode_608());
+     	fmsParamObj608.facilityTypeSearchCode_608().sendKeys(testData.get("Facility Type"),Keys.ENTER);
      }
      
      @And("^User_608 double click on the retrieved data in update after approve menu$")
      public void user_double_click_on_the_retrieved_data_in_update_after_approve_menu() throws Throwable {
-     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.facilityTypeSearchCodeResult_608());
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.facilityTypeSearchCodeResult_608());
      	for (int i = 0; i <= 300; i++) {
  			try {
- 				clicksAndActionsHelper.doubleClick(facilityTypeObj608.facilityTypeSearchCodeResult_608());
+ 				clicksAndActionsHelper.doubleClick(fmsParamObj608.facilityTypeSearchCodeResult_608());
  				break;
  			} catch (Exception e) {
  				if (i == 300) {
@@ -1144,20 +1148,20 @@ public class ApplicationFinancialFacilitySteps_608 {
      
      @And("^User_608 clicks on the facility details tab in update after approve$")
      public void user_clicks_on_the_facility_details_tab_in_update_after_approve() throws Throwable {
-     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.facilityTypeFacilityDetails_608());
-    	 	facilityTypeObj608.facilityTypeFacilityDetails_608().click();
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.facilityTypeFacilityDetails_608());
+    	 	fmsParamObj608.facilityTypeFacilityDetails_608().click();
      }
   
      @And("^User_608 clicks on the STP Facility Requirements option$")
      public void user_clicks_on_the_stp_facility_requirements_option() throws Throwable {
-     	 waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.STPFacilityReq_608());
-     	 facilityTypeObj608.STPFacilityReq_608().click();
+     	 waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.STPFacilityReq_608());
+     	 fmsParamObj608.STPFacilityReq_608().click();
      }
 
      @And("^User_608 check the Customer Grading flag$")
      public void user_check_the_customer_grading_flag() throws Throwable {
-     	 waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.customerGradingFlag_608());
-     	 WebElement customerGradingFlag = facilityTypeObj608.customerGradingFlag_608();
+     	 waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.customerGradingFlag_608());
+     	 WebElement customerGradingFlag = fmsParamObj608.customerGradingFlag_608();
      	 if(!(customerGradingFlag.isSelected())) {
      		 customerGradingFlag.click();
       	}
@@ -1165,8 +1169,8 @@ public class ApplicationFinancialFacilitySteps_608 {
 
      @And("^User_608 check the Overwrite Grading flag$")
      public void user_check_the_overwrite_grading_flag() throws Throwable {
-     	 waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.OverwriteGradingFlag_608());
-     	 WebElement overwriteGradingFlag = facilityTypeObj608.OverwriteGradingFlag_608();
+     	 waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.OverwriteGradingFlag_608());
+     	 WebElement overwriteGradingFlag = fmsParamObj608.OverwriteGradingFlag_608();
      	 if(!(overwriteGradingFlag.isSelected())) {
      		 overwriteGradingFlag.click();
       	}
@@ -1174,9 +1178,9 @@ public class ApplicationFinancialFacilitySteps_608 {
 
      @And("^User_608 check the Credit Review flag$")
      public void user_check_the_credit_review_flag() throws Throwable {
-     	 waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.creditReviewFlag_608());
-     	 WebElement creditReviewFlag = facilityTypeObj608.creditReviewFlag_608();
-     	 facilityTypeObj608.creditReviewFlag_608().click();
+     	 waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.creditReviewFlag_608());
+     	 WebElement creditReviewFlag = fmsParamObj608.creditReviewFlag_608();
+     	 fmsParamObj608.creditReviewFlag_608().click();
      	 if(!(creditReviewFlag.isSelected())) {
      		 creditReviewFlag.click();
       	}
@@ -1184,8 +1188,8 @@ public class ApplicationFinancialFacilitySteps_608 {
 
      @And("^User_608 check the Committee Approval flag$")
      public void user_check_the_committee_approval_flag() throws Throwable {
-     	 waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.committeeApprovalFlag_608());
-     	 WebElement committeeApprovalFlag = facilityTypeObj608.committeeApprovalFlag_608();
+     	 waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.committeeApprovalFlag_608());
+     	 WebElement committeeApprovalFlag = fmsParamObj608.committeeApprovalFlag_608();
      	 if(!(committeeApprovalFlag.isSelected())) {
      		 committeeApprovalFlag.click();
       	}
@@ -1193,8 +1197,8 @@ public class ApplicationFinancialFacilitySteps_608 {
      
      @And("^User_608 uncheck the Committee Approval flag$")
      public void user_uncheck_the_committee_approval_flag() throws Throwable {
-     	 waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.committeeApprovalFlag_608());
-     	 WebElement committeeApprovalFlag = facilityTypeObj608.committeeApprovalFlag_608();
+     	 waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.committeeApprovalFlag_608());
+     	 WebElement committeeApprovalFlag = fmsParamObj608.committeeApprovalFlag_608();
      	 if(committeeApprovalFlag.isSelected()) {
      		 committeeApprovalFlag.click();
       	}
@@ -1203,8 +1207,8 @@ public class ApplicationFinancialFacilitySteps_608 {
 
      @And("^User_608 check the Credit Authorization flag$")
      public void user_check_the_credit_authorization_flag() throws Throwable {
-     	 waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.creditAuthorzieFlag_608());
-     	 WebElement creditAuthorzieFlag = facilityTypeObj608.creditAuthorzieFlag_608();
+     	 waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.creditAuthorzieFlag_608());
+     	 WebElement creditAuthorzieFlag = fmsParamObj608.creditAuthorzieFlag_608();
      	 if(!(creditAuthorzieFlag.isSelected())) {
      		 creditAuthorzieFlag.click();
       	}
@@ -1212,8 +1216,8 @@ public class ApplicationFinancialFacilitySteps_608 {
 
      @And("^User_608 check the Issue Facility Offer flag$")
      public void user_check_the_issue_facility_offer_flag() throws Throwable {
-     	 waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.issueFacilityOfferFlag_608());
-     	 WebElement issueFacilityOfferFlag = facilityTypeObj608.issueFacilityOfferFlag_608();
+     	 waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.issueFacilityOfferFlag_608());
+     	 WebElement issueFacilityOfferFlag = fmsParamObj608.issueFacilityOfferFlag_608();
      	 if(!(issueFacilityOfferFlag.isSelected())) {
      		 issueFacilityOfferFlag.click();
       	}
@@ -1221,8 +1225,8 @@ public class ApplicationFinancialFacilitySteps_608 {
 
      @And("^User_608 check the Client Response flag$")
      public void user_check_the_client_response_flag() throws Throwable {
-     	 waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.clientResponseFlag_608());
-     	 WebElement clientResponseFlag = facilityTypeObj608.clientResponseFlag_608();
+     	 waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.clientResponseFlag_608());
+     	 WebElement clientResponseFlag = fmsParamObj608.clientResponseFlag_608();
      	 if(!(clientResponseFlag.isSelected())) {
      		 clientResponseFlag.click();
       	}
@@ -1230,8 +1234,8 @@ public class ApplicationFinancialFacilitySteps_608 {
 
      @And("^User_608 check the Document Validation flag$")
      public void user_check_the_document_validation_flag() throws Throwable {
-     	 waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.documentValidationFlag_608());
-     	 WebElement documentValidationFlag = facilityTypeObj608.documentValidationFlag_608();
+     	 waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.documentValidationFlag_608());
+     	 WebElement documentValidationFlag = fmsParamObj608.documentValidationFlag_608();
      	 if(!(documentValidationFlag.isSelected())) {
      		 documentValidationFlag.click();
       	}
@@ -1239,8 +1243,8 @@ public class ApplicationFinancialFacilitySteps_608 {
 
      @And("^User_608 check the Final Approval flag$")
      public void user_check_the_final_approval_flag() throws Throwable {
-     	 waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.finalApprovalFlag_608());
-     	 WebElement finalApprovalFlag = facilityTypeObj608.finalApprovalFlag_608();
+     	 waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.finalApprovalFlag_608());
+     	 WebElement finalApprovalFlag = fmsParamObj608.finalApprovalFlag_608();
      	 if(!(finalApprovalFlag.isSelected())) {
      		 finalApprovalFlag.click();
       	}
@@ -1248,8 +1252,8 @@ public class ApplicationFinancialFacilitySteps_608 {
 
      @And("^User_608 check the Create Active Facility If Within Limits flag$")
      public void user_check_the_create_active_facility_if_within_limits_flag() throws Throwable {
-     	 waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.createActiveFacilityFlag_608());
-     	 WebElement createActiveFacilityFlag = facilityTypeObj608.createActiveFacilityFlag_608();
+     	 waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.createActiveFacilityFlag_608());
+     	 WebElement createActiveFacilityFlag = fmsParamObj608.createActiveFacilityFlag_608();
      	 if(!(createActiveFacilityFlag.isSelected())) {
      		 createActiveFacilityFlag.click();
       	}
@@ -1257,8 +1261,8 @@ public class ApplicationFinancialFacilitySteps_608 {
 
      @And("^User_608 Check the Automatically Approve Facility If Within Limits flag$")
      public void user_check_the_automatically_approve_facility_if_within_limits_flag() throws Throwable {
-     	 waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.autoApproveFacilityFlag_608());
-     	 WebElement autoApproveFacilityFlag = facilityTypeObj608.autoApproveFacilityFlag_608();
+     	 waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.autoApproveFacilityFlag_608());
+     	 WebElement autoApproveFacilityFlag = fmsParamObj608.autoApproveFacilityFlag_608();
      	 if(!(autoApproveFacilityFlag.isSelected())) {
      		 autoApproveFacilityFlag.click();
       	}
@@ -1268,7 +1272,7 @@ public class ApplicationFinancialFacilitySteps_608 {
      public void user_clicks_on_the_update_button_under_update_after_approve_menu_in_facility_type() throws Throwable {
      	for (int i = 0; i <= 300; i++) {
  			try {
- 				javaScriptHelper.scrollIntoView(facilityTypeObj608.updateAfterApproveUpdateBtn_608());
+ 				javaScriptHelper.scrollIntoView(fmsParamObj608.updateAfterApproveUpdateBtn_608());
  				break;
  			} catch (Exception e) {
  				if (i == 300) {
@@ -1276,34 +1280,34 @@ public class ApplicationFinancialFacilitySteps_608 {
  				}
  			}
      	}
-     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.updateAfterApproveUpdateBtn_608());
-     	facilityTypeObj608.updateAfterApproveUpdateBtn_608().click();
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.updateAfterApproveUpdateBtn_608());
+     	fmsParamObj608.updateAfterApproveUpdateBtn_608().click();
      	
-     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.confirmPopupOkBtn_608());
-     	facilityTypeObj608.confirmPopupOkBtn_608().click();
-     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.successPopupOkBtn_608());
-     	facilityTypeObj608.successPopupOkBtn_608().click();
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.confirmPopupOkBtn_608());
+     	fmsParamObj608.confirmPopupOkBtn_608().click();
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.successPopupOkBtn_608());
+     	fmsParamObj608.successPopupOkBtn_608().click();
      }
 
      @And("^User_608 after the update go to the Approve menu$")
      public void user_after_the_update_go_to_the_approve_menu() throws Throwable {
-     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.facilityTypeApproveMenu_608());
-     	facilityTypeObj608.facilityTypeApproveMenu_608().click();
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.facilityTypeApproveMenu_608());
+     	fmsParamObj608.facilityTypeApproveMenu_608().click();
      }
      
      @And("^User_608 enter the code value in Approve menu$")
      public void user_enter_the_code_value_in_approve_menu() throws Throwable {
-     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.approveSearchCode_608());
-     	facilityTypeObj608.approveSearchCode_608().sendKeys(testData.get("Facility Type"),Keys.ENTER);
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.approveSearchCode_608());
+     	fmsParamObj608.approveSearchCode_608().sendKeys(testData.get("Facility Type"),Keys.ENTER);
      }
 
      @And("^User_608 double click on the retrieved data in Approve menu$")
      public void user_double_click_on_the_retrieved_data_in_approve_menu() throws Throwable {
-     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.approveSearchCodeResult_608());
-     	clicksAndActionsHelper.doubleClick(facilityTypeObj608.approveSearchCodeResult_608());
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.approveSearchCodeResult_608());
+     	clicksAndActionsHelper.doubleClick(fmsParamObj608.approveSearchCodeResult_608());
      	for(int i = 0; i <= 500; i++) {
     		try {
-				if(!(facilityTypeObj608.facilityTypeApproveMenuCode_608().getAttribute("prevvalue").isBlank())) {
+				if(!(fmsParamObj608.facilityTypeApproveMenuCode_608().getAttribute("prevvalue").isBlank())) {
 					break;
 				}
 			} catch (Exception e) {
@@ -1316,7 +1320,7 @@ public class ApplicationFinancialFacilitySteps_608 {
      public void user_clicks_on_the_approve_button_in_approve_menu_under_facility_type() throws Throwable {
      	for (int i = 0; i <= 300; i++) {
  			try {
- 				javaScriptHelper.scrollIntoView(facilityTypeObj608.facilityTypeApproveBtn_608());
+ 				javaScriptHelper.scrollIntoView(fmsParamObj608.facilityTypeApproveBtn_608());
  				break;
  			} catch (Exception e) {
  				if (i == 300) {
@@ -1324,13 +1328,13 @@ public class ApplicationFinancialFacilitySteps_608 {
  				}
  			}
  		}
-     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.facilityTypeApproveBtn_608());
-     	facilityTypeObj608.facilityTypeApproveBtn_608().click();
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.facilityTypeApproveBtn_608());
+     	fmsParamObj608.facilityTypeApproveBtn_608().click();
   
-     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.confirmPopupOkBtn_608());
-     	facilityTypeObj608.confirmPopupOkBtn_608().click();
-     	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.successPopupOkBtn_608());
-     	facilityTypeObj608.successPopupOkBtn_608().click();        
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.confirmPopupOkBtn_608());
+     	fmsParamObj608.confirmPopupOkBtn_608().click();
+     	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.successPopupOkBtn_608());
+     	fmsParamObj608.successPopupOkBtn_608().click();        
      }
      
      
@@ -1383,22 +1387,22 @@ public class ApplicationFinancialFacilitySteps_608 {
 // @AT_RF_099_FMSParam
    @And("^User_608 select the collateral as application level$")
 	public void user_select_the_collateral_as_application_level() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.selectCollateral_608());
-		facilityTypeObj608.selectCollateral_608().click();
-		dropDownHelper.SelectUsingVisibleText(facilityTypeObj608.selectCollateral_608(), testData.get("Collateral"));
+		waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.selectCollateral_608());
+		fmsParamObj608.selectCollateral_608().click();
+		dropDownHelper.SelectUsingVisibleText(fmsParamObj608.selectCollateral_608(), testData.get("Collateral"));
 	}
 
 	@And("^User_608 select the Collaterals defined at the level of as sublimit$")
 	public void user_select_the_collaterals_defined_at_the_level_of_as_sublimit() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.selectCollateralDefinedLevel_608());
-		facilityTypeObj608.selectCollateralDefinedLevel_608().click();
-		dropDownHelper.SelectUsingVisibleText(facilityTypeObj608.selectCollateralDefinedLevel_608(),
+		waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.selectCollateralDefinedLevel_608());
+		fmsParamObj608.selectCollateralDefinedLevel_608().click();
+		dropDownHelper.SelectUsingVisibleText(fmsParamObj608.selectCollateralDefinedLevel_608(),
 				testData.get("Collaterals defined"));
 
 		// Dummy step
-		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.checkCollateralFacility_608());
-		WebElement checkCollateralFacility = facilityTypeObj608.checkCollateralFacility_608();
-		facilityTypeObj608.checkCollateralFacility_608().click();
+		waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.checkCollateralFacility_608());
+		WebElement checkCollateralFacility = fmsParamObj608.checkCollateralFacility_608();
+		fmsParamObj608.checkCollateralFacility_608().click();
 		if (!(checkCollateralFacility.isSelected())) {
 			checkCollateralFacility.click();
 		}
@@ -2492,8 +2496,8 @@ public class ApplicationFinancialFacilitySteps_608 {
 //  @AT_RF_101_FMSParam
     @And("User_608 enter the code in search grid under update after approve menu in Document checklist")
 	public void user_enter_the_code_in_search_grid_under_update_after_approve_menu_in_document_checklist() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.documentChecklistSearchgridCode_608());
-		facilityTypeObj608.documentChecklistSearchgridCode_608().sendKeys(testData.get("Document Code"),Keys.ENTER);
+		waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.documentChecklistSearchgridCode_608());
+		fmsParamObj608.documentChecklistSearchgridCode_608().sendKeys(testData.get("Document Code"),Keys.ENTER);
 	}
     
 //  @AT_RF_101_FMSCore
@@ -2596,8 +2600,8 @@ public class ApplicationFinancialFacilitySteps_608 {
     	waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakApprovalCommitteeRecommendationsRecommendBtn_608());
     	requestForFinancingObj608.wifakApprovalCommitteeRecommendationsRecommendBtn_608().click();
     	
-    	waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.confirmPopupOkBtn_608());
-    	facilityTypeObj608.confirmPopupOkBtn_608().click();
+    	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.confirmPopupOkBtn_608());
+    	fmsParamObj608.confirmPopupOkBtn_608().click();
     }
     
     @And("User_608 click the User recommended by name in approval committee user popup under Approval committe recommedations")

@@ -18,7 +18,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import pageobjects.fms.ApplicationFinancialFacilityObj_608;
 import pageobjects.fms.FacilitiesManagementObj_608;
-import pageobjects.fmsParam.Facility_TypeObj_608;
+import pageobjects.fmsParam.FMSParamObj_608;
 import resources.BaseClass;
 
 public class FacilitiesManagementSteps_608 {
@@ -26,7 +26,7 @@ public class FacilitiesManagementSteps_608 {
 	ConfigFileReader configFileReader = new ConfigFileReader();
 	FacilitiesManagementObj_608 facilityManagementObj608 = new FacilitiesManagementObj_608(driver);
 	ApplicationFinancialFacilityObj_608 applicationFinancialFacilityObj608 = new ApplicationFinancialFacilityObj_608(driver);
-	Facility_TypeObj_608 facilityTypeObj608 = new Facility_TypeObj_608(driver);
+	FMSParamObj_608 fmsParamObj608 = new FMSParamObj_608(driver);
 	WaitHelper waitHelper = new WaitHelper(driver);
 	JavascriptHelper javaScriptHelper = new JavascriptHelper(driver);
 	ClicksAndActionsHelper clicksAndActionsHelper = new ClicksAndActionsHelper(driver);
@@ -389,8 +389,8 @@ public class FacilitiesManagementSteps_608 {
 //	@AT_FM_105_FMSParam
 	@And("^User_608 uncheck the Create Active Facility If Within Limits flag$")
     public void user_check_the_create_active_facility_if_within_limits_flag() throws Throwable {
-    	 waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.createActiveFacilityFlag_608());
-    	 WebElement createActiveFacilityFlag = facilityTypeObj608.createActiveFacilityFlag_608();
+    	 waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.createActiveFacilityFlag_608());
+    	 WebElement createActiveFacilityFlag = fmsParamObj608.createActiveFacilityFlag_608();
     	 if(createActiveFacilityFlag.isSelected()) {
     		 createActiveFacilityFlag.click();
      	}
@@ -398,8 +398,8 @@ public class FacilitiesManagementSteps_608 {
 
     @And("^User_608 uncheck the Automatically Approve Facility If Within Limits flag$")
     public void user_check_the_automatically_approve_facility_if_within_limits_flag() throws Throwable {
-    	 waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.autoApproveFacilityFlag_608());
-    	 WebElement autoApproveFacilityFlag = facilityTypeObj608.autoApproveFacilityFlag_608();
+    	 waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.autoApproveFacilityFlag_608());
+    	 WebElement autoApproveFacilityFlag = fmsParamObj608.autoApproveFacilityFlag_608();
     	 if(autoApproveFacilityFlag.isSelected()) {
     		 autoApproveFacilityFlag.click();
      	}

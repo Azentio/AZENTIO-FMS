@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Facility_TypeObj_608 {
+public class FMSParamObj_608 {
 	
 	WebDriver driver;
-	public Facility_TypeObj_608(WebDriver driver) {
+	public FMSParamObj_608(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -383,14 +383,20 @@ public class Facility_TypeObj_608 {
 	}
 	
 	@FindBy(xpath = "//td[@id='td_fmsCountryLimitListGridTbl_Id_P035P_1_FMSCOUNTRYLIMITVO.COUNTRY_CODE']")
-	private WebElement param_country_limit_approve_searchgrid_country_code_row1;
-	public WebElement paramCountryLimitApproveSearchgridCountryCodeRow1_608() {
-		return param_country_limit_approve_searchgrid_country_code_row1;
+	private WebElement param_country_limit_approve_searchgrid_first_row;
+	public WebElement paramCountryLimitApproveMenuSearchgridFirstRow_608() {
+		return param_country_limit_approve_searchgrid_first_row;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmsCountryLimit_limit_P035P']")
+	private WebElement param_country_limit_approve_limit_value_input;
+	public WebElement paramCountryLimitApproveMenuLimitValueInput_608() {
+		return param_country_limit_approve_limit_value_input;
 	}
 	
 	@FindBy(xpath = "//input[@id='fmsCountryLimit_available_limit_P035P']")
 	private WebElement param_country_limit_approve_available_limit_input;
-	public WebElement paramCountryLimitApproveAvailableLimitInput_608() {
+	public WebElement paramCountryLimitApproveMenuAvailableLimitInput_608() {
 		return param_country_limit_approve_available_limit_input;
 	}	
 	
@@ -400,6 +406,218 @@ public class Facility_TypeObj_608 {
 		return param_country_limit_approve_menu_approve_btn;
 	}
 	
+	@FindBy(xpath = "//a[text()='Parameters / Country Limit / Approve']//parent::td//following-sibling::td//span")
+	private WebElement param_country_limit_approve_menu_close_icon;
+	public WebElement paramCountryLimitApproveMenuCloseIcon_608() {
+		return param_country_limit_approve_menu_close_icon;
+	}
 	
+	
+	@FindBy(xpath = "//a[@id='P035UP']")
+	private WebElement param_country_limit_update_after_approve_menu;
+	public WebElement paramCountryLimitUpdateAfterApproveMenu_608() {
+		return param_country_limit_update_after_approve_menu;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmsCountryLimitListGridTbl_Id_P035UP_gs_FMSCOUNTRYLIMITVO.COUNTRY_CODE']")
+	private WebElement param_country_limit_update_after_approve_searchgrid_country_code;
+	public WebElement paramCountryLimitUpdateAfterApproveSearchgridCountryCode_608() {
+		return param_country_limit_update_after_approve_searchgrid_country_code;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_fmsCountryLimitListGridTbl_Id_P035UP_1_FMSCOUNTRYLIMITVO.COUNTRY_CODE']")
+	private WebElement param_country_limit_update_after_approve_searchgrid_first_row;
+	public WebElement paramCountryLimitUpdateAfterApproveSearchgridFirstRow_608() {
+		return param_country_limit_update_after_approve_searchgrid_first_row;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmsCountryLimit_limit_P035UP']")
+	private WebElement param_country_limit_update_after_approve_menu_limit_input;
+	public WebElement paramCountryLimitUpdateAfterApproveMenuLimitInput_608() {
+		return param_country_limit_update_after_approve_menu_limit_input;
+	}
+	
+	@FindBy(xpath = "//div[text()='ERROR']")
+	private WebElement error_popup;
+	public WebElement errorPopup_608() {
+		return error_popup;
+	}
+	
+	@FindBy(xpath = "//input[@id='_popup_path_sol_ok']")
+	private WebElement error_popup_ok_btn;
+	public WebElement errorPopupOkBtn_608() {
+		return error_popup_ok_btn;
+	}
 
+	@FindBy(xpath = "//button[@id='fmsCountryLimitMaint_update_P035UP']")
+	private WebElement param_country_limit_update_after_approve_menu_update_btn;
+	public WebElement paramCountryLimitUpdateAfterApproveMenuUpdateBtn_608() {
+		return param_country_limit_update_after_approve_menu_update_btn;
+	}
+	
+	// @AT_AFF_056
+				
+	@FindBy(xpath = "//td[text()='Facility Category']")
+	private WebElement parameter_facility_category;
+	public WebElement parameterFacilityCategory_608() {
+		return parameter_facility_category;
+	}
+				
+	@FindBy(xpath = "//a[@id='P009MT']")
+	private WebElement facility_category_maintanance;
+	public WebElement facilityCategoryMaintanance_608() {
+		return facility_category_maintanance;
+	}
+				
+	@FindBy(xpath = "//a[@id='infoBarSearchButton_P009MT']")
+	private WebElement facility_category_main_search_btn;
+	public WebElement facilityCategoryMainSearchBtn_608() {
+		return facility_category_main_search_btn;
+	}
+				
+	@FindBy(xpath = "(//td[text()='Treasury'])[1]")
+	private WebElement facility_category_main_search_result;
+	public WebElement facilityCategoryMainSearchResult() {
+		return facility_category_main_search_result;
+	}
+				
+	@FindBy(xpath = "//input[@id='lookuptxt_cif_type_P009MT']")
+	private WebElement facility_category_main_cif_input;
+	public WebElement facilityCategoryMainCIFInput() {
+		return facility_category_main_cif_input;
+	}
+				
+	@FindBy(xpath = "//span[@id='spanLookup_cif_type_P009MT']")
+	private WebElement facility_category_main_cif_type_search_option;
+	public WebElement facilityCategoryMainCIFTypeSearchOption() {
+		return facility_category_main_cif_type_search_option;
+	}
+				
+	@FindBy(id = "td_gridtab_cif_type_P009MT_5_TYPE_CODE")
+	private WebElement facility_category_main_cif_type_data;
+	public WebElement facilityCategoryMainCIFTypeData() {
+		return facility_category_main_cif_type_data;
+	}
+				
+	@FindBy(xpath = "//button[@id='facilitycategory_save_btn_P009MT']")
+	private WebElement facility_category_main_save_btn;
+	public WebElement facilityCategoryMainSaveBtn() {
+		return facility_category_main_save_btn;
+	}
+		
+			
+//	@AT_AFF_075	
+	@FindBy(xpath = "//td[text()='Control Record']")
+	private WebElement parameter_control_records;
+	public WebElement parameterControlRecords_608() {
+		return parameter_control_records;
+	}
+		
+	@FindBy(xpath = "//a[@id='P007UP']")
+	private WebElement control_records_update_after_approve;
+	public WebElement controlRecordsUpdateAfterApprove_608() {
+		return control_records_update_after_approve;
+	}
+	
+	@FindBy(xpath = "//input[@id='FmsCtrlRecord_cifGenLimit_P007UP']")
+	private WebElement control_records_update_after_approve_general_limit_CIF_flag;
+	public WebElement controlRecordsUpdateAfterApproveGeneralLimitCIFFlag_608() {
+		return control_records_update_after_approve_general_limit_CIF_flag;
+	}
+
+	@FindBy(xpath = "//input[@id='officer_assigned_required_P007UP']")
+	private WebElement control_records_main_info_officer_assign_req_check;
+	public WebElement controlRecordsMainInfoOfficerAssignReqCheck_608() {
+		return control_records_main_info_officer_assign_req_check;
+	}
+	
+	@FindBy(xpath = "//label[@id='fmsControlRecordMaintFormId_P007UP_officer_assigned_required_key']")
+	private WebElement control_records_main_info_officer_assign_req_label;
+	public WebElement controlRecordsMainInfoOfficerAssignReqLabel_608() {
+		return control_records_main_info_officer_assign_req_label;
+	}
+		
+		
+	@FindBy(xpath = "//input[@id='enable_markup_type_P007UP']")
+	private WebElement control_records_main_info_enable_markup_check;
+	public WebElement controlRecordsMainInfoEnableMarkupCheck_608() {
+		return control_records_main_info_enable_markup_check;
+	}
+		
+	@FindBy(xpath = "//label[@id='lbl_enable_markup_type_P007UP']")
+	private WebElement control_records_main_info_enable_markup_label;
+	public WebElement controlRecordsMainInfoEnableMarkupLabel() {
+		return control_records_main_info_enable_markup_label;
+	}
+		
+	@FindBy(xpath = "//li[@id='controlRecordOfficerAssignedTabs_P007UP']")
+	private WebElement control_records_update_after_role_of_officers_assigned;
+	public WebElement controlRecordsUpdateAfterRoleOfOfficersAssigned_608() {
+		return control_records_update_after_role_of_officers_assigned;
+	}
+		
+	@FindBy(xpath = "//li[@id='controlRecordPartysRecordWithCompanyTabs_P007UP']")
+	private WebElement control_records_update_after_partys_history;
+	public WebElement controlRecordsUpdateAfterPartysHistory_608() {
+		return control_records_update_after_partys_history;
+	}
+		
+	@FindBy(xpath = "//li[@id='controlRecordMemberPartyTabs_P007UP']")
+	private WebElement control_records_update_after_memeber_countries;
+	public WebElement controlRecordsUpdateAferMemberCountries_608() {
+		return control_records_update_after_memeber_countries;
+	}
+		
+	@FindBy(xpath = "//button[@id='fmsControlRecordMaint_update_P007UP']")
+	private WebElement control_records_update_after_update_btn;
+	public WebElement controlRecordsUpdateAfterUpdateBtn_608() {
+		return control_records_update_after_update_btn;
+	}
+		
+	@FindBy(xpath = "//a[@id='P007P']")
+	private WebElement control_records_approve_menu;
+	public WebElement controlRecordsApproveMenu_608() {
+		return control_records_approve_menu;
+	}
+		
+	@FindBy(xpath = "//button[@id='fmsControlRecordMaint_approve_P007P']" )
+	private WebElement control_records_approve_button;
+	public WebElement controlRecordsApproveButton_608() {
+		return control_records_approve_button;
+	}
+		
+	// @AT_AFF_074
+	@FindBy(xpath = "//td[@id='add_FMSControlRecordMemberCountryGrid_P007UP']")
+	private WebElement control_records_memeber_coutries_add_new_row_btn;
+	public WebElement controlRecordsMemberCountriesAddNewRowBtn_608() {
+		return control_records_memeber_coutries_add_new_row_btn;
+	}
+		
+	@FindBy(xpath = "//td[@id='td_FMSControlRecordMemberCountryGrid_P007UP_1_rn']")
+	private WebElement control_records_memeber_coutries_country_code_label;
+	public WebElement controlRecordsMemberCountriesCountryCodeLabel_608() {
+		return control_records_memeber_coutries_country_code_label;
+	}
+		
+	@FindBy(xpath = "//input[@name='lookupTxt_fmsCtrlDetVO.COUNTRY_CODE']")
+	private WebElement control_records_memeber_coutries_country_code;
+	public WebElement controlRecordsMemberCountriesCountryCode_608() {
+		return control_records_memeber_coutries_country_code;
+	}
+		
+	@FindBy(xpath = "//td[@id='td_FMSControlRecordMemberCountryGrid_P007UP_1_membershipType']")
+	private WebElement control_records_memeber_coutries_membership_type_label;
+	public WebElement controlRecordsMemberCountriesMembershipTypeLabel_608() {
+		return control_records_memeber_coutries_membership_type_label;
+	}
+		
+	@FindBy(xpath = "//select[@gridid='FMSControlRecordMemberCountryGrid_P007UP']")
+	private WebElement control_records_memeber_coutries_membership_type_dropdown;
+	public WebElement controlRecordsMemberCountriesMembershipTypeDropDown_608() {
+		return control_records_memeber_coutries_membership_type_dropdown;
+	}
+	
+	
+	
+	
 }

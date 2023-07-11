@@ -18,7 +18,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageobjects.fms.WIFAK_ApplicationObj_608;
-import pageobjects.fmsParam.Facility_TypeObj_608;
+import pageobjects.fmsParam.FMSParamObj_608;
 import resources.BaseClass;
 
 public class WIFAK_ApplicationSteps_608 {
@@ -26,7 +26,7 @@ public class WIFAK_ApplicationSteps_608 {
 	WebDriver driver = BaseClass.driver;
 	ConfigFileReader configFileReader = new ConfigFileReader();
 	WIFAK_ApplicationObj_608 WIFAKapplicationObj608 = new WIFAK_ApplicationObj_608(driver);
-	Facility_TypeObj_608 facilityTypeObj608 = new Facility_TypeObj_608(driver);
+	FMSParamObj_608 facilityTypeObj608 = new FMSParamObj_608(driver);
 	WaitHelper waitHelper = new WaitHelper(driver);
 	JavascriptHelper javaScriptHelper = new JavascriptHelper(driver);
 	ClicksAndActionsHelper clicksAndActionsHelper = new ClicksAndActionsHelper(driver);
