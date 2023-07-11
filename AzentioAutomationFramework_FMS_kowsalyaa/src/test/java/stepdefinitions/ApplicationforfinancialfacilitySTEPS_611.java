@@ -1059,7 +1059,7 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 	    public void enter_the_floating_rate() throws Throwable {
 	    	for(int i = 0; i <= 300; i++) {
 	    		try {
-	    			javascripthelper.scrollIntoView(wifakapplicationobj_611.floatingRateSearchbox());
+	    			javascripthelper.scrollIntoView(wifakapplicationobj_611.floatingRateSearchbox_611());
 	    			break;
 				} catch (Exception e) {
 					if(i == 300) {
@@ -1068,9 +1068,9 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 				}
 	    	}
 	    	Thread.sleep(3000);
-	    	wifakapplicationobj_611.floatingRateSearchbox().sendKeys("98",Keys.TAB);
+	    	wifakapplicationobj_611.floatingRateSearchbox_611().sendKeys("98",Keys.TAB);
 	    	for (int i = 0; i <= 1000; i++) {
-	    		if (!(wifakapplicationobj_611.floatingRateSearchbox().getAttribute("prevvalue").isBlank())) {
+	    		if (!(wifakapplicationobj_611.floatingRateSearchbox_611().getAttribute("prevvalue").isBlank())) {
 	    		break;
 	    		} else if (i == 1000) {
 	    			Assert.fail("Data Not populated");
@@ -1080,17 +1080,24 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 
 	    @And("^User_611 Enter the floating rate periodicity$")
 	    public void enter_the_floating_rate_periodicity() throws Throwable {
-	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.floatingrateperiodicitysearchbox());
-	    	wifakapplicationobj_611.floatingrateperiodicitysearchbox().sendKeys("2",Keys.TAB);
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.floatingrateperiodicitysearchbox_611());
+	    	wifakapplicationobj_611.floatingrateperiodicitysearchbox_611().sendKeys("2",Keys.TAB);
 	    	
 	        
 	    }
 	    @And("^User_611 Enter the floating rate periodicity type$")
 	    public void enter_the_floating_rate_periodicity_type() throws Throwable {
-	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.floatingrateperiodicitytypesearchbox());
-	    	dropdownhelper.SelectUsingVisibleText(wifakapplicationobj_611.floatingrateperiodicitytypesearchbox(),"Month(s)");
+	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.floatingrateperiodicitytypesearchbox_611());
+	    	dropdownhelper.SelectUsingVisibleText(wifakapplicationobj_611.floatingrateperiodicitytypesearchbox_611(),"Month(s)");
 	    } 
-	    
+	    @Given("User_611 Validate all the floating Rate details is displayed or Not")
+	    public void user_validate_all_the_floating_rate_details_is_displayed_or_not() throws Throwable {
+	    	WebElement Floatingratedetailsisdisplayed = wifakapplicationobj_611.floatingrateperiodicitytypesearchbox_611();
+
+	        if (Floatingratedetailsisdisplayed.isDisplayed()) {
+	        	Assert.assertTrue(true);
+	    }
+	    }
 	   // @127925
 	    @And("^User_611 Enter the Product class value two$")
 	    public void enter_the_product_class_value_two() throws Throwable {

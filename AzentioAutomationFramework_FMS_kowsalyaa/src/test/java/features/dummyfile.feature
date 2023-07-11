@@ -6,4 +6,4 @@ Feature: Title of your feature
   @tag1
   Scenario: Title of your scenario
   
-And User_611 Click the Clean flag check box
+And User_611 Validate all the floating Rate details is displayed or Not

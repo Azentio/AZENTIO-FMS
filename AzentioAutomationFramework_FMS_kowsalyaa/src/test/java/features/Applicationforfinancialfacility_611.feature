@@ -111,7 +111,7 @@ Feature: To Test the Financial facilities in FMS Application
     And User_611 Enter the floating rate
     And User_611 Enter the floating rate periodicity
     And User_611 Enter the floating rate periodicity type
-    #And User_611 Validate all the floating Rate details is displayed or Not
+    And User_611 Validate all the floating Rate details is displayed or Not
     
     @127925
   Scenario: To check the new modification @ FMS Standard screens in the  Application for finance screen.
@@ -143,6 +143,7 @@ Feature: To Test the Financial facilities in FMS Application
     And User_611 clicks the save button
     And User_611 clicks the validate button
     And User_611 clicks the Approve Level1 link
+    
     
     @127926
   Scenario: Floating rates details are retrived all the menu under Wifak application

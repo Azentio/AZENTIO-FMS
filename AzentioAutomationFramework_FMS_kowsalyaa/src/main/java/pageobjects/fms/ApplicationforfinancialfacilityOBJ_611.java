@@ -905,18 +905,18 @@ public class ApplicationforfinancialfacilityOBJ_611 {
 	}
 	@FindBy(xpath = "//*[@id='lookuptxt_applicationfacilityLimitDetailsFLOATING_RATE_WIFT001MT']")
 	private WebElement Floating_rate_Searchbox;
-	public WebElement floatingRateSearchbox() {
+	public WebElement floatingRateSearchbox_611() {
 		return Floating_rate_Searchbox;
 	}
 	
 	@FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsFLOAT_RATE_PERIODICITY_NBR_WIFT001MT']")
 	private WebElement Floatingrate_Periodicity_Searchbox;
-	public WebElement floatingrateperiodicitysearchbox() {
+	public WebElement floatingrateperiodicitysearchbox_611() {
 		return Floatingrate_Periodicity_Searchbox;
 	}
 	@FindBy(xpath ="//select[@id='applicationfacilityLimitDetailsFLOAT_RATE_PERIODICITY_TYPE_WIFT001MT']")
 	private WebElement Floatingrate_PeriodicityType_Searchbox;
-	public WebElement floatingrateperiodicitytypesearchbox() {
+	public WebElement floatingrateperiodicitytypesearchbox_611() {
 		return Floatingrate_PeriodicityType_Searchbox;
 	}
 	
