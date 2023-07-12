@@ -455,8 +455,7 @@ public class FMSParamObj_608 {
 		return param_country_limit_update_after_approve_menu_update_btn;
 	}
 	
-	// @AT_AFF_056
-				
+	// @AT_AFF_056				
 	@FindBy(xpath = "//td[text()='Facility Category']")
 	private WebElement parameter_facility_category;
 	public WebElement parameterFacilityCategory_608() {

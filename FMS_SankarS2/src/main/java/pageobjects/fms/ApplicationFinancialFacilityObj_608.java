@@ -1074,9 +1074,87 @@ public class ApplicationFinancialFacilityObj_608 {
     }
     
     
+//    @AT_RF_139
+    @FindBy(xpath = "//td[@tdlabel='Critical']//input")
+    private WebElement limit_details_document_checklist_critical_check;
+    public WebElement limitDetailsDocumentChecklistCriticalCheck_608() {
+    	return limit_details_document_checklist_critical_check;
+    }
+    
+    @FindBy(xpath = "//li[@id='applicationFacilityLimitDetailsTabs_WIFT001AP1']")
+    private WebElement approve_level1_limit_details_tab;
+    public WebElement approveLevel1LimitDetailsTab_608() {
+    	return approve_level1_limit_details_tab;
+    }
+    
+    @FindBy(xpath = "//td[@id='td_ApplicationFacilityLimitDetailsGrid_WIFT001AP1_1_fmsAppLimitDetVO.GENERAL_FACILITY_TYPE']")
+    private WebElement approve_level1_limit_details_product_row;
+    public WebElement approveLevel1LimitDetailsProductRow_608() {
+    	return approve_level1_limit_details_product_row;
+    }
+    
+    @FindBy(xpath = "//button[@id='applicationfacility_documentchecklist_btn_WIFT001AP1']")
+    private WebElement approve_level1_limit_details_doc_checklist_btn;
+    public WebElement approveLevel1LimitDetailsDocChecklistBtn_608() {
+    	return approve_level1_limit_details_doc_checklist_btn;
+    }
+    
+    @FindBy(xpath = "//td[@id='td_FacilityDocumentCheckListGrid_WIFT001AP1_1_DOC_CODE']")
+    private WebElement approve_level1_limit_details_doc_checklist_row;
+    public WebElement approveLevel1LimitDetailsDocChecklistRow_608() {
+    	return approve_level1_limit_details_doc_checklist_row;
+    }
     
     
+//  @AT_RF_140
+    @FindBy(xpath = "//td[@id='td_FacilityDocumentCheckListGrid_WIFT001MT_2_DOC_CODE']")
+    private WebElement limit_details_document_checklist_row2;
+    public WebElement limitDetailsDocumentChecklistRow2_608() {
+    	return limit_details_document_checklist_row2;
+    }
     
+    @FindBy(xpath = "//input[@id='documentFile_WIFT001MT']")
+    private WebElement limit_details_document_checklist_choose_file_input;
+    public WebElement limitDetailsDocumentChecklistChooseFileInput_608() {
+    	return limit_details_document_checklist_choose_file_input;
+    }
+    
+    @FindBy(xpath = "//td[@id='td_FacilityDocumentCheckListGrid_WIFT001MT_2_DOC_ATTACHED_YN']/input")
+    private WebElement limit_details_document_checklist_attach_flag;
+    public WebElement limitDetailsDocumentChecklistAttachFlag_608() {
+    	return limit_details_document_checklist_attach_flag;
+    }
+    
+    @FindBy(xpath = "//a[@id='document_UploadBtn_WIFT001MT']")
+    private WebElement limit_details_document_checklist_upload_docs_btn;
+    public WebElement limitDetailsDocumentChecklistUploadDocsBtn_608() {
+    	return limit_details_document_checklist_upload_docs_btn;
+    }    
+    //Approve Level1
+    @FindBy(xpath = "//td[@id='td_FacilityDocumentCheckListGrid_WIFT001AP1_2_DOC_CODE']")
+    private WebElement approve1_limit_details_document_checklist_row2;
+    public WebElement approve1LimitDetailsDocumentChecklistRow2_608() {
+    	return approve1_limit_details_document_checklist_row2;
+    }
+    
+    @FindBy(xpath = "//a[@id='document_ViewBtn_WIFT001AP1']")
+    private WebElement approve1_limit_details_document_checklist_view_btn;
+    public WebElement approve1LimitDetailsDocumentChecklistViewBtn_608() {
+    	return approve1_limit_details_document_checklist_view_btn;
+    }
+    
+    @FindBy(xpath = "//td[@id='td_FacilityDocumentCheckListViewGrid_WIFT001AP1_0_rn']")
+    private WebElement approve1_limit_details_document_checklist_view_row1;
+    public WebElement approve1LimitDetailsDocumentChecklistViewRow1_608() {
+    	return approve1_limit_details_document_checklist_view_row1;
+    }
+    
+    @FindBy(xpath = "/html/body/div[49]/div[1]/a")
+    private WebElement approve1_limit_details_document_checklist_view_close;
+    public WebElement approve1LimitDetailsDocumentChecklistViewClose_608() {
+    	return approve1_limit_details_document_checklist_view_close;
+    }
+   
     
 //  AT_CA_008_Core
     @FindBy(xpath = "//div[@id='_selenuimWIFT0063']")
@@ -1144,6 +1222,51 @@ public class ApplicationFinancialFacilityObj_608 {
     public WebElement wifakReopenRejectedMenuApproveOrRejectApproveBtn_608() {
     	return wifak_reopen_rejected_menu_approve_or_reject_approve_btn;
     }
+    
+//	@AT_FM_059
+//	User_608
+	@FindBy(xpath = "//input[@name='USER_ID']")
+	private WebElement send_alert_search_grid_user_id;
+	public WebElement sendAlertSearchGridUserID_608() {
+		return send_alert_search_grid_user_id;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_alertsGrid_Id_WIFT001MT_1_alertsParamCO.userId']")
+	private WebElement send_alert_search_grid_user_id_row;
+	public WebElement sendAlertSearchGridUserIDRow_608() {
+		return send_alert_search_grid_user_id_row;
+	}
+	
+	@FindBy(xpath = "//a[@id='sendBut_WIFT001MT']")
+	private WebElement send_alert_send_btn;
+	public WebElement sendAlertSendBtn_608() {
+		return send_alert_send_btn;
+	}
+	
+	// User_VAK
+	@FindBy(xpath = "/html/body/div[13]")
+	private WebElement User_VAK_alert_popup;
+	public WebElement UserVakAlertPopup_608() {
+		return User_VAK_alert_popup;
+	}
+	
+	@FindBy(xpath = "//a[text()='Open Item']")
+	private WebElement send_alert_open_item_link;
+	public WebElement sendAlertOpenItemLink_608() {
+		return send_alert_open_item_link;
+	}
+	
+	@FindBy(xpath = "//input[@id='code_WIFT001AP1_ALERT']")
+	private WebElement send_alert_approve_item_code;
+	public WebElement sendAlertApproveItemCode_608() {
+		return send_alert_approve_item_code;
+	}
+	
+	@FindBy(xpath = "//button[@id='alertsOpenItemApprove_RCVALERT']")
+	private WebElement send_alert_approve_item_Approve_btn;
+	public WebElement sendAlertApproveItemApproveBtn_608() {
+		return send_alert_approve_item_Approve_btn;
+	}
     
     
     

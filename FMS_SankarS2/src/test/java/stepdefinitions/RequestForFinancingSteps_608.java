@@ -47,13 +47,8 @@ public class RequestForFinancingSteps_608 {
 	Map<String, String> testData;
 
 //	@AT_FM_043
-	@And("User_608 get the test data for test case AT_FM_043_FMSParam")
-	public void user_get_the_test_data_for_test_case_at_fm__fms_param() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_043");
-	}
-
-	@And("User_608 get the test data for test case AT_FM_043_FMSCore")
-	public void user_get_the_test_data_for_test_case_at_fm__fms_core() throws Throwable {
+	@And("User_608 get the test data for test case AT_FM_043")
+	public void user_get_the_test_data_for_test_case_at_fm_043() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_043");
 	}
 
@@ -1514,7 +1509,7 @@ public class RequestForFinancingSteps_608 {
 		}
 		dropDownHelper.SelectUsingVisibleText(
 				requestForFinancingObj608.approveLevel1CustomerGradingApproveDecision_608(),
-				testData.get("Approve1 Decision"));
+				testData.get("Decision"));
 	}
 
 	@And("User_608 select the decision forward to as approval committee in approve level1 under Request for Financing")
@@ -1524,7 +1519,7 @@ public class RequestForFinancingSteps_608 {
 				requestForFinancingObj608.approveLevel1CustomerGradingApproveForwardTo_608());
 		dropDownHelper.SelectUsingVisibleText(
 				requestForFinancingObj608.approveLevel1CustomerGradingApproveForwardTo_608(),
-				testData.get("Decision Forward To"));
+				testData.get("Forward To"));
 	}
 
 	@And("User_608 select the approval committee in approve level1 under Request for Financing")

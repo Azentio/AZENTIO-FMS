@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -78,6 +79,12 @@ public class ApplicationFinancialFacilitySteps_608 {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_058");
 	}
 	
+//	@AT_FM_059
+	@And("User_608 get the test data for test case AT_FM_059")
+	public void user_get_the_test_data_for_test_case_AT_FM_059() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_059");
+	}
+	
 	
 //	@AT_AFF_052
 	@And("^User_608 get the test data for test case AT_AFF_052$")
@@ -131,6 +138,17 @@ public class ApplicationFinancialFacilitySteps_608 {
     	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_102");
     }
     
+//  @AT_RF_139
+    @And("User_608 get the test data for test case AT_RF_139")
+    public void user_get_the_test_data_for_test_case_at_rf_139() throws Throwable {
+    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_139");
+    }
+    
+//  @AT_RF_140
+    @And("User_608 get the test data for test case AT_RF_140")
+    public void user_get_the_test_data_for_test_case_at_rf_140() {
+    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_140");
+    }
     
     
     
@@ -1361,24 +1379,7 @@ public class ApplicationFinancialFacilitySteps_608 {
    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.transferEntitiesMain_608());
    	applicationFinancialFacilityObj608.transferEntitiesMain_608().click();
    }
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
+          
      
 
      
@@ -1415,6 +1416,91 @@ public class ApplicationFinancialFacilitySteps_608 {
    		waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementMainSearchApplicationRefInput_608());
    		facilityManagementObj608.wifakFacilitiesManagementMainSearchApplicationRefInput_608().sendKeys(testData.get("Reference Code"),Keys.ENTER);
    	}
+   	
+   	
+////@AT_FM_059_User_608
+  @And("User_608 clicks on the validate button and wait for Send Alert popup")
+  public void user_clicks_on_the_validate_button_and_wait_for_send_alert_popup() throws Throwable {
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsValidateBtn_608());
+  	applicationFinancialFacilityObj608.limitDetailsValidateBtn_608().click();
+  	
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
+  	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
+  	
+  	// Facility already created popup
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.confirmPopup_608());
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.facilityAlreadyCreatedPopup_608());
+  	applicationFinancialFacilityObj608.facilityAlreadyCreatedPopup_608().click();
+  	
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.successPopup_608());
+//  	String SuccessMsg = applicationFinancialFacilityObj608.successPopupMessage().getText();
+  	String refCode = applicationFinancialFacilityObj608.successPopupMessage_608().getText().substring(23, 27);
+  	System.err.println("Reference Number: "+refCode);
+  	fmsTransactionsExcelData.updateTestData("DS_AT_FM_038", "Reference Code", refCode);
+  	
+  	for (int i = 0; i < 2000; i++) {
+			try {
+		    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+      
+  }
+
+  @And("User_608 search the VAK user in search grid under Send Alert popup")
+  public void user_search_the_vak_user_in_search_grid_under_send_alert_popup() throws Throwable{
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.sendAlertPopup_608());
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.sendAlertSearchGridUserID_608());
+  	applicationFinancialFacilityObj608.sendAlertSearchGridUserID_608().sendKeys(testData.get("Send Alert User"),Keys.ENTER);  
+  }
+
+  @And("User_608 click the VAK User row in search grid under Send Alert popup")
+  public void user_click_the_vak_user_row_in_search_grid_under_send_alert_popup() throws Throwable {
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.sendAlertSearchGridUserIDRow_608());
+  	applicationFinancialFacilityObj608.sendAlertSearchGridUserIDRow_608().click();
+  }
+
+  @And("User_608 click the Send button under Send Alert popup")
+  public void user_click_the_send_button_under_send_alert_popup() throws Throwable {
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.sendAlertSendBtn_608());
+  	applicationFinancialFacilityObj608.sendAlertSendBtn_608().click();
+  }
+
+  @And("User_VAK Should be validate Alert popup is displayed")
+  public void user_vak_should_be_validate_alert_popup_is_displayed() throws Throwable {
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.UserVakAlertPopup_608());
+  	boolean alertisDisplayed = applicationFinancialFacilityObj608.UserVakAlertPopup_608().isDisplayed();
+  	Assert.assertEquals(true, alertisDisplayed);
+  }
+
+  @And("User_VAK click the open items under approve alert popup")
+  public void user_vak_click_the_open_items_under_approve_alert_popup() throws Throwable {
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.sendAlertOpenItemLink_608());
+  	applicationFinancialFacilityObj608.sendAlertOpenItemLink_608().click();
+  }
+
+  @And("User_VAK Click the Approve button under Approve item popup")
+  public void user_vak_click_the_approve_button_under_approve_item_popup() throws Throwable {
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.sendAlertApproveItemCode_608());
+  	for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.sendAlertApproveItemApproveBtn_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+  	}
+  	applicationFinancialFacilityObj608.sendAlertApproveItemApproveBtn_608().click();
+  }
+   	
+   	
    
 //     @AT_FM_102
      @And("User_608 user Re_enter the no of payments in Repayment Plan tab Application Financial Facility Maintanance")
@@ -2699,6 +2785,109 @@ public class ApplicationFinancialFacilitySteps_608 {
     	applicationFinancialFacilityObj608.limitDetailsMarginRateInput_608().sendKeys(Keys.TAB);
         
     }
+    
+    
+//  @AT_RF_139
+  @And("User_608 clicks the all critical checkboxes in document checklist")
+  public void user_clicks_the_all_critical_checkboxes_in_document_checklist() throws Throwable {
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsDocumentChecklistCriticalCheck_608());  	
+  	List<WebElement> checkboxes = driver.findElements(By.xpath("//td[@tdlabel='Critical']//input"));  
+  	for (int i = 0; i < checkboxes.size(); i++) {
+  		checkboxes.get(i).click();
+	}  	
+  }
+  
+  @And("User_608 clicks the limit details tab under approve level1")
+  public void user_clicks_the_limit_details_tab_under_approve_level1() throws Throwable {
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.approveLevel1LimitDetailsTab_608());
+  	applicationFinancialFacilityObj608.approveLevel1LimitDetailsTab_608().click();  	
+  }
+     
+
+  @And("User_608 select the product class in limit details under approve level1")
+  public void user_select_the_product_class_in_limit_details_under_approve_level1() throws Throwable {
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.approveLevel1LimitDetailsProductRow_608());
+  	applicationFinancialFacilityObj608.approveLevel1LimitDetailsProductRow_608().click();
+  }
+
+  @And("User_608 click the document checklist button under limit details in approve level1")
+  public void user_click_the_document_checklist_button_under_limit_details_in_approve_level1() throws Throwable {
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.approveLevel1LimitDetailsDocChecklistBtn_608());
+  	applicationFinancialFacilityObj608.approveLevel1LimitDetailsDocChecklistBtn_608().click();
+  }
+
+  @And("User_608 click the ok button in document checklist under limit details")
+  public void user_click_the_ok_button_in_document_checklist_under_limit_details() throws Throwable {
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.approveLevel1LimitDetailsDocChecklistRow_608());
+  	applicationFinancialFacilityObj608.limitDetailsDocumentChecklistOkBtn_608().click();
+  }
+    
+  
+//@AT_RF_140
+  @And("User_608 select the second row in document checklist tab")
+  public void user_select_the_second_row_in_document_checklist_tab() {
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsDocumentChecklistRow2_608());
+  	applicationFinancialFacilityObj608.limitDetailsDocumentChecklistRow2_608().click();
+  }
+
+  @And("User_608 give the file in choose file input under document checklist tab")
+  public void user_give_the_file_in_choose_file_input_under_document_checklist_tab() {
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsDocumentChecklistChooseFileInput_608());
+//  	applicationFinancialFacilityObj608.limitDetailsDocumentChecklistChooseFileInput().sendKeys("C:\\Users\\inindc00608\\Desktop\\FMSTest.txt");
+  	applicationFinancialFacilityObj608.limitDetailsDocumentChecklistChooseFileInput_608().sendKeys(testData.get("File Location"));
+  }
+
+  @And("User_608 click the Upload docs button under document checklist tab")
+  public void user_click_the_upload_docs_button_under_document_checklist_tab() {
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsDocumentChecklistUploadDocsBtn_608());
+  	applicationFinancialFacilityObj608.limitDetailsDocumentChecklistUploadDocsBtn_608().click();
+  	
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.SuccessPopupOkBtn_608());
+  	for (int i = 0; i < 2000; i++) {
+			try {
+		    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+  }
+
+  @And("User_608 validate the Attachment flag is checked in second row under document checklist tab")
+  public void user_validate_the_attachment_flag_is_checked_in_second_row_under_document_checklist_tab() {
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsDocumentChecklistAttachFlag_608());
+  	boolean flagSelected = applicationFinancialFacilityObj608.limitDetailsDocumentChecklistAttachFlag_608().isSelected();
+  	Assert.assertEquals(true, flagSelected);
+  }
+
+  
+  @And("User_608 click the second row of checklist under limit details in approve level1")
+  public void user_click_the_second_row_of_checklist_under_limit_details_in_approve_level1() {
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.approve1LimitDetailsDocumentChecklistRow2_608());
+  	applicationFinancialFacilityObj608.approve1LimitDetailsDocumentChecklistRow2_608().click();
+  }
+
+  @And("User_608 click the View button in checklist under limit details in approve level1")
+  public void user_click_the_view_button_in_checklist_under_limit_details_in_approve_level1() {
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.approve1LimitDetailsDocumentChecklistViewBtn_608());
+  	applicationFinancialFacilityObj608.approve1LimitDetailsDocumentChecklistViewBtn_608().click();
+  }
+
+  @And("User_608 vaidate the rows are available in View tab under document checklist")
+  public void user_vaidate_the_rows_are_available_in_view_tab_under_document_checklist() {
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.approve1LimitDetailsDocumentChecklistViewRow1_608());
+  	boolean rowDisplayed = applicationFinancialFacilityObj608.approve1LimitDetailsDocumentChecklistViewRow1_608().isDisplayed();
+  	System.out.println("Row are available: "+rowDisplayed);
+  }
+
+  @And("User_608 close the View tab in document checklist under approve level1 limit details")
+  public void user_close_the_view_tab_in_document_checklist_under_approve_level1_limit_details() {
+  	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.approve1LimitDetailsDocumentChecklistViewClose_608());
+  	applicationFinancialFacilityObj608.approve1LimitDetailsDocumentChecklistViewClose_608().click();
+  }
+  
     
     
 //  @AT_CA_008_Core

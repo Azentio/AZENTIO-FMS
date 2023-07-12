@@ -488,7 +488,6 @@ When User_608 clicks on the Approve level3 submit button
 
 
 
-
 #Sprint 5
 @AT_RF_157
 Scenario: TSR - AMANA180702
@@ -595,21 +594,123 @@ When User_608 click the approve button under Collateral Management approve scree
 
 
 
+@AT_RF_139
+Scenario: MFI190122 - Request for financing-->Doc Checklist-->Upload Document-->Flags Attachment and Available is not checked
+
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_RF_139
+And User_608 clear the caches in FMS Application
+And User_608 clicks on the WIFAK_Application first link
+And User_608 clicks on the WIFAK_Application second link
+And User_608 clicks on the Application for financial facility link
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 select the application for dropdown as new facility
+And User_608 enter the CIF No in main info tab
+And User_608 enter the facility type in main info tab
+And User_608 enter the country of financing in main info tab
+And User_608 enter the facility rating in main info tab
+And User_608 clicks on the additional details tab
+And User_608 enter the total value in additional info tab
+And User_608 enter the expire date in additional info tab
+And User_608 clicks the limit details tab
+And User_608 clicks the add new record button in limit details tab
+And User_608 enter the product class details
+And User_608 clicks on the product class add button
+
+And User_608 clicks on the document checklist button under limit details
+And User_608 clicks the all critical checkboxes in document checklist
+And User_608 click the Ok button under document checklist
+
+And User_608 move to the Document details tab
+And User_608 enter the Solicitor Name
+And User_608 enter the Estimator Name
+And User_608 clicks the save button
+And User_608 clicks on the validate button
+Then User_608 clicks the Approve Level1 menu under Application for financial facilities
+And User_608 get the test data for test case AT_RF_139
+And User_608 enter the reference code in Approve level1
+And User_608 double click on the retrieved reference code in Approve level1
+And User_608 select the Approve level1 decision as Approve
+
+And User_608 clicks the limit details tab under approve level1
+And User_608 select the product class in limit details under approve level1
+And User_608 click the document checklist button under limit details in approve level1
+And User_608 click the ok button in document checklist under limit details
+
+When User_608 clicks on the Approve level1 submit button
+Then User_608 clicks the Approve Level2 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level2
+And User_608 double click on the retrieved reference code in Approve level2
+And User_608 select the Approve level2 decision as Approve
+When User_608 clicks on the Approve level2 submit button
+Then User_608 clicks the Approve Level3 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level3
+And User_608 double click on the retrieved reference code in Approve level3
+And User_608 select the Approve level3 decision as Approve
+When User_608 clicks on the Approve level3 submit button
 
 
 
+@AT_RF_140
+Scenario: MFI190126 - Request for financing Document Checklist-->Document name changing after uploading document and document is showing in wrong order
 
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_RF_140
+And User_608 clear the caches in FMS Application
+And User_608 clicks on the WIFAK_Application first link
+And User_608 clicks on the WIFAK_Application second link
+And User_608 clicks on the Application for financial facility link
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 select the application for dropdown as new facility
+And User_608 enter the CIF No in main info tab
+And User_608 enter the facility type in main info tab
+And User_608 enter the country of financing in main info tab
+And User_608 enter the facility rating in main info tab
+And User_608 clicks on the additional details tab
+And User_608 enter the total value in additional info tab
+And User_608 enter the expire date in additional info tab
+And User_608 clicks the limit details tab
+And User_608 clicks the add new record button in limit details tab
+And User_608 enter the product class details
+And User_608 clicks on the product class add button
 
+And User_608 clicks on the document checklist button under limit details
+And User_608 select the second row in document checklist tab
+And User_608 give the file in choose file input under document checklist tab
+And User_608 click the Upload docs button under document checklist tab
+And User_608 validate the Attachment flag is checked in second row under document checklist tab
 
+And User_608 move to the Document details tab
+And User_608 enter the Solicitor Name
+And User_608 enter the Estimator Name
+And User_608 clicks the save button
+And User_608 clicks on the validate button
+Then User_608 clicks the Approve Level1 menu under Application for financial facilities
+And User_608 get the test data for test case AT_RF_140
+And User_608 enter the reference code in Approve level1
+And User_608 double click on the retrieved reference code in Approve level1
+And User_608 select the Approve level1 decision as Approve
 
+And User_608 clicks the limit details tab under approve level1
+And User_608 select the product class in limit details under approve level1
+And User_608 click the document checklist button under limit details in approve level1
+And User_608 click the second row of checklist under limit details in approve level1
+And User_608 click the View button in checklist under limit details in approve level1
+And User_608 vaidate the rows are available in View tab under document checklist
+And User_608 close the View tab in document checklist under approve level1 limit details
+And User_608 click the ok button in document checklist under limit details
 
-
-
-
-
-
-
-
+When User_608 clicks on the Approve level1 submit button
+Then User_608 clicks the Approve Level2 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level2
+And User_608 double click on the retrieved reference code in Approve level2
+And User_608 select the Approve level2 decision as Approve
+When User_608 clicks on the Approve level2 submit button
+Then User_608 clicks the Approve Level3 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level3
+And User_608 double click on the retrieved reference code in Approve level3
+And User_608 select the Approve level3 decision as Approve
+When User_608 clicks on the Approve level3 submit button
 
 
 
@@ -638,80 +739,4 @@ And User_608 clicks on the Request under Funding Request
 And User_608 clicks on the Funding Request in Request under Funding Request
 And User_608 click the approval committee under Funding Request in Request
 Then User_608 validate the search grid value are displayed in arbic language under approval committee
-
-
-
-@AT_FM_043
-@AT_FM_043_FMSParam
-Scenario: JAIZ150014 INABILITY TO CRAETE A LIMIT ON APPROVE FACILITY
-
-Given navigate to FMS param application and login with valid credentials
-And User_608 get the test data for test case AT_FM_043_FMSParam
-And User_608 clicks on the Parameter module in FMS Param
-And User_608 clicks on the Facility Type feature
-And User_608 clicks on the update after approve menu in Facility type
-And User_608 enter the code value in update after approve menu
-And User_608 double click on the retrieved data in update after approve menu
-And User_608 clicks on the facility details tab in update after approve
-And User_608 clicks on the STP Facility Requirements option
-And User_608 check the Customer Grading flag
-And User_608 check the Overwrite Grading flag
-And User_608 check the Credit Review flag
-And User_608 uncheck the Committee Approval flag
-And User_608 select the member as atleast one under Committee approval flag
-And User_608 check the Credit Authorization flag
-And User_608 check the Client Response flag
-And User_608 check the Document Validation flag
-And User_608 check the Final Approval flag
-And User_608 check the Create Active Facility If Within Limits flag
-And User_608 Check the Automatically Approve Facility If Within Limits flag
-And User_608 check the Issue Facility Offer flag
-When User_608 clicks on the Update button under update after approve menu in Facility type
-And User_608 after the update go to the Approve menu
-And User_608 enter the code value in Approve menu
-And User_608 double click on the retrieved data in Approve menu
-When User_608 clicks on the Approve button in Approve menu under Facility Type
-
-@AT_FM_043
-@AT_FM_043_FMSCore
-Scenario: JAIZ150014 INABILITY TO CRAETE A LIMIT ON APPROVE FACILITY
-
-Given navigate to FMS application and login with valid credentials
-And User_608 get the test data for test case AT_FM_043_FMSCore
-And User_608 clear the caches in FMS Application
-And User_608 clicks on the Request module
-And User_608 clicks on the Request Financing under Request module
-And User_608 clicks on the Request for Financing under Request Financing feature
-And User_608 clicks on the Maintanance screen under Request for Financing
-And User_608 select the Reason for submission under main screen in Request for Financing
-And User_608 enter the CIF no in main screen under Request for Financing
-And User_608 enter the facility type in main screen under Request for Financing
-And User_608 enter the total limit in main screen under Request for Financing
-And User_608 move to the sublimit tab in main screen under Request for Financing
-And User_608 click the add new button in sublimit tab under main screen in Request for Financing
-And User_608 enter the product class in limit details tab under sublimit tab
-And User_608 enter the margin value in limit details tab under sublimit tab
-And User_608 click the add button in limit details tab under sublimit tab
-When User_608 click the Save button in main screen under Request for Financing
-And User_608 click the Validate button in main screen Request for Financing
-Then User_608 click the approve level1 under Request for Financing
-And User_608 get the test data for test case AT_FM_043_FMSCore
-And User_608 enter the request code in approve level1 under Request for Financing
-And User_608 double click on the first row in approve level1 under Request for Financing
-And User_608 move to customer grading tab in approve level1 under Request for Financing
-And User_608 select the approve level1 recommendation decision as forward in approve level1 under Request for Financing
-And User_608 select the decision forward to as approval committee in approve level1 under Request for Financing
-And User_608 select the approval committee in approve level1 under Request for Financing
-And User_608 click the Approve button in approve level1 under Request for Financing
-Then User_608 click the Approval committee recommendation under Request for Financing
-And User_608 enter the code in Approval committee recommendation under Request for Financing
-And User_608 double click on the first row in Approval committee recommendation under Request for Financing
-And User_608 move to credit committee recommendation tab in approval committee under Request for Financing
-And User_608 click the Recommendation division in credit committee under approval committee
-And User_608 click the plus icon in Recommendation division under credit committee
-And User_608 select the Recommendation dropdown in Recommendation division under credit committee
-When User_608 click the Recommendation button under Approval committee recommendation
-
-
-
 
