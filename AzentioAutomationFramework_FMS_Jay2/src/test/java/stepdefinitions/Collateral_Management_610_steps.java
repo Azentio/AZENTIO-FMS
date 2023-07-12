@@ -160,9 +160,9 @@ public class Collateral_Management_610_steps extends BaseClass{
 
 	@And("User_{int} click save button")
 	public void user_click_save_button(Integer int1) {
-		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.SaveButton_DocumentDetails_updateafter_Tab());
-		clicksAndActionHelper.moveToElement(FMS_WifakApplication_Obj.SaveButton_DocumentDetails_updateafter_Tab());
-		clicksAndActionHelper.clickOnElement(FMS_WifakApplication_Obj.SaveButton_DocumentDetails_updateafter_Tab());
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.SaveButton_DocumentDetails_updateafter_Tab_610());
+		clicksAndActionHelper.moveToElement(FMS_WifakApplication_Obj.SaveButton_DocumentDetails_updateafter_Tab_610());
+		clicksAndActionHelper.clickOnElement(FMS_WifakApplication_Obj.SaveButton_DocumentDetails_updateafter_Tab_610());
 		
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Ok_Button_In_Waring_Screen_610());
 		clicksAndActionHelper.moveToElement(FMS_WifakApplication_Obj.Ok_Button_In_Waring_Screen_610());

@@ -37,9 +37,9 @@ Feature: TC to check the modification in the Maintain Application Facility Scree
     And User_610 click the availment ticket sub menu
     And User_610 click the cif and enter the cif number in availment ticket sub menu
     Then User_610 click retrieve button to view the report without error
-    Then verify system shoudl show the CIF details under availment ticket
+    Then User_610 verify system shoudl show the CIF details under availment ticket
 
-	@592279
+  @592279
   Scenario: TSR- SUPT170522 - Label missing
     Given navigate to FMS application2 and login with valid credentials
     And User_610 get the test data set id for AT_RF_011
@@ -57,7 +57,7 @@ Feature: TC to check the modification in the Maintain Application Facility Scree
     And User_610 Click Offer Expiration SelectDate
     And User_610 Select limit Details
     And User_610 Click Add button on limit Detail
-    And  User_610 Check The Level Of Items In LImit Details SubMenu
+    And User_610 Check The Level Of Items In LImit Details SubMenu
     Then User_610 Check The Level Of Product Class In LImit Details SubMenu
     And User_610 Check The Level Of Type In LImit Details SubMenu
     Then User_610 Check The Level Of Case Non Case In LImit Details SubMenu
@@ -132,7 +132,40 @@ Feature: TC to check the modification in the Maintain Application Facility Scree
     Then User_610 Check The Level Of Acc No In LImit Details SubMenu
     And User_610 Check The Level Of  Add Button In LImit Details SubMenu
     Then User_610 Check The Level Of  Close Button In LImit Details SubMenu
-    
+
+  @285052
+  Scenario: System giving error on updating an application
+    Given navigate to FMS application2 and login with valid credentials
+    And User_610 Click Wifak Application first
+    And User_610 Click Wifak Application Second
+    And User_610 Click Application for financial facilities
+    And User_610 Click Maintenance
+    And User_610 Click and Select Application for
+    And User_610 Search CIF No
+    And User_610 Enter codeOn Facility Type
+    And User_610 Enter Code In Country of Financing
+    And User_610 Enter line Code On Facility Rating
+    And User_610 Click on additional Details
+    And User_610 Enter the Total Value
+    And User_610 Click Offer Expiration SelectDate
+    And User_610 Select limit Details
+    And User_610 Click Add button on limit Detail
+    #  And Click ok on the warrning Screen
+    And User_610 Click Fixed Assert button
+    And User_610 Click AddButton On FixedAssert screen
+    And User_610 Enter value on Catagory
+    And User_610 Enter value on Class
+    And User_610 Enter value on vendor
+    And User_610 Enter value on quantity
+    And User_610 Enter value on Unit
+    And User_610 Enter value on Cy
+    And User_610 Enter value on UnitCost
+
+  #  And Click OkButton On Fixed AssertKey Screen
+  #  And Click Save button on limit details tab
+  #  And Click Ok saveOn Draft WarrningScreen
+  #  Then Click Ok OnSuccess Screen
+  # And logout from the application
   @127788_01
   Scenario: TC to check the modification in the Maintain Application Facility Screen(T001)
     Given navigate to FMS param application and login with valid credentials2
@@ -195,10 +228,10 @@ Feature: TC to check the modification in the Maintain Application Facility Scree
     And User Enter Date above current Date
     Then User Enter Date Below to this current Date
 
-    @740790
+  @740790
   Scenario: TSR - AIBBI180271
     Given navigate to FMS application2 and login with valid credentials
- #   And get the test data set id for AT_RF_192
+    #   And get the test data set id for AT_RF_192
     And User_610 Click Wifak Application first
     And User_610 Click Wifak Application Second
     And User_610 Click Application for financial facilities
@@ -215,25 +248,25 @@ Feature: TC to check the modification in the Maintain Application Facility Scree
     And User_610 Click Add button on limit Detail
     And User_610 Enter ValueOn Product Class
     And User_610 Enter Facility Value
- #   Then Enter the value on  Purpose Of Finacing
+    #   Then Enter the value on  Purpose Of Finacing
     Then User_610 Check Flag in Clean Level IN Limits Detalis SubMenu
     And User_610 Click Add button AfterEnter Value On Product Class
     And User_610 Click Second Add button on limit Detail
     And User_610 Enter second ValueOn Product Class
     Then User_610 Enter second ValueOn Facility Value
-#    And Enter the second value on  Purpose Of Finacing
+    #    And Enter the second value on  Purpose Of Finacing
     Then User_610 Check Flag in Clean Level IN Limits Detalis SubMenu
     And User_610 Click Add button AfterEnter Value On Product Class
     And User_610 Click third Add button on limit Detail
     And User_610 Enter third ValueOn Product Class
     Then User_610 Enter third ValueOn Facility Value
- #   And Enter the third value on  Purpose Of Finacing
+    #   And Enter the third value on  Purpose Of Finacing
     Then User_610 Check Flag in Clean Level IN Limits Detalis SubMenu
     And User_610 Click Add button AfterEnter Value On Product Class
     And User_610 Click Fourth Add button on limit Detail
     And User_610 Enter Fourth ValueOn Product Class
     Then User_610 Enter Fourth ValueOn Facility Value
- #   And Enter the Fourth value on  Purpose Of Finacing
+    #   And Enter the Fourth value on  Purpose Of Finacing
     Then User_610 Check Flag in Clean Level IN Limits Detalis SubMenu
     And User_610 Click Add button AfterEnter Value On Product Class
     Then User_610 Validate how many product class in limits details
