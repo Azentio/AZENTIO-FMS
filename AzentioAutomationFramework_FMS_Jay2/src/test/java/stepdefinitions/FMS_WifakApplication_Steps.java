@@ -39,7 +39,8 @@ public class FMS_WifakApplication_Steps {
     String SuccessMsg;
 	String SuccessMsg2;
 	String SuccessMsgFM;
-
+	String SuccessMsgRepay;
+	
 	int FinanceAmt;
 	int FCAmount;
 	
@@ -64,15 +65,15 @@ public class FMS_WifakApplication_Steps {
 	
 	@And("User_609 click Technical details")
     public void user_609_click_technical_details() {
-		 waitHelper.waitForElementwithFluentwait(driver,FMS_WifakApplication_Obj.technicalDetails_609());
-		 clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.technicalDetails_609());
-		 clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.technicalDetails_609());
+		 waitHelper.waitForElementwithFluentwait(driver,FMS_WifakApplication_Obj.technicalDetails_610());
+		 clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.technicalDetails_610());
+		 clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.technicalDetails_610());
     }
     @And("User_609 click clear caches")
     public void user_609_click_clear_caches() {
-  	  waitHelper.waitForElementwithFluentwait(driver,FMS_WifakApplication_Obj.FSM_ClearCacheInTechnicalDetailsIcon_609());
-  	clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.FSM_ClearCacheInTechnicalDetailsIcon_609());
-  	clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.FSM_ClearCacheInTechnicalDetailsIcon_609());
+  	  waitHelper.waitForElementwithFluentwait(driver,FMS_WifakApplication_Obj.FSM_ClearCacheInTechnicalDetailsIcon_610());
+  	clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.FSM_ClearCacheInTechnicalDetailsIcon_610());
+  	clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.FSM_ClearCacheInTechnicalDetailsIcon_610());
     }
  
 
@@ -152,8 +153,13 @@ public class FMS_WifakApplication_Steps {
 	}
 	
 	@And("User_610 get the test data set id for AT_RP_010")
-	public void get_the_test_data_set_id_for_at_rp_010() {
+	public void get_the_test_data_set_id_for_at_at_010() {
 		testData = fmsTransactionsExcelData.getTestdata("AT_RP_010");
+	}
+	
+	@And("User_610 get the test data set id for AT_CA_014")
+	public void get_the_test_data_set_id_for_at_ca_014() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_CA_014");
 	}
 	
 	
@@ -275,6 +281,7 @@ public class FMS_WifakApplication_Steps {
 	public void click_maintenance() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.getMaintenance_610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.getMaintenance_610());
+		
 		for (int i = 0; i < 200; i++) {
 			try {
 
@@ -2048,15 +2055,17 @@ public class FMS_WifakApplication_Steps {
 				}
 			}
 		}
+		
+		FMS_WifakApplication_Obj.No_Of_Payments_InRepaymentPlan_610().sendKeys(Keys.TAB);
 
 	}
 
 	@Then("^User_610 Click Warning popup No In Repayment Plan$")
 	public void click_warning_popup_no_in_repayment_plan() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.WaringButton_OnLimitDetails_Tab_610());
-		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.WaringButton_OnLimitDetails_Tab_610());
-		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.WaringButton_OnLimitDetails_Tab_610());
-		Thread.sleep(6000);
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.okButton_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.okButton_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.okButton_610());
+		Thread.sleep(3000);
 		// FMS_WifakApplication_Obj.No_Of_Payments_InRepaymentPlan_610().sendKeys("10");
 	}
 
@@ -2127,10 +2136,32 @@ public class FMS_WifakApplication_Steps {
 
 	@And("^User_610 Click OK  Button In Sucess Screen In Repayment Plan$")
 	public void click_Ok_Button_In_Sucess_Screen_610_in_repayment_plan() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Ok_Button_In_Sucess_Screen_610());
-		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Ok_Button_In_Sucess_Screen_610());
-		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.Ok_Button_In_Sucess_Screen_610());
-		Thread.sleep(10000);
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.InformationPopup_InRepaymentPlan_610());
+		// String SuccessMsg =
+		// FMS_WifakApplication_Obj.successPopupMessage().getText();
+		SuccessMsg2 = FMS_WifakApplication_Obj.successPopupMessage_610().getText().substring(10, 14);
+		System.err.println("Reference Number: " + SuccessMsg2);
+	
+
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.successPopupOkBtn_610());
+		for (int i = 0; i < 2000; i++) {
+			try {
+				FMS_WifakApplication_Obj.successPopupOkBtn_610().click();
+				break;
+			} catch (Exception e) {
+				if (i == 1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+				
+//		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Ok_Button_In_Sucess_Screen_610());
+//		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Ok_Button_In_Sucess_Screen_610());
+//		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.Ok_Button_In_Sucess_Screen_610());
+		
+				
 	}
 
 //---------------------approvel 1	    
@@ -3402,15 +3433,15 @@ public class FMS_WifakApplication_Steps {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.searchCode_ApplicationForFinancialFacilities_610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.searchCode_ApplicationForFinancialFacilities_610());
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.searchCode_ApplicationForFinancialFacilities_610());
-		FMS_WifakApplication_Obj.searchCode_ApplicationForFinancialFacilities_610().sendKeys(SuccessMsg,Keys.ENTER);
+		FMS_WifakApplication_Obj.searchCode_ApplicationForFinancialFacilities_610().sendKeys(SuccessMsg2,Keys.ENTER);
 		
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.retriveFirstRow_ApplicationForFinancialFacilities_610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.retriveFirstRow_ApplicationForFinancialFacilities_610());
 		clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.retriveFirstRow_ApplicationForFinancialFacilities_610());
 		
-		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvalcommittieeskey_ApplicationForFinancialFacilities_610());
-		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvalcommittieeskey_ApplicationForFinancialFacilities_610());
-		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvalcommittieeskey_ApplicationForFinancialFacilities_610());
+//		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvalcommittieeskey_ApplicationForFinancialFacilities_610());
+//		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvalcommittieeskey_ApplicationForFinancialFacilities_610());
+//		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvalcommittieeskey_ApplicationForFinancialFacilities_610());
 	}
 	
 	//----------------Repayment plan
@@ -3425,22 +3456,98 @@ public class FMS_WifakApplication_Steps {
 
 	@And("User_{int} Click Print Schedule In Repayment Plan")
 	public void user_click_print_schedule_in_repayment_plan(Integer int1) {
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ScheduleDetailsMenu_InRepaymentPlan_610());
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.clickPrintSchedule_InRepaymentPlan_610());
-		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.clickPrintSchedule_InRepaymentPlan_610());
-		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.clickPrintSchedule_InRepaymentPlan_610());
+		
+		for (int i = 0; i < 200; i++) {
+			try {
+				clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.clickPrintSchedule_InRepaymentPlan_610());
+				break;
+			} catch (Exception e) {
+				if (i == 199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+			}
 	}
 
 	@Then("User_{int} Validate the printing repayment plan Working or Not")
 	public void user_validate_the_printing_repayment_plan_working_or_not(Integer int1) throws Throwable {
+		
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ReportDataIsGeneratedPopup_InRepaymentPlan_610());
-		
-		
-		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.facilityAlreadyCreatedPopup_610());
-		FMS_WifakApplication_Obj.facilityAlreadyCreatedPopup_610().click();
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.WarningPopupOkBtn_610());
+		FMS_WifakApplication_Obj.WarningPopupOkBtn_610().click();
 		Thread.sleep(5000);
 	}
 
+	
+	@And("User_{int} Close the repayment Tab")
+	public void user_close_the_repayment_tab(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.RemoveTab_InRepaymentPlan_610());
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.RemoveTab_InRepaymentPlan_610());
+		FMS_WifakApplication_Obj.RemoveTab_InRepaymentPlan_610().click();
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.confirmRemoveTab_InRepaymentPlan_610());
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.okButton_610());
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.okButton_610());
+		FMS_WifakApplication_Obj.okButton_610().click();
+	}
 
+	@And("User_{int} delete product class value")
+	public void user_delete_product_class_value(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.deleteButtonIcon_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.deleteButtonIcon_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.deleteButtonIcon_610());
+	}
+
+	//----approvel 1 limit nd repayment 
 	
+	@And("User_{int} Validate the Schedule Details displaying or Not")
+	public void user_validate_the_schedule_details_displaying_or_not(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvel1_LimitsDetails_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvel1_LimitsDetails_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvel1_LimitsDetails_610());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvel1_RepaymentPlan_btn_In_LimitsDetails_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvel1_RepaymentPlan_btn_In_LimitsDetails_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvel1_RepaymentPlan_btn_In_LimitsDetails_610());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvel1_ScheduleDetails_In_LimitsDetails_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvel1_ScheduleDetails_In_LimitsDetails_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvel1_ScheduleDetails_In_LimitsDetails_610());
+		
+		Assert.assertEquals(true, FMS_WifakApplication_Obj.approvel1_ScheduleDetails_In_LimitsDetails_610().isDisplayed());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvel1_CloseIcon_ScheduleDetails_In_LimitsDetails_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvel1_CloseIcon_ScheduleDetails_In_LimitsDetails_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvel1_CloseIcon_ScheduleDetails_In_LimitsDetails_610());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvel1_MainInformation_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvel1_MainInformation_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvel1_MainInformation_610());
+	}
 	
+	//---------
+	
+	@And("User_{int} Enter Floating Rate in limit Detail")
+	public void user_enter_floating_rate_in_limit_detail(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.FloatingRateinlimitDetail_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.FloatingRateinlimitDetail_610());
+		FMS_WifakApplication_Obj.FloatingRateinlimitDetail_610().sendKeys(testData.get("Floating Rate"));
+		
+	}
+
+	@And("User_{int} Enter Floating Rate Periodicity in limit Detail")
+	public void user_enter_floating_rate_periodicity_in_limit_detail(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.FloatingRateinlimitDetail_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.FloatingRateinlimitDetail_610());
+		FMS_WifakApplication_Obj.FloatingRateinlimitDetail_610().sendKeys(testData.get("Floating Rate Periodicity"));
+	}
+
+	@And("User_{int} Enter Floating Rate Periodicity Type in limit Detail")
+	public void user_enter_floating_rate_periodicity_type_in_limit_detail(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.FloatingRatePeriodicityTypeinlimitDetail_610());
+		DropDownhelper.SelectUsingVisibleText(FMS_WifakApplication_Obj.FloatingRatePeriodicityTypeinlimitDetail_610(),testData.get("Floating Rate Periodicity Type"));
+	}
 }

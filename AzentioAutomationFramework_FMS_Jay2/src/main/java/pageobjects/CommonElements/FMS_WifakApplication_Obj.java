@@ -36,15 +36,15 @@ public class FMS_WifakApplication_Obj {
 	}
 	
 	@FindBy(xpath = "//a[@id='tech_details_icon_id']")
-	private WebElement technicalDetails_609;
-	public WebElement technicalDetails_609() {
-		return technicalDetails_609; 
+	private WebElement technicalDetails_610;
+	public WebElement technicalDetails_610() {
+		return technicalDetails_610; 
 	}
 
     @FindBy(xpath = "//label[contains(text(),'Clear Cache ')]")
-	private WebElement FSM_ClearCacheInTechnicalDetailsIcon_609;
-	public WebElement FSM_ClearCacheInTechnicalDetailsIcon_609() {
-        return FSM_ClearCacheInTechnicalDetailsIcon_609;
+	private WebElement FSM_ClearCacheInTechnicalDetailsIcon_610;
+	public WebElement FSM_ClearCacheInTechnicalDetailsIcon_610() {
+        return FSM_ClearCacheInTechnicalDetailsIcon_610;
     }
 
 
@@ -2136,7 +2136,25 @@ public class FMS_WifakApplication_Obj {
 			return createTentativeSchedulePopupYes_InRepaymentPlan_610;
 		}
 		
-		@FindBy(xpath = "//span[text()=' Print Schedule ']")
+		@FindBy(xpath = "//label[@id='repaymentPlanFormId_WIFT001MT_JVD_key']")
+		private WebElement JournalVoucherDetailsButton_InRepaymentPlan_610;
+		public WebElement JournalVoucherDetailsButton_InRepaymentPlan_610() {
+			return JournalVoucherDetailsButton_InRepaymentPlan_610;
+		}
+		
+		@FindBy(xpath = "//li[@id='rePaymentPlanMainTab2_WIFT001MT']")
+		private WebElement ScheduleDetailsMenu_InRepaymentPlan_610;
+		public WebElement ScheduleDetailsMenu_InRepaymentPlan_610() {
+			return ScheduleDetailsMenu_InRepaymentPlan_610;
+		}
+		
+		@FindBy(xpath = "//span[@id='ui-dialog-title-fmsRepaymentPlanDiv_id_WIFT001MT']")
+		private WebElement RepaymentPlanPopup_InRepaymentPlan_610;
+		public WebElement RepaymentPlanPopup_InRepaymentPlan_610() {
+			return RepaymentPlanPopup_InRepaymentPlan_610;
+		}
+		
+		@FindBy(xpath = "//span[contains(text(),' Print Schedule ')]")
 		private WebElement clickPrintSchedule_InRepaymentPlan_610;
 		public WebElement clickPrintSchedule_InRepaymentPlan_610() {
 			return createTentativeSchedulePopupYes_InRepaymentPlan_610;
@@ -2148,10 +2166,92 @@ public class FMS_WifakApplication_Obj {
 			return ReportDataIsGeneratedPopup_InRepaymentPlan_610;
 		}
 		
-//		@FindBy(xpath = "Report data is generated, do you want to open report?")
-//		private WebElement ReportDataIsGeneratedPopup_InRepaymentPlan_610;
-//		public WebElement ReportDataIsGeneratedPopup_InRepaymentPlan_610() {
-//			return ReportDataIsGeneratedPopup_InRepaymentPlan_610;
-//		}
-				
+		@FindBy(xpath = "//span[text()='Remove Tab']")
+		private WebElement RemoveTab_InRepaymentPlan_610;
+		public WebElement RemoveTab_InRepaymentPlan_610() {
+			return RemoveTab_InRepaymentPlan_610;
+		}
+		
+		
+		@FindBy(xpath = "//div[text()='Information']")
+		private WebElement InformationPopup_InRepaymentPlan_610;
+		public WebElement InformationPopup_InRepaymentPlan_610() {
+			return InformationPopup_InRepaymentPlan_610;
+		}
+		
+		@FindBy(xpath = "//div[text()='Changes made, are you sure you want to quit']")
+		private WebElement confirmRemoveTab_InRepaymentPlan_610;
+		public WebElement confirmRemoveTab_InRepaymentPlan_610() {
+			return confirmRemoveTab_InRepaymentPlan_610;
+		}
+		
+		@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
+		private WebElement okButton_610;
+		public WebElement okButton_610() {
+			return okButton_610;
+		}
+		
+		@FindBy(xpath = "//input[@id='_popup_path_sol_confirm']")
+		private WebElement NoButton_610;
+		public WebElement NoButton_610() {
+			return okButton_610;
+		}
+		
+		@FindBy(xpath = "//td[@id='del_ApplicationFacilityLimitDetailsGrid_WIFT001MT']")
+		private WebElement deleteButtonIcon_610;
+		public WebElement deleteButtonIcon_610() {
+			return deleteButtonIcon_610;
+		}
+		
+		//---------------approvel 1 limit nd repayment 
+		
+		@FindBy(xpath = "//li[@id='applicationFacilityLimitDetailsTabs_WIFT001AP1']")
+		private WebElement approvel1_LimitsDetails_610;
+		public WebElement approvel1_LimitsDetails_610() {
+			return approvel1_LimitsDetails_610;
+		}
+		
+		@FindBy(xpath = "//button[@id='applicationfacility_repayplan_btn_WIFT001AP1']")
+		private WebElement approvel1_RepaymentPlan_btn_In_LimitsDetails_610;
+		public WebElement approvel1_RepaymentPlan_btn_In_LimitsDetails_610() {
+			return approvel1_RepaymentPlan_btn_In_LimitsDetails_610;
+		}
+		
+		@FindBy(xpath = "//li[@id='rePaymentPlanMainTab2_WIFT001AP1']")
+		private WebElement approvel1_ScheduleDetails_In_LimitsDetails_610;
+		public WebElement approvel1_ScheduleDetails_In_LimitsDetails_610() {
+			return approvel1_ScheduleDetails_In_LimitsDetails_610;
+		}
+		
+		@FindBy(xpath = "//span[@id='ui-dialog-title-fmsRepaymentPlanDiv_id_WIFT001AP1']//parent::div/a/span[text()='close']")
+		private WebElement approvel1_CloseIcon_ScheduleDetails_In_LimitsDetails_610;
+		public WebElement approvel1_CloseIcon_ScheduleDetails_In_LimitsDetails_610() {
+			return approvel1_CloseIcon_ScheduleDetails_In_LimitsDetails_610;
+		}
+		
+		@FindBy(xpath = "//li[@id='applicationFacilityMainInfoTabs_WIFT001AP1']")
+		private WebElement approvel1_MainInformation_610;
+		public WebElement approvel1_MainInformation_610() {
+			return approvel1_MainInformation_610;
+		}
+		
+		//--------Floating Rate in limit Detail
+			
+		@FindBy(xpath = "//input[@id='lookuptxt_applicationfacilityLimitDetailsFLOATING_RATE_WIFT001MT']")
+		private WebElement FloatingRateinlimitDetail_610;
+		public WebElement FloatingRateinlimitDetail_610() {
+			return FloatingRateinlimitDetail_610;
+		}
+		
+		@FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsFLOAT_RATE_PERIODICITY_NBR_WIFT001MT']")
+		private WebElement FloatingRatePeriodicityinlimitDetail_610;
+		public WebElement FloatingRatePeriodicityinlimitDetail_610() {
+			return FloatingRatePeriodicityinlimitDetail_610;
+		}
+		
+		@FindBy(xpath = "//select[@id='applicationfacilityLimitDetailsFLOAT_RATE_PERIODICITY_TYPE_WIFT001MT']")
+		private WebElement FloatingRatePeriodicityTypeinlimitDetail_610;
+		public WebElement FloatingRatePeriodicityTypeinlimitDetail_610() {
+			return FloatingRatePeriodicityTypeinlimitDetail_610;
+		}
 }
