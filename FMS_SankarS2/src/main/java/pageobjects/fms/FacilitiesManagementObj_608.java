@@ -132,6 +132,12 @@ public class FacilitiesManagementObj_608 {
 		return wifak_facilities_management_main_search_result_row;
 	}
 	
+	@FindBy(xpath = "//input[@id='facilityMangementCode_WIFT008MT']")
+	private WebElement wifak_facilities_management_maintanance_code_input;
+	public WebElement wifakFacilitiesManagementMaintananceCodeInput_608() {
+		return wifak_facilities_management_maintanance_code_input;
+	}
+	
 	@FindBy(xpath = "//input[@id='lookuptxt_facilityMgtMainApplicationRef_WIFT008MT']")
 	private WebElement wifak_facilities_management_main_application_ref_input;
 	public WebElement wifakFacilitiesManagementMainApplicationRefInput_608() {

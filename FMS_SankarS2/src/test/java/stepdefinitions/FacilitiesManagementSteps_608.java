@@ -216,8 +216,7 @@ public class FacilitiesManagementSteps_608 {
 			} catch (Exception e) {
 				// TODO: handle exception
 			}
- 	}
-     
+ 	}     
  }
 
  @And("User_608 click the Facility limit details tab in Facilities Management Maintanance under WIFAK Application")

@@ -457,7 +457,7 @@ public class RequestForFinancingObj_608 {
     	return drawdown_main_success_popup_msg;
     }
     
-    @FindBy(xpath = "/html/body/div[20]/div[1]/a/span")
+    @FindBy(xpath = "//a[@id='dismissbut_WIFT009MT']")
     private WebElement drawdown_main_send_alert_popup_close;
     public WebElement drawdownMainSendAlertPopupClose_608() {
     	return drawdown_main_send_alert_popup_close;
@@ -467,6 +467,12 @@ public class RequestForFinancingObj_608 {
     private WebElement draw_down_request_verify;
     public WebElement drawDownRequestVerify_608() {
     	return draw_down_request_verify;
+    }
+    
+    @FindBy(xpath = "//input[@id='drawDownRequestGridTbl_Id_WIFT009VD_gs_fmsDrawDownVO.FROM_FACILITY']")
+    private WebElement wifak_drawdown_verify_menu_searchgrid_from_facility_input;
+    public WebElement wifakDrawdownVerifyMenuSearchgridFromFacilityInput_608() {
+    	return wifak_drawdown_verify_menu_searchgrid_from_facility_input;
     }
     
     @FindBy(xpath = "//td[@id='drawDownRequestGridTbl_Id_WIFT009VD_pager_left']/table/tbody/tr/td[7]")
@@ -487,16 +493,28 @@ public class RequestForFinancingObj_608 {
     	return draw_down_request_verify_btn;
     }
     
-    @FindBy(xpath = "/html/body/div[24]/div[1]/a")
+    @FindBy(xpath = "//a[@id='dismissbut_WIFT009VD']")
 	private WebElement drawdown_verify_send_alert_popup;
 	public WebElement drawdownVerifySendAlertPopup_608() {
 		return drawdown_verify_send_alert_popup;
+	}
+	
+	@FindBy(xpath = "//a[@menuvar='WIFT009VD']//parent::td//following-sibling::td//span")
+	private WebElement drawdown_verify_menu_close_icon;
+	public WebElement drawdownVerifyMenuCloseIcon_608() {
+		return drawdown_verify_menu_close_icon;
 	}
     
     @FindBy(xpath = "//a[@id='WIFT009AP']")
     private WebElement draw_down_request_Approve;
     public WebElement drawDownRequestApprove_608() {
     	return draw_down_request_Approve;
+    }
+    
+    @FindBy(xpath = "//input[@id='drawDownRequestGridTbl_Id_WIFT009AP_gs_fmsDrawDownVO.FROM_FACILITY']")
+    private WebElement wifak_drawdown_approve_menu_searchgrid_from_facility_input;
+    public WebElement wifakDrawdownApproveMenuSearchgridFromFacilityInput_608() {
+    	return wifak_drawdown_approve_menu_searchgrid_from_facility_input;
     }
     
     @FindBy(xpath = "//td[@id='drawDownRequestGridTbl_Id_WIFT009AP_pager_left']/table/tbody/tr/td[7]")
@@ -515,6 +533,12 @@ public class RequestForFinancingObj_608 {
     private WebElement draw_down_request_approve_btn;
     public WebElement drawDownRequestApproveBtn_608() {
     	return draw_down_request_approve_btn;
+    }
+    
+    @FindBy(xpath = "//a[@menuvar='WIFT009AP']//parent::td//following-sibling::td//span")
+    private WebElement draw_down_request_approve_menu_close_icon;
+    public WebElement drawDownRequestApproveMenuCloseIcon_608() {
+    	return draw_down_request_approve_menu_close_icon;
     }
     
     @FindBy(xpath = "//a[@id='infoBarSearchButton_WIFT009MT']")

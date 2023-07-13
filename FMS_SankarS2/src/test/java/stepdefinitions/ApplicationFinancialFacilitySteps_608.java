@@ -52,6 +52,8 @@ public class ApplicationFinancialFacilitySteps_608 {
 //	ExcelData fmsTransactionsExcelData = new ExcelData(path,"IIS_Param_TestData","DataSet ID");
 //	ExcelData fmsTransactionsExcelData = new ExcelData(path,"DrawDownRequestTestData","DataSet ID");
 //	ExcelData fmsTransactionsExcelData = new ExcelData(path,"CommiteeApprovalTestData","DataSet ID");
+//	ExcelData fmsTransactionsExcelData = new ExcelData(path,"FacilityApplicationTestData","DataSet ID");
+	
 	Map<String, String> testData;
 	
 	
@@ -257,6 +259,12 @@ public class ApplicationFinancialFacilitySteps_608 {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FAID_002");   
 	}
 	
+//	@AT_FAID_003
+	@And("User_608 get the test data for test case AT_FAID_003")
+	public void user_get_the_test_data_for_test_case_at_faid_003() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FAID_003");   
+	}
+	
 	
 	
 	// Clear cache step
@@ -347,17 +355,24 @@ public class ApplicationFinancialFacilitySteps_608 {
 	@And("^User_608 enter the CIF No in main info tab$")
 	public void user_enter_the_cif_no_in_main_info_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainCIFNo_608());
-//		applicationFinancialFacilityObj608.mainCIFNo_608().sendKeys("444");
+//		applicationFinancialFacilityObj608.mainCIFNo_608().sendKeys("444",Keys.TAB);		
 		applicationFinancialFacilityObj608.mainCIFNo_608().sendKeys(testData.get("CIF No"),Keys.TAB);
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(applicationFinancialFacilityObj608.mainCIFNo_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	} 
 	}
 
 	@And("^User_608 enter the facility type in main info tab$")
 	public void user_enter_the_facility_type_in_main_info_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainFacilityType_608());
 //		applicationFinancialFacilityObj608.mainFacilityType().sendKeys("369");
-		applicationFinancialFacilityObj608.mainFacilityType_608().sendKeys(testData.get("Facility Type"),Keys.TAB);
-
-		
+		applicationFinancialFacilityObj608.mainFacilityType_608().sendKeys(testData.get("Facility Type"),Keys.TAB);		
 		for(int i = 0; i <= 500; i++) {
     		try {
 				if(!(applicationFinancialFacilityObj608.mainFacilityTypeLabel_608().getAttribute("prevvalue").isBlank())) {
@@ -413,7 +428,31 @@ public class ApplicationFinancialFacilitySteps_608 {
 	public void user_enter_the_total_value_in_additional_info_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainAdditionalTabTotalValue_608());
 //		applicationFinancialFacilityObj608.mainAdditionalTabTotalValue().sendKeys("1000");
-		applicationFinancialFacilityObj608.mainAdditionalTabTotalValue_608().sendKeys(testData.get("Total value"),Keys.TAB);		
+		applicationFinancialFacilityObj608.mainAdditionalTabTotalValue_608().sendKeys(testData.get("Total value"),Keys.TAB);
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(applicationFinancialFacilityObj608.mainAdditionalTabTotalValue_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}
+	}	
+	
+	@And("User_608 enter the FX Nominal limit in additional info tab")
+	public void user_enter_the_fx_nominal_limit_in_additional_info_tab() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainAdditionalTabFXNominalLimit_608());
+		applicationFinancialFacilityObj608.mainAdditionalTabFXNominalLimit_608().sendKeys(testData.get("FX Nominal Limit"),Keys.TAB);
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(applicationFinancialFacilityObj608.mainAdditionalTabFXNominalLimit_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}
 	}
 
 	@And("^User_608 enter the expire date in additional info tab$")
@@ -631,6 +670,14 @@ public class ApplicationFinancialFacilitySteps_608 {
     	// Facility already created popup
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.confirmPopup_608());
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.facilityAlreadyCreatedPopup_608());
+//    	for (int i = 0; i < 200; i++) {
+//			try {
+//		    	applicationFinancialFacilityObj608.facilityAlreadyCreatedPopup_608().click();
+//		    	break;
+//			} catch (Exception e) {
+//				
+//			}
+//		}
     	applicationFinancialFacilityObj608.facilityAlreadyCreatedPopup_608().click();
     	
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.successPopup_608());
@@ -664,11 +711,42 @@ public class ApplicationFinancialFacilitySteps_608 {
     	
     }
     
+    @And("User_608 close the maintanance screen under Application for financial facility in WIFAK")
+    public void user_close_the_maintanance_screen_under_application_for_financial_facility_in_wifak() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakAppFinancialFacilityMaintananceCloseIcon_608());
+    	for (int i = 0; i < 2000; i++) {
+			try {
+				applicationFinancialFacilityObj608.wifakAppFinancialFacilityMaintananceCloseIcon_608().click();
+		    	break;
+			} catch (Exception e) {
+				
+			}
+    	}
+    
+    	for (int i = 0; i < 2000; i++) {
+			try {
+		    	applicationFinancialFacilityObj608.ConfirmPopupOkBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				
+			}
+		}
+    }
+    
     @Then("User_608 clicks the Approve Level1 menu under Application for financial facilities")
     public void user_clicks_the_approve_level1_menu_under_application_for_fianancial_facilities() throws Throwable {
-    	Thread.sleep(5000);
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.applicationFinancialFacilityApproveLevel1_608());
-    	applicationFinancialFacilityObj608.applicationFinancialFacilityApproveLevel1_608().click();	
+    	for (int i = 0; i < 2000; i++) {
+			try {
+				applicationFinancialFacilityObj608.applicationFinancialFacilityApproveLevel1_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+//    	applicationFinancialFacilityObj608.applicationFinancialFacilityApproveLevel1_608().click();	
     }
 
     @And("User_608 enter the reference code in Approve level1")
@@ -727,6 +805,21 @@ public class ApplicationFinancialFacilitySteps_608 {
     	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();        
     }
     
+    @And("User_608 close the Approve level1 screen under Application for financial facility in WIFAK")
+    public void user_close_the_approve_level1_screen_under_application_for_financial_facility_in_wifak() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakApproveLevel1CloseIcon_608());
+    	for (int i = 0; i < 2000; i++) {
+			try {
+				applicationFinancialFacilityObj608.wifakApproveLevel1CloseIcon_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+    }
+    
     
     @Then("User_608 clicks the Approve Level2 menu under Application for financial facilities")
     public void user_clicks_the_approve_level2_menu_under_application_for_financial_facilities() throws Throwable {
@@ -761,6 +854,21 @@ public class ApplicationFinancialFacilitySteps_608 {
     	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.SuccessPopupOkBtn_608());
     	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+    }
+    
+    @And("User_608 close the Approve level2 screen under Application for financial facility in WIFAK")
+    public void user_close_the_approve_level2_screen_under_application_for_financial_facility_in_wifak() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakApproveLevel2CloseIcon_608());
+    	for (int i = 0; i < 2000; i++) {
+			try {
+				applicationFinancialFacilityObj608.wifakApproveLevel2CloseIcon_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
     }
     
     @Then("User_608 clicks the Approve Level3 menu under Application for financial facilities")
@@ -809,6 +917,20 @@ public class ApplicationFinancialFacilitySteps_608 {
         
     }
 
+    @And("User_608 close the Approve level3 screen under Application for financial facility in WIFAK")
+    public void user_close_the_approve_level3_screen_under_application_for_financial_facility_in_wifak() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakApproveLevel3CloseIcon_608());
+    	for (int i = 0; i < 2000; i++) {
+			try {
+				applicationFinancialFacilityObj608.wifakApproveLevel3CloseIcon_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+    }
     
     
  // @AT_AFF_052
@@ -1546,7 +1668,7 @@ public class ApplicationFinancialFacilitySteps_608 {
     @And("User_608 enter the Application Ref number in Maintanance under WIFAK Facilities Management")
     public void user_enter_the_application_ref_number_in_maintanance_under_wifak_facilities_management() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementMainApplicationRefInput_608());
-    	facilityManagementObj608.wifakFacilitiesManagementMainApplicationRefInput_608().sendKeys(testData.get("Reference Code"),Keys.TAB);
+    	facilityManagementObj608.wifakFacilitiesManagementMaintananceCodeInput_608().sendKeys(testData.get("Reference Code"),Keys.TAB);
     	for(int i = 0; i <= 1000; i++) {
     		try {
 				if(!(facilityManagementObj608.wifakFacilitiesManagementMainCIFNo_608().getAttribute("prevvalue").isBlank())) {
@@ -2463,14 +2585,14 @@ public class ApplicationFinancialFacilitySteps_608 {
     @And("^User_608 select the application for dropdown as decrease in main screen$")
     public void user_select_the_application_for_dropdown_as_decrease_in_main_screen() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainApplicationForDropdown_608());
-		dropDownHelper.SelectUsingVisibleText(applicationFinancialFacilityObj608.mainApplicationForDropdown_608(), testData.get("Application For"));
+		dropDownHelper.SelectUsingVisibleText(applicationFinancialFacilityObj608.mainApplicationForDropdown_608(), testData.get("Application For 1"));
     }
 
     @And("^User_608 enter the input as Existing Facility Ref in main screen$")
     public void user_enter_the_input_as_existing_facility_ref_in_main_screen() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainExistingFacilityRef_608());
-//    	applicationFinancialFacilityObj608.mainExistingFacilityRef_608().sendKeys(testData.get("Facility Ref"),Keys.TAB);
-    	applicationFinancialFacilityObj608.mainExistingFacilityRef_608().sendKeys("1539",Keys.TAB);	
+    	applicationFinancialFacilityObj608.mainExistingFacilityRef_608().sendKeys(testData.get("Facility Ref"),Keys.TAB);
+//    	applicationFinancialFacilityObj608.mainExistingFacilityRef_608().sendKeys("1539",Keys.TAB);	
     	for(int i = 0; i <= 300; i++) {
     		try {
 				if(!(applicationFinancialFacilityObj608.mainExistingFacilityRef_608().getAttribute("readonly").isBlank())) {
@@ -3058,6 +3180,191 @@ public class ApplicationFinancialFacilitySteps_608 {
     	Assert.assertEquals(testData.get("Status"), getStatus);
     }
     
+    
+//  @AT_FAID_002
+    @And("User_608 get the facility management code in Facilities Management Maintanance under WIFAK Application")
+    public void user_get_the_facility_management_code_in_facilities_management_maintanance_under_wifak_application() {
+    	waitHelper.waitForElementwithFluentwait(driver,	facilityManagementObj608.wifakFacilitiesManagementMaintananceCodeInput_608());
+    	String facilityCode = facilityManagementObj608.wifakFacilitiesManagementMaintananceCodeInput_608().getAttribute("prevvalue");
+    	fmsTransactionsExcelData.updateTestData(testData.get("DataSet ID"),"Facility Ref", facilityCode);    	
+    }
 
+//  @AT_FAID_003
+    @And("^User_608 select the application for dropdown as increase in main screen$")
+    public void user_select_the_application_for_dropdown_as_increase_in_main_screen() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainApplicationForDropdown_608());
+		dropDownHelper.SelectUsingVisibleText(applicationFinancialFacilityObj608.mainApplicationForDropdown_608(), testData.get("Application For"));
+    }
+    
+    @And("User_608 enter the facility value product class tab in limit details")
+    public void user_enter_the_facility_value_product_class_tab_in_limit_details() {
+    	waitHelper.waitForElementwithFluentwait(driver,	applicationFinancialFacilityObj608.limitDetailsProductClassTabFacilityValue_608());
+    	WebElement facilityValue = applicationFinancialFacilityObj608.limitDetailsProductClassTabFacilityValue_608();
+    	facilityValue.clear();
+    	facilityValue.sendKeys(testData.get("Facility Value"),Keys.TAB);
+    	for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(facilityValue.getAttribute("prevvalue").equals(testData.get("Facility Value")))) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}
+    }
+    
+    
+//   @AT_FAID_006
+    @And("^User_608 enter the Facility Reference code in main screen under WIFAK Draw Down request$")
+	public void user_enter_the_facility_reference_code_in_main_screen_under_WIFAK_draw_down_request() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainFacilityRef_608());
+		requestForFinancingObj608.drawdownMainFacilityRef_608().sendKeys(testData.get("Facility Ref"), Keys.TAB);
+		for (int i = 0; i <= 500; i++) {
+			try {
+				if (!(requestForFinancingObj608.drawdownMainDateSubmitted_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+    }
+    
+    @And("^User_608 select the draw down type in main screen under WIFAK Draw Down request$")
+	public void user_select_the_draw_down_type_in_main_screen_under_WIFAK_draw_down_request() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainDrawDownTypeLookup_608());
+		requestForFinancingObj608.drawdownMainDrawDownTypeLookup_608().click();
 
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainDrawdownTypeValue_608());
+		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.drawdownMainDrawdownTypeValue_608());
+	}
+
+	@And("^User_608 enter the Description in main screen under WIFAK Draw Down request$")
+	public void user_enter_the_description_in_main_screen_under_WIFAK_draw_down_request() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainDescription_608());
+//    	requestForFinancingObj608.drawdownMainDescription().sendKeys("Test");
+		requestForFinancingObj608.drawdownMainDescription_608().sendKeys(testData.get("Description"));
+	}
+    
+	@And("^User_608 select the product class in additional screen under WIFAK Draw Down request$")
+	public void user_select_the_product_class_in_additional_screen_under_WIFAK_draw_down_request() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				requestForFinancingObj608.drawdownAdditionalProductClassLookup_608());
+		requestForFinancingObj608.drawdownAdditionalProductClassLookup_608().click();
+		waitHelper.waitForElementwithFluentwait(driver,
+				requestForFinancingObj608.drawdownAdditionalProductClassCode_608());
+		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.drawdownAdditionalProductClassCode_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				if (!(requestForFinancingObj608.drawdownAdditionalProductClass_608().getAttribute("prevvalue")
+						.isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+
+	@And("^User_608 give the FC Amount in additional screen under WIFAK Draw Down request$")
+	public void user_give_the_fc_amount_in_additional_screen_under_WIFAK_draw_down_request() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownAdditionalFCAmount_608());
+		requestForFinancingObj608.drawdownAdditionalFCAmount_608().clear();
+//    	requestForFinancingObj608.drawdownAdditionalFCAmount().sendKeys("500",Keys.TAB);
+		requestForFinancingObj608.drawdownAdditionalFCAmount_608().sendKeys(testData.get("FC Amount"), Keys.TAB);
+		for (int i = 0; i <= 500; i++) {
+			try {
+				if (!(requestForFinancingObj608.drawdownAdditionalFCAmount_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+
+	@And("^User_608 enter the value date in main screen under WIFAK Draw Down request$")
+	public void user_enter_the_value_date_in_main_screen_under_WIFAK_draw_down_request() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainInfoTab_608());
+		requestForFinancingObj608.drawdownMainInfoTab_608().click();
+
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainValueDate_608());
+//    	requestForFinancingObj608.drawdownMainValueDate().sendKeys("05/01/2024",Keys.TAB);
+		requestForFinancingObj608.drawdownMainValueDate_608().sendKeys(testData.get("Value Date"), Keys.TAB);		
+		for (int i = 0; i <= 500; i++) {
+			try {
+				if (!(requestForFinancingObj608.drawdownMainValueDate_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}		
+	}
+    
+	@And("User_608 enter the from facility code in searchgrid under Verify\\Deny menu in Draw Down request")
+	public void user_enter_the_from_facility_code_in_searchgrid_under_verify_deny_menu_in_draw_down_request() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakDrawdownVerifyMenuSearchgridFromFacilityInput_608()); 
+		requestForFinancingObj608.wifakDrawdownVerifyMenuSearchgridFromFacilityInput_608().sendKeys(testData.get("Facility Ref"),Keys.ENTER);
+	}
+	
+	@And("User_608 close the Verify\\Denu menu tab in WIFAK Draw Down request")
+	public void user_close_the_verify_denu_menu_tab_in_wifak_draw_down_request() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownVerifyMenuCloseIcon_608());
+		for (int i = 0; i < 2000; i++) {
+			try {
+				requestForFinancingObj608.drawdownVerifyMenuCloseIcon_608().click();
+		    	break;
+			} catch (Exception e) {
+				
+			}
+    	}
+	}
+
+	@And("User_608 close the Approve menu tab in WIFAK Draw Down request")
+	public void user_close_the_approve_menu_tab_in_wifak_draw_down_request() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawDownRequestApproveMenuCloseIcon_608());
+		for (int i = 0; i < 2000; i++) {
+			try {
+				requestForFinancingObj608.drawDownRequestApproveMenuCloseIcon_608().click();
+		    	break;
+			} catch (Exception e) {
+				
+			}
+    	}
+	}
+
+	@And("User_608 enter the from facility code in searchgrid under Approve menu in Draw Down request")
+	public void user_enter_the_from_facility_code_in_searchgrid_under_approve_menu_in_draw_down_request() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakDrawdownApproveMenuSearchgridFromFacilityInput_608()); 
+		requestForFinancingObj608.wifakDrawdownApproveMenuSearchgridFromFacilityInput_608().sendKeys(testData.get("Facility Ref"),Keys.ENTER);	    
+	}
+	
+	@And("User_608 enter the from facility code in searchgrid under Update After Approve menu in Draw Down request")
+	public void user_enter_the_from_facility_code_in_searchgrid_under_update_after_approve_menu_in_draw_down_request() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveMenuSearchgridFromFacilityInput_608()); 
+		applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveMenuSearchgridFromFacilityInput_608().sendKeys(testData.get("Facility Ref"),Keys.ENTER);	    
+	}
+	
+	@And("User_608 decrease the FC Amount in Additional Details tab under Update After Approve in WIFAK Draw Down request")
+    public void user_decrease_the_fc_amount_in_additional_details_tab_under_update_after_approve_in_wifak_draw_down_request() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveAdditionalDetailsTabFCAmtInput_608());
+    	WebElement FCAmtInput_608 = applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveAdditionalDetailsTabFCAmtInput_608();
+    	FCAmtInput_608.sendKeys(testData.get("FC Amount"),Keys.TAB);
+    	for(int i = 0; i <= 500; i++) {
+    		try {
+				if(FCAmtInput_608.getAttribute("prevvalue").equals(testData.get("FC Amount"))) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}    
+	}
+    
+    
+    
+    
+    
+    
 }

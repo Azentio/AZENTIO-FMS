@@ -308,14 +308,13 @@ public class RequestForFinancingSteps_608 {
 	public void user_uncheck_the_issue_facility_offer_flag() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.issueFacilityOfferFlag_608());
 		WebElement issueFacilityOfferFlag = fmsParamObj608.issueFacilityOfferFlag_608();
-		if (issueFacilityOfferFlag.isSelected()) {
+		if(issueFacilityOfferFlag.isSelected()) {
 			issueFacilityOfferFlag.click();
 		}
 	}
 
 	@And("^User_608 move to facility reports tab in update after approve$")
 	public void user_move_to_facility_reports_tab_in_update_after_approve() throws Throwable {
-		Thread.sleep(5000);
 		waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.facilityTypeFacilityReports_608());
 		fmsParamObj608.facilityTypeFacilityReports_608().click();
 	}

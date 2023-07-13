@@ -54,6 +54,12 @@ public class ApplicationFinancialFacilityObj_608 {
 		return app_financial_facility_main;
 	}
 	
+	@FindBy(xpath = "//a[@menuvar='WIFT001MT']//parent::td//following-sibling::td//span")
+	private WebElement wifak_app_financial_facility_main_close_icon;
+	public WebElement wifakAppFinancialFacilityMaintananceCloseIcon_608() {
+		return wifak_app_financial_facility_main_close_icon;
+	}
+	
 	@FindBy(xpath = "//input[@id='statusDesc_WIFT001MT']")
 	private WebElement wifak_app_financial_facility_main_status;
 	public WebElement wifakAppFinancialFacilityMaintananceStatus_608() {
@@ -114,6 +120,13 @@ public class ApplicationFinancialFacilityObj_608 {
 		return main_additional_tab_total_value;
 	}
 	
+	@FindBy(xpath = "//input[@id='applicationFacilityfxnominallimit_WIFT001MT']")
+	private WebElement main_additional_tab_FX_nominal_limit;
+	public WebElement mainAdditionalTabFXNominalLimit_608() {
+		return main_additional_tab_FX_nominal_limit;
+	}
+	
+	
 	@FindBy(xpath = "//input[@id='applicationFacilityofferexpirydate_WIFT001MT']")
 	private WebElement additional_tab_expire_date;
 	public WebElement additionalTabExpireDate_608() {
@@ -142,6 +155,12 @@ public class ApplicationFinancialFacilityObj_608 {
 	private WebElement limit_details_new_record_product_class_value;
 	public WebElement limitDetailsNewRecordProductClassValue_608() {
 		return limit_details_new_record_product_class_value;
+	}
+	
+	@FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsFACILITY_VALUE_WIFT001MT']")
+	private WebElement limit_details_product_class_tab_facility_value;
+	public WebElement limitDetailsProductClassTabFacilityValue_608() {
+		return limit_details_product_class_tab_facility_value;
 	}
 	
 	@FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsCLEAN_FLAG_WIFT001MT']")
@@ -416,6 +435,12 @@ public class ApplicationFinancialFacilityObj_608 {
 		return approve_level1_submit_btn;
 	}
 	
+	@FindBy(xpath = "//a[@menuvar='WIFT001AP1']//parent::td//following-sibling::td//span")
+	private WebElement wifak_approve_level1_close_icon;
+	public WebElement wifakApproveLevel1CloseIcon_608() {
+		return wifak_approve_level1_close_icon;
+	}
+	
 	@FindBy(xpath = "//a[@id='WIFT001AP2']")
 	private WebElement application_financial_facility_approve2;
 	public WebElement applicationFinancialFacilityApproveLevel2_608() {
@@ -445,6 +470,12 @@ public class ApplicationFinancialFacilityObj_608 {
 	public WebElement approveLevel2SubmitBtn_608() {
 		return approve_level2_submit_btn;
 	}	
+	
+	@FindBy(xpath = "//a[@menuvar='WIFT001AP2']//parent::td//following-sibling::td//span")
+	private WebElement wifak_approve_level2_close_icon;
+	public WebElement wifakApproveLevel2CloseIcon_608() {
+		return wifak_approve_level2_close_icon;
+	}
 	
 	@FindBy(xpath = "//a[@id='WIFT001AP3']")
 	private WebElement application_financial_facility_approve3;
@@ -476,6 +507,11 @@ public class ApplicationFinancialFacilityObj_608 {
 		return approve_level3_submit_btn;
 	}
 	
+	@FindBy(xpath = "//a[@menuvar='WIFT001AP3']//parent::td//following-sibling::td//span")
+	private WebElement wifak_approve_level3_close_icon;
+	public WebElement wifakApproveLevel3CloseIcon_608() {
+		return wifak_approve_level3_close_icon;
+	}
 	
 //	@AT_AFF_052	
 	@FindBy(xpath = "//div[@id='gbox_applicationFacilityGridTbl_Id_WIFT001AP1']")
@@ -851,6 +887,12 @@ public class ApplicationFinancialFacilityObj_608 {
 	private WebElement wifak_draw_down_request_update_after_approve_menu;
 	public WebElement wifakDrawDownRequestUpdateAfterApproveMenu_608() {
 		return wifak_draw_down_request_update_after_approve_menu;
+	}
+	
+	@FindBy(xpath = "//input[@id='drawDownRequestGridTbl_Id_WIFT009UP_gs_fmsDrawDownVO.FROM_FACILITY']")
+	private WebElement wifak_draw_down_request_update_after_approve_menu_searchgrid_from_facility_input;
+	public WebElement wifakDrawDownRequestUpdateAfterApproveMenuSearchgridFromFacilityInput_608() {
+		return wifak_draw_down_request_update_after_approve_menu_searchgrid_from_facility_input;
 	}
 	
 	@FindBy(xpath = "//td[@id='drawDownRequestGridTbl_Id_WIFT009UP_pager_left']/table/tbody/tr/td[7]")

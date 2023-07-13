@@ -39,6 +39,7 @@ public class FacilityApplicationSteps_608 {
 	Map<String, String> testData;
 	
 	
+//	FacilityApplication - Increase/Decrease feature
 //	@AT_FAID_001
 	@And("User_608 get the test data for test case AT_FAID_001")
 	public void user_get_the_test_data_for_test_case_at_faid_001() throws Throwable {
@@ -291,7 +292,7 @@ public class FacilityApplicationSteps_608 {
 	public void user_check_the_general_limit_by_cif_flag_in_update_after_approve_menu_under_control_records() {
 		waitHelper.waitForElementwithFluentwait(driver,	fmsParamObj608.controlRecordsUpdateAfterApproveGeneralLimitCIFFlag_608());
 		WebElement GeneralLimitCIFFlag = fmsParamObj608.controlRecordsUpdateAfterApproveGeneralLimitCIFFlag_608();
-		if(GeneralLimitCIFFlag.isSelected()) {
+		if(!(GeneralLimitCIFFlag.isSelected())) {
 			GeneralLimitCIFFlag.click();
      	}
 	}
