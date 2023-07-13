@@ -1290,10 +1290,97 @@ public class ApplicationforfinancialfacilityOBJ_611 {
 	public WebElement finalapprove_611() {
 		return Final_Approve;
 	}
+	 //@127925
+	@FindBy(xpath="//select[@id='applicationFacilityDecision_1_WIFT001AP1']")
+	private WebElement Approvelevel1_Rejectbtn;
+	public WebElement approvelevel1rejectbtn_611() { //Reject
+		return Approvelevel1_Rejectbtn;
+	}
+	@FindBy(xpath="//button[@id='applicationfacility_approvelevel1_btn_WIFT001AP1']")
+	private WebElement Approvelevel1_Submitbtn;
+	public WebElement approvelevel1submitbtn_611() {
+		return Approvelevel1_Submitbtn;
+	}
+	@FindBy(xpath="//td[text()='Reopen Rejected Applications']")
+	private WebElement Reopen_Rejected_Applications_Tab ;
+	public WebElement reopenrejectedapplicationstab_611() {
+		return Reopen_Rejected_Applications_Tab;
+	}
+	@FindBy(xpath="//a[@id='WIFT0063MT']")
+	private WebElement Reopen_Rejected_Applications_Tab_Maintenance ;
+	public WebElement reopenrejectedapplicationstabmaintenance_611() {
+		return Reopen_Rejected_Applications_Tab_Maintenance;
+	}
+	@FindBy(xpath="//input[@id='applicationFacilityGridTbl_Id_WIFT0063MT_gs_fmsApplVO.CODE']")
+	private WebElement Reopen_Rejected_Applications_Tab_Maintenance_searchbox ;
+	public WebElement reopenrejectedapplicationstabmaintenanceserachbox_611() {
+		return Reopen_Rejected_Applications_Tab_Maintenance_searchbox;
+	}
+	@FindBy(xpath="//td[@id='td_applicationFacilityGridTbl_Id_WIFT0063MT_1_fmsApplVO.CODE']")
+	private WebElement Rejectdata_Retrivedata_Validated ;
+	public WebElement rejectdataretrivedatavalidated_611() {
+		return Rejectdata_Retrivedata_Validated;
+	}
+	//@956327________Repaymentplan
 	
-   
-   
-   
+	@FindBy(xpath="//button[@id='applicationfacility_repayplan_btn_WIFT001MT']")
+	private WebElement LimitDetailsTab_RepaymentplanTab ;
+	public WebElement limitdetailstabrepaymentplantab_611() {
+		return LimitDetailsTab_RepaymentplanTab;
+	}
+	@FindBy(xpath="//td[@id='td_ApplicationFacilityLimitDetailsGrid_WIFT001MT_1_fmsAppLimitDetVO.GENERAL_FACILITY_TYPE']")
+	private WebElement ApplicationFacility_LimitDetails ;
+	public WebElement ApplicationFacilityLimitDetailsRowClick_611() {
+		return ApplicationFacility_LimitDetails;
+	}
+	
+	@FindBy(xpath="//span[@id='ui-dialog-title-fmsRepaymentPlanDiv_id_WIFT001MT']")
+	private WebElement RepaymentPlan_Page_Open ;
+	public WebElement ForValidaterepaymentplanpageopen_611() {
+		return RepaymentPlan_Page_Open;
+	}//div[@id='fmsRepaymentPlanDiv_id_WIFT001MT']
+	
+	//@594207
+	
+	@FindBy(xpath="//input[@id='No_Of_Payments_WIFT001MT']")
+	private WebElement RepaymentPlan_No_Of_Payment ;
+	public WebElement repaymentplannoofpayment_611() {
+		return RepaymentPlan_No_Of_Payment;
+	}
+	@FindBy(xpath="//button[@id='createSchedule_WIFT001MT']")
+	private WebElement RepaymentPlan_CreateScheduleBtn ;
+	public WebElement repaymentplancreateschedulebtn_611() {
+		return RepaymentPlan_CreateScheduleBtn;
+	}
+	@FindBy(xpath="//input[@id='_popup_path_sol_confirm_ok']")
+	private WebElement Do_you_want_to_create_tentative_schedule_Okbtn ;
+	public WebElement DoyouwanttocreatetentativescheduleOkbtn_611() {
+		return Do_you_want_to_create_tentative_schedule_Okbtn;
+	}
+	@FindBy(xpath="//td[@id='td_repaumentPlanScheduleGridTbl_Id_WIFT001MT_69_rn']")
+	private WebElement Validate_NOofpaymentlast ;
+	public WebElement ValidateNOofpaymentlast_611() {
+		return Validate_NOofpaymentlast;
+	}
+	
+   //@816212
+	
+	@FindBy(xpath="//td[text()='Parameters']")
+	private WebElement IIS_ParameterTab ;
+	public WebElement IISParameterTab_611() {
+		return IIS_ParameterTab;
+	}
+	@FindBy(xpath="//td[text()='Product Class']")
+	private WebElement IIS_Parameter_Productclass ;
+	public WebElement IISParameterproductclass_611() {
+		return IIS_Parameter_Productclass;
+	}
+	@FindBy(xpath="//span[text()='Maintenance']")
+	private WebElement Productclass_Maintenance ;
+	public WebElement ProductclassMaintenance_611() {
+		return Productclass_Maintenance;
+	}
+	
    
     
 }

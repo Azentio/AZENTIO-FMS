@@ -6,4 +6,7 @@ Feature: Title of your feature
   @tag1
   Scenario: Title of your scenario
   
-And User_611 Validate all the floating Rate details is displayed or Not
+ And User_611 Click the No Of Payment Number under repayment plan page
+    And User_611 Click the create schedule button
+    And User_611 validate the No Of Payment is created or Not
+    

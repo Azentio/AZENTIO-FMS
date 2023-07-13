@@ -143,6 +143,12 @@ Feature: To Test the Financial facilities in FMS Application
     And User_611 clicks the save button
     And User_611 clicks the validate button
     And User_611 clicks the Approve Level1 link
+    And User_611 retrive the first data in approve level1
+    And User_611 select the decision as Reject
+    And User_611 clicks on the level1 submit button
+    And User_611 Click the Reopen Rejected Application tab under Wifak application
+    And User_611 Retrived the rejected datafrom approve level1
+    And User_611 Validate the rejected data is displayed in Reopen Rejected Application Tab  
     
     
     @127926

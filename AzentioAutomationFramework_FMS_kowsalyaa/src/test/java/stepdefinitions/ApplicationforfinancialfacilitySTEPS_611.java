@@ -38,7 +38,8 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 	Robot robot;
 	
 	String path = System.getProperty("user.dir") +"\\TestData\\FMSTestData.xlsx";
-   ExcelData FMS_AppforFinancialfacilityExcelData = new ExcelData(path,"FMS_AppforFinancialfacility","Data Set ID");
+	ExcelData FMS_AppforFinancialfacilityExcelData = new ExcelData(path,"FMS_AppforFinancialfacility","Data Set ID");
+  // ExcelData RepaymentplanExcelData = new ExcelData(path,"Repaymentplan","Data Set ID");
     Map<String, String> testData;
 	
 	String refCode;
@@ -67,6 +68,15 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
     public void User_611_Get_the_data_set_Id_for_AT_CA_091$() throws Throwable {
 		testData = FMS_AppforFinancialfacilityExcelData.getTestdata("AT_CA_091");
     }
+	@And("^User_611 Get the data set Id for AT_RP_003$")
+    public void User_611_Get_the_data_set_Id_for_AT_RP_003() throws Throwable {
+		testData = FMS_AppforFinancialfacilityExcelData.getTestdata("AT_RP_003");
+    }
+	@And("^User_611 Get the data set Id for AT_RP_001$")
+    public void User_611_Get_the_data_set_Id_for_AT_RP_001() throws Throwable {
+		testData = FMS_AppforFinancialfacilityExcelData.getTestdata("AT_RP_001");
+    }
+	
 	@And("^User_611 Click the first Wifak Application$")
     public void click_the_first_wifak_appliaction() throws Throwable {
 		waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.wifakapplication1_611());
@@ -113,71 +123,71 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
     @And("^User_611 Enter the CIF num under cif details$")
     public void enter_the_cif_num_under_cif_details() throws Throwable {
     	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.cifnumsearchbox_611());
-    	wifakapplicationobj_611.cifnumsearchbox_611().sendKeys("727");
-    	wifakapplicationobj_611.cifnumsearchbox_611().sendKeys(Keys.TAB);
-//    	*/
-//    	wifakapplicationobj_611.cifnumsearchbox_611().click();
-//    	wifakapplicationobj_611.cifnumsearchbox_611().sendKeys(testData.get("CIF NO"),Keys.TAB);
-//    	Thread.sleep(3000);
+//    	wifakapplicationobj_611.cifnumsearchbox_611().sendKeys("727");
+//    	wifakapplicationobj_611.cifnumsearchbox_611().sendKeys(Keys.TAB);    	
+    	//wifakapplicationobj_611.cifnumsearchbox_611().click();
+    	wifakapplicationobj_611.cifnumsearchbox_611().sendKeys(testData.get("CIF NO"),Keys.TAB);
+    	Thread.sleep(3000);
         
     }
 
     @And("^User_611 Enter the facility type under facility type details$")
     public void enter_the_facility_type_under_facility_type_details() throws Throwable {
-    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.facilitytypedetailsfacilitytype_611());
-    	wifakapplicationobj_611.facilitytypedetailsfacilitytype_611().sendKeys("369");
-   	wifakapplicationobj_611.facilitytypedetailsfacilitytype_611().sendKeys(Keys.TAB);
-    	//wifakapplicationobj_611.facilitytypedetailsfacilitytype_611().sendKeys(testData.get("Facility Type"),Keys.TAB);
-    	//Thread.sleep(3000);
-        
-    }
+    	wifakapplicationobj_611.facilitytypedetailsfacilitytype_611().sendKeys(testData.get("Facility Type"),Keys.TAB);
 
-    @And("^User_611 Enter the country of financing under facility type details$")
-    public void enter_the_country_of_financing_under_facility_type_details() throws Throwable {
-    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.facilitytypedetailscountryoffinancing_611());
-   	wifakapplicationobj_611.facilitytypedetailscountryoffinancing_611().sendKeys("320");
-   	wifakapplicationobj_611.facilitytypedetailscountryoffinancing_611().sendKeys(Keys.TAB);
-    	//wifakapplicationobj_611.facilitytypedetailscountryoffinancing_611().sendKeys(testData.get("Country of Financing"),Keys.TAB);
-    	//Thread.sleep(3000);
-    }
-
-    @And("^User_611 Enter the facility rating under facility type details$")
-    public void enter_the_facility_rating_under_facility_type_details() throws Throwable {
-    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.facilitytypedetailsfacilityrating_611());
-    	wifakapplicationobj_611.facilitytypedetailsfacilityrating_611().sendKeys("2",Keys.TAB);
-    	//wifakapplicationobj_611.facilitytypedetailsfacilityrating_611().sendKeys(Keys.TAB);
-    	//wifakapplicationobj_611.facilitytypedetailsfacilityrating_611().sendKeys(testData.get("Facility Rating"),Keys.TAB);
-    //	Thread.sleep(3000);
-//    	 for(int i = 0; i <= 500; i++) {
-//             try {
-//                 if(!(wifakapplicationobj_611.facilitytypedetailsfacilityrating_611().getAttribute("prevvalue").isBlank())) {
-//                     break;
-//                 }
-//             } catch (Exception e) {
-//                 // TODO: handle exception
-//             }
-//         }
-//        
-    }
-
-    @And("^User_611 Click the Additional details$")
-    public void click_the_additional_details() throws Throwable {
-    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.secondtabadditionaldetails_611());
-    	clickandactionhelper.moveToElement(wifakapplicationobj_611.secondtabadditionaldetails_611());
-        for (int i = 0; i < 300; i++) {
-            try {
-            	if (wifakapplicationobj_611.secondtabadditionaldetails_611().isDisplayed()) {
-            		wifakapplicationobj_611.secondtabadditionaldetails_611().click();
-                    break;
+		
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(wifakapplicationobj_611.facilitytypedetailsfacilitytype_611().getAttribute("prevvalue").isBlank())) {
+					break;
 				}
-            } catch (Exception e) {
-                if (i==299) {
-                    Assert.fail(e.getMessage());
-                }
-            }
-        }        
-    }
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	} 
+	}
 
+	@And("^User_611 Enter the country of financing under facility type details$")
+	public void user_enter_the_country_of_financing_under_facility_type_details() throws Throwable {
+		waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.facilitytypedetailscountryoffinancing_611());
+//		applicationFinancialFacilityObj608.mainCountryOfFinancing().sendKeys("320");
+		wifakapplicationobj_611.facilitytypedetailscountryoffinancing_611().sendKeys(testData.get("Country of Financing"),Keys.TAB);
+	}
+
+	@And("^User_611 Enter the facility rating under facility type details$")
+	public void user_enter_the_facility_rating_under_facility_type_details() throws Throwable {
+		waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.facilitytypedetailsfacilityrating_611());
+//		applicationFinancialFacilityObj608.mainFacilityRating().sendKeys("2");
+		wifakapplicationobj_611.facilitytypedetailsfacilityrating_611().sendKeys(testData.get("Facility Rating"),Keys.TAB);
+		
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(wifakapplicationobj_611.facilitytypedetailsfacilityrating_611().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}    
+	}
+
+	@And("^User_611 Click the Additional details$")
+	public void user_Click_the_additinal_details() throws Throwable {
+		waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.secondtabadditionaldetails_611());
+		for (int i = 0; i < 300; i++) {
+			try {
+				wifakapplicationobj_611.secondtabadditionaldetails_611().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==299) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+	}
+
+	
     @And("^User_611 Enter the currency code under Additional details$")
     public void enter_the_currency_code_under_additional_details() throws Throwable {
     	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.additionaldetailscurrencycode_611());
@@ -190,8 +200,8 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
     @And("^User_611 Enter the total value under Additional details$")
     public void enter_the_total_value_under_additional_details() throws Throwable {
     	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.additionaldetailstotalvalue_611());
-    	wifakapplicationobj_611.additionaldetailstotalvalue_611().sendKeys("10000");
-    	wifakapplicationobj_611.additionaldetailstotalvalue_611().sendKeys(Keys.TAB);
+    	//wifakapplicationobj_611.additionaldetailstotalvalue_611().sendKeys("1000");
+    	wifakapplicationobj_611.additionaldetailstotalvalue_611().sendKeys(testData.get("Total value"),Keys.TAB);
         
     }
     
@@ -440,6 +450,7 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 	    	
 	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.ButtonConfirmOk_611());
 	    	wifakapplicationobj_611.ButtonConfirmOk_611().click();
+	    	
 	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.ButtonSuccessOk_611());
 	    	wifakapplicationobj_611.ButtonSuccessOk_611().click();
 	    	
@@ -1090,6 +1101,7 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.floatingrateperiodicitytypesearchbox_611());
 	    	dropdownhelper.SelectUsingVisibleText(wifakapplicationobj_611.floatingrateperiodicitytypesearchbox_611(),"Month(s)");
 	    } 
+	    
 	    @Given("User_611 Validate all the floating Rate details is displayed or Not")
 	    public void user_validate_all_the_floating_rate_details_is_displayed_or_not() throws Throwable {
 	    	WebElement Floatingratedetailsisdisplayed = wifakapplicationobj_611.floatingrateperiodicitytypesearchbox_611();
@@ -1103,7 +1115,21 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 	    public void enter_the_product_class_value_two() throws Throwable {
 	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.productclasssearchbox_611());
 	    	wifakapplicationobj_611.productclasssearchbox_611().sendKeys("2",Keys.TAB);
-	    	//wifakapplicationobj_611.productclasssearchbox_611().sendKeys();
+	    	for(int i = 0; i <= 500; i++) {
+	            try {
+	                if(!(wifakapplicationobj_611.productclasssearchbox_611().getAttribute("prevvalue").isBlank())) {
+	                    break;
+	                }
+	            } catch (Exception e) {
+	                // TODO: handle exception
+	            }
+	        }
+		 waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.limitDetailsNewRecordCleanFlag_611());
+	     WebElement cleanFlag = wifakapplicationobj_611.limitDetailsNewRecordCleanFlag_611();
+	     if(!(cleanFlag.isSelected())) {
+	         cleanFlag.click();
+	     }
+	        
 	    	
 	    	
 	    }
@@ -2082,7 +2108,107 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 				 wifakapplicationobj_611.finalapprove_611().click();
 		       
 		    }
-	     
+	     //@127925
+		    @Given("User_611 select the decision as Reject")
+		    public void user_select_the_decision_as_reject() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.approvelevel1rejectbtn_611());
+				dropdownhelper.SelectUsingVisibleText(wifakapplicationobj_611.approvelevel1rejectbtn_611(),"Reject");
+				
+				waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.approvelevel1submitbtn_611());
+				 wifakapplicationobj_611.approvelevel1submitbtn_611().click();
+		    }
+		    @Given("User_611 Click the Reopen Rejected Application tab under Wifak application")
+		    public void user_click_the_reopen_rejected_application_tab_under_wifak_application() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.reopenrejectedapplicationstab_611());
+				 wifakapplicationobj_611.reopenrejectedapplicationstab_611().click();
+				 
+				 waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.reopenrejectedapplicationstabmaintenance_611());
+				 wifakapplicationobj_611.reopenrejectedapplicationstabmaintenance_611().click();
+		    }
+
+		    @Given("User_611 Retrived the rejected datafrom approve level1")
+		    public void user_retrived_the_rejected_datafrom_approve_level1() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.reopenrejectedapplicationstabmaintenanceserachbox_611());
+				 wifakapplicationobj_611.reopenrejectedapplicationstabmaintenanceserachbox_611().sendKeys(refCode,Keys.ENTER);
+		    	
+		        
+		    }
+
+		    @Given("User_611 Validate the rejected data is displayed in Reopen Rejected Application Tab")
+		    public void user_validate_the_rejected_data_is_displayed_in_reopen_rejected_application_tab() throws Throwable {
+		    	WebElement RejectedRetrivedataIsDisplayed = wifakapplicationobj_611.rejectdataretrivedatavalidated_611();
+
+		        if (RejectedRetrivedataIsDisplayed.isDisplayed()) {
+		        	Assert.assertTrue(true);
+		    }
+		    }
+		  //@956327________Repaymentplan
+		    @Given("User_611 Click the Application Facility Limit Details Row for Repayment Tab Enabled")
+		    public void user_click_the_application_facility_limit_details_row_for_repayment_tab_enabled() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.ApplicationFacilityLimitDetailsRowClick_611());
+				 wifakapplicationobj_611.ApplicationFacilityLimitDetailsRowClick_611().click();
+				Thread.sleep(3000);
+		    }
+
+		    @Given("User_611 Clicks the Repayment Plan Tab")
+		    public void user_clicks_the_repayment_plan_tab() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.limitdetailstabrepaymentplantab_611());
+				 wifakapplicationobj_611.limitdetailstabrepaymentplantab_611().click();
+				 Thread.sleep(3000);
+		    }
+
+		    @Given("User_611 Validate the Repayment Plan Tab is Open or Not")
+		    public void user_validate_the_repayment_plan_tab_is_open_or_not() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.ForValidaterepaymentplanpageopen_611());
+		    	WebElement ForValidaterepaymentplanpageopen = wifakapplicationobj_611.ForValidaterepaymentplanpageopen_611();
+
+		        if (ForValidaterepaymentplanpageopen.isDisplayed()) {
+
+		           Assert.assertTrue(true);
+		           //Assert.fail();
+		        }
+		        
+		    	
+		    } 
+		  //@594207
+		    
+		    @Given("User_611 Enter the No Of Payment Number under repayment plan page")
+		    public void user_enter_the_no_of_payment_number_under_repayment_plan_page() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.repaymentplannoofpayment_611());
+		    	clickandactionhelper.doubleClick(wifakapplicationobj_611.repaymentplannoofpayment_611());
+		    	wifakapplicationobj_611.repaymentplannoofpayment_611().sendKeys(testData.get("No Of Payment"),Keys.TAB);
+		    }
+
+		    @Given("User_611 Click the create schedule button")
+		    public void user_click_the_create_schedule_button() throws Throwable {
+		    	for(int i = 0; i <= 300; i++) {
+		    		try {
+		    			javascripthelper.scrollIntoView(wifakapplicationobj_611.repaymentplancreateschedulebtn_611());
+		    			break;
+					} catch (Exception e) {
+						if(i == 300) {
+							Assert.fail(e.getMessage());
+						}
+					}
+		    	}
+
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.repaymentplancreateschedulebtn_611());
+		    	wifakapplicationobj_611.repaymentplancreateschedulebtn_611().click();
+		    	
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.DoyouwanttocreatetentativescheduleOkbtn_611());
+		    	wifakapplicationobj_611.DoyouwanttocreatetentativescheduleOkbtn_611().click();
+		    	
+		        
+		    }
+
+		    @Given("User_611 validate the No Of Payment is created or Not")
+		    public void user_validate_the_no_of_payment_is_created_or_not() throws Throwable {
+		        WebElement ValidateNOofpaymentlastiscreated = wifakapplicationobj_611.ValidateNOofpaymentlast_611();
+		        if(ValidateNOofpaymentlastiscreated.isDisplayed());
+		        Assert.assertTrue(true);
+		    }
+
+		   
 	    	
 	    
 
