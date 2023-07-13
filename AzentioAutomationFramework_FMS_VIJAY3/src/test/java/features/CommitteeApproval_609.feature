@@ -347,10 +347,10 @@ And User_609 Click on Grading under WIFAK APPLICATION submenu
 And User_609 click on the Maintenance Screen in Grading          
 And User_609 Select the Application Refernece in Grading            
 And User_609 Click on Save Button in Grading                      
-And User_609 Click the Application ok button
+And User_609 Click the Grading ok button
 And User_609 Click on Dismiss if Send Alert pop up appears in Grading
 And User_609 Click on Approve in Grading                          
 And User_609 Select the Code in Approve screen in grading         
 And User_609 Click on Approve in Approve screen in Grading        
 And User_609 Click the Application confirm ok button
-And User_609 Click the Application ok button
+And User_609 Click the Grading ok button

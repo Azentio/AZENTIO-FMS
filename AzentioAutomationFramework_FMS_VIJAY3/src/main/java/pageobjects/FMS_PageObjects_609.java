@@ -257,17 +257,46 @@ public class FMS_PageObjects_609 {
 		return REQUESTFORFINANCIN_Sublimit_ProductClass_Search_609;
 	}
 	
+	@FindBy(xpath = "//select[@id='requestFinancingGeneralFacilityType_RFFRF00MT']")
+	private WebElement REQUESTFORFINANCIN_Sublimit_Item_609;
+	public WebElement REQUESTFORFINANCIN_Sublimit_Item_609() {
+		return REQUESTFORFINANCIN_Sublimit_Item_609;
+	}
+	
 	@FindBy(xpath = "//input[@id='gridtab_requestFinancingLimitDetailsGeneralFacilityProductClass_CSMRF00MT_gs_DESC_ENG']")
 	private WebElement REQUESTFORFINANCIN_Sublimit_ProductClass_609;
 	public WebElement REQUESTFORFINANCIN_Sublimit_ProductClass_609() {
 		return REQUESTFORFINANCIN_Sublimit_ProductClass_609;
 	}
 	
+	@FindBy(xpath = "//span[@id='spanLookup_requestFinancingLimitDetailsClassType_RFFRF00MT']/span")
+	private WebElement REQUESTFORFINANCIN_Sublimit_Type_Search_609;
+	public WebElement REQUESTFORFINANCIN_Sublimit_Type_Search_609() {
+		return REQUESTFORFINANCIN_Sublimit_Type_Search_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='gridtab_requestFinancingLimitDetailsClassType_RFFRF00MT_gs_CODE']")
+	private WebElement REQUESTFORFINANCIN_Sublimit_Type_609;
+	public WebElement REQUESTFORFINANCIN_Sublimit_Type_609() {
+		return REQUESTFORFINANCIN_Sublimit_Type_609;
+	}
+	
+	
+	
+	
+	
+	
 	
 	@FindBy(xpath = "//input[@id='requestFinancingLimitDetailsCleanFlagdChkBox_CSMRF00MT']")
 	private WebElement REQUESTFORFINANCIN_Sublimit_ProductClass_Clean_609;
 	public WebElement REQUESTFORFINANCIN_Sublimit_ProductClass_Clean_609() {
 		return REQUESTFORFINANCIN_Sublimit_ProductClass_Clean_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='requestFinancingLimitDetailsPeriodicityNbr_RFFRF00MT']")
+	private WebElement REQUESTFORFINANCIN_Sublimit_ProductClass_Tenure_609;
+	public WebElement REQUESTFORFINANCIN_Sublimit_ProductClass_Tenure_609() {
+		return REQUESTFORFINANCIN_Sublimit_ProductClass_Tenure_609;
 	}
 	 
 	@FindBy(xpath = "//input[@id='requestFinancingLimitDetailsRfNewMargin_CSMRF00MT']")
@@ -1087,7 +1116,7 @@ public class FMS_PageObjects_609 {
 		return WifakApplication_Grading_Maintenance_609;
 	}
 	
-	@FindBy(xpath = "search=>//span[@id='spanLookup_Application_Ref_WIFT003MT']/span")
+	@FindBy(xpath = "//span[@id='spanLookup_Application_Ref_WIFT003MT']/span")
 	private WebElement WifakApplication_Grading_Maintenance_SearchCode_609;
 	public WebElement WifakApplication_Grading_Maintenance_SearchCode_609() {
 		return WifakApplication_Grading_Maintenance_SearchCode_609;
@@ -1123,4 +1152,292 @@ public class FMS_PageObjects_609 {
 		return WifakApplication_Grading_Approve_ApproveButton_609;
 	}
 
+	@FindBy(xpath = "//input[@id='_popup_path_sol_ok']")
+	private WebElement Grading_Ok;
+	public WebElement Grading_Ok() {
+		return Grading_Ok;
+	}
+	
+///******************************************************************************************************************************///
+	
+	
+	@FindBy(xpath = "//td[text()='Corporate jk']")
+	private WebElement CorporateJK_609;
+	public WebElement CorporateJK_609() {
+		return CorporateJK_609;
+	}
+	
+	@FindBy(xpath = "//td[text()='Corporate fin']")
+	private WebElement CorporateJK_CorporateFin_609;
+	public WebElement CorporateJK_CorporateFin_609() {
+		return CorporateJK_CorporateFin_609;
+	}
+	
+	@FindBy(xpath = "//td[text()='Request For Financing']")
+	private WebElement CorporateJK_CorporateFin_RequestForFinancing_609;
+	public WebElement CorporateJK_CorporateFin_RequestForFinancing_609() {
+		return CorporateJK_CorporateFin_RequestForFinancing_609;
+	}
+	
+	@FindBy(xpath = "//a[@id='CFIRF00MT']/span[text()='Maintenance']")
+	private WebElement CorporateJK_CorporateFin_RequestForFinancing_Maintenance_609;
+	public WebElement CorporateJK_CorporateFin_RequestForFinancing_Maintenance_609() {
+		return CorporateJK_CorporateFin_RequestForFinancing_Maintenance_609;
+	}
+	
+	@FindBy(xpath = "//span[@id='spanLookup_requestFinanacingCif_CFIRF00MT']/span")
+	private WebElement CorporateJK__RequestForFinancing_Maintenance_CustomerSearch_609;
+	public WebElement CorporateJK__RequestForFinancing_Maintenance_CustomerSearch_609() {
+		return CorporateJK__RequestForFinancing_Maintenance_CustomerSearch_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='gridtab_requestFinanacingCif_CFIRF00MT_gs_cifVO.CIF_NO']")
+	private WebElement CorporateJK__RequestForFinancing_Maintenance_Customer_609;
+	public WebElement CorporateJK__RequestForFinancing_Maintenance_Customer_609() {
+		return CorporateJK__RequestForFinancing_Maintenance_Customer_609;
+	}
+	
+	
+	
+	@FindBy(xpath = "//span[@id='spanLookup_requestFinancingFacilityType_CFIRF00MT']/span")
+	private WebElement CorporateJK__RequestForFinancing_Maintenance_FacilityTypeSearch_609;
+	public WebElement CorporateJK__RequestForFinancing_Maintenance_FacilityTypeSearch_609() {
+		return CorporateJK__RequestForFinancing_Maintenance_FacilityTypeSearch_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='gridtab_requestFinancingFacilityType_CFIRF00MT_gs_CODE']")
+	private WebElement CorporateJK__RequestForFinancing_Maintenance_FacilityType_609;
+	public WebElement CorporateJK__RequestForFinancing_Maintenance_FacilityType_609() {
+		return CorporateJK__RequestForFinancing_Maintenance_FacilityType_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='requestFinancingFacilityTotalvalue_CFIRF00MT']")
+	private WebElement CorporateJK__RequestForFinancing_Maintenance_TotalLimit_609;
+	public WebElement CorporateJK__RequestForFinancing_Maintenance_TotalLimit_609() {
+		return CorporateJK__RequestForFinancing_Maintenance_TotalLimit_609;
+	}
+	
+	@FindBy(xpath = "//li[@id='requestFinancingLimitDtlsTabs_CFIRF00MT']/a/span[text()='Disbursement/Sublimit']")
+	private WebElement CorporateJK__RequestForFinancing_Maintenance_SublimitTab_609;
+	public WebElement CorporateJK__RequestForFinancing_Maintenance_SublimitTab_609() {
+		return CorporateJK__RequestForFinancing_Maintenance_SublimitTab_609;
+	}
+	
+	@FindBy(xpath = "//td[@id='add_RequestFinancingLimitDetailsGridId_CFIRF00MT']/div/span")
+	private WebElement CorporateJK_RequestForFinancing_SublimitTab_AddIcon_609;
+	public WebElement CorporateJK_RequestForFinancing_SublimitTab_AddIcon_609() {
+		return CorporateJK_RequestForFinancing_SublimitTab_AddIcon_609;
+	}
+	
+	@FindBy(xpath = "//span[@id='spanLookup_requestFinancingLimitDetailsGeneralFacilityProductClass_CFIRF00MT']/span")
+	private WebElement CorporateJK_RequestForFinancing_SublimitTab_ProductClassSearch_609;
+	public WebElement CorporateJK_RequestForFinancing_SublimitTab_ProductClassSearch_609() {
+		return CorporateJK_RequestForFinancing_SublimitTab_ProductClassSearch_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='gridtab_requestFinancingLimitDetailsGeneralFacilityProductClass_CFIRF00MT_gs_CODE']")
+	private WebElement CorporateJK_RequestForFinancing_SublimitTab_ProductClass_609;
+	public WebElement CorporateJK_RequestForFinancing_SublimitTab_ProductClass_609() {
+		return CorporateJK_RequestForFinancing_SublimitTab_ProductClass_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='requestFinancingLimitDetailsCleanFlagdChkBox_CFIRF00MT']")
+	private WebElement CorporateJK_RequestForFinancing_SublimitTab_Clean_609;
+	public WebElement CorporateJK_RequestForFinancing_SublimitTab_Clean_609() {
+		return CorporateJK_RequestForFinancing_SublimitTab_Clean_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='requestFinancingLimitDetailsRfNewMargin_CFIRF00MT']")
+	private WebElement CorporateJK_RequestForFinancing_SublimitTab_NewMargin_609;
+	public WebElement CorporateJK_RequestForFinancing_SublimitTab_NewMargin_609() {
+		return CorporateJK_RequestForFinancing_SublimitTab_NewMargin_609;
+	}
+	
+	@FindBy(xpath = "//button[@id='limitDetails_add_btn_CFIRF00MT']/span[contains(text(),' Add ')]")
+	private WebElement CorporateJK_RequestForFinancing_SublimitTab_AddButton_609;
+	public WebElement CorporateJK_RequestForFinancing_SublimitTab_AddButton_609() {
+		return CorporateJK_RequestForFinancing_SublimitTab_AddButton_609;
+	}
+	
+	@FindBy(xpath = "//label[@id='requestFinancingFormId_CFIRF00MT_save_key']")
+	private WebElement CorporateJK_RequestForFinancing_Save_609;
+	public WebElement CorporateJK_RequestForFinancing_Save_609() {
+		return CorporateJK_RequestForFinancing_Save_609;
+	}
+	
+	@FindBy(xpath = "//label[@id='requestFinancingFormId_CFIRF00MT_Validate_key']")
+	private WebElement CorporateJK_RequestForFinancing_Validate_609;
+	public WebElement CorporateJK_RequestForFinancing_Validate_609() {
+		return CorporateJK_RequestForFinancing_Validate_609;
+	}
+	
+	@FindBy(xpath = "//a[@id='dismissbut_CFIRF00MT']/span")
+	private WebElement CorporateJK_RequestForFinancing_DismissPopUp_609;
+	public WebElement CorporateJK_RequestForFinancing_DismissPopUp_609() {
+		return CorporateJK_RequestForFinancing_DismissPopUp_609;
+	}
+	
+	
+	@FindBy(xpath = "//a[@id='dismissbut_RFFRF00MT']/span")
+	private WebElement Request_RequestForFinancing_DismissPopUp_609;
+	public WebElement Request_RequestForFinancing_DismissPopUp_609() {
+		return Request_RequestForFinancing_DismissPopUp_609;
+	}
+	
+	@FindBy(xpath = "//a[@id='dismissbut_RFFRF00P1']/span")
+	private WebElement Request_RequestForFinancing_ApproveLevel1_DismissPopUp_609;
+	public WebElement Request_RequestForFinancing_ApproveLevel1_DismissPopUp_609() {
+		return Request_RequestForFinancing_ApproveLevel1_DismissPopUp_609;
+	}
+	
+	
+	@FindBy(xpath = "//span[text()='Approve Level 1']")
+	private WebElement CorporateJK_RequestForFinancing_ApproveLevel1_609;
+	public WebElement CorporateJK_RequestForFinancing_ApproveLevel1_609() {
+		return CorporateJK_RequestForFinancing_ApproveLevel1_609;
+	}
+
+	
+	@FindBy(xpath = "//input[@id='requestFinancingGridTbl_Id_CFIRF00P1_gs_fmsRequestFinancingVO.CODE']")
+	private WebElement CorporateJK_RequestForFinancing_ApproveLevel1_Code_609;
+	public WebElement CorporateJK_RequestForFinancing_ApproveLevel1_Code_609() {
+		return CorporateJK_RequestForFinancing_ApproveLevel1_Code_609;
+	}
+	
+	@FindBy(xpath = "//span[text()='Customer Grading & Recommendations']")
+	private WebElement CorporateJK__RequestForFinancing_Maintenance_CustomerGradingandRecommendationsTab_609;
+	public WebElement CorporateJK__RequestForFinancing_Maintenance_CustomerGradingandRecommendationsTab_609() {
+		return CorporateJK__RequestForFinancing_Maintenance_CustomerGradingandRecommendationsTab_609;
+	}
+	
+	@FindBy(xpath = "//select[@id='requestDecisionForward_1_CFIRF00P1']")
+	private WebElement CorporateJK_RequestForFinancing_ApproveLevel1_Decision_609;
+	public WebElement CorporateJK_RequestForFinancing_ApproveLevel1_Decision_609() {
+		return CorporateJK_RequestForFinancing_ApproveLevel1_Decision_609;
+	}
+	
+	@FindBy(xpath = "//select[@id='requestDecisionForwardP1_CFIRF00P1']")
+	private WebElement CorporateJK_RequestForFinancing_ApproveLevel1_ForwardDecision_609;
+	public WebElement CorporateJK_RequestForFinancing_ApproveLevel1_ForwardDecision_609() {
+		return CorporateJK_RequestForFinancing_ApproveLevel1_ForwardDecision_609;
+	}
+	
+	@FindBy(xpath = "//label[@id='requestFinancingFormId_CFIRF00P1_approve_key']")
+	private WebElement CorporateJK_RequestForFinancing_ApproveLevel1_Approve_609;
+	public WebElement CorporateJK_RequestForFinancing_ApproveLevel1_Approve_609() {
+		return CorporateJK_RequestForFinancing_ApproveLevel1_Approve_609;
+	}
+	
+	@FindBy(xpath = "//a[@id='dismissbut_CFIRF00P1']/span")
+	private WebElement CorporateJK_RequestForFinancing_ApproveLevel1_SendAlertPopUp_609;
+	public WebElement CorporateJK_RequestForFinancing_ApproveLevel1_SendAlertPopUp_609() {
+		return CorporateJK_RequestForFinancing_ApproveLevel1_SendAlertPopUp_609;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	@FindBy(xpath = "//span[text()='Approve Level 3']")
+	private WebElement CorporateJK_RequestForFinancing_ApproveLevel3_609;
+	public WebElement CorporateJK_RequestForFinancing_ApproveLevel3_609() {
+		return CorporateJK_RequestForFinancing_ApproveLevel3_609;
+	}
+
+	
+	@FindBy(xpath = "//input[@id='requestFinancingGridTbl_Id_CFIRF00P3_gs_fmsRequestFinancingVO.CODE']")
+	private WebElement CorporateJK_RequestForFinancing_ApproveLevel3_Code_609;
+	public WebElement CorporateJK_RequestForFinancing_ApproveLevel3_Code_609() {
+		return CorporateJK_RequestForFinancing_ApproveLevel3_Code_609;
+	}
+
+	@FindBy(xpath = "//select[@id='requestDecisionForward3_CFIRF00P3']")
+	private WebElement CorporateJK_RequestForFinancing_ApproveLevel3_Decision_609;
+	public WebElement CorporateJK_RequestForFinancing_ApproveLevel3_Decision_609() {
+		return CorporateJK_RequestForFinancing_ApproveLevel3_Decision_609;
+	}
+	
+	@FindBy(xpath = "//label[@id='requestFinancingFormId_CFIRF00P3_approve_key']")
+	private WebElement CorporateJK_RequestForFinancing_ApproveLevel3_Approve_609;
+	public WebElement CorporateJK_RequestForFinancing_ApproveLevel3_Approve_609() {
+		return CorporateJK_RequestForFinancing_ApproveLevel3_Approve_609;
+	}
+	
+	@FindBy(xpath = "//a[@id='dismissbut_CFIRF00P3']/span")
+	private WebElement CorporateJK_RequestForFinancing_ApproveLevel3_SendAlertPopUp_609;
+	public WebElement CorporateJK_RequestForFinancing_ApproveLevel3_SendAlertPopUp_609() {
+		return CorporateJK_RequestForFinancing_ApproveLevel3_SendAlertPopUp_609;
+	}
+	
+	@FindBy(xpath = "//a[@id='CFIRF00CV']/span[text()='Credit Review']")
+	private WebElement CorporateJK_RequestForFinancing_CreditReview_609;
+	public WebElement CorporateJK_RequestForFinancing_CreditReview_609() {
+		return CorporateJK_RequestForFinancing_CreditReview_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='requestFinancingGridTbl_Id_CFIRF00CV_gs_fmsRequestFinancingVO.CODE']")
+	private WebElement CorporateJK_RequestForFinancing_CreditReview_Code_609;
+	public WebElement CorporateJK_RequestForFinancing_CreditReview_Code_609() {
+		return CorporateJK_RequestForFinancing_CreditReview_Code_609;
+	}
+
+	
+	@FindBy(xpath = "//li[@id='creditCommitteeRecommendationsTab_CFIRF00MT']/a/span[text()='Credit Committee Recommendations']")
+	private WebElement CorporateJK_RequestForFinancing_CreditReview_CreditCommitteeRecommendations_609;
+	public WebElement CorporateJK_RequestForFinancing_CreditReview_CreditCommitteeRecommendations_609() {
+		return CorporateJK_RequestForFinancing_CreditReview_CreditCommitteeRecommendations_609;
+	}
+	
+	@FindBy(xpath = "//div[@id='requestFinancingCreditReviewRecommandations_CFIRF00CV']/div/span[text()='Recommendations']")
+	private WebElement CorporateJK_RequestForFinancing_CreditReview_CreditCommitteeRecommendations_Recommendations_609;
+	public WebElement CorporateJK_RequestForFinancing_CreditReview_CreditCommitteeRecommendations_Recommendations_609() {
+		return CorporateJK_RequestForFinancing_CreditReview_CreditCommitteeRecommendations_Recommendations_609;
+	}
+	
+	@FindBy(xpath = "//tr[@id='RequestFinancingRecommendationsGridId_CFIRF00CVghead_0']//td/span")
+	private WebElement CorporateJK_RequestForFinancing_CreditReview_CreditCommitteeRecommendations_Recommendations_AddIcon_609;
+	public WebElement CorporateJK_RequestForFinancing_CreditReview_CreditCommitteeRecommendations_Recommendations_AddIcon_609() {
+		return CorporateJK_RequestForFinancing_CreditReview_CreditCommitteeRecommendations_Recommendations_AddIcon_609;
+	}
+	
+//	@FindBy(xpath = "")
+//	private WebElement CorporateJK_RequestForFinancing_CreditReview_CreditCommitteeRecommendations_Recommendations_RecommendedBy_609;
+//	public WebElement CorporateJK_RequestForFinancing_CreditReview_CreditCommitteeRecommendations_Recommendations_RecommendedBy_609() {
+//		return CorporateJK_RequestForFinancing_CreditReview_CreditCommitteeRecommendations_Recommendations_RecommendedBy_609;
+//	}
+//	
+	@FindBy(xpath = "//table[@id='RequestFinancingRecommendationsGridId_CFIRF00CV']/tbody/tr/td[@tdlabel='CR Recommendation']/select")
+	private WebElement CorporateJK_RequestForFinancing_CreditReview_CreditCommitteeRecommendations_Recommendations_CRRecommendation_609;
+	public WebElement CorporateJK_RequestForFinancing_CreditReview_CreditCommitteeRecommendations_Recommendations_CRRecommendation_609() {
+		return CorporateJK_RequestForFinancing_CreditReview_CreditCommitteeRecommendations_Recommendations_CRRecommendation_609;
+	}
+	
+	@FindBy(xpath = "//label[@id='requestFinancingFormId_CFIRF00CV_Credit_Review_Key']")
+	private WebElement CorporateJK_CreditReview_CreditReviewbutton_609;
+	public WebElement CorporateJK_CreditReview_CreditReviewbutton_609() {
+		return CorporateJK_CreditReview_CreditReviewbutton_609;
+	}
+
+	@FindBy(xpath = "//a[@id='dismissbut_CFIRF00CV']/span")
+	private WebElement CorporateJK_RequestForFinancing_CreditReview__SendAlertPopUp_609;
+	public WebElement CorporateJK_RequestForFinancing_CreditReview__SendAlertPopUp_609() {
+		return CorporateJK_RequestForFinancing_CreditReview__SendAlertPopUp_609;
+	}
+	
+	@FindBy(xpath = "//select[@id='requestFinancingApplicationFor_CFIRF00MT']")
+	private WebElement CorporateJK__RequestForFinancing_Maintenance_ReasonforSubmission_609;
+	public WebElement CorporateJK__RequestForFinancing_Maintenance_ReasonforSubmission_609() {
+		return CorporateJK__RequestForFinancing_Maintenance_ReasonforSubmission_609;
+	}
+	
+	@FindBy(xpath = "//td[text()='Request']")
+	private WebElement Request_609;
+	public WebElement Request_609() {
+		return Request_609;
+	}
 }
+
