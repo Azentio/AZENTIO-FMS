@@ -2154,6 +2154,12 @@ public class FMS_WifakApplication_Obj {
 			return RepaymentPlanPopup_InRepaymentPlan_610;
 		}
 		
+		@FindBy(xpath = "//div[@id='jqgh_repaumentPlanScheduleGridTbl_Id_WIFT001MT_VALUE_DATE']")
+		private WebElement dueDateInRepaymentPlanPopup_InRepaymentPlan_610;
+		public WebElement dueDateInRepaymentPlanPopup_InRepaymentPlan_610() {
+			return dueDateInRepaymentPlanPopup_InRepaymentPlan_610;
+		}
+		
 		@FindBy(xpath = "//span[contains(text(),' Print Schedule ')]")
 		private WebElement clickPrintSchedule_InRepaymentPlan_610;
 		public WebElement clickPrintSchedule_InRepaymentPlan_610() {
@@ -2211,6 +2217,12 @@ public class FMS_WifakApplication_Obj {
 			return approvel1_LimitsDetails_610;
 		}
 		
+		@FindBy(xpath = "//td[@id='td_ApplicationFacilityLimitDetailsGrid_WIFT001AP1_1_fmsAppLimitDetVO.GENERAL_FACILITY_TYPE']")
+		private WebElement approvel1_productClass_610;
+		public WebElement approvel1_productClass_610() {
+			return approvel1_productClass_610;
+		}
+		
 		@FindBy(xpath = "//button[@id='applicationfacility_repayplan_btn_WIFT001AP1']")
 		private WebElement approvel1_RepaymentPlan_btn_In_LimitsDetails_610;
 		public WebElement approvel1_RepaymentPlan_btn_In_LimitsDetails_610() {
@@ -2253,5 +2265,19 @@ public class FMS_WifakApplication_Obj {
 		private WebElement FloatingRatePeriodicityTypeinlimitDetail_610;
 		public WebElement FloatingRatePeriodicityTypeinlimitDetail_610() {
 			return FloatingRatePeriodicityTypeinlimitDetail_610;
+		}
+		
+		//---------Approval Committee Recommendations
+		
+		@FindBy(xpath = "//li[@id='applicationFacilityLimitDetailsTabs_WIFT002MT']")
+		private WebElement LimitDetailsTabs_ApprovalCommitteeRecommendations__610;
+		public WebElement LimitDetailsTabs_ApprovalCommitteeRecommendations__610() {
+			return LimitDetailsTabs_ApprovalCommitteeRecommendations__610;
+		}
+		
+		@FindBy(xpath = "//td[@id='td_ApplicationFacilityLimitDetailsGrid_WIFT002MT_1_fmsAppLimitDetVO.GENERAL_FACILITY_TYPE']")
+		private WebElement productClass_ApprovalCommitteeRecommendations__610;
+		public WebElement productClass_ApprovalCommitteeRecommendations__610() {
+			return productClass_ApprovalCommitteeRecommendations__610;
 		}
 }

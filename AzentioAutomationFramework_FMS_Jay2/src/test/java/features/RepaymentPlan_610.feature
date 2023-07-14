@@ -62,8 +62,7 @@ Feature: Repayment plan
     Then User_610 Enter the value in No Of Payments  In Repayment Plan
     And User_610 Click Create Schedule In Repayment Plan
     
-    
-    And User_610 Click Yes Create Tentative Schedule Popup In Repayment Plan
+        And User_610 Click Yes Create Tentative Schedule Popup In Repayment Plan
     And User_610 Click Print Schedule In Repayment Plan
     Then User_610 Validate the printing repayment plan Working or Not
     
@@ -120,6 +119,14 @@ Feature: Repayment plan
     And User_610 Enter ValueOn Product Class
     Then User_610 Check Flag in Clean Level IN Limits Detalis SubMenu
     And User_610 Click Add button AfterEnter Value On Product Class
+    Then User_610 Click the Product Class In Limits Details
+    And User_610 Click Repayment Plan In Limits Details
+    Then User_610 Enter the value in No Of Payments  In Repayment Plan
+    And User_610 Click Create Schedule In Repayment Plan
+    Then User_610 Click Warning popup No In Repayment Plan
+    And User_610 Click Save Button After In Repayment Plan
+    Then User_610 Click Ok Button In Waring Screen In Repayment Plan
+    And User_610 Click OK  Button In Sucess Screen In Repayment Plan
     
        
     And User_610 Click Validate Button in Document Details

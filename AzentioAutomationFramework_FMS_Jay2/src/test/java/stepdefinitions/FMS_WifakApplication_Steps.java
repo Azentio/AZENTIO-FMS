@@ -3458,14 +3458,15 @@ public class FMS_WifakApplication_Steps {
 	public void user_click_print_schedule_in_repayment_plan(Integer int1) {
 		
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ScheduleDetailsMenu_InRepaymentPlan_610());
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.dueDateInRepaymentPlanPopup_InRepaymentPlan_610());
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.clickPrintSchedule_InRepaymentPlan_610());
 		
-		for (int i = 0; i < 200; i++) {
+		for (int i = 0; i < 2000; i++) {
 			try {
-				clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.clickPrintSchedule_InRepaymentPlan_610());
+				FMS_WifakApplication_Obj.clickPrintSchedule_InRepaymentPlan_610().click();
 				break;
 			} catch (Exception e) {
-				if (i == 199) {
+				if (i == 1999) {
 					Assert.fail(e.getMessage());
 				}
 			}
@@ -3509,6 +3510,10 @@ public class FMS_WifakApplication_Steps {
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvel1_LimitsDetails_610());
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvel1_LimitsDetails_610());
 		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvel1_productClass_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvel1_productClass_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvel1_productClass_610());
+		
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvel1_RepaymentPlan_btn_In_LimitsDetails_610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvel1_RepaymentPlan_btn_In_LimitsDetails_610());
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvel1_RepaymentPlan_btn_In_LimitsDetails_610());
@@ -3540,9 +3545,10 @@ public class FMS_WifakApplication_Steps {
 
 	@And("User_{int} Enter Floating Rate Periodicity in limit Detail")
 	public void user_enter_floating_rate_periodicity_in_limit_detail(Integer int1) {
-		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.FloatingRateinlimitDetail_610());
-		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.FloatingRateinlimitDetail_610());
-		FMS_WifakApplication_Obj.FloatingRateinlimitDetail_610().sendKeys(testData.get("Floating Rate Periodicity"));
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.FloatingRatePeriodicityinlimitDetail_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.FloatingRatePeriodicityinlimitDetail_610());
+		FMS_WifakApplication_Obj.FloatingRatePeriodicityinlimitDetail_610().sendKeys(testData.get("Floating Rate Periodicity"));
+		FMS_WifakApplication_Obj.FloatingRatePeriodicityinlimitDetail_610().sendKeys(Keys.TAB);
 	}
 
 	@And("User_{int} Enter Floating Rate Periodicity Type in limit Detail")
