@@ -1363,7 +1363,7 @@ public class ApplicationforfinancialfacilityOBJ_611 {
 		return Validate_NOofpaymentlast;
 	}
 	
-   //@816212
+   //@816212_IIS Param
 	
 	@FindBy(xpath="//td[text()='Parameters']")
 	private WebElement IIS_ParameterTab ;
@@ -1380,6 +1380,55 @@ public class ApplicationforfinancialfacilityOBJ_611 {
 	public WebElement ProductclassMaintenance_611() {
 		return Productclass_Maintenance;
 	}
+	@FindBy(xpath="//a[@id='infoBarSearchButton_M003MT']")
+	private WebElement Productclass_Maintenance_Infosearchbtn ;
+	public WebElement ProductclassMaintenanceinfosearchbtn_611() {
+		return Productclass_Maintenance_Infosearchbtn;
+	}
+	@FindBy(xpath="//input[@id='iISProductClassListGridTbl_Id_M003MT_gs_trsctrlclassVO.CLASS']")
+	private WebElement Productclass_Maintenance_Infosearchbtn_clsearchbtn ;
+	public WebElement ProductclassMaintenanceinfosearchbtnclsearchbtn_611() {
+		return Productclass_Maintenance_Infosearchbtn_clsearchbtn;
+	}
+	@FindBy(xpath="//tr[@id='1']")
+	private WebElement Productclass_Maintenance_Infosearchbtn_clsearchbtn_Doubletap ;
+	public WebElement ProductclassMaintenanceinfosearchbtnclsearchbtndoubletap_611() {
+		return Productclass_Maintenance_Infosearchbtn_clsearchbtn_Doubletap;
+	}
+	@FindBy(xpath="iisProductClassAdditionalInformation_M003MT")
+	private WebElement IISparameter_ProductclsMaintenance_AdditionalInformationTab;
+	public WebElement IISparameterProductclsMaintenanceAdditionalInformationTab_611() {
+		return IISparameter_ProductclsMaintenance_AdditionalInformationTab;
+	}
+	@FindBy(xpath="//select[@id='iisProductClassAccuralBases_M003MT']")//Actual/365
+	private WebElement IISparameter_ProductclsMaintenance_AdditionalInformationTab_AccrualBasis;//Actual/Actual
+	public WebElement IISparameterProductclsMaintenanceAdditionalInformationTabaccrualbasis_611() {
+		return IISparameter_ProductclsMaintenance_AdditionalInformationTab_AccrualBasis;
+	}
+	@FindBy(xpath="//label[@id='iisProductClassMaintFormId_M003MT_Save_key']")
+	private WebElement iisparameter_productclass_Savebtn;
+	public WebElement iisparameterproductclassSavebtn_611() {
+		return iisparameter_productclass_Savebtn;
+	}
+	@FindBy(xpath="//input[@id='_popup_path_sol_confirm_ok']")
+	private WebElement iisparameter_productclass_Savebtn_confirmbtn;
+	public WebElement iisparameter_productclass_Savebtn_confirmbtn_611() {
+		return iisparameter_productclass_Savebtn_confirmbtn;
+	}
+	@FindBy(xpath="//input[@id='_popup_path_sol_ok']")
+	private WebElement iisparameter_productclass_Savebtn_confirmbtn_Updatesuccesokbtn;
+	public WebElement iisparameter_productclass_Savebtn_confirmbtnupdatesuccesokbtn_611() {
+		return iisparameter_productclass_Savebtn_confirmbtn_Updatesuccesokbtn;
+	}
+	//@816212_FmsCore
+	
+	@FindBy(xpath="//select[@id='accrualBasis_WIFT001MT']")//Actual/Actual
+	private WebElement RepaymentPlan_AccrualBasis;//Actual/365
+	public WebElement RepaymentPlanAccrualBasis_611() { //31/365  //Actual/365
+		return RepaymentPlan_AccrualBasis;
+	}
+	
+	
 	
    
     

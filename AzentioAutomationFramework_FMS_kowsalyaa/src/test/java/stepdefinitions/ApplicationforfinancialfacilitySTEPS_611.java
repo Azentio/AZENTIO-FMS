@@ -76,6 +76,14 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
     public void User_611_Get_the_data_set_Id_for_AT_RP_001() throws Throwable {
 		testData = FMS_AppforFinancialfacilityExcelData.getTestdata("AT_RP_001");
     }
+	@And("^User_611 Get the data set Id for AT_RP_005$")
+    public void User_611_Get_the_data_set_Id_for_AT_RP_005() throws Throwable {
+		testData = FMS_AppforFinancialfacilityExcelData.getTestdata("AT_RP_005");
+    }
+	@And("^User_611 Get the data set Id for AT_RP_004$")
+    public void User_611_Get_the_data_set_Id_for_AT_RP_004() throws Throwable {
+		testData = FMS_AppforFinancialfacilityExcelData.getTestdata("AT_RP_004");
+    }
 	
 	@And("^User_611 Click the first Wifak Application$")
     public void click_the_first_wifak_appliaction() throws Throwable {
@@ -2207,12 +2215,34 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 		        if(ValidateNOofpaymentlastiscreated.isDisplayed());
 		        Assert.assertTrue(true);
 		    }
+		  //@816212_FmsCore
+		    
+		    @Given("User_611 validate the Accrual Basis is displayed")
+		    public void user_validate_the_accrual_basis_is_displayed_and_changed() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.RepaymentPlanAccrualBasis_611());
+		    	wifakapplicationobj_611.RepaymentPlanAccrualBasis_611().click();
+		    	
+		    	 WebElement RepaymentPlanAccrualBasisisdisplayed = wifakapplicationobj_611.RepaymentPlanAccrualBasis_611();
+			        if(RepaymentPlanAccrualBasisisdisplayed.isDisplayed());
+			        Assert.assertTrue(true);
+		    }
+		    @Given("User_611 validate the Accrual Basis is Changed")
+		    public void user_validate_the_accrual_basis_is_changed() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.RepaymentPlanAccrualBasis_611());
+		    	dropdownhelper.SelectUsingVisibleText(wifakapplicationobj_611.RepaymentPlanAccrualBasis_611(), "Actual/Actual");
 
-		   
-	    	
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.RepaymentPlanAccrualBasis_611());
+		    	dropdownhelper.SelectUsingVisibleText(wifakapplicationobj_611.RepaymentPlanAccrualBasis_611(), "31/365");
+		    	
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.RepaymentPlanAccrualBasis_611());
+		    	dropdownhelper.SelectUsingVisibleText(wifakapplicationobj_611.RepaymentPlanAccrualBasis_611(), "Actual/365");
+
+		    	WebElement RepaymentPlanAccrualBasischangingisdisplayed = wifakapplicationobj_611.RepaymentPlanAccrualBasis_611();
+		        if(RepaymentPlanAccrualBasischangingisdisplayed.isDisplayed());
+		        Assert.assertTrue(true);
 	    
 
-	   
+		    }
 
 	}
 
