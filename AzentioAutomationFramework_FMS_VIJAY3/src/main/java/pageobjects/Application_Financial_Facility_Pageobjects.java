@@ -346,11 +346,7 @@ public class Application_Financial_Facility_Pageobjects {
 		return FacilityTypeUpdateAfterApproveRevolvingOneOff;
 	}
 	
-	@FindBy(xpath = "//input[@name='fmsFacilityTypeCO.fmsFacilityTypeVO.APPLY_REVOLVING_CONTROLS_YN']")
-	private WebElement FacilityTypeUpdateAfterApproveApplyRevolvingControls ;
-	public WebElement FacilityType_UpdateAfterApprove_ApplyRevolvingControls() {
-		return FacilityTypeUpdateAfterApproveApplyRevolvingControls;
-	}
+	
 		
 	@FindBy(id = "fmsFacilityTypeMaxRevolvingTimes_P008UP")
 	private WebElement FacilityTypeUpdateAfterApproveMaxRevolvingTimes ;
@@ -374,6 +370,12 @@ public class Application_Financial_Facility_Pageobjects {
 	private WebElement FacilityTypeApproveSelectCode;
 	public WebElement FacilityType_Approve_SelectCode() {
 		return FacilityTypeApproveSelectCode;
+	}
+	
+	@FindBy(xpath = "//input[@name='fmsFacilityTypeCO.fmsFacilityTypeVO.APPLY_REVOLVING_CONTROLS_YN']")
+	private WebElement FacilityTypeUpdateAfterApproveApplyRevolvingControls ;
+	public WebElement FacilityType_UpdateAfterApprove_ApplyRevolvingControls() {
+		return FacilityTypeUpdateAfterApproveApplyRevolvingControls;
 	}
 	
 	//**********************TestCase = @402668_01***************************//

@@ -59,12 +59,12 @@ And User_609 Click on Dismiss if Send Alert pop up appears in Credit Review in C
 
 
 
-And User_609 Select the Reason for Submission after Approve in Corporate JK
-And User_609 Select Existing Facility Number in Corporate JK							
-
-	//span[@id='spanLookup_fmsFacilityFromFacility_CFIRF00MT']/span
-	//input[@id='gridtab_fmsFacilityFromFacility_CFIRF00MT_gs_fmsFacilityVO.FROM_APPLICATION']
-	//table[@id='gridtab_fmsFacilityFromFacility_CFIRF00MT']/tbody/tr[2]/td[text()='0000004798']
+#And User_609 Select the Reason for Submission after Approve in Corporate JK
+#And User_609 Select Existing Facility Number in Corporate JK							
+#
+#	//span[@id='spanLookup_fmsFacilityFromFacility_CFIRF00MT']/span
+#	//input[@id='gridtab_fmsFacilityFromFacility_CFIRF00MT_gs_fmsFacilityVO.FROM_APPLICATION']
+#	//table[@id='gridtab_fmsFacilityFromFacility_CFIRF00MT']/tbody/tr[2]/td[text()='0000004798']
 #	
 #And User_609 Click on Modification Reason in Corporate JK               //label[text()='Modification Reason ']
 #And User_609 Click on Add icon in Modification Reason in Corporate JK			//td[@id='add_reguestFinancingModificationRejectReasonGrid_CFIRF00MT']
@@ -131,10 +131,24 @@ And User_609 Select Existing Facility Number in Corporate JK
 
 
 
+@737733
+Scenario: SUPT180323 - Facility Expiration Date Button and its validation not visible during Reolving Facility Modification_BMO180189
 
-
-
-
+Given navigate to FMS param application and login with valid credentials2
+And User_609 get the test data set id for AT_FAM_008
+And User_609 Click on the Parameters menu
+And User_609 Click on the Facility Type Submenu  
+And User_609 Click on Update After Approve Screen
+And User_609 Select the Code in Update After Approve Screen
+And User_609 Select Revolving or OneOff Option in Facility Type Update After Approve screen
+And User_609 Click on Update
+And User_609 Click the Application confirm ok button
+And User_609 Click the ok button
+And User_609 Click on Approve Screen
+And User_609 Select the Code in Approve Screen
+And User_609 Click on Approve 
+And User_609 Click the Application confirm ok button
+And User_609 Click the ok button
 
 
 

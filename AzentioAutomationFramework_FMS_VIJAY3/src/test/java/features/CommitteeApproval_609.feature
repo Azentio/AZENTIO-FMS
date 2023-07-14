@@ -48,7 +48,7 @@ And User_609 Select the Facility Type
 And User_609 Enter the Total Limit
 And User_609 Click on the Disbursement or Sublimit tab
 And User_609 Click on Add icon in Disbursement or sublimit tab
-And User_609 Select the Product Class in Request
+And User_609 Select the Product Class in REQUESTFORFINANCIN
 And User_609 Enter the New margin value
 And User_609 Enable Clean flag in Product Class
 And User_609 Click on Add in Product Class 
