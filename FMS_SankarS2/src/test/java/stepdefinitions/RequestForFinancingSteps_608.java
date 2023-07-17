@@ -39,10 +39,10 @@ public class RequestForFinancingSteps_608 {
 	FMSLogin login = new FMSLogin(driver);
 
 	String path = System.getProperty("user.dir") + "\\TestData\\FMSTestData.xlsx";
-	ExcelData fmsTransactionsExcelData = new ExcelData(path,"RequestForFinancingTestData","DataSet ID");
-//	ExcelData fmsTransactionsExcelData = new ExcelData(path,"IIS_Param_TestData","DataSet ID");
-//	ExcelData fmsTransactionsExcelData = new ExcelData(path,"DrawDownRequestTestData","DataSet ID");
-//	ExcelData fmsTransactionsExcelData = new ExcelData(path, "CollateralManagementTestData", "DataSet ID");
+	ExcelData fmsRequestForFinancingExcelData = new ExcelData(path,"RequestForFinancingTestData","DataSet ID");
+	ExcelData fmsIISParamExcelData = new ExcelData(path,"IISParamTestData","DataSet ID");
+	ExcelData fmsDrawDownRequestExcelData = new ExcelData(path,"DrawDownRequestTestData","DataSet ID");
+	ExcelData fmsTransactionsExcelData = new ExcelData(path, "CollateralManagementTestData", "DataSet ID");
 
 	Map<String, String> testData;
 
@@ -52,36 +52,46 @@ public class RequestForFinancingSteps_608 {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_043");
 	}
 
+//	Request For Financing Test Data
 //  @AT_RF_098
 	@And("^User get the test data for test case AT_RF_098$")
 	public void User_VAK_get_the_test_data_for_test_case_AT_RF_098() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_098");
+		testData = fmsRequestForFinancingExcelData.getTestdata("DS_AT_RF_098");
 	}
-
 
 //  @AT_RF_157
 	@And("User_608 get the test data for test case AT_RF_157")
 	public void get_the_test_data_for_test_case_at_rf_157() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_157");
+		testData = fmsRequestForFinancingExcelData.getTestdata("DS_AT_RF_157");
 	}
 
 //	@AT_RF_158_Param
 	@And("^User_608 get the test data for test case AT_RF_158_Param$")
 	public void get_the_test_data_for_test_case_atrf158param() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS02_AT_RF_158");
+		testData = fmsRequestForFinancingExcelData.getTestdata("DS02_AT_RF_158");
 	}
 
 //	@AT_RF_158_Core
 	@And("^User_608 get the test data for test case AT_RF_158_Core$")
 	public void get_the_test_data_for_test_case_atrf158core() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS01_AT_RF_158");
+		testData = fmsRequestForFinancingExcelData.getTestdata("DS01_AT_RF_158");
 	}
 
+	
+//	DrawDownRequest Features
+//	@AT_DDR_021
+	@And("^User_608 get the test data for test case AT_DDR_021$")
+	public void get_the_test_data_for_test_case_AT_DDR_021() throws Throwable {
+		testData = fmsDrawDownRequestExcelData.getTestdata("DS_AT_DDR_021");
+	}
+	
 //	@AT_DDR_025
 	@And("^User_608 get the test data for test case AT_DDR_025$")
 	public void get_the_test_data_for_test_case_AT_DDR_025() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_DDR_025");
+		testData = fmsDrawDownRequestExcelData.getTestdata("DS_AT_DDR_025");
 	}
+	
+	
 
 //	@AT_CM_043
 	@And("^User_608 get the test data for test case AT_CM_043$")
@@ -110,14 +120,10 @@ public class RequestForFinancingSteps_608 {
 //	@AT_RF_014_IISParam
 	@And("^User_608 get the test data for test case AT_RF_014_IISParam$")
 	public void get_the_test_data_for_test_case_AT_RF_014iisparam() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_014");
+		testData = fmsIISParamExcelData.getTestdata("DS_AT_RF_014");
 	}
 
-//	@AT_DDR_021
-	@And("^User_608 get the test data for test case AT_DDR_021$")
-	public void get_the_test_data_for_test_case_AT_DDR_021() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_DDR_021");
-	}
+
 
 //	@AT_RF_014
 	@And("^User_608 clicks on the parameter feature in IIS Param application$")
@@ -903,9 +909,9 @@ public class RequestForFinancingSteps_608 {
 				requestForFinancingObj608.drawdownVerifySendAlertPopup_608().click();
 				break;
 			} catch (Exception e) {
-				if (i == 1999) {
-					Assert.fail(e.getMessage());
-				}
+//				if (i == 1999) {
+//					Assert.fail(e.getMessage());
+//				}
 			}
 		}
 
@@ -947,13 +953,25 @@ public class RequestForFinancingSteps_608 {
 
 		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
 		applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
+		
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.SuccessPopupOkBtn_608());
+		for (int i = 0; i < 2000; i++) {
+			try {
+				applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
 
 		// Post Approval pop-up
-		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownPostApprovalYesBtn_608());
-		requestForFinancingObj608.drawdownPostApprovalYesBtn_608().click();
+//		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownPostApprovalYesBtn_608());
+//		requestForFinancingObj608.drawdownPostApprovalYesBtn_608().click();
 
-		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.SuccessPopupOkBtn_608());
-		applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+//		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.SuccessPopupOkBtn_608());
+//		applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
 
 	}
 

@@ -1,4 +1,4 @@
-Feature: User_608 to validate the Application for Financila Facility features
+Feature: User_608 to validate the Application for Financial Facility features
 
 @AT_AFF_036
 Scenario: ABSAI190084 - Floating Yield Issue at FMS

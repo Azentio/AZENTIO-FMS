@@ -35,7 +35,7 @@ public class FacilityApplicationSteps_608 {
 	FMSLogin login = new FMSLogin(driver);
 
 	String path = System.getProperty("user.dir") + "\\TestData\\FMSTestData.xlsx";
-	ExcelData fmsTransactionsExcelData = new ExcelData(path,"FacilityApplicationTestData","DataSet ID");
+	ExcelData fmsFacilityApplicationExcelData = new ExcelData(path,"FacilityApplicationTestData","DataSet ID");
 	Map<String, String> testData;
 	
 	
@@ -43,7 +43,7 @@ public class FacilityApplicationSteps_608 {
 //	@AT_FAID_001
 	@And("User_608 get the test data for test case AT_FAID_001")
 	public void user_get_the_test_data_for_test_case_at_faid_001() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FAID_001");   
+		testData = fmsFacilityApplicationExcelData.getTestdata("DS_AT_FAID_001");   
 	}
 	
 	

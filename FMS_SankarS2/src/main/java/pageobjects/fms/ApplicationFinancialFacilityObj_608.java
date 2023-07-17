@@ -381,10 +381,10 @@ public class ApplicationFinancialFacilityObj_608 {
 		return send_alert_popup;
 	}
 	
-	@FindBy(xpath = "/html/body/div[70]/div[1]/a")
-	private WebElement level3_send_alert_popup;
-	public WebElement level3SendAlertPopup_608() {
-		return level3_send_alert_popup;
+	@FindBy(xpath = "//a[@id='dismissbut_WIFT001AP3']")
+	private WebElement level3_send_alert_popup_dismiss_btn;
+	public WebElement level3SendAlertPopupDismissBtn_608() {
+		return level3_send_alert_popup_dismiss_btn;
 	}
 	
 	@FindBy(xpath = "//a[@id='dismissbut_WIFT001MT']")
@@ -559,6 +559,12 @@ public class ApplicationFinancialFacilityObj_608 {
 	
 	
 	// @AT_AFF_098_FMSCore
+	@FindBy(xpath = "//input[@id='lookuptxt_applicationFacilityMarketedBy_WIFT001MT']")
+	private WebElement main_marketed_by_field_input;
+	public WebElement mainMarketedByFieldInput_608() {
+		return main_marketed_by_field_input;
+	}
+	
 	@FindBy(xpath = "//span[@id='spanLookup_applicationFacilityMarketedBy_WIFT001MT']")
 	private WebElement main_marketed_by_field_search;
 	public WebElement mainMarketedByFieldSearch_608() {
@@ -1310,7 +1316,51 @@ public class ApplicationFinancialFacilityObj_608 {
 		return send_alert_approve_item_Approve_btn;
 	}
     
+	
+//	@AT_AE_010
+	@FindBy(id = "config_icon_lookuptxt_applicationFacilityMarketedBy_WIFT001MT")
+    private WebElement wifak_financial_facility_main_marketed_by_spanner_icon;
+	public WebElement wifakFinancialFacilityMainMarketedBySpannerIcon_608() {
+		return wifak_financial_facility_main_marketed_by_spanner_icon;
+	}
     
-    
+	@FindBy(xpath = "//td[@class='labelTd']/span[text()='Maintenance']")
+	private WebElement wifak_financial_facility_main_marketed_by_spanner_maintanance;
+	public WebElement wifakFinancialFacilityMainMarketedBySpannerMaintanance_608() {
+		return wifak_financial_facility_main_marketed_by_spanner_maintanance;
+	}
+	
+	@FindBy(xpath = "//select[@id='fldcust_requiredFlag_WIFT001MT']")
+	private WebElement wifak_financial_facility_main_marketed_by_customize_tab_required_dropdown;
+	public WebElement wifakFinancialFacilityMainMarketedByCustomizeTabRequiredDropdown_608() {
+		return wifak_financial_facility_main_marketed_by_customize_tab_required_dropdown;
+	}
+	
+	@FindBy(xpath = "//button[@id='fieldCust_saveBtn']")
+	private WebElement wifak_financial_facility_main_marketed_by_customize_tab_save_btn;
+	public WebElement wifakFinancialFacilityMainMarketedByCustomizeTabSaveBtn_608() {
+		return wifak_financial_facility_main_marketed_by_customize_tab_save_btn;
+	}
+	
+	@FindBy(xpath = "//button[@id='fieldCust_closeBtn']")
+	private WebElement wifak_financial_facility_main_marketed_by_customize_tab_close_btn;
+	public WebElement wifakFinancialFacilityMainMarketedByCustomizeTabCloseBtn_608() {
+		return wifak_financial_facility_main_marketed_by_customize_tab_close_btn;
+	}
+	
+	@FindBy(xpath = "//td[@class='labelTd']/span[text()='Approve']")
+	private WebElement wifak_financial_facility_main_marketed_by_spanner_approve;
+	public WebElement wifakFinancialFacilityMainMarketedBySpannerApprove_608() {
+		return wifak_financial_facility_main_marketed_by_spanner_approve;
+	}
+	
+	@FindBy(xpath = "//button[@id='fieldCust_saveBtn']")
+	private WebElement wifak_financial_facility_main_marketed_by_customize_tab_approve_btn;
+	public WebElement wifakFinancialFacilityMainMarketedByCustomizeTabApproveBtn_608() {
+		return wifak_financial_facility_main_marketed_by_customize_tab_approve_btn;
+	}
+	
+	
+	
     
 }

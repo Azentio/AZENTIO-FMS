@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jul 13 17:01:58 IST 2023</td>
+<td>Started on:</td><td>Mon Jul 17 18:33:34 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>219 seconds (219354 ms)</td>
+<tr><td>Total time:</td><td>137 seconds (137204 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,17 +67,24 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TSR-AMANAUPG170045", "Optional[To check the Request For Financing Feature]"</td>
-<td></td>
-<td>184</td>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check this field is non-mandatory and user can able to make this field as mandatory using customization option", "Optional[User_608 to validate the Accounting Entries features]"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.testData&quot; is null
+	at stepdefinitions.ApplicationFinancialFacilitySteps_608.user_select_the_required_as_required_under_marketed_by_cutomize_tab(ApplicationFinancialFacilitySteps_608.java:3571)
+	at ✽.User_608 select the Required as Required under Marketed By Cutomize tab(file:///C:/Users/inindc00608/git/Sankar_FMS/FMS_SankarS2/src/test/java/features/AccountingEntries_608.feature:38)
+</pre></div><a href='#' onClick='toggleBox("stack-trace218638614", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace218638614'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.testData&quot; is null
+	at stepdefinitions.ApplicationFinancialFacilitySteps_608.user_select_the_required_as_required_under_marketed_by_cutomize_tab(ApplicationFinancialFacilitySteps_608.java:3571)
+	at ✽.User_608 select the Required as Required under Marketed By Cutomize tab(file:///C:/Users/inindc00608/git/Sankar_FMS/FMS_SankarS2/src/test/java/features/AccountingEntries_608.feature:38)
+</pre></div></td>
+<td>114</td>
 <td>Runner.TestApplication@5afa3c9</td></tr>
 </table><p>
 </body>

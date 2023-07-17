@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
@@ -42,17 +43,19 @@ public class ApplicationFinancialFacilitySteps_608 {
 	ClicksAndActionsHelper clicksAndActionsHelper = new ClicksAndActionsHelper(driver);
 	DropDownHelper dropDownHelper = new DropDownHelper(driver);
 	Selenium_Actions selenium_Actions = new Selenium_Actions(driver);
+	Actions actions = new Actions(driver);
 	FMSLogin login = new FMSLogin(driver);
 	
 	String path = System.getProperty("user.dir") +"\\TestData\\FMSTestData.xlsx";
 //	ExcelData fmsTransactionsExcelData = new ExcelData(path,"ApplicationFinancialFacility","DataSet ID");
-//	ExcelData fmsTransactionsExcelData = new ExcelData(path,"FacilitiesManagementTestData","DataSet ID");
-	ExcelData fmsTransactionsExcelData = new ExcelData(path,"RequestForFinancingTestData","DataSet ID");
-//	ExcelData fmsTransactionsExcelData = new ExcelData(path,"FMSParameterTestData","DataSet ID");
-//	ExcelData fmsTransactionsExcelData = new ExcelData(path,"IIS_Param_TestData","DataSet ID");
-//	ExcelData fmsTransactionsExcelData = new ExcelData(path,"DrawDownRequestTestData","DataSet ID");
-//	ExcelData fmsTransactionsExcelData = new ExcelData(path,"CommiteeApprovalTestData","DataSet ID");
-//	ExcelData fmsTransactionsExcelData = new ExcelData(path,"FacilityApplicationTestData","DataSet ID");
+	ExcelData fmsTransactionsExcelData = new ExcelData(path,"FacilitiesManagementTestData","DataSet ID");
+	ExcelData fmsRequestForFinancingExcelData = new ExcelData(path,"RequestForFinancingTestData","DataSet ID");
+	ExcelData fmsParameterExcelData = new ExcelData(path,"FMSParameterTestData","DataSet ID");
+	ExcelData fmsIISParamExcelData = new ExcelData(path,"IISParamTestData","DataSet ID");
+	ExcelData fmsDrawDownRequestExcelData = new ExcelData(path,"DrawDownRequestTestData","DataSet ID");
+	ExcelData fmsCommitteeApprovalExcelData = new ExcelData(path,"CommitteeApprovalTestData","DataSet ID");
+	ExcelData fmsFacilityApplicationExcelData = new ExcelData(path,"FacilityApplicationTestData","DataSet ID");
+	ExcelData fmsAccountingEntriesExcelData = new ExcelData(path,"AccountingEntriesTestData","DataSet ID");
 	
 	Map<String, String> testData;
 	
@@ -114,66 +117,67 @@ public class ApplicationFinancialFacilitySteps_608 {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_AFF_098");
 	}
 	
-//	@AT_RF_099
-	@And("^User_608 get the test data for test case AT_RF_099$")
-    public void user_get_the_test_data_for_test_case_AT_RF_099() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_099");
-    }
-	
-    
-//  @AT_RF_100
-    @And("^User_608 get the test data for test case AT_RF_100$")
-    public void user_get_the_test_data_for_test_case_AT_RF_100() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_100");
-    }
-    
-//	@AT_RF_101
-	@And("^User_608 get the test data for test case AT_RF_101$")
-    public void user_get_the_test_data_for_test_case_AT_RF_101() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_101");
-    }
-    
-    
-//  @AT_RF_102
-    @And("^User_608 get the test data for test case AT_RF_102$")
-    public void user_get_the_test_data_for_test_case_AT_RF_102() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_102");
-    }
-    
-//  @AT_RF_139
-    @And("User_608 get the test data for test case AT_RF_139")
-    public void user_get_the_test_data_for_test_case_at_rf_139() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_139");
-    }
-    
-//  @AT_RF_140
-    @And("User_608 get the test data for test case AT_RF_140")
-    public void user_get_the_test_data_for_test_case_at_rf_140() {
-    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_140");
-    }
-    
-    
-    
+
 	
 	
-	
+//	Request For Financing Test Data
 //  @AT_RF_014_FMSCore
     @And("^User_608 get the test data for test case AT_RF_014_FMSCore$")
     public void get_the_test_data_for_test_case_AT_RF_014fmscore() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_014");
+    	testData = fmsIISParamExcelData.getTestdata("DS_AT_RF_014");
     }
 	
 //  @AT_RF_034  
     @And("^User_608 get the test data for test case AT_RF_034$")
     public void get_the_test_data_for_test_case_AT_RF_034() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_034");
+    	testData = fmsRequestForFinancingExcelData.getTestdata("DS_AT_RF_034");
     }
 	
 //  @AT_RF_040
     @And("^User_608 get the test data for test case AT_RF_040$")
     public void get_the_test_data_for_test_case_AT_RF_040() throws Throwable {
-    	testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_040");
+    	testData = fmsRequestForFinancingExcelData.getTestdata("DS_AT_RF_040");
     }
+    
+//	@AT_RF_099
+	@And("^User_608 get the test data for test case AT_RF_099$")
+    public void user_get_the_test_data_for_test_case_AT_RF_099() throws Throwable {
+		testData = fmsRequestForFinancingExcelData.getTestdata("DS_AT_RF_099");
+    }	
+    
+//  @AT_RF_100
+    @And("^User_608 get the test data for test case AT_RF_100$")
+    public void user_get_the_test_data_for_test_case_AT_RF_100() throws Throwable {
+    	testData = fmsRequestForFinancingExcelData.getTestdata("DS_AT_RF_100");
+    }
+    
+//	@AT_RF_101
+	@And("^User_608 get the test data for test case AT_RF_101$")
+    public void user_get_the_test_data_for_test_case_AT_RF_101() throws Throwable {
+		testData = fmsRequestForFinancingExcelData.getTestdata("DS_AT_RF_101");
+    }    
+    
+//  @AT_RF_102
+    @And("^User_608 get the test data for test case AT_RF_102$")
+    public void user_get_the_test_data_for_test_case_AT_RF_102() throws Throwable {
+    	testData = fmsRequestForFinancingExcelData.getTestdata("DS_AT_RF_102");
+    }
+    
+//  @AT_RF_139
+    @And("User_608 get the test data for test case AT_RF_139")
+    public void user_get_the_test_data_for_test_case_at_rf_139() throws Throwable {
+    	testData = fmsRequestForFinancingExcelData.getTestdata("DS_AT_RF_139");
+    }
+    
+//  @AT_RF_140
+    @And("User_608 get the test data for test case AT_RF_140")
+    public void user_get_the_test_data_for_test_case_at_rf_140() {
+    	testData = fmsRequestForFinancingExcelData.getTestdata("DS_AT_RF_140");
+    }  
+    
+    
+    
+    
 	
     
 //	@AT_FM_038
@@ -213,34 +217,37 @@ public class ApplicationFinancialFacilitySteps_608 {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_105");
 	}
 	
+//	FMS Parameter Test Data
 //	@AT_FP_001
 	@And("^User_608 get the test data for test case AT_FP_001$")
     public void get_the_test_data_for_test_case_AT_FP_001() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FP_001");
+		testData = fmsParameterExcelData.getTestdata("DS_AT_FP_001");
     }
 	
+	
+//	DrawDownRequest Test Dat
 //	@AT_DDR_020
 	@And("^User_608 get the test data for test case AT_DDR_020$")
     public void get_the_test_data_for_test_case_AT_DDR_020() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_DDR_020");
+		testData = fmsDrawDownRequestExcelData.getTestdata("DS_AT_DDR_020");
     }	
 
 //	@AT_DDR_022
 	@And("^User_608 get the test data for test case AT_DDR_022$")
     public void get_the_test_data_for_test_case_AT_DDR_022() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_DDR_022");
+		testData = fmsDrawDownRequestExcelData.getTestdata("DS_AT_DDR_022");
     }
 	
 //	@AT_DDR_023
 	@And("^User_608 get the test data for test case AT_DDR_023$")
     public void get_the_test_data_for_test_case_AT_DDR_023() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_DDR_023");
+		testData = fmsDrawDownRequestExcelData.getTestdata("DS_AT_DDR_023");
     }
 	
 //	@AT_DDR_024
 	@And("^User_608 get the test data for test case AT_DDR_024$")
     public void get_the_test_data_for_test_case_AT_DDR_024() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_DDR_024");
+		testData = fmsDrawDownRequestExcelData.getTestdata("DS_AT_DDR_024");
     }
 	
     
@@ -248,7 +255,7 @@ public class ApplicationFinancialFacilitySteps_608 {
 //	@AT_CA_008
 	@And("^User_608 get the test data for test case AT_CA_008$")
     public void get_the_test_data_for_test_case_AT_CA_008() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_CA_008");
+		testData = fmsCommitteeApprovalExcelData.getTestdata("DS_AT_CA_008");
     }	
 	
 	
@@ -256,14 +263,41 @@ public class ApplicationFinancialFacilitySteps_608 {
 //	@AT_FAID_002
 	@And("User_608 get the test data for test case AT_FAID_002")
 	public void user_get_the_test_data_for_test_case_at_faid_002() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FAID_002");   
+		testData = fmsFacilityApplicationExcelData.getTestdata("DS_AT_FAID_002");   
 	}
 	
 //	@AT_FAID_003
 	@And("User_608 get the test data for test case AT_FAID_003")
 	public void user_get_the_test_data_for_test_case_at_faid_003() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FAID_003");   
+		testData = fmsFacilityApplicationExcelData.getTestdata("DS_AT_FAID_003");   
 	}
+	
+//	@AT_FAID_005
+	@And("User_608 get the test data for test case AT_FAID_005")
+	public void user_get_the_test_data_for_test_case_at_faid_005() throws Throwable {
+		testData = fmsFacilityApplicationExcelData.getTestdata("DS_AT_FAID_005");   
+	}
+	
+//	@AT_FAID_006
+	@And("User_608 get the test data for test case AT_FAID_006")
+	public void user_get_the_test_data_for_test_case_at_faid_006() throws Throwable {
+		testData = fmsFacilityApplicationExcelData.getTestdata("DS_AT_FAID_006");   
+	}
+	
+	
+//	Accounting Entries Feature Test data
+//	@AT_AE_009
+	@And("User_608 get the test data for test case AT_AE_009")
+	public void user_get_the_test_data_for_test_case_AT_AE_009() throws Throwable {
+		testData = fmsAccountingEntriesExcelData.getTestdata("DS_AT_AE_009");   
+	}
+	
+//	@AT_AE_010
+	@And("User_608 get the test data for test case AT_AE_010")
+	public void user_get_the_test_data_for_test_case_AT_AE_010() throws Throwable {
+		testData = fmsAccountingEntriesExcelData.getTestdata("DS_AT_AE_010");   
+	}
+	
 	
 	
 	
@@ -666,18 +700,10 @@ public class ApplicationFinancialFacilitySteps_608 {
     	
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
     	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
-    	
+ 
     	// Facility already created popup
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.confirmPopup_608());
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.facilityAlreadyCreatedPopup_608());
-//    	for (int i = 0; i < 200; i++) {
-//			try {
-//		    	applicationFinancialFacilityObj608.facilityAlreadyCreatedPopup_608().click();
-//		    	break;
-//			} catch (Exception e) {
-//				
-//			}
-//		}
     	applicationFinancialFacilityObj608.facilityAlreadyCreatedPopup_608().click();
     	
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.successPopup_608());
@@ -700,7 +726,7 @@ public class ApplicationFinancialFacilitySteps_608 {
     	// close the send alert pop-up box
     	for (int i = 0; i < 200; i++) {
 			try {
-		    	applicationFinancialFacilityObj608.sendAlertPopup_608().click();
+		    	applicationFinancialFacilityObj608.sendAlertPopupDismissBtn_608().click();
 		    	break;
 			} catch (Exception e) {
 //				if (i==1999) {
@@ -709,6 +735,41 @@ public class ApplicationFinancialFacilitySteps_608 {
 			}
 		}
     	
+    }
+    
+    @And("User_608 clicks on the validate button for decrease\\increase")
+    public void user_clicks_on_the_validate_button_for_decrease_increase() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsValidateBtn_608());
+    	applicationFinancialFacilityObj608.limitDetailsValidateBtn_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
+    	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.successPopup_608());
+    	String refCode = applicationFinancialFacilityObj608.successPopupMessage_608().getText().substring(23, 27);
+    	System.err.println("Reference Number: "+refCode);    	
+    	fmsTransactionsExcelData.updateTestData(testData.get("DataSet ID"),"Reference Code", refCode);
+    	
+    	for (int i = 0; i < 2000; i++) {
+			try {
+		    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}   
+    	
+    	// close the send alert pop-up box
+    	for (int i = 0; i < 500; i++) {
+			try {
+		    	applicationFinancialFacilityObj608.sendAlertPopupDismissBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+
+			}
+		}
     }
     
     @And("User_608 close the maintanance screen under Application for financial facility in WIFAK")
@@ -902,13 +963,21 @@ public class ApplicationFinancialFacilitySteps_608 {
     	
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
     	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
-    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.SuccessPopupOkBtn_608());
-    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+    	for (int i = 0; i < 2000; i++) {
+			try {
+				applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
     	
     	// close the send alert pop-up box
     	for (int i = 0; i < 500; i++) {
 			try {
-		    	applicationFinancialFacilityObj608.level3SendAlertPopup_608().click();
+		    	applicationFinancialFacilityObj608.level3SendAlertPopupDismissBtn_608().click();
 		    	break;
 			} catch (Exception e) {
 				
@@ -2481,6 +2550,21 @@ public class ApplicationFinancialFacilitySteps_608 {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveClearBtn_608());
 	    	applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveClearBtn_608().click();
 	    }
+	    
+	    @And("User_608 double click the first record in searchgrid under Update After Approve in WIFAK Draw Down request")
+	    public void user_double_click_the_first_record_in_searchgrid_under_update_after_approve_in_wifak_draw_down_request() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveMenuSearchgridCodeRow1_608());
+	        clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveMenuSearchgridCodeRow1_608());
+	        for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveMenuCodeInput_608().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+	    	}
+	    }
 
 	    @And("User_608 double click the any one record in Update After Approve under WIFAK Draw Down request")
 	    public void user_double_click_the_any_one_record_in_update_after_approve_under_wifak_draw_down_request() throws Throwable {
@@ -2585,7 +2669,7 @@ public class ApplicationFinancialFacilitySteps_608 {
     @And("^User_608 select the application for dropdown as decrease in main screen$")
     public void user_select_the_application_for_dropdown_as_decrease_in_main_screen() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainApplicationForDropdown_608());
-		dropDownHelper.SelectUsingVisibleText(applicationFinancialFacilityObj608.mainApplicationForDropdown_608(), testData.get("Application For 1"));
+		dropDownHelper.SelectUsingVisibleText(applicationFinancialFacilityObj608.mainApplicationForDropdown_608(), testData.get("For Decrease"));
     }
 
     @And("^User_608 enter the input as Existing Facility Ref in main screen$")
@@ -2605,8 +2689,8 @@ public class ApplicationFinancialFacilitySteps_608 {
 
     }
     
-    @And("^User_608 enter the total value under additional info tab$")
-    public void user_enter_the_total_value_under_additional_info_tab() throws Throwable {    	
+    @And("^User_608 enter the decrease total value under additional info tab$")
+    public void user_enter_the_decrease_total_value_under_additional_info_tab() throws Throwable {    	
     	// First We get the Finance amount without total amount
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.additionalTabFinanceAmount_608());
     	String beforeFinanceAmount = applicationFinancialFacilityObj608.additionalTabFinanceAmount_608().getAttribute("prevvalue");
@@ -2614,7 +2698,7 @@ public class ApplicationFinancialFacilitySteps_608 {
     	fmsTransactionsExcelData.updateTestData(testData.get("DataSet ID"), "Finance Amount", beforeFinanceAmount);
     	
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainAdditionalTabTotalValue_608());
-		applicationFinancialFacilityObj608.mainAdditionalTabTotalValue_608().sendKeys(testData.get("Total value"),Keys.TAB);
+		applicationFinancialFacilityObj608.mainAdditionalTabTotalValue_608().sendKeys(testData.get("Decrease Value"),Keys.TAB);
 		
 		for(int i = 0; i <= 300; i++) {
     		try {
@@ -2625,6 +2709,29 @@ public class ApplicationFinancialFacilitySteps_608 {
 				// TODO: handle exception
 			}
     	}
+		
+    }
+    
+    @And("^User_608 enter the increase total value under additional info tab$")
+    public void user_enter_the_increase_total_value_under_additional_info_tab() throws Throwable {  	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainAdditionalTabTotalValue_608());
+		applicationFinancialFacilityObj608.mainAdditionalTabTotalValue_608().sendKeys(testData.get("Increase Value"),Keys.TAB);		
+		for(int i = 0; i <= 300; i++) {
+    		try {
+				if(!(applicationFinancialFacilityObj608.mainAdditionalTabTotalValue_608().getAttribute("readonly").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}
+		
+		// And User get the Finance amount after the enter the Total value
+		String afterFinanceAmount = applicationFinancialFacilityObj608.additionalTabFinanceAmount_608().getAttribute("prevvalue");
+    	String[] splitFinaceAmount  = afterFinanceAmount.split("[.]");
+    	String finalFinaceAmount = splitFinaceAmount[0].replace(",", "");
+    	System.err.println("Finance Amount: "+finalFinaceAmount);
+    	fmsTransactionsExcelData.updateTestData(testData.get("DataSet ID"), "CV Value", finalFinaceAmount);
 		
     }
 
@@ -2670,7 +2777,7 @@ public class ApplicationFinancialFacilitySteps_608 {
     @And("^User_608 double click on the product class under limit details$")
     public void user_double_click_on_the_product_class_under_limit_details() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsProductFacilityValue_608());
-    	clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.limitDetailsProductFacilityValue_608());
+    	clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.limitDetailsProductFacilityValue_608());   	
     }
     
     @And("^User_608 click the clean flag under product calss in limit details tab$")
@@ -2684,8 +2791,7 @@ public class ApplicationFinancialFacilitySteps_608 {
     }
     
     @And("^User_608 click the edit button under product class in limit details tab$")
-    public void user_click_the_edit_button_under_product_class_in_limit_details_tab() throws Throwable {
-    	
+    public void user_click_the_edit_button_under_product_class_in_limit_details_tab() throws Throwable {    	
     	for (int i = 0; i <= 300; i++) {
         	try {
         		javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.limitDetailsProductEditBtn_608());
@@ -3186,6 +3292,7 @@ public class ApplicationFinancialFacilitySteps_608 {
     public void user_get_the_facility_management_code_in_facilities_management_maintanance_under_wifak_application() {
     	waitHelper.waitForElementwithFluentwait(driver,	facilityManagementObj608.wifakFacilitiesManagementMaintananceCodeInput_608());
     	String facilityCode = facilityManagementObj608.wifakFacilitiesManagementMaintananceCodeInput_608().getAttribute("prevvalue");
+    	System.err.println("Facility Code: "+facilityCode);
     	fmsTransactionsExcelData.updateTestData(testData.get("DataSet ID"),"Facility Ref", facilityCode);    	
     }
 
@@ -3193,7 +3300,7 @@ public class ApplicationFinancialFacilitySteps_608 {
     @And("^User_608 select the application for dropdown as increase in main screen$")
     public void user_select_the_application_for_dropdown_as_increase_in_main_screen() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainApplicationForDropdown_608());
-		dropDownHelper.SelectUsingVisibleText(applicationFinancialFacilityObj608.mainApplicationForDropdown_608(), testData.get("Application For"));
+		dropDownHelper.SelectUsingVisibleText(applicationFinancialFacilityObj608.mainApplicationForDropdown_608(), testData.get("For Increase"));
     }
     
     @And("User_608 enter the facility value product class tab in limit details")
@@ -3213,12 +3320,30 @@ public class ApplicationFinancialFacilitySteps_608 {
     	}
     }
     
+//  @AT_FAID_006_In
+    @And("User_608 enter the Facility value from CV value in limit details tab")
+    public void user_enter_the_facility_value_from_cv_value_in_limit_details_tab() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver,	applicationFinancialFacilityObj608.limitDetailsProductClassTabFacilityValue_608());
+    	WebElement facilityValue = applicationFinancialFacilityObj608.limitDetailsProductClassTabFacilityValue_608();
+    	facilityValue.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
+    	facilityValue.sendKeys(testData.get("CV Value"),Keys.TAB);
+    	for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(facilityValue.getAttribute("prevvalue").equals(testData.get("CV Value")))) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}
+    }
+    
     
 //   @AT_FAID_006
     @And("^User_608 enter the Facility Reference code in main screen under WIFAK Draw Down request$")
 	public void user_enter_the_facility_reference_code_in_main_screen_under_WIFAK_draw_down_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainFacilityRef_608());
-		requestForFinancingObj608.drawdownMainFacilityRef_608().sendKeys(testData.get("Facility Ref"), Keys.TAB);
+		requestForFinancingObj608.drawdownMainFacilityRef_608().sendKeys(testData.get("Facility Ref"),Keys.TAB);
 		for (int i = 0; i <= 500; i++) {
 			try {
 				if (!(requestForFinancingObj608.drawdownMainDateSubmitted_608().getAttribute("prevvalue").isBlank())) {
@@ -3272,7 +3397,15 @@ public class ApplicationFinancialFacilitySteps_608 {
 		requestForFinancingObj608.drawdownAdditionalFCAmount_608().clear();
 //    	requestForFinancingObj608.drawdownAdditionalFCAmount().sendKeys("500",Keys.TAB);
 		requestForFinancingObj608.drawdownAdditionalFCAmount_608().sendKeys(testData.get("FC Amount"), Keys.TAB);
-		for (int i = 0; i <= 500; i++) {
+		for (int i = 0; i < 500; i++) {
+			try {
+		    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				
+			}
+		}
+		for (int i = 0; i <= 1000; i++) {
 			try {
 				if (!(requestForFinancingObj608.drawdownAdditionalFCAmount_608().getAttribute("prevvalue").isBlank())) {
 					break;
@@ -3280,15 +3413,18 @@ public class ApplicationFinancialFacilitySteps_608 {
 			} catch (Exception e) {
 				// TODO: handle exception
 			}
-		}
+		}	
+		
 	}
 
 	@And("^User_608 enter the value date in main screen under WIFAK Draw Down request$")
 	public void user_enter_the_value_date_in_main_screen_under_WIFAK_draw_down_request() throws Throwable {
+		Thread.sleep(5000);
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainInfoTab_608());
 		requestForFinancingObj608.drawdownMainInfoTab_608().click();
 
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainValueDate_608());
+		
 //    	requestForFinancingObj608.drawdownMainValueDate().sendKeys("05/01/2024",Keys.TAB);
 		requestForFinancingObj608.drawdownMainValueDate_608().sendKeys(testData.get("Value Date"), Keys.TAB);		
 		for (int i = 0; i <= 500; i++) {
@@ -3350,7 +3486,17 @@ public class ApplicationFinancialFacilitySteps_608 {
     public void user_decrease_the_fc_amount_in_additional_details_tab_under_update_after_approve_in_wifak_draw_down_request() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveAdditionalDetailsTabFCAmtInput_608());
     	WebElement FCAmtInput_608 = applicationFinancialFacilityObj608.wifakDrawDownRequestUpdateAfterApproveAdditionalDetailsTabFCAmtInput_608();
-    	FCAmtInput_608.sendKeys(testData.get("FC Amount"),Keys.TAB);
+    	FCAmtInput_608.clear();
+    	FCAmtInput_608.sendKeys(testData.get("Decrease FC Amount"),Keys.TAB);
+    	
+    	for (int i = 0; i < 500; i++) {
+			try {
+		    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				
+			}
+		}
     	for(int i = 0; i <= 500; i++) {
     		try {
 				if(FCAmtInput_608.getAttribute("prevvalue").equals(testData.get("FC Amount"))) {
@@ -3360,11 +3506,138 @@ public class ApplicationFinancialFacilitySteps_608 {
 				// TODO: handle exception
 			}
     	}    
+    	
 	}
     
-    
-    
-    
+	
+//	Accounting Entries Features
+//	@AT_AE_009
+	@And("User_608 validate Marketed By field should be displayed in main info tab")
+	public void user_validate_marketed_by_field_should_be_displayed_in_main_info_tab() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainMarketedByFieldInput_608());
+		boolean marketedByField = applicationFinancialFacilityObj608.mainMarketedByFieldInput_608().isDisplayed();
+		Assert.assertTrue(marketedByField);
+	}
+	
+	@And("User_608 click the marketed by lookup field and it should be display all the values")
+	public void user_click_the_marketed_by_lookup_field_and_it_should_be_display_all_the_values() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainMarketedByFieldSearch_608()); 
+     	applicationFinancialFacilityObj608.mainMarketedByFieldSearch_608().click();
+     	
+     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainMarketedByValue_608());
+	}
+
+	@And("User_608 define the marketed by value manualy in main info tab")
+	public void user_define_the_marketed_by_value_manualy_in_main_info_tab() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainMarketedByFieldInput_608());
+		applicationFinancialFacilityObj608.mainMarketedByFieldInput_608().click();
+		applicationFinancialFacilityObj608.mainMarketedByFieldInput_608().sendKeys(testData.get("Marketed By"),Keys.TAB);
+		for (int i = 0; i <= 1000; i++) {
+			try {
+				if (!(applicationFinancialFacilityObj608.mainMarketedByFieldInput_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}    
+	
+	
+	
+//	@AT_AE_010
+	@And("User_608 give the shortcut key for customize menu in main info tab")
+	public void user_give_the_shortcut_key_for_customize_menu_in_main_info_tab() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainMarketedByFieldInput_608());
+		applicationFinancialFacilityObj608.mainMarketedByFieldInput_608().click();
+		actions.keyDown(Keys.CONTROL).sendKeys(Keys.F2).keyUp(Keys.CONTROL).perform();	    
+	}
+
+	@And("User_608 click the Marketed By spanner icon in main info tab")
+	public void user_click_the_marketed_by_spanner_icon_in_main_info_tab() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakFinancialFacilityMainMarketedBySpannerIcon_608());
+		applicationFinancialFacilityObj608.wifakFinancialFacilityMainMarketedBySpannerIcon_608().click();
+	}
+
+	@And("User_608 click the maintanance option under Marketed By spanner icon in main info tab")
+	public void user_click_the_maintanance_option_under_marketed_by_spanner_icon_in_main_info_tab() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakFinancialFacilityMainMarketedBySpannerMaintanance_608());
+		applicationFinancialFacilityObj608.wifakFinancialFacilityMainMarketedBySpannerMaintanance_608().click();
+	}
+
+	@And("User_608 select the Required as Required under Marketed By Cutomize tab")
+	public void user_select_the_required_as_required_under_marketed_by_cutomize_tab() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakFinancialFacilityMainMarketedByCustomizeTabRequiredDropdown_608());
+	    dropDownHelper.SelectUsingVisibleText(applicationFinancialFacilityObj608.wifakFinancialFacilityMainMarketedByCustomizeTabRequiredDropdown_608(), testData.get("Required DD"));
+	}
+
+	@And("User_608 click the Save button under Marketed By Cutomize tab")
+	public void user_click_the_save_button_under_marketed_by_cutomize_tab() throws Throwable {
+		for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.wifakFinancialFacilityMainMarketedByCustomizeTabSaveBtn_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakFinancialFacilityMainMarketedByCustomizeTabSaveBtn_608());
+		applicationFinancialFacilityObj608.wifakFinancialFacilityMainMarketedByCustomizeTabSaveBtn_608().click();
+		
+		for (int i = 0; i < 2000; i++) {
+			try {
+		    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				
+			}
+		}	    
+	}
+
+	@And("User_608 click the Close button under Marketed By Cutomize tab")
+	public void user_click_the_close_button_under_marketed_by_cutomize_tab() throws Throwable {
+		for (int i = 0; i < 2000; i++) {
+			try {
+		    	applicationFinancialFacilityObj608.wifakFinancialFacilityMainMarketedByCustomizeTabCloseBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				
+			}
+		}	    
+	}
+
+	@And("User_608 click the Approve option under Marketed By spanner icon in main info tab")
+	public void user_click_the_approve_option_under_marketed_by_spanner_icon_in_main_info_tab() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakFinancialFacilityMainMarketedBySpannerApprove_608());
+		applicationFinancialFacilityObj608.wifakFinancialFacilityMainMarketedBySpannerApprove_608().click();	    
+	}
+
+	@And("User_608 click the Approve button in under Marketed By Cutomize tab")
+	public void user_click_the_approve_button_in_under_marketed_by_cutomize_tab() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakFinancialFacilityMainMarketedByCustomizeTabRequiredDropdown_608());
+		for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.wifakFinancialFacilityMainMarketedByCustomizeTabSaveBtn_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakFinancialFacilityMainMarketedByCustomizeTabApproveBtn_608());
+		applicationFinancialFacilityObj608.wifakFinancialFacilityMainMarketedByCustomizeTabApproveBtn_608().click();		
+		for (int i = 0; i < 2000; i++) {
+			try {
+		    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				
+			}
+		}
+	}
     
     
 }

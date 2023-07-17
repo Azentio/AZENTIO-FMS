@@ -306,7 +306,8 @@ When User_608 clicks on the Approve level3 submit button
 
 
 # Before the execution all the flags are checked in facility type --> STP requirements tab
-Scenario: AIBBI200088 - Unable to Decrease FX Nominal Limit
+@AT_RF_100
+Scenario: Before the Execution all the flags are checked in Facility type -> STB Requirements tab
 
 Given navigate to FMS param application and login with valid credentials
 And User_608 clicks on the Parameter module in FMS Param
@@ -396,7 +397,7 @@ And User_608 get the test data for test case AT_RF_100
 And User_608 enter the input as Existing Facility Ref in main screen
 And User_608 enter the facility rating in main info tab
 And User_608 clicks on the additional details tab
-And User_608 enter the total value under additional info tab
+And User_608 enter the decrease total value under additional info tab
 And User_608 validate the finance amount should be decresed based on total value
 And User_608 enter the expire date in additional info tab
 And User_608 clicks the limit details tab
