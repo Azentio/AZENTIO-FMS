@@ -384,9 +384,110 @@ public class Draw_Down_Request {
 	}
 
 	
+	//1039019_2
 	
-	
+	@Given("User_607 Click facility Management Under Request financing")
+	public void user_click_facility_management_under_request_financing() {
+		waitHelper.waitForElementwithFluentwait(driver, Draw_Down_Request_Obj.Click_facilityManagement_UnderRequest_financing_607());
+		Draw_Down_Request_Obj.Click_facilityManagement_UnderRequest_financing_607().click();
+	    
+	}
 
+	@Given("User_607 Click mainteance under facility Management")
+	public void user_click_mainteance_under_facility_management() {
+		waitHelper.waitForElementwithFluentwait(driver, Draw_Down_Request_Obj.Click_mainteance_under_facilityManagement_607());
+		Draw_Down_Request_Obj.Click_mainteance_under_facilityManagement_607().click();
+	    
+	}
+
+	@Given("User_607 Search Status mainteance under facility Management")
+	public void user_search_status_mainteance_under_facility_management() {
+		waitHelper.waitForElementwithFluentwait(driver, Draw_Down_Request_Obj.ClickSearch_Inmainteance_under_facilityManagement_607());
+		Draw_Down_Request_Obj.ClickSearch_Inmainteance_under_facilityManagement_607().click();
+		
+		waitHelper.waitForElementwithFluentwait(driver, Draw_Down_Request_Obj.SearchSts_mainteance_under_facilityManagement_607());
+		Draw_Down_Request_Obj.SearchSts_mainteance_under_facilityManagement_607().sendKeys("Approved",Keys.ENTER);
+	    
+	}
+
+	@Given("User_607 Select Record in mainteance under facility Management")
+	public void user_select_record_in_mainteance_under_facility_management() {
+		waitHelper.waitForElementwithFluentwait(driver, Draw_Down_Request_Obj.SelectRecord_mainteance_under_facilityManagement_607());
+		clicksAndActionsHelper.doubleClick(Draw_Down_Request_Obj.SelectRecord_mainteance_under_facilityManagement_607());
+	    
+	}
+	String getCode2;
+	@Given("User_607 Get Record Code In mainteance under facility Management")
+	public void user_get_record_code_in_mainteance_under_facility_management() {
+		waitHelper.waitForElementwithFluentwait(driver, Draw_Down_Request_Obj.getRecordCodeIn_mainteance_under_facilityManagement_607());
+		for (int i = 0; i <= 700; i++) {
+			try {
+				getCode2 =	Draw_Down_Request_Obj.getRecordCodeIn_mainteance_under_facilityManagement_607().getAttribute("prevvalue");	
+				 if(!getCode2.isEmpty()) {
+					 break;
+				 }
+			} catch (Exception e) {
+				if (i == 699) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+
+	@Given("User_607 Click Draw Down Request under facility Management")
+	public void user_click_draw_down_request_under_facility_management() {
+		waitHelper.waitForElementwithFluentwait(driver, Draw_Down_Request_Obj.Click_Draw_Down_Request_under_facilityManagement_607());
+		Draw_Down_Request_Obj.Click_Draw_Down_Request_under_facilityManagement_607().click();
+	    
+	}
+
+	@Given("User_607 Click mainteance under Draw Down Request")
+	public void user_click_mainteance_under_draw_down_request() {
+		waitHelper.waitForElementwithFluentwait(driver, Draw_Down_Request_Obj.Click_mainteance_under_Draw_Down_Request_607());
+		Draw_Down_Request_Obj.Click_mainteance_under_Draw_Down_Request_607().click();
+	    
+	}
+
+	@Given("User_607 Enter Code In Facility Reference mainteance under Draw Down Request")
+	public void user_enter_code_in_facility_reference_mainteance_under_draw_down_request() {
+		waitHelper.waitForElementwithFluentwait(driver, Draw_Down_Request_Obj.EnterCodeIn_Facility_Reference_mainteance_under_Draw_Down_Request_607());
+		Draw_Down_Request_Obj.EnterCodeIn_Facility_Reference_mainteance_under_Draw_Down_Request_607().sendKeys(getCode2,Keys.TAB);
+	    
+	}
+
+	@Given("User_607 Click draw Down Request Addition Details Tabs In mainteance under Draw Down Request")
+	public void user_click_draw_down_request_addition_details_tabs_in_mainteance_under_draw_down_request() {
+		waitHelper.waitForElementwithFluentwait(driver, Draw_Down_Request_Obj.Click_drawDownRequestAdditionDetails_TabsIn_mainteance_under_Draw_Down_Request_607());
+		Draw_Down_Request_Obj.Click_drawDownRequestAdditionDetails_TabsIn_mainteance_under_Draw_Down_Request_607().click();
+	    
+	}
+
+	@Given("User_607 Check Down Payment In Addition Details Tabs In mainteance under Draw Down Request")
+	public void user_check_down_payment_in_addition_details_tabs_in_mainteance_under_draw_down_request() {
+		waitHelper.waitForElementwithFluentwait(driver, Draw_Down_Request_Obj.Check_Down_Payment_InAdditionDetails_TabsIn_mainteance_under_Draw_Down_Request_607());
+		if (!Draw_Down_Request_Obj.Check_Down_Payment_InAdditionDetails_TabsIn_mainteance_under_Draw_Down_Request_607().isDisplayed()) {
+			Assert.fail();
+		}
+	    
+	}
+
+	@Given("User_607 Check payment to vendor In Addition Details Tabs In mainteance under Draw Down Request")
+	public void user_check_payment_to_vendor_in_addition_details_tabs_in_mainteance_under_draw_down_request() {
+		waitHelper.waitForElementwithFluentwait(driver, Draw_Down_Request_Obj.Checkdown_payment_to_vendor_InAdditionDetails_TabsIn_mainteance_under_Draw_Down_Request_607());
+		if (!Draw_Down_Request_Obj.Checkdown_payment_to_vendor_InAdditionDetails_TabsIn_mainteance_under_Draw_Down_Request_607().isDisplayed()) {
+			Assert.fail();
+		}
+	    
+	}
+
+	@Given("User_607 Check Total Down Payment In Addition Details Tabs In mainteance under Draw Down Request")
+	public void user_check_total_down_payment_in_addition_details_tabs_in_mainteance_under_draw_down_request() {
+		waitHelper.waitForElementwithFluentwait(driver, Draw_Down_Request_Obj.Checkdown_TotalDownPayment_InAdditionDetails_TabsIn_mainteance_under_Draw_Down_Request_607());
+		if (!Draw_Down_Request_Obj.Checkdown_payment_to_vendor_InAdditionDetails_TabsIn_mainteance_under_Draw_Down_Request_607().isDisplayed()) {
+			Assert.fail();
+		}
+	    
+	}
 	
 	
 	

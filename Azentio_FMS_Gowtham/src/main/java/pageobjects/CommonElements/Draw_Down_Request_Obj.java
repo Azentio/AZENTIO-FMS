@@ -296,7 +296,86 @@ public class Draw_Down_Request_Obj {
 	}
 	
 	
+	//1039019_2
 	
+	@FindBy(xpath = "//td[text()='Facilities Management']")
+	private WebElement Click_facilityManagement_UnderRequest_financing;
+	public WebElement Click_facilityManagement_UnderRequest_financing_607() {
+		return Click_facilityManagement_UnderRequest_financing;
+	}
+	
+	@FindBy(xpath = "//*[@id='RFFT008MT']")
+	private WebElement Click_mainteance_under_facilityManagement;
+	public WebElement Click_mainteance_under_facilityManagement_607() {
+		return Click_mainteance_under_facilityManagement;
+	}
+	
+	@FindBy(xpath = "//*[@id='infoBarSearchButton_RFFT008MT']")
+	private WebElement ClickSearch_Inmainteance_under_facilityManagement;
+	public WebElement ClickSearch_Inmainteance_under_facilityManagement_607() {
+		return ClickSearch_Inmainteance_under_facilityManagement;
+	}
+	
+	@FindBy(xpath = "//*[@id='facilityManagementGridTbl_Id_RFFT008MT_gs_statusDesc']")
+	private WebElement SearchSts_mainteance_under_facilityManagement;
+	public WebElement SearchSts_mainteance_under_facilityManagement_607() {
+		return SearchSts_mainteance_under_facilityManagement;
+	}
+	
+	@FindBy(xpath = "//*[@id='td_facilityManagementGridTbl_Id_RFFT008MT_1_fmsFacilityVO.CODE']")
+	private WebElement SelectRecord_mainteance_under_facilityManagement;
+	public WebElement SelectRecord_mainteance_under_facilityManagement_607() {
+		return SelectRecord_mainteance_under_facilityManagement;
+	}
+	
+	@FindBy(xpath = "//*[@id='facilityMangementCode_RFFT008MT']")
+	private WebElement getRecordCodeIn_mainteance_under_facilityManagement;
+	public WebElement getRecordCodeIn_mainteance_under_facilityManagement_607() {
+		return getRecordCodeIn_mainteance_under_facilityManagement;
+	}
+	
+	@FindBy(xpath = "//td[text()='Draw Down Request']")
+	private WebElement Click_Draw_Down_Request_under_facilityManagement;
+	public WebElement Click_Draw_Down_Request_under_facilityManagement_607() {
+		return Click_Draw_Down_Request_under_facilityManagement;
+	}
+	
+	@FindBy(xpath = "//*[@id='RFFT009MT']")
+	private WebElement Click_mainteance_under_Draw_Down_Request;
+	public WebElement Click_mainteance_under_Draw_Down_Request_607() {
+		return Click_mainteance_under_Draw_Down_Request;
+	}
+	
+	@FindBy(xpath = "//*[@id='lookuptxt_drawDownRequestFacilityReference_RFFT009MT']")
+	private WebElement EnterCodeIn_Facility_Reference_mainteance_under_Draw_Down_Request;
+	public WebElement EnterCodeIn_Facility_Reference_mainteance_under_Draw_Down_Request_607() {
+		return EnterCodeIn_Facility_Reference_mainteance_under_Draw_Down_Request;
+	}
+	
+	@FindBy(xpath = "//*[@id='drawDownRequestAdditionDetailsTabs_RFFT009MT']")
+	private WebElement Click_drawDownRequestAdditionDetails_TabsIn_mainteance_under_Draw_Down_Request;
+	public WebElement Click_drawDownRequestAdditionDetails_TabsIn_mainteance_under_Draw_Down_Request_607() {
+		return Click_drawDownRequestAdditionDetails_TabsIn_mainteance_under_Draw_Down_Request;
+	}
+	
+	@FindBy(xpath = "//*[@id='drawDownRequestFormId_RFFT009MT_Down_Payment_Key']")
+	private WebElement Check_Down_Payment_InAdditionDetails_TabsIn_mainteance_under_Draw_Down_Request;
+	public WebElement Check_Down_Payment_InAdditionDetails_TabsIn_mainteance_under_Draw_Down_Request_607() {
+		return Check_Down_Payment_InAdditionDetails_TabsIn_mainteance_under_Draw_Down_Request;
+	}
+	
+	
+	@FindBy(xpath = "//*[@id='drawDownRequestFormId_RFFT009MT_down_payment_to_vendor_key']")
+	private WebElement Checkdown_payment_to_vendor_InAdditionDetails_TabsIn_mainteance_under_Draw_Down_Request;
+	public WebElement Checkdown_payment_to_vendor_InAdditionDetails_TabsIn_mainteance_under_Draw_Down_Request_607() {
+		return Checkdown_payment_to_vendor_InAdditionDetails_TabsIn_mainteance_under_Draw_Down_Request;
+	}
+	
+	@FindBy(xpath = "//*[@id='lbl_drwadownRequestTotalDownPayment_RFFT009MT']")
+	private WebElement Checkdown_TotalDownPayment_InAdditionDetails_TabsIn_mainteance_under_Draw_Down_Request;
+	public WebElement Checkdown_TotalDownPayment_InAdditionDetails_TabsIn_mainteance_under_Draw_Down_Request_607() {
+		return Checkdown_TotalDownPayment_InAdditionDetails_TabsIn_mainteance_under_Draw_Down_Request;
+	}
 	
 	
 	

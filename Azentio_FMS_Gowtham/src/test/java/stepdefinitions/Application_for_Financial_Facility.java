@@ -40,18 +40,54 @@ public class Application_for_Financial_Facility {
 	public void User_update_test_data_for_test_case_no_539219() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("AT_FM_017");
 	}
+	
 	@Given("^User update test data for test case no 929306$")
 	public void User_update_test_data_for_test_case_no_929306() {
 		testData = fmsTransactionsExcelData.getTestdata("AT_AFF_007");
 	}
+	
 	@Given("User update test data for test case no 583228")
 	public void user_update_test_data_for_test_case_no_583228() {
 		testData = fmsTransactionsExcelData.getTestdata("AT_RF_113");
 	}
+	
 	@Given("User update test data for test case no 636898")
 	public void user_update_test_data_for_test_case_no_636898() {
-		testData = fmsTransactionsExcelData.getTestdata("AT_AFF_007");
+		testData = fmsTransactionsExcelData.getTestdata("AT_RF_055");
 	}
+	
+	@Given("User update test data for test case no 824257")
+	public void user_update_test_data_for_test_case_no_824257() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_FM_107");
+	}
+	
+	@Given("User update test data for test case no 349582")
+	public void user_update_test_data_for_test_case_no_349582() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_FM_108");
+	}
+	
+//	@Given("User update test data for test case no 570417")
+//	public void user_update_test_data_for_test_case_no_570417() {
+//		testData = fmsTransactionsExcelData.getTestdata("AT_FM_023");
+//	}
+	
+	@Given("User update test data for test case no 1038989")
+	public void user_update_test_data_for_test_case_no_1038989() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_DDR_076");
+	}
+	
+	@Given("User update test data for test case no 1039017")
+	public void user_update_test_data_for_test_case_no_1039017() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_DDR_077");
+	}
+
+	@Given("User update test data for test case no 1039018")
+	public void user_update_test_data_for_test_case_no_1039018() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_DDR_078");
+	}
+	
+	
+
 
 	
 	@Given("^navigate to FMS application2 and login with valid credentials$")
@@ -1139,17 +1175,10 @@ public class Application_for_Financial_Facility {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonConfirmOk());
 	    	applicationFinancialObj.ButtonConfirmOk().click();
 	    	
-	    	for (int i = 0; i < 2000; i++) {
-				try {
-			    	applicationFinancialObj.facilityAlreadyCreatedPopup().click();
-			    	break;
-				} catch (Exception e) {
-					if (i==1999) {
-						Assert.fail(e.getMessage());
-					}
-				}
-			}
-
+	    	// Facility already created popup
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.confirmPopup_610());
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.facilityAlreadyCreatedPopup_610());
+			applicationFinancialObj.facilityAlreadyCreatedPopup_610().click();
 	    	
 	    	for (int i = 0; i < 2000; i++) {
 				try {
@@ -1157,6 +1186,17 @@ public class Application_for_Financial_Facility {
 			    	break;
 				} catch (Exception e) {
 					if (i==1999) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.sendAlertPopup_610());
+			for (int i = 0; i < 2000; i++) {
+				try {
+					applicationFinancialObj.sendAlertPopup_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 1999) {
 						Assert.fail(e.getMessage());
 					}
 				}
@@ -1395,7 +1435,7 @@ public class Application_for_Financial_Facility {
 	   @And("^Enter Total value on additional Details$")
 	   public void Enter_Total_value_on_additional_Details() throws Throwable{
 	        waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Enter_total_value_on_additionalDetails());
-	        applicationFinancialObj.Enter_total_value_on_additionalDetails().sendKeys("10000");
+	        applicationFinancialObj.Enter_total_value_on_additionalDetails().sendKeys(testData.get("Total value on additional Details"));
 	        applicationFinancialObj.Enter_total_value_on_additionalDetails().sendKeys(Keys.TAB);
 	        
 
@@ -1405,7 +1445,7 @@ public class Application_for_Financial_Facility {
 		@And("^Change Total value and down payment$")
 	    public void Change_Total_value_and_down_payment() throws Throwable {
 	        waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Enter_downPayment());
-	        applicationFinancialObj.Enter_downPayment().sendKeys("1");
+	        applicationFinancialObj.Enter_downPayment().sendKeys(testData.get("Change Down Payment"));
 	        applicationFinancialObj.Enter_downPayment().sendKeys(Keys.TAB);
 	        applicationFinancialObj.Click_SaveButton_AfterEdit_downPayment().click();
 	        
@@ -1445,10 +1485,10 @@ public class Application_for_Financial_Facility {
 			
 			
 	       waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.select_approve_In_recommendaionDropDown());
-	       DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.select_approve_In_recommendaionDropDown(), "Approve");
+	       DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.select_approve_In_recommendaionDropDown(), testData.get("Select approve In recommendaion"));
 
 	       waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.enter_comment_code_In_recommendaionPopup());
-	       applicationFinancialObj.enter_comment_code_In_recommendaionPopup().sendKeys("1");
+	       applicationFinancialObj.enter_comment_code_In_recommendaionPopup().sendKeys(testData.get("Comment Code"));
 	         
 		}
 
@@ -1463,7 +1503,7 @@ public class Application_for_Financial_Facility {
 		@Given("User_607 Enter Down Payment to Vendor Percentage In Additional DetailsTab")
 		public void user_enter_down_payment_to_vendor_percentage_in_additional_details_tab() {
 		       waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Down_Payment_to_VendorPercentage_In_AdditionalDetailsTab_607());
-		       applicationFinancialObj.Down_Payment_to_VendorPercentage_In_AdditionalDetailsTab_607().sendKeys("10");			
+		       applicationFinancialObj.Down_Payment_to_VendorPercentage_In_AdditionalDetailsTab_607().sendKeys(testData.get("Down Payment to Vendor Percentage"));			
 		       applicationFinancialObj.Down_Payment_to_VendorPercentage_In_AdditionalDetailsTab_607().sendKeys(Keys.TAB);
 		}
 
@@ -1534,7 +1574,7 @@ public class Application_for_Financial_Facility {
 		@Given("User_607 Enter Down Payment to Vendor Percentage In Facility type DetailsTab")
 		public void user_enter_down_payment_to_vendor_percentage_in_facility_type_details_tab() {
 		       waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Down_Payment_to_VendorPercentage_In_FacilitytypeDetailsTab_607());
-		       applicationFinancialObj.Down_Payment_to_VendorPercentage_In_FacilitytypeDetailsTab_607().sendKeys("10",Keys.TAB);
+		       applicationFinancialObj.Down_Payment_to_VendorPercentage_In_FacilitytypeDetailsTab_607().sendKeys(testData.get("Down Payment to Vendor Percentage in Request for financing"),Keys.TAB);
 		       
 		}
 

@@ -37,7 +37,7 @@ Feature: Title of your feature
     And Select first approve status detail
     And Click process button in management process branch tab
 
-  @664435(2)
+  @664435_2
   Scenario: BTII180015
     Given navigate to FMS application2 and login with valid credentials
     And User update test data for test case no 664435
@@ -137,7 +137,37 @@ Feature: Title of your feature
     
     @583228
 		Scenario: Exception error in Production
+#		Given navigate to FMS param application and login with valid credentials
+#		And User_610 clicks on the parameter module
+    #And User_610 clicks on the Facility Type feature
+    #And User_610 clicks on the update after approve menu in Facility type
+    #And User_610 enter the code value in update after approve menu
+    #And User_610 double click on the retrieved data in update after approve menu
+    #And User_610 clicks on the facility details tab in update after approve
+    #And User_610 clicks on the STP Facility Requirements option
+    #And User_610 check the Customer Grading flag
+    #And User_610 check the Overwrite Grading flag
+    #And User_610 check the Credit Review flag
+    #And User_610 check the Committee Approval flag
+    #And User_610 check the Credit Authorization flag
+    #And User_610 check the Issue Facility Offer flag
+    #And User_610 check the Client Response flag
+    #And User_610 check the Document Validation flag
+    #And User_610 check the Final Approval flag
+    #And User_610 uncheck the Create Active Facility If Within Limits flag
+    #And User_610 unCheck the Automatically Approve Facility If Within Limits flag
+    #When User_610 clicks on the Update button
+    #And User_610 after the update go to the Approve menu
+    #And User_610 enter the code value in Approve menu
+    #And User_610 double click on the retrieved data in Approve menu
+    #When User_610 clicks on the Approve button in Approve menu under Facility Type
+    
+		
 		Given navigate to FMS application2 and login with valid credentials
+		 And User_607 click Technical details
+    And User_607 click clear caches
+    And User_607 Click the ok button
+    
 		And Click Wifak Application first
     And Click Wifak Application Second
     And User update test data for test case no 583228
@@ -179,7 +209,6 @@ Feature: Title of your feature
     	
 	  @636898
    Scenario: TSR - BIPL180002
-   #excell pending
 		Given navigate to FMS application2 and login with valid credentials
     And Click Wifak Application first
     And Click Wifak Application Second
@@ -236,6 +265,7 @@ Feature: Title of your feature
   @749102
    Scenario: TSR - AIBBI180296
    Given navigate to MTS application and login with valid credentials
+   And User_607 update test data for test case no 749102
    And Click Parameters in MTS
    And Click Batch under parameters
    And Click Maintenance underBatch 
@@ -259,6 +289,7 @@ Feature: Title of your feature
    @749155
    Scenario: SUPT180347 - Users are able to choose Decision and Send Back level simultaneously
    Given navigate to FMS application2 and login with valid credentials
+   And User_607 update test data for test case no 749155
    And Click request under menu 
    And Click request financing
    And Click request for financing under request financing
@@ -279,13 +310,13 @@ Feature: Title of your feature
    Given navigate to FMS application2 and login with valid credentials
     And Click Wifak Application first
     And Click Wifak Application Second
-    And User update test data for test case no 949677
+    And User_607 update test data for test case no 748962
     And Click Application for financial facilities
     And Click Maintenance
     And Click and Select Application for
     And Search CIF No
     And Enter codeOn Facility Type
-    And Select select oneOff inFacility Type Details
+    And Select oneOff inFacility Type Details
     And Enter Code In Country of Financing
     And Enter line Code On Facility Rating
     And Click on additional Details
@@ -315,7 +346,7 @@ Feature: Title of your feature
 		And User select the level3 devision as approve
 		And User clicks on the level3 submit button
 		And Click Facilitie Managementunder wifakApplication
-		And click Maintenance under Facilities Managementunder
+		And click Maintenance under Facilities Management
 		And select recordIn Maintenance under Facilities Management
 		And Get Application code from the record
 		And Click drawDown request under wifakApplication
@@ -338,13 +369,14 @@ Feature: Title of your feature
 		And Enter Facility Reference In Mainteance under Facility Closure Request
 		
 		
-		 @7489622
+		 @748962_2
    Scenario: TSR - NIZ180070:
    Given navigate to FMS application2 and login with valid credentials
+    And User_607 update test data for test case no 748962
     And Click Wifak Application first
     And Click Wifak Application Second
 		And Click Facilitie Managementunder wifakApplication
-		And click Maintenance under Facilities Managementunder
+		And click Maintenance under Facilities Management
 		And select recordIn Maintenance under Facilities Management
 		And Get Application code from the record
 		And Click drawDown request under wifakApplication

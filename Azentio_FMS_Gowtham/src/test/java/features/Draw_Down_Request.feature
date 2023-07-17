@@ -6,7 +6,7 @@ Feature: Draw Down Request
     Given navigate to FMS application2 and login with valid credentials
     And Click Wifak Application first
     And Click Wifak Application Second
-    And User update test data for test case no 583228
+    And User update test data for test case no 1038989
     And Click Application for financial facilities
     And Click Maintenance
     And Click and Select Application for
@@ -56,7 +56,7 @@ Feature: Draw Down Request
     Given navigate to FMS application2 and login with valid credentials
 		And Click Wifak Application first
     And Click Wifak Application Second
-    And User update test data for test case no 583228
+    And User update test data for test case no 1039017
     And Click Application for financial facilities
     And Click Maintenance
     And Click and Select Application for
@@ -92,7 +92,7 @@ Feature: Draw Down Request
 		And User select the level3 devision as approve
 		And User clicks on the level3 submit button
 		And Click Facilitie Managementunder wifakApplication
-		And click Maintenance under Facilities Managementunder
+		And click Maintenance under Facilities Management
 		And select recordIn Maintenance under Facilities Management
 		And User_607 Check Down Payment to Vendor Percentage In CIF_Details
     And User_607 Check Down Payment to Vendor In CIF_Details
@@ -105,7 +105,8 @@ Feature: Draw Down Request
     And User_607 Check Total Down Payment Percentage In limitDetails facilityMng mainteance
     And User_607 Check Total Down Payment In limitDetails facilityMng mainteance
 		
-#	need to create 	ficility in Request for financin 
+#	excel pending	
+#	need to create 	facility in Request for financin 
 		And Click Request for financin 
     And User_607 Click facility Management under Request for financin
     And User_607 Click mainteance facility Management under Request for financin
@@ -126,10 +127,10 @@ Feature: Draw Down Request
   
     @1039018
     Scenario: Check the new fields down payment, down payment to vendor and total down payment details added at the limit details are defaulted to the facility limit details screens
-   Given navigate to FMS application2 and login with valid credentials
+    Given navigate to FMS application2 and login with valid credentials
 		And Click Wifak Application first
     And Click Wifak Application Second
-    And User update test data for test case no 583228
+    And User update test data for test case no 1039018
     And Click Application for financial facilities
     And Click Maintenance
     And Click and Select Application for
@@ -152,7 +153,7 @@ Feature: Draw Down Request
     @1039018_2
     Scenario: Check the new fields down payment, down payment to vendor and total down payment details added at the limit details are defaulted to the facility limit details screens
     Given navigate to FMS application2 and login with valid credentials
-    And User update test data for test case no 1039018
+    And User update test data for test case no 1039018_2
     And Click Request for financin
     And Click Request for financing
     And Goto maintenace
@@ -184,14 +185,41 @@ Feature: Draw Down Request
     And User_607 Check title On Details Key in Facility Type
     
     
+    @1039019
+    Scenario: Check 2 new fields are added under the Drawdown Additional Details tab in Draw Down Request: “Down payment to vendor” and "Total Down Payment"
+    Given navigate to FMS application2 and login with valid credentials
+    And Click Wifak Application first
+    And Click Wifak Application Second
+    And Click Facilitie Managementunder wifakApplication
+		And click Maintenance under Facilities Management
+		And User_607 select Approed record In Maintenance under Facilities Management
+		And Get Application code from the record
+		And Click drawDown request under wifakApplication
+		And Click Mainteance under drawDown request
+		And Enter Facility Reference code
+		And Enter drawdown type
+		And Click Drawdown Additional Details tab
+    And User_607 Check Down Payment In draw Down Request Additional Details Tab
+    And User_607 Check down payment to vendor In draw Down Request Additional Details Tab
+    And User_607 Check Total Down Payment In draw Down Request Additional Details Tab
     
-    
-    
-    
-    
-    
-    
-    
+    @1039019_2
+    Scenario: Check 2 new fields are added under the Drawdown Additional Details tab in Draw Down Request: “Down payment to vendor” and "Total Down Payment"
+    Given navigate to FMS application2 and login with valid credentials
+    And Click request under menu 
+    And Click request financing
+    And User_607 Click facility Management Under Request financing
+    And User_607 Click mainteance under facility Management
+    And User_607 Search Status mainteance under facility Management
+    And User_607 Select Record in mainteance under facility Management
+    And User_607 Get Record Code In mainteance under facility Management
+    And User_607 Click Draw Down Request under facility Management
+    And User_607 Click mainteance under Draw Down Request
+    And User_607 Enter Code In Facility Reference mainteance under Draw Down Request
+    And User_607 Click draw Down Request Addition Details Tabs In mainteance under Draw Down Request
+    And User_607 Check Down Payment In Addition Details Tabs In mainteance under Draw Down Request
+    And User_607 Check payment to vendor In Addition Details Tabs In mainteance under Draw Down Request
+    And User_607 Check Total Down Payment In Addition Details Tabs In mainteance under Draw Down Request
     
     
     

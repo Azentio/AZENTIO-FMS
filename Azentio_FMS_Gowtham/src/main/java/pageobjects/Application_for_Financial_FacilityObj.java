@@ -715,6 +715,25 @@ public class Application_for_Financial_FacilityObj {
 	public WebElement ButtonSuccessOk() {
 		return button_success_ok;
 	}
+
+	@FindBy(xpath = "//div[text()='CONFIRM']")
+	private WebElement confirm_popup;
+	public WebElement confirmPopup_610() {
+		return confirm_popup;
+	}
+
+	@FindBy(xpath = "//a[@id='dismissbut_WIFT001MT']/span")
+	private WebElement sendAlertPopup;
+	public WebElement sendAlertPopup_610() {
+		return sendAlertPopup;
+	}
+	
+	@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
+	private WebElement facilityAlreadyCreatedPopup_610;
+	public WebElement facilityAlreadyCreatedPopup_610() {
+		return facilityAlreadyCreatedPopup_610;
+	}
+
 	
 	@FindBy(xpath = "//button[@id='applicationfacility_save_btn_WIFT001MT']")
 	private WebElement limit_details_validate_btn;

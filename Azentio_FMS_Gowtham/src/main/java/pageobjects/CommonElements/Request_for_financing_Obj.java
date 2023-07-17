@@ -514,12 +514,17 @@ public class Request_for_financing_Obj {
 			return Search_cancel_code_onApproveCancel;
 		}
 	
-		@FindBy(xpath = "//*[@id=\"div__popup_path_sol_ok\"]/div[2]/div")
+		@FindBy(xpath = "//*[@id='div__popup_path_sol_ok']/div[2]/div")
 		private WebElement limit_details_validate_success_msg;
 		public WebElement limitDetailsValidateSuccessMsg() {
 			return limit_details_validate_success_msg;
 		}
-
+		
+		@FindBy(xpath = "//div[text()='Application Facility : 4497 approved successfully']")
+		private WebElement Pop_success_msg;
+		public WebElement Pop_success_msg() {
+			return Pop_success_msg;
+		}
 		
 		@FindBy(xpath = "//input[@id='facilityManagementGridTbl_Id_WIFT008MT_gs_fmsFacilityVO.CODE']")
 		private WebElement search_approvecancelCode_OnMainteance;
@@ -904,15 +909,11 @@ public class Request_for_financing_Obj {
 		      return select_recordIn_maintenance_under_request_for_financing;
 		    }
 	    
-	    
-		  
-		    @FindBy(xpath="//span[text()='Customer Grading & Recommendations']")
+		    @FindBy(xpath="//*[@id='customerGradingRecommendationsTab_CSMRF00P1']")
 		    private WebElement Click_Customer_Grading_Recommendations_For_reject;
 		    public WebElement Click_Customer_Grading_Recommendations_For_reject() {
 		      return Click_Customer_Grading_Recommendations_For_reject;
 		    }
-	    
-		  
 	    
 		    @FindBy(xpath="//td[@id='td_RequestFinancingLimitDetailsGridId_CSMRF00MT_0_rn']")
 		    private WebElement double_click_and_select_existing_productClass;
@@ -1664,7 +1665,178 @@ public class Request_for_financing_Obj {
 				return Check_Totallimit_InDisbursementSublimit_ApproveLevel1;
 			}
 			
-	
+	//1039019
+			
+			
+			
+			@FindBy(xpath = "//*[@id='facilityManagementGridTbl_Id_WIFT008MT_gs_statusDesc']")
+			private WebElement SearchStatusIn_drawDownRequest_AdditionalDetailsTab;
+			public WebElement SearchStatusIn_drawDownRequest_AdditionalDetailsTab_607() {
+				return SearchStatusIn_drawDownRequest_AdditionalDetailsTab;
+			}
+			
+			@FindBy(xpath = "//*[@id='drawDownRequestFormId_WIFT009MT_Down_Payment_Key']")
+			private WebElement Check_Down_PaymentIn_drawDownRequest_AdditionalDetailsTab;
+			public WebElement Check_Down_PaymentIn_drawDownRequest_AdditionalDetailsTab_607() {
+				return Check_Down_PaymentIn_drawDownRequest_AdditionalDetailsTab;
+			}
+			
+			@FindBy(xpath = "//*[@id='drawDownRequestFormId_WIFT009MT_down_payment_to_vendor_key']")
+			private WebElement Check_down_payment_to_vendorIn_drawDownRequest_AdditionalDetailsTab;
+			public WebElement Check_down_payment_to_vendorIn_drawDownRequest_AdditionalDetailsTab_607() {
+				return Check_down_payment_to_vendorIn_drawDownRequest_AdditionalDetailsTab;
+			}
+			
+			@FindBy(xpath = "//*[@id='lbl_drwadownRequestTotalDownPayment_WIFT009MT']")
+			private WebElement Check_TotalDownPaymentIn_drawDownRequest_AdditionalDetailsTab;
+			public WebElement Check_TotalDownPaymentIn_drawDownRequest_AdditionalDetailsTab() {
+				return Check_TotalDownPaymentIn_drawDownRequest_AdditionalDetailsTab;
+			}
+			
+			@FindBy(xpath = "//a[@id='dismissbut_WIFT001MT']/span")
+			private WebElement sendAlertPopup;
+			public WebElement sendAlertPopup_610() {
+				return sendAlertPopup;
+			}
+			
+			@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
+			private WebElement facilityAlreadyCreatedPopup_610;
+			public WebElement facilityAlreadyCreatedPopup_610() {
+				return facilityAlreadyCreatedPopup_610;
+			}
+			
+			@FindBy(xpath = "//div[text()='CONFIRM']")
+			private WebElement confirm_popup;
+			public WebElement confirmPopup_610() {
+				return confirm_popup;
+			}
+			
+			@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
+			private WebElement button_confirm_ok;
+			public WebElement ButtonConfirmOk() {
+				return button_confirm_ok;
+			}
+			
+			@FindBy(xpath = "//*[@id='_popup_path_sol_ok']")
+			private WebElement button_success_ok;
+			public WebElement ButtonSuccessOk() {
+				return button_success_ok;
+			}
+			
+			@FindBy(xpath = "//button[@id='applicationfacility_save_btn_WIFT001MT']")
+			private WebElement limit_details_validate_btn;
+			public WebElement limitDetailsValidateBtn() {
+				return limit_details_validate_btn;
+			}
+			
+			//1265139
+			
+			
+			@FindBy(xpath = "//*[@id='requestFinancingFacilityTotalvalue_RFFRF00P1']")
+			private WebElement WaitToVisibilityRecordinApproveLev1_underRequestForFinancing;
+			public WebElement WaitToVisibilityRecordinApproveLev1_underRequestForFinancing() {
+				return WaitToVisibilityRecordinApproveLev1_underRequestForFinancing;
+			}
+			//*[@id="requestDecisionForwardP1_CSMRF00P1"]
+			@FindBy(xpath = "//*[@id='requestDecisionForwardP1_CSMRF00P1']")
+			private WebElement ForwardRecord_inApproveLev1_underRequestForFinancing;
+			public WebElement ForwardRecord_inApproveLev1_underRequestForFinancing_607() {
+				return ForwardRecord_inApproveLev1_underRequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='requestP1approvalCommitte_CSMRF00P1']")
+			private WebElement SelectApprovalCommittee_inApproveLev1_underRequestForFinancing;
+			public WebElement SelectApprovalCommittee_inApproveLev1_underRequestForFinancing_607() {
+				return SelectApprovalCommittee_inApproveLev1_underRequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='requestForFinance_approve_btn_CSMRF00P1']")
+			private WebElement ClickApproveBtn_inApproveLev1_underRequestForFinancing;
+			public WebElement ClickApproveBtn_inApproveLev1_underRequestForFinancing_607() {
+				return ClickApproveBtn_inApproveLev1_underRequestForFinancing;
+			}
+			
+			
+			@FindBy(xpath = "//*[@id='CSMRF00AC']")
+			private WebElement ClickApproval_Committee_Recommendations_underRequestForFinancing;
+			public WebElement ClickApproval_Committee_Recommendations_underRequestForFinancing_607() {
+				return ClickApproval_Committee_Recommendations_underRequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='requestFinancingGridTbl_Id_CSMRF00AC_pager_left']/table/tbody/tr/td[6]/div/span")
+			private WebElement Click_ClrSearchIn_Approval_Committee_Recommendations_underRequestForFinancing;
+			public WebElement Click_ClrSearchIn_Approval_Committee_Recommendations_underRequestForFinancing_607() {
+				return Click_ClrSearchIn_Approval_Committee_Recommendations_underRequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='td_requestFinancingGridTbl_Id_CSMRF00AC_1_fmsRequestFinancingVO.CODE']")
+			private WebElement Select_record_In_Approval_Committee_Recommendations_underRequestForFinancing;
+			public WebElement Select_record_In_Approval_Committee_Recommendations_underRequestForFinancing_607() {
+				return Select_record_In_Approval_Committee_Recommendations_underRequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='creditCommitteeRecommendationsTab_CSMRF00AC']")
+			private WebElement Click_creditCommitteeRecommendationsTab_In_Approval_Committee_Recommendations_underRequestForFinancing;
+			public WebElement Click_creditCommitteeRecommendationsTab_In_Approval_Committee_Recommendations_underRequestForFinancing_607() {
+				return Click_creditCommitteeRecommendationsTab_In_Approval_Committee_Recommendations_underRequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='requestFinancingCreditReviewRecommandations_CSMRF00AC']")
+			private WebElement Click_RecommendationsArrow_IncreditCommitteeRecommendationsTab_InApproval_Committee_Recommendations;
+			public WebElement Click_RecommendationsArrow_IncreditCommitteeRecommendationsTab_InApproval_Committee_Recommendations_607() {
+				return Click_RecommendationsArrow_IncreditCommitteeRecommendationsTab_InApproval_Committee_Recommendations;
+			}
+			
+//			@FindBy(xpath = "//*[@id='RequestFinancingRecommendationsGridId_RFFRF00ACghead_0']/td/span")
+//			private WebElement Click_RecommendationsArrow_InApproval_Committee_Recommendations;
+//			public WebElement Click_RecommendationsArrow_InApproval_Committee_Recommendations_607() {
+//				return Click_RecommendationsArrow_InApproval_Committee_Recommendations;
+//			}
+			
+			@FindBy(xpath = "//*[@id='RequestFinancingRecommendationsGridId_CSMRF00ACghead_0']/td/span")
+			private WebElement ClickAddIn_RecommendationsArrow_InApproval_Committee_Recommendations;
+			public WebElement ClickAddIn_RecommendationsArrow_InApproval_Committee_Recommendations_607() {
+				return ClickAddIn_RecommendationsArrow_InApproval_Committee_Recommendations;
+			}
+			
+			
+			@FindBy(xpath = "//*[@id='td_RequestFinancingRecommendationsGridId_CSMRF00AC_1_fmsApplRecommendVO.RECOMMENDED_BY']")
+			private WebElement ClickSelectFirstLineIn_RecommendationsArrow_InApproval_Committee_Recommendations;
+			public WebElement ClickSelectFirstLineIn_RecommendationsArrow_InApproval_Committee_Recommendations_607() {
+				return ClickSelectFirstLineIn_RecommendationsArrow_InApproval_Committee_Recommendations;
+			}
+			
+			@FindBy(xpath = "//*[@id='1_fmsApplRecommendVO.RECOMMENDATION_RequestFinancingRecommendationsGridId_CSMRF00AC']")
+			private WebElement SelectApprove_InFirstLineIn_RecommendationsArrow_InApproval_Committee_Recommendations;
+			public WebElement SelectApprove_InFirstLineIn_RecommendationsArrow_InApproval_Committee_Recommendations_607() {
+				return SelectApprove_InFirstLineIn_RecommendationsArrow_InApproval_Committee_Recommendations;
+			}
+			
+			
+			@FindBy(xpath = "//*[@id='requestFinancing_recommend_Review_btn_CSMRF00AC']")
+			private WebElement Click_RecommebdBtn_InApproval_Committee_Recommendations_underRequestForFinancing;
+			public WebElement Click_RecommebdBtn_InApproval_Committee_Recommendations_underRequestForFinancing_607() {
+				return Click_RecommebdBtn_InApproval_Committee_Recommendations_underRequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='CSMRF00AR']")
+			private WebElement Click_authoriceReject_underRequestForFinancing;
+			public WebElement Click_authoriceReject_underRequestForFinancing_607() {
+				return Click_authoriceReject_underRequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='requestFinancingGridTbl_Id_CSMRF00AR_gs_fmsRequestFinancingVO.CODE']")
+			private WebElement SearchCode_InauthoriceReject_underRequestForFinancing;
+			public WebElement SearchCode_InauthoriceReject_underRequestForFinancing_607() {
+				return SearchCode_InauthoriceReject_underRequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='td_requestFinancingGridTbl_Id_CSMRF00AR_1_fmsRequestFinancingVO.CODE']")
+			private WebElement SelectRecord_InauthoriceReject_underRequestForFinancing;
+			public WebElement SelectRecord_InauthoriceReject_underRequestForFinancing_607() {
+				return SelectRecord_InauthoriceReject_underRequestForFinancing;
+			}
+			
 			
 			
 			

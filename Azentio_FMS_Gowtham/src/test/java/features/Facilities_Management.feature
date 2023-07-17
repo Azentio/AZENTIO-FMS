@@ -127,6 +127,7 @@ Feature: Title of your feature
   @403133
   Scenario: 8.6 Check the additional fields added not existing in TAR 130024 is translated inArabic/ French in Facility-Funding tab
     Given navigate to FMS application2 and login with valid credentials
+    And User_607 update test data for test case no 403133
     And User_607 Change the Language into French
     And User_607 Click retail under menu
     And User_607 Click body under retail
@@ -138,6 +139,7 @@ Feature: Title of your feature
   @403177
   Scenario: 9.4 Create the DD based on the above facility
     Given navigate to FMS application2 and login with valid credentials
+    And User_607 update test data for test case no 403177
     And Click Wifak Application first
     And Click Wifak Application Second
     And Click drawDown request under wifakApplication
@@ -189,7 +191,7 @@ Feature: Title of your feature
     Given navigate to FMS application2 and login with valid credentials
     And Click Wifak Application first
     And Click Wifak Application Second
-    And User update test data for test case no 583228
+    And User update test data for test case no 824257
     And Click Application for financial facilities
     And Click Maintenance
     And Click and Select Application for
@@ -224,7 +226,7 @@ Feature: Title of your feature
     And User select the level3 devision as approve
     And User clicks on the level3 submit button
     And Click Facilitie Managementunder wifakApplication
-    And click Maintenance under Facilities Managementunder
+    And click Maintenance under Facilities Management
     And select recordIn Maintenance under Facilities Management
     And Get Application code from the record
     And User_607 Click Facility Closure Request under WIFAK Application
@@ -237,7 +239,7 @@ Feature: Title of your feature
     And User_607 Click maintaince under Facility Closure Request
     And User_607 Select record in maintaince under Facility Closure Request
     And User_607 Check the Status in maintaince under Facility Closure Request
-    And click Maintenance under Facilities Managementunder
+    And click Maintenance under Facilities Management
     And select recordIn Maintenance under Facilities Management
     And Check the Status is in Closed
 
@@ -262,7 +264,7 @@ Feature: Title of your feature
     Given navigate to FMS application2 and login with valid credentials
     And Click Wifak Application first
     And Click Wifak Application Second
-    And User update test data for test case no 583228
+    And User update test data for test case no 349582
     And Click Application for financial facilities
     And Click Maintenance
     And Click and Select Application for
@@ -297,7 +299,7 @@ Feature: Title of your feature
     And User select the level3 devision as approve
     And User clicks on the level3 submit button
     And Click Facilitie Managementunder wifakApplication
-    And click Maintenance under Facilities Managementunder
+    And click Maintenance under Facilities Management
     And select recordIn Maintenance under Facilities Management
     And Get Application code from the record
     And User_607 Click Facility Closure Request under WIFAK Application
@@ -320,6 +322,7 @@ Feature: Title of your feature
     @570417
     Scenario: TSR - ITFCI170619
 		Given navigate to FMS application2 and login with valid credentials
+		And User update test data for test case no 570417
 		And Click request under menu 
     And Click request financing
     And Click request for financing under request financing

@@ -36,13 +36,21 @@ public class Facilities_Management {
 		FMSLogin login = new FMSLogin(driver);
 		JavascriptHelper JavascriptHelper = new JavascriptHelper(driver);
 		DropDownHelper DropDownHelper = new DropDownHelper(driver);
-	
+		
 		String path = System.getProperty("user.dir") + "\\TestData\\FMSTestData.xlsx";
 		ExcelData fmsTransactionsExcelData1 = new ExcelData(path, "Request", "Data Set ID");
 		Map<String, String> testData1;
 	
+		ExcelData fmsTransactionsExcelData = new ExcelData(path, "WIFAK_Application_TestData", "Data Set ID");
+		Map<String, String> testData;
+		
 		ExcelData fmsTransactionsExcelData2 = new ExcelData(path, "Facility_Management_Under_WIFAK", "Data Set ID");
 		Map<String, String> testData2;
+		
+		ExcelData fmsTransactionsExcelData3 = new ExcelData(path, " REQUEST_FOR_FINANCIN ", "Data Set ID");
+		Map<String, String> testData3;
+		
+		
 		//@542234
 		
 		@Given("User update test data for test case no 542234")
@@ -703,6 +711,12 @@ public class Facilities_Management {
 		
 		
 		//403133
+
+		@Given("User_607 update test data for test case no 403133")
+		public void user_update_test_data_for_test_case_no_403133() {
+			testData3 = fmsTransactionsExcelData3.getTestdata("AT_FM_054");
+		}
+
 		
 		@Given("User_607 Click retail under menu")
 		public void user_click_retail_under_menu() {
@@ -736,23 +750,28 @@ public class Facilities_Management {
 		@Given("User_607 Select Submission Reason in Maintanance screen")
 		public void user_select_submission_reason_in_maintanance_screen() {
 	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.Select_Raison_de_Soumission_in_french_607());
-	    	DropDownHelper.SelectUsingVisibleText(FacilitiesManagementObj.Select_Raison_de_Soumission_in_french_607(), "Nouvelle demande");
+	    	DropDownHelper.SelectUsingVisibleText(FacilitiesManagementObj.Select_Raison_de_Soumission_in_french_607(), testData3.get("Select Raison de Soumission in french"));
 
 		}
 		@Then("User_607 Check the record Language in french")
 		public void user_check_the_record_language_in_french() {
 	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.checkFirst_filed_in_french_607());
 	    	String checkFirstField = FacilitiesManagementObj.checkFirst_filed_in_french_607().getText();
-	    	Assert.assertEquals(checkFirstField, "Détails de la demande");
+	    	Assert.assertEquals(checkFirstField, testData3.get("CheckFirst filed in french"));
 	    	
 	    	
 	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.checksecond_filed_in_french_607());
 	    	String checksecondField = FacilitiesManagementObj.checksecond_filed_in_french_607().getText();
-	    	Assert.assertEquals(checksecondField, "Recommandations et Classement du Client");
+	    	Assert.assertEquals(checksecondField, testData3.get("CheckSecond filed in french"));
 
 		}
 		
 		//403177
+		@Given("User_607 update test data for test case no 403177")
+		public void user_update_test_data_for_test_case_no_403177() {
+			testData3 = fmsTransactionsExcelData3.getTestdata("AT_FM_077");
+		}
+
 		@Given("User_607 Select the record in Mainteance")
 		public void user_select_the_record_in_mainteance() {
 //	    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.confirmsavepopupokbutton_607());
@@ -1035,7 +1054,6 @@ public class Facilities_Management {
 			
 			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementObj.select_Record_in_mainteance_Facility_Closure_Request_607());
 			clicksAndActionsHelper.doubleClick(FacilitiesManagementObj.select_Record_in_mainteance_Facility_Closure_Request_607());
-;
 
 		}
 
@@ -1058,12 +1076,12 @@ public class Facilities_Management {
 			for (int i = 0; i <= 500; i++) {
 				check = FacilitiesManagementObj.Check_Status_in_mainteance_Facility_Closure_Request_607().getAttribute("prevvalue");
 				System.out.println(check);
-				if (check.equalsIgnoreCase("Approved")) {
+				if (check.equalsIgnoreCase(testData.get("Check the Status in maintaince"))) {
 					break;
 				}
 			}
 
-			Assert.assertEquals(check, "Approved");
+			Assert.assertEquals(check, testData.get("Check the Status in maintaince"));
 		}
 		
 		
@@ -1199,12 +1217,12 @@ public class Facilities_Management {
 			for (int i = 0; i <= 500; i++) {
 				check = FacilitiesManagementObj.CheckStatus_InQuery_under_Facility_Closure_Request_607().getAttribute("prevvalue");
 				System.out.println(check);
-				if (check.equalsIgnoreCase("Reversed")) {
+				if (check.equalsIgnoreCase(testData.get("Check Status In Query"))) {
 					break;
 				}
 			}
 
-			Assert.assertEquals(check, "Reversed");
+			Assert.assertEquals(check, testData.get("Check Status In Query"));
 		}
 		
 
