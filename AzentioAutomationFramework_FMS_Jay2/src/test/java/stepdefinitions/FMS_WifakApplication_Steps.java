@@ -162,9 +162,22 @@ public class FMS_WifakApplication_Steps {
 		testData = fmsTransactionsExcelData.getTestdata("AT_CA_014");
 	}
 	
+	///------Final Approval Screen
 	
+	@And("User_610 get the test data set id for AT_FALC_002")
+	public void get_the_test_data_set_id_for_at_falc_002() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_FALC_002");
+	}
 	
+	@And("User_610 get the test data set id for AT_FALC_003")
+	public void get_the_test_data_set_id_for_at_falc_003() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_FALC_003");
+	}
 	
+	@And("User_610 get the test data set id for AT_FALC_004")
+	public void get_the_test_data_set_id_for_at_falc_004() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_FALC_004");
+	}
 	
 	//------------------------------------
 	
@@ -2981,12 +2994,30 @@ public class FMS_WifakApplication_Steps {
 			customerGradingFlag.click();
 		}
 	}
+	
+	@And("^User_610 Uncheck the Customer Grading flag$")
+	public void user_uncheck_the_customer_grading_flag() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.customerGradingFlag_610());
+		WebElement customerGradingFlag = FMS_WifakApplication_Obj.customerGradingFlag_610();
+		if ((customerGradingFlag.isSelected())) {
+			customerGradingFlag.click();
+		}
+	}
 
 	@And("^User_610 check the Overwrite Grading flag$")
 	public void user_check_the_overwrite_grading_flag() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.OverwriteGradingFlag_610());
 		WebElement overwriteGradingFlag = FMS_WifakApplication_Obj.OverwriteGradingFlag_610();
 		if (!(overwriteGradingFlag.isSelected())) {
+			overwriteGradingFlag.click();
+		}
+	}
+	
+	@And("^User_610 Uncheck the Overwrite Grading flag$")
+	public void user_uncheck_the_overwrite_grading_flag() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.OverwriteGradingFlag_610());
+		WebElement overwriteGradingFlag = FMS_WifakApplication_Obj.OverwriteGradingFlag_610();
+		if ((overwriteGradingFlag.isSelected())) {
 			overwriteGradingFlag.click();
 		}
 	}
@@ -2997,6 +3028,16 @@ public class FMS_WifakApplication_Steps {
 		WebElement creditReviewFlag = FMS_WifakApplication_Obj.creditReviewFlag_610();
 		FMS_WifakApplication_Obj.creditReviewFlag_610().click();
 		if (!(creditReviewFlag.isSelected())) {
+			creditReviewFlag.click();
+		}
+	}
+	
+	@And("^User_610 Uncheck the Credit Review flag$")
+	public void user_uncheck_the_credit_review_flag() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.creditReviewFlag_610());
+		WebElement creditReviewFlag = FMS_WifakApplication_Obj.creditReviewFlag_610();
+		FMS_WifakApplication_Obj.creditReviewFlag_610().click();
+		if ((creditReviewFlag.isSelected())) {
 			creditReviewFlag.click();
 		}
 	}
@@ -3045,12 +3086,30 @@ public class FMS_WifakApplication_Steps {
 			issueFacilityOfferFlag.click();
 		}
 	}
+	
+	@And("^User_610 Uncheck the Issue Facility Offer flag$")
+	public void user_uncheck_the_issue_facility_offer_flag() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.issueFacilityOfferFlag_610());
+		WebElement issueFacilityOfferFlag = FMS_WifakApplication_Obj.issueFacilityOfferFlag_610();
+		if ((issueFacilityOfferFlag.isSelected())) {
+			issueFacilityOfferFlag.click();
+		}
+	}
 
 	@And("^User_610 check the Client Response flag$")
 	public void user_check_the_client_response_flag() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.clientResponseFlag_610());
 		WebElement clientResponseFlag = FMS_WifakApplication_Obj.clientResponseFlag_610();
 		if (!(clientResponseFlag.isSelected())) {
+			clientResponseFlag.click();
+		}
+	}
+	
+	@And("^User_610 Uncheck the Client Response flag$")
+	public void user_uncheck_the_client_response_flag() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.clientResponseFlag_610());
+		WebElement clientResponseFlag = FMS_WifakApplication_Obj.clientResponseFlag_610();
+		if ((clientResponseFlag.isSelected())) {
 			clientResponseFlag.click();
 		}
 	}
@@ -3063,12 +3122,30 @@ public class FMS_WifakApplication_Steps {
 			documentValidationFlag.click();
 		}
 	}
+	
+	@And("^User_610 Uncheck the Document Validation flag$")
+	public void user_uncheck_the_document_validation_flag() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.documentValidationFlag_610());
+		WebElement documentValidationFlag = FMS_WifakApplication_Obj.documentValidationFlag_610();
+		if ((documentValidationFlag.isSelected())) {
+			documentValidationFlag.click();
+		}
+	}
 
 	@And("^User_610 check the Final Approval flag$")
 	public void user_check_the_final_approval_flag() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.finalApprovalFlag_610());
 		WebElement finalApprovalFlag = FMS_WifakApplication_Obj.finalApprovalFlag_610();
 		if (!(finalApprovalFlag.isSelected())) {
+			finalApprovalFlag.click();
+		}
+	}
+	
+	@And("^User_610 Uncheck the Final Approval flag$")
+	public void user_uncheck_the_final_approval_flag() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.finalApprovalFlag_610());
+		WebElement finalApprovalFlag = FMS_WifakApplication_Obj.finalApprovalFlag_610();
+		if ((finalApprovalFlag.isSelected())) {
 			finalApprovalFlag.click();
 		}
 	}
@@ -3081,12 +3158,30 @@ public class FMS_WifakApplication_Steps {
 			createActiveFacilityFlag.click();
 		}
 	}
+	
+	@And("^User_610 Uncheck the Create Active Facility If Within Limits flag$")
+	public void user_uncheck_the_create_active_facility_if_within_limits_flag() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.createActiveFacilityFlag_610());
+		WebElement createActiveFacilityFlag = FMS_WifakApplication_Obj.createActiveFacilityFlag_610();
+		if ((createActiveFacilityFlag.isSelected())) {
+			createActiveFacilityFlag.click();
+		}
+	}
 
 	@And("^User_610 Check the Automatically Approve Facility If Within Limits flag$")
 	public void user_check_the_automatically_approve_facility_if_within_limits_flag() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.autoApproveFacilityFlag_610());
 		WebElement autoApproveFacilityFlag = FMS_WifakApplication_Obj.autoApproveFacilityFlag_610();
 		if (!(autoApproveFacilityFlag.isSelected())) {
+			autoApproveFacilityFlag.click();
+		}
+	}
+	
+	@And("^User_610 UnCheck the Automatically Approve Facility If Within Limits flag$")
+	public void user_uncheck_the_automatically_approve_facility_if_within_limits_flag() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.autoApproveFacilityFlag_610());
+		WebElement autoApproveFacilityFlag = FMS_WifakApplication_Obj.autoApproveFacilityFlag_610();
+		if ((autoApproveFacilityFlag.isSelected())) {
 			autoApproveFacilityFlag.click();
 		}
 	}
@@ -3555,5 +3650,145 @@ public class FMS_WifakApplication_Steps {
 	public void user_enter_floating_rate_periodicity_type_in_limit_detail(Integer int1) {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.FloatingRatePeriodicityTypeinlimitDetail_610());
 		DropDownhelper.SelectUsingVisibleText(FMS_WifakApplication_Obj.FloatingRatePeriodicityTypeinlimitDetail_610(),testData.get("Floating Rate Periodicity Type"));
+	}
+	
+	
+	//-------Approval Committee Recommendations
+	
+	@And("User_{int} click limits deteils in Approval Committee Recommendations Menu")
+	public void user_click_limits_deteils_in_approval_committee_recommendations_menu(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.LimitDetailsTabs_ApprovalCommitteeRecommendations__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.LimitDetailsTabs_ApprovalCommitteeRecommendations__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.LimitDetailsTabs_ApprovalCommitteeRecommendations__610());
+	}
+
+	@And("User_{int} click Product Class in Approval Committee Recommendations Menu")
+	public void user_click_product_class_in_approval_committee_recommendations_menu(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.productClass_ApprovalCommitteeRecommendations__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.productClass_ApprovalCommitteeRecommendations__610());
+		clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.productClass_ApprovalCommitteeRecommendations__610());
+	}
+
+	@And("User_{int} Validate FloatingRate key is Enable or Not in Approval Committee Recommendations Menu")
+	public void user_validate_floating_rate_key_is_enable_or_not_in_approval_committee_recommendations_menu(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.FloatingRate_key_ApprovalCommitteeRecommendations__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.FloatingRate_key_ApprovalCommitteeRecommendations__610());
+		Assert.assertEquals(true, FMS_WifakApplication_Obj.FloatingRate_key_ApprovalCommitteeRecommendations__610().isEnabled());
+		
+	}
+
+	@And("User_{int} Validate FloatingRate Periodicity key is Enable or Not in Approval Committee Recommendations Menu")
+	public void user_validate_floating_rate_periodicity_key_is_enable_or_not_in_approval_committee_recommendations_menu(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.FloatingRatePeriodicity_key_ApprovalCommitteeRecommendations__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.FloatingRatePeriodicity_key_ApprovalCommitteeRecommendations__610());
+		Assert.assertEquals(true, FMS_WifakApplication_Obj.FloatingRatePeriodicity_key_ApprovalCommitteeRecommendations__610().isEnabled());
+	}
+
+	@And("User_{int} Validate FloatingRate Periodicity Type key is Enable or Not in Approval Committee Recommendations Menu")
+	public void user_validate_floating_rate_periodicity_type_key_is_enable_or_not_in_approval_committee_recommendations_menu(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.FloatingRatePeriodicityType_key_ApprovalCommitteeRecommendations__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.FloatingRatePeriodicityType_key_ApprovalCommitteeRecommendations__610());
+		Assert.assertEquals(true, FMS_WifakApplication_Obj.FloatingRatePeriodicityType_key_ApprovalCommitteeRecommendations__610().isEnabled());
+	}
+	
+	//---------------------final approval limits creations
+	
+	@And("User_{int} clicks Final Approval Screen")
+	public void user_clicks_final_approval_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.FinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.FinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.FinalApprovalScreenInAFFF__610());
+	}
+
+	@And("User_{int} retrive the first data in Final Approval Screen")
+	public void user_retrive_the_first_data_in_final_approval_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Enter_ValidateCode_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Enter_ValidateCode_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.Enter_ValidateCode_InFinalApprovalScreenInAFFF__610());
+		FMS_WifakApplication_Obj.Enter_ValidateCode_InFinalApprovalScreenInAFFF__610().sendKeys(SuccessMsg,Keys.ENTER);
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_InFinalApprovalScreenInAFFF__610());
+	}
+
+	@And("User_{int} Select limit Details in Final Approval Screen")
+	public void user_select_limit_details_in_final_approval_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.LimitDetailsTabs_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.LimitDetailsTabs_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.LimitDetailsTabs_InFinalApprovalScreenInAFFF__610());
+	}
+
+	@And("User_{int} Click the Product Class In Final Approval Screen")
+	public void user_click_the_product_class_in_final_approval_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ProductClass_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.ProductClass_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.ProductClass_InFinalApprovalScreenInAFFF__610());
+	}
+
+	@And("User_{int} clicks and Validate Charges Details IsEnabled or Not In Final Approval Screen")
+	public void user_clicks_and_validate_charges_details_is_enabled_or_not_in_final_approval_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ChargesDetails_key_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.ChargesDetails_key_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.ChargesDetails_key_InFinalApprovalScreenInAFFF__610());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ChargesDetails_Screen_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.ChargesDetails_Screen_InFinalApprovalScreenInAFFF__610());
+		Assert.assertEquals(true, FMS_WifakApplication_Obj.ChargesDetails_Screen_InFinalApprovalScreenInAFFF__610().isEnabled());
+	}
+	
+	//-----------reject final approval
+	
+	@And("User_{int} clicks Other Details in Final Approval Screen")
+	public void user_clicks_other_details_in_final_approval_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.otherDetails_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.otherDetails_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.otherDetails_InFinalApprovalScreenInAFFF__610());
+	}
+
+	@And("User_{int} enter Reject Reason In Other Details in Final Approval Screen")
+	public void user_enter_reject_reason_in_other_details_in_final_approval_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.RejectReasonIn_otherDetails_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.RejectReasonIn_otherDetails_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.RejectReasonIn_otherDetails_InFinalApprovalScreenInAFFF__610());
+		FMS_WifakApplication_Obj.RejectReasonIn_otherDetails_InFinalApprovalScreenInAFFF__610().sendKeys(testData.get("Reject Reason Final Approval Screen"),Keys.TAB);
+	}
+
+	@And("User_{int} enter Comments In Other Details in Final Approval Screen")
+	public void user_enter_comments_in_other_details_in_final_approval_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.commentsIn_otherDetails_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.commentsIn_otherDetails_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.commentsIn_otherDetails_InFinalApprovalScreenInAFFF__610());
+		FMS_WifakApplication_Obj.commentsIn_otherDetails_InFinalApprovalScreenInAFFF__610().sendKeys(testData.get("Comments Reason Final Approval Screen"),Keys.TAB);
+	}
+
+	@Then("User_{int} Reject the Final Approval Screen")
+	public void user_reject_the_final_approval_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.rejectButtonIn_otherDetails_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.rejectButtonIn_otherDetails_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.rejectButtonIn_otherDetails_InFinalApprovalScreenInAFFF__610());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.okButton_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.okButton_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.okButton_610());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.successPopup_610());
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.successokButton_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.successokButton_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.successokButton_610());
+	}
+	
+	//---------------sendkey
+	
+	@Given("User_{int} retrive the first data in Final Approval Screen sendkey")
+	public void user_retrive_the_first_data_in_final_approval_screen_sendkey(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Enter_ValidateCode_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Enter_ValidateCode_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.Enter_ValidateCode_InFinalApprovalScreenInAFFF__610());
+		FMS_WifakApplication_Obj.Enter_ValidateCode_InFinalApprovalScreenInAFFF__610().sendKeys("5010",Keys.ENTER);
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_InFinalApprovalScreenInAFFF__610());
 	}
 }
