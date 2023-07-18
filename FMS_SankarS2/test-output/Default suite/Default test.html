@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jul 17 18:33:34 IST 2023</td>
+<td>Started on:</td><td>Tue Jul 18 17:46:42 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>137 seconds (137204 ms)</td>
+<tr><td>Total time:</td><td>286 seconds (286410 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,15 +75,40 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check this field is non-mandatory and user can able to make this field as mandatory using customization option", "Optional[User_608 to validate the Accounting Entries features]"</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.testData&quot; is null
-	at stepdefinitions.ApplicationFinancialFacilitySteps_608.user_select_the_required_as_required_under_marketed_by_cutomize_tab(ApplicationFinancialFacilitySteps_608.java:3571)
-	at ✽.User_608 select the Required as Required under Marketed By Cutomize tab(file:///C:/Users/inindc00608/git/Sankar_FMS/FMS_SankarS2/src/test/java/features/AccountingEntries_608.feature:38)
-</pre></div><a href='#' onClick='toggleBox("stack-trace218638614", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace218638614'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.testData&quot; is null
-	at stepdefinitions.ApplicationFinancialFacilitySteps_608.user_select_the_required_as_required_under_marketed_by_cutomize_tab(ApplicationFinancialFacilitySteps_608.java:3571)
-	at ✽.User_608 select the Required as Required under Marketed By Cutomize tab(file:///C:/Users/inindc00608/git/Sankar_FMS/FMS_SankarS2/src/test/java/features/AccountingEntries_608.feature:38)
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "IIS Param Application", "Optional[To check the Request For Financing Feature]"</td>
+<td><div><pre>java.lang.AssertionError: expected [1] but found [60]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at stepdefinitions.ApplicationFinancialFacilitySteps_608.user_validate_the_no_of_payments_input(ApplicationFinancialFacilitySteps_608.java:2692)
+	at ✽.User_608 validate the No of payments input(file:///C:/Users/inindc00608/git/Sankar_FMS/FMS_SankarS2/src/test/java/features/RequestForFinancing_608.feature:49)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1456147693", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1456147693'><pre>java.lang.AssertionError: expected [1] but found [60]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at stepdefinitions.ApplicationFinancialFacilitySteps_608.user_validate_the_no_of_payments_input(ApplicationFinancialFacilitySteps_608.java:2692)
+	at ✽.User_608 validate the No of payments input(file:///C:/Users/inindc00608/git/Sankar_FMS/FMS_SankarS2/src/test/java/features/RequestForFinancing_608.feature:49)
 </pre></div></td>
+<td>128</td>
+<td>Runner.TestApplication@5afa3c9</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "IIS Param Application", "Optional[To check the Request For Financing Feature]"</td>
+<td></td>
 <td>114</td>
 <td>Runner.TestApplication@5afa3c9</td></tr>
 </table><p>

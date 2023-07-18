@@ -1,47 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-17T18:33:34 IST" name="Default suite" finished-at="2023-07-17T18:35:52 IST" duration-ms="137204">
+  <suite started-at="2023-07-18T17:46:42 IST" name="Default suite" finished-at="2023-07-18T17:51:29 IST" duration-ms="286410">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5afa3c9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-07-17T18:33:34 IST" name="Default test" finished-at="2023-07-17T18:35:52 IST" duration-ms="137204">
+    <test started-at="2023-07-18T17:46:42 IST" name="Default test" finished-at="2023-07-18T17:51:29 IST" duration-ms="286410">
       <class name="Runner.TestApplication">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-07-17T18:33:34 IST" name="setUpClass" finished-at="2023-07-17T18:33:37 IST" duration-ms="2433" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-07-18T17:46:42 IST" name="setUpClass" finished-at="2023-07-18T17:46:45 IST" duration-ms="2270" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-07-17T18:33:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-17T18:35:31 IST" duration-ms="114268" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-07-18T17:46:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-18T17:48:39 IST" duration-ms="114524" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Check this field is non-mandatory and user can able to make this field as mandatory using customization option"]]>
+                <![CDATA["IIS Param Application"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[User_608 to validate the Accounting Entries features]"]]>
+                <![CDATA["Optional[To check the Request For Financing Feature]"]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "java.util.Map.get(Object)" because "this.testData" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.util.Map.get(Object)" because "this.testData" is null
-at stepdefinitions.ApplicationFinancialFacilitySteps_608.user_select_the_required_as_required_under_marketed_by_cutomize_tab(ApplicationFinancialFacilitySteps_608.java:3571)
-at ✽.User_608 select the Required as Required under Marketed By Cutomize tab(file:///C:/Users/inindc00608/git/Sankar_FMS/FMS_SankarS2/src/test/java/features/AccountingEntries_608.feature:38)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-07-17T18:35:31 IST" name="tearDownClass" finished-at="2023-07-17T18:35:52 IST" duration-ms="20411" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-07-18T17:48:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-18T17:50:48 IST" duration-ms="128323" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["IIS Param Application"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[To check the Request For Financing Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [1] but found [60]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [1] but found [60]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at stepdefinitions.ApplicationFinancialFacilitySteps_608.user_validate_the_no_of_payments_input(ApplicationFinancialFacilitySteps_608.java:2692)
+at ✽.User_608 validate the No of payments input(file:///C:/Users/inindc00608/git/Sankar_FMS/FMS_SankarS2/src/test/java/features/RequestForFinancing_608.feature:49)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-07-18T17:50:48 IST" name="tearDownClass" finished-at="2023-07-18T17:51:29 IST" duration-ms="41189" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

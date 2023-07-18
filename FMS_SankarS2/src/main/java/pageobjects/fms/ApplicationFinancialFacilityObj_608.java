@@ -72,6 +72,12 @@ public class ApplicationFinancialFacilityObj_608 {
 		return wifak_app_financial_facility_main_reopen_status;
 	}
 	
+	@FindBy(xpath = "//input[@id='code_WIFT001MT']")
+	private WebElement wifak_application_financial_facility_main_application_code;
+	public WebElement wifakApplicationFinancialFacilityMainApplicationCode_608() {
+		return wifak_application_financial_facility_main_application_code;
+	}
+	
 	@FindBy(xpath = "//select[@id='applicationFacilityApplicationfor_WIFT001MT']")
 	private WebElement main_application_for_dropdown;
 	public WebElement mainApplicationForDropdown_608() {
@@ -1360,7 +1366,17 @@ public class ApplicationFinancialFacilityObj_608 {
 		return wifak_financial_facility_main_marketed_by_customize_tab_approve_btn;
 	}
 	
+	@FindBy(xpath = "//label[@id='advanced_options_key']")
+	private WebElement FMS_core_advanced_options_menu;
+	public WebElement FMSCoreAdvancedOptionsMenu_608() {
+		return FMS_core_advanced_options_menu;
+	}
 	
-	
+	@FindBy(xpath = "//label[@id='settings_key']")
+	private WebElement FMS_core_advanced_options_menu_settings;
+	public WebElement FMSCoreAdvancedOptionsMenuSettings_608() {
+		return FMS_core_advanced_options_menu_settings;
+	}
     
+	
 }

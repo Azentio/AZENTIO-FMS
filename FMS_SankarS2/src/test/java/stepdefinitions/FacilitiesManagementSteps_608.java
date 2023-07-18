@@ -35,13 +35,13 @@ public class FacilitiesManagementSteps_608 {
 	FMSLogin login = new FMSLogin(driver);
 	
 	String path = System.getProperty("user.dir") +"\\TestData\\FMSTestData.xlsx";
-	ExcelData fmsTransactionsExcelData = new ExcelData(path,"FacilitiesManagementTestData","DataSet ID");
+	ExcelData fmsFacilitiesManagementExcelData = new ExcelData(path,"FacilitiesManagementTestData","DataSet ID");
 	Map<String, String> testData;
 	
 //	@AT_FM_035
 	@And("User_608 get the test data for test case AT_FM_035_FMSCore")
 	public void user_get_the_test_data_for_test_case_at_fm__fms_core() {
-		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_035");
+		testData = fmsFacilitiesManagementExcelData.getTestdata("DS_AT_FM_035");
 	}
 	
 	
@@ -165,7 +165,7 @@ public class FacilitiesManagementSteps_608 {
 
    @And("User_608 click the Save button in Repayment Plan tab under Application Financial Facility Maintanance")
    public void user_click_the_save_button_in_repayment_plan_tab_under_application_financial_facility_maintanance() throws Throwable {
-	   	Thread.sleep(5000);  		
+	   	Thread.sleep(3000);  		
 	   	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.WifakLimitDetailsRepaymentPlanTabSaveBtn_608());
    		facilityManagementObj608.WifakLimitDetailsRepaymentPlanTabSaveBtn_608().click();
 		

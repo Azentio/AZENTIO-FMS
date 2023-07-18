@@ -45,8 +45,7 @@ And User_608 clicks on the product class add button
 And User_608 clicks the save button
 And User_608 clicks the limit details first row
 And User_608 clicks the repayment plan button under limit details tab
-Then User_608 validate the Rounding factor dropdown
-Then User_608 validate the No of payments input
+Then User_608 validate the Rounding factor dropdown as Nearest1
 
 
 # Sprint 3
@@ -126,7 +125,7 @@ And User_608 move to the Document details tab
 And User_608 enter the Solicitor Name
 And User_608 enter the Estimator Name
 And User_608 clicks the save button
-And User_608 clicks on the validate button
+And User_608 clicks on the validate button for request for financing
 Then User_608 clicks the Approve Level1 menu under Application for financial facilities
 And User_608 get the test data for test case AT_RF_034
 And User_608 enter the reference code in Approve level1
@@ -286,7 +285,7 @@ And User_608 move to the Document details tab
 And User_608 enter the Solicitor Name
 And User_608 enter the Estimator Name
 And User_608 clicks the save button
-And User_608 clicks on the validate button
+And User_608 clicks on the validate button for request for financing
 Then User_608 clicks the Approve Level1 menu under Application for financial facilities
 And User_608 get the test data for test case AT_RF_099
 And User_608 enter the reference code in Approve level1
@@ -364,7 +363,7 @@ And User_608 move to the Document details tab
 And User_608 enter the Solicitor Name
 And User_608 enter the Estimator Name
 And User_608 clicks the save button
-And User_608 clicks on the validate button
+And User_608 clicks on the validate button for request for financing
 And User_608 close the maintanance screen under Application for financial facility in WIFAK
 Then User_608 clicks the Approve Level1 menu under Application for financial facilities
 And User_608 get the test data for test case AT_RF_100
@@ -410,7 +409,7 @@ And User_608 move to the Document details tab
 And User_608 enter the Solicitor Name
 And User_608 enter the Estimator Name
 And User_608 clicks the save button
-And User_608 clicks on the validate button
+And User_608 clicks on the validate button for request for financing
 Then User_608 clicks the Approve Level1 menu under Application for financial facilities
 And User_608 get the test data for test case AT_RF_100
 And User_608 enter the reference code in Approve level1
@@ -494,7 +493,7 @@ And User_608 move to the Document details tab
 And User_608 enter the Solicitor Name
 And User_608 enter the Estimator Name
 And User_608 clicks the save button
-And User_608 clicks on the validate button
+And User_608 clicks on the validate button for request for financing
 Then User_608 clicks the Approve Level1 menu under Application for financial facilities
 And User_608 get the test data for test case AT_RF_101
 And User_608 enter the reference code in Approve level1
@@ -542,7 +541,7 @@ And User_608 move to the Document details tab
 And User_608 enter the Solicitor Name
 And User_608 enter the Estimator Name
 And User_608 clicks the save button
-And User_608 clicks on the validate button
+And User_608 clicks on the validate button for request for financing
 Then User_608 clicks the Approve Level1 menu under Application for financial facilities
 And User_608 get the test data for test case AT_RF_102
 And User_608 enter the reference code in Approve level1

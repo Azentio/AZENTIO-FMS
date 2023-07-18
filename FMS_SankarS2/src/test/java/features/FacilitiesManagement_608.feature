@@ -146,7 +146,7 @@ And User_608 move to the Document details tab
 And User_608 enter the Solicitor Name
 And User_608 enter the Estimator Name
 And User_608 clicks the save button
-And User_608 clicks on the validate button
+And User_608 clicks on the validate button for Facilities Management
 Then User_608 clicks the Approve Level1 menu under Application for financial facilities
 And User_608 get the test data for test case AT_FM_038
 And User_608 enter the reference code in Approve level1
@@ -169,6 +169,7 @@ And User_608 click the OK button in approval committee user popup under Approval
 
 
 @AT_FM_058
+@AT_FM_058_FMSParam
 Scenario: Check the All the flags in FMS Param Facility type
 
 Given navigate to FMS param application and login with valid credentials
@@ -197,7 +198,9 @@ And User_608 enter the code value in Approve menu
 And User_608 double click on the retrieved data in Approve menu
 When User_608 clicks on the Approve button in Approve menu under Facility Type
 
+
 @AT_FM_058
+@AT_FM_058_FMSCore
 Scenario: Create a facility from Request for Finance
 
 Given navigate to FMS application and login with valid credentials
@@ -229,7 +232,7 @@ And User_608 click the Save button in Repayment Plan tab under Application Finan
 And User_608 move to the Document details tab
 And User_608 enter the Solicitor Name
 And User_608 enter the Estimator Name
-And User_608 clicks on the validate button
+And User_608 clicks on the validate button for Facilities Management
 Then User_608 clicks the Approve Level1 menu under Application for financial facilities
 And User_608 get the test data for test case AT_FM_058
 And User_608 enter the reference code in Approve level1
@@ -329,7 +332,7 @@ And User_608 move to the Document details tab
 And User_608 enter the Solicitor Name
 And User_608 enter the Estimator Name
 And User_608 clicks the save button
-And User_608 clicks on the validate button
+And User_608 clicks on the validate button for Facilities Management
 Then User_608 clicks the Approve Level1 menu under Application for financial facilities
 And User_608 get the test data for test case AT_FM_102
 And User_608 enter the reference code in Approve level1
@@ -386,7 +389,7 @@ And User_608 move to the Document details tab
 And User_608 enter the Solicitor Name
 And User_608 enter the Estimator Name
 And User_608 clicks the save button
-And User_608 clicks on the validate button
+And User_608 clicks on the validate button for Facilities Management
 Then User_608 clicks the Approve Level1 menu under Application for financial facilities
 And User_608 get the test data for test case AT_FM_103
 And User_608 enter the reference code in Approve level1
@@ -456,7 +459,7 @@ And User_608 move to the Document details tab
 And User_608 enter the Solicitor Name
 And User_608 enter the Estimator Name
 And User_608 clicks the save button
-And User_608 clicks on the validate button
+And User_608 clicks on the validate button for Facilities Management
 Then User_608 clicks the Approve Level1 menu under Application for financial facilities
 And User_608 get the test data for test case AT_FM_104
 And User_608 enter the reference code in Approve level1
@@ -538,7 +541,7 @@ And User_608 move to the Document details tab
 And User_608 enter the Solicitor Name
 And User_608 enter the Estimator Name
 And User_608 clicks the save button
-And User_608 clicks on the validate button
+And User_608 clicks on the validate button for Facilities Management
 Then User_608 clicks the Approve Level1 menu under Application for financial facilities
 And User_608 get the test data for test case AT_FM_105_FMSCore
 And User_608 enter the reference code in Approve level1
