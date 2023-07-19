@@ -419,8 +419,8 @@ public class RequestForFinancingSteps_608 {
 		requestForFinancingObj608.arabicMortgageManagementModule_608().click();
 	}
 
-	@And("^User_608 clicks on the Maintanance screen under mortgage management module$")
-	public void user_clicks_on_the_maintanance_screen_under_mortgage_management_module() throws Throwable {
+	@And("^User_608 open the Maintanance screen under mortgage management module$")
+	public void user_open_the_maintanance_screen_under_mortgage_management_module() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.mortgageManagementMain_608());
 		requestForFinancingObj608.mortgageManagementMain_608().click();
 	}
@@ -449,7 +449,7 @@ public class RequestForFinancingSteps_608 {
 	public void user_validate_the_visibility_of_account_no_input_box_in_limit_details() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.limitDetailsAccNoInput_608());
 		boolean accNoDisplayed = requestForFinancingObj608.limitDetailsAccNoInput_608().isDisplayed();
-		Assert.assertEquals(true, accNoDisplayed);
+		Assert.assertTrue(accNoDisplayed);
 	}
 
 	@Then("^User_608 validate the visibility of Fund Transfer rate input box in limit details$")
@@ -457,7 +457,7 @@ public class RequestForFinancingSteps_608 {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.limitDetailsFundTransferRateInput_608());
 		boolean fundtransferdisplayed = requestForFinancingObj608.limitDetailsFundTransferRateInput_608().isDisplayed();
-		Assert.assertEquals(true, fundtransferdisplayed);
+		Assert.assertTrue(fundtransferdisplayed);
 	}
 
 //  @AT_RF_098_User_VAK
@@ -496,12 +496,18 @@ public class RequestForFinancingSteps_608 {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakApprovalCommitteeClearBtn());
 		requestForFinancingObj608.wifakApprovalCommitteeClearBtn().click();
 	}
+	
+	@And("^User_VAK enter the code in searchgrid under approval committe recommedations menu$")
+	public void User_VAK_enter_the_code_in_searchgrid_under_approval_committe_recommedations_menu() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakApprovalCommitteeSearchgridCodeInput());
+		requestForFinancingObj608.wifakApprovalCommitteeSearchgridCodeInput().sendKeys(testData.get("Search Code"),Keys.ENTER);
+//		requestForFinancingObj608.wifakApprovalCommitteeSearchgridCodeInput().sendKeys("4880",Keys.ENTER);
+	}
 
 	@And("^User_VAK double click on the any one record in approval committe recommedations menu$")
-	public void User_VAK_double_click_on_the_any_one_record_in_approval_committe_recommedations_menu()
-			throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakApprovalCommitteeSelectRow());
-		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.wifakApprovalCommitteeSelectRow());
+	public void User_VAK_double_click_on_the_any_one_record_in_approval_committe_recommedations_menu() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakApprovalCommitteeSearchgirdRow());
+		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.wifakApprovalCommitteeSearchgirdRow());
 	}
 
 	@And("^User_VAK clicks on the Recommend button in approval committe recommedations menu$")

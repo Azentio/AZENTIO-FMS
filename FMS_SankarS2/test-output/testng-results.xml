@@ -1,69 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-18T17:46:42 IST" name="Default suite" finished-at="2023-07-18T17:51:29 IST" duration-ms="286410">
+  <suite started-at="2023-07-19T18:05:56 IST" name="Default suite" finished-at="2023-07-19T18:08:17 IST" duration-ms="141464">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5afa3c9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-07-18T17:46:42 IST" name="Default test" finished-at="2023-07-18T17:51:29 IST" duration-ms="286410">
+    <test started-at="2023-07-19T18:05:56 IST" name="Default test" finished-at="2023-07-19T18:08:17 IST" duration-ms="141464">
       <class name="Runner.TestApplication">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-07-18T17:46:42 IST" name="setUpClass" finished-at="2023-07-18T17:46:45 IST" duration-ms="2270" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-07-19T18:05:56 IST" name="setUpClass" finished-at="2023-07-19T18:05:58 IST" duration-ms="2029" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-07-18T17:46:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-18T17:48:39 IST" duration-ms="114524" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-07-19T18:05:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-19T18:07:50 IST" duration-ms="112263" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["IIS Param Application"]]>
+                <![CDATA["Client Response"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[To check the Request For Financing Feature]"]]>
+                <![CDATA["Optional[To check the Client Response Feature]"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-07-18T17:48:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-18T17:50:48 IST" duration-ms="128323" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["IIS Param Application"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[To check the Request For Financing Feature]"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [1] but found [60]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [1] but found [60]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at org.testng.Assert.assertEquals(Assert.java:639)
-at stepdefinitions.ApplicationFinancialFacilitySteps_608.user_validate_the_no_of_payments_input(ApplicationFinancialFacilitySteps_608.java:2692)
-at ✽.User_608 validate the No of payments input(file:///C:/Users/inindc00608/git/Sankar_FMS/FMS_SankarS2/src/test/java/features/RequestForFinancing_608.feature:49)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-07-18T17:50:48 IST" name="tearDownClass" finished-at="2023-07-18T17:51:29 IST" duration-ms="41189" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-07-19T18:07:50 IST" name="tearDownClass" finished-at="2023-07-19T18:08:17 IST" duration-ms="27069" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

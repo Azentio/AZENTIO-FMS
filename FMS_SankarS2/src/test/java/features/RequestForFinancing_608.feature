@@ -1,5 +1,6 @@
 Feature: To check the Request For Financing Feature
 
+## IIS Param --> Product class --> Maintanance --> Additional tab --> repayment paln tab --> no of payments dropdown  as "Nearest 1" --> Save
 # Sprint 3
 @AT_RF_014
 @AT_RF_014_IISParam
@@ -19,6 +20,8 @@ And User_608 enter the value in number of payments under repayment plan tab
 And User_608 select the dropdown in number of payments under repayment plan tab
 Then User_608 clicks save the button in maintanance under product class
 
+# FMS Cire --> wifak --> Application Financial facility --> Create one application in Maintanance -->
+# limit details --> repayment plan btn --> validate no of payments dropdown "Nearest 1"
 @AT_RF_014
 @AT_RF_014_FMSCore
 Scenario: IIS Param Application
@@ -48,6 +51,8 @@ And User_608 clicks the repayment plan button under limit details tab
 Then User_608 validate the Rounding factor dropdown as Nearest1
 
 
+# FMS Param --> Facility Custom Fields --> maintain Facility custom fields -->
+# update after approve --> double click any one record --> validate 'Facility custom fields' should be available
 # Sprint 3
 @AT_RF_024
 Scenario: TSR - FIBSI180217
@@ -61,6 +66,10 @@ And User_608 double click on the one record under update after approve
 And User_608 validate Facility Custom Fields screen are available
 
 
+# FMS Param --> facility tye --> update after approve --> retrive the data -->
+# facility details tab --> STP Facility req division-- check all flags except "issue facility offer" flag
+# facility reports tab --> issue facility offer --> select reprot ID --> check "Auto print" flag --> Update @ Approve
+#
 # Sprint 3
 @AT_RF_034
 @AT_RF_034_FMSParam
@@ -97,7 +106,7 @@ And User_608 double click on the retrieved data in Approve menu
 When User_608 clicks on the Approve button in Approve menu under Facility Type
 
 
-# Create a new application and go to issue facility offer menu and click the issue offer button
+# FMS Core --> WIFAK APP --> App for financial facility --> Create a new application and go to issue facility offer menu and click the issue offer button
 @AT_RF_034
 @AT_RF_034_FMSCore
 Scenario: TSR - CDMI180093
@@ -147,6 +156,8 @@ And User_608 search the code in issue facility offer
 And User_608 double click on the retrived data
 When User_608 clicks on the issue offer button under issue facility offer
 
+
+
 # Sprint 3
 @AT_RF_035
 Scenario: TSR - SBYB160013
@@ -155,13 +166,13 @@ Given navigate to FMS application and login with valid credentials
 And User_608 click on the language option in FMS core
 And User_608 click on the arabic under language option
 And User_608 clicks on the the mortgage management module
-And User_608 clicks on the Maintanance screen under mortgage management module
+And User_608 open the Maintanance screen under mortgage management module
 And User_608 verify the Maintanance screen should be arabic language
 
 
 # Sprint 4
-#  In application for financial facility To check the down payment and vendor should be editable.
-# limit details product class tab account label and found transfer label should be visible
+# FMS Core --> WIFAK APP --> Application for financial facility --> Additional details tab --> To check the down payment and down payment vendor should be editable.
+# limit details --> Product class tab  --> Account label field and found transfer label should be visible
 @AT_RF_040
 Scenario: TSR - RIDB180129
 
@@ -180,7 +191,9 @@ And User_608 enter the facility rating in main info tab
 And User_608 clicks on the additional details tab
 And User_608 enter the total value in additional info tab
 And User_608 enter the expire date in additional info tab
+And User_608 validate the down payment percentage should be editable in additional info under main screen
 And User_608 enter the down payment percentage in additional info under main screen
+And User_608 validate the down payment to vendor percentage should be editable in additional info under main screen
 And User_608 enter the down payment to vendor percentage in additional info tab
 And User_608 clicks the limit details tab
 And User_608 clicks the add new record button in limit details tab
@@ -192,6 +205,7 @@ Then User_608 validate the visibility of Fund Transfer rate input box in limit d
 ## 1. Login VAK User and go to wifak Approval commitee recommendation menu give recommend select the VAK user give approve and go to more comment give the some comments
 ## 2. Login SANKAR User and go to wifak Application for financial facilities Main screen search the Ref Code and click the approval commitees button.
 ## 2. select the VAK User and click the More comments button validate the comment
+# Every time run this scenario change the 'Search Code' in Excel sheet
 @AT_RF_098
 @AT_RF_098_User_VAK
 Scenario: TSR - BTII170041
@@ -202,7 +216,8 @@ And User_VAK clear the caches in FMS Application
 And User_VAK clicks on the WIFAK_Application first link
 And User_VAK clicks on the WIFAK_Application second link
 And User_VAK clicks on the approval committe recommedation menu
-And User_VAK clicks on the clear button in approval committe recommedations menu
+#And User_VAK clicks on the clear button in approval committe recommedations menu
+And User_VAK enter the code in searchgrid under approval committe recommedations menu
 And User_VAK double click on the any one record in approval committe recommedations menu
 And User_VAK clicks on the Recommend button in approval committe recommedations menu
 And User_VAK click the User_VAK recommended by name in recommend box

@@ -259,10 +259,16 @@ public class RequestForFinancingObj_608 {
 		return wifak_approval_committee_clear_btn;
 	}
 	
-	@FindBy(xpath = "//tr[@id='2']")
-	private WebElement wifak_approval_committee_select_row;
-	public WebElement wifakApprovalCommitteeSelectRow() {
-		return wifak_approval_committee_select_row;
+	@FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT002MT_gs_fmsApplVO.CODE']")
+	private WebElement wifak_approval_committee_searchgrid_code_input;
+	public WebElement wifakApprovalCommitteeSearchgridCodeInput() {
+		return wifak_approval_committee_searchgrid_code_input;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT002MT_1_fmsApplVO.CODE']")
+	private WebElement wifak_approval_committee_searchgrid_row;
+	public WebElement wifakApprovalCommitteeSearchgirdRow() {
+		return wifak_approval_committee_searchgrid_row;
 	}
 	
 	@FindBy(xpath = "//input[@id='code_WIFT002MT']")

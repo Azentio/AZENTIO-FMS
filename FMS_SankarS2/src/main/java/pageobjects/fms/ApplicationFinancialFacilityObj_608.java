@@ -685,7 +685,7 @@ public class ApplicationFinancialFacilityObj_608 {
 		return wifak_facilities_management_limit_details_floating_rate_periodicity_input;
 	}
 	
-	@FindBy(xpath = "//select[@id='facilityMgtLimitDetailsFLOAT_RATE_PERIODICITY_TYPE_WIFT008MT']")
+	@FindBy(xpath = "//select[@id='facilityMgtLimitDetailsFLOAT_RATE_PERIODICITY_TYPE_WIFT008MT']//option[@selected='selected']")
 	private WebElement wifak_facilities_management_limit_details_floating_rate_periodicity_type_dropdown;
 	public WebElement wifakFacilitiesManagementLimitDetailsFloatingRatePeriodicityTypeDropdown_608() {
 		return wifak_facilities_management_limit_details_floating_rate_periodicity_type_dropdown;
@@ -1377,6 +1377,79 @@ public class ApplicationFinancialFacilityObj_608 {
 	public WebElement FMSCoreAdvancedOptionsMenuSettings_608() {
 		return FMS_core_advanced_options_menu_settings;
 	}
+	
+	
+//	Client Response Feature
+//	@AT_CR_005
+	@FindBy(xpath = "//a[@id='WIFT006MT']")
+	private WebElement wifak_client_response_menu;
+	public WebElement wifakClientResponseMenu() {
+		return wifak_client_response_menu;
+	}
     
+	@FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT006MT_gs_fmsApplVO.CODE']")
+	private WebElement wifak_client_response_menu_searchgrid_code_input;
+	public WebElement wifakClientResponseMenuSearchgridCodeInput() {
+		return wifak_client_response_menu_searchgrid_code_input;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT006MT_1_fmsApplVO.CODE']")
+	private WebElement wifak_client_response_menu_searchgrid_row;
+	public WebElement wifakClientResponseMenuSearchgridRow() {
+		return wifak_client_response_menu_searchgrid_row;
+	}
+	
+	@FindBy(xpath = "//input[@id='code_WIFT006MT']")
+	private WebElement wifak_client_response_menu_code_input;
+	public WebElement wifakClientResponseMenuCodeInput() {
+		return wifak_client_response_menu_code_input;
+	}
+	
+	@FindBy(xpath = "//li[@id='applicationFacilityLimitDetailsTabs_WIFT006MT']")
+	private WebElement wifak_client_response_limit_details_tab;
+	public WebElement wifakClientResponseLimitDetailsTab() {
+		return wifak_client_response_limit_details_tab;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_ApplicationFacilityLimitDetailsGrid_WIFT006MT_1_fmsAppLimitDetVO.GENERAL_FACILITY_TYPE']")
+	private WebElement wifak_client_response_limit_details_product_class_row;
+	public WebElement wifakClientResponseLimitDetailsPrductClassRow() {
+		return wifak_client_response_limit_details_product_class_row;
+	}
+	
+	@FindBy(xpath = "//input[@id='lookuptxt_applicationfacilityLimitDetailsCLASS_WIFT006MT']")
+	private WebElement wifak_client_response_limit_details_product_class_input;
+	public WebElement wifakClientResponseLimitDetailsPrductClassInput() {
+		return wifak_client_response_limit_details_product_class_input;
+	}
+	
+	@FindBy(xpath = "//input[@id='lookuptxt_applicationfacilityLimitDetailsFLOATING_RATE_WIFT006MT']")
+	private WebElement wifak_client_response_limit_details_product_class_floating_rate;
+	public WebElement wifakClientResponseLimitDetailsPrductClassFloatingRate() {
+		return wifak_client_response_limit_details_product_class_floating_rate;
+	}
+	
+	@FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsFLOAT_RATE_PERIODICITY_NBR_WIFT006MT']")
+	private WebElement wifak_client_response_limit_details_product_class_FR_periodicity;
+	public WebElement wifakClientResponseLimitDetailsPrductClassFRPeriodicity() {
+		return wifak_client_response_limit_details_product_class_FR_periodicity;
+	}
+	
+	@FindBy(xpath = "//select[@id='applicationfacilityLimitDetailsFLOAT_RATE_PERIODICITY_TYPE_WIFT006MT']//option[@selected='selected']")
+	private WebElement wifak_client_response_limit_details_product_class_FR_periodicity_type;
+	public WebElement wifakClientResponseLimitDetailsPrductClassFRPeriodicityType() {
+		return wifak_client_response_limit_details_product_class_FR_periodicity_type;
+	}
+	
+	@FindBy(xpath = "//button[@id='applicationfacility_investorReject_btn_WIFT006MT']")
+	private WebElement wifak_client_response_menu_reject_btn;
+	public WebElement wifakClientResponseMenuRejectBtn() {
+		return wifak_client_response_menu_reject_btn;
+	}
+	
+	
+	
+	
 	
 }
+
