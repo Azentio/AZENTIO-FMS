@@ -464,6 +464,12 @@ public class RequestForFinancingObj_608 {
     	return drawdown_main_save_btn;
     }
     
+    @FindBy(xpath = "//a[@menuvar='WIFT009MT']//parent::td//following-sibling::td//span")
+    private WebElement wifak_drawdown_main_close_icon;
+    public WebElement wifakDrawdownMainCloseIcon_608() {
+    	return wifak_drawdown_main_close_icon;
+    }
+    
     @FindBy(xpath = "//div[@id='div__popup_path_sol_ok']/div[2]/div")
     private WebElement drawdown_main_success_popup_msg;
     public WebElement drawdownMainSuccessPopupMsg_608() {
@@ -495,9 +501,15 @@ public class RequestForFinancingObj_608 {
     }
     
     @FindBy(xpath = "//td[@id='td_drawDownRequestGridTbl_Id_WIFT009VD_1_fmsDrawDownVO.CODE']")
-    private WebElement drawdown_verify_code;
-    public WebElement drawdownVerifyCode_608() {
-    	return drawdown_verify_code;
+    private WebElement drawdown_verify_menu_searchgrid_row;
+    public WebElement drawdownVerifyMenuSearchgirdRow_608() {
+    	return drawdown_verify_menu_searchgrid_row;
+    }
+    
+    @FindBy(xpath = "//input[@id='code_WIFT009VD']")
+    private WebElement drawdown_verify_menu_code;
+    public WebElement drawdownVerifyMenuCode_608() {
+    	return drawdown_verify_menu_code;
     }
     
     @FindBy(xpath = "//span[contains(text(),'Verify')]//parent::button")
@@ -537,9 +549,15 @@ public class RequestForFinancingObj_608 {
     }
     
     @FindBy(xpath = "//td[@id='td_drawDownRequestGridTbl_Id_WIFT009AP_1_fmsDrawDownVO.CODE']")
-    private WebElement drawdown_approve_code;
-    public WebElement drawdownApproveCode_608() {
-    	return drawdown_approve_code;
+    private WebElement drawdown_approve_menu_searchgrid_row;
+    public WebElement drawdownApproveMenuSearchgridRow_608() {
+    	return drawdown_approve_menu_searchgrid_row;
+    }
+    
+    @FindBy(xpath = "//input[@id='code_WIFT009AP']")
+    private WebElement drawdown_approve_menu_code;
+    public WebElement drawdownApproveMenuCode_608() {
+    	return drawdown_approve_menu_code;
     }
     
     @FindBy(xpath = "//span[contains(text(),'Approve')]//parent::button")
@@ -572,7 +590,7 @@ public class RequestForFinancingObj_608 {
     	return drawdown_main_code;
     }
   
-    @FindBy(xpath = "//span[contains(text(),'Status Details')]//parent::a")
+    @FindBy(xpath = "//input[@id='status_WIFT009MT']//ancestor::td/following-sibling::td//a")
     private WebElement drawdown_main_status_details_btn;
     public WebElement drawdownMainStatusDetailsBtn_608() {
     	return drawdown_main_status_details_btn;
@@ -588,6 +606,12 @@ public class RequestForFinancingObj_608 {
     private WebElement drawdown_main_status_details_user_name;
     public WebElement drawdownMainStatusDetailsUserName_608() {
     	return drawdown_main_status_details_user_name;
+    }
+    
+    @FindBy(xpath = "//span[@id='ui-dialog-title-fms_status_div_WIFT009MT']//following-sibling::a")
+    private WebElement drawdown_main_status_details_close_icon;
+    public WebElement drawdownMainStatusDetailsCloseIcon_608() {
+    	return drawdown_main_status_details_close_icon;
     }
     
     //Facility Closure Request
@@ -619,6 +643,12 @@ public class RequestForFinancingObj_608 {
     private WebElement facility_closure_main_save_btn;
     public WebElement facilityClosureMainSaveBtn_608() {
     	return facility_closure_main_save_btn;
+    }
+    
+    @FindBy(xpath = "//a[@menuvar='WIFT010MT']//parent::td//following-sibling::td//span")
+    private WebElement facility_closure_main_close_icon;
+    public WebElement facilityClosureMainCloseIcon_608() {
+    	return facility_closure_main_close_icon;
     }
     
     @FindBy(xpath = "/html/body/div[16]/div[1]/a")
@@ -658,12 +688,18 @@ public class RequestForFinancingObj_608 {
     }
     
     @FindBy(xpath = "//td[@id='td_facilityClosureRequestGridTbl_Id_WIFT010MT_1_fmsFacilityClosureVO.CODE']")
-    private WebElement facility_closure_main_code;
-    public WebElement facilityClosureMainCode_608() {
-    	return facility_closure_main_code;
+    private WebElement facility_closure_main_searchgrid_row;
+    public WebElement facilityClosureMainSearchgridRow_608() {
+    	return facility_closure_main_searchgrid_row;
     }
     
-    @FindBy(xpath = "(//span[contains(text(),'Status')]//parent::a)[2]")
+    @FindBy(xpath = "//input[@id='code_WIFT010MT']")
+    private WebElement facility_closure_menu_main_code;
+    public WebElement facilityClosureMenuMainCode_608() {
+    	return facility_closure_menu_main_code;
+    }
+    
+    @FindBy(xpath = "//input[@id='status_WIFT010MT']//ancestor::td/following-sibling::td/a")
     private WebElement facility_closure_main_status_details_btn;
     public WebElement facilityClosureMainStatusDetailsBtn_608() {
     	return facility_closure_main_status_details_btn;
@@ -675,7 +711,11 @@ public class RequestForFinancingObj_608 {
     	return facility_closure_main_status_details_tab;
     }
     
-	
+    @FindBy(xpath = "//span[@id='ui-dialog-title-fms_status_div_WIFT010MT']//following-sibling::a")
+    private WebElement facility_closure_main_status_details_tab_close_icon;
+    public WebElement facilityClosureMainStatusDetailsTabCloseIcon_608() {
+    	return facility_closure_main_status_details_tab_close_icon;
+    }
 	
 	
 	

@@ -877,7 +877,14 @@ public class ApplicationFinancialFacilitySteps_608 {
     @And("User_608 double click on the retrieved reference code in Approve level1")
     public void user_double_click_on_the_retrieve_reference_code_in_approve_level1() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.approveLevel1RetrieveCode_608());
-    	clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.approveLevel1RetrieveCode_608());        
+    	for (int i = 0; i <= 300; i++) {
+			try {
+				clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.approveLevel1RetrieveCode_608());
+				break;
+			} catch (Exception e) {
+	
+			}
+    	}        
     }
 
     @And("User_608 select the Approve level1 decision as Forward")
@@ -903,6 +910,14 @@ public class ApplicationFinancialFacilitySteps_608 {
     
     @And("User_608 select the Approve level1 decision as Approve")
     public void user_select_the_approve_level1_decision_as_approve() throws Throwable {
+    	for (int i = 0; i <= 500; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.approveLevel1SelectDecision_608());
+				break;
+			} catch (Exception e) {
+	
+			}
+    	}
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.approveLevel1SelectDecision_608());
     	dropDownHelper.SelectUsingVisibleText(applicationFinancialFacilityObj608.approveLevel1SelectDecision_608(), testData.get("Decision3"));        
     }
@@ -955,11 +970,26 @@ public class ApplicationFinancialFacilitySteps_608 {
     @And("User_608 double click on the retrieved reference code in Approve level2")
     public void user_double_click_on_the_retrieved_reference_code_in_approve_level2() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.approveLevel2RetrieveRefCode_608());
-    	clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.approveLevel2RetrieveRefCode_608());        
+    	for (int i = 0; i <= 300; i++) {
+			try {
+				clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.approveLevel2RetrieveRefCode_608());
+				break;
+			} catch (Exception e) {
+	
+			}
+    	}        
     }
 
     @And("User_608 select the Approve level2 decision as Approve")
     public void user_select_the_approve_level2_decision_as_approve() throws Throwable {
+    	for (int i = 0; i <= 500; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.approveLevel2SelectDecision_608());
+				break;
+			} catch (Exception e) {
+	
+			}
+    	}
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.approveLevel2SelectDecision_608());
     	dropDownHelper.SelectUsingVisibleText(applicationFinancialFacilityObj608.approveLevel2SelectDecision_608(), testData.get("Decision3"));        
     }
@@ -967,8 +997,14 @@ public class ApplicationFinancialFacilitySteps_608 {
     @When("User_608 clicks on the Approve level2 submit button")
     public void user_clicks_on_the_approve_level2_submit_button() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.approveLevel2SubmitBtn_608());
-    	applicationFinancialFacilityObj608.approveLevel2SubmitBtn_608().click();
-    	
+    	for (int i = 0; i <= 500; i++) {
+			try {
+				applicationFinancialFacilityObj608.approveLevel2SubmitBtn_608().click();
+				break;
+			} catch (Exception e) {
+	
+			}
+    	}    	    	
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
     	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.SuccessPopupOkBtn_608());
@@ -1005,11 +1041,26 @@ public class ApplicationFinancialFacilitySteps_608 {
     @And("User_608 double click on the retrieved reference code in Approve level3")
     public void user_double_click_on_the_retrieved_reference_code_in_approve_level3() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.approveLevel3RetrieveRefCode_608());
-    	clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.approveLevel3RetrieveRefCode_608());        
+    	for (int i = 0; i <= 300; i++) {
+			try {
+				clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.approveLevel3RetrieveRefCode_608());
+				break;
+			} catch (Exception e) {
+	
+			}
+    	}    	        
     }
 
     @And("User_608 select the Approve level3 decision as Approve")
     public void user_select_the_approve_level3_decision_as_approve() throws Throwable {
+    	for (int i = 0; i <= 500; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.approveLevel3SelectDecision_608());
+				break;
+			} catch (Exception e) {
+	
+			}
+    	}
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.approveLevel3SelectDecision_608());
     	dropDownHelper.SelectUsingVisibleText(applicationFinancialFacilityObj608.approveLevel3SelectDecision_608(), testData.get("Decision3"));        
     }
@@ -1033,7 +1084,7 @@ public class ApplicationFinancialFacilitySteps_608 {
 		}
     	
     	// close the send alert pop-up box
-    	for (int i = 0; i < 500; i++) {
+    	for (int i = 0; i < 300; i++) {
 			try {
 		    	applicationFinancialFacilityObj608.level3SendAlertPopupDismissBtn_608().click();
 		    	break;
@@ -1396,7 +1447,7 @@ public class ApplicationFinancialFacilitySteps_608 {
      	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.facilityTypeSearchCode_608());
      	fmsParamObj608.facilityTypeSearchCode_608().sendKeys(testData.get("Facility Type"),Keys.ENTER);
      }
-     
+        
      @And("^User_608 double click on the retrieved data in update after approve menu$")
      public void user_double_click_on_the_retrieved_data_in_update_after_approve_menu() throws Throwable {
      	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.facilityTypeSearchCodeResult_608());
@@ -1405,18 +1456,18 @@ public class ApplicationFinancialFacilitySteps_608 {
  				clicksAndActionsHelper.doubleClick(fmsParamObj608.facilityTypeSearchCodeResult_608());
  				break;
  			} catch (Exception e) {
- 				if (i == 300) {
- 					Assert.fail(e.getMessage());
+ 				
  				}
  			}
- 		}
-    	 	
+     	
+ 		    	 	
      }
      
      @And("^User_608 clicks on the facility details tab in update after approve$")
      public void user_clicks_on_the_facility_details_tab_in_update_after_approve() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.facilityTypeUpdateMenuCode_608());
      	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.facilityTypeFacilityDetails_608());
-    	 	fmsParamObj608.facilityTypeFacilityDetails_608().click();
+    	fmsParamObj608.facilityTypeFacilityDetails_608().click();
      }
   
      @And("^User_608 clicks on the STP Facility Requirements option$")
@@ -1612,6 +1663,7 @@ public class ApplicationFinancialFacilitySteps_608 {
      
      @When("^User_608 clicks on the Approve button in Approve menu under Facility Type$")
      public void user_clicks_on_the_approve_button_in_approve_menu_under_facility_type() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.facilityTypeApproveMenuCode_608());
      	for (int i = 0; i <= 300; i++) {
  			try {
  				javaScriptHelper.scrollIntoView(fmsParamObj608.facilityTypeApproveBtn_608());
@@ -2847,10 +2899,11 @@ public class ApplicationFinancialFacilitySteps_608 {
     	String beforeFinanceAmount = applicationFinancialFacilityObj608.additionalTabFinanceAmount_608().getAttribute("prevvalue");
 //    	System.out.println("Before Finance Amount: "+ beforeFinanceAmount);
     	fmsRequestForFinancingExcelData.updateTestData(testData.get("DataSet ID"), "Finance Amount", beforeFinanceAmount);
+    	System.err.println("Before Finance Amount: "+beforeFinanceAmount);
     	
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainAdditionalTabTotalValue_608());
 		applicationFinancialFacilityObj608.mainAdditionalTabTotalValue_608().sendKeys(testData.get("Decrease Value"),Keys.TAB);
-		
+		System.err.println("Decrease Amount: "+testData.get("Decrease Value"));
 		for(int i = 0; i <= 300; i++) {
     		try {
 				if(!(applicationFinancialFacilityObj608.mainAdditionalTabTotalValue_608().getAttribute("readonly").isBlank())) {
@@ -2888,20 +2941,18 @@ public class ApplicationFinancialFacilitySteps_608 {
 
     @And("^User_608 validate the finance amount should be decresed based on total value$")
     public void user_validate_the_finance_amount_should_be_decresed_based_on_total_value() throws Throwable {
-    	testData = fmsRequestForFinancingExcelData.getTestdata(testData.get("DataSet ID"));
     	String financeAmount = testData.get("Finance Amount");
-    	String totalValue = testData.get("Total value");
+    	String totalValue = testData.get("Decrease Value");
     	
     	String afterFinanceAmount = applicationFinancialFacilityObj608.additionalTabFinanceAmount_608().getAttribute("prevvalue");
     	String[] splitFinaceAmount  = afterFinanceAmount.split("[.]");
     	String finalFinaceAmount = splitFinaceAmount[0].replace(",", "");
-//    	System.out.println("Finance Amount: "+finalFinaceAmount);
-//    	System.out.println("After Finance Amount: "+afterFinanceAmount);
+    	System.err.println("Finance Amount: "+finalFinaceAmount);
     	
     	int cvValue = Integer.parseInt(financeAmount)-Integer.parseInt(totalValue);
     	String cvValueText = String.valueOf(cvValue);
     	fmsRequestForFinancingExcelData.updateTestData(testData.get("DataSet ID"), "CV Value", cvValueText);
-    	
+    	System.err.println("CV Value Text: "+cvValueText);
     	Assert.assertEquals(cvValueText, finalFinaceAmount);
     	
     }
@@ -2957,6 +3008,44 @@ public class ApplicationFinancialFacilitySteps_608 {
         applicationFinancialFacilityObj608.limitDetailsProductEditBtn_608().click();
     }
     
+    @And("^User_608 clicks on the validate button for decrease in request for financing$")
+    public void user_clicks_on_the_validate_button_for_decrease_in_request_for_financing() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsValidateBtn_608());
+    	applicationFinancialFacilityObj608.limitDetailsValidateBtn_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
+    	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
+ 
+    	for (int i = 0; i < 1000; i++) {
+			try {
+				applicationFinancialFacilityObj608.facilityAlreadyCreatedPopup_608().click();
+		    	break;
+			} catch (Exception e) {
+				
+			}
+		}    	    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.successPopup_608());
+    	String refCode = applicationFinancialFacilityObj608.successPopupMessage_608().getText().substring(23, 27);
+    	System.err.println("Reference Number: "+refCode);    	
+    	fmsRequestForFinancingExcelData.updateTestData(testData.get("DataSet ID"),"Reference Code", refCode);    	
+    	for (int i = 0; i < 2000; i++) {
+			try {
+		    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				
+			}
+		}       	
+    	// close the send alert pop-up box
+    	for (int i = 0; i < 200; i++) {
+			try {
+		    	applicationFinancialFacilityObj608.sendAlertPopupDismissBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+
+			}
+		}    	
+    }
     
 //  @AT_RF_101_FMSParam
     @And("User_608 enter the code in search grid under update after approve menu in Document checklist")

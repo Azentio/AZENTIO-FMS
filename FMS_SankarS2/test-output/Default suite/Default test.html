@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jul 19 18:05:56 IST 2023</td>
+<td>Started on:</td><td>Thu Jul 20 18:00:01 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>141 seconds (141464 ms)</td>
+<tr><td>Total time:</td><td>171 seconds (171588 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,64 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TSR - AIBBI180226", "Optional[To check the Request For Financing Feature]"</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created
+from no such execution context: loader has changed while resolving nodes
+  (Session info: chrome=114.0.5735.201) 
+Host info: host: &apos;INMUVAVD000608&apos;, ip: &apos;10.81.234.43&apos;
+Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*, --incognito], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*, --incognito], extensions: []}}}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:148)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:106)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:229)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:101)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:71)
+	at resources.BaseClass.initializeDriver(BaseClass.java:30)
+	at stepdefinitions.HooksClass.browserSetup(HooksClass.java:46)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1239935217", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1239935217'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created
+from no such execution context: loader has changed while resolving nodes
+  (Session info: chrome=114.0.5735.201) 
+Host info: host: &apos;INMUVAVD000608&apos;, ip: &apos;10.81.234.43&apos;
+Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*, --incognito], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*, --incognito], extensions: []}}}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:148)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:106)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:229)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:101)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:71)
+	at resources.BaseClass.initializeDriver(BaseClass.java:30)
+	at stepdefinitions.HooksClass.browserSetup(HooksClass.java:46)
+</pre></div></td>
+<td>12</td>
+<td>Runner.TestApplication@5afa3c9</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,9 +133,9 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Client Response", "Optional[To check the Client Response Feature]"</td>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TSR - AIBBI180226", "Optional[To check the Request For Financing Feature]"</td>
 <td></td>
-<td>112</td>
+<td>117</td>
 <td>Runner.TestApplication@5afa3c9</td></tr>
 </table><p>
 </body>

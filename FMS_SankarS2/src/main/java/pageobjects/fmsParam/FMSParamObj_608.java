@@ -1,11 +1,19 @@
 package pageobjects.fmsParam;
 
+import java.util.Map;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import dataProvider.ExcelData;
+
 public class FMSParamObj_608 {
+	
+	String path = System.getProperty("user.dir") +"\\TestData\\FMSTestData.xlsx";
+	ExcelData fmsRequestForFinancingExcelData = new ExcelData(path,"RequestForFinancingTestData","DataSet ID");
+	Map<String, String> testData;
 	
 	WebDriver driver;
 	public FMSParamObj_608(WebDriver driver) {
@@ -42,6 +50,12 @@ public class FMSParamObj_608 {
 	private WebElement facility_type_search_code_result;
 	public WebElement facilityTypeSearchCodeResult_608() {
 		return facility_type_search_code_result;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmsFacilityType_code_P008UP']")
+	private WebElement facility_type_update_menu_code;
+	public WebElement facilityTypeUpdateMenuCode_608() {
+		return facility_type_update_menu_code;
 	}
 	
 	@FindBy(xpath = "//li[@id='fmsFacilityTypeDetailsTab_P008UP']")
@@ -302,9 +316,15 @@ public class FMSParamObj_608 {
 	}
 	
 	@FindBy(xpath = "//td[@id='td_fmsDocumentChecklistParamListGridTbl_Id_P0031P_1_CODE']")
-	private WebElement document_checklist_approve_code;
-	public WebElement documentChecklistApproveCode_608() {
-		return document_checklist_approve_code;
+	private WebElement document_checklist_approve_menu_searchgrid_row;
+	public WebElement documentChecklistApproveMenuSearchgridRow_608() {
+		return document_checklist_approve_menu_searchgrid_row;
+	}
+	
+	@FindBy(xpath = "//input[@id='fmsDocumentChecklist_code_P0031P']")
+	private WebElement document_checklist_approve_menu_code;
+	public WebElement documentChecklistApproveMenuCode_608() {
+		return document_checklist_approve_menu_code;
 	}
 	
 	@FindBy(xpath = "//button[@id='fmsDocumentChecklistParamMaint_approve_P0031P']")

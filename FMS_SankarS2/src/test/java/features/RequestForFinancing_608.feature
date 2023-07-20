@@ -321,6 +321,7 @@ When User_608 clicks on the Approve level3 submit button
 
 # Before the execution all the flags are checked in facility type --> STP requirements tab
 @AT_RF_100
+@AT_RF_100_Param
 Scenario: Before the Execution all the flags are checked in Facility type -> STB Requirements tab
 
 Given navigate to FMS param application and login with valid credentials
@@ -350,9 +351,9 @@ And User_608 double click on the retrieved data in Approve menu
 When User_608 clicks on the Approve button in Approve menu under Facility Type
 
 # Create a one facility in Application for financial facilities
-# If run the scenario must change the Existing Facility Ref Code in Excel sheet
 # Create a application for 'decrease' and validate the FC amount are decreased based on Total value--> limit details Validate CV Value --> validate and approve
 @AT_RF_100
+@AT_RF_100_Core
 Scenario: TSR-AMANAUPG170045
 
 Given navigate to FMS application and login with valid credentials
@@ -412,6 +413,7 @@ And User_608 enter the input as Existing Facility Ref in main screen
 And User_608 enter the facility rating in main info tab
 And User_608 clicks on the additional details tab
 And User_608 enter the decrease total value under additional info tab
+And User_608 get the test data for test case AT_RF_100
 And User_608 validate the finance amount should be decresed based on total value
 And User_608 enter the expire date in additional info tab
 And User_608 clicks the limit details tab
@@ -424,7 +426,7 @@ And User_608 move to the Document details tab
 And User_608 enter the Solicitor Name
 And User_608 enter the Estimator Name
 And User_608 clicks the save button
-And User_608 clicks on the validate button for request for financing
+And User_608 clicks on the validate button for decrease in request for financing
 Then User_608 clicks the Approve Level1 menu under Application for financial facilities
 And User_608 get the test data for test case AT_RF_100
 And User_608 enter the reference code in Approve level1
@@ -596,15 +598,18 @@ And User_608 select the product class in additional screen under Draw Down reque
 And User_608 give the FC Amount in additional screen under Draw Down request
 And User_608 enter the value date in main screen under Draw Down request
 When User_608 click the save button under in maintanance under Draw Down request
+And User_608 close the maintanance screen under Draw Down request in WIFAK
 Then User_608 click on the Verify link under Draw Down request
 And User_608 click on the clear button in verify under Draw Down request
 And User_608 double click on the code in verify under Draw Down request
 When User_608 click on the verify button in Verify link under Draw Down request
+And User_608 close the Verify\Denu menu tab in WIFAK Draw Down request
 Then User_608 click on the Approve link under Draw Down request
 And User_608 click on the clear button in Approve under Draw Down request
 And User_608 double click on the code in Approve under Draw Down request
 When User_608 click on the Approve button in Approve link under Draw Down request
-Then User_608 again clicks on the Maintanance under Draw Down request
+And User_608 close the Approve menu tab in WIFAK Draw Down request
+And User_608 clicks on the Maintanance under Draw Down request in WIFAK Application
 And User_608 clicks on the search button in main screen under Draw Down request
 And User_608 click the clear button in main screen under Draw Down request
 And User_608 double click on the first line code in main screen under Draw Down request
@@ -616,16 +621,18 @@ And User_608 click on the Maintanance under Facility Closure Request module
 And User_608 enter the Facility ref in main screen under Facility Closure Request
 And User_608 enter the Closure reason in main screen under Facility Closure Request
 And User_608 click on the Save button in main screen under Facility Closure Request
+And User_608 close the maintanance screen under Facility Closure Request in WIFAK
 Then User_608 clicks on the Approve under Facility Closure Request module
 And User_608 click on the clear button in approve screen under Facility Closure Request
 And User_608 double click on the code in approve screen under Facility Closure Request
 When User_608 click on the Approve button in approve screen under Facility Closure Request
-Then User_608 again click the Maintanance under Facility Closure Request module
+And User_608 click on the Maintanance under Facility Closure Request module
 And User_608 click on the search button in main screen under Facility Closure Request
 And User_608 double click on the code in main screen under Facility Closure Request
 And User_608 click the Status details button in main screen under Facility Closure Request
 Then User_608 verify the Status details tab in main screen under Facility Closure Request
-Then User_608 again clicks on the Maintanance under Draw Down request
+And User_608 close the Status details tab in main screen under Facility Closure Request
+And User_608 clicks on the Maintanance under Draw Down request in WIFAK Application
 And User_608 clicks on the search button in main screen under Draw Down request
 And User_608 click the clear button in main screen under Draw Down request
 And User_608 double click on the first line code in main screen under Draw Down request
@@ -704,11 +711,9 @@ And User_608 clicks the limit details tab
 And User_608 clicks the add new record button in limit details tab
 And User_608 enter the product class details
 And User_608 clicks on the product class add button
-
 And User_608 clicks on the document checklist button under limit details
 And User_608 clicks the all critical checkboxes in document checklist
 And User_608 click the Ok button under document checklist
-
 And User_608 move to the Document details tab
 And User_608 enter the Solicitor Name
 And User_608 enter the Estimator Name
@@ -719,12 +724,10 @@ And User_608 get the test data for test case AT_RF_139
 And User_608 enter the reference code in Approve level1
 And User_608 double click on the retrieved reference code in Approve level1
 And User_608 select the Approve level1 decision as Approve
-
 And User_608 clicks the limit details tab under approve level1
 And User_608 select the product class in limit details under approve level1
 And User_608 click the document checklist button under limit details in approve level1
 And User_608 click the ok button in document checklist under limit details
-
 When User_608 clicks on the Approve level1 submit button
 Then User_608 clicks the Approve Level2 menu under Application for financial facilities
 And User_608 enter the reference code in Approve level2
@@ -761,13 +764,11 @@ And User_608 clicks the limit details tab
 And User_608 clicks the add new record button in limit details tab
 And User_608 enter the product class details
 And User_608 clicks on the product class add button
-
 And User_608 clicks on the document checklist button under limit details
 And User_608 select the second row in document checklist tab
 And User_608 give the file in choose file input under document checklist tab
 And User_608 click the Upload docs button under document checklist tab
 And User_608 validate the Attachment flag is checked in second row under document checklist tab
-
 And User_608 move to the Document details tab
 And User_608 enter the Solicitor Name
 And User_608 enter the Estimator Name
@@ -778,7 +779,6 @@ And User_608 get the test data for test case AT_RF_140
 And User_608 enter the reference code in Approve level1
 And User_608 double click on the retrieved reference code in Approve level1
 And User_608 select the Approve level1 decision as Approve
-
 And User_608 clicks the limit details tab under approve level1
 And User_608 select the product class in limit details under approve level1
 And User_608 click the document checklist button under limit details in approve level1
@@ -787,7 +787,6 @@ And User_608 click the View button in checklist under limit details in approve l
 And User_608 vaidate the rows are available in View tab under document checklist
 And User_608 close the View tab in document checklist under approve level1 limit details
 And User_608 click the ok button in document checklist under limit details
-
 When User_608 clicks on the Approve level1 submit button
 Then User_608 clicks the Approve Level2 menu under Application for financial facilities
 And User_608 enter the reference code in Approve level2
@@ -816,6 +815,7 @@ Then User_608 validate the CIF short Name available under the maintanance screen
 And User_608 validate the CIF long Name available under the maintanance screen in Request for Financing
 
 # Arabic language
+@AT_RF_141
 @AT_RF_141_arabic
 Scenario: MFI190131 - Request for financing Screen, Search criteria CIF name is not showing properly and Arabic Translation is not correct
 
