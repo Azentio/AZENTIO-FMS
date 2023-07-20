@@ -214,7 +214,7 @@ Feature: Committee Approval
 		And User_610 Click Approval Committiees button in Authorize Reject Application For Financial Facilities screen
 		And User_610 Validate the Approval Committee Recommendations comments displayed or not in Authorize Reject screen
 		
-    And User_610 Click Application for financial facilities
+  #  And User_610 Click Application for financial facilities
     And User_610 Click Maintenance
     And User_610 search and retrive the first data in Application for financial facilities screen
     And User_610 Click Approval Committiees button in Authorize Reject Application For Financial Facilities screen

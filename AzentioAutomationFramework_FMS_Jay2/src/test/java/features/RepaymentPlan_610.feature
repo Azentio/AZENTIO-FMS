@@ -108,7 +108,7 @@ Feature: Repayment plan
     And User_609 click clear caches
     And User_609 Click the ok button
     
-   
+   #retrive Application for financial facilities screen
     And User_610 Click Maintenance
     And User_610 search and retrive the first data in Application for financial facilities screen
         

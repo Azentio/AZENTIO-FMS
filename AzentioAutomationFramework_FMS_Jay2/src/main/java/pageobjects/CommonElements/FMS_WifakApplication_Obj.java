@@ -46,15 +46,14 @@ public class FMS_WifakApplication_Obj {
 	public WebElement FSM_ClearCacheInTechnicalDetailsIcon_610() {
         return FSM_ClearCacheInTechnicalDetailsIcon_610;
     }
-
-
-    @FindBy(id = "_popup_path_sol_ok")
-	private WebElement Ok;
-	public WebElement Ok() {
-		return Ok;
-	}
 	
-	
+	@FindBy(id = "_popup_path_sol_ok")
+    private WebElement Ok;
+    public WebElement Ok() {
+        return Ok;
+    }
+
+   	
 	//-----Facilities Management  in application for facility
 	@FindBy(xpath =  "//td[text()='Facilities Management']")
 	private WebElement Click_Facilities_Management;
@@ -162,7 +161,7 @@ public class FMS_WifakApplication_Obj {
 	}
 	
 		
-	@FindBy(xpath =  "//li[@id=\"applicationFacilityAdditionDetailsTabs_WIFT001MT\"]")
+	@FindBy(xpath =  "//li[@id='applicationFacilityAdditionDetailsTabs_WIFT001MT']")
 	private WebElement Clickon_additionalDetails;
 	public WebElement getClickon_additionalDetails_610() {
 		return Clickon_additionalDetails;
@@ -2349,7 +2348,7 @@ public class FMS_WifakApplication_Obj {
 			return ChargesDetails_Screen_InFinalApprovalScreenInAFFF__610;
 		}
 		
-		@FindBy(xpath = "//span[text()='Other Details']")
+		@FindBy(xpath = "//div[@id='applicationFacilityOtherDetailsCollapse_WIFT0061MT']")
 		private WebElement otherDetails_InFinalApprovalScreenInAFFF__610;
 		public WebElement otherDetails_InFinalApprovalScreenInAFFF__610() {
 			return otherDetails_InFinalApprovalScreenInAFFF__610;
@@ -2389,18 +2388,115 @@ public class FMS_WifakApplication_Obj {
 			return Enter_ValidateCode_InIssueFacilityOffer_Screen__610;
 		}
 		
-		@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT005MT_1_fmsApplVO.CODE']")
+		@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT005MT_2_fmsApplVO.CODE']")
 		private WebElement ClickTheValue_ValidateCode_InIssueFacilityOffer_Screen__610;
 		public WebElement ClickTheValue_ValidateCode_InIssueFacilityOffer_Screen__610() {
 			return ClickTheValue_ValidateCode_InIssueFacilityOffer_Screen__610;
 		}
 		
-		//---------------Issue Facility Offer 
+		@FindBy(xpath = "//button[@id='applicationfacility_issueoffer_btn_WIFT005MT']")
+		private WebElement issueoffer_btn_InIssueFacilityOffer_Screen__610;
+		public WebElement issueoffer_btn_InIssueFacilityOffer_Screen__610() {
+			return issueoffer_btn_InIssueFacilityOffer_Screen__610;
+		}
 		
-				@FindBy(xpath = "//a[@id='WIFT0062MT']/span[text()='Document Validation']")
-				private WebElement DocumentValidation_Screen__610;
-				public WebElement DocumentValidation_Screen__610() {
-					return DocumentValidation_Screen__610;
+		//--1st ok button
+		
+		@FindBy(xpath = "//div[text()='ERROR']")
+		private WebElement errorPopup_InIssueFacilityOffer_Screen__610;
+		public WebElement errorPopup_InIssueFacilityOffer_Screen__610() {
+			return errorPopup_InIssueFacilityOffer_Screen__610;
+		}
+		
+		@FindBy(xpath = "//div[text()='ERROR']/parent::div/following-sibling::center/input[@id='_popup_path_sol_ok']")
+		private WebElement errorPopupOkButton_InIssueFacilityOffer_Screen__610;
+		public WebElement errorPopupOkButton_InIssueFacilityOffer_Screen__610() {
+			return errorPopupOkButton_InIssueFacilityOffer_Screen__610;
+		}
+		
+		//---2nd success ok
+		
+						
+				///------Final Approval Screen
+				
+				
+				
+				@FindBy(xpath = "//button[@id='applicationfacility_finalapproval_btn_WIFT0061MT']")
+				private WebElement finalapproval_btn_InFinalApprovalScreenInAFFF__610;
+				public WebElement finalapproval_btn_InFinalApprovalScreenInAFFF__610() {
+					return finalapproval_btn_InFinalApprovalScreenInAFFF__610;
+				}
+				
+				
+				
+				
+				//---------Do you need to reload the tab
+				
+				@FindBy(xpath = "//div[text()='WARNING']")
+				private WebElement DoYouNeedToReloadTheWaringPopup__610;
+				public WebElement DoYouNeedToReloadTheWaringPopup__610() {
+					return DoYouNeedToReloadTheWaringPopup__610;
+				}
+				
+				@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
+				private WebElement DoYouNeedToReloadTheTab__610;
+				public WebElement DoYouNeedToReloadTheTab__610() {
+					return DoYouNeedToReloadTheTab__610;
+				}
+				
+				
+				//-------------Validate Check the Status of Final Rejection in AFFF
+				
+				
+				@FindBy(xpath = "//input[@id='statusDesc_WIFT001MT']")
+				private WebElement CheckTheStatusof_FinalRejection_InAFFF__610;
+				public WebElement CheckTheStatusof_FinalRejection_InAFFF__610() {
+					return CheckTheStatusof_FinalRejection_InAFFF__610;
+				}
+				
+				
+				//------------Client Response
+				
+				@FindBy(xpath = "//span[text()='Client Response ']")
+				private WebElement ClientResponse__610;
+				public WebElement ClientResponse__610() {
+					return ClientResponse__610;
+				}
+				
+				@FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT006MT_gs_fmsApplVO.CODE']")
+				private WebElement Enter_ValidateCode_InClientResponse__610;
+				public WebElement Enter_ValidateCode_InClientResponse__610() {
+					return Enter_ValidateCode_InClientResponse__610;
+				}
+				
+				@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT006MT_1_fmsApplVO.CODE']")
+				private WebElement ClickTheValue_ValidateCode_InClientResponse__610;
+				public WebElement ClickTheValue_ValidateCode_InClientResponse__610() {
+					return ClickTheValue_ValidateCode_InClientResponse__610;
+				}
+				
+				@FindBy(xpath = "//button[@id='applicationfacility_accept_btn_WIFT006MT']")
+				private WebElement accept_btn_InClientResponse__610;
+				public WebElement accept_btn_InClientResponse__610() {
+					return accept_btn_InClientResponse__610;
+				}
+				
+				//---1st ok
+				
+				//--2nd success ok
+				
+				@FindBy(xpath = "//a[@id='dismissbut_WIFT006MT']")
+				private WebElement dismissBtn_InClientResponse__610;
+				public WebElement dismissBtn_InClientResponse__610() {
+					return dismissBtn_InClientResponse__610;
+				}
+				
+				//----------------Document Validation
+				
+				@FindBy(xpath = "//span[text()='Document Validation']")
+				private WebElement DocumentValidation__610;
+				public WebElement DocumentValidation__610() {
+					return DocumentValidation__610;
 				}
 				
 				@FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT0062MT_gs_fmsApplVO.CODE']")
@@ -2409,10 +2505,409 @@ public class FMS_WifakApplication_Obj {
 					return Enter_ValidateCode_InDocumentValidation_Screen__610;
 				}
 				
-//				@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT005MT_1_fmsApplVO.CODE']")
-//				private WebElement ClickTheValue_ValidateCode_InIssueFacilityOffer_Screen__610;
-//				public WebElement ClickTheValue_ValidateCode_InIssueFacilityOffer_Screen__610() {
-//					return ClickTheValue_ValidateCode_InIssueFacilityOffer_Screen__610;
-//				}
+				@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT0062MT_1_fmsApplVO.CODE']")
+				private WebElement ClickTheValue_ValidateCode_InDocumentValidation_Screen__610;
+				public WebElement ClickTheValue_ValidateCode_InDocumentValidation_Screen__610() {
+					return ClickTheValue_ValidateCode_InDocumentValidation_Screen__610;
+				}
 
+				@FindBy(xpath = "//button[@id='applicationfacility_documentvalidate_btn_WIFT0062MT']")
+				private WebElement validate_btn_InDocumentValidation_Screen__610;
+				public WebElement validate_btn_InDocumentValidation_Screen__610() {
+					return validate_btn_InDocumentValidation_Screen__610;
+				}
+				
+				
+				//-------ok 
+				//-----------success ok
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 }

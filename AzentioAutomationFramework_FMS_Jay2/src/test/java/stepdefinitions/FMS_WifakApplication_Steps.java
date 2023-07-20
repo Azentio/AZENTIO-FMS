@@ -179,6 +179,21 @@ public class FMS_WifakApplication_Steps {
 		testData = fmsTransactionsExcelData.getTestdata("AT_FALC_004");
 	}
 	
+	@And("User_610 get the test data set id for AT_FALC_007")
+	public void get_the_test_data_set_id_for_at_falc_007() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_FALC_007");
+	}
+	
+	@And("User_610 get the test data set id for AT_FALC_005")
+	public void get_the_test_data_set_id_for_at_falc_005() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_FALC_005");
+	}
+	
+	@And("User_610 get the test data set id for AT_FALC_006")
+	public void get_the_test_data_set_id_for_at_falc_006() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_FALC_006");
+	}
+	
 	//------------------------------------
 	
 	@And("^User_610 Click Wifak Application Second$")
@@ -306,6 +321,22 @@ public class FMS_WifakApplication_Steps {
 				}
 			}
 		}
+		
+		//-------------DoYouNeedToReloadTheTab
+		
+//		for (int i = 0; i < 200; i++) {
+//			try {
+//				if (FMS_WifakApplication_Obj.DoYouNeedToReloadTheWaringPopup__610().isDisplayed()) {
+//					FMS_WifakApplication_Obj.DoYouNeedToReloadTheTab__610().click();;
+//					break;
+//				}
+//
+//			} catch (Exception e) {
+//				if (i == 199) {
+//					Assert.fail(e.getMessage());
+//				}
+//			}
+//		}
 	}
 
 	@And("^User_610 Click and Select Application for$")
@@ -2935,7 +2966,7 @@ public class FMS_WifakApplication_Steps {
 //		String string = testData.get("Facility Type In Facility Limits");
 //		System.err.println(string);
 		
-		FMS_WifakApplication_Obj.facilityTypeSearchCode_610().sendKeys("369", Keys.ENTER);
+		FMS_WifakApplication_Obj.facilityTypeSearchCode_610().sendKeys("1529", Keys.ENTER);
 		
 //		FMS_WifakApplication_Obj.facilityTypeSearchCode_610().sendKeys(testData.get("Facility Type"));
 //		FMS_WifakApplication_Obj.facilityTypeSearchCode_610().sendKeys(testData.get("Facility Type In Facility Limits"), Keys.ENTER);
@@ -3218,7 +3249,7 @@ public class FMS_WifakApplication_Steps {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approveSearchCode_610());
 		// FMS_WifakApplication_Obj.approveSearchCode_610().sendKeys(testData.get("Search
 		// Code"),Keys.ENTER);
-		FMS_WifakApplication_Obj.approveSearchCode_610().sendKeys("369", Keys.ENTER);
+		FMS_WifakApplication_Obj.approveSearchCode_610().sendKeys("1529", Keys.ENTER);
 	}
 
 	@And("^User_610 double click on the retrieved data in Approve menu$")
@@ -3522,13 +3553,24 @@ public class FMS_WifakApplication_Steps {
 	@And("User_{int} search and retrive the first data in Application for financial facilities screen")
 	public void user_search_and_retrive_the_first_data_in_application_for_financial_facilities_screen(Integer int1) {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.searchbutton_ApplicationForFinancialFacilities_610());
-		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.searchbutton_ApplicationForFinancialFacilities_610());
-		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.searchbutton_ApplicationForFinancialFacilities_610());
-		
+	//	clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.searchbutton_ApplicationForFinancialFacilities_610());
+	//	clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.searchbutton_ApplicationForFinancialFacilities_610());
+		for (int i = 0; i < 2000; i++) {
+			try {
+				FMS_WifakApplication_Obj.searchbutton_ApplicationForFinancialFacilities_610().click();;
+				break;
+			} catch (Exception e) {
+				if (i == 1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.searchCode_ApplicationForFinancialFacilities_610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.searchCode_ApplicationForFinancialFacilities_610());
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.searchCode_ApplicationForFinancialFacilities_610());
-		FMS_WifakApplication_Obj.searchCode_ApplicationForFinancialFacilities_610().sendKeys(SuccessMsg2,Keys.ENTER);
+		FMS_WifakApplication_Obj.searchCode_ApplicationForFinancialFacilities_610().sendKeys(SuccessMsg,Keys.ENTER);
+	//	FMS_WifakApplication_Obj.searchCode_ApplicationForFinancialFacilities_610().sendKeys("5122",Keys.ENTER);
 		
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.retriveFirstRow_ApplicationForFinancialFacilities_610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.retriveFirstRow_ApplicationForFinancialFacilities_610());
@@ -3790,5 +3832,48 @@ public class FMS_WifakApplication_Steps {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_InFinalApprovalScreenInAFFF__610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_InFinalApprovalScreenInAFFF__610());
 		clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_InFinalApprovalScreenInAFFF__610());
+	}
+	
+	//----------Final Approval Screen in afff
+	
+	@Given("User_{int} Click  Final Approval button in Final Approval Screen")
+	public void user_click_final_approval_button_in_final_approval_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.finalapproval_btn_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.finalapproval_btn_InFinalApprovalScreenInAFFF__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.finalapproval_btn_InFinalApprovalScreenInAFFF__610());
+	}
+
+	@Given("User_{int} Validate the approved the Value in Final Approval Screen")
+	public void user_validate_the_approved_the_value_in_final_approval_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.okButton_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.okButton_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.okButton_610());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.successPopup_610());
+		Assert.assertEquals(true, FMS_WifakApplication_Obj.successPopup_610().isDisplayed());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.successokButton_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.successokButton_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.successokButton_610());
+	}
+	
+	//---------------------Click Ok On Do you need to reload the tab
+	
+	@And("User_{int} Click Ok On Do you need to reload the tab")
+	public void user_click_ok_on_do_you_need_to_reload_the_tab(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.DoYouNeedToReloadTheTab__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.DoYouNeedToReloadTheTab__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.DoYouNeedToReloadTheTab__610());
+	}
+	
+	//----------check the status in application  FFF
+	
+	@And("User_{int} Validate Check the Status of Final Rejection or Not in Application for financial facilities screen")
+	public void user_validate_check_the_status_of_final_rejection_or_not_in_application_for_financial_facilities_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.getClickon_additionalDetails_610());
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.CheckTheStatusof_FinalRejection_InAFFF__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.CheckTheStatusof_FinalRejection_InAFFF__610());
+	//	clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.CheckTheStatusof_FinalRejection_InAFFF__610());
+		Assert.assertEquals(true, FMS_WifakApplication_Obj.CheckTheStatusof_FinalRejection_InAFFF__610().isDisplayed());
 	}
 }
