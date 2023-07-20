@@ -15,6 +15,7 @@ public class FMS_PageObjects_609 {
 	}
 	
 ///***************************************************FMS_PARAMS******************************************************************************///
+	
 	@FindBy(xpath = "//td[text()='Parameters']")
 	private WebElement Parameters;
 	public WebElement Parameters() {
@@ -186,9 +187,9 @@ public class FMS_PageObjects_609 {
 	}
 	
 	@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
-	private WebElement ConfirmAlert_Ok;
-	public WebElement ConfirmAlert_Ok() {
-		return ConfirmAlert_Ok;
+	private WebElement ConfirmAlert_Ok_609;
+	public WebElement ConfirmAlert_Ok_609() {
+		return ConfirmAlert_Ok_609;
 	}
 	
 	@FindBy(xpath = "//div[text()='CONFIRM']")
@@ -1620,11 +1621,25 @@ public class FMS_PageObjects_609 {
 	
 	
 	
-	@FindBy(xpath= "//input[@id='requestFinancingFacilityTotalvalue_RFFRF00MT']")
+	@FindBy(xpath = "//input[@id='requestFinancingFacilityTotalvalue_RFFRF00MT']")
 	private WebElement Request_RequestFinancing_RequestForFinancing_Maintenance_TotalLimit_609;
 	public WebElement Request_RequestFinancing_RequestForFinancing_Maintenance_TotalLimit_609() {
 		return Request_RequestFinancing_RequestForFinancing_Maintenance_TotalLimit_609;
 	}
+	
+	@FindBy(xpath = "//span[@id='spanLookup_requestFinancingFacilityTypetACC_Add_Det_RFFRF00MT']/span")
+	private WebElement Request_RequestFinancing_RequestForFinancing_Maintenance_CustomerAccount_609;
+	public WebElement Request_RequestFinancing_RequestForFinancing_Maintenance_CustomerAccount_609() {
+		return Request_RequestFinancing_RequestForFinancing_Maintenance_CustomerAccount_609;
+	}
+	
+	
+	@FindBy(xpath = "//input[@id='gridtab_requestFinancingFacilityTypetACC_Add_Det_RFFRF00MT_gs_amfVO.GL_CODE']")
+	private WebElement Request_RequestFinancing_RequestForFinancing_Maintenance_CustomerAccount_GL_609;
+	public WebElement Request_RequestFinancing_RequestForFinancing_Maintenance_CustomerAccount_GL_609() {
+		return Request_RequestFinancing_RequestForFinancing_Maintenance_CustomerAccount_GL_609;
+	}
+	
 	
 	
 	
@@ -1660,7 +1675,29 @@ public class FMS_PageObjects_609 {
 		return Request_RequestFinancing_RequestForFinancing_Maintenance_Sublimit_ProductClass_609;
 	}
 	
+	@FindBy(xpath = "//label[text()='Fees/Charges ']")
+	private WebElement Request_RequestFinancing_RequestForFinancing_Maintenance_Sublimit_FeesCharges_609;
+	public WebElement Request_RequestFinancing_RequestForFinancing_Maintenance_Sublimit_FeesCharges_609() {
+		return Request_RequestFinancing_RequestForFinancing_Maintenance_Sublimit_FeesCharges_609;
+	}
 	
+	@FindBy(xpath = "//table[@id='FacilityChargesGrid_RFFRF00MT']/tbody/tr/td[@tdlabel='Code']")
+	private WebElement Request_RequestFinancing_RequestForFinancing_Maintenance_Sublimit_FeesCharges_Select_609;
+	public WebElement Request_RequestFinancing_RequestForFinancing_Maintenance_Sublimit_FeesCharges_Select_609() {
+		return Request_RequestFinancing_RequestForFinancing_Maintenance_Sublimit_FeesCharges_Select_609;
+	}
+	
+	@FindBy(xpath = "//table[@id='FacilityChargesGrid_RFFRF00MT']/tbody/tr/td[@tdlabel='Collect At Fac. Approval']/input")
+	private WebElement Request_RequestFinancing_RequestForFinancing_Maintenance_Sublimit_FeesCharges_CollectAtFacilityApproval_609;
+	public WebElement Request_RequestFinancing_RequestForFinancing_Maintenance_Sublimit_FeesCharges_CollectAtFacilityApproval_609() {
+		return Request_RequestFinancing_RequestForFinancing_Maintenance_Sublimit_FeesCharges_CollectAtFacilityApproval_609;
+	}
+	
+	@FindBy(xpath = "//span[text()='Ok']")
+	private WebElement Request_RequestFinancing_RequestForFinancing_Maintenance_Sublimit_FeesCharges_Ok_609;
+	public WebElement Request_RequestFinancing_RequestForFinancing_Maintenance_Sublimit_FeesCharges_Ok_609() {
+		return Request_RequestFinancing_RequestForFinancing_Maintenance_Sublimit_FeesCharges_Ok_609;
+	}
 	
 	
 	
@@ -1757,6 +1794,37 @@ public class FMS_PageObjects_609 {
 		return Request_RequestFinancing_ApproveLevel1_Approve_609;
 	}
 	
+	///***************************************** Credit Review **************************************************************************///
+	@FindBy(xpath = "//div[@id='requestFinancingCreditReview_RFFRF00MT']/div/span[text()='Credit Review']")
+	private WebElement Request_RequestFinancing_CreditReview_609;
+	public WebElement Request_RequestFinancing_CreditReview_609() {
+		return Request_RequestFinancing_CreditReview_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='requestFinancingGridTbl_Id_RFFRF00CV_gs_fmsRequestFinancingVO.CODE']")
+	private WebElement Request_RequestFinancing_CreditReview_Code_609;
+	public WebElement Request_RequestFinancing_CreditReview_Code_609() {
+		return Request_RequestFinancing_CreditReview_Code_609;
+	}
+	
+	
+	@FindBy(xpath = "//div[@id='requestFinancingMainTabs_RFFRF00CV']//span[text()='Credit Committee Recommendations']")
+	private WebElement Request_RequestFinancing_CreditReview_CreditCommitteeRecommendations_609;
+	public WebElement Request_RequestFinancing_CreditReview_CreditCommitteeRecommendations_609() {
+		return Request_RequestFinancing_CreditReview_CreditCommitteeRecommendations_609;
+	}
+	
+	@FindBy(xpath = "//div[@id='requestFinancingMainTabs_RFFRF00CV']//span[text()='Recommendations']")
+	private WebElement Request_RequestFinancing_CreditReview_CreditCommitteeRecommendations_Recommendations_609;
+	public WebElement Request_RequestFinancing_CreditReview_CreditCommitteeRecommendations_Recommendations_609() {
+		return Request_RequestFinancing_CreditReview_CreditCommitteeRecommendations_Recommendations_609;
+	}
+	
+	@FindBy(xpath = "//label[@id='requestFinancingFormId_RFFRF00CV_Credit_Review_Key']")
+	private WebElement Request_RequestFinancing_CreditReviewBtton_609;
+	public WebElement Request_RequestFinancing_CreditReviewBtton_609() {
+		return Request_RequestFinancing_CreditReviewBtton_609;
+	}
 	
 	
 	//////*********************************journal voucher**********************////

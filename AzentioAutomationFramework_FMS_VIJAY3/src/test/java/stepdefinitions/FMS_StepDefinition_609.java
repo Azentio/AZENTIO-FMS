@@ -59,6 +59,10 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	ExcelData fmsCommitteeApprovalExcelData = new ExcelData(TestDataPath, "FMS_CommitteeApproval_609", "DataSet ID");
 	ExcelData fmsSubLimitExcelData = new ExcelData(TestDataPath, "FMS_SubLimit_609", "DataSet ID");
 
+	ExcelData fmsCreditReviewExcelData = new ExcelData(TestDataPath, "FMS_CreditReview_609", "DataSet ID");
+
+	
+	
 	Map<String, String> User;
 
 	Map<String, String> testData;
@@ -122,6 +126,16 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	 @And("^User_609 get the test data set id for AT_SL_002$")
 	    public void User_609_get_the_test_data_set_id_for_AT_SL_002() throws Throwable {
 	    	testData = fmsSubLimitExcelData.getTestdata("AT_SL_002");	
+	    }
+	 
+	 @And("^User_609 get the test data set id for AT_CR_001$")
+	    public void User_609_get_the_test_data_set_id_for_AT_CR_001() throws Throwable {
+	    	testData = fmsCreditReviewExcelData.getTestdata("AT_CR_001");	
+	    }
+	 
+	 @And("^User_609 get the test data set id for AT_CR_002$")
+	    public void User_609_get_the_test_data_set_id_for_AT_CR_002() throws Throwable {
+	    	testData = fmsCreditReviewExcelData.getTestdata("AT_CR_002");	
 	    }
 ///*********************************************************FMS_PARAMS*************************************************************///
 	 
@@ -1249,8 +1263,8 @@ public class FMS_StepDefinition_609 extends BaseClass{
 			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Application_Confirmok()); 
 			
 			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.confirmPopup_609());
-			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.ConfirmAlert_Ok());
-	    	FmsPageobjects_609.ConfirmAlert_Ok().click();
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.ConfirmAlert_Ok_609());
+	    	FmsPageobjects_609.ConfirmAlert_Ok_609().click();
 	    	
 	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.ApplicationNo_609());
 	    	ApplicationNo = FmsPageobjects_609.ApplicationNo_609().getText().substring(23, 27);
@@ -1910,8 +1924,8 @@ public class FMS_StepDefinition_609 extends BaseClass{
 			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Application_Confirmok()); 
 			
 			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.confirmPopup_609());
-			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.ConfirmAlert_Ok());
-	    	FmsPageobjects_609.ConfirmAlert_Ok().click();
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.ConfirmAlert_Ok_609());
+	    	FmsPageobjects_609.ConfirmAlert_Ok_609().click();
 	    	
 	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.ApplicationNo_609());
 	    	ApplicationNo = FmsPageobjects_609.ApplicationNo_609().getText().substring(23, 27);
@@ -2249,7 +2263,33 @@ public class FMS_StepDefinition_609 extends BaseClass{
 				TotalLimit.sendKeys(testData.get("Total value"),Keys.TAB);
 		    }
 		    
+		    @And("^User_609 Select the Customer Account in Request$")
+		    public void User_609_Select_the_Customer_Account_in_Request() throws Throwable {
+		    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Request_RequestFinancing_RequestForFinancing_Maintenance_CustomerAccount_609());
+				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Request_RequestFinancing_RequestForFinancing_Maintenance_CustomerAccount_609());
+				
+				waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Request_RequestFinancing_RequestForFinancing_Maintenance_CustomerAccount_GL_609());
+				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Request_RequestFinancing_RequestForFinancing_Maintenance_CustomerAccount_GL_609());
+				FmsPageobjects_609.Request_RequestFinancing_RequestForFinancing_Maintenance_CustomerAccount_GL_609().sendKeys("GL",Keys.ENTER);
+				
+				String xpath ="//table[@id='gridtab_requestFinancingFacilityTypetACC_Add_Det_RFFRF00MT']/tbody/tr/td[@tdlabel='GL']";
+				for (int i = 0; i < 200; i++) {
+					try {
+						WebElement Code  = driver.findElement(By.xpath(xpath));
+						if (Code.isDisplayed()) {
+							clicksAndActionHelper.doubleClick(Code);
+						}
+						break;
+					} catch (Exception e) {
+						if (i==199) {
+							Assert.fail(e.getMessage());
+						}
+					}
+				}
+				
+		    }
 		    
+		   
 		    
 		    
 		    @And("^User_609 Click on the Disbursement or Sublimit tab in Request$")
@@ -2309,6 +2349,27 @@ public class FMS_StepDefinition_609 extends BaseClass{
 						}
 					}
 				}
+		    }
+		    
+		    @And("^User_609 Click on Fees or Charges label in Request$")
+		    public void User_609_Click_on_Fees_or_Charges_label_in_Request() throws Throwable {
+		    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Request_RequestFinancing_RequestForFinancing_Maintenance_Sublimit_FeesCharges_609());
+				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Request_RequestFinancing_RequestForFinancing_Maintenance_Sublimit_FeesCharges_609());
+				
+				
+		    }
+		    
+		    @And("^User_609 Click and Select the Charges in Request$")
+		    public void User_609_Click_and_Select_the_Charges_in_Request() throws Throwable {
+		    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Request_RequestFinancing_RequestForFinancing_Maintenance_Sublimit_FeesCharges_Select_609());
+				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Request_RequestFinancing_RequestForFinancing_Maintenance_Sublimit_FeesCharges_Select_609());
+				
+				waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Request_RequestFinancing_RequestForFinancing_Maintenance_Sublimit_FeesCharges_CollectAtFacilityApproval_609());
+				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Request_RequestFinancing_RequestForFinancing_Maintenance_Sublimit_FeesCharges_CollectAtFacilityApproval_609());
+				
+				waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Request_RequestFinancing_RequestForFinancing_Maintenance_Sublimit_FeesCharges_Ok_609());
+				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Request_RequestFinancing_RequestForFinancing_Maintenance_Sublimit_FeesCharges_Ok_609());
+				
 		    }
 		    
 		    
@@ -2398,8 +2459,8 @@ public class FMS_StepDefinition_609 extends BaseClass{
 				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Application_Confirmok()); 
 				
 				waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.confirmPopup_609());
-				waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.ConfirmAlert_Ok());
-		    	FmsPageobjects_609.ConfirmAlert_Ok().click();
+				waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.ConfirmAlert_Ok_609());
+		    	FmsPageobjects_609.ConfirmAlert_Ok_609().click();
 		    	
 		    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.ApplicationNo_609());
 		    	ApplicationNo = FmsPageobjects_609.ApplicationNo_609().getText().substring(23, 27);
@@ -2486,6 +2547,62 @@ public class FMS_StepDefinition_609 extends BaseClass{
 			}
 		    
 		    
+		    @And("^User_609 Click on Credit Review screen in Request$")
+		    public void User_609_Click_on_Credit_Review_screen_in_Request() throws Throwable {
+		    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Request_RequestFinancing_CreditReview_609());
+				FmsPageobjects_609.Request_RequestFinancing_CreditReview_609().click();
+		    }
+		    
+		    
+		    @And("User_609 Select the Code in Credit Review screen in Request")
+		    public void User_609_Select_the_Code_in_Credit_Review_screen_in_Request() {
+		    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Request_RequestFinancing_CreditReview_Code_609());
+				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Request_RequestFinancing_CreditReview_Code_609());
+				FmsPageobjects_609.Request_RequestFinancing_CreditReview_Code_609().sendKeys(ApplicationNo,Keys.ENTER);
+				//FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_ApproveLevel1_Code_609().sendKeys(Keys.ENTER);
+				
+				String ApplicationCode = FacilityCode;
+				int ApplicationCodelen = 10 - ApplicationCode.length();
+			    for(int i = 1; i <=ApplicationCodelen ; i++){
+			    	ApplicationCode= "0" + ApplicationCode;
+			    }
+				String xpath ="//table[@id='requestFinancingGridTbl_Id_RFFRF00CV']/tbody/tr/td[text()='"+"000000"+ApplicationCode+"']";
+				for (int i = 0; i < 200; i++) {
+					try {
+						WebElement Code  = driver.findElement(By.xpath(xpath));
+						if (Code.isDisplayed()) {
+							Assert.assertEquals(Code.isDisplayed(), true);
+							clicksAndActionHelper.doubleClick(Code);
+						}
+						break;
+					} catch (Exception e) {
+						if (i==199) {
+							Assert.fail(e.getMessage());
+						}
+					}
+				}
+		        
+		    }
+		    
+		    
+		    
+		    @And("^User_609 Click on Credit Committee Recommendations tab in Request$")
+		    public void User_609_Click_on_Credit_Committee_Recommendations_tab_in_Request() throws Throwable {
+		    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Request_RequestFinancing_CreditReview_CreditCommitteeRecommendations_609());
+				FmsPageobjects_609.Request_RequestFinancing_CreditReview_CreditCommitteeRecommendations_609().click();
+		    }
+		    
+		    @And("^User_609 Click on Recommendations Dropdown in Request$")
+		    public void User_609_Click_on_Recommendations_Dropdown_in_Request() throws Throwable {
+		    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Request_RequestFinancing_CreditReview_CreditCommitteeRecommendations_Recommendations_609());
+				FmsPageobjects_609.Request_RequestFinancing_CreditReview_CreditCommitteeRecommendations_Recommendations_609().click();
+		    }
+		    
+		    @And("^User_609 Click on Credit Review Button in Request$")
+		    public void User_609_Click_on_Credit_Review_Button_in_Request() throws Throwable {
+		    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Request_RequestFinancing_CreditReviewBtton_609());
+				FmsPageobjects_609.Request_RequestFinancing_CreditReviewBtton_609().click();
+		    }
 		    
 }
 

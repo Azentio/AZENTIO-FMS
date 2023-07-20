@@ -7,7 +7,7 @@
 
     <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
     <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,8 +21,7 @@
      -->
   </head>
 
-  <body>
-    <div class="top-banner-root">
+  <body>    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
@@ -51,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\inindc00609\AppData\Local\Temp\testng-eclipse-2001306997\testng-customsuite.xml</span>
+                    <span>C:\Users\balab\AppData\Local\Temp\testng-eclipse-1661600956\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Retrieving data. Wait a few seconds and try to cut or copy again&quot;, &quot;Optional[Accounting Entries]&quot;)">runScenario("Retrieving data. Wait a few seconds and try to cut or copy again", "Optional[Accounting Entries]")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;AIBBI190512 - Error produced by system while approving the application backed from the level of Cre...)">runScenario("AIBBI190512 - Error produced by system while approving the application backed from the level of Cre...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -127,42 +126,22 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Retrieving data. Wait a few seconds and try to cut or copy again&quot;, &quot;Optional[Accounting Entries]&quot;)">
-                  </a> <!-- runScenario("Retrieving data. Wait a few seconds and try to cut or copy again", "Optional[Accounting Entries]") -->
+                  <a name="runScenario(&quot;AIBBI190512 - Error produced by system while approving the application backed from the level of Cre...)">
+                  </a> <!-- runScenario("AIBBI190512 - Error produced by system while approving the application backed from the level of Cre...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Retrieving data. Wait a few seconds and try to cut or copy again", "Optional[Accounting Entries]")</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;label id=&quot;facilityManagementForm_WIFT008MT_journal_voucher_details_key&quot; labelkey=&quot;journal_voucher_details_key&quot; class=&quot;path_btn_lbl_theme&quot;&gt;...&lt;/label&gt; is not clickable at point (1453, 354). Other element would receive the click: &lt;div class=&quot;ui-widget-shadow progBarBackGound&quot;&gt;&lt;/div&gt;
-  (Session info: chrome=114.0.5735.199)
+                  <span class="parameters">("AIBBI190512 - Error produced by system while approving the application backed from the level of Credit Review under “Request for Mod with Mana","Optional[Credit Review]")</span>
+                  <div class="stack-trace">java.lang.AssertionError: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//table[@id=&apos;gridtab_requestFinancingLimitDetailsGeneralFacilityProductClass_RFFRF00MT&apos;]/tbody/tr/td[text()=&apos;0&apos;]&quot;}
+  (Session info: chrome=115.0.5790.99)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d677cd6998f8d33cde8ba185ad9c85f7, clickElement {id=125FC5621134CEFDB7BEC4E65FBB0B82_element_354}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ININDC~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51021}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51021/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (d677cd6998f8d33cde8ba185ad9c85f7)] -&gt; xpath: //label[@id=&apos;facilityManagementForm_WIFT008MT_journal_voucher_details_key&apos;]]
-Session ID: d677cd6998f8d33cde8ba185ad9c85f7
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at jdk.proxy2/jdk.proxy2.$Proxy45.click(Unknown Source)
-	at helper.ClicksAndActionsHelper.clickOnElement(ClicksAndActionsHelper.java:22)
-	at stepdefinitions.FMS_StepDefinition_609.User_609_click_on_Journal_Voucher_Details_in_Facilities_Management_under_Wifak_Application(FMS_StepDefinition_609.java:1094)
-	at ✽.User_609 Click on Journal Voucher Details in Facilities Management under Wifak Application(file:///C:/Users/inindc00609/git/AZENTIO-FMS1/AzentioAutomationFramework_FMS_VIJAY3/src/test/java/features/AccountingEntries_609.feature:99)
+Command: [b45a8ec91993152527e61eb8430b3eef, findElement {using=xpath, value=//table[@id=&apos;gridtab_requestFinancingLimitDetailsGeneralFacilityProductClass_RFFRF00MT&apos;]/tbody/tr/td[text()=&apos;0&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.99, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\balab\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53703}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53703/devtoo..., se:cdpVersion: 115.0.5790.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b45a8ec91993152527e61eb8430b3eef
+	at org.testng.Assert.fail(Assert.java:111)
+	at stepdefinitions.FMS_StepDefinition_609.User_609_Select_the_product_Class_in_Request(FMS_StepDefinition_609.java:2308)
+	at ✽.User_609 Select the Product Class in Request(file:///C:/Users/balab/git/AZENTIO-FMS/AzentioAutomationFramework_FMS_VIJAY3/src/test/java/features/CreditReview_609.feature:21)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -174,7 +153,7 @@ Session ID: d677cd6998f8d33cde8ba185ad9c85f7
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\inindc00609\AppData\Local\Temp\testng-eclipse-2001306997\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\balab\AppData\Local\Temp\testng-eclipse-1661600956\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -235,12 +214,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'Runner.TestApplication')
-data.setCell(0, 3, 96657);
+data.setCell(0, 3, 252197);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -274,12 +253,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("Retrieving data. Wait a few seconds and try to cut or copy again", "Optional[Accounting Entries]")</span>
-                <span class="method-start">2121 ms</span>
+                <span class="method-name">runScenario("AIBBI190512 - Error produced by system while approving the application backed from the level of Cre...)</span>
+                <span class="method-start">1045 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">98817 ms</span>
+                <span class="method-start">253258 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
