@@ -506,11 +506,11 @@ public class FMS_PageObjects_609 {
 	
 	
 	
-	@FindBy(xpath = "//input[@name='applicationFacilityCO.fmsAppLimitDetCO.fmsAppLimitDetVO.CLEAN_FLAG']")
-	private WebElement ApplicationforfinancialfacilitiesMaintenanceLimitDetailsTabClean;
-	public WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_Clean() {
-		return ApplicationforfinancialfacilitiesMaintenanceLimitDetailsTabClean;
-	}
+//	@FindBy(xpath = "//input[@name='applicationFacilityCO.fmsAppLimitDetCO.fmsAppLimitDetVO.CLEAN_FLAG']")
+//	private WebElement ApplicationforfinancialfacilitiesMaintenanceLimitDetailsTabClean;
+//	public WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_Clean() {
+//		return ApplicationforfinancialfacilitiesMaintenanceLimitDetailsTabClean;
+//	}
 	
 	
 	
@@ -740,18 +740,46 @@ public class FMS_PageObjects_609 {
 		return ApplicationforfinancialfacilitiesMaintenanceLimitDetailsTabProductClassSearch;
 	}
 	
+	
+	
 	@FindBy(xpath = "//input[@id='gridtab_applicationfacilityLimitDetailsCLASS_WIFT001MT_gs_CODE']")
 	private WebElement ApplicationforfinancialfacilitiesMaintenanceLimitDetailsTabProductClass;
 	public WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ProductClass() {
 		return ApplicationforfinancialfacilitiesMaintenanceLimitDetailsTabProductClass;
 	}
 	
-	@FindBy(xpath = "//td[@id='next_pagerid_applicationfacilityLimitDetailsCLASS_WIFT001MT']/span")
-	private WebElement  ProductClassGridNext;
-	public WebElement ProductClassGridNext() {
-		return  ProductClassGridNext;
+	
+//	@FindBy(xpath = "//td[@id='next_pagerid_applicationfacilityLimitDetailsCLASS_WIFT001MT']/span")
+//	private WebElement  ProductClassGridNext;
+//	public WebElement ProductClassGridNext() {
+//		return  ProductClassGridNext;
+//	}
+	
+	@FindBy(xpath = "//span[@id='spanLookup_applicationfacilityLimitDetailsACC_SL_NO_WIFT001MT']")
+	private WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_GLCodeSearch;
+	public WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_GLCodeSearch() {
+		return Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_GLCodeSearch;
 	}
 	
+	@FindBy(xpath = "//input[@id='gridtab_applicationfacilityLimitDetailsACC_SL_NO_WIFT001MT_gs_amfVO.GL_CODE']")
+	private WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_GLCode;
+	public WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_GLCode() {
+		return Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_GLCode;
+	}
+	
+	
+	
+	@FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsACC_Desc_WIFT001MT']")
+	private WebElement AccountName_609;
+	public WebElement AccountName_609() {
+		return AccountName_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsCLEAN_FLAG_WIFT001MT']")
+	private WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_Clean;
+	public WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_Clean() {
+		return Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_Clean;
+	}
 	
 	
 	@FindBy(xpath = "//span[@id='spanLookup_applicationfacilityLimitDetailsPURPOSE_OF_FIN_WIFT001MT']/span")
@@ -770,6 +798,36 @@ public class FMS_PageObjects_609 {
 	private WebElement ApplicationforfinancialfacilitiesMaintenanceLimitDetailsTabAdd;
 	public WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_Add() {
 		return ApplicationforfinancialfacilitiesMaintenanceLimitDetailsTabAdd;
+	}
+	
+	@FindBy(xpath = "//label[@id='applicationfacilityFormId_WIFT001MT_Charges_Details_key']")
+	private WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetails;
+	public WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetails() {
+		return Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetails;
+	}
+	
+	@FindBy(xpath = "//span[@id='ui-dialog-title-facilitySubLimitChargesDetailsDiv_id_WIFT001MT']")
+	private WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetailsWait;
+	public WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetailsWait() {
+		return Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetailsWait;
+	}
+	
+	@FindBy(xpath = "//table[@id='FacilityChargesGrid_WIFT001MT']/tbody/tr/td[@tdlabel='Code']")
+	private WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetails_CodeClick;
+	public WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetails_CodeClick() {
+		return Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetails_CodeClick;
+	}
+	
+	@FindBy(xpath = "//table[@id='FacilityChargesGrid_WIFT001MT']/tbody/tr/td[@tdlabel='Collect At Fac. Approval']/input")
+	private WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetails_CodeSelect;
+	public WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetails_CodeSelect() {
+		return Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetails_CodeSelect;
+	}
+	
+	@FindBy(xpath = "//span[text()='Ok']")
+	private WebElement ChargesDetails_Ok;
+	public WebElement ChargesDetails_Ok() {
+		return ChargesDetails_Ok;
 	}
 	
 	
@@ -1116,6 +1174,38 @@ public class FMS_PageObjects_609 {
 	private WebElement WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation_Ok;
 	public WebElement WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation_Ok() {
 		return WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation_Ok;
+	}
+	
+////**********************************************Facilities Management*************************************************************************////
+	@FindBy(xpath = "//td[text()='Facilities Management']")
+	private WebElement FacilitiesManagement;
+	public WebElement FacilitiesManagement() {
+		return FacilitiesManagement;
+	}
+	
+	@FindBy(xpath = "//a[@id='WIFT008MT']/span[text()='Maintenance']")
+	private WebElement WifakapplictionSubmenu_FacilitiesManagement_Maintenance;
+	public WebElement WifakapplictionSubmenu_FacilitiesManagement_Maintenance() {
+		return WifakapplictionSubmenu_FacilitiesManagement_Maintenance;
+	}
+	
+	
+	@FindBy(xpath = "//a[contains(text(),' Search ') and @id='infoBarSearchButton_WIFT008MT']")
+	private WebElement SearchButton;
+	public WebElement SearchButton() {
+		return SearchButton;
+	}
+	
+	@FindBy(xpath = "//td[@id='facilityManagementGridTbl_Id_WIFT008MT_pager_left']/table//td[text()='Clear']")
+	private WebElement ClearButton;
+	public WebElement ClearButton() {
+		return ClearButton;
+	}
+	
+	@FindBy(xpath = "//input[@id='facilityManagementGridTbl_Id_WIFT008MT_gs_fmsFacilityVO.FROM_APPLICATION']")
+	private WebElement WifakapplictionSubmenu_FacilitiesManagement_Code;
+	public WebElement WifakapplictionSubmenu_FacilitiesManagement_Code() {
+		return WifakapplictionSubmenu_FacilitiesManagement_Code;
 	}
 ///****************************************************Grading**********************************************************************///
 
@@ -1668,6 +1758,31 @@ public class FMS_PageObjects_609 {
 	}
 	
 	
+	
+	//////*********************************journal voucher**********************////
+	@FindBy(xpath = "//label[@id='facilityManagementForm_WIFT008MT_journal_voucher_details_key']")
+	private WebElement WifakapplictionSubmenu_FacilitiesManagement_JournalVoucherDetails ;
+	public WebElement WifakapplictionSubmenu_FacilitiesManagement_JournalVoucherDetails() {
+		return WifakapplictionSubmenu_FacilitiesManagement_JournalVoucherDetails;
+	}
+	
+	@FindBy(xpath = "//select[@id='facilityMgtMainApplicationfor_WIFT008MT']")
+	private WebElement JournalVoucherDetails_wait_609;
+	public WebElement JournalVoucherDetails_wait_609() {
+		return JournalVoucherDetails_wait_609;
+	}
+	
+	@FindBy(xpath = "//span[text()='JV Details']")
+	private WebElement JournalVoucherDetails_popup_609;
+	public WebElement JournalVoucherDetails_popup_609() {
+		return JournalVoucherDetails_popup_609;
+	}
+	
+	@FindBy(xpath = "//table[@id='facManagementAccountJvList_Id_WIFT008MT']//td[text()='Sharia Inv. Inc-Trsy']")
+	private WebElement JournalVoucherDetails_Validate_609;
+	public WebElement JournalVoucherDetails_Validate_609() {
+		return JournalVoucherDetails_Validate_609;
+	}
 	
     
 }

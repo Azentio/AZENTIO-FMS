@@ -1003,34 +1003,73 @@ public class Facilities_Management_Steps_609 extends BaseClass{
     
     
    
+
     
-    @And("User_609 Click on the Facilities Management submenu")
-    public void user_609_click_on_the_facilities_management_submenu() throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.FacilitiesManagement());
+    @And("User_609 Select the Application Reference in Facilities Management")
+    public void User_609_Select_the_Application_Reference_in_Facilities_Management()throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.WifakapplictionSubmenu_FacilitiesManagement_Maintenance_ApplicationRefSearch());
+		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.WifakapplictionSubmenu_FacilitiesManagement_Maintenance_ApplicationRefSearch());
 		
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.FacilitiesManagement());
+		String xpath ="//table[@id='gridtab_facilityMgtMainApplicationRef_WIFT008MT']/tbody/tr[2]/td[1]";
+		for (int i = 0; i < 200; i++) {
+			try {
+				WebElement Code  = driver.findElement(By.xpath(xpath));
+				if (Code.isDisplayed()) {
+					clicksAndActionHelper.doubleClick(Code);
+					break;
+				}
+			} catch (Exception e) {
+				if (i==199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
         
-    }
-
-    @And("User_609 Click on the Maintenance Screen under Facilities Management submenu")
-    public void user_609_click_on_the_maintenance_screen_under_facilities_management_submenu()throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.WifakapplictionSubmenu_FacilitiesManagement_Maintenance());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.WifakapplictionSubmenu_FacilitiesManagement_Maintenance());
-        
-    }
-
-    @And("User_609 Click on the Search")
-    public void user_609_click_on_the_search()throws Throwable {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.SearchButton());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.SearchButton());
-    }
-
-    @And("User_609 Click on the Clear")
-    public void user_609_click_on_the_clear() throws Throwable{
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.ClearButton());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.ClearButton());
     }
     
+    @And("User_609 Click Yes in Post Approval Popup")
+    public void User_609_Click_Yes_in_Post_Approval_Popup()throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.WifakapplictionSubmenu_FacilitiesManagement_PostApproval_PopUp());
+    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.WifakapplictionSubmenu_FacilitiesManagement_PostApproval_PopUp_Yes());
+		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.WifakapplictionSubmenu_FacilitiesManagement_PostApproval_PopUp_Yes());
+        Thread.sleep(10000);
+    }
+    
+    @And("User_609 Click on Facility Limit Details tab in Facilities Management")
+    public void User_609_Click_on_Facility_Limit_Details_tab_in_Facilities_Management()throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.WifakapplictionSubmenu_FacilitiesManagement_Maintenance_FacilityLimitDetails());
+		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.WifakapplictionSubmenu_FacilitiesManagement_Maintenance_FacilityLimitDetails());
+    }
+    
+    @And("User_609 Select the Product Class in Facilities Management")
+    public void User_609_Select_the_Product_Class_in_Facilities_Management()throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.WifakapplictionSubmenu_FacilitiesManagement_Maintenance_FacilityLimitDetails_Code());
+		clicksAndActionHelper.doubleClick(FacilitiesManagementPageObjects609.WifakapplictionSubmenu_FacilitiesManagement_Maintenance_FacilityLimitDetails_Code());
+    }
+    
+    @And("User_609 Validate the Accounts are Generating")
+    public void User_609_Validate_the_Accounts_are_Generating()throws Throwable {
+		int j = 1;
+		while(j<=5) {
+			waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.WifakapplictionSubmenu_FacilitiesManagement_Maintenance_FacilityLimitDetails_GLCodeSearch());
+			clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.WifakapplictionSubmenu_FacilitiesManagement_Maintenance_FacilityLimitDetails_GLCodeSearch());
+			String xpath ="(//table[@id='gridtab_facilityMgtLimitDetailsACC_SL_NO_WIFT008MT']/tbody/tr/td[@tdlabel='GL'])["+j+"]";
+		for(int i=1;i<200;i++) {
+			try {
+				WebElement Code  = driver.findElement(By.xpath(xpath));
+				if (Code.isDisplayed()) {
+					clicksAndActionHelper.doubleClick(Code);	
+				}
+			} catch (Exception e) {
+				if (i==199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		j++;
+    }
+    }
 
     @And("User_609 Extract Code from Maintenance Screen")
     public void User_609_Extract_Code_from_Maintenance_Screen() throws Throwable{
@@ -1043,16 +1082,11 @@ public class Facilities_Management_Steps_609 extends BaseClass{
     	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.FacilitiesManagement_Save());
 		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.FacilitiesManagement_Save()); 
     }
-    
-    
-    
-    
-    
+
     @And("User_609 Click on the Draw Down Request under Wifak Appliction Submenu")
     public void user_609_click_on_the_draw_down_request_under_wifak_appliction_submenu() {
     	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.WifakapplictionSubmenu_DrawDownRequest());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.WifakapplictionSubmenu_DrawDownRequest());
-        
+		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.WifakapplictionSubmenu_DrawDownRequest());  
     }
 
     @And("User_609 Click on the Maintenace Screen under Draw Down Request")

@@ -22,12 +22,12 @@ And User_609 Enable Final Approval flag
 And User_609 Enable Automatically Approve Facility If Within Limits flag
 And User_609 Enable Create Active Facility If Within Limits flag
 And User_609 Click on Update
-And User_609 Click the confirm ok button
+And User_609 Click the Application confirm ok button
 And User_609 Click the ok button
 And User_609 Click on Approve Screen
 And User_609 Select the Code in Approve Screen
 And User_609 Click on Approve 
-And User_609 Click the confirm ok button
+And User_609 Click the Application confirm ok button
 And User_609 Click the ok button
 
 

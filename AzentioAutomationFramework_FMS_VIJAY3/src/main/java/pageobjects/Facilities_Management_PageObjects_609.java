@@ -717,30 +717,59 @@ public class Facilities_Management_PageObjects_609 {
 //		return ApproveLevel3_Submit;
 //	}
 	
-	@FindBy(xpath = "//td[text()='Facilities Management']")
-	private WebElement FacilitiesManagement;
-	public WebElement FacilitiesManagement() {
-		return FacilitiesManagement;
-	}
-	
-	@FindBy(xpath = "//a[@id='WIFT009MT']/span[text()='Maintenance']")
-	private WebElement WifakapplictionSubmenu_FacilitiesManagement_Maintenance;
-	public WebElement WifakapplictionSubmenu_FacilitiesManagement_Maintenance() {
-		return WifakapplictionSubmenu_FacilitiesManagement_Maintenance;
-	}
 	
 	
-	@FindBy(xpath = "//a[contains(text(),' Search ') and @id='infoBarSearchButton_WIFT008MT']")
-	private WebElement SearchButton;
-	public WebElement SearchButton() {
-		return SearchButton;
+	
+	@FindBy(xpath = "//span[@id='spanLookup_facilityMgtMainApplicationRef_WIFT008MT']/span")
+	private WebElement WifakapplictionSubmenu_FacilitiesManagement_Maintenance_ApplicationRefSearch;
+	public WebElement WifakapplictionSubmenu_FacilitiesManagement_Maintenance_ApplicationRefSearch() {
+		return WifakapplictionSubmenu_FacilitiesManagement_Maintenance_ApplicationRefSearch;
 	}
 	
-	@FindBy(xpath = "")
-	private WebElement ClearButton;
-	public WebElement ClearButton() {
-		return ClearButton;
+	@FindBy(xpath = "//span[text()='Post Approval']")
+	private WebElement WifakapplictionSubmenu_FacilitiesManagement_PostApproval_PopUp;
+	public WebElement WifakapplictionSubmenu_FacilitiesManagement_PostApproval_PopUp() {
+		return WifakapplictionSubmenu_FacilitiesManagement_PostApproval_PopUp;
 	}
+	
+	@FindBy(xpath = "//span[contains(text(),' Yes ')]")
+	private WebElement WifakapplictionSubmenu_FacilitiesManagement_PostApproval_PopUp_Yes;
+	public WebElement WifakapplictionSubmenu_FacilitiesManagement_PostApproval_PopUp_Yes() {
+		return WifakapplictionSubmenu_FacilitiesManagement_PostApproval_PopUp_Yes;
+	}
+	
+	@FindBy(xpath = "//li[@id='facilityLimitDetailsTab_WIFT008MT']/a/span[text()='Facility Limit Details']")
+	private WebElement WifakapplictionSubmenu_FacilitiesManagement_Maintenance_FacilityLimitDetails;
+	public WebElement WifakapplictionSubmenu_FacilitiesManagement_Maintenance_FacilityLimitDetails() {
+		return WifakapplictionSubmenu_FacilitiesManagement_Maintenance_FacilityLimitDetails;
+	}
+	
+	@FindBy(xpath = "//table[@id='FacilityManagementFacilityLimitDetailsGrid_WIFT008MT']/tbody/tr/td[@tdlabel='Code'][1]")
+	private WebElement WifakapplictionSubmenu_FacilitiesManagement_Maintenance_FacilityLimitDetails_Code;
+	public WebElement WifakapplictionSubmenu_FacilitiesManagement_Maintenance_FacilityLimitDetails_Code() {
+		return WifakapplictionSubmenu_FacilitiesManagement_Maintenance_FacilityLimitDetails_Code;
+	}
+	
+	@FindBy(xpath = "//span[@id='spanLookup_facilityMgtLimitDetailsACC_SL_NO_WIFT008MT']/span")
+	private WebElement WifakapplictionSubmenu_FacilitiesManagement_Maintenance_FacilityLimitDetails_GLCodeSearch;
+	public WebElement WifakapplictionSubmenu_FacilitiesManagement_Maintenance_FacilityLimitDetails_GLCodeSearch() {
+		return WifakapplictionSubmenu_FacilitiesManagement_Maintenance_FacilityLimitDetails_GLCodeSearch;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	@FindBy(xpath = "//input[@id='facilityManagementGridTbl_Id_WIFT008MT_gs_fmsFacilityVO.FROM_APPLICATION']")
 	private WebElement FacilitiesManagement_Maintenance_ApplicationRef;

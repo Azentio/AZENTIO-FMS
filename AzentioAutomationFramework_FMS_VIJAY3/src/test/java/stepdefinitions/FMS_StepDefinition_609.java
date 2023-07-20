@@ -31,6 +31,7 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	int randomNumber;
 	String FacilityCode;
 	String DateSubmitted;
+	String AccountName;
 	WebDriver driver = BaseClass.driver;
 	WaitHelper waitHelper = new WaitHelper(driver);
 	ClicksAndActionsHelper clicksAndActionHelper = new ClicksAndActionsHelper(driver);
@@ -48,6 +49,7 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	
 	String TestDataPath = System.getProperty("user.dir") + "\\TestData\\FMSTestData.xlsx";
 	ExcelData   FacilityApplicationModificationExcelData = new ExcelData(TestDataPath, "FMS_AppModification_609", "DataSet ID"); 
+	ExcelData AccountingEntriesExcelData_609 = new ExcelData(TestDataPath, "FMS_AccountingEntries_609", "DataSet ID"); 
 	ExcelData fmsParamLoginTestData = new ExcelData(TestDataPath, "FMSParam_login", "UserType");
 	
 	ExcelData fmsLoginExceldata = new ExcelData(TestDataPath, "FMS_Login", "UserType");
@@ -63,6 +65,10 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	Map<String, String> fmsLoginTestData = new HashMap<>();
 
 	 
+	@And("^User_609 get the test data set id for AT_AE_003$")
+    public void User_609_get_the_test_data_set_id_for_AT_AE_003() throws Throwable {
+    	testData = AccountingEntriesExcelData_609.getTestdata("AT_AE_003");	
+    }
 	
 	
 	 @And("^User_609 get the test data set id for AT_FAM_004$")
@@ -664,18 +670,10 @@ public class FMS_StepDefinition_609 extends BaseClass{
 
 	    @And("^User_609 Click on Dismiss if Send Alert pop up appears$")
 	    public void User_609_Click_on_Dismiss_if_Send_Alert_pop_up_appears() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.SendAlert_Ok_609());  	
-			for(int i= 0; i< 200;i++) {
-				try {
-					FmsPageobjects_609.SendAlert_Ok_609().click();
-					break;
-				} catch (Exception e) {
-					if(i==199) {
-						Assert.fail(e.getMessage());
-					}			
-				}
-			}
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.SendAlert_Ok_609());  		
+			FmsPageobjects_609.SendAlert_Ok_609().click();		
 	    }
+	    
 	    
 	    @And("^User_609 Click on Dismiss if Send Alert pop up1 appears$")
 	    public void User_609_Click_on_Dismiss_if_Send_Alert_pop_up1_appears() throws Throwable {
@@ -840,25 +838,6 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	                }
 	            }
 	        }
-
-		 
-		    /*
-			String xpath ="//table[@id='gridtab_applicationFacilitycif_WIFT001MT']/tbody/tr[2]/td[text()='"+CifNo+"']";
-			for (int i = 0; i < 200; i++) {
-				try {
-					WebElement Code  = driver.findElement(By.xpath(xpath));
-					if (Code.isDisplayed()) {
-						clicksAndActionHelper.doubleClick(Code);
-					}
-					driver.findElement(By.xpath(xpath)).isDisplayed();
-					break;
-				} catch (Exception e) {
-					if (i==199) {
-						Assert.fail(e.getMessage());
-					}
-				}	
-			}
-			*/
 		}
 
 		@And("^User_609 Select the Facility Type in Main Information tab$")
@@ -1052,16 +1031,17 @@ public class FMS_StepDefinition_609 extends BaseClass{
 			ProductClass.click();
 			ProductClass.sendKeys(testData.get("Product Class"));
 			ProductClass.sendKeys(Keys.ENTER);
-		
-			String xpath ="//table[@id='gridtab_applicationfacilityLimitDetailsCLASS_WIFT001MT']/tbody/tr[2]/td[text()='"+String.valueOf(testData.get("Product Class"))+"']";
+		//			String xpath ="//table[@id='gridtab_applicationfacilityLimitDetailsCLASS_WIFT001MT']/tbody/tr[2]/td[text()='"+String.valueOf(testData.get("Product Class"))+"']";
+
+			String xpath ="//table[@id='gridtab_applicationfacilityLimitDetailsCLASS_WIFT001MT']/tbody/tr[2]/td[text()='"+testData.get("Product Class")+"']";
 			for (int i = 0; i < 200; i++) {
 				try {
 					WebElement Code  = driver.findElement(By.xpath(xpath));
 					if (Code.isDisplayed()) {
 						clicksAndActionHelper.doubleClick(Code);
-					}
-					driver.findElement(By.xpath(xpath)).isDisplayed();
-					break;
+						Thread.sleep(2000);
+						break;
+					}	
 				} catch (Exception e) {
 					if (i==199) {
 						Assert.fail(e.getMessage());
@@ -1070,6 +1050,73 @@ public class FMS_StepDefinition_609 extends BaseClass{
 			}
 		}
 
+		
+		@And("^User_609 Select the GL Code$")
+		public void User_609_Select_the_GL_Code() throws Throwable {
+			
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_GLCodeSearch());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_GLCodeSearch());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_GLCodeSearch());
+		
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_GLCode());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_GLCode());
+			WebElement GLCode = FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_GLCode();
+			GLCode.click();
+			GLCode.sendKeys(testData.get("GL Code"),Keys.ENTER);
+		
+			//table[@id='gridtab_applicationfacilityLimitDetailsACC_SL_NO_WIFT001MT']/tbody/tr/td[text()='411001']
+			String xpath ="//table[@id='gridtab_applicationfacilityLimitDetailsACC_SL_NO_WIFT001MT']/tbody/tr/td[text()='"+testData.get("GL Code")+"']";
+			for (int i = 0; i < 200; i++) {
+				try {
+					WebElement Code  = driver.findElement(By.xpath(xpath));
+					if (Code.isDisplayed()) {
+						clicksAndActionHelper.doubleClick(Code);
+						Thread.sleep(2000);
+						break;
+					}
+					
+				} catch (Exception e) {
+					if (i==199) {
+						Assert.fail(e.getMessage());
+					}
+				}	
+			}
+			
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.AccountName_609());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.AccountName_609());
+			AccountName = FmsPageobjects_609.AccountName_609().getAttribute("prevvalue");
+		}
+		
+		@And("User_609 Click on Journal Voucher Details in Facilities Management under Wifak Application")
+	    public void User_609_click_on_Journal_Voucher_Details_in_Facilities_Management_under_Wifak_Application() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.JournalVoucherDetails_wait_609());
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakapplictionSubmenu_FacilitiesManagement_JournalVoucherDetails());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakapplictionSubmenu_FacilitiesManagement_JournalVoucherDetails());
+			
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakapplictionSubmenu_FacilitiesManagement_JournalVoucherDetails());
+
+	    }
+	    
+	    
+	    @Then("User_609 Validate the Journal Voucher Details is Displayed in Facilities Management under Wifak Application")
+	    public void User_609_validate_the_Journal_Voucher_Details_is_displayed_in_Facilities_Management_under_Wifak_Application() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.JournalVoucherDetails_popup_609());
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.JournalVoucherDetails_Validate_609());
+	    	Assert.assertEquals(AccountName, FmsPageobjects_609.JournalVoucherDetails_Validate_609().getText());
+			
+
+	    }
+	    
+		
+		
+		@And("User_609 Enable the Clean Flag")
+		public void User_609_enable_the_clean_flag() {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_Clean());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_Clean());  
+		   
+		}
+		
 		@And("User_609 Select the Purpose Of Financing")
 		public void User_609_select_the_purpose_of_financing() {
 			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancing());
@@ -1096,7 +1143,27 @@ public class FMS_StepDefinition_609 extends BaseClass{
 				}			
 			}
 		}
+		
+		@And("^User_609 Click on Charges Details label$")
+		public void User_609_Click_on_Charges_Details_label() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetails());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetails());
+		}
+		
+		@And("^User_609 Click and select the Charges Details$")
+		public void User_609_Click_and_select_the_Charges_Details() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetailsWait());
+			
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetails_CodeClick());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetails_CodeClick());
+			
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetails_CodeSelect());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetails_CodeSelect());
 
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.ChargesDetails_Ok());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.ChargesDetails_Ok());
+		}
+		
 		@And("^User_609 Click on the Document Details tab$")
 		public void User_609_click_on_the_document_details_tab() throws Throwable {
 			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_DocumentDetailsTab());
@@ -1194,13 +1261,7 @@ public class FMS_StepDefinition_609 extends BaseClass{
 			
 		}
 		
-		
-		
-		
-		
-		
-		
-		
+
 		
 		 @And("^User_609 Click on the Approve level1 Screen$")
 		    public void User_609_Click_on_the_Approve_level1_Screen() throws Throwable {
@@ -1230,31 +1291,20 @@ public class FMS_StepDefinition_609 extends BaseClass{
 						}
 					}
 				}
-				/*
-				try {
-					WebElement Code  = driver.findElement(By.xpath(xpath));
-					waitHelper.waitForElementwithFluentwait(driver,Code);
-					if (Code.isDisplayed()) {
-						clicksAndActionHelper.doubleClick(Code);
-					}
-				} catch (Exception e) {
-						Assert.fail(e.getMessage());
-					}
-					*/
 		    }
 		    
 		    @And("^User_609 Select the Decision in Approve level1$")
 		    public void User_609_Select_the_Decision_in_Approve_level1() throws Throwable {
 		    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApproveLevel1_Decision());
 				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApproveLevel1_Decision());
-				dropdownhelper.SelectUsingVisibleText(FmsPageobjects_609.WifakApplication_ApproveLevel1_Decision(), testData.get("Approve level1 Decision"));
+				dropdownhelper.SelectUsingVisibleText(FmsPageobjects_609.WifakApplication_ApproveLevel1_Decision(), testData.get("AL1 Decision"));
 		    }
 		    
 		    @And("^User_609 Select the More Decision in Approve level1$")
 		    public void User_609_Select_the_More_Decision_in_Approve_level1() throws Throwable {
 		    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApproveLevel1_MoreDecision());
 				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApproveLevel1_MoreDecision());
-				dropdownhelper.SelectUsingVisibleText(FmsPageobjects_609.WifakApplication_ApproveLevel1_MoreDecision(), testData.get("Forward To"));
+				dropdownhelper.SelectUsingVisibleText(FmsPageobjects_609.WifakApplication_ApproveLevel1_MoreDecision(), testData.get("AL1 Forward To  Decision"));
 		    }
 		    
 		    @And("^User_609 Click on Submit in Approve Level1$")
@@ -1381,7 +1431,7 @@ public class FMS_StepDefinition_609 extends BaseClass{
 			    public void User_609_Select_the_Decision_in_Approve_level3() throws Throwable {
 			    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApproveLevel3_Decision());
 					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApproveLevel3_Decision());
-					dropdownhelper.SelectUsingVisibleText(FmsPageobjects_609.WifakApplication_ApproveLevel3_Decision(), testData.get("Approve level3  Decision"));
+					dropdownhelper.SelectUsingVisibleText(FmsPageobjects_609.WifakApplication_ApproveLevel3_Decision(), testData.get("AL3 Decision"));
 			    }
 			    
 			    @And("^User_609 Select the More Decision in Approve level3$")
@@ -1399,12 +1449,63 @@ public class FMS_StepDefinition_609 extends BaseClass{
 			    }
 		    
 		    
+			    @And("User_609 Click on the Facilities Management submenu")
+			    public void user_609_click_on_the_facilities_management_submenu() throws Throwable {
+			    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.FacilitiesManagement());
+					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.FacilitiesManagement());
+			    }
+			    
+			    @And("User_609 Click on the Maintenance Screen under Facilities Management submenu")
+			    public void user_609_click_on_the_maintenance_screen_under_facilities_management_submenu()throws Throwable {
+			    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakapplictionSubmenu_FacilitiesManagement_Maintenance());
+					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakapplictionSubmenu_FacilitiesManagement_Maintenance());
+			        
+			    }
+
+			   
+
+			    
+			    @And("User_609 Click on the Search")
+			    public void user_609_click_on_the_search()throws Throwable {
+			    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.SearchButton());
+					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.SearchButton());
+			    }
+
+			    @And("User_609 Click on the Clear")
+			    public void user_609_click_on_the_clear() throws Throwable{
+			    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.ClearButton());
+					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.ClearButton());
+					Thread.sleep(5000);
+			    }
 		    
-		    
-		    
-		    
-		    
-		    
+
+			    @And("User_609 Select the Code in Facilities Management under Wifak Application")
+			    public void User_609_Select_the_Code_in_Facilities_Management_under_Wifak_Application()throws Throwable {
+			    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakapplictionSubmenu_FacilitiesManagement_Code());
+					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakapplictionSubmenu_FacilitiesManagement_Code());
+//					FmsPageobjects_609.WifakapplictionSubmenu_FacilitiesManagement_Code().sendKeys(ApplicationNo,Keys.ENTER);
+//				
+//					String xpath ="//table[@id='facilityManagementGridTbl_Id_WIFT008MT']/tbody/tr/td[text()='"+"000000"+ApplicationNo+"']";
+					FmsPageobjects_609.WifakapplictionSubmenu_FacilitiesManagement_Code().sendKeys("5042",Keys.ENTER);
+					Thread.sleep(3000);
+					String xpath ="//table[@id='facilityManagementGridTbl_Id_WIFT008MT']/tbody/tr/td[text()="+000000+"+'5042']";
+					for (int i = 0; i < 200; i++) {
+						try {
+							WebElement Code  = driver.findElement(By.xpath(xpath));
+							if (Code.isDisplayed()) {
+								clicksAndActionHelper.doubleClick(Code);
+								Thread.sleep(3000);
+								break;
+							}
+						} catch (Exception e) {
+							if (i==199) {
+								Assert.fail(e.getMessage());
+							}
+						}
+					}
+			    }
+			    
+			    
 		    
 		    
 		    
