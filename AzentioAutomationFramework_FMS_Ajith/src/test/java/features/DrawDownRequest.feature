@@ -10,6 +10,7 @@ And User_482 select the searched facility type in Update after approve screen Fa
 And User_482 click facility details tab in searched record Update after approve screen Facility type
 And User_482 click STP Facility Requirements
 And User_482 check Committee Approval CheckBox
+And User_482 check Credit authorization
 And User_482 check Credit Review CheckBox
 And User_482 check Issue Facility Offer CheckBox
 And User_482 check Document Validation CheckBox
@@ -55,12 +56,13 @@ And User_482 enter Estimator name to select from look up in document details und
 And User_482 click Maininformation tab in WIFAK Application
 And User_482 click save button in Main Info tab under WIFAK Application
 And User_482 Click on Ok button in Confirm Pop up Menu
-And User_482 Get the Code in Success Pop up Menu under WIFAK Application
+And User_482 Get the Code in Success Pop up Menu under WIFAK Application for Draw down
 And User_482 Click on Ok button in Success Pop up Menu
 And User_482 click Validate button in Main Info tab under WIFAK Application
 And User_482 Click on Ok button in Confirm Pop up Menu
 And User_482 Click on Ok button in Confirm Pop up Menu
 And User_482 Click on Ok button in Success Pop up Menu
+And User_482 Click close icon in sent alert under WIFAK Application
 And User_482 update test data set for AT_DDR_009
 And User_482 Click Approve Level 1 screen in application for financial facilities under WIFAK Application
 And User_482 Search code in Approve Level 1 screen in Application for financial facilities
@@ -69,6 +71,7 @@ And User_482 Select Decision in Approve level 1 under WIFAK Application
 And User_482 click submit button in approve level 1 under WIFAK Application
 And User_482 Click on Ok button in Confirm Pop up Menu
 And User_482 Click on Ok button in Success Pop up Menu
+And User_482 Click close icon in sent alert under WIFAK Application
 And User_482 Click Approve Level 2 screen in application for financial facilities under WIFAK Application
 And User_482 Search code in Approve Level 2 screen in Application for financial facilities
 And User_482 Select searched record in Approve level 2 screen Application for financial facilities
@@ -84,7 +87,7 @@ And User_482 click submit button in approve level 3 under WIFAK Application
 And User_482 Click on Ok button in Confirm Pop up Menu
 And User_482 Click on Ok button in Success Pop up Menu
 @AT_DDR_009_03
-Scenario: create facility in WIFAK Application
+Scenario: Store facility code in WIFAK Application
 Given navigate to FMS application and login with valid credentials
 And User_482 Click on WIFAK Application Main Menu
 And User_482 Click on WIFAK Application Sub Menu
@@ -93,7 +96,7 @@ And User_482 Click facilities management screen under WIFAK Application
 And User_482 Click Maintenance screen in Facilities Management Under WIFAK Application
 And User_482 Click Search Icon in Maintenance screen Facilities Management Under WIFAK Application
 And User_482 Search Application Ref Num In Facilities Management Under WIFAK Application
-And User_482 Select Searched Record In Facilities Management Under WIFAK Application
+#And User_482 Select Searched Record In Facilities Management Under WIFAK Application
 And User_482 Store Facility Code In Facilities Management Under WIFAK Application
 @AT_DDR_009
 Scenario: IIAB150201 - Differnce between the Drawdown amount feilds.
@@ -133,6 +136,7 @@ And User_482 Search Code in Update after Approve Sub menu In Draw Down Request
 And User_482 Select the Searched code in Update after Approve Sub menu In Draw Down Request 
 And User_482 Click Drawdown Additional Details in Update after Approve Sub menu 
 And User_482 Enter FC Amount In Drawdown Additional Details in Update after Approve Sub menu
+And User_482 Click Save Button in Drawdown Maintenance
 And User_482 Click on Ok button in Confirm Pop up Menu
 And User_482 Click on Ok button in Success Pop up Menu
 And User_482 Click close icon in sent alert under WIFAK Application

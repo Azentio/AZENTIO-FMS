@@ -46,7 +46,7 @@ public class DrawDownRequestObj {
 	public WebElement facilityReferenceDrawDownRequestMaintenance_WF_482() {
 		return facilityReferenceDrawDownRequestMaintenance_WF_482;
 	}
-	@FindBy(xpath = "//input[@id='lookuptxt_drawDownRequestFacilityReference_WIFT009MT']")
+	@FindBy(xpath = "//input[@id='lookuptxt_drawDownRequestDrawDownType_WIFT009MT']")
 	private WebElement drawDownTypeDrawDownRequestMaintenance_WF_482;
 	public WebElement drawDownTypeDrawDownRequestMaintenance_WF_482() {
 		return drawDownTypeDrawDownRequestMaintenance_WF_482;
@@ -190,6 +190,18 @@ public class DrawDownRequestObj {
 	private WebElement selectSearchedCodeInupdateAfterApproveScreen_DrawDownRequest_WF_482;
 	public WebElement selectSearchedCodeInupdateAfterApproveScreen_DrawDownRequest_WF_482() {
 		return selectSearchedCodeInupdateAfterApproveScreen_DrawDownRequest_WF_482;
+	}
+	
+	@FindBy(xpath = "//input[@id='drawDownRequestLoanTypeDesc_WIFT009MT']")
+	private WebElement facilityNameValidation_DrawDownRequest_WF_482;
+	public WebElement facilityNameValidation_DrawDownRequest_WF_482() {
+		return facilityNameValidation_DrawDownRequest_WF_482;
+	}
+	
+	@FindBy(xpath = "//input[@id='drawDownRequestProductClassDesc_WIFT009MT']")
+	private WebElement productClassNameValidation_DrawDownRequest_WF_482;
+	public WebElement productClassNameValidation_DrawDownRequest_WF_482() {
+		return productClassNameValidation_DrawDownRequest_WF_482;
 	}
 	
 	

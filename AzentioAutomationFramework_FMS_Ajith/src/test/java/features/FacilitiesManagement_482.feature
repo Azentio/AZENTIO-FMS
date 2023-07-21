@@ -54,6 +54,37 @@ And User_482 select searched code in approve screen Facility type
 And User_482 click approve button in approve screen Facility type
 And User_482 Click on Ok button in Confirm Pop up Menu
 And User_482 Click on Ok button in Success Pop up Menu
+@AT_FM_061_01
+Scenario: Check all the fals in facility type under fms param
+Given navigate to FMS param application and login with valid credentials
+And User_482 click parameter Menu
+And User_482 click Facility Type
+And User_482 click update after approve screen in Facility type
+And User_482 Search facility type code in Update after approve screen Facility type
+And User_482 select the searched facility type in Update after approve screen Facility type
+And User_482 click facility details tab in searched record Update after approve screen Facility type
+And User_482 click STP Facility Requirements
+And User_482 check Customer Grading Checkbox
+And User_482 Check Overwrite Grading
+And User_482 check Committee Approval CheckBox
+And User_482 check Credit authorization
+And User_482 check Credit Review CheckBox
+And User_482 check Issue Facility Offer CheckBox
+And User_482 check Client Response CheckBox
+And User_482 check Document Validation CheckBox
+And User_482 check Final Approval CheckBox
+And User_482 check Create Active Facility If Within Limits CheckBox
+And User_482 check Automatically Approve Facility If Within Limits CheckBox
+And User_482 click update button in Update after approve screen Facility type
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 click approve screen in Facility type
+And User_482 search code in approve screen Facility type 
+And User_482 select searched code in approve screen Facility type
+And User_482 click approve button in approve screen Facility type
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
+
 @AT_FM_061
 Scenario: System automatically approved all the level till facility creation
 Given navigate to FMS application and login with valid credentials

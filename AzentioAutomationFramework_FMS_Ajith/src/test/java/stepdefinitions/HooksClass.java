@@ -1,19 +1,16 @@
 package stepdefinitions;
 
 import java.io.IOException;
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
-import org.junit.Assume;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import com.aventstack.extentreports.Status;
 
-import Runner.NewExcelTestRunner;
 import dataProvider.ExcelData;
 import dataProvider.ExcelTest;
 import helper.ScreenshotHelper;
@@ -37,7 +34,7 @@ public class HooksClass extends BaseClass {
 	ScreenshotHelper screenshotHelper = new ScreenshotHelper(driver);
 	@Before
 	public void browserSetup(Scenario scenario) throws IOException {
-		System.out.println(NewExcelTestRunner.getCurrentExecutionTag());
+		//System.out.println(NewExcelTestRunner.getCurrentExecutionTag());
 		// get flag status from excel and skip the test cases
 		/*
 		 * if

@@ -51,7 +51,7 @@ public class DrawDownRequestSd_482 {
 	@And("User_482 Store the DrawDown Request id")
 	public void user_482_store_the_draw_down_request_id() {
 		seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,drawDownRequest.getRequestIdInDrawDownRequest_WF_482());
-    	String requestId = drawDownRequest.getRequestIdInDrawDownRequest_WF_482().getText().substring(23,28);
+    	String requestId = drawDownRequest.getRequestIdInDrawDownRequest_WF_482().getText().substring(11,15);
     	drawDownRequestData.updateTestData(testExecutionData.get("Data Set ID"), "DrawDownRequestCode",requestId);
     	System.out.println(requestId); 
 	}
@@ -80,6 +80,13 @@ public class DrawDownRequestSd_482 {
 				.clickOnElement(drawDownRequest.drawDownTypeDrawDownRequestMaintenance_WF_482());
 		drawDownRequest.drawDownTypeDrawDownRequestMaintenance_WF_482().sendKeys(testData.get("DrawDownTypeCode"));
 		drawDownRequest.drawDownTypeDrawDownRequestMaintenance_WF_482().sendKeys(Keys.TAB);
+		seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,
+				drawDownRequest.facilityNameValidation_DrawDownRequest_WF_482());
+		for (int i = 0; i <200; i++) {
+			if (!drawDownRequest.facilityNameValidation_DrawDownRequest_WF_482().getAttribute("prevvalue").isBlank()) {
+				break;
+			}
+		}
 
 	}
 
@@ -132,17 +139,31 @@ public class DrawDownRequestSd_482 {
 		seleniumActions.getClickAndActionsHelper()
 				.clickOnElement(drawDownRequest.productClassDrawDownRequestMaintenance_WF_482());
 		drawDownRequest.productClassDrawDownRequestMaintenance_WF_482().sendKeys(testData.get("ProductClass"));
+		drawDownRequest.productClassDrawDownRequestMaintenance_WF_482().sendKeys(Keys.TAB);
+		seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,
+				drawDownRequest.productClassNameValidation_DrawDownRequest_WF_482());
+		for (int i = 0; i <100; i++) {
+			if (!drawDownRequest.productClassNameValidation_DrawDownRequest_WF_482().getAttribute("prevvalue").isBlank()) {
+				break;
+			}
+		}
 		
 	}
 
 	@And("User_482 Click Save Button in Drawdown Maintenance")
 	public void user_482_482_click_save_button_in_drawdown_maintenance() {
-		seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,
-				drawDownRequest.saveButtonDrawDownRequestMaintenance_WF_482());
-		seleniumActions.getClickAndActionsHelper()
+		for (int i = 0; i <200; i++) {
+			try {
+				seleniumActions.getClickAndActionsHelper()
 				.moveToElement(drawDownRequest.saveButtonDrawDownRequestMaintenance_WF_482());
 		seleniumActions.getClickAndActionsHelper()
 				.clickOnElement(drawDownRequest.saveButtonDrawDownRequestMaintenance_WF_482());
+				break;
+			} catch (Exception e) {
+				
+			}
+		}
+		
 	}
 
 	@And("User_482 Enter FC Amount In Drawdown Additional Details")
@@ -156,7 +177,9 @@ public class DrawDownRequestSd_482 {
 		drawDownRequest.fcAmountDrawDownRequestMaintenance_WF_482().clear();
 		drawDownRequest.fcAmountDrawDownRequestMaintenance_WF_482().sendKeys(testData.get("FCAmount"));
 		drawDownRequest.fcAmountDrawDownRequestMaintenance_WF_482().sendKeys(Keys.TAB);
-	}
+		
+		}
+	
 
 	@And("User_482 Click Verify Sub menu In Draw Down Request")
 	public void user_482_click_verify_sub_menu_in_draw_down_request() {

@@ -56,10 +56,28 @@ public class ApplicationForFinancialFacilityParamObj {
 		return StpFacilityRequirementsOption;
 	}
 	
+	@FindBy(xpath ="//input[@id='fmsFacilityType_customer_grading_P008UP']")
+	private WebElement customerGradingCheckbox_482;
+	public WebElement customerGradingCheckbox_482() {
+		return customerGradingCheckbox_482;
+	}
+	
+	@FindBy(xpath ="//input[@id='fmsFacilityType_grade_overwrite_P008UP']")
+	private WebElement overWriteGradingCheckbox_482;
+	public WebElement overWriteGradingCheckbox_482() {
+		return overWriteGradingCheckbox_482;
+	}
+	
 	@FindBy(xpath ="//input[@id='fmsFacilityType_committee_approval_P008UP']")
 	private WebElement checkBoxApprovalCommittee;
 	public WebElement checkBoxApprovalCommittee() {
 		return checkBoxApprovalCommittee;
+	}
+	
+	@FindBy(xpath ="//input[@id='fmsFacilityType_credit_authorize_P008UP']")
+	private WebElement checkBoxCreditAuthorization;
+	public WebElement checkBoxCreditAuthorization() {
+		return checkBoxCreditAuthorization;
 	}
 	
 	@FindBy(xpath ="//input[@id='fmsFacilityType_credit_review_P008UP']")

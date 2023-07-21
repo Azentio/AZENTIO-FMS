@@ -6,6 +6,7 @@ And User_482 Click on REQUEST FOR FINANCIN under FMS application
 And User_482 click the Request For Financing Sub Menu under REQUEST FOR FINANCIN
 And User_482 Click on Maintenance under Request For Financing Sub Menu in REQUEST FOR FINANCIN
 And User get the system date
+And User_482 Update Test data set for AT_RF_008
 And User Select New Request in Reason For Submission under Maintenance screen in REQUEST FOR FINANCIN
 And User Search the CIF Number in Customer under Maintenance screen in REQUEST FOR FINANCIN
 And User Search the Facility Type under Maintenance screen in REQUEST FOR FINANCIN
@@ -13,7 +14,7 @@ And User Enter the value in Total Limit under Maintenance screen in REQUEST FOR 
 And User Click on Disbursement or Sublimit under Maintenance screen in REQUEST FOR FINANCIN
 And User Click on Add button in Disbursement or Sublimit under Maintenance screen in REQUEST FOR FINANCIN
 And User Search Product Class in Limit Details Pop up Menu
-#And User Enter the Margin value in New Tab Field in Limit Details Pop up Menu
+And User Enter the Margin value in New Tab Field in Limit Details Pop up Menu
 And User Click on Add button in Limit Details Pop up
 And User Click on Save button under Maintenance screen in REQUEST FOR FINANCIN
 And User_482 Click on Ok button in Confirm Pop up Menu
@@ -27,9 +28,142 @@ And User Click on Disbursement or Sublimit under Maintenance screen in REQUEST F
 And User select sublimit details in Maintenance screen Request for financing
 And User click repayment plan in Maintenance screen Request for financing
 And User enter no of payments in repayment plan
-#And User Click on Ok button in Success Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
 And User enter pay every in repayment plan
 And User Validate the Maturity Date in repayment plan
+
+@AT_RF_025_01
+Scenario: Uncheck issue facility offer in facility type under fms param
+Given navigate to FMS param application and login with valid credentials
+And User_482 click parameter Menu
+And User_482 click Facility Type
+And User_482 click update after approve screen in Facility type
+And User_482 Search facility type code in Update after approve screen Facility type
+And User_482 select the searched facility type in Update after approve screen Facility type
+And User_482 click facility details tab in searched record Update after approve screen Facility type
+And User_482 click STP Facility Requirements
+And User_482 check Customer Grading Checkbox
+And User_482 Check Overwrite Grading
+And User_482 check Committee Approval CheckBox
+And User_482 check Credit authorization
+And User_482 check Credit Review CheckBox
+And User_482 Uncheck Issue Facility Offer CheckBox
+And User_482 check Client Response CheckBox
+And User_482 check Document Validation CheckBox
+And User_482 check Final Approval CheckBox
+And User_482 check Create Active Facility If Within Limits CheckBox
+And User_482 check Automatically Approve Facility If Within Limits CheckBox
+And User_482 click update button in Update after approve screen Facility type
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 click approve screen in Facility type
+And User_482 search code in approve screen Facility type 
+And User_482 select searched code in approve screen Facility type
+And User_482 click approve button in approve screen Facility type
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
+
+@AT_RF_025
+Scenario: TSR - FIBSI180216
+Given navigate to FMS application and login with valid credentials
+And User_482 click Technical details
+And User_482 click clear caches
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 Click on WIFAK Application Main Menu
+And User_482 Click on WIFAK Application Sub Menu
+And User_482 Click Application for financial facilities 
+And User_482 Click Maintenance screen in WIFAK Application sub menu
+And User_482 update test data set for AT_RF_025
+And User_482 Select Application For field in Maintenace Screen under WIRAK Application
+And User_482 enter the CIF No in main info tab under WIRAK Application
+And User_482 enter the facility type in main info tab under WIRAK Application
+And User_482 enter the country of financing in main info tab under WIRAK Application
+And User_482 enter facility rating in main info tab under WIRAK Application
+And User_482 clicks on the additional details tab under WIRAK Application	
+And User_482 Enter total value under additional details tab in WIFAK Application
+And User_482 Enter offer Expiration in Additional details under WIFAK Application
+And User_482 click Limit Details tab in WIFAK Application
+And User_482 click add icon in limit details under WIFAK Application
+And User_482 select the product class in limit details under WIFAK Application
+And User_482 check clean checkbox options in limit details under WIFAK Application
+And User_482 click add icon in limit details popup under WIFAK Application
+And User_482 click document details tab under WIFAK Application
+And User_482 enter solicitor name to select from look up in document details under WIFAK Application 
+And User_482 enter Estimator name to select from look up in document details under WIFAK Application
+And User_482 click Maininformation tab in WIFAK Application
+And User_482 click save button in Main Info tab under WIFAK Application
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Get the Code in Success Pop up Menu under WIFAK Application
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 click Validate button in Main Info tab under WIFAK Application
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 Click close icon in sent alert under WIFAK Application
+And User_482 update test data set for AT_RF_025
+And User_482 Click Approve Level 1 screen in application for financial facilities under WIFAK Application
+And User_482 Search code in Approve Level 1 screen in Application for financial facilities
+And User_482 Select searched record in Approve level 1 screen Application for financial facilities
+And User_482 Select Decision in Approve level 1 under WIFAK Application
+And User_482 click submit button in approve level 1 under WIFAK Application
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 Click Approve Level 2 screen in application for financial facilities under WIFAK Application
+And User_482 Search code in Approve Level 2 screen in Application for financial facilities
+And User_482 Select searched record in Approve level 2 screen Application for financial facilities
+And User_482 Select Decision in Approve level 2 under WIFAK Application
+And User_482 click submit button in approve level 2 under WIFAK Application
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 Click Approve Level 3 screen in application for financial facilities under WIFAK Application
+And User_482 Search code in Approve Level 3 screen in Application for financial facilities
+And User_482 Select searched record in Approve level 3 screen Application for financial facilities
+And User_482 Select Decision in Approve level 3 under WIFAK Application
+And User_482 click submit button in approve level 3 under WIFAK Application
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 Click close icon in sent alert under WIFAK Application
+And User_482 Click Issue Facility Offer Sub Menu Under WIFAK Application
+And User_482 Search code in Issue Facility Offer screen Under WIFAK Application
+And User_482 Select searched record in Issue Facility Offer screen Under WIFAK Application
+And User_482 Click Issue Offer button in Issue Facility Offer screen Under WIFAK Application
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 Validate the system is printing the offer letter automatically at the level of issue facility offer
+
+@AT_RF_026
+Scenario: TSR - FIBSI180177
+Given navigate to FMS application and login with valid credentials
+And User_482 Click Collateral Management
+And User_482 Click Update After Approve Screen In Collateral Management
+And User_482 Update test data set id for AT_RF_026 
+And User_482 Click Clear in grid view
+And User_482 Search Code in Update After Approve Under Collateral Management
+And User_482 Select first record in Update After Approve Collaterl Management
+And User_482 Change Approve Coverage Value
+And User_482 Select Country In Collateral Management
+And User_482 Click Save button In Update After Approve Collateral Management
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Get the Code in Success Pop up Menu under Collateral Management
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 Click Approve Screen In Collateral Management
+And User_482 Update test data set id for AT_RF_026 
+And User_482 Search code in Approve Screen Under Collateral Management
+And User_482 Select searched record in Approve Screen Under Collateral Management
+And User_482 Click Approve Button in Approve Screen Under Collateral Management 
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 Click Maintenance Screen In Collateral Management
+And User_482 click search icon in Maintenance screen under Collateral Management
+And User_482 Search code in Maintenance Screen Under Collateral Management
+And User_482 Select searched record in Maintenance Screen Under Collateral Management
+And User_482 Click Audit button In Maintenance Screen Under Collateral Management
+And User_482 Click last Button in Audit details View
+And User_482 Validate Audit Details Updated Properly
+
+
+
+
 @AT_RF_064_01
 Scenario: TSR - AIB180044
 Given navigate to FMS param application and login with valid credentials
@@ -53,12 +187,13 @@ And User click ok button in Waring popup
 And User click ok button in Information Pop up
 
 @AT_RF_064_02
-Scenario: MFI190234 - Request for Financing & Application --->Limit Details-->Repayment Plan, Maturity dates not changing properly
+Scenario: Validate Purpose of Financing Record refelected in Application
 Given navigate to FMS application and login with valid credentials
 And User_482 Click on REQUEST FOR FINANCIN under FMS application
 And User_482 click the Request For Financing Sub Menu under REQUEST FOR FINANCIN
 And User_482 Click on Maintenance under Request For Financing Sub Menu in REQUEST FOR FINANCIN
 And User get the system date
+And User_482 Update Test data set for AT_RF_064
 And User Select New Request in Reason For Submission under Maintenance screen in REQUEST FOR FINANCIN
 And User Search the CIF Number in Customer under Maintenance screen in REQUEST FOR FINANCIN
 And User Search the Facility Type under Maintenance screen in REQUEST FOR FINANCIN
@@ -100,12 +235,13 @@ And User Validate Total Existing In Limit details contains decimal value
 And User Validate Total New In Limit details contains decimal value
 And User Validate Total Approved In Limit details contains decimal value
 And User Validate CV Value In Limit details contains decimal value
-# blocked , weight field allow decimal value
+# blocked , weight field does not allow decimal value
 @AT_RF_121
 Scenario: MFI190058 - Grade Evaluation Factors weight--System is not taking one figure with decimal value
 Given navigate to FMS param application and login with valid credentials
 And User Click FMS parameter Main Menu
 And User Click Grade Evaluation Factors Sub Menu
+And User_482 Update Test data set for AT_RF_121 
 And User Click Maintenance Screen In Grade Evaluation Factor
 And User Validate Weight field should accept decimal value
 #blocked due all user able to display the record
@@ -166,11 +302,11 @@ Given User Launch the CSM  Application
 And User click request Main Menu
 And User click request application Sub Menu
 And User click Baj Application
-#And User click Maintenace screen in Baj Application
-#And User Enter CIF No in Baj Application Maintenace screen
-#And User Enter facility type in Baj Application Maintenace screen
-#And User Enter the Country of Financing in Baj Application Maintenace screen
-#And User Validate Baj Application Record
+And User click Maintenace screen in Baj Application
+And User Enter CIF No in Baj Application Maintenace screen
+And User Enter facility type in Baj Application Maintenace screen
+And User Enter the Country of Financing in Baj Application Maintenace screen
+And User Validate Baj Application Record
 And User navigate to Approve screen in Baj Application
 And User Search the created record in maintenance screen
 And User Select the created record in maintenance screen
@@ -182,46 +318,46 @@ And User Select the created record in management process batch
 And User click process button in management process batch
 And User click ok button in sucess pop up
 
-# blocked test case
-#@AT_RF_119_03
-#Scenario: User approve the faciliy application in FMS application ,record created in csm application
-#Given navigate to FMS application and login with valid credentials
-#And User click Baj Application Menu
-#And User click Application in Baj Application Menu
-#And User click Application for financial facilities in Application Sub menu
-#And User click Maintenance Screen In Application Sub menu
-#And User search and select the facility record created in CSM application
-#And User Enter the additional reference number in Maintenance Screen under Application Sub menu
-#And User click Validate button in Maintenance Screen under Application Sub menu
-#And User click ok button in warning popup in Maintenance Screen under Application Sub menu
-#And User click yes button in do you want to proceed option under post approval pop up screen
-#And User Store application facility request number in Sucess pop up
-#And User click ok button in sucess pop up under Maintenance Screen Application
-#And User click approval level 1 in Application for financial facilities under Baj application
-#And User search and select the facility application in approval level 1 screen under baj application
-#And User Select Decision as forward in Approve level 1 recommendation under financial facility application record
-#And User click submit button in Approve level 1 under financial facility application record
-#And User click ok button in warning popup in Approve level 1 under financial facility application record
-#And User click yes button in do you want to proceed option in Approve level 1 under financial facility application record
-#And User click ok button in Sucess pop up under approval level 1 under Baj application
-#And User click approval level 2 in Application for financial facilities under Baj application
-#And User search and select the facility application in approval level 2 screen under baj application
-#And User Select Decision as forward in Approve level 2 recommendation under financial facility application record
-#And User click submit button in Approve level 2 under financial facility application record
-#And User click ok button in warning popup in Approve level 2 under financial facility application record
-#And User click yes button in do you want to proceed option in Approve level 2 under financial facility application record
-#And User click ok button in Sucess pop up under approval level 2 under Baj application
-#And User click approval level 3in Application for financial facilities under Baj application
-#And User search and select the facility application in approval level 3 screen under baj application
-#And User Select Decision as forward in Approve level 3 recommendation under financial facility application record
-#And User click submit button in Approve level 3 under financial facility application record
-#And User click ok button in warning popup in Approve level 3 under financial facility application record
-#And User click yes button in do you want to proceed option in Approve level 3 under financial facility application record
-#And User click ok button in Sucess pop up under approval level 3 under Baj application
-#And User click approval committee recommendations screen under Baj application
-#And User search and select the facility application in approval committee recommendations screen under Baj application
-#And User click additional details tab in selected facility application under approval committee recommendation Baj application
-#And User Validate BM recommendation screen in selected facility application under approval committee recommendation Baj application
+ #blocked test case
+@AT_RF_119_03
+Scenario: User approve the faciliy application in FMS application ,record created in csm application
+Given navigate to FMS application and login with valid credentials
+And User click Baj Application Menu
+And User click Application in Baj Application Menu
+And User click Application for financial facilities in Application Sub menu
+And User click Maintenance Screen In Application Sub menu
+And User search and select the facility record created in CSM application
+And User Enter the additional reference number in Maintenance Screen under Application Sub menu
+And User click Validate button in Maintenance Screen under Application Sub menu
+And User click ok button in warning popup in Maintenance Screen under Application Sub menu
+And User click yes button in do you want to proceed option under post approval pop up screen
+And User Store application facility request number in Sucess pop up
+And User click ok button in sucess pop up under Maintenance Screen Application
+And User click approval level 1 in Application for financial facilities under Baj application
+And User search and select the facility application in approval level 1 screen under baj application
+And User Select Decision as forward in Approve level 1 recommendation under financial facility application record
+And User click submit button in Approve level 1 under financial facility application record
+And User click ok button in warning popup in Approve level 1 under financial facility application record
+And User click yes button in do you want to proceed option in Approve level 1 under financial facility application record
+And User click ok button in Sucess pop up under approval level 1 under Baj application
+And User click approval level 2 in Application for financial facilities under Baj application
+And User search and select the facility application in approval level 2 screen under baj application
+And User Select Decision as forward in Approve level 2 recommendation under financial facility application record
+And User click submit button in Approve level 2 under financial facility application record
+And User click ok button in warning popup in Approve level 2 under financial facility application record
+And User click yes button in do you want to proceed option in Approve level 2 under financial facility application record
+And User click ok button in Sucess pop up under approval level 2 under Baj application
+And User click approval level 3in Application for financial facilities under Baj application
+And User search and select the facility application in approval level 3 screen under baj application
+And User Select Decision as forward in Approve level 3 recommendation under financial facility application record
+And User click submit button in Approve level 3 under financial facility application record
+And User click ok button in warning popup in Approve level 3 under financial facility application record
+And User click yes button in do you want to proceed option in Approve level 3 under financial facility application record
+And User click ok button in Sucess pop up under approval level 3 under Baj application
+And User click approval committee recommendations screen under Baj application
+And User search and select the facility application in approval committee recommendations screen under Baj application
+And User click additional details tab in selected facility application under approval committee recommendation Baj application
+And User Validate BM recommendation screen in selected facility application under approval committee recommendation Baj application
 
 @AT_RF_164
 Scenario: To check the new modification @ FMS Modification in Request for Financing Screen.
@@ -230,7 +366,7 @@ And User_482 Click on WIFAK Application Main Menu
 And User_482 Click on WIFAK Application Sub Menu
 And User_482 Click Application for financial facilities 
 And User_482 Click Maintenance screen in WIFAK Application sub menu
-And User_482 update test data set for AT_AFF_024
+And User_482 update Test data set for AT_RF_164
 And User_482 Select Application For field in Maintenace Screen under WIRAK Application
 And User_482 enter the CIF No in main info tab under WIRAK Application
 And User_482 enter the facility type in main info tab under WIRAK Application
@@ -251,7 +387,7 @@ And User_482 Click on WIFAK Application Main Menu
 And User_482 Click on WIFAK Application Sub Menu
 And User_482 Click Application for financial facilities 
 And User_482 Click Maintenance screen in WIFAK Application sub menu
-And User_482 update test data set for AT_AFF_024
+And User_482 update Test data set for AT_RF_166
 And User_482 Select Application For field in Maintenace Screen under WIRAK Application
 And User_482 enter the CIF No in main info tab under WIRAK Application
 And User_482 enter the facility type in main info tab under WIRAK Application

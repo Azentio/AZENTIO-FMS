@@ -45,13 +45,14 @@ public class MultipleTagsRun {
 	@Test()
 	public void test() {
 		List<String> testCaseTagsfromExcel1 = new LinkedList<String>();
-		testCaseTagsfromExcel1.add("AT_FM_062_postreq_01");
-		testCaseTagsfromExcel1.add("AT_FM_062_prereq_Facilitype");
-		testCaseTagsfromExcel1.add("AT_FM_062_PreReq_01");
-		testCaseTagsfromExcel1.add("AT_FM_062_Prereq_01");
-		testCaseTagsfromExcel1.add("AT_FM_062_01");
-		testCaseTagsfromExcel1.add("AT_FM_062");
-		testCaseTagsfromExcel1.add("AT_FM_062_02");
+		testCaseTagsfromExcel1.add("AT_FM_061_01");
+		testCaseTagsfromExcel1.add("AT_FM_061");
+//		testCaseTagsfromExcel1.add("AT_RF_025_02");
+//		testCaseTagsfromExcel1.add("AT_RF_068");
+//		testCaseTagsfromExcel1.add("AT_RF_121");
+//		testCaseTagsfromExcel1.add("AT_RF_164");
+//		testCaseTagsfromExcel1.add("AT_RF_166");
+//		testCaseTagsfromExcel1.add("AT_FM_062_02");
 //		testCaseTagsfromExcel1.add("KUBS_TAX_UAT_009_003TC_001");
 //		testCaseTagsfromExcel1.add("KUBS_TAX_UAT_009_003TC_002");
 //		testCaseTagsfromExcel1.add("KUBS_TAX_UAT_009_003TC_003");

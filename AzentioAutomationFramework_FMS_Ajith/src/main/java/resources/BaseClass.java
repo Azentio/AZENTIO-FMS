@@ -27,10 +27,10 @@ public class BaseClass {
 	if(browserName.equalsIgnoreCase("chrome")) {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
-//		options.addArguments("--disable-notifications");
+		options.addArguments("--disable-notifications");
 		options.addArguments("--incognito");
 //		options.addArguments("--headless=new");
-//		options.addArguments("disable-infobars");
+		options.addArguments("disable-infobars");
 		driver = new ChromeDriver(options);
 		
 	}else if(browserName.equalsIgnoreCase("firefox")) {

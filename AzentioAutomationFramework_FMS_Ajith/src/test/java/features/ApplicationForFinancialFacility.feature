@@ -114,6 +114,33 @@ And User_482 enter the country of financing in main info tab under WIRAK Applica
 And User_482 clicks on the additional details tab under WIRAK Application
 And User Validate Min value configured in fms param facility type
 And User Validate Max value configured in fms param facility type
+#blocked repayment plan button notworking
+@AT_AFF_051
+Scenario: BMOI150254 - schedule with Straight Line method
+Given navigate to FMS application and login with valid credentials
+And User_482 click Technical details
+And User_482 click clear caches
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 Click on WIFAK Application Main Menu
+And User_482 Click on WIFAK Application Sub Menu
+And User_482 Click Application for financial facilities 
+And User_482 Click Maintenance screen in WIFAK Application sub menu
+And User_482 update test data set for AT_AFF_051
+And User_482 Select Application For field in Maintenace Screen under WIRAK Application
+And User_482 enter the CIF No in main info tab under WIRAK Application
+And User_482 enter the facility type in main info tab under WIRAK Application
+And User_482 enter the country of financing in main info tab under WIRAK Application
+And User_482 enter facility rating in main info tab under WIRAK Application
+And User_482 clicks on the additional details tab under WIRAK Application	
+And User_482 Enter total value under additional details tab in WIFAK Application
+And User_482 Enter offer Expiration in Additional details under WIFAK Application
+And User_482 click Limit Details tab in WIFAK Application
+And User_482 click add icon in limit details under WIFAK Application
+And User_482 select the product class in limit details under WIFAK Application
+And User_482 check clean checkbox options in limit details under WIFAK Application
+And User_482 click add icon in limit details popup under WIFAK Application
+And User_482 Click Product Class details in Limit Details
+And User_482 Click Repayment Plan options
 
 @AT_AFF_100
 Scenario: Check the behavior of the following fields under the Application and Request Screen and under Limit Details window down payment

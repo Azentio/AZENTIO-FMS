@@ -1,5 +1,8 @@
 package stepdefinitions;
 
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 import org.junit.Assume;
@@ -28,6 +31,7 @@ public class FacilitiesManagement_482 {
 	ExcelData testExecution = new ExcelData(path,"TestExecution","TestCaseID");
 	Map<String, String> testExecutionData;
 	Map<String, String> testData;
+	List<Boolean> checkbox = new LinkedList<Boolean>();
 	String requestId;
 	String date;
 	CSMLogin csmLogin = new CSMLogin(driver);
@@ -206,9 +210,9 @@ public class FacilitiesManagement_482 {
     	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,fmsParamObj.searchFacilityTypeInUdateAfterApproveScreen());
 		seleniumActions.getClickAndActionsHelper().moveToElement(fmsParamObj.searchFacilityTypeInUdateAfterApproveScreen());
 		seleniumActions.getClickAndActionsHelper().clickOnElement(fmsParamObj.searchFacilityTypeInUdateAfterApproveScreen());
-		fmsParamObj.searchFacilityTypeInUdateAfterApproveScreen().sendKeys("369");
+		fmsParamObj.searchFacilityTypeInUdateAfterApproveScreen().sendKeys("740");
 		fmsParamObj.searchFacilityTypeInUdateAfterApproveScreen().sendKeys(Keys.ENTER);
-		String xpath ="//td[text()='369']";
+		String xpath ="//td[text()='740']";
 		for (int i = 0; i <200; i++) {
 			try {
 				driver.findElement(By.xpath(xpath)).isDisplayed();
@@ -240,6 +244,25 @@ public class FacilitiesManagement_482 {
 		seleniumActions.getClickAndActionsHelper().moveToElement(fmsParamObj.StpFacilityRequirementsOption());
 		seleniumActions.getClickAndActionsHelper().clickOnElement(fmsParamObj.StpFacilityRequirementsOption());
     }
+    @And("User_482 check Customer Grading Checkbox")
+    public void user_482_check_customer_grading_checkbox(Integer int1) {
+    	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,fmsParamObj.customerGradingCheckbox_482());
+    	if (fmsParamObj.customerGradingCheckbox_482().getAttribute("initialvalue").isBlank()||
+    			fmsParamObj.customerGradingCheckbox_482().getAttribute("initialvalue").isEmpty()) {
+    		fmsParamObj.customerGradingCheckbox_482().click();
+    		checkbox.add(true);
+		}
+    }
+
+    @And("User_482 Check Overwrite Grading")
+    public void user_482_check_overwrite_grading(Integer int1) {
+    	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,fmsParamObj.overWriteGradingCheckbox_482());
+    	if (fmsParamObj.overWriteGradingCheckbox_482().getAttribute("initialvalue").isBlank()||
+    			fmsParamObj.overWriteGradingCheckbox_482().getAttribute("initialvalue").isEmpty()) {
+    		fmsParamObj.overWriteGradingCheckbox_482().click();
+    		checkbox.add(true);
+		}
+    }
 
     @And("User_482 check Committee Approval CheckBox")
     public void user_482_check_committee_approval_check_box() {
@@ -247,6 +270,17 @@ public class FacilitiesManagement_482 {
     	if (fmsParamObj.checkBoxApprovalCommittee().getAttribute("initialvalue").isBlank()||
     			fmsParamObj.checkBoxApprovalCommittee().getAttribute("initialvalue").isEmpty()) {
     		fmsParamObj.checkBoxApprovalCommittee().click();
+    		checkbox.add(true);
+		}
+    	
+    }
+    @And("User_482 check Credit authorization")
+    public void user_482_check_credit_authorization() {
+    	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,fmsParamObj.checkBoxCreditAuthorization());
+    	if (fmsParamObj.checkBoxCreditAuthorization().getAttribute("initialvalue").isBlank()||
+    			fmsParamObj.checkBoxCreditAuthorization().getAttribute("initialvalue").isEmpty()) {
+    		fmsParamObj.checkBoxCreditAuthorization().click();
+    		checkbox.add(true);
 		}
     }
 
@@ -256,6 +290,7 @@ public class FacilitiesManagement_482 {
     	if (fmsParamObj.checkBoxCreditReview_482().getAttribute("initialvalue").isBlank()||
     			fmsParamObj.checkBoxCreditReview_482().getAttribute("initialvalue").isEmpty()) {
     		fmsParamObj.checkBoxCreditReview_482().click();
+    		checkbox.add(true);
 		}
     }
 
@@ -265,6 +300,64 @@ public class FacilitiesManagement_482 {
     	if (fmsParamObj.checkBoxIssueFacilityOffer_482().getAttribute("initialvalue").isBlank()||
     			fmsParamObj.checkBoxIssueFacilityOffer_482().getAttribute("initialvalue").isEmpty()) {
     		fmsParamObj.checkBoxIssueFacilityOffer_482().click();
+    		checkbox.add(true);
+		}
+    }
+    @Given("User_482 Uncheck Issue Facility Offer CheckBox")
+    public void user_482_uncheck_issue_facility_offer_check_box() {
+    	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,fmsParamObj.checkBoxIssueFacilityOffer_482());
+    	if (!fmsParamObj.checkBoxIssueFacilityOffer_482().getAttribute("initialvalue").isBlank()||
+    			!fmsParamObj.checkBoxIssueFacilityOffer_482().getAttribute("initialvalue").isEmpty()) {
+    		fmsParamObj.checkBoxIssueFacilityOffer_482().click();
+    		checkbox.add(true);
+		}
+    }
+    @Given("User_482 Uncheck Client Response CheckBox")
+    public void user_482_uncheck_client_response_check_box() {
+    	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,fmsParamObj.checkBoxClientResponse_482());
+    	if (!fmsParamObj.checkBoxClientResponse_482().getAttribute("initialvalue").isBlank()||
+    			!fmsParamObj.checkBoxClientResponse_482().getAttribute("initialvalue").isEmpty()) {
+    		fmsParamObj.checkBoxClientResponse_482().click();
+    		checkbox.add(true);
+		}
+    }
+    @Given("User_482 check Client Response CheckBox")
+    public void user_482_check_client_response_check_box() {
+    	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,fmsParamObj.checkBoxClientResponse_482());
+    	if (fmsParamObj.checkBoxClientResponse_482().getAttribute("initialvalue").isBlank()||
+    			fmsParamObj.checkBoxClientResponse_482().getAttribute("initialvalue").isEmpty()) {
+    		fmsParamObj.checkBoxClientResponse_482().click();
+    		checkbox.add(true);
+		}
+    }
+    
+    @Given("User_482 Uncheck Document Validation CheckBox")
+    public void user_482_uncheck_document_validation_check_box() {
+    	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,fmsParamObj.checkBoxDocumentValidation_482());
+    	if (!fmsParamObj.checkBoxDocumentValidation_482().getAttribute("initialvalue").isBlank()||
+    			!fmsParamObj.checkBoxDocumentValidation_482().getAttribute("initialvalue").isEmpty()) {
+    		fmsParamObj.checkBoxDocumentValidation_482().click();
+    		checkbox.add(true);
+		}
+    }
+
+    @Given("User_482 Uncheck Final Approval CheckBox")
+    public void user_482_uncheck_final_approval_check_box() {
+    	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,fmsParamObj.checkBoxFinalApproval_482());
+    	if (!fmsParamObj.checkBoxFinalApproval_482().getAttribute("initialvalue").isBlank()||
+    			!fmsParamObj.checkBoxFinalApproval_482().getAttribute("initialvalue").isEmpty()) {
+    		fmsParamObj.checkBoxFinalApproval_482().click();
+    		checkbox.add(true);
+		}
+    }
+
+    @Given("User_482 Uncheck Create Active Facility If Within Limits CheckBox")
+    public void user_482_uncheck_create_active_facility_if_within_limits_check_box() {
+    	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,fmsParamObj.checkBoxCreateActiveFacilityIfWithinLimit_482());
+    	if (!fmsParamObj.checkBoxCreateActiveFacilityIfWithinLimit_482().getAttribute("initialvalue").isBlank()||
+    			!fmsParamObj.checkBoxFinalApproval_482().getAttribute("initialvalue").isEmpty()) {
+    		fmsParamObj.checkBoxCreateActiveFacilityIfWithinLimit_482().click();
+    		checkbox.add(true);
 		}
     }
 
@@ -274,6 +367,7 @@ public class FacilitiesManagement_482 {
     	if (fmsParamObj.checkBoxDocumentValidation_482().getAttribute("initialvalue").isBlank()||
     			fmsParamObj.checkBoxDocumentValidation_482().getAttribute("initialvalue").isEmpty()) {
     		fmsParamObj.checkBoxDocumentValidation_482().click();
+    		checkbox.add(true);
 		}
     }
 
@@ -283,6 +377,7 @@ public class FacilitiesManagement_482 {
     	if (fmsParamObj.checkBoxFinalApproval_482().getAttribute("initialvalue").isBlank()||
     			fmsParamObj.checkBoxFinalApproval_482().getAttribute("initialvalue").isEmpty()) {
     		fmsParamObj.checkBoxFinalApproval_482().click();
+    		checkbox.add(true);
 		}
     }
 
@@ -292,6 +387,7 @@ public class FacilitiesManagement_482 {
     	if (fmsParamObj.checkBoxCreateActiveFacilityIfWithinLimit_482().getAttribute("initialvalue").isBlank()||
     			fmsParamObj.checkBoxFinalApproval_482().getAttribute("initialvalue").isEmpty()) {
     		fmsParamObj.checkBoxFinalApproval_482().click();
+    		checkbox.add(true);
 		}
     }
 
@@ -301,10 +397,9 @@ public class FacilitiesManagement_482 {
     	if (!fmsParamObj.checkBoxAutomaticallyApproveFacilityIfWithinLimits_482().getAttribute("initialvalue").isBlank()||
     			!fmsParamObj.checkBoxAutomaticallyApproveFacilityIfWithinLimits_482().getAttribute("initialvalue").isEmpty()) {
     		fmsParamObj.checkBoxAutomaticallyApproveFacilityIfWithinLimits_482().click();
+    		checkbox.add(true);
 		}
-    	else {
-			Assume.assumeTrue(false);
-		}
+    	
     }
     @Given("User_482 check Automatically Approve Facility If Within Limits CheckBox")
     public void user_482_check_automatically_approve_facility_if_within_limits_check_box() {
@@ -312,10 +407,11 @@ public class FacilitiesManagement_482 {
     	if (fmsParamObj.checkBoxAutomaticallyApproveFacilityIfWithinLimits_482().getAttribute("initialvalue").isBlank()||
     			fmsParamObj.checkBoxAutomaticallyApproveFacilityIfWithinLimits_482().getAttribute("initialvalue").isEmpty()) {
     		fmsParamObj.checkBoxAutomaticallyApproveFacilityIfWithinLimits_482().click();
+    		checkbox.add(true);
 		}
-    	else {
-			Assume.assumeTrue(false);
-		}
+    	else if (!checkbox.contains(true)) {
+    		Assume.assumeTrue(false);
+		} 
     }
 
     @And("User_482 click update button in Update after approve screen Facility type")
@@ -337,9 +433,9 @@ public class FacilitiesManagement_482 {
     	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,fmsParamObj.searchFacilityTypeInApproveScreen());
 		seleniumActions.getClickAndActionsHelper().moveToElement(fmsParamObj.searchFacilityTypeInApproveScreen());
 		seleniumActions.getClickAndActionsHelper().clickOnElement(fmsParamObj.searchFacilityTypeInApproveScreen());
-		fmsParamObj.searchFacilityTypeInApproveScreen().sendKeys("369");
+		fmsParamObj.searchFacilityTypeInApproveScreen().sendKeys("740");
 		fmsParamObj.searchFacilityTypeInApproveScreen().sendKeys(Keys.ENTER);
-		String xpath ="//td[text()='369']";
+		String xpath ="//td[text()='740']";
 		for (int i = 0; i <200; i++) {
 			try {
 				driver.findElement(By.xpath(xpath)).isDisplayed();

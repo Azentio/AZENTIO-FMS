@@ -8,6 +8,7 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Random;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -31,6 +32,7 @@ public class ApplicationForFacility extends BaseClass {
 	String path = System.getProperty("user.dir") +"\\TestData\\FMSTestData.xlsx";
 	ExcelData excelData = new ExcelData(path,"ApplicationForFinancialFacility","DataSet ID");
 	ExcelData facilityManagementData = new ExcelData(path,"FacilitiesManagement","DataSet ID");
+	ExcelData requestForFinancingData = new ExcelData(path,"RequestForFinancing_482","DataSet ID");
 	ExcelData drawDownRequestData = new ExcelData(path,"DrawDownRequest","DataSet ID");
 	ExcelData testExecution = new ExcelData(path,"TestExecution","TestCaseID");
 	Map<String, String> testExecutionData;
@@ -69,12 +71,46 @@ public class ApplicationForFacility extends BaseClass {
 		testExecutionData = testExecution.getTestdata("AT_FM_062");
     	testData = facilityManagementData.getTestdata(testExecutionData.get("Data Set ID"));
 	}
-	@Given("User_482 update test data set for AT_DDR_009")
+	@And("User_482 update test data set for AT_RF_025")
+	public void user_482_update_test_data_set_for_at_fm_025() {
+		testExecutionData = testExecution.getTestdata("AT_RF_025");
+    	testData = requestForFinancingData.getTestdata(testExecutionData.get("Data Set ID"));
+	}
+	@And("User_482 update test data set for AT_DDR_009")
 	public void user_update_test_data_set_for_at_fm_009() {
 		testExecutionData = testExecution.getTestdata("AT_DDR_009");
     	testData = drawDownRequestData.getTestdata(testExecutionData.get("Data Set ID"));
     	
 	}
+	@And("User_482 Update Test data set for AT_RF_008")
+	public void user_482_update_test_data_set_for_at_rf_008() {
+		testExecutionData = testExecution.getTestdata("AT_RF_008");
+    	testData = requestForFinancingData.getTestdata(testExecutionData.get("Data Set ID"));
+	}
+	@And("User_482 Update Test data set for AT_RF_064")
+	public void user_482_update_test_data_set_for_at_rf_064() {
+		testExecutionData = testExecution.getTestdata("AT_RF_064");
+    	testData = requestForFinancingData.getTestdata(testExecutionData.get("Data Set ID"));
+	}
+	@And("User_482 Update Test data set for AT_RF_121")
+	public void user_482_update_test_data_set_for_at_rf_121() {
+		testExecutionData = testExecution.getTestdata("AT_RF_121");
+    	testData = requestForFinancingData.getTestdata(testExecutionData.get("Data Set ID"));
+	}
+	@And("User_482 update Test data set for AT_RF_164")
+	public void user_482_update_test_data_set_for_at_rf_164() {
+		testExecutionData = testExecution.getTestdata("AT_RF_164");
+    	testData = requestForFinancingData.getTestdata(testExecutionData.get("Data Set ID"));
+	}
+	@And("User_482 update Test data set for AT_RF_166")
+	public void user_482_update_test_data_set_for_at_rf_166() {
+		testExecutionData = testExecution.getTestdata("AT_RF_166");
+    	testData = requestForFinancingData.getTestdata(testExecutionData.get("Data Set ID"));
+    	System.out.println(testData.get("RequestID"));
+    	
+	}
+	
+	
 
 	@Given("^User Launch the CSM params Application$")
     public void user_launch_the_csm_params_application() throws Throwable {
@@ -94,7 +130,6 @@ public class ApplicationForFacility extends BaseClass {
 				}
 			}
 		}
-
 	}
 
     @And("^User_482 Click on REQUEST FOR FINANCIN under FMS application$")
@@ -298,6 +333,17 @@ public class ApplicationForFacility extends BaseClass {
     public void user_482_click_on_ok_button_in_success_pop_up_menu() throws Throwable {
     	for (int i = 0; i <2000; i++) {
 			try {
+				seleniumActions.getBrowserHelper().SwitchToWindow(1);
+		    	seleniumActions.getBrowserHelper().switchToParentWithChildClose();
+		    	break;
+			} catch (Exception e) {
+				
+			}
+		}
+
+    	
+    	for (int i = 0; i <2000; i++) {
+			try {
 				seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.okButtonInSucessPopUp());
 				seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.okButtonInSucessPopUp());
 				break;
@@ -332,11 +378,24 @@ public class ApplicationForFacility extends BaseClass {
     public void user_482_get_the_code_in_success_pop_up_menu_under_wifak_application() {
     	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.getRequestIdInRequestForFinancingScreen());
     	requestId = applicationForFinancialFacilityObj.getRequestIdInRequestForFinancingScreen().getText().substring(23,28);
-    	facilityManagementData.updateTestData(testExecutionData.get("Data Set ID"), "RequestID",requestId);
+    	requestForFinancingData.updateTestData(testExecutionData.get("Data Set ID"), "RequestID",requestId);
     	System.out.println(requestId); 
     }
+    @Given("User_482 Get the Code in Success Pop up Menu under WIFAK Application1")
+    public void user_482_get_the_code_in_success_pop_up_menu_under_wifak_application1() {
+    	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.getRequestIdInRequestForFinancingScreen());
+    	requestId = applicationForFinancialFacilityObj.getRequestIdInRequestForFinancingScreen().getText().substring(23,28);
+    	requestForFinancingData.updateTestData(testExecutionData.get("Data Set ID"), "RequestID",requestId);
+    	System.out.println(requestId); 
+    }
+    @Given("User_482 Get the Code in Success Pop up Menu under WIFAK Application for Draw down")
+    public void user_482_get_the_code_in_success_pop_up_menu_under_wifak_application_for_draw_down() {
+    	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.getRequestIdInRequestForFinancingScreen());
+    	requestId = applicationForFinancialFacilityObj.getRequestIdInRequestForFinancingScreen().getText().substring(23,28);
+    	drawDownRequestData.updateTestData(testExecutionData.get("Data Set ID"), "RequestID",requestId);
+    	System.out.println(requestId);
+    }
     
-
     @And("^User Click on Approve Level 1 under REQUEST FOR FINANCIN$")
     public void user_click_on_approve_level_1_under_request_for_financin() throws Throwable {
     	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.approvalLevel1InRequestForFinancingScreen());
@@ -604,9 +663,16 @@ public class ApplicationForFacility extends BaseClass {
 
     @And("^User_482 clicks on the additional details tab under WIRAK Application$")
     public void user_482_clicks_on_the_additional_details_tab_under_wirak_application() throws Throwable {
-    	Thread.sleep(1000);
-    	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver, applicationForFinancialFacilityObj.mainAdditionalTab());
-    	applicationForFinancialFacilityObj.mainAdditionalTab().click();
+    	
+    	for (int i = 0; i <15; i++) {
+    		try {
+    			applicationForFinancialFacilityObj.mainAdditionalTab().click();
+			} catch (Exception e) {
+				
+			}
+    		
+		}
+    	
     }
 
    
@@ -1233,7 +1299,8 @@ public class ApplicationForFacility extends BaseClass {
 		seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.okButtonInSucessPopUp());
     	seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.okButtonInSucessPopUp());
 		seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.okButtonInSucessPopUp());
-		applicationForFinancialFacilityObj.noOfPaymentsInrepaymentPlan().sendKeys("10");
+		applicationForFinancialFacilityObj.noOfPaymentsInrepaymentPlan().sendKeys(testData.get("No of Payments"));
+		applicationForFinancialFacilityObj.noOfPaymentsInrepaymentPlan().sendKeys(Keys.TAB);
 		
 			for (int i = 0; i <50; i++) {
 				try {
@@ -1264,7 +1331,8 @@ public class ApplicationForFacility extends BaseClass {
     	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.okButtonInSucessPopUp());
     	seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.okButtonInSucessPopUp());
 		seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.okButtonInSucessPopUp());
-		applicationForFinancialFacilityObj.payEveryInrepaymentPlan().sendKeys("3");
+		applicationForFinancialFacilityObj.payEveryInrepaymentPlan().sendKeys(testData.get("Pay Every"));
+		applicationForFinancialFacilityObj.payEveryInrepaymentPlan().sendKeys(Keys.TAB);
 		seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.noOfPaymentsInrepaymentPlan());
 		seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.noOfPaymentsInrepaymentPlan());
 		seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.noOfPaymentsInrepaymentPlan());
@@ -1333,7 +1401,8 @@ public class ApplicationForFacility extends BaseClass {
     	  seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.codeInMaintenancePurposeOfFinancing());
     	  Random random = new Random();
   		  randomNumber = random.nextInt(5000 - 1) + 5000;
-  		  System.out.println(randomNumber);
+ 		  System.out.println(randomNumber);
+  		  requestForFinancingData.updateTestData(testExecutionData.get("Data Set ID"),"Purpose Of Financing", String.valueOf(randomNumber));
     	  applicationForFinancialFacilityObj.codeInMaintenancePurposeOfFinancing().sendKeys(String.valueOf(randomNumber));
       }
 
@@ -1446,7 +1515,7 @@ public class ApplicationForFacility extends BaseClass {
     	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.purposeOfFinancingInLimitDetailsPopUpScreen());
     	  seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.purposeOfFinancingInLimitDetailsPopUpScreen());
     	  seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.purposeOfFinancingInLimitDetailsPopUpScreen());
-    	  applicationForFinancialFacilityObj.purposeOfFinancingInLimitDetailsPopUpScreen().sendKeys("8692");
+    	  applicationForFinancialFacilityObj.purposeOfFinancingInLimitDetailsPopUpScreen().sendKeys(testData.get("Purpose Of Financing"));
     	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.purposeOfFinancingInLimitDetailsPopUpScreenRandomClick());
     	  seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.purposeOfFinancingInLimitDetailsPopUpScreenRandomClick());
     	  seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.purposeOfFinancingInLimitDetailsPopUpScreenRandomClick());
@@ -1648,7 +1717,8 @@ public class ApplicationForFacility extends BaseClass {
     	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.weightFieldIngradingEvaluationFactorsMaintenaceScreen());
     	  seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.weightFieldIngradingEvaluationFactorsMaintenaceScreen());
     	  seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.weightFieldIngradingEvaluationFactorsMaintenaceScreen());
-    	  applicationForFinancialFacilityObj.weightFieldIngradingEvaluationFactorsMaintenaceScreen().sendKeys("123.23");
+    	  applicationForFinancialFacilityObj.weightFieldIngradingEvaluationFactorsMaintenaceScreen().sendKeys(testData.get("Weight Field"));
+    	  applicationForFinancialFacilityObj.weightFieldIngradingEvaluationFactorsMaintenaceScreen().sendKeys(Keys.TAB);
     	  for (int i = 0; i <200; i++) {
 			try {
 				if (!applicationForFinancialFacilityObj.weightFieldIngradingEvaluationFactorsMaintenaceScreen().getAttribute("prevvalue").isEmpty()
@@ -1665,9 +1735,19 @@ public class ApplicationForFacility extends BaseClass {
 //****************************************************Total yield auto pop pulate*****************************//
       @And("^User_482 click Limit Details tab in WIFAK Application$")
       public void user_482_click_limit_details_tab_in_wifak_application() throws Throwable {
-    	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.limitDetailsInWIFAKApplication());
-  		seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.limitDetailsInWIFAKApplication());
-  		seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.limitDetailsInWIFAKApplication());
+    	  for (int i = 0; i <200; i++) {
+  			try {
+  				seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.limitDetailsInWIFAKApplication());
+  		  		seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.limitDetailsInWIFAKApplication());
+  		  		break;
+  			} catch (Exception e) {
+  				if (i==199) {
+  					Assert.fail(e.getMessage());
+  				}
+  			}
+  		}
+
+  		
       }
 
       @And("^User_482 click add icon in limit details under WIFAK Application$")
@@ -1709,9 +1789,19 @@ public class ApplicationForFacility extends BaseClass {
       }
       @Given("User_482 check clean checkbox options in limit details under WIFAK Application")
       public void user_482_check_clean_checkbox_options_in_limit_details_under_wifak_application() {
-    	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.cleanCheckBoxInLimitDetailsWIFAKApplication());
-    	  seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.cleanCheckBoxInLimitDetailsWIFAKApplication());
-    	  seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.cleanCheckBoxInLimitDetailsWIFAKApplication());
+    	  for (int i = 0; i <200; i++) {
+  			try {
+  			  seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.cleanCheckBoxInLimitDetailsWIFAKApplication());
+  	    	  seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.cleanCheckBoxInLimitDetailsWIFAKApplication());
+  	    	  break;
+  			} catch (Exception e) {
+  				if (i==199) {
+  					Assert.fail(e.getMessage());
+  				}
+  			}
+  		}
+
+    	  
       }
 
       @And("^User Enter Yield details value in limit details under WIFAK Application$")
@@ -1768,14 +1858,22 @@ public class ApplicationForFacility extends BaseClass {
       @And("^User_482 select the floating rate in limit details under WIFAK Application$")
       public void user_482_select_the_floating_rate_in_limit_details_under_wifak_application() throws Throwable {
     	  seleniumActions.getJavascriptHelper().scrollIntoView(applicationForFinancialFacilityObj.floatingRateInLimitDetailsWIFAKApplication());
-    	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.floatingRateInLimitDetailsWIFAKApplication());
-    	  seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.floatingRateInLimitDetailsWIFAKApplication());
-    	  seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.floatingRateInLimitDetailsWIFAKApplication());
-    	  seleniumActions.getClickAndActionsHelper().doubleClick(applicationForFinancialFacilityObj.floatingRateInLimitDetailsWIFAKApplication());
-    	  applicationForFinancialFacilityObj.floatingRateInLimitDetailsWIFAKApplication().sendKeys("41");
-    	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.bankProfitShareInLimitDetailsWIFAKApplication());
-    	  seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.bankProfitShareInLimitDetailsWIFAKApplication());
-    	  seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.bankProfitShareInLimitDetailsWIFAKApplication());
+    	  for (int i = 0; i <200; i++) {
+  			try {
+  			  seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.floatingRateInLimitDetailsWIFAKApplication());
+  	    	  seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.floatingRateInLimitDetailsWIFAKApplication());
+  	    	  applicationForFinancialFacilityObj.floatingRateInLimitDetailsWIFAKApplication().sendKeys("41");
+  	    	applicationForFinancialFacilityObj.floatingRateInLimitDetailsWIFAKApplication().sendKeys(Keys.TAB);
+  	    	  break;
+  			} catch (Exception e) {
+  				if (i==199) {
+  					Assert.fail(e.getMessage());
+  				}
+  			}
+  		}
+//    	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.bankProfitShareInLimitDetailsWIFAKApplication());
+//    	  seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.bankProfitShareInLimitDetailsWIFAKApplication());
+//    	  seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.bankProfitShareInLimitDetailsWIFAKApplication());
     	  for (int i = 0; i < 2000; i++) {
   			try {
   				if (!applicationForFinancialFacilityObj.floatingRateNameValidationInLimitDetailsWIFAKApplication().getAttribute("prevvalue").isBlank() 
@@ -2003,7 +2101,10 @@ public class ApplicationForFacility extends BaseClass {
     	  seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.searchCodeInApproveLevel1ApplicationForFinacialFacilitiesUnderWIFAKApplication());
     	  seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.searchCodeInApproveLevel1ApplicationForFinacialFacilitiesUnderWIFAKApplication());
     	  applicationForFinancialFacilityObj.searchCodeInApproveLevel1ApplicationForFinacialFacilitiesUnderWIFAKApplication().sendKeys(testData.get("RequestID"));
-    	  applicationForFinancialFacilityObj.searchCodeInApproveLevel1ApplicationForFinacialFacilitiesUnderWIFAKApplication().sendKeys(Keys.ENTER);
+    	  for (int i = 0; i <10; i++) {
+    		  applicationForFinancialFacilityObj.searchCodeInApproveLevel1ApplicationForFinacialFacilitiesUnderWIFAKApplication().sendKeys(Keys.ENTER);
+		}
+    	  
       }
       @And("User_482 Select searched record in Approve level 1 screen Application for financial facilities")
       public void user_482_select_searched_record_in_approve_level_1_screen_application_for_financial_facilities() {
@@ -2143,6 +2244,42 @@ public class ApplicationForFacility extends BaseClass {
     	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.FinalApprovalValidationUnderWIFAKApplication());
     	  Assert.assertTrue(applicationForFinancialFacilityObj.FinalApprovalValidationUnderWIFAKApplication().isDisplayed());
       }
+      @And("User_482 Click Issue Facility Offer Sub Menu Under WIFAK Application")
+      public void user_482_click_issue_facility_offer_sub_menu_under_wifak_application() {
+    	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.IssueFacilityOfferWifakApplication_482());
+    	  seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.IssueFacilityOfferWifakApplication_482());
+    	  seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.IssueFacilityOfferWifakApplication_482());
+      }
+
+      @And("User_482 Search code in Issue Facility Offer screen Under WIFAK Application")
+      public void user_482_search_code_in_issue_facility_offer_screen_under_wifak_application() {
+    	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.searchCodeInIssueFacilityOfferForFinacialFacilitiesUnderWIFAKApplication());
+    	  seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.searchCodeInIssueFacilityOfferForFinacialFacilitiesUnderWIFAKApplication());
+    	  seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.searchCodeInIssueFacilityOfferForFinacialFacilitiesUnderWIFAKApplication());
+  		  applicationForFinancialFacilityObj.searchCodeInIssueFacilityOfferForFinacialFacilitiesUnderWIFAKApplication().sendKeys(testData.get("RequestID"));
+    	  for (int i = 0; i < 15; i++) {
+    		  applicationForFinancialFacilityObj.searchCodeInIssueFacilityOfferForFinacialFacilitiesUnderWIFAKApplication().sendKeys(Keys.ENTER);
+		}
+      }
+
+      @And("User_482 Select searched record in Issue Facility Offer screen Under WIFAK Application")
+      public void user_482_select_searched_record_in_issue_facility_offer_screen_under_wifak_application() {
+    	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.selectsearchedCodeInIssueFacilityOfferForFinacialFacilitiesUnderWIFAKApplication());
+    	  seleniumActions.getClickAndActionsHelper().doubleClick(applicationForFinancialFacilityObj.selectsearchedCodeInIssueFacilityOfferForFinacialFacilitiesUnderWIFAKApplication());
+      }
+
+      @And("User_482 Click Issue Offer button in Issue Facility Offer screen Under WIFAK Application")
+      public void user_482_click_issue_offer_button_in_issue_facility_offer_screen_under_wifak_application() {
+    	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.issueFacilityOfferButtonForFinacialFacilitiesUnderWIFAKApplication());
+    	  seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.issueFacilityOfferButtonForFinacialFacilitiesUnderWIFAKApplication());
+    	  seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.issueFacilityOfferButtonForFinacialFacilitiesUnderWIFAKApplication());
+      }
+
+      @And("User_482 Validate the system is printing the offer letter automatically at the level of issue facility offer")
+      public void user_482_validate_the_system_is_printing_the_offer_letter_automatically_at_the_level_of_issue_facility_offer() {
+          
+      }
+
       @And("User_482 close Maintenance screen WIFAK Application")
       public void user_482_close_maintenance_screen_wifak_application() {
     	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.closeIconMaintenanceScreenWifakApplication());
@@ -2165,9 +2302,19 @@ public class ApplicationForFacility extends BaseClass {
 
       @And("User_482 click clear caches")
       public void user_click_clear_caches() {
-    	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.FSM_ClearCacheInTechnicalDetailsIcon());
-    	  seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.FSM_ClearCacheInTechnicalDetailsIcon());
-    	  seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.FSM_ClearCacheInTechnicalDetailsIcon());
+    	  for (int i = 0; i <200; i++) {
+  			try {
+  			  seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.FSM_ClearCacheInTechnicalDetailsIcon());
+  	    	  seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.FSM_ClearCacheInTechnicalDetailsIcon());
+  	    	  break;
+  			} catch (Exception e) {
+  				if (i==199) {
+  					Assert.fail(e.getMessage());
+  				}
+  			}
+  		}
+
+    	  
       }
 
       @And("User_482 Search the User id to send the alert for approve")
@@ -2462,9 +2609,9 @@ public class ApplicationForFacility extends BaseClass {
       @Given("User_482 Store Facility Code In Facilities Management Under WIFAK Application")
       public void user_482_store_facility_code_in_facilities_management_under_wifak_application() {
     	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.storeFacilityCode_FacilitiesManagement_482());
-    	  String facilityCode = applicationForFinancialFacilityObj.storeFacilityCode_FacilitiesManagement_482().getAttribute("initialvalue");
-    	  facilityManagementData.updateTestData(testExecutionData.get("Data Set ID"), "FacilityCode",facilityCode);
-      	System.out.println(facilityCode); 
+    	  String facilityCode = applicationForFinancialFacilityObj.storeFacilityCode_FacilitiesManagement_482().getText().substring(6);
+    	  drawDownRequestData.updateTestData(testExecutionData.get("Data Set ID"), "FacilityCode",facilityCode);
+      	  System.out.println(facilityCode); 
       }
-
+      
 }
