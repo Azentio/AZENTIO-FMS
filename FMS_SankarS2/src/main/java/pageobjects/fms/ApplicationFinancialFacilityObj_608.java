@@ -1383,69 +1383,133 @@ public class ApplicationFinancialFacilityObj_608 {
 //	@AT_CR_005
 	@FindBy(xpath = "//a[@id='WIFT006MT']")
 	private WebElement wifak_client_response_menu;
-	public WebElement wifakClientResponseMenu() {
+	public WebElement wifakClientResponseMenu_608() {
 		return wifak_client_response_menu;
 	}
     
 	@FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT006MT_gs_fmsApplVO.CODE']")
 	private WebElement wifak_client_response_menu_searchgrid_code_input;
-	public WebElement wifakClientResponseMenuSearchgridCodeInput() {
+	public WebElement wifakClientResponseMenuSearchgridCodeInput_608() {
 		return wifak_client_response_menu_searchgrid_code_input;
 	}
 	
 	@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT006MT_1_fmsApplVO.CODE']")
 	private WebElement wifak_client_response_menu_searchgrid_row;
-	public WebElement wifakClientResponseMenuSearchgridRow() {
+	public WebElement wifakClientResponseMenuSearchgridRow_608() {
 		return wifak_client_response_menu_searchgrid_row;
 	}
 	
 	@FindBy(xpath = "//input[@id='code_WIFT006MT']")
 	private WebElement wifak_client_response_menu_code_input;
-	public WebElement wifakClientResponseMenuCodeInput() {
+	public WebElement wifakClientResponseMenuCodeInput_608() {
 		return wifak_client_response_menu_code_input;
 	}
 	
 	@FindBy(xpath = "//li[@id='applicationFacilityLimitDetailsTabs_WIFT006MT']")
 	private WebElement wifak_client_response_limit_details_tab;
-	public WebElement wifakClientResponseLimitDetailsTab() {
+	public WebElement wifakClientResponseLimitDetailsTab_608() {
 		return wifak_client_response_limit_details_tab;
 	}
 	
 	@FindBy(xpath = "//td[@id='td_ApplicationFacilityLimitDetailsGrid_WIFT006MT_1_fmsAppLimitDetVO.GENERAL_FACILITY_TYPE']")
 	private WebElement wifak_client_response_limit_details_product_class_row;
-	public WebElement wifakClientResponseLimitDetailsPrductClassRow() {
+	public WebElement wifakClientResponseLimitDetailsPrductClassRow_608() {
 		return wifak_client_response_limit_details_product_class_row;
 	}
 	
 	@FindBy(xpath = "//input[@id='lookuptxt_applicationfacilityLimitDetailsCLASS_WIFT006MT']")
 	private WebElement wifak_client_response_limit_details_product_class_input;
-	public WebElement wifakClientResponseLimitDetailsPrductClassInput() {
+	public WebElement wifakClientResponseLimitDetailsPrductClassInput_608() {
 		return wifak_client_response_limit_details_product_class_input;
 	}
 	
 	@FindBy(xpath = "//input[@id='lookuptxt_applicationfacilityLimitDetailsFLOATING_RATE_WIFT006MT']")
 	private WebElement wifak_client_response_limit_details_product_class_floating_rate;
-	public WebElement wifakClientResponseLimitDetailsPrductClassFloatingRate() {
+	public WebElement wifakClientResponseLimitDetailsPrductClassFloatingRate_608() {
 		return wifak_client_response_limit_details_product_class_floating_rate;
 	}
 	
 	@FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsFLOAT_RATE_PERIODICITY_NBR_WIFT006MT']")
 	private WebElement wifak_client_response_limit_details_product_class_FR_periodicity;
-	public WebElement wifakClientResponseLimitDetailsPrductClassFRPeriodicity() {
+	public WebElement wifakClientResponseLimitDetailsPrductClassFRPeriodicity_608() {
 		return wifak_client_response_limit_details_product_class_FR_periodicity;
 	}
 	
 	@FindBy(xpath = "//select[@id='applicationfacilityLimitDetailsFLOAT_RATE_PERIODICITY_TYPE_WIFT006MT']//option[@selected='selected']")
 	private WebElement wifak_client_response_limit_details_product_class_FR_periodicity_type;
-	public WebElement wifakClientResponseLimitDetailsPrductClassFRPeriodicityType() {
+	public WebElement wifakClientResponseLimitDetailsPrductClassFRPeriodicityType_608() {
 		return wifak_client_response_limit_details_product_class_FR_periodicity_type;
 	}
 	
 	@FindBy(xpath = "//button[@id='applicationfacility_investorReject_btn_WIFT006MT']")
 	private WebElement wifak_client_response_menu_reject_btn;
-	public WebElement wifakClientResponseMenuRejectBtn() {
+	public WebElement wifakClientResponseMenuRejectBtn_608() {
 		return wifak_client_response_menu_reject_btn;
 	}
+	
+	
+//	Authorize/Reject Feature
+//	@AT_AR_001
+	@FindBy(xpath = "//a[@id='WIFT004MT']")
+	private WebElement wifak_authorize_or_reject_menu;
+	public WebElement wifakAuthorizeOrRejectMenu_608() {
+		return wifak_authorize_or_reject_menu;
+	}
+	
+	@FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT004MT_gs_fmsApplVO.CODE']")
+	private WebElement wifak_authorize_or_reject_searchgrid_code_input;
+	public WebElement wifakAuthorizeOrRejectSearchgridCodeInput_608() {
+		return wifak_authorize_or_reject_searchgrid_code_input;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT004MT_1_fmsApplVO.CODE']")
+	private WebElement wifak_authorize_or_reject_searchgrid_row;
+	public WebElement wifakAuthorizeOrRejectSearchgridRow_608() {
+		return wifak_authorize_or_reject_searchgrid_row;
+	}
+	
+	@FindBy(xpath = "//input[@id='code_WIFT004MT']")
+	private WebElement wifak_authorize_or_reject_code_input;
+	public WebElement wifakAuthorizeOrRejectCodeInput_608() {
+		return wifak_authorize_or_reject_code_input;
+	}
+	
+	@FindBy(xpath = "//li[@id='applicationFacilityLimitDetailsTabs_WIFT004MT']")
+	private WebElement wifak_authorize_or_reject_limit_details_tab;
+	public WebElement wifakAuthorizeOrRejectLimitDetailsTab_608() {
+		return wifak_authorize_or_reject_limit_details_tab;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_ApplicationFacilityLimitDetailsGrid_WIFT004MT_1_fmsAppLimitDetVO.GENERAL_FACILITY_TYPE']")
+	private WebElement wifak_authorize_or_reject_limit_details_tab_product_row;
+	public WebElement wifakAuthorizeOrRejectLimitDetailsTabProductRow_608() {
+		return wifak_authorize_or_reject_limit_details_tab_product_row;
+	}
+	
+	@FindBy(xpath = "//input[@id='lookuptxt_applicationfacilityLimitDetailsCLASS_WIFT004MT']")
+	private WebElement wifak_authorize_or_reject_limit_details_tab_product_class_input;
+	public WebElement wifakAuthorizeOrRejectLimitDetailsTabProductClassInput_608() {
+		return wifak_authorize_or_reject_limit_details_tab_product_class_input;
+	}
+	
+	@FindBy(xpath = "//input[@id='lookuptxt_applicationfacilityLimitDetailsFLOATING_RATE_WIFT004MT']")
+	private WebElement wifak_authorize_or_reject_limit_details_tab_floating_rate_input;
+	public WebElement wifakAuthorizeOrRejectLimitDetailsTabFloatingRateInput_608() {
+		return wifak_authorize_or_reject_limit_details_tab_floating_rate_input;
+	}
+	
+	@FindBy(xpath = "//input[@id='applicationfacilityLimitDetailsFLOAT_RATE_PERIODICITY_NBR_WIFT004MT']")
+	private WebElement wifak_authorize_or_reject_limit_details_tab_FR_periodicity_input;
+	public WebElement wifakAuthorizeOrRejectLimitDetailsTabFRPeriodicityInput_608() {
+		return wifak_authorize_or_reject_limit_details_tab_FR_periodicity_input;
+	}
+	
+	@FindBy(xpath = "//select[@id='applicationfacilityLimitDetailsFLOAT_RATE_PERIODICITY_TYPE_WIFT004MT']//option[@selected='selected']")
+	private WebElement wifak_authorize_or_reject_limit_details_tab_FR_periodicity_type;
+	public WebElement wifakAuthorizeOrRejectLimitDetailsTabFRPeriodicityType_608() {
+		return wifak_authorize_or_reject_limit_details_tab_FR_periodicity_type;
+	}
+	
 	
 	
 	

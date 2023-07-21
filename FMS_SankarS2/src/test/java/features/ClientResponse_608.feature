@@ -84,9 +84,9 @@ And User_608 enter the reference code in searchgrid under Client Response
 And User_608 double click the reference code in searchgrid under Client Response
 And User_608 click the limit details tab under Client Response
 And User_608 double click the product class row under limit details tab in Client Response
-And User_608 validate the product class Floating Rate under limit details in Client Response
-And User_608 validate the product class Floating Rate Periodicity under limit details in Client Response
-And User_608 validate the product class Floating Rate Type under limit details in Client Response
+Then User_608 validate the product class Floating Rate under limit details in Client Response
+Then User_608 validate the product class Floating Rate Periodicity under limit details in Client Response
+Then User_608 validate the product class Floating Rate Type under limit details in Client Response
 
 
 @AT_CR_006

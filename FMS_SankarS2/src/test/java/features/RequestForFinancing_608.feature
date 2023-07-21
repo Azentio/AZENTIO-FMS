@@ -216,8 +216,8 @@ And User_VAK clear the caches in FMS Application
 And User_VAK clicks on the WIFAK_Application first link
 And User_VAK clicks on the WIFAK_Application second link
 And User_VAK clicks on the approval committe recommedation menu
-#And User_VAK clicks on the clear button in approval committe recommedations menu
-And User_VAK enter the code in searchgrid under approval committe recommedations menu
+And User_VAK clicks on the clear button in approval committe recommedations menu
+#And User_VAK enter the code in searchgrid under approval committe recommedations menu
 And User_VAK double click on the any one record in approval committe recommedations menu
 And User_VAK clicks on the Recommend button in approval committe recommedations menu
 And User_VAK click the User_VAK recommended by name in recommend box
@@ -582,14 +582,20 @@ When User_608 clicks on the Approve level3 submit button
 @AT_RF_157
 Scenario: TSR - AMANA180702
 
-# Draw Down request
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_RF_157
 And User_608 clear the caches in FMS Application
 And User_608 clicks on the WIFAK_Application first link
 And User_608 clicks on the WIFAK_Application second link
+Then User_608 click the Facilities Management menu under WIFAK Application
+And User_608 click the Maintanance in Facilities Management under WIFAK Application
+And User_608 click the search button in Facilities Management Maintanance under WIFAK Application
+And User_608 click the clear button in Facilities Management Maintanance under WIFAK Application
+And User_608 double click the Application Ref number in Facilities Management Maintanance Search grid under WIFAK Application
+And User_608 get the facility ref code in Facilities Management Maintanance under WIFAK Application
 And User_608 clicks on the Draw Down request module under WIFAK Application
 And User_608 clicks on the Maintanance under Draw Down request in WIFAK Application
+And User_608 get the test data for test case AT_RF_157
 And User_608 enter the Facility Reference in main screen under WIFAK Draw Down request
 And User_608 select the draw down type in main screen under Draw Down request
 And User_608 enter the Description in main screen under Draw Down request
@@ -718,7 +724,7 @@ And User_608 move to the Document details tab
 And User_608 enter the Solicitor Name
 And User_608 enter the Estimator Name
 And User_608 clicks the save button
-And User_608 clicks on the validate button
+And User_608 clicks on the validate button for request for financing
 Then User_608 clicks the Approve Level1 menu under Application for financial facilities
 And User_608 get the test data for test case AT_RF_139
 And User_608 enter the reference code in Approve level1
@@ -773,7 +779,7 @@ And User_608 move to the Document details tab
 And User_608 enter the Solicitor Name
 And User_608 enter the Estimator Name
 And User_608 clicks the save button
-And User_608 clicks on the validate button
+And User_608 clicks on the validate button for request for financing
 Then User_608 clicks the Approve Level1 menu under Application for financial facilities
 And User_608 get the test data for test case AT_RF_140
 And User_608 enter the reference code in Approve level1

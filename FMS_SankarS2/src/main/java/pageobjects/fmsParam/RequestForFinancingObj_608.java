@@ -50,6 +50,12 @@ public class RequestForFinancingObj_608 {
 		return IIS_product_class_main_search_row_label;
 	}
 	
+	@FindBy(xpath = "//input[@id='classCode_M003MT']")
+	private WebElement IIS_product_class_main_product_class;
+	public WebElement IISProductClassMainProductClass_608() {
+		return IIS_product_class_main_product_class;
+	}
+	
 	@FindBy(xpath = "//td[@id='td_iISProductClassListGridTbl_Id_M003MT_1_trsctrlclassVO.CLASS']")
 	private WebElement IIS_product_class_main_searched_row;
 	public WebElement IISProductClassMainSearchedRow_608() {
@@ -287,7 +293,13 @@ public class RequestForFinancingObj_608 {
 	private WebElement wifak_approval_committee_recommendations_user_popup_OK_btn;
 	public WebElement wifakApprovalCommitteeRecommendationsUserPopupOkBtn_608() {
 		return wifak_approval_committee_recommendations_user_popup_OK_btn;
-	}	
+	}
+	
+	@FindBy(xpath = "//td[@id='td_ApplicationFacilityRecommendationGrid_WIFT002MT_0_rn']")
+	private WebElement wifak_approval_committee_tab_row;
+	public WebElement wifakApprovalCommitteeTabRow_VAK() {
+		return wifak_approval_committee_tab_row;
+	}
 	
 	@FindBy(xpath = "//td[text()='VAK']")
 	private WebElement wifak_approval_committee_recommend_by_label;

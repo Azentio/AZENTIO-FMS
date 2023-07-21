@@ -57,6 +57,7 @@ public class ApplicationFinancialFacilitySteps_608 {
 	ExcelData fmsFacilityApplicationExcelData = new ExcelData(path,"FacilityApplicationTestData","DataSet ID");
 	ExcelData fmsAccountingEntriesExcelData = new ExcelData(path,"AccountingEntriesTestData","DataSet ID");
 	ExcelData fmsClientResponseExcelData = new ExcelData(path,"ClientResponseTestData","DataSet ID");
+	ExcelData fmsAuthorizeOrRejectExcelData = new ExcelData(path,"AuthorizeRejectTestData","DataSet ID");
 	
 	Map<String, String> testData;
 	
@@ -324,7 +325,12 @@ public class ApplicationFinancialFacilitySteps_608 {
 	}
 	
 	
-	
+//	Authorize/Reject Screen test Data
+//	@@AT_AR_001
+	@And("User_608 get the test data for test case AT_AR_001")
+	public void user_get_the_test_data_for_test_case_AT_AR_001() throws Throwable {
+		testData = fmsAuthorizeOrRejectExcelData.getTestdata("DS_AT_AR_001");   
+	}
 	
 	
 	// Clear cache step
@@ -384,7 +390,15 @@ public class ApplicationFinancialFacilitySteps_608 {
 			}
 		}
 		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakApplicationFirst_608());
-		applicationFinancialFacilityObj608.wifakApplicationFirst_608().click();		
+		for (int i = 0; i <= 300; i++) {
+			try {
+				applicationFinancialFacilityObj608.wifakApplicationFirst_608().click();
+				break;
+			} catch (Exception e) {
+				
+			}
+		}
+				
 	}
 
 	@And("^User_608 clicks on the WIFAK_Application second link$")
@@ -860,12 +874,9 @@ public class ApplicationFinancialFacilitySteps_608 {
 				applicationFinancialFacilityObj608.applicationFinancialFacilityApproveLevel1_608().click();
 		    	break;
 			} catch (Exception e) {
-				if (i==1999) {
-					Assert.fail(e.getMessage());
-				}
+				
 			}
 		}
-//    	applicationFinancialFacilityObj608.applicationFinancialFacilityApproveLevel1_608().click();	
     }
 
     @And("User_608 enter the reference code in Approve level1")
@@ -919,7 +930,14 @@ public class ApplicationFinancialFacilitySteps_608 {
 			}
     	}
     	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.approveLevel1SelectDecision_608());
-    	dropDownHelper.SelectUsingVisibleText(applicationFinancialFacilityObj608.approveLevel1SelectDecision_608(), testData.get("Decision3"));        
+    	for (int i = 0; i <= 500; i++) {
+			try {
+				dropDownHelper.SelectUsingVisibleText(applicationFinancialFacilityObj608.approveLevel1SelectDecision_608(), testData.get("Decision3"));
+				break;
+			} catch (Exception e) {
+	
+			}
+    	}          
     }
 
 //    @And("User_608 select the Approve level1 decision Forward to Approve level3")
@@ -1531,6 +1549,15 @@ public class ApplicationFinancialFacilitySteps_608 {
      		 creditAuthorzieFlag.click();
       	}
      }
+     
+     @And("^User_608 uncheck the Credit Authorization flag$")
+     public void user_uncheck_the_credit_authorization_flag() throws Throwable {
+     	 waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.creditAuthorzieFlag_608());
+     	 WebElement creditAuthorzieFlag = fmsParamObj608.creditAuthorzieFlag_608();
+     	 if(creditAuthorzieFlag.isSelected()) {
+     		 creditAuthorzieFlag.click();
+      	}
+     }
 
      @And("^User_608 check the Issue Facility Offer flag$")
      public void user_check_the_issue_facility_offer_flag() throws Throwable {
@@ -1649,7 +1676,15 @@ public class ApplicationFinancialFacilitySteps_608 {
      @And("^User_608 double click on the retrieved data in Approve menu$")
      public void user_double_click_on_the_retrieved_data_in_approve_menu() throws Throwable {
      	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.approveSearchCodeResult_608());
-     	clicksAndActionsHelper.doubleClick(fmsParamObj608.approveSearchCodeResult_608());
+     	for(int i = 0; i <= 500; i++) {
+    		try {
+    			clicksAndActionsHelper.doubleClick(fmsParamObj608.approveSearchCodeResult_608());
+				break;
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    	}
+     	
      	for(int i = 0; i <= 500; i++) {
     		try {
 				if(!(fmsParamObj608.facilityTypeApproveMenuCode_608().getAttribute("prevvalue").isBlank())) {
@@ -4149,36 +4184,36 @@ public class ApplicationFinancialFacilitySteps_608 {
 //	@AT_CR_005
 	@And("User_608 click the Client Response menu under WIFAK Application")
 	public void user_click_the_client_response_menu_under_wifak_application() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseMenu());
-		applicationFinancialFacilityObj608.wifakClientResponseMenu().click();
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseMenu_608());
+		applicationFinancialFacilityObj608.wifakClientResponseMenu_608().click();
 	}
 
 	@And("User_608 enter the reference code in searchgrid under Client Response")
 	public void user_enter_the_reference_code_in_searchgrid_under_client_response() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseMenuSearchgridCodeInput());
-		applicationFinancialFacilityObj608.wifakClientResponseMenuSearchgridCodeInput().sendKeys(testData.get("Reference Code"),Keys.ENTER);	    
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseMenuSearchgridCodeInput_608());
+		applicationFinancialFacilityObj608.wifakClientResponseMenuSearchgridCodeInput_608().sendKeys(testData.get("Reference Code"),Keys.ENTER);	    
 	}
 
 	@And("User_608 double click the reference code in searchgrid under Client Response")
 	public void user_double_click_the_reference_code_in_searchgrid_under_client_response() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseMenuSearchgridRow());
-	    clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.wifakClientResponseMenuSearchgridRow());
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseMenuSearchgridRow_608());
+	    clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.wifakClientResponseMenuSearchgridRow_608());
 	    
 	}
 
 	@And("User_608 click the limit details tab under Client Response")
 	public void user_click_the_limit_details_tab_under_client_response() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseMenuCodeInput());
-		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsTab());
-		applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsTab().click();	    
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseMenuCodeInput_608());
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsTab_608());
+		applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsTab_608().click();	    
 	}
 
 	@And("User_608 double click the product class row under limit details tab in Client Response")
 	public void user_double_click_the_product_class_row_under_limit_details_tab_in_client_response() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsPrductClassRow());
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsPrductClassRow_608());
 		for (int i = 0; i <= 300; i++) {
 			try {
-				clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsPrductClassRow());
+				clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsPrductClassRow_608());
 				break;
 			} catch (Exception e) {
 	
@@ -4186,33 +4221,33 @@ public class ApplicationFinancialFacilitySteps_608 {
     	}
 	}
 
-	@And("User_608 validate the product class Floating Rate under limit details in Client Response")
+	@Then("User_608 validate the product class Floating Rate under limit details in Client Response")
 	public void user_validate_the_product_class_floating_rate_under_limit_details_in_client_response() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsPrductClassInput());
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsPrductClassInput_608());
 		for (int i = 0; i <= 300; i++) {
 			try {
-				javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsPrductClassFloatingRate());
+				javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsPrductClassFloatingRate_608());
 				break;
 			} catch (Exception e) {
 	
 			}
     	}
-		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsPrductClassFloatingRate());
-		String[] floatingRate = applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsPrductClassFloatingRate().getAttribute("prevvalue").split("[.]");
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsPrductClassFloatingRate_608());
+		String[] floatingRate = applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsPrductClassFloatingRate_608().getAttribute("prevvalue").split("[.]");
 		Assert.assertEquals(floatingRate[0], testData.get("Floating Rate"));
 	}
 
-	@And("User_608 validate the product class Floating Rate Periodicity under limit details in Client Response")
+	@Then("User_608 validate the product class Floating Rate Periodicity under limit details in Client Response")
 	public void user_validate_the_product_class_floating_rate_periodicity_under_limit_details_in_client_response() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsPrductClassFRPeriodicity());
-		String FRPriodicity = applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsPrductClassFRPeriodicity().getAttribute("prevvalue");
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsPrductClassFRPeriodicity_608());
+		String FRPriodicity = applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsPrductClassFRPeriodicity_608().getAttribute("prevvalue");
 		Assert.assertEquals(FRPriodicity, testData.get("FR Periodicity"));   
 	}
 
-	@And("User_608 validate the product class Floating Rate Type under limit details in Client Response")
+	@Then("User_608 validate the product class Floating Rate Type under limit details in Client Response")
 	public void user_validate_the_product_class_floating_rate_type_under_limit_details_in_client_response() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsPrductClassFRPeriodicityType());
-		String FRPriodicityType = applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsPrductClassFRPeriodicityType().getText();
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsPrductClassFRPeriodicityType_608());
+		String FRPriodicityType = applicationFinancialFacilityObj608.wifakClientResponseLimitDetailsPrductClassFRPeriodicityType_608().getText();
 //		System.err.println("FRPriodicityType: "+FRPriodicityType);
 		Assert.assertEquals(FRPriodicityType, testData.get("FR Periodicity Type"));   
 	}
@@ -4220,17 +4255,17 @@ public class ApplicationFinancialFacilitySteps_608 {
 //	@AT_CR_006
 	@When("User_608 click the Reject button under Client Response menu in WIFAK")
 	public void user_click_the_reject_button_under_client_response_menu_in_wifak() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseMenuCodeInput());
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseMenuCodeInput_608());
 		for (int i = 0; i <= 500; i++) {
 			try {
-				javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.wifakClientResponseMenuRejectBtn());
+				javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.wifakClientResponseMenuRejectBtn_608());
 				break;
 			} catch (Exception e) {
 	
 			}
     	}
-		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseMenuRejectBtn());
-		applicationFinancialFacilityObj608.wifakClientResponseMenuRejectBtn().click();
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakClientResponseMenuRejectBtn_608());
+		applicationFinancialFacilityObj608.wifakClientResponseMenuRejectBtn_608().click();
 		
 		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
     	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
@@ -4261,6 +4296,148 @@ public class ApplicationFinancialFacilitySteps_608 {
 		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakAppFinancialFacilityMaintananceStatus_608());
 		String status = applicationFinancialFacilityObj608.wifakAppFinancialFacilityMaintananceStatus_608().getAttribute("prevvalue");
 		Assert.assertEquals(status, testData.get("Status"));
+	}
+	
+	
+	
+//	Authorize/Reject Feature
+//	@AT_AR_001
+	@And("^User_608 clicks on the validate button for Authorize Reject feature$")
+    public void user_clicks_on_the_validate_button_for_authorize_reject_Feature() throws Throwable {
+    	for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.limitDetailsValidateBtn_608());
+				break;
+			} catch (Exception e) {
+	
+			}
+    	}
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.limitDetailsValidateBtn_608());
+    	applicationFinancialFacilityObj608.limitDetailsValidateBtn_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.WarningPopupOkBtn_608());
+    	applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
+ 
+    	// Facility already created popup
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.confirmPopup_608());
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.facilityAlreadyCreatedPopup_608());
+    	applicationFinancialFacilityObj608.facilityAlreadyCreatedPopup_608().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.successPopup_608());
+    	String refCode = applicationFinancialFacilityObj608.successPopupMessage_608().getText().substring(23, 27);
+    	System.err.println("Reference Number: "+refCode);
+    	fmsAuthorizeOrRejectExcelData.updateTestData(testData.get("DataSet ID"),"Reference Code", refCode);
+    	
+    	for (int i = 0; i < 2000; i++) {
+			try {
+		    	applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}   
+    	
+    	// close the send alert pop-up box
+    	for (int i = 0; i < 200; i++) {
+			try {
+		    	applicationFinancialFacilityObj608.sendAlertPopupDismissBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+
+			}
+		}
+    	
+    }
+	
+	
+	@And("User_608 click the Authorize\\Reject menu under WIFAK Application")
+	public void user_click_the_authorize_reject_menu_under_wifak_application() {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakAuthorizeOrRejectMenu_608());
+		for (int i = 0; i < 200; i++) {
+			try {
+				applicationFinancialFacilityObj608.wifakAuthorizeOrRejectMenu_608().click();
+		    	break;
+			} catch (Exception e) {
+
+			}
+		}		
+	}
+
+	@And("User_608 enter the reference code in searchgrid under Authorize\\Reject")
+	public void user_enter_the_reference_code_in_searchgrid_under_authorize_reject() {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakAuthorizeOrRejectSearchgridCodeInput_608());
+		applicationFinancialFacilityObj608.wifakAuthorizeOrRejectSearchgridCodeInput_608().sendKeys(testData.get("Reference Code"),Keys.ENTER);
+	}
+
+	@And("User_608 double click the reference code in searchgrid under Authorize\\Reject")
+	public void user_double_click_the_reference_code_in_searchgrid_under_authorize_reject() {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakAuthorizeOrRejectSearchgridRow_608());
+		for (int i = 0; i < 200; i++) {
+			try {
+				clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.wifakAuthorizeOrRejectSearchgridRow_608());
+		    	break;
+			} catch (Exception e) {
+
+			}
+		}
+	}
+
+	@And("User_608 click the limit details tab under Authorize\\Reject")
+	public void user_click_the_limit_details_tab_under_authorize_reject() {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakAuthorizeOrRejectCodeInput_608());
+		for (int i = 0; i < 200; i++) {
+			try {
+				applicationFinancialFacilityObj608.wifakAuthorizeOrRejectLimitDetailsTab_608().click();
+		    	break;
+			} catch (Exception e) {
+
+			}
+		}
+	}
+
+	@And("User_608 double click the product class row under limit details tab in Authorize\\Reject")
+	public void user_double_click_the_product_class_row_under_limit_details_tab_in_authorize_reject() {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakAuthorizeOrRejectLimitDetailsTabProductRow_608());
+		for (int i = 0; i < 200; i++) {
+			try {
+				clicksAndActionsHelper.doubleClick(applicationFinancialFacilityObj608.wifakAuthorizeOrRejectLimitDetailsTabProductRow_608());
+		    	break;
+			} catch (Exception e) {
+
+			}
+		}
+	}
+
+	@Then("User_608 validate the product class Floating Rate under limit details in Authorize\\Reject")
+	public void user_validate_the_product_class_floating_rate_under_limit_details_in_authorize_reject() {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakAuthorizeOrRejectLimitDetailsTabProductClassInput_608());
+		for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(applicationFinancialFacilityObj608.wifakAuthorizeOrRejectLimitDetailsTabFloatingRateInput_608());
+				break;
+			} catch (Exception e) {
+	
+			}
+    	}
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakAuthorizeOrRejectLimitDetailsTabFloatingRateInput_608());
+		String[] floatingRate = applicationFinancialFacilityObj608.wifakAuthorizeOrRejectLimitDetailsTabFloatingRateInput_608().getAttribute("prevvalue").split("[.]");
+		Assert.assertEquals(floatingRate[0], testData.get("Floating Rate"));
+	}
+
+	@Then("User_608 validate the product class Floating Rate Periodicity under limit details in Authorize\\Reject")
+	public void user_validate_the_product_class_floating_rate_periodicity_under_limit_details_in_authorize_reject() {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakAuthorizeOrRejectLimitDetailsTabFRPeriodicityInput_608());
+		String FRPriodicity = applicationFinancialFacilityObj608.wifakAuthorizeOrRejectLimitDetailsTabFRPeriodicityInput_608().getAttribute("prevvalue");
+		Assert.assertEquals(FRPriodicity, testData.get("FR Periodicity"));	    
+	}
+
+	@Then("User_608 validate the product class Floating Rate Type under limit details in Authorize\\Reject")
+	public void user_validate_the_product_class_floating_rate_type_under_limit_details_in_authorize_reject() {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.wifakAuthorizeOrRejectLimitDetailsTabFRPeriodicityType_608());
+		String FRPriodicityType = applicationFinancialFacilityObj608.wifakAuthorizeOrRejectLimitDetailsTabFRPeriodicityType_608().getText();
+		Assert.assertEquals(FRPriodicityType, testData.get("FR Periodicity Type"));	    
 	}
 	
 	

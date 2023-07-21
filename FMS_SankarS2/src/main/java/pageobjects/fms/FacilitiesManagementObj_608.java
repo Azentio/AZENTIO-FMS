@@ -120,6 +120,12 @@ public class FacilitiesManagementObj_608 {
 		return wifak_facilities_management_main_search_btn;
 	}
 	
+	@FindBy(xpath = "//td[@id='facilityManagementGridTbl_Id_WIFT008MT_pager_left']//td[text()='Clear']")
+	private WebElement wifak_facilities_management_main_searchgrid_clear_btn;
+	public WebElement wifakFacilitiesManagementMainSearchgridClearBtn_608() {
+		return wifak_facilities_management_main_searchgrid_clear_btn;
+	}
+	
 	@FindBy(xpath = "//input[@id='facilityManagementGridTbl_Id_WIFT008MT_gs_fmsFacilityVO.FROM_APPLICATION']")
 	private WebElement wifak_facilities_management_main_search_app_ref_input;
 	public WebElement wifakFacilitiesManagementMainSearchApplicationRefInput_608() {

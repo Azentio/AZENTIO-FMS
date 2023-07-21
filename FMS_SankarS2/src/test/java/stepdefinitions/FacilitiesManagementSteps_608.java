@@ -207,7 +207,15 @@ public class FacilitiesManagementSteps_608 {
  @And("User_608 double click the Application Ref number in Facilities Management Maintanance Search grid under WIFAK Application")
  public void user_double_click_the_application_ref_number_in_facilities_management_maintanance_search_grid_under_wifak_application() throws Throwable {
  	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementMainSearchResultRow_608());
-     clicksAndActionsHelper.doubleClick(facilityManagementObj608.wifakFacilitiesManagementMainSearchResultRow_608());
+ 	for (int i = 0; i < 500; i++) {
+		try {
+			clicksAndActionsHelper.doubleClick(facilityManagementObj608.wifakFacilitiesManagementMainSearchResultRow_608());
+	    	break;
+		} catch (Exception e) {
+
+		}
+	}
+     
      for(int i = 0; i <= 500; i++) {
  		try {
 				if(!(facilityManagementObj608.wifakFacilitiesManagementMainApplicationRefInput_608().getAttribute("prevvalue").isBlank())) {
