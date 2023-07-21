@@ -3,7 +3,7 @@ Feature: Title of your feature
   
   @127859_Params
   Scenario: Final Approval
-  Given navigate to FMS param application and login with valid credentials
+    Given navigate to FMS param application and login with valid credentials
     And User_610 clicks on the parameter module
     And User_610 clicks on the Facility Type feature
     And User_610 clicks on the update after approve menu in Facility type
@@ -34,7 +34,7 @@ Feature: Title of your feature
     Given navigate to FMS application2 and login with valid credentials
     And Click Wifak Application first
     And Click Wifak Application Second
-    And User update test data for test case no 583228
+    And User update test data for test case no 127859
     And Click Application for financial facilities
     And Click Maintenance
     And Click and Select Application for
@@ -75,7 +75,7 @@ Feature: Title of your feature
 		Given navigate to FMS application2 and login with valid credentials
 		And Click Wifak Application first
     And Click Wifak Application Second
-    And User update test data for test case no 583228
+    And User_607 update test data for test case no 899818
     And Click Application for financial facilities
     And Click Maintenance
     And Click and Select Application for
@@ -116,58 +116,7 @@ Feature: Title of your feature
 		And User_607 Check the record is display in final Approval under wifakApplication
 		
 		
-		@853171
-		Scenario: AIBBI190383 - Issue facility offer letter at the level of Request for Financing
-		Given navigate to FMS application2 and login with valid credentials
-		And User update test data for test case no 636958
-		And User_607 Click Request under menu Options
-		And User_607 Click Request Financing under Request
-		And Click Request for financing
-		And Goto maintenace
-    And click the reason for submission search box
-    And click the customer search box
-    And click the facility type details
-    And Enter the facility type code under facility type
-    And Enter the total limit under global limit
-    And Click the Disbursement Sublimit under maintenance screen
-    And Add the limits under Disbursement Sublimit
-    And Add the product class values in product searchbox
-    And Add all the Above limit values
-    And Save all the values when limits are add
-    And Click the validate button when all the values are saved
-    And Confirm the validate popup menu
-    And Click the final validate popup
-    
-    #And Click the Approve level1 screen under request for financing
-    #And Search the value in approve1
-#	  And User_607 Forward the record in Approve level1 to Authorize and Reject
-#	  And User_607 Click Approve button in Approve lev1 under Request For Financing
-    #And User_607 click Authorize Reject Under Request For Financing
-    #And User_607 Search Record In Authorize Reject Under Request For Financing
-    #And User_607 Select Record In Authorize Reject Under Request For Financing
-    #And User_607 Click Authorize button In Authorize Reject Under Request For Financing
-    #And User_607 Click Issue Facility Offer Under Request For Financing
-    #And User_607 Select Record In Issue Facility Offer Under Request For Financing
-    #And User_607 Click Issue offer button In Issue Facility Offer Under Request For Financing
-   
-    @853171_2
-    Scenario: AIBBI190383 - Issue facility offer letter at the level of Request for Financing
-    Given navigate to FMS application2 and login with valid credentials
-		And User update test data for test case no 636958
-		And User_607 Click Request under menu Options
-		And User_607 Click Request Financing under Request
-		And Click Request for financing
-    And Click the Approve level1 screen under request for financing
-    And Search the value in approve1
-	  And User_607 Forward the record in Approve level1 to Authorize and Reject
-	  And User_607 Click Approve button in Approve lev1 under Request For Financing
-    And User_607 click Authorize Reject Under Request For Financing
-    And User_607 Search Record In Authorize Reject Under Request For Financing
-    And User_607 Select Record In Authorize Reject Under Request For Financing
-    And User_607 Click Authorize button In Authorize Reject Under Request For Financing
-    And User_607 Click Issue Facility Offer Under Request For Financing
-    And User_607 Select Record In Issue Facility Offer Under Request For Financing
-    And User_607 Click Issue offer button In Issue Facility Offer Under Request For Financing
+		
     
     
     

@@ -1,13 +1,41 @@
 @tag
 Feature: Title of your feature
   I want to use this template for my feature file
+  
+   @733338_2
+    Scenario: Open the facility management screen and link a collateral
+    Given navigate to FMS param application and login with valid credentials
+    And User_610 clicks on the parameter module
+    And User_610 clicks on the Facility Type feature
+    And User_610 clicks on the update after approve menu in Facility type
+    And User_610 enter the code value in update after approve menu
+    And User_610 double click on the retrieved data in update after approve menu
+    And User_610 clicks on the facility details tab in update after approve
+    And User_610 clicks on the STP Facility Requirements option
+    And User_610 check the Customer Grading flag
+    And User_610 check the Overwrite Grading flag
+    And User_610 check the Credit Review flag
+    And User_610 check the Committee Approval flag
+    And User_610 check the Credit Authorization flag
+    And User_610 check the Issue Facility Offer flag
+    And User_610 uncheck the Client Response flag
+    And User_610 check the Document Validation flag
+    And User_610 check the Final Approval flag
+    And User_610 check the Create Active Facility If Within Limits flag
+    And User_610 Check the Automatically Approve Facility If Within Limits flag
+    When User_610 clicks on the Update button
+    And User_610 after the update go to the Approve menu
+    And User_610 enter the code value in Approve menu
+    And User_610 double click on the retrieved data in Approve menu
+    When User_610 clicks on the Approve button in Approve menu under Facility Type
+  
 
   @733338
   Scenario: TSR - AIBBI180206 - Issue with Client response
      Given navigate to FMS application2 and login with valid credentials
     And Click Wifak Application first
     And Click Wifak Application Second
-    And User update test data for test case no 583228
+    And User update test data for test case no 733338
     And Click Application for financial facilities
     And Click Maintenance
     And Click and Select Application for
@@ -19,7 +47,6 @@ Feature: Title of your feature
     And Enter the Total Value
     And User_607 Get App Created Date In Mainteance under Wifak
     And User_607 Enter Offer Expiration same as App Created Date In Mainteance under Wifak
-    #And Click Offer Expiration SelectDate
     And Select limit Details
     And Click Add button on limit Detail
     And Enter ValueOn Product Class

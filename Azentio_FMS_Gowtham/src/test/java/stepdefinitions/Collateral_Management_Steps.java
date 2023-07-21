@@ -786,13 +786,16 @@ public class Collateral_Management_Steps {
 	@And("^User_610 enter the code value in update after approve menu$")
 	public void user_enter_the_code_value_in_update_after_approve_menu() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, Collateral_Management_Obj.facilityTypeSearchCode_610());
-//		String string = testData.get("Facility Type In Facility Limits");
-//		System.err.println(string);
 		
-		Collateral_Management_Obj.facilityTypeSearchCode_610().sendKeys("369", Keys.ENTER);
+		Collateral_Management_Obj.facilityTypeSearchCode_610().sendKeys("9001", Keys.ENTER);
 		
-//		Collateral_Management_Obj.facilityTypeSearchCode_610().sendKeys(testData.get("Facility Type"));
-//		Collateral_Management_Obj.facilityTypeSearchCode_610().sendKeys(testData.get("Facility Type In Facility Limits"), Keys.ENTER);
+	}
+	@And("^User_610 enter the code value in update after approve menu for req$")
+	public void user_enter_the_code_value_in_update_after_approve_menu_for_req() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Collateral_Management_Obj.facilityTypeSearchCode_610());
+		
+		Collateral_Management_Obj.facilityTypeSearchCode_610().sendKeys("19", Keys.ENTER);
+		
 	}
 
 	@And("^User_610 double click on the retrieved data in update after approve menu$")
@@ -1104,7 +1107,15 @@ public class Collateral_Management_Steps {
 		waitHelper.waitForElementwithFluentwait(driver, Collateral_Management_Obj.approveSearchCode_610());
 		// Collateral_Management_Obj.approveSearchCode_610().sendKeys(testData.get("Search
 		// Code"),Keys.ENTER);
-		Collateral_Management_Obj.approveSearchCode_610().sendKeys("369", Keys.ENTER);
+		Collateral_Management_Obj.approveSearchCode_610().sendKeys("9001", Keys.ENTER);
+	}
+	
+	@And("^User_610 enter the code value in Approve menu for req$")
+	public void user_enter_the_code_value_in_approve_menu_for_req() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Collateral_Management_Obj.approveSearchCode_610());
+		// Collateral_Management_Obj.approveSearchCode_610().sendKeys(testData.get("Search
+		// Code"),Keys.ENTER);
+		Collateral_Management_Obj.approveSearchCode_610().sendKeys("19", Keys.ENTER);
 	}
 
 	@And("^User_610 double click on the retrieved data in Approve menu$")

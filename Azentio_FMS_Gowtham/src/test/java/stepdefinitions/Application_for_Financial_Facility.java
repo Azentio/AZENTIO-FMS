@@ -54,6 +54,29 @@ public class Application_for_Financial_Facility {
 		testData = fmsTransactionsExcelData.getTestdata("AT_RF_113");
 	}
 	
+	@Given("User update test data for test case no 127859")
+	public void user_update_test_data_for_test_case_no_127859() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_FALC_008");
+	}
+
+	
+	@Given("User update test data for test case no 733338")
+	public void user_update_test_data_for_test_case_no_733338() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_CR_001");
+	}
+	
+	
+	@Given("User update test data for test case no 135014")
+	public void user_update_test_data_for_test_case_no_135014() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_IFO_003");
+	}
+	
+	@Given("User update test data for test case no 127912")
+	public void user_update_test_data_for_test_case_no_127912() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_IFO_002");
+	}
+
+	
 	@Given("User update test data for test case no 636898")
 	public void user_update_test_data_for_test_case_no_636898() {
 		testData = fmsTransactionsExcelData.getTestdata("AT_RF_055");
@@ -98,6 +121,10 @@ public class Application_for_Financial_Facility {
 //	public void user_update_test_data_for_test_case_no_748962() throws Throwable {
 //		testData = fmsTransactionsExcelData.getTestdata("AT_RF_149");
 //	}
+	@And("^User_607 update test data for test case no 899818$")
+	public void user_update_test_data_for_test_case_no_899818() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("AT_FALC_001");
+	}
 
 
 	
@@ -2091,20 +2118,20 @@ public class Application_for_Financial_Facility {
 		@Given("User_607 Enter Floating Rate In Limit Details mainteance under wifak")
 		public void user_enter_floating_rate_in_limit_details_mainteance_under_wifak() {
 			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.EnterFloatingRate_In_LimitDetails_mainteance_under_wifak_607());
-			applicationFinancialObj.EnterFloatingRate_In_LimitDetails_mainteance_under_wifak_607().sendKeys("98",Keys.TAB);
+			applicationFinancialObj.EnterFloatingRate_In_LimitDetails_mainteance_under_wifak_607().sendKeys(testData.get("Enter Floating Rate"),Keys.TAB);
 		}
 
 		@Given("User_607 Enter Floating Rate Periodicity In Limit Details mainteance under wifak")
 		public void user_enter_floating_rate_periodicity_in_limit_details_mainteance_under_wifak() {
 			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.EnterFloating_Rate_Periodicity_In_LimitDetails_mainteance_under_wifak_607());
-			applicationFinancialObj.EnterFloating_Rate_Periodicity_In_LimitDetails_mainteance_under_wifak_607().sendKeys("2",Keys.TAB);
+			applicationFinancialObj.EnterFloating_Rate_Periodicity_In_LimitDetails_mainteance_under_wifak_607().sendKeys(testData.get("Enter Floating Rate Periodicity"),Keys.TAB);
 		    
 		}
 
 		@Given("User_607 Enter Floating Rate Periodicity Type In Limit Details mainteance under wifak")
 		public void user_enter_floating_rate_periodicity_type_in_limit_details_mainteance_under_wifak() {
 			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.EnterFloating_Rate_Periodicity_Type_In_LimitDetails_mainteance_under_wifak_607());
-			DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.EnterFloating_Rate_Periodicity_Type_In_LimitDetails_mainteance_under_wifak_607(), "Month(s)");
+			DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.EnterFloating_Rate_Periodicity_Type_In_LimitDetails_mainteance_under_wifak_607(), testData.get("Enter Floating Rate Periodicity Months"));
 		    
 		}
 
