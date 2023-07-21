@@ -74,6 +74,11 @@ public class FMS_StepDefinition_609 extends BaseClass{
     	testData = AccountingEntriesExcelData_609.getTestdata("AT_AE_003");	
     }
 	
+	@And("^User_609 get the test data set id for AT_AE_008$")
+    public void User_609_get_the_test_data_set_id_for_AT_AE_008() throws Throwable {
+    	testData = AccountingEntriesExcelData_609.getTestdata("AT_AE_008");	
+    }
+	
 	
 	 @And("^User_609 get the test data set id for AT_FAM_004$")
 	    public void User_609_get_the_test_data_set_id_for_AT_FAM_004() throws Throwable {
@@ -706,29 +711,25 @@ public class FMS_StepDefinition_609 extends BaseClass{
 
 	    @And("^User_609 Click on Approve Level1 in Request Screen$")
 	    public void User_609_Click_on_Approve_Level1_in_Request_Screen() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_ApproveLevel1_609());
-			FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_ApproveLevel1_609().click();	
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Request_RequestFinancing_ApproveLevel1_609());
+			FmsPageobjects_609.Request_RequestFinancing_ApproveLevel1_609().click();	
 	    }
 	 
 	    @And("User_609 Select the Code in Approve Level1 in Request Screen")
 	    public void User_609_Select_the_Code_in_Approve_Level1_in_Request_Screen() {
-	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_ApproveLevel1_Code_609());
-			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_ApproveLevel1_Code_609());
-			FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_ApproveLevel1_Code_609().sendKeys(ApplicationNo,Keys.ENTER);
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Request_RequestFinancing_ApproveLevel1_Code_609());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Request_RequestFinancing_ApproveLevel1_Code_609());
+			FmsPageobjects_609.Request_RequestFinancing_ApproveLevel1_Code_609().sendKeys(ApplicationNo,Keys.ENTER);
 			//FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_ApproveLevel1_Code_609().sendKeys(Keys.ENTER);
 			
-			String ApplicationCode = FacilityCode;
-			int ApplicationCodelen = 10 - ApplicationCode.length();
-		    for(int i = 1; i <=ApplicationCodelen ; i++){
-		    	ApplicationCode= "0" + ApplicationCode;
-		    }
-			String xpath ="//table[@id='requestFinancingGridTbl_Id_CSMRF00P1']/tbody/tr[2]/td[text()='"+ApplicationCode+"']";
+			String xpath ="//table[@id='requestFinancingGridTbl_Id_CSMRF00P1']/tbody/tr[2]/td[text()='"+"000000"+ApplicationNo+"']";
 			for (int i = 0; i < 200; i++) {
 				try {
 					WebElement Code  = driver.findElement(By.xpath(xpath));
 					if (Code.isDisplayed()) {
 						Assert.assertEquals(Code.isDisplayed(), true);
 						clicksAndActionHelper.doubleClick(Code);
+						break;
 					}
 					break;
 				} catch (Exception e) {
@@ -742,22 +743,33 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	    
 	    @And("^User_609 Click on Customer Grading Recommendations in Approve Level1 in Request Screen$")
 	    public void User_609_Click_on_Customer_Grading_Recommendations_in_Approve_Level1_in_Request_Screen() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_ApproveLevel1_CustomerGradingRecommendations_609());
-			FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing_ApproveLevel1_CustomerGradingRecommendations_609().click();
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Request_RequestFinancing_ApproveLevel1_CustomerGradingRecommendations_609());
+			FmsPageobjects_609.Request_RequestFinancing_ApproveLevel1_CustomerGradingRecommendations_609().click();
 	    }
+	    
+	    
+	    
 	    
 	    @And("^User_609 Select the Decision in Approve Level1 in Request Screen$")
 	    public void User_609_Select_the_Decision_in_Approve_Level1_in_Request_Screen() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing__ApproveLevel1_CustomerGradingRecommendations_Decision_609());
-			WebElement Approvelevel1_Decision = FmsPageobjects_609.REQUESTFORFINANCIN_RequestForFinancing__ApproveLevel1_CustomerGradingRecommendations_Decision_609();
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Request_RequestFinancing_ApproveLevel1_Decision_609());
+			WebElement Approvelevel1_Decision = FmsPageobjects_609.Request_RequestFinancing_ApproveLevel1_Decision_609();
 			Approvelevel1_Decision.click();
 			dropdownhelper.SelectUsingVisibleText(Approvelevel1_Decision,testData.get("Approve level1 Decision"));
 	    }
 	    
+	    @And("^User_609 Select the Forward Decision in Approve Level1 in Request Screen$")
+	    public void User_609_Select_the_Forward_Decision_in_Approve_Level1_in_Request_Screen() throws Throwable {
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Request_RequestFinancing_ApproveLevel1_ForwardDecision_609());
+			WebElement Approvelevel1_Decision = FmsPageobjects_609.Request_RequestFinancing_ApproveLevel1_ForwardDecision_609();
+			Approvelevel1_Decision.click();
+			dropdownhelper.SelectUsingVisibleText(Approvelevel1_Decision,testData.get("Approve level1 Forward Decision"));
+	    }
+	    
 	    @And("^User_609 Click on Approve in Approve Level1 in Request Screen$")
 	    public void User_609_Click_on_Approve_in_Approve_Level1_in_Request_Screen() throws Throwable {
-	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.REQUESTFORFINANCIN_Approve_609());
-			FmsPageobjects_609.REQUESTFORFINANCIN_Approve_609().click();
+	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Request_RequestFinancing_ApproveLevel1_Approve_609());
+			FmsPageobjects_609.Request_RequestFinancing_ApproveLevel1_Approve_609().click();
 	    }
 
 	    
@@ -2604,5 +2616,162 @@ public class FMS_StepDefinition_609 extends BaseClass{
 				FmsPageobjects_609.Request_RequestFinancing_CreditReviewBtton_609().click();
 		    }
 		    
+		    
+///*******************************************************Draw Down Request**************************************************************************///
+
+			@And("User_609 Click on Draw Down Request")
+			public void user_609_click_on_draw_down_request() {
+				waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Wifakappliction_DrawDownRequest_609());
+				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Wifakappliction_DrawDownRequest_609());		    
+			}
+
+			@And("User_609 Click on Maintenance screen under Draw Down Request")
+			public void user_609_click_on_maintenance_screen_under_draw_down_request() {
+				waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.DrawDownRequest_Maintenanace_609());
+				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.DrawDownRequest_Maintenanace_609());
+			}
+			
+			@And("User_609 Select the Facility Reference in Draw Down Request")
+			public void user_609_Select_the_Facility_Reference_in_draw_down_request() {
+			  	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.DrawDownRequest_Maintenanace_FacilityReferenceSearch_609());
+				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.DrawDownRequest_Maintenanace_FacilityReferenceSearch_609());
+				
+				waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.DrawDownRequest_Maintenanace_FacilityReference_609());
+				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.DrawDownRequest_Maintenanace_FacilityReference_609());
+				FmsPageobjects_609.DrawDownRequest_Maintenanace_FacilityReference_609().sendKeys(ApplicationNo,Keys.ENTER);
+				
+				String xpath ="//table[@id='gridtab_drawDownRequestFacilityReference_WIFT009MT']/tbody/tr[2]/td[text()='"+"000000"+ApplicationNo+"']";
+				for (int i = 0; i < 200; i++) {
+					try {
+						WebElement Code  = driver.findElement(By.xpath(xpath));
+						if (Code.isDisplayed()) {
+							clicksAndActionHelper.doubleClick(Code);
+							break;
+						}
+					} catch (Exception e) {
+						if (i==199) {
+							Assert.fail(e.getMessage());
+						}
+					}
+				}
+			}
+			
+			    @And("User_609 Select the DrawDown Type in Draw Down Request")
+			    public void User_609_Select_the_DrawDown_Type_in_Draw_Down_Request() {
+			    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.DrawDownRequest_Maintenanace_DrawdownTypeSearch_609());
+					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.DrawDownRequest_Maintenanace_DrawdownTypeSearch_609());
+					
+					waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.DrawDownRequest_Maintenanace_DrawdownType_609());
+					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.DrawDownRequest_Maintenanace_DrawdownType_609());
+					FmsPageobjects_609.DrawDownRequest_Maintenanace_DrawdownType_609().sendKeys(testData.get("DrawDown Type"),Keys.ENTER);
+					
+					String xpath ="//table[@id='gridtab_drawDownRequestDrawDownType_WIFT009MT']/tbody/tr/td[text()='"+testData.get("DrawDown Type")+"']";
+					for (int i = 0; i < 200; i++) {
+						try {
+							WebElement Code  = driver.findElement(By.xpath(xpath));
+							if (Code.isDisplayed()) {
+								clicksAndActionHelper.doubleClick(Code);
+								break;
+							}
+						} catch (Exception e) {
+							if (i==199) {
+								Assert.fail(e.getMessage());
+							}
+						}
+					} 
+			    }
+
+			    @And("User_609 Enter the Value in Description English field in Draw Down Request")
+			    public void User_609_Enter_the_Value_in_Description_English_field_in_Draw_Down_Request() {
+			    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.DrawDownRequest_Maintenanace_DescriptionEnglish_609());
+					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.DrawDownRequest_Maintenanace_DescriptionEnglish_609());
+					FmsPageobjects_609.DrawDownRequest_Maintenanace_DescriptionEnglish_609().sendKeys(testData.get("Description English"),Keys.TAB);
+  
+			    }
+
+			    @And("User_609 Enter the Value in Description Arab field in Draw Down Request")
+			    public void User_609_Enter_the_Value_in_Description_arab_field_in_Draw_Down_Request() {
+			    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.DrawDownRequest_Maintenanace_DescriptionArab_609());
+					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.DrawDownRequest_Maintenanace_DescriptionArab_609());
+					FmsPageobjects_609.DrawDownRequest_Maintenanace_DescriptionArab_609().sendKeys(testData.get("Description Arab"),Keys.TAB);
+			    }
+
+			    @And("User_609 Enter the Value in Value Date field in Draw Down Request")
+			    public void User_609_Enter_the_Value_in_Value_Date_field_in_Draw_Down_Request() {
+			    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.DrawDownRequest_Maintenanace_ValueDate_609());
+					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.DrawDownRequest_Maintenanace_ValueDate_609());
+					FmsPageobjects_609.DrawDownRequest_Maintenanace_ValueDate_609().sendKeys(testData.get("Value Date"),Keys.TAB);
+			    }
+
+			    @And("User_609 Click on the Drawdown Additional Details in Draw Down Request")
+			    public void User_609_Click_on_the_Drawdown_Additional_Details_in_Draw_Down_Request() {
+			    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_609());
+			    	clicksAndActionHelper.clickOnElement(FmsPageobjects_609.DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_609());
+			    }
+
+			    @And("User_609 Select the Product Class in Draw Down Request")
+			    public void User_609_Select_the_Product_Class_in_Draw_Down_Request() {
+			    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_ProductClassLNSearch_609());
+					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_ProductClassLNSearch_609());
+					
+					waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_ProductClassLN_609());
+					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_ProductClassLN_609());
+					FmsPageobjects_609.DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_ProductClassLN_609().sendKeys(testData.get("Description Arab"),Keys.ENTER);
+					
+			    	String xpath ="(//table[@id='gridtab_drawDownRequestProduct_Class_WIFT009MT']/tbody/tr[2]/td[text()='"+"000"+testData.get("Product class")+"'])[1]";
+					for (int i = 0; i < 200; i++) {
+						try {
+							WebElement Code  = driver.findElement(By.xpath(xpath));
+							if (Code.isDisplayed()) {
+								Assert.assertEquals(Code.isDisplayed(), true);
+								clicksAndActionHelper.doubleClick(Code);
+								break;
+							}
+						} catch (Exception e) {
+							if (i==199) {
+								Assert.fail(e.getMessage());
+							}
+						}
+					}   
+			    }
+			    
+			    @And("User_609 Select the DrawDown CY in Draw Down Request")
+			    public void User_609_Select_the_DrawDown_CY_in_Draw_Down_Request() {
+			    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_DrawDownCYSearch_609());
+					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_DrawDownCYSearch_609());
+					
+					waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_DrawDown_609());
+					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_DrawDown_609());
+					FmsPageobjects_609.DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_DrawDown_609().sendKeys(testData.get("DrawDown CY"),Keys.ENTER);
+					
+			    	String xpath ="(//table[@id='gridtab_drawDownRequestDD_Cy_WIFT009MT']/tbody/tr/td[text()='"+testData.get("DrawDown CY")+"'])[1]";
+					for (int i = 0; i < 200; i++) {
+						try {
+							WebElement Code  = driver.findElement(By.xpath(xpath));
+							if (Code.isDisplayed()) {
+								Assert.assertEquals(Code.isDisplayed(), true);
+								clicksAndActionHelper.doubleClick(Code);
+								break;
+							}
+						} catch (Exception e) {
+							if (i==199) {
+								Assert.fail(e.getMessage());
+							}
+						}
+					}   
+			    }
+			    
+			    @And("User_609 Enter the FC Amount Value in Draw Down Request")
+			    public void User_609_Enter_the_FC_Amount_Value_in_Draw_Down_Request() {
+			    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.DrawDownRequest_Maintenanace_ValueDate_609());
+					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.DrawDownRequest_Maintenanace_ValueDate_609());
+					FmsPageobjects_609.DrawDownRequest_Maintenanace_ValueDate_609().sendKeys(testData.get("FC Amount"),Keys.TAB);
+			    }
+
+			    @And("User_609 Click on Save in Draw Down Request")
+			    public void user_609_click_on_save_in_draw_down_request() {
+			    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.DrawDownRequest_Save_609());
+					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.DrawDownRequest_Save_609());   
+			    }		    
 }
 

@@ -37,6 +37,7 @@ And User_609 Click on Approve Level1 in Request Screen
 And User_609 Select the Code in Approve Level1 in Request Screen
 And User_609 Click on Customer Grading Recommendations in Approve Level1 in Request Screen
 And User_609 Select the Decision in Approve Level1 in Request Screen
+And User_609 Select the Forward Decision in Approve Level1 in Request Screen
 And User_609 Click on Approve in Approve Level1 in Request Screen
 And User_609 Click the Application confirm ok button
 And User_609 Click the ok button
@@ -89,6 +90,7 @@ And User_609 Click on Approve Level1 in Request Screen
 And User_609 Select the Code in Approve Level1 in Request Screen
 And User_609 Click on Customer Grading Recommendations in Approve Level1 in Request Screen
 And User_609 Select the Decision in Approve Level1 in Request Screen
+And User_609 Select the Forward Decision in Approve Level1 in Request Screen
 And User_609 Click on Approve in Approve Level1 in Request Screen
 And User_609 Click the Application confirm ok button
 And User_609 Click the ok button

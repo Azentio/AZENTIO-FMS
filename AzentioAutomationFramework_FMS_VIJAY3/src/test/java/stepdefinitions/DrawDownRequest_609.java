@@ -160,25 +160,58 @@ public class DrawDownRequest_609 extends BaseClass{
 		}
 		
 		
-		///*****************************************************************************///
 		
 		@And("User_609 get the test data set id for AT_DDR_031")
 		public void user_609_get_the_test_data_set_id_for_AT_DDR_031() {
 			testData = fmsDrawDownRequestExcelData.getTestdata("AT_DDR_031");
-		    
 		}
 
-		@And("User_609 Click on Draw Down Request")
-		public void user_609_click_on_draw_down_request() {
-			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Wifakappliction_DrawDownRequest());
-			clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.Wifakappliction_DrawDownRequest());		    
-		}
-
-		@And("User_609 Click on Maintenance screen under Draw Down Request")
-		public void user_609_click_on_maintenance_screen_under_draw_down_request() {
-			waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.Wifakappliction_DrawDownRequest_Maintenance());
-			clicksAndActionHelper.clickOnElement(DrawDownRequestPageobjects_609.Wifakappliction_DrawDownRequest_Maintenance());
-		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
 		@And("User_609 Click on the search Bar in Draw Down Request")
 		public void user_609_click_on_the_search_bar_in_draw_down_request() {

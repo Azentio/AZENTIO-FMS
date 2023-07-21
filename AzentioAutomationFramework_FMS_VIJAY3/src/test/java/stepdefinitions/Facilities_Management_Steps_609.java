@@ -1083,120 +1083,10 @@ public class Facilities_Management_Steps_609 extends BaseClass{
 		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.FacilitiesManagement_Save()); 
     }
 
-    @And("User_609 Click on the Draw Down Request under Wifak Appliction Submenu")
-    public void user_609_click_on_the_draw_down_request_under_wifak_appliction_submenu() {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.WifakapplictionSubmenu_DrawDownRequest());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.WifakapplictionSubmenu_DrawDownRequest());  
-    }
-
-    @And("User_609 Click on the Maintenace Screen under Draw Down Request")
-    public void user_609_click_on_the_maintenace_screen_under_draw_down_request() {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace());
-        
-    }
-
-    @And("User_609 Select the Facility Reference")
-    public void user_609_select_the_facility_reference() {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_FacilityReferenceSearch());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_FacilityReferenceSearch());
-		
-		waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_FacilityReference());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_FacilityReference());
-		
-		FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_FacilityReference().sendKeys(FacilityCode);
-		FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_FacilityReference().sendKeys(Keys.ENTER);
-		
-		String FacilityRefCode = FacilityCode;
-		int FacilityRefCodelen = 10 - FacilityRefCode.length();
-	    for(int i = 1; i <=FacilityRefCodelen ; i++){
-	    	FacilityRefCode= "0" + FacilityRefCode;
-	    }
-		String xpath ="//table[@id='gridtab_drawDownRequestFacilityReference_WIFT009MT']/tbody/tr/td[text()='"+String.valueOf(randomNumber)+"']";
-		for (int i = 0; i < 200; i++) {
-			try {
-				WebElement Code  = driver.findElement(By.xpath(xpath));
-				if (Code.isDisplayed()) {
-					Assert.assertEquals(Code.isDisplayed(), true);
-					clicksAndActionHelper.doubleClick(Code);
-				}
-				break;
-			} catch (Exception e) {
-				if (i==199) {
-					Assert.fail(e.getMessage());
-				}
-			}
-		}
-        
-    }
-
-    @And("User_609 Select the Drawdown Type")
-    public void user_609_select_the_drawdown_type() {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DrawdownTypeSearch());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DrawdownTypeSearch());
-		
-		waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DrawdownType());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DrawdownType());
-		FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DrawdownType().sendKeys(testData.get("DrawDown Type"));
-		FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DrawdownType().sendKeys(Keys.ENTER);
-		
-		String xpath ="//table[@id='gridtab_drawDownRequestDrawDownType_WIFT009MT']/tbody/tr/td[text()='"+testData.get("DrawDown Type")+"']";
-		for (int i = 0; i < 200; i++) {
-			try {
-				WebElement Code  = driver.findElement(By.xpath(xpath));
-				if (Code.isDisplayed()) {
-					Assert.assertEquals(Code.isDisplayed(), true);
-					clicksAndActionHelper.doubleClick(Code);
-				}
-				break;
-			} catch (Exception e) {
-				if (i==199) {
-					Assert.fail(e.getMessage());
-				}
-			}
-		}
-        
-    }
-
-    @And("User_609 Enter the Description in English")
-    public void user_609_enter_the_description_in_english() {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DescriptionEnglish());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DescriptionEnglish());
-		FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DescriptionEnglish().sendKeys("asdfg");
-        
-    }
-
-    @And("User_609 Enter the Description in Arab")
-    public void user_609_enter_the_description_in_arab() {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DescriptionArab());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DescriptionArab());
-		FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DescriptionArab().sendKeys("asdfg");
-    }
-
-    @And("User_609 Enter the Date Submitted")
-    public void user_609_enter_the_date_submitted() {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DateSubmitted());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DateSubmitted());
-		FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DateSubmitted().getAttribute("prevvalue");
-        
-    }
-
-    @And("User_609 Enter the Value Date")
-    public void user_609_enter_the_value_date() {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_ValueDate());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_ValueDate());
-		FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_ValueDate().sendKeys(DateSubmitted);
-        
-    }
-
-    @And("User_609 Click on the Drawdown Additional Details tab")
-    public void user_609_click_on_the_drawdown_additional_details_tab() {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DrawdownAdditionalDetails());
-		clicksAndActionHelper.moveToElement(FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DrawdownAdditionalDetails());
-    	clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DrawdownAdditionalDetails());
-        
-    }
-
+    
+    
+    
+   
     
     
     
@@ -1204,61 +1094,7 @@ public class Facilities_Management_Steps_609 extends BaseClass{
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    @And("User_609 Select the product Class LN Key")
-    public void user_609_select_the_product_class_ln_key() {
-    	
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DrawdownTypeSearch());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DrawdownTypeSearch());
-		
-		waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DrawdownType());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DrawdownType());
-		FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DrawdownType().sendKeys(FacilityCode);
-		FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_DrawdownType().sendKeys(Keys.ENTER);
-		
-    	String xpath ="//table[@id='gridtab_drawDownRequestProduct_Class_WIFT009MT']/tbody/tr/td[text()='"+FacilityCode+"']";
-		for (int i = 0; i < 200; i++) {
-			try {
-				WebElement Code  = driver.findElement(By.xpath(xpath));
-				if (Code.isDisplayed()) {
-					Assert.assertEquals(Code.isDisplayed(), true);
-					clicksAndActionHelper.doubleClick(Code);
-				}
-				break;
-			} catch (Exception e) {
-				if (i==199) {
-					Assert.fail(e.getMessage());
-				}
-			}
-		}   
-    }
-
-    @And("User_609 Click on Save in Draw Down Request")
-    public void user_609_click_on_save_in_draw_down_request() {
-    	waitHelper.waitForElementwithFluentwait(driver, FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_Save());
-		clicksAndActionHelper.clickOnElement(FacilitiesManagementPageObjects609.DrawDownRequest_Maintenanace_Save());
-        
-    }
-    
-    
-    
-    
-    
-    
+   
     @And("^User_609 Check the Down Payment Percantage field is enabled in Request Screen$")
 	public void User_609_Check_the_Down_Payment_Percantage_field_is_enabled_in_Request_Screen() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, DrawDownRequestPageobjects_609.REQUESTFORFINANCIN_Maintenance_DownPaymentPercentage());

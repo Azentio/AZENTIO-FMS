@@ -1761,39 +1761,7 @@ public class FMS_PageObjects_609 {
 		return Request_RequestForFinancing_DismissPopUp_609;
 	}
 	
-	@FindBy(xpath = "//span[text()='Approve Level 1']")
-	private WebElement Request_RequestFinancing_ApproveLevel1_609;
-	public WebElement Request_RequestFinancing_ApproveLevel1_609() {
-		return Request_RequestFinancing_ApproveLevel1_609;
-	}
-	
-
-	@FindBy(xpath = "//input[@id='requestFinancingGridTbl_Id_RFFRF00P1_gs_fmsRequestFinancingVO.CODE']")
-	private WebElement Request_RequestFinancing_ApproveLevel1_Code_609;
-	public WebElement Request_RequestFinancing_ApproveLevel1_Code_609() {
-		return Request_RequestFinancing_ApproveLevel1_Code_609;
-	}
-	
-	
-	
-	@FindBy(xpath = "//li[@id='customerGradingRecommendationsTab_RFFRF00P1']/a/span[text()='Customer Grading & Recommendations']")
-	private WebElement Request_RequestFinancing_ApproveLevel1_CustomerGradingRecommendations_609;
-	public WebElement Request_RequestFinancing_ApproveLevel1_CustomerGradingRecommendations_609() {
-		return Request_RequestFinancing_ApproveLevel1_CustomerGradingRecommendations_609;
-	}
-	
-	@FindBy(xpath = "//select[@id='requestDecisionForward_1_RFFRF00P1']")
-	private WebElement Request_RequestFinancing_ApproveLevel1_Decision_609;
-	public WebElement Request_RequestFinancing_ApproveLevel1_Decision_609() {
-		return Request_RequestFinancing_ApproveLevel1_Decision_609;
-	}
-	
-	@FindBy(xpath = "//label[text()='Approve ']")
-	private WebElement Request_RequestFinancing_ApproveLevel1_Approve_609;
-	public WebElement Request_RequestFinancing_ApproveLevel1_Approve_609() {
-		return Request_RequestFinancing_ApproveLevel1_Approve_609;
-	}
-	
+		
 	///***************************************** Credit Review **************************************************************************///
 	@FindBy(xpath = "//div[@id='requestFinancingCreditReview_RFFRF00MT']/div/span[text()='Credit Review']")
 	private WebElement Request_RequestFinancing_CreditReview_609;
@@ -1826,7 +1794,50 @@ public class FMS_PageObjects_609 {
 		return Request_RequestFinancing_CreditReviewBtton_609;
 	}
 	
+	@FindBy(xpath = "//a[@id='RFFRF00P1']/span[text()='Approve Level 1']")
+	private WebElement Request_RequestFinancing_ApproveLevel1_609;
+	public WebElement Request_RequestFinancing_ApproveLevel1_609() {
+		return Request_RequestFinancing_ApproveLevel1_609;
+	}
 	
+
+	@FindBy(xpath = "//input[@id='requestFinancingGridTbl_Id_RFFRF00P1_gs_fmsRequestFinancingVO.CODE']")
+	private WebElement Request_RequestFinancing_ApproveLevel1_Code_609;
+	public WebElement Request_RequestFinancing_ApproveLevel1_Code_609() {
+		return Request_RequestFinancing_ApproveLevel1_Code_609;
+	}
+	
+	
+	
+	@FindBy(xpath = "//li[@id='customerGradingRecommendationsTab_RFFRF00P1']/a/span[text()='Customer Grading & Recommendations']")
+	private WebElement Request_RequestFinancing_ApproveLevel1_CustomerGradingRecommendations_609;
+	public WebElement Request_RequestFinancing_ApproveLevel1_CustomerGradingRecommendations_609() {
+		return Request_RequestFinancing_ApproveLevel1_CustomerGradingRecommendations_609;
+	}
+	
+	@FindBy(xpath = "//select[@id='requestDecisionForward_1_RFFRF00P1']")
+	private WebElement Request_RequestFinancing_ApproveLevel1_Decision_609;
+	public WebElement Request_RequestFinancing_ApproveLevel1_Decision_609() {
+		return Request_RequestFinancing_ApproveLevel1_Decision_609;
+	}
+	
+	@FindBy(xpath = "//select[@id='requestDecisionForwardP1_RFFRF00P1']")
+	private WebElement Request_RequestFinancing_ApproveLevel1_ForwardDecision_609;
+	public WebElement Request_RequestFinancing_ApproveLevel1_ForwardDecision_609() {
+		return Request_RequestFinancing_ApproveLevel1_ForwardDecision_609;
+	}
+	
+	@FindBy(xpath = "//label[text()='Approve ']")
+	private WebElement Request_RequestFinancing_ApproveLevel1_Approve_609;
+	public WebElement Request_RequestFinancing_ApproveLevel1_Approve_609() {
+		return Request_RequestFinancing_ApproveLevel1_Approve_609;
+	}
+
+	
+	
+	
+	
+		
 	//////*********************************journal voucher**********************////
 	@FindBy(xpath = "//label[@id='facilityManagementForm_WIFT008MT_journal_voucher_details_key']")
 	private WebElement WifakapplictionSubmenu_FacilitiesManagement_JournalVoucherDetails ;
@@ -1851,6 +1862,125 @@ public class FMS_PageObjects_609 {
 	public WebElement JournalVoucherDetails_Validate_609() {
 		return JournalVoucherDetails_Validate_609;
 	}
+	
+	
+	
+	
+	
+	@FindBy(xpath = "//td[text()='Draw Down Request']")
+	private WebElement Wifakappliction_DrawDownRequest_609;
+	public WebElement Wifakappliction_DrawDownRequest_609() {
+		return Wifakappliction_DrawDownRequest_609;
+	}
+	
+	@FindBy(xpath = "//a[@id='WIFT009MT']/span[text()='Maintenance']")
+	private WebElement DrawDownRequest_Maintenanace_609;
+	public WebElement DrawDownRequest_Maintenanace_609() {
+		return DrawDownRequest_Maintenanace_609;
+	}
+	
+
+	@FindBy(xpath = "//span[@id='spanLookup_drawDownRequestFacilityReference_WIFT009MT']/span")
+	private WebElement DrawDownRequest_Maintenanace_FacilityReferenceSearch_609;
+	public WebElement DrawDownRequest_Maintenanace_FacilityReferenceSearch_609() {
+		return DrawDownRequest_Maintenanace_FacilityReferenceSearch_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='gridtab_drawDownRequestFacilityReference_WIFT009MT_gs_fmsFacilityVO.FROM_APPLICATION'] ")
+	private WebElement DrawDownRequest_Maintenanace_FacilityReference_609;
+	public WebElement DrawDownRequest_Maintenanace_FacilityReference_609() {
+		return DrawDownRequest_Maintenanace_FacilityReference_609;
+	}
+	
+	@FindBy(xpath = "//span[@id='spanLookup_drawDownRequestDrawDownType_WIFT009MT']/span")
+	private WebElement DrawDownRequest_Maintenanace_DrawdownTypeSearch_609;
+	public WebElement DrawDownRequest_Maintenanace_DrawdownTypeSearch_609() {
+		return DrawDownRequest_Maintenanace_DrawdownTypeSearch_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='gridtab_drawDownRequestDrawDownType_WIFT009MT_gs_drawDownTypeVO.CODE']")
+	private WebElement DrawDownRequest_Maintenanace_DrawdownType_609;
+	public WebElement DrawDownRequest_Maintenanace_DrawdownType_609() {
+		return DrawDownRequest_Maintenanace_DrawdownType_609;
+	}
+	
+	
+	@FindBy(xpath = "//input[@id='drawDownRequestLongNameEnglish_WIFT009MT']")
+	private WebElement DrawDownRequest_Maintenanace_DescriptionEnglish_609;
+	public WebElement DrawDownRequest_Maintenanace_DescriptionEnglish_609() {
+		return DrawDownRequest_Maintenanace_DescriptionEnglish_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='drawDownRequestLongNameArab_WIFT009MT']")
+	private WebElement DrawDownRequest_Maintenanace_DescriptionArab_609;
+	public WebElement DrawDownRequest_Maintenanace_DescriptionArab_609() {
+		return DrawDownRequest_Maintenanace_DescriptionArab_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='drawDownRequestDateSubmitted_WIFT009MT']")
+	private WebElement DrawDownRequest_Maintenanace_DateSubmitted_609;
+	public WebElement DrawDownRequest_Maintenanace_DateSubmitted_609() {
+		return DrawDownRequest_Maintenanace_DateSubmitted_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='drawDownRequestValueDate_WIFT009MT']")
+	private WebElement DrawDownRequest_Maintenanace_ValueDate_609;
+	public WebElement DrawDownRequest_Maintenanace_ValueDate_609() {
+		return DrawDownRequest_Maintenanace_ValueDate_609;
+	}
+	
+	@FindBy(xpath = "//li[@id='drawDownRequestAdditionDetailsTabs_WIFT009MT']/a/span[text()='Drawdown Additional Details']")
+	private WebElement DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_609;
+	public WebElement DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_609() {
+		return DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_609;
+	}
+	
+	@FindBy(xpath = "//span[@id='spanLookup_drawDownRequestProduct_Class_WIFT009MT']/span")
+	private WebElement DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_ProductClassLNSearch_609;
+	public WebElement DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_ProductClassLNSearch_609() {
+		return DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_ProductClassLNSearch_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='gridtab_drawDownRequestProduct_Class_WIFT009MT_gs_viewDrawDownClassVO.CLASS']")
+	private WebElement DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_ProductClassLN_609;
+	public WebElement DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_ProductClassLN_609() {
+		return DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_ProductClassLN_609;
+	}
+	
+	
+	
+	
+	
+	@FindBy(xpath = "//span[@id='spanLookup_drawDownRequestDD_Cy_WIFT009MT']/span")
+	private WebElement DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_DrawDownCYSearch_609;
+	public WebElement DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_DrawDownCYSearch_609() {
+		return DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_DrawDownCYSearch_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='gridtab_drawDownRequestDD_Cy_WIFT009MT_gs_CURRENCY_CODE']")
+	private WebElement DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_DrawDown_609;
+	public WebElement DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_DrawDown_609() {
+		return DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_DrawDown_609;
+	}
+	
+	
+	
+	
+	
+	
+	
+	@FindBy(xpath = "//input[@id='drawDownRequestFC_Amount_WIFT009MT']")
+	private WebElement DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_FCAmount_609;
+	public WebElement DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_FCAmount_609() {
+		return DrawDownRequest_Maintenanace_DrawdownAdditionalDetails_FCAmount_609;
+	}
+	
+	@FindBy(xpath = "//label[@id='drawDownRequestFormId_WIFT009MT_btn_save']")
+	private WebElement DrawDownRequest_Save_609;
+	public WebElement DrawDownRequest_Save_609() {
+		return DrawDownRequest_Save_609;
+	}
+	
 	
     
 }
