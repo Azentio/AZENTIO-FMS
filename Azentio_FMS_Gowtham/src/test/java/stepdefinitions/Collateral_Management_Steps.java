@@ -40,10 +40,6 @@ public class Collateral_Management_Steps {
 		testData = fmsTransactionsExcelData.getTestdata("AT_CM_037");
 	}
 	
-	@And("^User_607 update test data for test case no 127735$")
-	public void user_update_test_data_for_test_case_no_127735() throws Throwable {
-		testData = fmsTransactionsExcelData.getTestdata("AT_CM_039");
-	}
 	
 	
 	@Given("User_607 Click Collateral Type under Parameters")
@@ -816,8 +812,8 @@ public class Collateral_Management_Steps {
 
 	}
 	
-	@Given("User_{int} double click on the retrieved data third row in update after approve menu")
-	public void user_double_click_on_the_retrieved_data_third_row_in_update_after_approve_menu(Integer int1) {
+	@Given("User_607 double click on the retrieved data third row in update after approve menu")
+	public void user_double_click_on_the_retrieved_data_third_row_in_update_after_approve_menu() {
      waitHelper.waitForElementwithFluentwait(driver, Collateral_Management_Obj.facilityTypeSearchCodeResultRow3_610());
 		
 		for (int i = 0; i <= 300; i++) {
@@ -961,7 +957,121 @@ public class Collateral_Management_Steps {
 			autoApproveFacilityFlag.click();
 		}
 	}
+	
+	@Given("User_610 uncheck the Customer Grading flag")
+	public void user_uncheck_the_customer_grading_flag() {
+		waitHelper.waitForElementwithFluentwait(driver, Collateral_Management_Obj.customerGradingFlag_610());
+		WebElement customerGradingFlag = Collateral_Management_Obj.customerGradingFlag_610();
+		if ((customerGradingFlag.isSelected())) {
+			customerGradingFlag.click();
+		}
+	    
+	}
 
+	@Given("User_610 uncheck the Overwrite Grading flag")
+	public void user_uncheck_the_overwrite_grading_flag() {
+		waitHelper.waitForElementwithFluentwait(driver, Collateral_Management_Obj.OverwriteGradingFlag_610());
+		WebElement overwriteGradingFlag = Collateral_Management_Obj.OverwriteGradingFlag_610();
+		if ((overwriteGradingFlag.isSelected())) {
+			overwriteGradingFlag.click();
+		}
+	}
+
+	@Given("User_610 uncheck the Credit Review flag")
+	public void user_uncheck_the_credit_review_flag() {
+		waitHelper.waitForElementwithFluentwait(driver, Collateral_Management_Obj.creditReviewFlag_610());
+		WebElement creditReviewFlag = Collateral_Management_Obj.creditReviewFlag_610();
+		Collateral_Management_Obj.creditReviewFlag_610().click();
+		if ((creditReviewFlag.isSelected())) {
+			creditReviewFlag.click();
+		}
+	}
+
+	@Given("User_610 uncheck the Committee Approval flag")
+	public void user_uncheck_the_committee_approval_flag() {
+		waitHelper.waitForElementwithFluentwait(driver, Collateral_Management_Obj.committeeApprovalFlag_610());
+		WebElement committeeApprovalFlag = Collateral_Management_Obj.committeeApprovalFlag_610();
+		if (!(committeeApprovalFlag.isSelected())) {
+			committeeApprovalFlag.click();
+		}
+	    
+	}
+
+	@Given("User_610 uncheck the Issue Facility Offer flag")
+	public void user_uncheck_the_issue_facility_offer_flag() {
+		waitHelper.waitForElementwithFluentwait(driver, Collateral_Management_Obj.issueFacilityOfferFlag_610());
+		WebElement issueFacilityOfferFlag = Collateral_Management_Obj.issueFacilityOfferFlag_610();
+		if ((issueFacilityOfferFlag.isSelected())) {
+			issueFacilityOfferFlag.click();
+		}
+	    
+	}
+
+	@Given("User_610 uncheck the Client Response flag")
+	public void user_uncheck_the_client_response_flag() {
+		waitHelper.waitForElementwithFluentwait(driver, Collateral_Management_Obj.clientResponseFlag_610());
+		WebElement clientResponseFlag = Collateral_Management_Obj.clientResponseFlag_610();
+		if ((clientResponseFlag.isSelected())) {
+			clientResponseFlag.click();
+		}
+	    
+	}
+
+	@Given("User_610 uncheck the Document Validation flag")
+	public void user_uncheck_the_document_validation_flag() {
+		waitHelper.waitForElementwithFluentwait(driver, Collateral_Management_Obj.documentValidationFlag_610());
+		WebElement documentValidationFlag = Collateral_Management_Obj.documentValidationFlag_610();
+		if ((documentValidationFlag.isSelected())) {
+			documentValidationFlag.click();
+		}
+	    
+	}
+
+	@Given("User_610 uncheck the Final Approval flag")
+	public void user_uncheck_the_final_approval_flag() {
+		waitHelper.waitForElementwithFluentwait(driver, Collateral_Management_Obj.finalApprovalFlag_610());
+		WebElement finalApprovalFlag = Collateral_Management_Obj.finalApprovalFlag_610();
+		if ((finalApprovalFlag.isSelected())) {
+			finalApprovalFlag.click();
+		}
+	    
+	}
+
+	@Given("User_610 uncheck the Create Active Facility If Within Limits flag")
+	public void user_uncheck_the_create_active_facility_if_within_limits_flag() {
+		waitHelper.waitForElementwithFluentwait(driver, Collateral_Management_Obj.createActiveFacilityFlag_610());
+		WebElement createActiveFacilityFlag = Collateral_Management_Obj.createActiveFacilityFlag_610();
+		if (!(createActiveFacilityFlag.isSelected())) {
+			createActiveFacilityFlag.click();
+		}
+	    
+	}
+
+	@Given("User_610 unCheck the Automatically Approve Facility If Within Limits flag")
+	public void user_un_check_the_automatically_approve_facility_if_within_limits_flag() {
+		waitHelper.waitForElementwithFluentwait(driver, Collateral_Management_Obj.autoApproveFacilityFlag_610());
+		WebElement autoApproveFacilityFlag = Collateral_Management_Obj.autoApproveFacilityFlag_610();
+		if (!(autoApproveFacilityFlag.isSelected())) {
+			autoApproveFacilityFlag.click();
+		}
+	}
+	@Given("User_610 unCheck the Mandatory Customer Grading flag")
+	public void user_un_check_the_Mandatory_Customer_Grading_flag() {
+		waitHelper.waitForElementwithFluentwait(driver, Collateral_Management_Obj.Mandatory_Customer_Grading_610());
+		WebElement autoApproveFacilityFlag = Collateral_Management_Obj.Mandatory_Customer_Grading_610();
+		if ((autoApproveFacilityFlag.isSelected())) {
+			autoApproveFacilityFlag.click();
+		}
+	}
+	@Given("User_610 Check the Mandatory Customer Grading flag")
+	public void user_check_the_Mandatory_Customer_Grading_flag() {
+		waitHelper.waitForElementwithFluentwait(driver, Collateral_Management_Obj.Mandatory_Customer_Grading_610());
+		WebElement autoApproveFacilityFlag = Collateral_Management_Obj.Mandatory_Customer_Grading_610();
+		if (!(autoApproveFacilityFlag.isSelected())) {
+			autoApproveFacilityFlag.click();
+		}
+	}
+	
 	@When("^User_610 clicks on the Update button$")
 	public void user_clicks_on_the_update_button() throws Throwable {
 		for (int i = 0; i <= 300; i++) {

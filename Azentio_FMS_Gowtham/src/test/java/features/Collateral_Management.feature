@@ -275,7 +275,7 @@ Feature: Title of your feature
     
     @127822
     Scenario: Open the facility management screen and link a collateral
-     Given navigate to FMS param application and login with valid credentials
+    Given navigate to FMS param application and login with valid credentials
     And User_610 clicks on the parameter module
     And User_610 clicks on the Facility Type feature
     And User_610 clicks on the update after approve menu in Facility type

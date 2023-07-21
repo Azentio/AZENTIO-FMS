@@ -630,6 +630,13 @@ public class Collateral_Management_Obj {
 			return STP_facility_req;
 		}
 		
+		
+		@FindBy(id = "//*[@id='fmsFacilityType_mandatory_grading_P008UP']")
+		private WebElement Mandatory_Customer_Grading;
+		public WebElement Mandatory_Customer_Grading_610() {
+			return Mandatory_Customer_Grading;
+		}
+		
 		@FindBy(xpath = "//input[@id='fmsFacilityType_customer_grading_P008UP']")
 		private WebElement customer_grading_flag;
 		public WebElement customerGradingFlag_610() {

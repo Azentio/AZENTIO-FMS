@@ -1,7 +1,10 @@
 package stepdefinitions;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Map;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -86,7 +89,15 @@ public class Application_for_Financial_Facility {
 		testData = fmsTransactionsExcelData.getTestdata("AT_DDR_078");
 	}
 	
+	@And("^User_607 update test data for test case no 1265140$")
+	public void user_update_test_data_for_test_case_no_1265140() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("AT_CA_025");
+	}
 	
+//	@And("^User_607 update test data for test case no 748962$")
+//	public void user_update_test_data_for_test_case_no_748962() throws Throwable {
+//		testData = fmsTransactionsExcelData.getTestdata("AT_RF_149");
+//	}
 
 
 	
@@ -296,7 +307,46 @@ public class Application_for_Financial_Facility {
 		applicationFinancialObj.getAfterEnter_ValueOn_Product_Class_Search().click();
 
 	}
+	
+	@And("^User_607 Select the Account Code$")
+	public void User_607_Select_the_Account_Code() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_GLCodeSearch());
+		clicksAndActionsHelper.moveToElement(applicationFinancialObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_GLCodeSearch());
+		clicksAndActionsHelper.clickOnElement(applicationFinancialObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_GLCodeSearch());
+	
+		waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_GLCode());
+		clicksAndActionsHelper.moveToElement(applicationFinancialObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_GLCode());
+		WebElement GLCode = applicationFinancialObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_GLCode();
+		GLCode.click();
+		
+		waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.SelectFirst_line_in_Account_in_productClass_wifak_607());
+		clicksAndActionsHelper.doubleClick(applicationFinancialObj.SelectFirst_line_in_Account_in_productClass_wifak_607());
+	}
 
+
+	@And("^User_607 Click on Charges Details label$")
+	public void User_609_Click_on_Charges_Details_label() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetails());
+		clicksAndActionsHelper.clickOnElement(applicationFinancialObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetails());
+	}
+	
+
+	@And("^User_607 Click and select the Charges Details$")
+	public void User_609_Click_and_select_the_Charges_Details() throws Throwable {		
+		waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetails_CodeClick());
+		clicksAndActionsHelper.clickOnElement(applicationFinancialObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetails_CodeClick());
+		
+		waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetails_CodeSelect());
+		clicksAndActionsHelper.clickOnElement(applicationFinancialObj.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_ChargesDetails_CodeSelect());
+
+		waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.ChargesDetails_Ok());
+		for (int i = 0; i < 700; i++) {
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.ChargesDetails_Ok());
+			break;
+		}
+		
+	}
+	
 	@And("^Click Add button AfterEnter Value On Product Class$")
 	public void click_add_button_afterenter_value_on_product_class() throws Throwable {
 		for (int i = 0; i < 200; i++) {
@@ -1226,7 +1276,7 @@ public class Application_for_Financial_Facility {
 	    	//DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.approveLevel1SelectDevision(), testData.get("Decision1"));
 	    	
 	    }
-
+	    StringBuffer SccuesscodeInApproveLev1UnderWifak = new StringBuffer();
 	    @And("^User clicks on the level1 submit button$")
 	    public void user_clicks_on_the_level1_submit_button() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.approveLevel1SubmitBtn());
@@ -1234,7 +1284,13 @@ public class Application_for_Financial_Facility {
 	    	
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonConfirmOk());
 	    	applicationFinancialObj.ButtonConfirmOk().click();
+	    	
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonSuccessOk());
+	    	String SuccessMsg = applicationFinancialObj.limitDetailsValidateSuccessMsg().getText();
+			String substring = SuccessMsg.substring(23, 27);
+			SccuesscodeInApproveLev1UnderWifak.append(substring);
+			System.err.println("Reference Number: " + SccuesscodeInApproveLev1UnderWifak);
+			applicationFinancialObj.Success_Popup().click();
 	    	applicationFinancialObj.ButtonSuccessOk().click();
 	    	
 	    }
@@ -1295,6 +1351,7 @@ public class Application_for_Financial_Facility {
 	    
 	    }
 	    
+	    StringBuffer refIDinApproveLev3UnderWifak = new StringBuffer();
 	    @And("^User clicks on the level3 submit button$")
 	    public void user_clicks_on_the_level3_submit_button() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.approveLevel3SubmitBtn());
@@ -1303,19 +1360,43 @@ public class Application_for_Financial_Facility {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonConfirmOk());
 	    	applicationFinancialObj.ButtonConfirmOk().click();
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonSuccessOk());
+	    	String SuccessMsg = applicationFinancialObj.limitDetailsValidateSuccessMsg().getText();
+	    	
+			String substring = SuccessMsg.substring(23, 27);
+			refIDinApproveLev3UnderWifak.append(substring);
+			System.err.println("Reference Number: " + refIDinApproveLev3UnderWifak);
+	    	
 	    	applicationFinancialObj.ButtonSuccessOk().click();
 	    	
-	    		for (int i = 0; i < 700; i++) {
-					try {
-						if (applicationFinancialObj.SendAlert_pop().isDisplayed()) {
-							applicationFinancialObj.SendAlert_pop().click();
-							break;
-						}
-					} catch (Exception e) {
-
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.sendAlertPopupIn_ApproveLev3Under_wifak_607());
+			for (int i = 0; i < 2000; i++) {
+				try {
+					applicationFinancialObj.sendAlertPopupIn_ApproveLev3Under_wifak_607().click();
+					break;
+				} catch (Exception e) {
+					if (i == 1999) {
+						Assert.fail(e.getMessage());
 					}
 				}
+			}
 	    }
+	    
+	    @Given("User_607 Click final Approval under wifakApplication")
+	    public void user_click_final_approval_under_wifak_application() {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Click_finalApproval_under_wifakApplication_607());
+	    	applicationFinancialObj.Click_finalApproval_under_wifakApplication_607().click();
+	    	
+	    }
+	    
+	    @Given("User_607 Check the record is display in final Approval under wifakApplication")
+	    public void user_check_the_record_is_display_in_final_approval_under_wifak_application() {
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.searchCode_InfinalApproval_under_wifakApplication_607());
+	    	applicationFinancialObj.searchCode_InfinalApproval_under_wifakApplication_607().sendKeys(SccuesscodeInApproveLev1UnderWifak,Keys.ENTER);
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.SelectRecord_InfinalApproval_under_wifakApplication());
+	    	clicksAndActionsHelper.doubleClick(applicationFinancialObj.SelectRecord_InfinalApproval_under_wifakApplication());
+	    }
+
 	
 	
 	  //@636898
@@ -1437,9 +1518,7 @@ public class Application_for_Financial_Facility {
 	        waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Enter_total_value_on_additionalDetails());
 	        applicationFinancialObj.Enter_total_value_on_additionalDetails().sendKeys(testData.get("Total value on additional Details"));
 	        applicationFinancialObj.Enter_total_value_on_additionalDetails().sendKeys(Keys.TAB);
-	        
-
-	   }
+	        	   }
 	   
 	   
 		@And("^Change Total value and down payment$")
@@ -1688,8 +1767,536 @@ public class Application_for_Financial_Facility {
 			applicationFinancialObj.Clickok_AfterLinkcollateral_In_collateral_details_607().click();
 		}
 		
+		//748962
+		//@748962
 		
+		@And("^User_607 update test data for test case no 748962$")
+		public void user_update_test_data_for_test_case_no_748962() throws Throwable {
+			testData = fmsTransactionsExcelData.getTestdata("AT_RF_149");
+		}
+		
+		@Given("Select oneOff inFacility Type Details")
+		public void select_one_off_in_facility_type_details() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.select_oneOff_inFacility_Type_Details());
+			DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.select_oneOff_inFacility_Type_Details(), testData.get("Select oneOff inFacility Type Details"));
+			
+		}
+		@Given("Click Facilitie Managementunder wifakApplication")
+		public void click_click_facilitie_managementunder_wifak_application() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.click_Facilities_Managementunder_wifakApplication());
+			applicationFinancialObj.click_Facilities_Managementunder_wifakApplication().click();
+			
+		}
+
+		@Given("click Maintenance under Facilities Management")
+		public void click_maintenance_under_facilities_management() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.click_Maintenance_under_Facilities_Managementunder());
+			applicationFinancialObj.click_Maintenance_under_Facilities_Managementunder().click();
+			Thread.sleep(5000);
+			
+					try {
+				for (int i = 0; i < 400; i++) {
+					if(applicationFinancialObj.confirmsavepopupokbutton().isDisplayed()) {
+						applicationFinancialObj.confirmsavepopupokbutton().click();
+					}
+				}
+			} catch (Exception e) {
+			
+			}
+		
+		}
+
+		@Given("select recordIn Maintenance under Facilities Management")
+		public void select_record_in_maintenance_under_facilities_management() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.click_searchIn_Maintenance_under_Facilities_Managementunder());
+			try {
+				for (int i = 0; i < 400; i++) {
+					applicationFinancialObj.click_searchIn_Maintenance_under_Facilities_Managementunder().click();
+					break;
+				}
+				
+			} catch (Exception e) {
+			
+			}
+			
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.click_ClearsearchIn_Maintenance_under_Facilities_Managementunder());
+			applicationFinancialObj.click_ClearsearchIn_Maintenance_under_Facilities_Managementunder().click();
+			
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.select_recordIn_Maintenance_under_Facilities_Management());
+			clicksAndActionsHelper.doubleClick(applicationFinancialObj.select_recordIn_Maintenance_under_Facilities_Management());
+			
+		}
+		String getcode;
+		@Given("Get Application code from the record")
+		public void get_application_code_from_the_record() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.getApplicationCode_forSelected_application());
+			for (int i = 0; i <= 700; i++) {
+				try {
+					 getcode =	applicationFinancialObj.getApplicationCode_forSelected_application().getAttribute("prevvalue");	
+					 if(!getcode.isEmpty()) {
+						 break;
+					 }
+				} catch (Exception e) {
+					if (i == 699) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			System.out.println("getcode :" +getcode);
+		
+		}
+
+		@Given("Click drawDown request under wifakApplication")
+		public void click_draw_down_request_under_wifak_application() {
+			
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.Click_drawDown_request_under_wifakApplication());
+			for (int i = 0; i <= 700; i++) {
+				try {
+					applicationFinancialObj.Click_drawDown_request_under_wifakApplication().click();
+					break;
+				} catch (Exception e) {
+					if (i == 699) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		
+		}
+
+		@Given("Click Mainteance under drawDown request")
+		public void click_mainteance_under_draw_down_request() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.Click_Mainteance_under_drawDown_request());
+			applicationFinancialObj.Click_Mainteance_under_drawDown_request().click();
+
+			for (int i = 0; i <= 600; i++) {
+				try {
+					if(applicationFinancialObj.confirmsavepopupokbutton().isDisplayed()) {
+						applicationFinancialObj.confirmsavepopupokbutton().click();
+					}
+					break;
+				} catch (Exception e) {
+				}
+			}
+		}
+
+		@Given("Enter Facility Reference code")
+		public void enter_facility_reference_code() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.enter_Facility_Reference_code());
+			for (int i = 0; i <= 700; i++) {
+				try {
+					//applicationFinancialObj.enter_Facility_Reference_code().sendKeys(getcode);
+					applicationFinancialObj.enter_Facility_Reference_code().sendKeys(getcode);
+					break;
+				} catch (Exception e) {
+					if (i == 699) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			
+		}
+
+		@Given("Enter drawdown type")
+		public void enter_drawdown_type() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.enter_drawdown_type());
+			applicationFinancialObj.enter_drawdown_type().sendKeys(testData.get("DrawDown Type"));
+			
+		}
+
+		@Given("Enter Description English and date")
+		public void enter_description_english_and_date() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.enter_Description_English());
+			applicationFinancialObj.enter_Description_English().sendKeys(testData.get("Description English"));
+
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.enter_valid_dateIn_drawDown_mainInformation());
+			applicationFinancialObj.enter_valid_dateIn_drawDown_mainInformation().sendKeys(testData.get("Description Date"));
+
+		}
+
+		@Given("Click Drawdown Additional Details tab")
+		public void click_drawdown_additional_details_tab() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.Click_Drawdown_Additional_Details_tab());
+			applicationFinancialObj.Click_Drawdown_Additional_Details_tab().click();
+			
+
+		}
+
+		@Given("Enter value Product ClassLN")
+		public void enter_value_product_class_ln() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.Enter_value_Product_ClassLN());
+			applicationFinancialObj.Enter_value_Product_ClassLN().sendKeys(testData.get("Product ClassLN"));
+			applicationFinancialObj.Enter_value_Product_ClassLN().sendKeys(Keys.TAB);
+			
+			for (int i = 0; i <= 300; i++) {
+				if (!(applicationFinancialObj.Enter_value_Product_ClassLN().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			}
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.Enter_FC_ammount());
+			applicationFinancialObj.Enter_FC_ammount().sendKeys(testData.get("FC Ammount"));
+			applicationFinancialObj.Enter_FC_ammount().sendKeys(Keys.TAB);
+			
+		
+			//check the date after add produclassLN possible to change if change again change it
+			
+//			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.click_drawdown_mainInformation());
+//			applicationFinancialObj.click_drawdown_mainInformation().click();
+//			
+//			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.enter_valid_dateIn_drawDown_mainInformation());
+//			applicationFinancialObj.enter_valid_dateIn_drawDown_mainInformation().sendKeys("25/05/2024");
+	//
+//			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.Click_Drawdown_Additional_Details_tab());
+//			applicationFinancialObj.Click_Drawdown_Additional_Details_tab().click();
+			
+		}
+
+		@Given("Click save button IndrawDown Additional Details tab")
+		public void click_save_button_indraw_down_additional_details_tab() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.Click_save_button_IndrawDown_Additional_Details_tab());
+			applicationFinancialObj.Click_save_button_IndrawDown_Additional_Details_tab().click();
+
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.confirmsavepopupokbutton());
+			applicationFinancialObj.confirmsavepopupokbutton().click();
+			
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.Click_okOn_save_pop());
+			applicationFinancialObj.Click_okOn_save_pop().click();
+			
+			for (int i = 0; i < 500; i++) {
+				try {
+					if (applicationFinancialObj.SendAlert_pop().isDisplayed()) {
+						applicationFinancialObj.SendAlert_pop().click();
+						break;
+					}
+				} catch (Exception e) {
+
+				}
+			}
+		}
+
+		@Given("Click verifyAndDeny under drawDownRequest")
+		public void click_verify_and_deny_under_draw_down_request() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.Click_verifyAndDeny_under_drawDownRequest());
+			applicationFinancialObj.Click_verifyAndDeny_under_drawDownRequest().click();
+
+		}
+
+		@Given("Select Record verifyAndDeny under draw Down Request")
+		public void select_record_verify_and_deny_under_draw_down_request() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.ClickClearSearch_verifyAndDeny_under_drawDownRequest());
+			applicationFinancialObj.ClickClearSearch_verifyAndDeny_under_drawDownRequest().click();
+			
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.selectRecord_verifyAndDeny_under_drawDownRequest());
+			clicksAndActionsHelper.doubleClick(applicationFinancialObj.selectRecord_verifyAndDeny_under_drawDownRequest());
+			
+		}
+
+		@Given("Click verify button In verifyAndDeny")
+		public void click_verify_button_in_verify_and_deny() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.Click_verifyButton_InverifyAndDeny());
+			applicationFinancialObj.Click_verifyButton_InverifyAndDeny().click();
+			
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.confirmsavepopupokbutton());
+			applicationFinancialObj.confirmsavepopupokbutton().click();
+			
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.Click_yes_in_postApproval());
+			applicationFinancialObj.Click_yes_in_postApproval().click();
+
+			
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.Click_okOn_save_pop());
+			applicationFinancialObj.Click_okOn_save_pop().click();
+			
+			for (int i = 0; i < 500; i++) {
+				try {
+					if (applicationFinancialObj.SendAlert_pop().isDisplayed()) {
+						applicationFinancialObj.SendAlert_pop().click();
+						break;
+					}
+				} catch (Exception e) {
+
+				}
+			}
+
+		}
+
+		@Given("Click Approve Reject under drawdown")
+		public void click_approve_reject_under_drawdown() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.Click_ApproveReject_under_drawdown());
+			applicationFinancialObj.Click_ApproveReject_under_drawdown().click();
+
+		}
+
+		@Given("Select Record In Approve Reject under drawdown")
+		public void select_record_in_approve_reject_under_drawdown() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.ClickClearsearch_InApproveReject_under_drawdown());
+			applicationFinancialObj.ClickClearsearch_InApproveReject_under_drawdown().click();
+			
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.SelectRecord_InApproveReject_under_drawdown());
+			clicksAndActionsHelper.doubleClick(applicationFinancialObj.SelectRecord_InApproveReject_under_drawdown());
+
+		}
+
+		@Given("Approve The record In Approve Reject under drawdown")
+		public void approve_the_record_in_approve_reject_under_drawdown() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.approveThe_recordInApproveReject_under_drawdown());
+			applicationFinancialObj.approveThe_recordInApproveReject_under_drawdown().click();
+
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.confirmsavepopupokbutton());
+			applicationFinancialObj.confirmsavepopupokbutton().click();
+			
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.Click_okOn_save_pop());
+			applicationFinancialObj.Click_okOn_save_pop().click();
+			
+			for (int i = 0; i < 500; i++) {
+				try {
+					if (applicationFinancialObj.SendAlert_pop().isDisplayed()) {
+						applicationFinancialObj.SendAlert_pop().click();
+						break;
+					}
+				} catch (Exception e) {
+
+				}
+			}
+		}
+
+		@Given("Click Facility Closure Request under drawdown")
+		public void click_facility_closure_request_under_drawdown() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.click_Facility_Closure_Request_under_drawdown());
+			applicationFinancialObj.click_Facility_Closure_Request_under_drawdown().click();
+
+		}
+
+		@Given("Click Mainteance under Facility Closure Request under drawdown")
+		public void click_mainteance_under_facility_closure_request_under_drawdown() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.clickMainteance_under_Facility_Closure_Request_under_drawdown());
+			applicationFinancialObj.clickMainteance_under_Facility_Closure_Request_under_drawdown().click();
+		}
+
+		@Given("Enter Facility Reference In Mainteance under Facility Closure Request")
+		public void enter_facility_reference_in_mainteance_under_facility_closure_request() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.Enter_Facility_Reference_InMainteance_under_Facility_Closure_Request());
+			applicationFinancialObj.Enter_Facility_Reference_InMainteance_under_Facility_Closure_Request().sendKeys(getcode);
+		}
     
+		//824257
+		@Given("User_607 Enter value in Facility Reference under maintaince")
+		public void user_enter_value_in_facility_reference_under_maintaince() {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.enter_Facility_Reference_Mainteance_under_Facility_Closure_Request_607());
+			//Request_for_financing_Obj.enter_Facility_Reference_Mainteance_under_Facility_Closure_Request_607().sendKeys(getcode);
+			applicationFinancialObj.enter_Facility_Reference_Mainteance_under_Facility_Closure_Request_607().sendKeys(getcode);
+		}
+		
+		
+		//127912
+		
+		@Given("User_607 Enter Floating Rate In Limit Details mainteance under wifak")
+		public void user_enter_floating_rate_in_limit_details_mainteance_under_wifak() {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.EnterFloatingRate_In_LimitDetails_mainteance_under_wifak_607());
+			applicationFinancialObj.EnterFloatingRate_In_LimitDetails_mainteance_under_wifak_607().sendKeys("98",Keys.TAB);
+		}
+
+		@Given("User_607 Enter Floating Rate Periodicity In Limit Details mainteance under wifak")
+		public void user_enter_floating_rate_periodicity_in_limit_details_mainteance_under_wifak() {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.EnterFloating_Rate_Periodicity_In_LimitDetails_mainteance_under_wifak_607());
+			applicationFinancialObj.EnterFloating_Rate_Periodicity_In_LimitDetails_mainteance_under_wifak_607().sendKeys("2",Keys.TAB);
+		    
+		}
+
+		@Given("User_607 Enter Floating Rate Periodicity Type In Limit Details mainteance under wifak")
+		public void user_enter_floating_rate_periodicity_type_in_limit_details_mainteance_under_wifak() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.EnterFloating_Rate_Periodicity_Type_In_LimitDetails_mainteance_under_wifak_607());
+			DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.EnterFloating_Rate_Periodicity_Type_In_LimitDetails_mainteance_under_wifak_607(), "Month(s)");
+		    
+		}
+
+		@Given("User_607 Click Issue Facility Offer under Wifak Application")
+		public void user_click_issue_facility_offer_under_wifak_application() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.IssueFacilityOffer_under_WifakApplication_607());
+			applicationFinancialObj.IssueFacilityOffer_under_WifakApplication_607().click();
+		    
+		}
+
+		@Given("User_607 Search Record In Issue Facility Offer under Wifak Application")
+		public void user_search_record_in_issue_facility_offer_under_wifak_application() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.SearchRecordIn_IssueFacilityOffer_under_WifakApplication_607());
+			applicationFinancialObj.SearchRecordIn_IssueFacilityOffer_under_WifakApplication_607().sendKeys(SccuesscodeInApproveLev1UnderWifak,Keys.ENTER);
+		}
+
+		@Given("User_607 select Record In Issue Facility Offer under Wifak Application")
+		public void user_select_record_in_issue_facility_offer_under_wifak_application() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.selectRecordIn_IssueFacilityOffer_under_WifakApplication_607());
+			clicksAndActionsHelper.doubleClick(applicationFinancialObj.selectRecordIn_IssueFacilityOffer_under_WifakApplication_607());
+		    
+		}
+
+		@Given("User_607 Click limit Details In Issue Facility Offer under WifakApplication")
+		public void user_click_limit_details_in_issue_facility_offer_under_wifak_application() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.limitDetailsIn_IssueFacilityOffer_under_WifakApplication_607());
+			applicationFinancialObj.limitDetailsIn_IssueFacilityOffer_under_WifakApplication_607().click();
+		    
+		}
+
+		@Given("User_607 Select product Class In limit Details In Issue Facility Offer under Wifak Application")
+		public void user_select_product_class_in_limit_details_in_issue_facility_offer_under_wifak_application() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.SelectproductClass_InlimitDetailsIn_IssueFacilityOffer_under_WifakApplication_607());
+			clicksAndActionsHelper.doubleClick(applicationFinancialObj.SelectproductClass_InlimitDetailsIn_IssueFacilityOffer_under_WifakApplication_607());
+		    
+		}
+
+		@Given("User_607 Check Floating Rate In limit Details In Issue Facility Offer under WifakApplication")
+		public void user_check_floating_rate_in_limit_details_in_issue_facility_offer_under_wifak_application() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.CheckFloatingRate_InlimitDetailsIn_IssueFacilityOffer_under_WifakApplication_607());
+			JavascriptHelper.scrollIntoView(applicationFinancialObj.CheckFloatingRate_InlimitDetailsIn_IssueFacilityOffer_under_WifakApplication_607());
+			String getCode = applicationFinancialObj.CheckFloatingRate_InlimitDetailsIn_IssueFacilityOffer_under_WifakApplication_607().getAttribute("prevvalue");
+			if (getCode.isBlank()||getCode.isEmpty()) {
+				Assert.fail();
+			}
+		}
+
+		
+		//135014
+		
+
+		@Given("User_607 Click issue offer button In Issue Facility Offer under Wifak Application")
+		public void user_click_issue_offer_button_in_issue_facility_offer_under_wifak_application() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.ClickIssueOffer_BtnIn_IssueFacilityOffer_under_WifakApplication_607());
+			applicationFinancialObj.ClickIssueOffer_BtnIn_IssueFacilityOffer_under_WifakApplication_607().click();
+			
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonConfirmOk());
+	    	applicationFinancialObj.ButtonConfirmOk().click();
+
+	    	for (int i = 0; i < 700; i++) {
+				try {
+					applicationFinancialObj.ErrorPuppop().click();
+			    	break;
+				} catch (Exception e) {
+				}
+			}
+	    	
+	    	for (int i = 0; i < 2000; i++) {
+				try {
+			    	applicationFinancialObj.ButtonSuccessOk().click();
+			    	break;
+				} catch (Exception e) {
+					if (i==1999) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+		
+		@And("User_607 Reload the mainteance tab under wifak")
+		public void user_Reload_the_mainteance_tab_under_wifak() {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonConfirmOk());
+	    	applicationFinancialObj.ButtonConfirmOk().click();
+		}
+		
+		@Given("User_607 Click Search in mainteance under wifak")
+		public void user_click_search_in_mainteance_under_wifak() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.Click_Search_In_mainteance_underWifak_607());
+			for (int i = 0; i < 500; i++) {
+				applicationFinancialObj.Click_Search_In_mainteance_underWifak_607().click();
+				break;
+			}
+		}
+
+		@Given("User_607 Search the record mainteance under wifak")
+		public void user_search_the_record_mainteance_under_wifak() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.SearchRecord_In_mainteance_underWifak_607());
+			applicationFinancialObj.SearchRecord_In_mainteance_underWifak_607().sendKeys(SccuesscodeInApproveLev1UnderWifak,Keys.ENTER);			
+		}
+
+		@Given("User_607 Select the reocord mainteance under wifak")
+		public void user_select_the_reocord_mainteance_under_wifak() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.SelectRecord_In_mainteance_underWifak());
+			clicksAndActionsHelper.doubleClick(applicationFinancialObj.SelectRecord_In_mainteance_underWifak());
+		}
+		
+		@And ("User_607 Check the Record Status In mainteance under wifak")
+		public void user_Check_the_Record_Status_in_mainteance_under_wifak() throws Throwable {
+			String check = "";
+			for (int i = 0; i <= 700; i++) {
+				check = applicationFinancialObj.CheckSts_In_mainteance_underWifak_607().getAttribute("value");
+				if (check.equalsIgnoreCase("Issue Facility Offer")) {
+					break;
+				}
+			}
+			Assert.assertEquals(check, "Issue Facility Offer");
+		}
+		
+		
+		
+		//733338
+	
+		StringBuffer AppCreatedate = new StringBuffer();
+		
+		@Given("User_607 Get App Created Date In Mainteance under Wifak")
+		public void user_get_app_created_date_in_mainteance_under_wifak() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.getAppCreatedDate_InMainteance_under_Wifak_607());
+			String getAppCreatedate = applicationFinancialObj.getAppCreatedDate_InMainteance_under_Wifak_607().getAttribute("prevvalue");
+			
+			System.out.println(getAppCreatedate);
+			//change date format
+			
+			String substring = getAppCreatedate.substring(0, 10);
+			System.out.println(substring);
+			String value =substring;
+            SimpleDateFormat fromUser = new SimpleDateFormat("yyyy-mm-dd");
+            SimpleDateFormat myFormat = new SimpleDateFormat("dd/MM/yyyy");
+            String reformattedStr = myFormat.format(fromUser.parse(value));
+            System.out.println(reformattedStr);
+            AppCreatedate.append(reformattedStr);
+            System.err.println("App Create date: " + reformattedStr);
+			
+			
+			
+			
+		}
+		
+		@Given("User_607 Enter Offer Expiration same as App Created Date In Mainteance under Wifak")
+		public void user_enter_offer_expiration_same_as_app_created_date_in_mainteance_under_wifak() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.getClick_Offer_Expiration_SelectDate());
+			applicationFinancialObj.getClick_Offer_Expiration_SelectDate().sendKeys(AppCreatedate);
+		}
+		
+		@Given("User_607 Click Client Respose under Wifak")
+		public void user_click_client_respose_under_wifak() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.Click_ClientRespose_under_Wifak_607());
+			applicationFinancialObj.Click_ClientRespose_under_Wifak_607().click();
+		    
+		}
+
+		@Given("User_607 Search Record In Client Respose under Wifak")
+		public void user_search_record_in_client_respose_under_wifak() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.SearchRecord_InClientRespose_under_Wifak_607());
+			applicationFinancialObj.SearchRecord_InClientRespose_under_Wifak_607().sendKeys(SccuesscodeInApproveLev1UnderWifak,Keys.ENTER);
+		    
+		}
+
+		@Given("User_607 Select Record In Client Respose under Wifak")
+		public void user_select_record_in_client_respose_under_wifak() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.SelectRecord_InClientRespose_under_Wifak_607());
+			clicksAndActionsHelper.doubleClick(applicationFinancialObj.SelectRecord_InClientRespose_under_Wifak_607());
+		    
+		}
+
+		@Given("User_607 Click Accept button In Client Respose under Wifak")
+		public void user_click_accept_button_in_client_respose_under_wifak() {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.ClickAcceptBtn_InClientRespose_under_Wifak_607());
+			applicationFinancialObj.ClickAcceptBtn_InClientRespose_under_Wifak_607().click();
+		    
+		}
+
+		@Given("User_607 Accept the record In Client Respose under Wifak")
+		public void user_accept_the_record_in_client_respose_under_wifak() {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonConfirmOk());
+	    	applicationFinancialObj.ButtonConfirmOk().click();
+	    	
+	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonSuccessOk());
+	    	applicationFinancialObj.ButtonSuccessOk().click();
+		    
+		}
+
+		
 }
 	
 	

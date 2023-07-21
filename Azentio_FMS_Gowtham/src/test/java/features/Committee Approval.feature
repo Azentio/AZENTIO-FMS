@@ -32,9 +32,10 @@ Feature: Title of your feature
   @1265139_2
   Scenario: EWBI200039.004: Check whether system is allowing to display the request in ‘Authorization Screen’ after Committee Recommendation approval
    Given navigate to FMS application2 and login with valid credentials
-     And User update test data for test case no 636958
-     And Click Request for financin
-     And Click Request for financing
+		And User update test data for test case no 636958
+		And User_607 Click Request under menu Options
+		And User_607 Click Request Financing under Request
+		And Click Request for financing
      #And Goto maintenace
      #And click the reason for submission search box
     #And click the customer search box
@@ -66,18 +67,59 @@ Feature: Title of your feature
 	  And User_607 Click Recommebd button In Approval Committee Recommendations under Request For Financing
 	  And User_607 Click authorice Reject under Request For Financing
 	  And User_607 Search Code In authorice Reject under Request For Financing
-	  And User_607 Select Record In authorice Reject under Request For Financing
 	  And User_607 Check the record in authorice Reject under Request For Financing
 	  
 	  
-	  
-	  
-	  
-	  
-
 	@1265140
 	Scenario: EWBI200039.005: Check whether system is allowing to display the application in ‘Authorization Screen’ before Committee Recommendation approval in facility increase/decrease case
 	Given navigate to FMS application2 and login with valid credentials
+	  And User_607 update test data for test case no 748962
+    And Click Wifak Application first
+    And Click Wifak Application Second
+    And Click Application for financial facilities
+    And Click Maintenance
+    And Click and Select Application for
+    And Search CIF No
+    And Enter codeOn Facility Type
+    And Select oneOff inFacility Type Details
+    And Enter Code In Country of Financing
+    And Enter line Code On Facility Rating
+    And Click on additional Details
+    And Enter the Total Value
+    And Click Offer Expiration SelectDate
+    And Select limit Details
+    And Click Add button on limit Detail
+    And Enter ValueOn Product Class
+    And AfterEnter ValueOn Product Class Search
+    And Click Add button AfterEnter Value On Product Class
+    And Click save button on limit details
+    And User move to the Document details tab
+    And User enter the Solicitor Name
+    And User enter the Estimator Name
+    And User clicks the save button
+    And User clicks the validate button
+    And User clicks the Approve Level1 link
+		And User retrive the first data in approve level1
+		And User select the level1 devision as approve
+		And User clicks on the level1 submit button
+		And User clicks the Approve Level2 link
+		And User retrive the first data in approve level2
+		And User select the level2 devision as approve
+		And User clicks on the level2 submit button
+		And User clicks the Approve Level3 link
+		And User retrive the first data in approve level3
+		And User select the level3 devision as approve
+		And User clicks on the level3 submit button
+		And Click Facilitie Managementunder wifakApplication
+		And click Maintenance under Facilities Management
+		And select recordIn Maintenance under Facilities Management
+		And Get Application code from the record
+	
+	
+	@1265140_2
+	Scenario: EWBI200039.005: Check whether system is allowing to display the application in ‘Authorization Screen’ before Committee Recommendation approval in facility increase/decrease case
+	Given navigate to FMS application2 and login with valid credentials
+		And User_607 update test data for test case no 1265140
     And Click Wifak Application first
     And Click Wifak Application Second
 	  And Click Application for financial facilities

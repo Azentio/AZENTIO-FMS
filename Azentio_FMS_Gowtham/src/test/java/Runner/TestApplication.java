@@ -9,14 +9,13 @@ import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
 @CucumberOptions(features = {
-		"src/test/java/features/Committee Approval.feature"}, 
+		"src/test/java/features/Client_Response.feature"}, 
 		glue = "stepdefinitions",
 		// monochrome=false, //to make steps in color
 		plugin = { "pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"rerun:ReRunScenarios/FailedReRun.txt" }
 //, dryRun = true //to check compilation errors
-		, tags = "@1265139_2"
-		
+		, tags = "@733338"
 )
 public class TestApplication extends AbstractTestNGCucumberTests {
 	/*
@@ -31,7 +30,6 @@ public class TestApplication extends AbstractTestNGCucumberTests {
 	@Before
 	public void beforeExecution() {
 		System.out.println("*** Test Execution started ***");
-
 	}
 
 	@After
