@@ -2388,7 +2388,7 @@ public class FMS_WifakApplication_Obj {
 			return Enter_ValidateCode_InIssueFacilityOffer_Screen__610;
 		}
 		
-		@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT005MT_2_fmsApplVO.CODE']")
+		@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT005MT_1_fmsApplVO.CODE']")
 		private WebElement ClickTheValue_ValidateCode_InIssueFacilityOffer_Screen__610;
 		public WebElement ClickTheValue_ValidateCode_InIssueFacilityOffer_Screen__610() {
 			return ClickTheValue_ValidateCode_InIssueFacilityOffer_Screen__610;
@@ -2483,13 +2483,15 @@ public class FMS_WifakApplication_Obj {
 				
 				//---1st ok
 				
-				//--2nd success ok
-				
 				@FindBy(xpath = "//a[@id='dismissbut_WIFT006MT']")
 				private WebElement dismissBtn_InClientResponse__610;
 				public WebElement dismissBtn_InClientResponse__610() {
 					return dismissBtn_InClientResponse__610;
 				}
+				
+				//--2nd success ok
+				
+				
 				
 				//----------------Document Validation
 				
@@ -2521,14 +2523,23 @@ public class FMS_WifakApplication_Obj {
 				//-------ok 
 				//-----------success ok
 				
+			//------------------Authorize Reject Application
 				
 				
+				@FindBy(xpath = "//button[@id='applicationfacility_authorize_btn_WIFT004MT']")
+				private WebElement authorize_btn_AuthorizeRejectApplication_610;
+				public WebElement authorize_btn_AuthorizeRejectApplication_610() {
+					return authorize_btn_AuthorizeRejectApplication_610;
+				}
 				
+				//----ok
+				//----success ok
 				
-				
-				
-				
-				
+				@FindBy(xpath = "//a[@id='dismissbut_WIFT004MT']")
+				private WebElement dismiss_btn_AuthorizeRejectApplication_610;
+				public WebElement dismiss_btn_AuthorizeRejectApplication_610() {
+					return dismiss_btn_AuthorizeRejectApplication_610;
+				}
 				
 				
 				

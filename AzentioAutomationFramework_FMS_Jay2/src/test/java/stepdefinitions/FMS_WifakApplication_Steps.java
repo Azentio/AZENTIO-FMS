@@ -378,6 +378,7 @@ public class FMS_WifakApplication_Steps {
 		waitHelper.waitForElementwithFluentwait(driver,FMS_WifakApplication_Obj.getEnter_lineCodeOn_Facility_Rating_610());
 		FMS_WifakApplication_Obj.getEnter_lineCodeOn_Facility_Rating_610().sendKeys(testData.get("Facility Rating"));
 		FMS_WifakApplication_Obj.getEnter_lineCodeOn_Facility_Rating_610().sendKeys(Keys.TAB);
+		Thread.sleep(4000);
 
 		for (int i = 0; i <= 300; i++) {
 			if (!(FMS_WifakApplication_Obj.getEnter_lineCodeOn_Facility_Rating_610().getAttribute("prevvalue")
@@ -1101,40 +1102,48 @@ public class FMS_WifakApplication_Steps {
 	@And("^User_610 Enter The Value Solicitor Name$")
 	public void enter_the_value_solicitor_name() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.EnterTheValue_Solicitor_Name_610());
-//			clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.EnterTheValue_Solicitor_Name());
-//			clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.EnterTheValue_Solicitor_Name());
-
-		for (int i = 0; i < 1000; i++) {
-			try {
-				clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.EnterTheValue_Solicitor_Name_610());
-				// FMS_WifakApplication_Obj.EnterTheValue_Solicitor_Name().sendKeys("1");
-				FMS_WifakApplication_Obj.EnterTheValue_Solicitor_Name_610().sendKeys(testData.get("Solicitor Name"));
-				break;
-			} catch (Exception e) {
-				if (i == 199) {
-					Assert.fail(e.getMessage());
-				}
-
-			}
-		}
+			clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.EnterTheValue_Solicitor_Name_610());
+			clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.EnterTheValue_Solicitor_Name_610());
+			FMS_WifakApplication_Obj.EnterTheValue_Solicitor_Name_610().sendKeys(testData.get("Solicitor Name"),Keys.TAB);
+			
+//		for (int i = 0; i < 1000; i++) {
+//			try {
+//				clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.EnterTheValue_Solicitor_Name_610());
+//				// FMS_WifakApplication_Obj.EnterTheValue_Solicitor_Name().sendKeys("1");
+//				FMS_WifakApplication_Obj.EnterTheValue_Solicitor_Name_610().sendKeys(testData.get("Solicitor Name"));
+//				FMS_WifakApplication_Obj.EnterTheValue_Solicitor_Name_610().sendKeys(Keys.TAB);
+//				break;
+//			} catch (Exception e) {
+//				if (i == 199) {
+//					Assert.fail(e.getMessage());
+//				}
+//
+//			}
+//		}
+			
 	}
 
 	@And("^User_610 Enter The Value Estimator Name$")
 	public void enter_the_value_estimator_name() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.EnterTheValue_Estimator_Name_610());
-
-		for (int i = 0; i < 1000; i++) {
-			try {
-				clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.EnterTheValue_Estimator_Name_610());
-				FMS_WifakApplication_Obj.EnterTheValue_Estimator_Name_610().sendKeys(testData.get("Estimator Name"));
-				FMS_WifakApplication_Obj.EnterTheValue_Estimator_Name_610().sendKeys(Keys.TAB);
-				break;
-			} catch (Exception e) {
-				if (i == 199) {
-					Assert.fail(e.getMessage());
-				}
-			}
-		}
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.EnterTheValue_Estimator_Name_610());
+		clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.EnterTheValue_Estimator_Name_610());
+		FMS_WifakApplication_Obj.EnterTheValue_Estimator_Name_610().sendKeys(testData.get("Estimator Name"),Keys.TAB);  
+		Thread.sleep(4000);
+		
+//		for (int i = 0; i < 1000; i++) {
+//			try {
+//				clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.EnterTheValue_Estimator_Name_610());
+//				FMS_WifakApplication_Obj.EnterTheValue_Estimator_Name_610().sendKeys(testData.get("Estimator Name"));
+//				FMS_WifakApplication_Obj.EnterTheValue_Estimator_Name_610().sendKeys(Keys.TAB);
+//				break;
+//			} catch (Exception e) {
+//				if (i == 199) {
+//					Assert.fail(e.getMessage());
+//				}
+//			}
+//			Thread.sleep(4000);
+//		}
 			}
 
 	@And("^User_610 Click Save Button After Document Details$")
@@ -2240,10 +2249,18 @@ public class FMS_WifakApplication_Steps {
 		FMS_WifakApplication_Obj.approveLevel1SubmitBtn_610().click();
 
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ButtonConfirmOk1_610());
-		FMS_WifakApplication_Obj.ButtonConfirmOk1_610().click();
+		for (int i = 0; i < 2000; i++) {
+			try {
+				FMS_WifakApplication_Obj.ButtonConfirmOk1_610().click();
+				break;
+			} catch (Exception e) {
+				if (i == 1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
 
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ButtonSuccessOk1_610());
-
 		for (int i = 0; i < 2000; i++) {
 			try {
 				FMS_WifakApplication_Obj.ButtonSuccessOk1_610().click();
@@ -2300,9 +2317,18 @@ public class FMS_WifakApplication_Steps {
 		FMS_WifakApplication_Obj.approveLevel2SubmitBtn_610().click();
 
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ButtonConfirmOk1_610());
-		FMS_WifakApplication_Obj.ButtonConfirmOk1_610().click();
+		for (int i = 0; i < 2000; i++) {
+			try {
+				FMS_WifakApplication_Obj.ButtonConfirmOk1_610().click();
+				break;
+			} catch (Exception e) {
+				if (i == 1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
 		
-		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ButtonConfirmOk1_610());
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ButtonSuccessOk1_610());
 		for (int i = 0; i < 2000; i++) {
 			try {
 				FMS_WifakApplication_Obj.ButtonSuccessOk1_610().click();
@@ -2349,9 +2375,18 @@ public class FMS_WifakApplication_Steps {
 		FMS_WifakApplication_Obj.approveLevel3SubmitBtn_610().click();
 
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ButtonConfirmOk1_610());
-		FMS_WifakApplication_Obj.ButtonConfirmOk1_610().click();
+		for (int i = 0; i < 2000; i++) {
+			try {
+				FMS_WifakApplication_Obj.ButtonConfirmOk1_610().click();
+				break;
+			} catch (Exception e) {
+				if (i == 1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
 		
-		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ButtonConfirmOk1_610());
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ButtonSuccessOk1_610());
 		for (int i = 0; i < 2000; i++) {
 			try {
 				FMS_WifakApplication_Obj.ButtonSuccessOk1_610().click();
@@ -3875,5 +3910,145 @@ public class FMS_WifakApplication_Steps {
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.CheckTheStatusof_FinalRejection_InAFFF__610());
 	//	clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.CheckTheStatusof_FinalRejection_InAFFF__610());
 		Assert.assertEquals(true, FMS_WifakApplication_Obj.CheckTheStatusof_FinalRejection_InAFFF__610().isDisplayed());
+	}
+	
+	//------------------Authorize Reject
+	
+	@Given("User_{int} Click Authorize button in Authorize Reject Application For Financial Facilities screen")
+	public void user_click_authorize_button_in_authorize_reject_application_for_financial_facilities_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.authorize_btn_AuthorizeRejectApplication_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.authorize_btn_AuthorizeRejectApplication_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.authorize_btn_AuthorizeRejectApplication_610());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.okButton_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.okButton_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.okButton_610());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.successokButton_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.successokButton_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.successokButton_610());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.dismiss_btn_AuthorizeRejectApplication_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.dismiss_btn_AuthorizeRejectApplication_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.dismiss_btn_AuthorizeRejectApplication_610());
+	}
+	
+	//-------------Issue Facility Offer Screen
+	
+	@Given("User_{int} clicks Issue Facility Offer Screen")
+	public void user_clicks_issue_facility_offer_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.IssueFacilityOffer_Screen__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.IssueFacilityOffer_Screen__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.IssueFacilityOffer_Screen__610());
+	}
+
+	@Given("User_{int} retrive the first data in Issue Facility Offer Screen")
+	public void user_retrive_the_first_data_in_issue_facility_offer_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Enter_ValidateCode_InIssueFacilityOffer_Screen__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Enter_ValidateCode_InIssueFacilityOffer_Screen__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.Enter_ValidateCode_InIssueFacilityOffer_Screen__610());
+		FMS_WifakApplication_Obj.Enter_ValidateCode_InIssueFacilityOffer_Screen__610().sendKeys(SuccessMsg,Keys.ENTER);
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_InIssueFacilityOffer_Screen__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_InIssueFacilityOffer_Screen__610());
+		clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_InIssueFacilityOffer_Screen__610());
+	}
+
+	@Given("User_{int} Click Issueoffer button in Issue Facility Offer Screen")
+	public void user_click_issueoffer_button_in_issue_facility_offer_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.issueoffer_btn_InIssueFacilityOffer_Screen__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.issueoffer_btn_InIssueFacilityOffer_Screen__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.issueoffer_btn_InIssueFacilityOffer_Screen__610());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.okButton_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.okButton_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.okButton_610());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.errorPopup_InIssueFacilityOffer_Screen__610());
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.errorPopupOkButton_InIssueFacilityOffer_Screen__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.errorPopupOkButton_InIssueFacilityOffer_Screen__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.errorPopupOkButton_InIssueFacilityOffer_Screen__610());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.successokButton_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.successokButton_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.successokButton_610());
+	}
+	
+	//--------------------------Client Response Screen
+
+	@Given("User_{int} clicks Client Response Screen")
+	public void user_clicks_client_response_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ClientResponse__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.ClientResponse__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.ClientResponse__610());
+	}
+
+	@Given("User_{int} retrive the first data in Client Response Screen")
+	public void user_retrive_the_first_data_in_client_response_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Enter_ValidateCode_InClientResponse__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Enter_ValidateCode_InClientResponse__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.Enter_ValidateCode_InClientResponse__610());
+		FMS_WifakApplication_Obj.Enter_ValidateCode_InClientResponse__610().sendKeys(SuccessMsg,Keys.ENTER);
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_InClientResponse__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_InClientResponse__610());
+		clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_InClientResponse__610());
+	}
+
+	@Given("User_{int} Click Accept button in Client Response Offer Screen")
+	public void user_click_accept_button_in_client_response_offer_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.accept_btn_InClientResponse__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.accept_btn_InClientResponse__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.accept_btn_InClientResponse__610());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.okButton_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.okButton_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.okButton_610());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.successokButton_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.successokButton_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.successokButton_610());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.dismissBtn_InClientResponse__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.dismissBtn_InClientResponse__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.dismissBtn_InClientResponse__610());
+		
+		
+	}
+	
+	//-------------------------------Document Validation Screen
+
+	@Given("User_{int} clicks Document Validation Screen")
+	public void user_clicks_document_validation_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.DocumentValidation__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.DocumentValidation__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.DocumentValidation__610());
+	}
+
+	@Given("User_{int} retrive the first data in Document ValidationScreen")
+	public void user_retrive_the_first_data_in_document_validation_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Enter_ValidateCode_InDocumentValidation_Screen__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Enter_ValidateCode_InDocumentValidation_Screen__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.Enter_ValidateCode_InDocumentValidation_Screen__610());
+		FMS_WifakApplication_Obj.Enter_ValidateCode_InDocumentValidation_Screen__610().sendKeys(SuccessMsg,Keys.ENTER);
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_InDocumentValidation_Screen__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_InDocumentValidation_Screen__610());
+		clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_InDocumentValidation_Screen__610());
+	}
+
+	@Given("User_{int} Click Validate button in Client Document Validation Screen")
+	public void user_click_validate_button_in_client_document_validation_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.validate_btn_InDocumentValidation_Screen__610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.validate_btn_InDocumentValidation_Screen__610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.validate_btn_InDocumentValidation_Screen__610());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.okButton_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.okButton_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.okButton_610());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.successokButton_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.successokButton_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.successokButton_610());
 	}
 }

@@ -254,9 +254,9 @@
     And User_610 Click  Final Approval button in Final Approval Screen
     And User_610 Validate the approved the Value in Final Approval Screen
     
-    #S11 3 params ------------------------------
+    #S11 5 params ------------------------------UnCheck All flag
     
-    @127764_01
+    @127842_01
     Scenario: FMS Param UnCheck All flag
     Given navigate to FMS param application and login with valid credentials2
     And User_610 clicks on the parameter module
@@ -267,25 +267,25 @@
     And User_610 clicks on the facility details tab in update after approve
     And User_610 clicks on the STP Facility Requirements option
     And User_610 check the Customer Grading flag
-    And User_610 check the Overwrite Grading flag
-    And User_610 check the Credit Review flag
+    And User_610 Uncheck the Overwrite Grading flag
+    And User_610 Uncheck the Credit Review flag
     And User_610 Uncheck the Committee Approval flag
-    And User_610 check the Credit Authorization flag
+    And User_610 Uncheck the Credit Authorization flag
     And User_610 Uncheck the Issue Facility Offer flag
     And User_610 Uncheck the Client Response flag
     And User_610 Uncheck the Document Validation flag
     And User_610 Uncheck the Final Approval flag
-    And User_610 check the Create Active Facility If Within Limits flag
-    And User_610 Check the Automatically Approve Facility If Within Limits flag
+    And User_610 Uncheck the Create Active Facility If Within Limits flag
+    And User_610 UnCheck the Automatically Approve Facility If Within Limits flag
     When User_610 clicks on the Update button
     And User_610 after the update go to the Approve menu
     And User_610 enter the code value in Approve menu
     And User_610 double click on the retrieved data in Approve menu
     When User_610 clicks on the Approve button in Approve menu under Facility Type
     
-    #S11 3------------------------------
+    #S11 5------------------------------
     
-     @127764
+     @127842
   Scenario: Check the Final Approval flow
     Given navigate to FMS application2 and login with valid credentials
     And User_609 click Technical details
@@ -343,14 +343,63 @@
 		#Authorize Reject
 		And User_610 Click Authorize Reject Application For Financial Facilities screen
 		And User_610 retrive the first data in Authorize Reject Application For Financial Facilities screen
-		And User_610 Click Approval Committiees button in Authorize Reject Application For Financial Facilities screen
+		And User_610 Click Authorize button in Authorize Reject Application For Financial Facilities screen
+		
 		#Issue Facility
-		And User_610 clicks Issue Facility Offer  Screen
-    And User_610 retrive the first data in Issue Facility Offer  Screen
+		And User_610 clicks Issue Facility Offer Screen
+    And User_610 retrive the first data in Issue Facility Offer Screen
+    And User_610 Click Issueoffer button in Issue Facility Offer Screen
+   
+    #Client Response
+    And User_610 clicks Client Response Screen
+    And User_610 retrive the first data in Client Response Screen
+    And User_610 Click Accept button in Client Response Offer Screen
     
-   #S11 5------------------------------
+    #Document Validation
+    And User_610 clicks Document Validation Screen
+    And User_610 retrive the first data in Document ValidationScreen
+    And User_610 Click Validate button in Client Document Validation Screen
     
-     @127842
+    #Final Approval Screen
+    And User_610 clicks Final Approval Screen
+    And User_610 retrive the first data in Final Approval Screen
+    And User_610 Click  Final Approval button in Final Approval Screen
+    And User_610 Validate the approved the Value in Final Approval Screen
+    
+    
+   
+    #S11 3 params -------------- only chech Credit Authorization flag
+    
+    @127764_01
+    Scenario: FMS Param UnCheck All flag
+    Given navigate to FMS param application and login with valid credentials2
+    And User_610 clicks on the parameter module
+    And User_610 clicks on the Facility Type feature
+    And User_610 clicks on the update after approve menu in Facility type
+    And User_610 enter the code value in update after approve menu
+    And User_610 double click on the retrieved data in update after approve menu
+    And User_610 clicks on the facility details tab in update after approve
+    And User_610 clicks on the STP Facility Requirements option
+    And User_610 check the Customer Grading flag
+    And User_610 Uncheck the Overwrite Grading flag
+    And User_610 Uncheck the Credit Review flag
+    And User_610 Uncheck the Committee Approval flag
+    And User_610 check the Credit Authorization flag
+    And User_610 Uncheck the Issue Facility Offer flag
+    And User_610 Uncheck the Client Response flag
+    And User_610 Uncheck the Document Validation flag
+    And User_610 Uncheck the Final Approval flag
+    And User_610 Uncheck the Create Active Facility If Within Limits flag
+    And User_610 UnCheck the Automatically Approve Facility If Within Limits flag
+    When User_610 clicks on the Update button
+    And User_610 after the update go to the Approve menu
+    And User_610 enter the code value in Approve menu
+    And User_610 double click on the retrieved data in Approve menu
+    When User_610 clicks on the Approve button in Approve menu under Facility Type
+    
+    #S11 3-------------------------------------
+    
+     @127764
   Scenario: Check the Final Approval flow
     Given navigate to FMS application2 and login with valid credentials
     And User_609 click Technical details
@@ -396,34 +445,39 @@
     And User_610 select the level3 decision as forward to Approvel Committee
     When User_610 clicks on the level3 submit button
     
- #		And User_610 click Approval Committee Recommendations Menu
-#		And User_610 enter facility code Approval Committee Recommendations Menu
-#		And User_610 enter CIF code in  Approval Committee Recommendations Menu
-#		
-#		And User_610 Click Authorize Reject Application For Financial Facilities screen
-#		And User_610 retrive the first data in Authorize Reject Application For Financial Facilities screen
-#		
-#		And User_610 clicks Final Approval Screen
-    #And User_610 retrive the first data in Final Approval Screen
-    #
-    #And User_610 clicks Issue Facility Offer  Screen
-    #And User_610 retrive the first data in Issue Facility Offer  Screen 
+    #Approval Committee
+ 		And User_610 click Approval Committee Recommendations Menu
+		And User_610 enter facility code Approval Committee Recommendations Menu
+		And User_610 enter CIF code in  Approval Committee Recommendations Menu
+		Then User_610 validate facility with CIF code displaying in  Approval Committee Recommendations Menu
+		And User_610 Click Recommend button in Approval Committee Recommendations
+		And User_610 Select the decision in Approval Committee Recommendations
+		And User_610 Click on Ok in Approval Committee Recommendations
+		
+ 		#Issue Facility
+		And User_610 clicks Issue Facility Offer Screen
+    And User_610 retrive the first data in Issue Facility Offer Screen
+    And User_610 Click Issueoffer button in Issue Facility Offer Screen
+   
+    #Client Response
+    And User_610 clicks Client Response Screen
+    And User_610 retrive the first data in Client Response Screen
+    And User_610 Click Accept button in Client Response Offer Screen
+    
+    #Document Validation
+    And User_610 clicks Document Validation Screen
+    And User_610 retrive the first data in Document ValidationScreen
+    And User_610 Click Validate button in Client Document Validation Screen
+    
+    #Final Approval Screen
+    And User_610 clicks Final Approval Screen
+    And User_610 retrive the first data in Final Approval Screen
+    And User_610 Click  Final Approval button in Final Approval Screen
+    And User_610 Validate the approved the Value in Final Approval Screen
    
     
     
-     @1278498
-  Scenario: Final Approval
-    Given navigate to FMS application2 and login with valid credentials
-    And User_609 click Technical details
-    And User_609 click clear caches
-    And User_609 Click the ok button
-    And User_610 get the test data set id for AT_FALC_007
-    And User_610 Click Wifak Application first
-    And User_610 Click Wifak Application Second
-    And User_610 Click Application for financial facilities
-    And User_610 Click Maintenance
-     And User_610 search and retrive the first data in Application for financial facilities screen
-    And User_610 Validate Check the Status of Final Rejection or Not in Application for financial facilities screen
+     
     
     
     
