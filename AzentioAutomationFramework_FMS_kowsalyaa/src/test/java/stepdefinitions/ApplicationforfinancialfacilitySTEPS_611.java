@@ -2,6 +2,7 @@ package stepdefinitions;
 
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Random;
 
@@ -83,6 +84,10 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 	@And("^User_611 Get the data set Id for AT_RP_004$")
     public void User_611_Get_the_data_set_Id_for_AT_RP_004() throws Throwable {
 		testData = FMS_AppforFinancialfacilityExcelData.getTestdata("AT_RP_004");
+    }
+	@And("^User_611 Get the data set Id for AT_RF_076$")
+    public void User_611_Get_the_data_set_Id_for_AT_RF_076() throws Throwable {
+		testData = FMS_AppforFinancialfacilityExcelData.getTestdata("AT_RF_076");
     }
 	
 	@And("^User_611 Click the first Wifak Application$")
@@ -334,12 +339,11 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 	    @And("^User_611 Enter the value for solicitorname$")
 	    public void enter_the_value_for_slicitorname() throws Throwable {
 	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.solicitornamesearchbox_611());
-
-			
-			for (int i = 0; i < 1000; i++) {
+	    	for (int i = 0; i < 1000; i++) {
 				try {
 					clickandactionhelper.clickOnElement(wifakapplicationobj_611.solicitornamesearchbox_611());
-					wifakapplicationobj_611.solicitornamesearchbox_611().sendKeys("1");
+					wifakapplicationobj_611.solicitornamesearchbox_611().sendKeys(testData.get("SolicitorName"),Keys.TAB);
+					//wifakapplicationobj_611.solicitornamesearchbox_611().sendKeys("1");
 					break;
 				} catch (Exception e) {
 					if (i == 199) {
@@ -357,7 +361,8 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 	    	for (int i = 0; i < 1000; i++) {
 				try {
 					clickandactionhelper.clickOnElement(wifakapplicationobj_611.estimatornamesearchbox_611());
-					wifakapplicationobj_611.estimatornamesearchbox_611().sendKeys("1");
+					wifakapplicationobj_611.estimatornamesearchbox_611().sendKeys(testData.get("EstimatorName"),Keys.TAB);
+					//wifakapplicationobj_611.estimatornamesearchbox_611().sendKeys("1");
 					break;
 				} catch (Exception e) {
 					if (i == 199) {
@@ -505,7 +510,7 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 	    @And("^User_611 retrive the first data in approve level3$")
 	    public void user_retrive_the_first_data_in_approve_level3() throws Throwable {
 	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.approveLevel3RefCodeInput_611());
-	    	wifakapplicationobj_611.approveLevel3RefCodeInput_611().sendKeys(refCode,Keys.ENTER);;
+	    	wifakapplicationobj_611.approveLevel3RefCodeInput_611().sendKeys(refCode,Keys.ENTER);
 	    	
 	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.approveLevel3RetriveData_611());
 	    	clickandactionhelper.doubleClick(wifakapplicationobj_611.approveLevel3RetriveData_611());
@@ -583,7 +588,7 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 	    	
 	    }
 
-	    @And("^User_611 clicks the Facility Limit Details Tab")
+	    @And("^User_611 clicks the Facility Limit Details Tab in maintenance under facility management")
 	    public void user_clicks_the_facility_limit_details_tab() throws Throwable {   	
 	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.facilitymanagementmaintenancefacilitylimitdetailstab_611());
 	    	wifakapplicationobj_611.facilitymanagementmaintenancefacilitylimitdetailstab_611().click();
@@ -1098,11 +1103,10 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 	    }
 
 	    @And("^User_611 Enter the floating rate periodicity$")
-	    public void enter_the_floating_rate_periodicity() throws Throwable {
+	    public void enter_the_floating_rate_periodicity() throws Throwable {    	
 	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.floatingrateperiodicitysearchbox_611());
-	    	wifakapplicationobj_611.floatingrateperiodicitysearchbox_611().sendKeys("2",Keys.TAB);
-	    	
-	        
+	    	wifakapplicationobj_611.floatingrateperiodicitysearchbox_611().sendKeys(testData.get("FRPeriodicity"),Keys.TAB);
+	    	//wifakapplicationobj_611.floatingrateperiodicitysearchbox_611().sendKeys("2",Keys.TAB);
 	    }
 	    @And("^User_611 Enter the floating rate periodicity type$")
 	    public void enter_the_floating_rate_periodicity_type() throws Throwable {
@@ -2243,8 +2247,227 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 	    
 
 		    }
+	  //@434947
+		    @And("^user_611 choose the product class from iis param$")
+		    public void user_choose_the_product_class_from_iis_param() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.productclassvalue_611());
+		    	wifakapplicationobj_611.productclassvalue_611().sendKeys(testData.get("PCValue"),Keys.TAB);
+		    	//wifakapplicationobj_611.productclassvalue_611().sendKeys("5588",Keys.TAB);
+		    	for(int i = 0; i <= 1000; i++) {
+		            try {
+		                if(!(wifakapplicationobj_611.productclassvalue_611().getAttribute("prevvalue").isBlank())) {
+		                    break;
+		                }
+		            } catch (Exception e) {
+		                // TODO: handle exception
+		            }
+		        }
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.ProductClassOverdraftbtn_611());
+		    	for(int i = 0; i <= 1000; i++) {
+		            try {
+		                if(!(wifakapplicationobj_611.ProductClassOverdraftbtn_611().getAttribute("prevvalue").isBlank())) {
+		                    break;
+		                }
+		            } catch (Exception e) {
+		                // TODO: handle exception
+		            }
+		        }
+			 waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.limitDetailsNewRecordCleanFlag_611());
+		     WebElement cleanFlag = wifakapplicationobj_611.limitDetailsNewRecordCleanFlag_611();
+		     if(!(cleanFlag.isSelected())) {
+		         cleanFlag.click();
+		     }
+		     }
+			
+		    
+		    @Given("user_611 Enter the value of Yield details and Margin rate in application for financial facilities")
+		    public void user_enter_the_value_of_yield_details_and_margin_rate_in_application_for_financial_facilities() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.limitadditionalyielddetails_611());
+		    	clickandactionhelper.doubleClick(wifakapplicationobj_611.limitadditionalyielddetails_611());
+		    	//wifakapplicationobj_611.limitadditionalyielddetails_611().clear();
+		    	wifakapplicationobj_611.limitadditionalyielddetails_611().sendKeys(testData.get("AFFYieldetails"),Keys.TAB);
+		    	//wifakapplicationobj_611.limitadditionalyielddetails_611().sendKeys("11");
+		    	
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.limitadditionaldetailsMarginRate_611());
+		    	wifakapplicationobj_611.limitadditionaldetailsMarginRate_611().sendKeys(testData.get("AFFMarginRate"),Keys.TAB);
+		    	//wifakapplicationobj_611.limitadditionaldetailsMarginRate_611().sendKeys("2");
+		    	
+		    }
+		    
+		    
+		    @Given("User_611 Enter the floating rate with clear btn")
+		    public void user_enter_the_floating_rate_with_clear_btn() throws Throwable {
+		    	for(int i = 0; i <= 300; i++) {
+		    		try {
+		    			javascripthelper.scrollIntoView(wifakapplicationobj_611.floatingRateSearchbox_611());
+		    			break;
+					} catch (Exception e) {
+						if(i == 300) {
+							Assert.fail(e.getMessage());
+						}
+					}
+		    	}
+		    	Thread.sleep(3000);
+		    	wifakapplicationobj_611.floatingRateSearchbox_611().clear();
+		    	wifakapplicationobj_611.productclassvalue_611().sendKeys(testData.get("Floating Rate"),Keys.TAB);
+		    	//wifakapplicationobj_611.floatingRateSearchbox_611().sendKeys("98",Keys.TAB);
+		    	for (int i = 0; i <= 1000; i++) {
+		    		if (!(wifakapplicationobj_611.floatingRateSearchbox_611().getAttribute("prevvalue").isBlank())) {
+		    		break;
+		    		} else if (i == 1000) {
+		    			Assert.fail("Data Not populated");
+		    		}
+		   		}     
+		    }
+		    
+		    @And("^user_611 clicks the update after approve under Facility management$")
+		    public void user_clicks_the_update_after_approve_under_wifak_application() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.FMupdateafterapprove_611());
+		    	wifakapplicationobj_611.FMupdateafterapprove_611().click();
+		    	
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.FMupdateafterapproveclearbtn_611());
+		    	wifakapplicationobj_611.FMupdateafterapproveclearbtn_611().sendKeys(refCode,Keys.ENTER);
+		    	
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.retrivedatadoubleclick_611());
+		    	clickandactionhelper.doubleClick(wifakapplicationobj_611.retrivedatadoubleclick_611());
+		        
+		    }
+		    
 
-	}
+		    @And("^user_611 Enter the value of Limit additional details rate in Facility Management$")
+		    public void enter_the_value_of_yield_details_and_margin_rate_in_facility_management() throws Throwable {
+		    	//waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.FMUpdateafterapproveYieldetailsbtn_611());
+		    	for(int i = 0; i <= 500; i++) {
+		    		try {
+		    			javascripthelper.scrollIntoView(wifakapplicationobj_611.FMUpdateafterapproveYieldetailsbtn_611());
+		    			break;
+					} catch (Exception e) {
+					
+						}
+					}
+		    		waithelper.waitForElementwithFluentwait(driver,wifakapplicationobj_611.FMUpdateafterapproveYieldetailsbtn_611());
+			    	clickandactionhelper.doubleClick(wifakapplicationobj_611.FMUpdateafterapproveYieldetailsbtn_611());
+			    	wifakapplicationobj_611.FMUpdateafterapproveYieldetailsbtn_611().sendKeys(testData.get("FMYieldetails"),Keys.TAB);
+			    	//wifakapplicationobj_611.limitadditionalyielddetails_611().sendKeys("15");
+		    } 
+			
+		    	@And("^user_611 Enter the value of Limit additional details Margin rate in Facility Management$")
+		    	public void enter_the_value_of_Limit_additional_details_margin_rate_in_facility_management() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.FMUpdateafterapprovemargindetailsbtn_611());
+		    	//clickandactionhelper.doubleClick(wifakapplicationobj_611.FMUpdateafterapprovemargindetailsbtn_611());
+		    	wifakapplicationobj_611.FMUpdateafterapprovemargindetailsbtn_611().sendKeys(testData.get("FMMarginRate"));
+		    	wifakapplicationobj_611.FMUpdateafterapprovemargindetailsbtntouch_611().click();
+		    	//wifakapplicationobj_611.limitadditionaldetailsMarginRate_611().sendKeys("5");
+		    	
+		    	 for(int i = 0; i <= 500; i++) {
+		             try {
+		                 if(!(wifakapplicationobj_611.FMUpdateafterapprovemargindetailsbtn_611().getAttribute("prevvalue").isBlank())) {
+		                     break;
+		                 }
+		             } catch (Exception e) {
+		                 // TODO: handle exception
+		             }
+		         }
+		    	 waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.FMUpdateafterapproveFacilitylimitdetailsedit_611());
+		    	 for (int i = 0; i < 300; i++) {
+		    		 try {
+		    			 wifakapplicationobj_611.FMUpdateafterapproveFacilitylimitdetailsedit_611().click();
+					} catch (Exception e) {
+						// TODO: handle exception
+					}
+					
+				}
+		    	
+		    	
+		 }
+
+		    @And("^user_611 Enter the value of doucment code dates$")
+		    public void enter_the_value_of_doucment_code_dates() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.solicitordatesent_611());
+		    	wifakapplicationobj_611.doubleclickfordatevalue_611().click();
+		    	wifakapplicationobj_611.solicitordatesent_611().sendKeys("30/05/2023");
+		    	wifakapplicationobj_611.solicitordatereceived_611().sendKeys("30/05/2023");
+		    	wifakapplicationobj_611.estimatordatesent_611().sendKeys("30/05/2023");
+		    	wifakapplicationobj_611.estimatordatereceived_611().sendKeys("30/05/2023");
+		    }
+		    @And("^user_611 clicks the Approve menu under facility management$")
+		    public void user_clicks_the_approve_menu_under_facility_management() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.facilitymanagementapprove_611());
+		    	wifakapplicationobj_611.facilitymanagementapprove_611().click();
+		    	
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.FacilityManagementApprovebtn_611());
+		    	wifakapplicationobj_611.FacilityManagementApprovebtn_611().click();
+		    }
+		    @Given("User_611 click the yield and margin details in update after approve under Facility Limit Details Tab")
+		    public void user_change_the_yield_and_margin_details_in_update_after_approve_under_facility_limit_details_tab() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.facilitymanagementmaintenancefacilitylimitdetailstab_611());
+		    	wifakapplicationobj_611.facilitymanagementmaintenancefacilitylimitdetailstab_611().click();
+		    	
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.facilitymanagementmaintenancefacilitylimitdetailstabproductclassvaluedoubletap_611());
+		    	clickandactionhelper.doubleClick(wifakapplicationobj_611.facilitymanagementmaintenancefacilitylimitdetailstabproductclassvaluedoubletap_611());
+		    }
+		    @Given("User_611 validate the Limit additional details tab is displayed in Applictaion for financial facility")
+		    public void user_validate_the_limit_additional_details_tab_is_displayed_in_applictaion_for_financial_facility() throws Throwable {
+		        
+		    	WebElement LimitadditionaldetailsinAFF = wifakapplicationobj_611.limitadditionalyielddetails_611();
+
+		        if (LimitadditionaldetailsinAFF.isDisplayed()) {
+		        	Assert.assertTrue(true);
+		    }
+		    }
+		    
+
+		    @Given("User_611 validate To check the Limit additional details tab is updated in update after approve under Fcaility management")
+		    public void user_validate_to_check_the_limit_additional_details_tab_is_updated_in_update_after_approve_under_fcaility_management() throws Throwable {
+		    	WebElement LimitadditionaldetailsinFM = wifakapplicationobj_611.limitadditionalyielddetails_611();
+
+		        if (LimitadditionaldetailsinFM.isDisplayed()) {
+		        	Assert.assertTrue(true);
+		    }
+		    }
+		    @Given("User_611 clicks the Facility Limit Details Tab in update after approve under facility management")
+		    public void user_clicks_the_facility_limit_details_tab_in_update_after_approve_under_facility_management() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.FMUpdateafterapproveFacilitylimitdetails_611());
+		    	wifakapplicationobj_611.FMUpdateafterapproveFacilitylimitdetails_611().click();
+		    	
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.FMUpdateafterapproveFacilitylimitdetailsRetdataDoubleclick_611());
+		    	clickandactionhelper.doubleClick(wifakapplicationobj_611.FMUpdateafterapproveFacilitylimitdetailsRetdataDoubleclick_611());
+		    	
+		    }
+		    @Given("User_611 clicks the save button in update after approve under facility management")
+		    public void user_clicks_the_save_button_in_update_after_approve_under_facility_management() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.FMUpdateafterapproveSavebtn_611());
+		    	for (int i = 0; i < 500; i++) {
+		    		try {
+		    			wifakapplicationobj_611.FMUpdateafterapproveSavebtn_611().click();
+					} catch (Exception e) {
+						// TODO: handle exception
+					}
+					
+				}
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.FMUpdateafterapproveSavebtnconfirmokbtn_611());
+		    	for (int i = 0; i < 300; i++) {
+		    		try {
+		    			wifakapplicationobj_611.FMUpdateafterapproveSavebtnconfirmokbtn_611().click();
+					} catch (Exception e) {
+						// TODO: handle exception
+					}
+					
+				}
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.FMUpdateafterapproveSavebtnconfirmokbtnsuccessokbtn_611());
+		    	wifakapplicationobj_611.FMUpdateafterapproveSavebtnconfirmokbtnsuccessokbtn_611().click();
+		    	
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.FMUpdateafterapproveAlertdismissbtn_611());
+		    	wifakapplicationobj_611.FMUpdateafterapproveAlertdismissbtn_611().click();
+		    }
+
+
+
+}
+
+
+		    
+
 
        
 

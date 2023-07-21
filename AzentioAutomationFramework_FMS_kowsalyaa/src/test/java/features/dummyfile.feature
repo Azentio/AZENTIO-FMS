@@ -6,4 +6,4 @@ Feature: Title of your feature
   @tag1
   Scenario: Title of your scenario
   
- And User_611 validate the Accrual Basis is Changed
+And User_611 clicks the save button in update after approve under facility management

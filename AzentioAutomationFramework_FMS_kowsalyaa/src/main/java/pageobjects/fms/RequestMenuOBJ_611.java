@@ -346,8 +346,127 @@ public class RequestMenuOBJ_611 {
 	public WebElement requestfinancingdrawdownrequestdrawdownadditonaldetailstabproductclassLandNretrivedata_611() {
 		return RequestFinancing_DrawdownRequest_DrawdownAdditionalDetailsTab_ProductClassLandN_Retrivedata;
 	}
-
-
+	//288807
+	@FindBy(xpath = "//li[@id='customerCreditMemoTab_RFFRF00MT']")
+	private WebElement Request_CustomerCreditMemo;
+	public WebElement RequestCustomerCreditMemo_611() {
+		return Request_CustomerCreditMemo;
+	}
+	@FindBy(xpath = "//button[@id='requestFinancingBusinessOverview_morecomments_btn_RFFRF00MT']")
+	private WebElement Request_Businessoverview_Morecomments;
+	public WebElement RequestBusinessoverviewMorecomments_611() {
+		return Request_Businessoverview_Morecomments;
+	}
+	@FindBy(xpath = "//button[@id='requestFinancingIndustry_morecomments_btn_RFFRF00MT']")
+	private WebElement Request_Industry_Morecomments;
+	public WebElement RequestIndustryMorecomments_611() {
+		return Request_Industry_Morecomments;
+	}
+	@FindBy(xpath = "//button[@id='requestFinancingMarketShare_morecomments_btn_RFFRF00MT']")
+	private WebElement Request_MarketShare_Morecomments;
+	public WebElement RequestMarketShareMorecomments_611() {
+		return Request_MarketShare_Morecomments;
+	}
+	@FindBy(xpath = "//button[@id='requestFinancingSalesPerformance_morecomments_btn_RFFRF00MT']")
+	private WebElement Request_SalesPerformance_Morecomments;
+	public WebElement RequestSalesPerformanceMorecomments_611() {
+		return Request_SalesPerformance_Morecomments;
+	}
+	@FindBy(xpath = "//a[@id='RFFRF00P1']")
+	private WebElement Request_Approvelevel1;
+	public WebElement RequestApprovelevel1_611() {
+		return Request_Approvelevel1;
+	}
+	@FindBy(xpath = "//select[@id='requestFinancingApplicationFor_RFFRF00MT']")
+	private WebElement Requestmenu_Reasonforsubmission_NewRequest;
+	public WebElement RequestmenuReasonforsubmissionNewRequest_611() {
+		return Requestmenu_Reasonforsubmission_NewRequest;
+	}
+	@FindBy(xpath = "//input[@id='lookuptxt_requestFinanacingCif_RFFRF00MT']")
+	private WebElement Requestmenu_Customer;
+	public WebElement Requestmenu_Customer_611() {
+		return Requestmenu_Customer;
+	}
+	@FindBy(xpath = "//input[@id='lookuptxt_requestFinancingFacilityType_RFFRF00MT']")
+	private WebElement Requestmenu_facilitytype;
+	public WebElement Requestmenu_facilitytype_611() {
+		return Requestmenu_facilitytype;
+	}
+	@FindBy(xpath = "//input[@id='requestFinancingFacilityTotalvalue_RFFRF00MT']")
+	private WebElement Requestmenu_Totallimit;
+	public WebElement Requestmenu_Totallimit_611() {
+		return Requestmenu_Totallimit;
+	}
+	@FindBy(xpath = "//li[@id='requestFinancingLimitDtlsTabs_RFFRF00MT']")
+	private WebElement Requestmenu_DisbursmentSublimittab;
+	public WebElement RequestmenuDisbursmentSublimittab_611() {
+		return Requestmenu_DisbursmentSublimittab;
+	}
+	@FindBy(xpath = "//td[@id='add_RequestFinancingLimitDetailsGridId_RFFRF00MT']/div/span")
+	private WebElement Requestmenu_DisbursmentSublimittab_addbtn;
+	public WebElement RequestmenuDisbursmentSublimittabaddbtn_611() {
+		return Requestmenu_DisbursmentSublimittab_addbtn;
+	}
+	@FindBy(xpath = "//input[@id='lookuptxt_requestFinancingLimitDetailsGeneralFacilityProductClass_RFFRF00MT']")
+	private WebElement Requestmenu_productClassvalue;
+	public WebElement RequestmenuproductClassvalue_611() {
+		return Requestmenu_productClassvalue;
+	}
+	@FindBy(xpath = "//button[@id='limitDetails_add_btn_RFFRF00MT']")
+	private WebElement Limitdetails_Add_btn;
+	public WebElement LimitdetailsAddbtn_611() {
+		return Limitdetails_Add_btn;
+	}
+	@FindBy(xpath = "//label[@id='requestFinancingFormId_RFFRF00MT_save_key']")
+	private WebElement Requestmenu_Savebtn;
+	public WebElement RequestmenuSavebtn_611() {
+		return Requestmenu_Savebtn;
+	}
+	@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
+	private WebElement Requestmenu_Savebtn_Confirmokbtn;
+	public WebElement RequestmenuSavebtnConfirmokbtn_611() {
+		return Requestmenu_Savebtn_Confirmokbtn;
+	}
+	@FindBy(xpath = "//input[@id='_popup_path_sol_ok']")
+	private WebElement Requestmenu_Savedsuccessfullyokbtn;
+	public WebElement RequestmenuSavedsuccessfullyokbtn_611() {
+		return Requestmenu_Savedsuccessfullyokbtn;
+	}
+	@FindBy(xpath = "//input[@id='requestFinancingGridTbl_Id_RFFRF00P1_gs_fmsRequestFinancingVO.CODE']")
+	private WebElement Requestmenu_Approvelevel1_COdevalue;
+	public WebElement RequestmenuApprovelevel1COdevalue_611() {
+		return Requestmenu_Approvelevel1_COdevalue;
+	}
+	@FindBy(xpath = "//td[@id='td_requestFinancingGridTbl_Id_RFFRF00P1_1_fmsRequestFinancingVO.CODE']")
+	private WebElement Requestmenu_Approvelevel1_COdevalue_Doubletap;
+	public WebElement RequestmenuApprovelevel1COdevaluedoubletap_611() {
+		return Requestmenu_Approvelevel1_COdevalue_Doubletap;
+	}
+	@FindBy(xpath = "//li[@id='customerCreditMemoTab_RFFRF00P1']")
+	private WebElement RequestMenu_Approvelevel1_Customercreditmemotab;
+	public WebElement RequestMenuApprovelevel1Customercreditmemotab_611() {
+		return RequestMenu_Approvelevel1_Customercreditmemotab;
+	}
+	@FindBy(xpath = "//button[@id='requestFinancingBusinessOverview_morecomments_btn_RFFRF00P1']")
+	private WebElement RequestMenu_Approvelevel1_Businessoverview_Morecomments;
+	public WebElement RequestMenuApprovelevel1Businessoverview_Morecomments_611() {
+		return RequestMenu_Approvelevel1_Businessoverview_Morecomments;
+	}
+	@FindBy(xpath = "//button[@id='requestFinancingIndustry_morecomments_btn_RFFRF00P1']")
+	private WebElement RequestMenu_Approvelevel1_Industry_Morecomments;
+	public WebElement RequestMenuApprovelevel1IndustryMorecomments_611() {
+		return RequestMenu_Approvelevel1_Industry_Morecomments;
+	}
+	@FindBy(xpath = "//button[@id='requestFinancingMarketShare_morecomments_btn_RFFRF00P1']")
+	private WebElement RequestMenu_Approvelevel1_Marketshare_Morecomments;
+	public WebElement RequestMenuApprovelevel1MarketshareMorecomments_611() {
+		return RequestMenu_Approvelevel1_Marketshare_Morecomments;
+	}
+	@FindBy(xpath = "//button[@id='requestFinancingSalesPerformance_morecomments_btn_RFFRF00P1']")
+	private WebElement RequestMenu_Approvelevel1_SalesPerformance_Morecomments;
+	public WebElement RequestMenuApprovelevel1SalesPerformanceMorecomments_611() {
+		return RequestMenu_Approvelevel1_SalesPerformance_Morecomments;
+	}
 
 
 	

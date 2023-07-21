@@ -66,4 +66,13 @@ Feature: To validate FMs Application
     And User_611 clicks the Request For Financing under Request Financing
     And User_611 clicks the Maintenence Menu under Request For Financing
     
+    @288807
+    Scenario:Check the new text field in Customer Grading &Recommendations Tab against each ‘Recommendation’ fields in Request for Finance
+    Given navigate to FMS application and login with valid credentials
+    And User_611 clicks the Request Menu under fms application
+    And User_611 clicks the Request Financing under request menu
+    And User_611 clicks the Request For Financing under Request Financing
+    And User_611 clicks the Maintenence Menu under Request For Financing
+    
+    
     

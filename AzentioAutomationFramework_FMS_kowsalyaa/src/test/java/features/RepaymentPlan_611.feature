@@ -80,9 +80,10 @@ Scenario: SUPT190406 - Getting error while clicking on the repayment plan _BMO18
     And User_611 Clicks the Repayment Plan Tab
     And User_611 Enter the No Of Payment Number under repayment plan page
     And User_611 Click the create schedule button
-    And User_611 validate the No Of Payment is created or Not 
-    
-    @816212
+    And User_611 validate the No Of Payment is created or Not
+     
+    # Need to check with john for how to check in iis
+    @816212 
     Scenario: ABSAI190039 - Difference in FMS and IIS re payment plan
    	Given navigate to FMS application and login with valid credentials
     And User_611 Get the data set Id for AT_RP_004
