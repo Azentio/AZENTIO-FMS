@@ -1,11 +1,10 @@
 package tests;
 
-import java.io.IOException;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.testng.annotations.Test;
+import java.util.Map;
 
+import org.openqa.selenium.WebDriver;
+
+import dataProvider.ExcelData;
 import helper.AlertHelper;
 import helper.DropDownHelper;
 import helper.GenericHelper;
@@ -18,33 +17,12 @@ public class helpercheck extends BaseClass {
 	GenericHelper genericHelper=new GenericHelper();
 	AlertHelper alertHelper=new AlertHelper(driver);
 	
-	@Test
-	public void OpenApplication() throws IOException, InterruptedException {
+	public static void main(String[] args) {
+		String path = System.getProperty("user.dir") +"\\TestData\\FMSTestData.xlsx";
+		ExcelData RequestForFinancingExcelData = new ExcelData(path,"RequestForFinancingTestData","DataSet ID");
+		Map<String, String> testdata = RequestForFinancingExcelData.getTestdata("DS01_140576");
+		System.out.println(testdata.get("Facility Type"));
 		
-		    driver=initializeDriver();
-		    driver.get("http://omayo.blogspot.com/");
-			driver.manage().window().maximize();
-			
-			
-		
-			////****Dropdown helper checking
-			WebElement dropdown=driver.findElement(By.id("drop1"));
-			dropDownHelper.SelectUsingVisibleText(dropdown,"doc 3");
-			/*
-			////****Generic helper checking
-			WebElement element=driver.findElement(By.linkText("Page One"));
-			 String value=genericHelper.readValueFromElement(element);
-			 System.out.println(value);
-		
-			
-			//******Alert helper checking
-			driver.findElement(By.id("alert1")).click();
-			alertHelper.AcceptAlert();
-			
-			*/
-			
-			Thread.sleep(5000);
-			 
 	}
 }
 

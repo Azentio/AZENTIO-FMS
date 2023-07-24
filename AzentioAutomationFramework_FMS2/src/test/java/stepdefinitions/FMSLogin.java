@@ -26,7 +26,7 @@ public class FMSLogin {
 		this.driver = driver;
 	}
 
-	public void loginIntoFmsParamApplication(String userType) {
+	public void loginIntoFmsParamApplication2(String userType) {
 		fmsLoginTestData = fmsParamLoginTestData.getTestdata(userType);
 		fmsCommonWebElements = new FMSCommonWebElements(driver);
 		clicksAndActionHelper = new ClicksAndActionsHelper(driver);
@@ -92,7 +92,7 @@ public class FMSLogin {
 		 * driver.quit();
 		 */
 	}
-	public void loginIntoFmsParamApplication2(String userType) {
+	public void loginIntoFmsParamApplication(String userType) {
 		fmsLoginTestData = fmsParamLoginTestData.getTestdata(userType);
 		fmsCommonWebElements = new FMSCommonWebElements(driver);
 		clicksAndActionHelper = new ClicksAndActionsHelper(driver);
@@ -104,9 +104,9 @@ public class FMSLogin {
 		fmsCommonWebElements.fmsPassword().sendKeys(fmsLoginTestData.get("Password"));
 		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsLoginButon());
 		fmsCommonWebElements.fmsLoginButon().click();
-		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsContinueButton());
-		fmsCommonWebElements.fmsContinueButton().click();
-		for (int i = 0; i <200; i++) {
+//		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsContinueButton());
+//		fmsCommonWebElements.fmsContinueButton().click();
+		for (int i = 0; i <500; i++) {
 			try {
 				if (fmsCommonWebElements.fms_UserAlreadyLoginPopUp().isDisplayed()) {
 					fmsCommonWebElements.fms_UserAlreadyLoginYes().click();
@@ -131,7 +131,7 @@ public class FMSLogin {
 		 * driver.quit();
 		 */
 	}
-	public void loginIntoFmsApplication(String userType) {
+	public void loginIntoFmsApplication2(String userType) {
 		fmsLoginTestData = fmsLoginExceldata.getTestdata(userType);
 		fmsCommonWebElements = new FMSCommonWebElements(driver);
 		clicksAndActionHelper = new ClicksAndActionsHelper(driver);
@@ -197,7 +197,7 @@ public class FMSLogin {
 		 * driver.quit();
 		 */
 	}
-	public void loginIntoFmsApplication2(String userType) {
+	public void loginIntoFmsApplication(String userType) {
 		fmsLoginTestData = fmsLoginExceldata.getTestdata(userType);
 		fmsCommonWebElements = new FMSCommonWebElements(driver);
 		clicksAndActionHelper = new ClicksAndActionsHelper(driver);

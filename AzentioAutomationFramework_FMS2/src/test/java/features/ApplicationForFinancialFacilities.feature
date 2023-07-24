@@ -1,9 +1,9 @@
 Feature: To Test the FMS application
-@934645
+@AT_AFF_003
 Scenario: SBI190056 - Error while approving an application - CC1RF00P1
-#This test case also cover the functionality of test case no 947432
+#This test case also cover the functionality of test case no AT_AFF_009
 Given navigate to FMS application2 and login with valid credentials
-And Update test data for test case no 934645
+And Update test data for test case no AT_AFF_003
 And User clicks on the WIFAK_Application first link
 And User clicks on the WIFAK_Application second link
 And User clicks on the Application for financial facility link
@@ -27,7 +27,7 @@ And User enter the Estimator Name
 And User clicks the save button
 And User clicks the validate button
 
-@827877
+@AT_AFF_023
 Scenario: ABEI190241 - Customization and Missing Element Issue on FMS
 #Prerequestics: Make sure the Facility rating field as optional field
 Given navigate to FMS application2 and login with valid credentials
@@ -53,10 +53,10 @@ And User Click on Ok Button in Warning PopUp Menu
 Then User Validate the Facility Rating Field is Displayed as Required
 
 
-@856961
+@AT_AFF_028
 Scenario: ABSAI190175 - FMS_Application for Financial Facility > Maintenance > Final Validate - NullPoint Exception error
 Given navigate to FMS application2 and login with valid credentials
-And Update test data for test case no 856961
+And Update test data for test case no AT_AFF_028
 And User clicks on the WIFAK_Application first link
 And User clicks on the WIFAK_Application second link
 And User clicks on the Application for financial facility link
@@ -81,7 +81,7 @@ And User clicks the save button
 And User clicks the validate button
 
 
-@834957
+@AT_AFF_097
 Scenario: Check a new field “Marketed By” is added under the Main Information Tab in Application for Financial Facilities – Maintenance screen
 Given navigate to FMS application2 and login with valid credentials
 And User clicks on the WIFAK_Application first link
@@ -91,5 +91,390 @@ And User clicks the maintanance menu
 And Validate Marketed by field is displayed in Facility type details section
 
 
+@AT_AFF_013
+Scenario: ABSAI190417 - FMS 1704_Margin > Not accepting Negative Margin
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_AFF_013
+And User_608 clicks on the WIFAK_Application first link
+And User_608 clicks on the WIFAK_Application second link
+And User_608 clicks on the Application for financial facility link
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 select the application for dropdown as new facility
+And User_608 enter the CIF No in main info tab
+And User_608 enter the facility type in main info tab
+And User_608 enter the country of financing in main info tab
+And User_608 enter the facility rating in main info tab
+And User_608 clicks on the additional details tab
+And User_608 enter the total value in additional info tab
+And User_608 enter the expire date in additional info tab
+And User_608 clicks the limit details tab
+And User_608 clicks the add new record button in limit details tab
+And User_608 select the Item in limit Details
+And User_608 select the Maturity date in limit Details
+And User_608 enter the Margin rate in limit Details
+And User_608 clicks on the product class add button
+And User_608 move to the Document details tab
+And User_608 enter the Solicitor Name
+And User_608 enter the Estimator Name
+And User_608 clicks the save button
+And User_608 clicks on the validate button
+
+@AT_AFF_033
+Scenario: AIBBI190316 - Formatting of JV under FMS
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_AFF_033
+And User_608 clicks on the WIFAK_Application first link
+And User_608 clicks on the WIFAK_Application second link
+And User_608 clicks on the Application for financial facility link
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 select the application for dropdown as new facility
+And User_608 enter the CIF No in main info tab
+And User_608 enter the facility type in main info tab
+And User_608 enter the country of financing in main info tab
+And User_608 enter the facility rating in main info tab
+And User_608 clicks on the additional details tab
+And User_608 enter the total value in additional info tab
+And User_608 enter the expire date in additional info tab
+And User_608 clicks the limit details tab
+And User_608 clicks the add new record button in limit details tab
+And User_608 select the Item in limit Details
+And User_608 select the Maturity date in limit Details
+And User_608 enter the Margin rate in limit Details
+And User_608 clicks on the product class add button
+And User_608 move to the Document details tab
+And User_608 enter the Solicitor Name
+And User_608 enter the Estimator Name
+And User_608 clicks the save button
+And User_608 clicks on the validate button
+Then User_608 clicks the Approve Level1 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level1
+And User_608 double click on the retrieved reference code in Approve level1
+And User_608 select the Approve level1 decision as Approve
+When User_608 clicks on the Approve level1 submit button
+Then User_608 clicks the Approve Level2 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level2
+And User_608 double click on the retrieved reference code in Approve level2
+And User_608 select the Approve level2 decision as Approve
+When User_608 clicks on the Approve level2 submit button
+Then User_608 clicks the Approve Level3 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level3
+And User_608 double click on the retrieved reference code in Approve level3
+And User_608 select the Approve level3 decision as Approve
+When User_608 clicks on the Approve level3 submit button
+
+@AT_AFF_082
+Scenario: BIPL160092-Application for One Off Facility Creation
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_AFF_082
+And User_608 clicks on the WIFAK_Application first link
+And User_608 clicks on the WIFAK_Application second link
+And User_608 clicks on the Application for financial facility link
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 select the application for dropdown as new facility
+And User_608 enter the CIF No in main info tab
+And User_608 enter the facility type in main info tab
+And User_608 enter the country of financing in main info tab
+And User_608 enter the facility rating in main info tab
+And User_608 clicks on the additional details tab
+And User_608 enter the total value in additional info tab
+And User_608 enter the expire date in additional info tab
+And User_608 clicks the limit details tab
+And User_608 clicks the add new record button in limit details tab
+And User_608 select the Item in limit Details
+And User_608 select the Maturity date in limit Details
+And User_608 enter the Margin rate in limit Details
+And User_608 clicks on the product class add button
+And User_608 move to the Document details tab
+And User_608 enter the Solicitor Name
+And User_608 enter the Estimator Name
+And User_608 clicks the save button
+And User_608 clicks on the validate button
+
+@AT_AFF_083
+Scenario: BIPL160092-Application for Revolving Facility Creation
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_AFF_083
+And User_608 clicks on the WIFAK_Application first link
+And User_608 clicks on the WIFAK_Application second link
+And User_608 clicks on the Application for financial facility link
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 select the application for dropdown as new facility
+And User_608 enter the CIF No in main info tab
+And User_608 enter the facility type in main info tab
+And User_608 enter the country of financing in main info tab
+And User_608 enter the facility rating in main info tab
+And User_608 clicks on the additional details tab
+And User_608 enter the total value in additional info tab
+And User_608 enter the expire date in additional info tab
+And User_608 clicks the limit details tab
+And User_608 clicks the add new record button in limit details tab
+And User_608 select the Item in limit Details
+And User_608 select the Maturity date in limit Details
+And User_608 enter the Margin rate in limit Details
+And User_608 clicks on the product class add button
+And User_608 move to the Document details tab
+And User_608 enter the Solicitor Name
+And User_608 enter the Estimator Name
+And User_608 clicks the save button
+And User_608 clicks on the validate button
 
 
+@AT_AFF_084
+Scenario: BIPL160092-Application for Facility Creation with Cash & Non cash products
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_AFF_084
+And User_608 clicks on the WIFAK_Application first link
+And User_608 clicks on the WIFAK_Application second link
+And User_608 clicks on the Application for financial facility link
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 select the application for dropdown as new facility
+And User_608 enter the CIF No in main info tab
+And User_608 enter the facility type in main info tab
+And User_608 enter the country of financing in main info tab
+And User_608 enter the facility rating in main info tab
+And User_608 clicks on the additional details tab
+And User_608 enter the total value in additional info tab
+And User_608 enter the expire date in additional info tab
+And User_608 clicks the limit details tab
+And User_608 clicks the add new record button in limit details tab
+And User_608 select the Item in limit Details
+And User_608 select the Maturity date in limit Details
+And User_608 enter the Margin rate in limit Details
+And User_608 clicks on the product class add button
+And User_608 move to the Document details tab
+And User_608 enter the Solicitor Name
+And User_608 enter the Estimator Name
+And User_608 clicks the save button
+And User_608 clicks on the validate button
+Then User_608 clicks the Approve Level1 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level1
+And User_608 double click on the retrieved reference code in Approve level1
+And User_608 select the Approve level1 decision as Approve
+When User_608 clicks on the Approve level1 submit button
+Then User_608 clicks the Approve Level2 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level2
+And User_608 double click on the retrieved reference code in Approve level2
+And User_608 select the Approve level2 decision as Approve
+When User_608 clicks on the Approve level2 submit button
+Then User_608 clicks the Approve Level3 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level3
+And User_608 double click on the retrieved reference code in Approve level3
+And User_608 select the Approve level3 decision as Approve
+When User_608 clicks on the Approve level3 submit button
+
+@AT_RF_037
+Scenario: TSR - AMANA180342
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_RF_037
+And User_608 clicks on the WIFAK_Application first link
+And User_608 clicks on the WIFAK_Application second link
+And User_608 clicks on the Application for financial facility link
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 select the application for dropdown as decrease in main screen
+And User_608 enter the input as Existing Facility Ref in main screen
+And User_608 enter the facility rating in main info tab
+And User_608 clicks on the additional details tab
+And User_608 enter the total value under additional info tab
+And User_608 validate the finance amount should be decresed based on total value
+And User_608 enter the expire date in additional info tab
+And User_608 clicks the limit details tab
+And User_608 validate the Facility value and CV value should be changed same as decreased finance amount under limit details
+And User_608 double click on the product class under limit details
+And User_608 click the clean flag under product calss in limit details tab
+And User_608 click the edit button under product class in limit details tab
+And User_608 move to the Document details tab
+And User_608 enter the Solicitor Name
+And User_608 enter the Estimator Name
+And User_608 clicks the save button
+And User_608 clicks on the validate button
+Then User_608 clicks the Approve Level1 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level1
+And User_608 double click on the retrieved reference code in Approve level1
+And User_608 select the Approve level1 decision as Approve
+When User_608 clicks on the Approve level1 submit button
+Then User_608 clicks the Approve Level2 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level2
+And User_608 double click on the retrieved reference code in Approve level2
+And User_608 select the Approve level2 decision as Approve
+When User_608 clicks on the Approve level2 submit button
+Then User_608 clicks the Approve Level3 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level3
+And User_608 double click on the retrieved reference code in Approve level3
+And User_608 select the Approve level3 decision as Approve
+When User_608 clicks on the Approve level3 submit button
+
+@AT_RF_103
+Scenario: TSR-SUPT170428
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_RF_103
+And User_608 clicks on the WIFAK_Application first link
+And User_608 clicks on the WIFAK_Application second link
+And User_608 clicks on the Application for financial facility link
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 select the application for dropdown as decrease in main screen
+And User_608 enter the input as Existing Facility Ref in main screen
+And User_608 enter the facility rating in main info tab
+And User_608 clicks on the additional details tab
+And User_608 enter the total value under additional info tab
+And User_608 validate the finance amount should be decresed based on total value
+And User_608 enter the expire date in additional info tab
+And User_608 clicks the limit details tab
+And User_608 validate the Facility value and CV value should be changed same as decreased finance amount under limit details
+And User_608 double click on the product class under limit details
+And User_608 click the clean flag under product calss in limit details tab
+And User_608 click the edit button under product class in limit details tab
+And User_608 move to the Document details tab
+And User_608 enter the Solicitor Name
+And User_608 enter the Estimator Name
+And User_608 clicks the save button
+And User_608 clicks on the validate button
+
+@AT_RF_104
+Scenario: TSR- AMANAUPG170108
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_RF_104
+And User_608 clicks on the WIFAK_Application first link
+And User_608 clicks on the WIFAK_Application second link
+And User_608 clicks on the Application for financial facility link
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 select the application for dropdown as decrease in main screen
+And User_608 enter the input as Existing Facility Ref in main screen
+And User_608 enter the facility rating in main info tab
+And User_608 clicks on the additional details tab
+And User_608 enter the total value under additional info tab
+And User_608 validate the finance amount should be decresed based on total value
+And User_608 enter the expire date in additional info tab
+And User_608 clicks the limit details tab
+And User_608 validate the Facility value and CV value should be changed same as decreased finance amount under limit details
+And User_608 double click on the product class under limit details
+And User_608 click the clean flag under product calss in limit details tab
+And User_608 click the edit button under product class in limit details tab
+And User_608 move to the Document details tab
+And User_608 enter the Solicitor Name
+And User_608 enter the Estimator Name
+And User_608 clicks the save button
+And User_608 clicks on the validate button
+
+
+@AT_RF_115
+Scenario: TSR - BTII170138
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_RF_115
+And User_608 clicks on the WIFAK_Application first link
+And User_608 clicks on the WIFAK_Application second link
+And User_608 clicks on the Application for financial facility link
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 select the application for dropdown as decrease in main screen
+And User_608 enter the input as Existing Facility Ref in main screen
+And User_608 enter the facility rating in main info tab
+And User_608 clicks on the additional details tab
+And User_608 enter the total value under additional info tab
+And User_608 validate the finance amount should be decresed based on total value
+And User_608 enter the expire date in additional info tab
+And User_608 clicks the limit details tab
+And User_608 validate the Facility value and CV value should be changed same as decreased finance amount under limit details
+And User_608 double click on the product class under limit details
+And User_608 click the clean flag under product calss in limit details tab
+And User_608 click the edit button under product class in limit details tab
+And User_608 move to the Document details tab
+And User_608 enter the Solicitor Name
+And User_608 enter the Estimator Name
+And User_608 clicks the save button
+And User_608 clicks on the validate button
+
+@AT_FAID_007
+Scenario: TSR-IIAB140131 - Cant decrease DD
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_FAID_007
+And User_608 clicks on the WIFAK_Application first link
+And User_608 clicks on the WIFAK_Application second link
+And User_608 clicks on the Application for financial facility link
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 select the application for dropdown as decrease in main screen
+And User_608 enter the input as Existing Facility Ref in main screen
+And User_608 enter the facility rating in main info tab
+And User_608 clicks on the additional details tab
+And User_608 enter the total value under additional info tab
+And User_608 validate the finance amount should be decresed based on total value
+And User_608 enter the expire date in additional info tab
+And User_608 clicks the limit details tab
+And User_608 validate the Facility value and CV value should be changed same as decreased finance amount under limit details
+And User_608 double click on the product class under limit details
+And User_608 click the clean flag under product calss in limit details tab
+And User_608 click the edit button under product class in limit details tab
+And User_608 move to the Document details tab
+And User_608 enter the Solicitor Name
+And User_608 enter the Estimator Name
+And User_608 clicks the save button
+And User_608 clicks on the validate button
+Then User_608 clicks the Approve Level1 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level1
+And User_608 double click on the retrieved reference code in Approve level1
+And User_608 select the Approve level1 decision as Approve
+When User_608 clicks on the Approve level1 submit button
+Then User_608 clicks the Approve Level2 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level2
+And User_608 double click on the retrieved reference code in Approve level2
+And User_608 select the Approve level2 decision as Approve
+When User_608 clicks on the Approve level2 submit button
+Then User_608 clicks the Approve Level3 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level3
+And User_608 double click on the retrieved reference code in Approve level3
+And User_608 select the Approve level3 decision as Approve
+When User_608 clicks on the Approve level3 submit button
+
+@AT_FAID_008
+Scenario: Check the new fields behavior in Increase/Decrease/Modification application
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_FAID_008
+And User_608 clicks on the WIFAK_Application first link
+And User_608 clicks on the WIFAK_Application second link
+And User_608 clicks on the Application for financial facility link
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 select the application for dropdown as decrease in main screen
+And User_608 enter the input as Existing Facility Ref in main screen
+And User_608 enter the facility rating in main info tab
+And User_608 clicks on the additional details tab
+And User_608 enter the total value under additional info tab
+And User_608 validate the finance amount should be decresed based on total value
+
+@AT_FAID_009
+Scenario: Create the Increase Application via API and check system increases the limit of the facility
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_FAID_009
+And User_608 clicks on the WIFAK_Application first link
+And User_608 clicks on the WIFAK_Application second link
+And User_608 clicks on the Application for financial facility link
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 select the application for dropdown as decrease in main screen
+And User_608 enter the input as Existing Facility Ref in main screen
+And User_608 enter the facility rating in main info tab
+And User_608 clicks on the additional details tab
+And User_608 enter the total value under additional info tab
+And User_608 validate the finance amount should be decresed based on total value
+And User_608 enter the expire date in additional info tab
+And User_608 clicks the limit details tab
+And User_608 validate the Facility value and CV value should be changed same as decreased finance amount under limit details
+And User_608 double click on the product class under limit details
+And User_608 click the clean flag under product calss in limit details tab
+And User_608 click the edit button under product class in limit details tab
+And User_608 move to the Document details tab
+And User_608 enter the Solicitor Name
+And User_608 enter the Estimator Name
+And User_608 clicks the save button
+And User_608 clicks on the validate button
+
+@AT_FAID_010
+Scenario: Create the Decrease Application via API and check system decreases the limit of the facility
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_FAID_010
+And User_608 clicks on the WIFAK_Application first link
+And User_608 clicks on the WIFAK_Application second link
+And User_608 clicks on the Application for financial facility link
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 select the application for dropdown as decrease in main screen
+And User_608 enter the input as Existing Facility Ref in main screen
+And User_608 enter the facility rating in main info tab
+And User_608 clicks on the additional details tab
+And User_608 enter the total value under additional info tab
+And User_608 validate the finance amount should be decresed based on total value

@@ -508,9 +508,9 @@ public class ApplicationForFinancialFacilitiesNewStep {
 		String readOnly = WIFAKapplicationObj.BMRecommedTab().getAttribute("readonly");
 		Assert.assertNotNull(readOnly);
 	}
-	@And("^Update test data for test case no 934645$")
-    public void update_test_data_for_test_case_no_934645() throws Throwable {
-    	testData = csmTransactionsExcelData.getTestdata("934645_D1");
+	@And("^Update test data for test case no AT_AFF_003$")
+    public void update_test_data_for_test_case_no_AT_AFF_003() throws Throwable {
+    	testData = csmTransactionsExcelData.getTestdata("DS_AT_AFF_003");
     }
 	@Then("^User Validate the Facility Rating Field is Displayed as Required$")
     public void user_validate_the_facility_rating_field_is_displayed_as_required() throws Throwable {
@@ -661,9 +661,6 @@ public class ApplicationForFinancialFacilitiesNewStep {
     	selenium_Actions.getWaitHelper().waitForElementwithFluentwait(driver, WIFAKapplicationObj.FMS_MarketedByField());
     	Assert.assertTrue(WIFAKapplicationObj.FMS_MarketedByField().isDisplayed());
     }
-    @And("^Update test data for test case no 856961$")
-    public void update_test_data_for_test_case_no_856961() throws Throwable {
-       
-    }
+    
     
 }
