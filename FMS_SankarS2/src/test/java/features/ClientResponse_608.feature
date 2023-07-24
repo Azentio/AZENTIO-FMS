@@ -31,6 +31,8 @@ And User_608 enter the code value in Approve menu
 And User_608 double click on the retrieved data in Approve menu
 When User_608 clicks on the Approve button in Approve menu under Facility Type
 
+# FMS --> wifak --> application financial facility --> create facility with floting Rate,FR priodicity,FR priodicity type , vaidate and approve
+# FMS --> Wifak --> Client Response menu --> retrieve the facility --> limit details --> validate floting Rate,FR priodicity,FR priodicity type
 @AT_CR_005
 @AT_CR_005_Core
 Scenario: Check the new filds are available at the Customer Response screens
@@ -88,7 +90,9 @@ Then User_608 validate the product class Floating Rate under limit details in Cl
 Then User_608 validate the product class Floating Rate Periodicity under limit details in Client Response
 Then User_608 validate the product class Floating Rate Type under limit details in Client Response
 
-
+# FMS --> wifak --> application financial facility --> create facility with floting Rate,FR priodicity,FR priodicity type , vaidate and approve
+# FMS --> Wifak --> Client Response menu --> retrieve the facility --> reject the application 
+# FMS --> wifak --> application financial facility --> maintanance --> retrieve the reject application --> vaidate the status
 @AT_CR_006
 Scenario: Client Response
 
@@ -143,25 +147,3 @@ And User_608 clicks on the search button in Application for financial facility m
 And User_608 enter the reference code under Application for financial facility maintanance in WIFAK
 And User_608 double click searched record in Application for financial facility main screen
 And User_608 validate the status in Application for financial facility main screen
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

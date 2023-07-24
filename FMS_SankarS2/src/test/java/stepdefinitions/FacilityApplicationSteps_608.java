@@ -296,6 +296,15 @@ public class FacilityApplicationSteps_608 {
 			GeneralLimitCIFFlag.click();
      	}
 	}
+	
+	@And("User_608 uncheck the General limit by CIF flag in update after approve menu under control records")
+	public void user_uncheck_the_general_limit_by_cif_flag_in_update_after_approve_menu_under_control_records() {
+		waitHelper.waitForElementwithFluentwait(driver,	fmsParamObj608.controlRecordsUpdateAfterApproveGeneralLimitCIFFlag_608());
+		WebElement GeneralLimitCIFFlag = fmsParamObj608.controlRecordsUpdateAfterApproveGeneralLimitCIFFlag_608();
+		if(GeneralLimitCIFFlag.isSelected()) {
+			GeneralLimitCIFFlag.click();
+     	}
+	}
 
 	
 }

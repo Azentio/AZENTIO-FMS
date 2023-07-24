@@ -1,7 +1,7 @@
 Feature: To check the Authorize/Reject Feature
 
 ## FMS Param --> Facility type --> update after approve --> Facility Details tab --> STP facility req -> Uncheck Credit authorize flag
-@AT_AR_001
+@AT_AR_001 @AT_AR_003
 @AT_AR_001_Param
 Scenario: Check the new filds are available at the Authorize/Reject screens
 
@@ -31,6 +31,8 @@ And User_608 enter the code value in Approve menu
 And User_608 double click on the retrieved data in Approve menu
 When User_608 clicks on the Approve button in Approve menu under Facility Type
 
+# FMS --> wifak--> application financial facility --> create facility with floting Rate,FR priodicity,FR priodicity type , vaidate and approve
+# FMS --> Wifak --> Authorize\Reject menu -- retrieve the facility --> limit details --> validate floting Rate,FR priodicity,FR priodicity type
 @AT_AR_001
 @AT_AR_001_Core
 Scenario: Check the new filds are available at the Authorize/Reject screens
@@ -87,4 +89,134 @@ And User_608 double click the product class row under limit details tab in Autho
 Then User_608 validate the product class Floating Rate under limit details in Authorize\Reject
 Then User_608 validate the product class Floating Rate Periodicity under limit details in Authorize\Reject
 Then User_608 validate the product class Floating Rate Type under limit details in Authorize\Reject
+
+@AT_AR_003
+@AT_AR_003_Authorize
+Scenario: Authorize/Reject Application for Financial Facilities
+
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_AR_003
+And User_608 clicks on the WIFAK_Application first link
+And User_608 clicks on the WIFAK_Application second link
+And User_608 clicks on the Application for financial facility link
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 select the application for dropdown as new facility
+And User_608 enter the CIF No in main info tab
+And User_608 enter the facility type in main info tab
+And User_608 enter the country of financing in main info tab
+And User_608 enter the facility rating in main info tab
+And User_608 clicks on the additional details tab
+And User_608 enter the total value in additional info tab
+And User_608 enter the expire date in additional info tab
+And User_608 clicks the limit details tab
+And User_608 clicks the add new record button in limit details tab
+And User_608 enter the product class details
+And User_608 clicks on the product class add button
+And User_608 move to the Document details tab
+And User_608 enter the Solicitor Name
+And User_608 enter the Estimator Name
+And User_608 clicks the save button
+And User_608 clicks on the validate button for Authorize Reject feature
+And User_608 close the maintanance screen under Application for financial facility in WIFAK
+Then User_608 clicks the Approve Level1 menu under Application for financial facilities
+And User_608 get the test data for test case AT_AR_003
+And User_608 enter the reference code in Approve level1
+And User_608 validate the Application reference code is should be displayed in Approve level1
+And User_608 select the Application reference code in Approve level1
+And User_608 double click on the retrieved reference code in Approve level1
+And User_608 select the Approve level1 decision as Approve
+When User_608 clicks on the Approve level1 submit button
+Then User_608 clicks the Approve Level2 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level2
+And User_608 double click on the retrieved reference code in Approve level2
+And User_608 select the Approve level2 decision as Approve
+When User_608 clicks on the Approve level2 submit button
+Then User_608 clicks the Approve Level3 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level3
+And User_608 double click on the retrieved reference code in Approve level3
+And User_608 select the Approve level3 decision as Approve
+When User_608 clicks on the Approve level3 submit button
+And User_608 click the Authorize\Reject menu under WIFAK Application
+And User_608 enter the reference code in searchgrid under Authorize\Reject
+And User_608 double click the reference code in searchgrid under Authorize\Reject
+When User_608 click the Authorize button in Authorize\Reject screen
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 clicks on the search button in Application for financial facility main screen
+And User_608 enter the reference code under Application for financial facility maintanance in WIFAK
+And User_608 double click searched record in Application for financial facility main screen
+And User_608 validate the status in Application for financial facility main screen for Authorize
+
+
+@AT_AR_003
+@AT_AR_003_Reject
+Scenario: Authorize/Reject Application for Financial Facilities
+
+Given navigate to FMS application and login with valid credentials
+And User_608 get the test data for test case AT_AR_003
+And User_608 clicks on the WIFAK_Application first link
+And User_608 clicks on the WIFAK_Application second link
+And User_608 clicks on the Application for financial facility link
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 select the application for dropdown as new facility
+And User_608 enter the CIF No in main info tab
+And User_608 enter the facility type in main info tab
+And User_608 enter the country of financing in main info tab
+And User_608 enter the facility rating in main info tab
+And User_608 clicks on the additional details tab
+And User_608 enter the total value in additional info tab
+And User_608 enter the expire date in additional info tab
+And User_608 clicks the limit details tab
+And User_608 clicks the add new record button in limit details tab
+And User_608 enter the product class details
+And User_608 clicks on the product class add button
+And User_608 move to the Document details tab
+And User_608 enter the Solicitor Name
+And User_608 enter the Estimator Name
+And User_608 clicks the save button
+And User_608 clicks on the validate button for Authorize Reject feature
+And User_608 close the maintanance screen under Application for financial facility in WIFAK
+Then User_608 clicks the Approve Level1 menu under Application for financial facilities
+And User_608 get the test data for test case AT_AR_003
+And User_608 enter the reference code in Approve level1
+And User_608 validate the Application reference code is should be displayed in Approve level1
+And User_608 select the Application reference code in Approve level1
+And User_608 double click on the retrieved reference code in Approve level1
+And User_608 select the Approve level1 decision as Approve
+When User_608 clicks on the Approve level1 submit button
+Then User_608 clicks the Approve Level2 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level2
+And User_608 double click on the retrieved reference code in Approve level2
+And User_608 select the Approve level2 decision as Approve
+When User_608 clicks on the Approve level2 submit button
+Then User_608 clicks the Approve Level3 menu under Application for financial facilities
+And User_608 enter the reference code in Approve level3
+And User_608 double click on the retrieved reference code in Approve level3
+And User_608 select the Approve level3 decision as Approve
+When User_608 clicks on the Approve level3 submit button
+And User_608 click the Authorize\Reject menu under WIFAK Application
+And User_608 enter the reference code in searchgrid under Authorize\Reject
+And User_608 double click the reference code in searchgrid under Authorize\Reject
+When User_608 click the Reject button in Authorize\Reject screen
+And User_608 clicks the maintanance menu under Application for financial facility
+And User_608 clicks on the search button in Application for financial facility main screen
+And User_608 enter the reference code under Application for financial facility maintanance in WIFAK
+And User_608 double click searched record in Application for financial facility main screen
+And User_608 validate the status in Application for financial facility main screen for Reject
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

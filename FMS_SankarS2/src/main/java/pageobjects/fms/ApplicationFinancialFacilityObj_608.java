@@ -222,7 +222,7 @@ public class ApplicationFinancialFacilityObj_608 {
 		return wifak_application_financial_facility_searchgrid;
 	}
 	
-	@FindBy(xpath = "//input[@name='fmsApplVO.CODE']")
+	@FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT001MT_gs_fmsApplVO.CODE']")
 	private WebElement application_financial_facility_search_code;
 	public WebElement applicationFinancialFacilitySearchCode_608() {
 		return application_financial_facility_search_code;
@@ -1508,6 +1508,18 @@ public class ApplicationFinancialFacilityObj_608 {
 	private WebElement wifak_authorize_or_reject_limit_details_tab_FR_periodicity_type;
 	public WebElement wifakAuthorizeOrRejectLimitDetailsTabFRPeriodicityType_608() {
 		return wifak_authorize_or_reject_limit_details_tab_FR_periodicity_type;
+	}
+	
+	@FindBy(xpath = "//button[@id='applicationfacility_authorize_btn_WIFT004MT']")
+	private WebElement wifak_authorize_or_reject_menu_authorize_btn;
+	public WebElement wifakAuthorizeOrRejectMenuAuthorizeBtn_608() {
+		return wifak_authorize_or_reject_menu_authorize_btn;
+	}
+	
+	@FindBy(xpath = "//button[@id='applicationfacility_AuthorizeReject_btn_WIFT004MT']")
+	private WebElement wifak_authorize_or_reject_menu_reject_btn;
+	public WebElement wifakAuthorizeOrRejectMenuRejectBtn_608() {
+		return wifak_authorize_or_reject_menu_reject_btn;
 	}
 	
 	

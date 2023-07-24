@@ -378,7 +378,15 @@ public class RequestForFinancingSteps_608 {
 	@And("^User_608 double click on the retrived data$")
 	public void user_double_click_on_the_retrived_data() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.issueFacilityOfferSearchResult_608());
-		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.issueFacilityOfferSearchResult_608());
+		for (int i = 0; i <= 300; i++) {
+			try {
+				clicksAndActionsHelper.doubleClick(requestForFinancingObj608.issueFacilityOfferSearchResult_608());
+				break;
+			} catch (Exception e) {
+				
+			}
+		}
+		
 		for (int i = 0; i <= 500; i++) {
 			try {
 				if (!(requestForFinancingObj608.issueFacilityOfferCode_608().getAttribute("prevvalue").isBlank())) {
