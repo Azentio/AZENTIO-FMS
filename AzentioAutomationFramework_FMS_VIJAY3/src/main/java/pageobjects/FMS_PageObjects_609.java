@@ -622,6 +622,12 @@ public class FMS_PageObjects_609 {
 		return ApplicationforfinancialfacilitiesMaintenanceCountryoffinancing;
 	}
 	
+	@FindBy(xpath =  "//input[@id='lookuptxt_applicationFacilityCountry_WIFT001MT']")
+	private WebElement Countryoffinancing_Validate_609;
+	public WebElement Countryoffinancing_Validate_609() {
+		return Countryoffinancing_Validate_609;
+	}
+	
 	@FindBy(xpath = "//td[@id='next_pagerid_applicationFacilityCountry_WIFT001MT']/span")
 	private WebElement  CountryoffinancingGridNext;
 	public WebElement CountryoffinancingGridNext() {
@@ -669,9 +675,9 @@ public class FMS_PageObjects_609 {
 	}
 	
 	@FindBy(xpath = "//input[@name='applicationFacilityCO.fmsApplVO.MARKETED_BY']")
-	private WebElement ApplicationforfinancialfacilitiesMaintenanceMarketedBy;
-	public WebElement Applicationforfinancialfacilities_Maintenance_MarketedBy() {
-		return ApplicationforfinancialfacilitiesMaintenanceMarketedBy;
+	private WebElement Applicationforfinancialfacilities_Maintenance_MarketedBy_609;
+	public WebElement Applicationforfinancialfacilities_Maintenance_MarketedBy_609() {
+		return Applicationforfinancialfacilities_Maintenance_MarketedBy_609;
 	}
 	
 	
@@ -784,15 +790,15 @@ public class FMS_PageObjects_609 {
 	
 	
 	@FindBy(xpath = "//span[@id='spanLookup_applicationfacilityLimitDetailsPURPOSE_OF_FIN_WIFT001MT']/span")
-	private WebElement ApplicationforfinancialfacilitiesMaintenanceLimitDetailsTabPurposeOfFinancing;
-	public WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancing() {
-		return ApplicationforfinancialfacilitiesMaintenanceLimitDetailsTabPurposeOfFinancing;
+	private WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancingSearch;
+	public WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancingSearch() {
+		return Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancingSearch;
 	}
 	
-	@FindBy(xpath = "//td[@id='td_gridtab_applicationfacilityLimitDetailsPURPOSE_OF_FIN_WIFT001MT_4_CODE' and text()='9827']")
-	private WebElement ApplicationforfinancialfacilitiesMaintenanceLimitDetailsTabPurposeOfFinancingValue;
-	public WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancingValue() {
-		return ApplicationforfinancialfacilitiesMaintenanceLimitDetailsTabPurposeOfFinancingValue;
+	@FindBy(xpath = "//input[@id='gridtab_applicationfacilityLimitDetailsPURPOSE_OF_FIN_WIFT001MT_gs_CODE']")
+	private WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancing;
+	public WebElement Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancing() {
+		return Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancing;
 	}
 	
 	@FindBy(xpath = "//button[@id='limitDetails_add_btn_WIFT001MT']")
@@ -1132,7 +1138,11 @@ public class FMS_PageObjects_609 {
 	}
 	
 	
-	
+	@FindBy(xpath = "//a[@id='dismissbut_WIFT001AP3']/span")
+	private WebElement ApproveLevel3_SendAlert_Ok_609;
+	public WebElement ApproveLevel3_SendAlert_Ok_609() {
+		return ApproveLevel3_SendAlert_Ok_609;
+	}
 	
 	
 	

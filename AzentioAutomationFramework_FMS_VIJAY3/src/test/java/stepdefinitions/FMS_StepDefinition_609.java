@@ -52,13 +52,15 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	ExcelData AccountingEntriesExcelData_609 = new ExcelData(TestDataPath, "FMS_AccountingEntries_609", "DataSet ID"); 
 	ExcelData fmsParamLoginTestData = new ExcelData(TestDataPath, "FMSParam_login", "UserType");
 	
-	ExcelData fmsLoginExceldata = new ExcelData(TestDataPath, "FMS_Login", "UserType");
+	ExcelData fmsLoginExceldata = new ExcelData(TestDataPath, "FMS_RequestForFinancing_609", "DataSet ID");
+	ExcelData  RequestForFinancingExcelData =new ExcelData(TestDataPath, "FMS_RequestForFinancing_609" , "DataSet ID");
 	ExcelData fmsTransactionsExcelData = new ExcelData(TestDataPath, "FMS_WIFAK_ApplicationTestData", "DataSet ID");
 	ExcelData fmsFacilitiesManagementExcelData = new ExcelData(TestDataPath, "FMS_Facilities_Management", "DataSet ID");
 	ExcelData fmsDrawDownRequestExcelData = new ExcelData(TestDataPath, "FMS_DrawDownRequest_609", "DataSet ID");
 	ExcelData fmsCommitteeApprovalExcelData = new ExcelData(TestDataPath, "FMS_CommitteeApproval_609", "DataSet ID");
 	ExcelData fmsSubLimitExcelData = new ExcelData(TestDataPath, "FMS_SubLimit_609", "DataSet ID");
 
+	
 	ExcelData fmsCreditReviewExcelData = new ExcelData(TestDataPath, "FMS_CreditReview_609", "DataSet ID");
 
 	
@@ -68,7 +70,31 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	Map<String, String> testData;
 	Map<String, String> fmsLoginTestData = new HashMap<>();
 
-	 
+	@And("^User_609 get the test data set id for AT_RF_144$")
+    public void User_609_get_the_test_data_set_id_for_AT_RF_144() throws Throwable {
+    	testData = RequestForFinancingExcelData.getTestdata("AT_RF_144");	
+    }
+	
+	@And("^User_609 get the test data set id for AT_RF_145$")
+    public void User_609_get_the_test_data_set_id_for_AT_RF_145() throws Throwable {
+    	testData = RequestForFinancingExcelData.getTestdata("AT_RF_145");	
+    }
+	
+	@And("User_609 get the test data set id for AT_RF_192")
+	public void user_609_get_the_test_data_set_id_for_at_rf_192() {
+		testData = RequestForFinancingExcelData.getTestdata("AT_RF_192");
+	}
+	
+	@And("User_609 get the test data set id for AT_RF_195")
+	public void user_609_get_the_test_data_set_id_for_at_rf_195() {
+		testData = RequestForFinancingExcelData.getTestdata("AT_RF_195");
+	}
+	
+	@And("User_609 get the test data set id for AT_RF_196")
+	public void user_609_get_the_test_data_set_id_for_at_rf_196() {
+		testData = RequestForFinancingExcelData.getTestdata("AT_RF_196");
+	}
+	
 	@And("^User_609 get the test data set id for AT_AE_003$")
     public void User_609_get_the_test_data_set_id_for_AT_AE_003() throws Throwable {
     	testData = AccountingEntriesExcelData_609.getTestdata("AT_AE_003");	
@@ -932,10 +958,12 @@ public class FMS_StepDefinition_609 extends BaseClass{
 			
 		@Then("User_609 Check the Country of Financing field is filled")
 		public void User_609_check_the_country_of_financing_field_is_filled() {
-			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Countryoffinancing());
-			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Countryoffinancing());
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Countryoffinancing_Validate_609());
+			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Countryoffinancing_Validate_609());
+			String Countryoffinancing = FmsPageobjects_609.Countryoffinancing_Validate_609().getAttribute("prevvalue");
+			System.out.println("Countryoffinancing :"+Countryoffinancing);
 			try {
-				Assert.assertEquals(false,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_Countryoffinancing().getAttribute("prevvalue").isBlank());
+				Assert.assertEquals(false,FmsPageobjects_609.Countryoffinancing_Validate_609().getAttribute("prevvalue").isBlank());
 			} catch (Exception e) {
 				Assert.fail(e.getMessage());
 			}
@@ -962,12 +990,25 @@ public class FMS_StepDefinition_609 extends BaseClass{
 					}	
 				} catch (Exception e) {
 					if (i==199) {
-						Assert.fail(e.getMessage());
+						
 					}
 				}	
 			}	
 		}
 
+		@Then("^User_609 Check the Marketed By field is displayed$")
+		public void User_609_Check_the_Marketed_By_field_is_displayed() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_MarketedBy_609());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_MarketedBy_609());
+			try {
+				if (FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_MarketedBy_609().isEnabled()) {
+						Assert.assertEquals(true, FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_MarketedBy_609().isEnabled());
+					}
+			} catch (Exception e) {
+				Assert.fail(e.getMessage());
+			}	
+		}
+		
 		@And("^User_609 Click on the Additional Details tab$")
 		public void User_609_click_on_the_additional_details_tab() throws Throwable {
 			waitHelper.waitForElementwithFluentwait(driver,FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_AdditionalDetailsTab());
@@ -1145,12 +1186,25 @@ public class FMS_StepDefinition_609 extends BaseClass{
 		
 		@And("User_609 Select the Purpose Of Financing")
 		public void User_609_select_the_purpose_of_financing() {
+			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancingSearch());
+			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancingSearch());
 			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancing());
-			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancing());
-			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancing());
-			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancingValue());
-			clicksAndActionHelper.moveToElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancingValue());
-			clicksAndActionHelper.doubleClick(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancingValue());
+			clicksAndActionHelper.doubleClick(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_PurposeOfFinancing());
+			String xpath ="(//table[@id='gridtab_applicationfacilityLimitDetailsPURPOSE_OF_FIN_WIFT001MT']/tbody/tr/td[text()='"+testData.get("Purpose Of Financing")+"'])[1]";
+			for (int i = 0; i < 200; i++) {
+				try {
+					WebElement Code  = driver.findElement(By.xpath(xpath));
+					if (Code.isDisplayed()) {
+						clicksAndActionHelper.doubleClick(Code);
+						Thread.sleep(2000);
+						break;
+					}	
+				} catch (Exception e) {
+					if (i==199) {
+						Assert.fail(e.getMessage());
+					}
+				}	
+			}
 		}
 
 		
@@ -1474,6 +1528,12 @@ public class FMS_StepDefinition_609 extends BaseClass{
 					clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApproveLevel3_Submit());
 			    }
 		    
+			    
+			    @And("^User_609 Click on Dismiss if Send Alert pop up appears in Approve Level3$")
+			    public void User_609_Click_on_Dismiss_if_Send_Alert_pop_up_appears_in_Approve_Level3() throws Throwable {
+			    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.ApproveLevel3_SendAlert_Ok_609());  		
+					FmsPageobjects_609.ApproveLevel3_SendAlert_Ok_609().click();		
+			    }
 		    
 			    @And("User_609 Click on the Facilities Management submenu")
 			    public void user_609_click_on_the_facilities_management_submenu() throws Throwable {

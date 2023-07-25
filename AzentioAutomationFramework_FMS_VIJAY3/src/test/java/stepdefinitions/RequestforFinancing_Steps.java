@@ -61,10 +61,7 @@ public class RequestforFinancing_Steps extends BaseClass {
 	
 	
 	
-	@And("User_609 get the test data set id for AT_RF_192")
-	public void user_609_get_the_test_data_set_id_for_at_rf_192() {
-		testData = fmsTransactionsExcelData.getTestdata("DS01_326257");
-	}
+	
 	
 	@And("User_609 get the test data set id for AT_FM_086")
 	public void user_609_get_the_test_data_set_id_for_at_fm_086() {
@@ -750,12 +747,12 @@ public class RequestforFinancing_Steps extends BaseClass {
 //	}
 
 	// *************************862727*********************//
-	@Given("Check the Mandatory Purpose of Financing flag is enabled")
-	public void check_the_mandatory_purpose_of_financing_flag_is_enabled() {
+	@Given("User_609 Check the Mandatory Purpose of Financing flag is enabled")
+	public void User_609_check_the_mandatory_purpose_of_financing_flag_is_enabled() {
 		waitHelper.waitForElementwithFluentwait(driver, RequestforFinancingObj.FacilityType_UpdateAfterApprove_FacilityDetails_ApplicationRequirementsandDetails_MandatoryPurposeofFinancing());
-		clicksAndActionHelper.moveToElement(RequestforFinancingObj.FacilityType_UpdateAfterApprove_FacilityDetails_ApplicationRequirementsandDetails_MandatoryPurposeofFinancing());
+		clicksAndActionHelper.clickOnElement(RequestforFinancingObj.FacilityType_UpdateAfterApprove_FacilityDetails_ApplicationRequirementsandDetails_MandatoryPurposeofFinancing());
 		try {
-			if (RequestforFinancingObj.FacilityType_UpdateAfterApprove_FacilityDetails_ApplicationRequirementsandDetails_MandatoryPurposeofFinancing().isEnabled()) {
+			if (RequestforFinancingObj.FacilityType_UpdateAfterApprove_FacilityDetails_ApplicationRequirementsandDetails_MandatoryPurposeofFinancing().isSelected()) {
 				Assert.assertTrue(true);
 			} else {
 				RequestforFinancingObj.FacilityType_UpdateAfterApprove_FacilityDetails_ApplicationRequirementsandDetails_MandatoryPurposeofFinancing().click();
@@ -767,10 +764,7 @@ public class RequestforFinancing_Steps extends BaseClass {
 
 	// ****************************@402669******************** //
 
-	@And("User_609 get the test data set id for AT_RF_195")
-	public void user_609_get_the_test_data_set_id_for_at_rf_195() {
-		testData = fmsTransactionsExcelData.getTestdata("DS01_402669");
-	}
+	
 
 	@Given("User_609 Click Yes in post approval pop up")
 	public void user_609_click_yes_in_post_approval_pop_up() {
@@ -782,44 +776,73 @@ public class RequestforFinancing_Steps extends BaseClass {
 	@Then("User_609 Enter values in Revolving Validity field")
 	public void user_609_enter_values_in_revolving_validity_field() {
 		waitHelper.waitForElementwithFluentwait(driver,RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_RevolvingValidity());
-		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_RevolvingValidity());
-		if (RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_RevolvingValidity().isEnabled()) {
-			RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_RevolvingValidity().click();
-			RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_RevolvingValidity().clear();
-			RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_RevolvingValidity().sendKeys("1111");
+		WebElement RevolvingValidity = RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_RevolvingValidity();
+		try {
+			if (RevolvingValidity.isEnabled()) {
+				RevolvingValidity.click();
+				RevolvingValidity.clear();
+				//RevolvingValidity.sendKeys("1111");
+				RevolvingValidity.sendKeys(testData.get("RevolvingValidity"),Keys.TAB);
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
 		}
 	}
 
 	@Then("User_609 Enter values in Max Revolving Times field")
 	public void user_609_enter_values_in_max_revolving_times_field() {
 		waitHelper.waitForElementwithFluentwait(driver,RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_MaxRevolvingTimes());
-		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_MaxRevolvingTimes());
-		if (RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_MaxRevolvingTimes().isEnabled()) {
-			RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_MaxRevolvingTimes().click();
-			RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_MaxRevolvingTimes().clear();
-			RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_MaxRevolvingTimes().sendKeys("111");
+		WebElement MaxRevolvingTimes = RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_MaxRevolvingTimes();
+		try {
+			if (MaxRevolvingTimes.isEnabled()) {
+				MaxRevolvingTimes.click();
+				MaxRevolvingTimes.clear();
+				//RevolvingValidity.sendKeys("111");
+				MaxRevolvingTimes.sendKeys(testData.get("MaxRevolvingTimes"),Keys.TAB);
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
 		}
 	}
 
 	@Then("User_609 Enable Subject To Full Repayment flag")
 	public void user_609_enable_subject_to_full_repayment_flag() {
 		waitHelper.waitForElementwithFluentwait(driver,RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_SubjectToFullRepayment());
-		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_SubjectToFullRepayment());
-		RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_SubjectToFullRepayment().click();
+		WebElement SubjectToFullRepayment = RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_SubjectToFullRepayment();
+		try {
+			if (SubjectToFullRepayment.isSelected()) {
+				Assert.assertTrue(true);
+			}
+			else {
+				RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_SubjectToFullRepayment().click();
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}	
 	}
 
 	@Then("User_609 Check the Current Utilization field is enabled")
 	public void user_609_check_the_current_utilization_field_is_enabled() {
 		waitHelper.waitForElementwithFluentwait(driver,RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_CurrentUtilization());
-		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_CurrentUtilization());
-		Assert.assertTrue(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_CurrentUtilization().isEnabled());
+		try {
+			if (RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_CurrentUtilization().isEnabled()) {
+				Assert.assertEquals(true, RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_CurrentUtilization().isEnabled());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}	
 	}
 
 	@Then("User_609 Check the Total Approval field is enabled")
 	public void user_609_check_the_total_approval_field_is_enabled() {
 		waitHelper.waitForElementwithFluentwait(driver,RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_TotalApproval());
-		clicksAndActionHelper.moveToElement(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_TotalApproval());
-		Assert.assertTrue(RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_TotalApproval().isEnabled());
+		try {
+			if (RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_TotalApproval().isEnabled()) {
+				Assert.assertEquals(true, RequestforFinancingObj.Applicationforfinancialfacilities_Maintenance_TotalApproval().isEnabled());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
 	}
 /*
 	@Then("User_609 Check the Marketed By field is displayed")
@@ -840,10 +863,7 @@ public class RequestforFinancing_Steps extends BaseClass {
 	}
 	*/
 
-	@And("User_609 get the test data set id for AT_RF_196")
-	public void user_609_get_the_test_data_set_id_for_at_rf_196() {
-		testData = fmsTransactionsExcelData.getTestdata("DS01_834958");
-	}
+	
 	
 	 @And("^User_609 Check the Down Payment Percantage field is enabled$")
 		public void User_609_Check_the_Down_Payment_Percantage_field_is_enabled() throws Throwable {

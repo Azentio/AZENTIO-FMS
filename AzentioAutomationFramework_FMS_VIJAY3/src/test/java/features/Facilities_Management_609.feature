@@ -135,12 +135,12 @@ And User_609 Enable Create Active Facility If Within Limits flag
 And User_609 Click on the Application Requirements and Details Tab
 And User_609 Enable Allow to add sublimit in multiple groups flag
 And User_609 Click on Update
-And User_609 Click the confirm ok button
+And User_609 Click the Application confirm ok button
 And User_609 Click the ok button
 And User_609 Click on Approve Screen
 And User_609 Select the Code in Approve Screen
 And User_609 Click on Approve 
-And User_609 Click the confirm ok button
+And User_609 Click the Application confirm ok button
 And User_609 Click the ok button
 
 @535114_01
