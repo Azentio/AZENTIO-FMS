@@ -8,7 +8,7 @@ import io.cucumber.testng.CucumberOptions;
 import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
-@CucumberOptions(features = {"src/test/java/features/FinalApproval_LimitCreation_610.feature"},
+@CucumberOptions(features = {"src/test/java/features/RequestForFinancing_610.feature"},
                 glue = "stepdefinitions",
                 
                 //monochrome=false, //to make steps in color
@@ -17,7 +17,7 @@ import utilities.ExtentTestManager;
                            "rerun:ReRunScenarios/FailedReRun.txt"}
           //   ,  dryRun = true //to check compilation errors                                      
             //   , tags="@127788" 
-            		,   tags="@127764"
+            		,   tags="@592970"
 
 )
 public class TestApplication extends AbstractTestNGCucumberTests {

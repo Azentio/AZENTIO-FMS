@@ -1,5 +1,7 @@
 package stepdefinitions;
 
+import static org.testng.Assert.fail;
+
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -104,9 +106,9 @@ public class FMS_WifakApplication_Steps {
 		testData = fmsTransactionsExcelData.getTestdata("DS01_870478");
 	}
 	
-	@And("User_610 get the test data set id for AT_RF_011")
-	public void get_the_test_data_set_id_for_at_at_rf_011() {
-		testData = fmsTransactionsExcelData.getTestdata("DS01_592279");
+	@And("User_610 get the test data set id for AT_RF_075")
+	public void get_the_test_data_set_id_for_at_rf_075() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_RF_075");
 	}
 	
 	@And("User_610 get the test data set id for AT_RF_012")
@@ -126,6 +128,18 @@ public class FMS_WifakApplication_Steps {
 	@And("User_610 get the test data set id for AT_CA_013")
 	public void get_the_test_data_set_id_for_at_at_ca_013() {
 		testData = fmsTransactionsExcelData.getTestdata("AT_CA_013");
+	}
+	
+	//---Request For Financing
+	
+	@And("User_610 get the test data set id for AT_RF_010")
+	public void get_the_test_data_set_id_for_at_rf_010() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_RF_010");
+	}
+	
+	@And("User_610 get the test data set id for AT_RF_011")
+	public void get_the_test_data_set_id_for_at_rf_011() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_RF_011");
 	}
 	
 	//--------- Committee recommendation
@@ -224,46 +238,32 @@ public class FMS_WifakApplication_Steps {
     @And("^User_610 Click and Enter Application Ref No$")
     public void click_and_enter_application_ref_no() throws Throwable {
     	waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Click_Application_Ref_610());
-//		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Click_Application_Ref_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Click_Application_Ref_610());
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.Click_Application_Ref_610());
 		FMS_WifakApplication_Obj.Click_Application_Ref_610().sendKeys(testData.get("Application Ref No in Facilities Management"));
 		FMS_WifakApplication_Obj.Click_Application_Ref_610().sendKeys(Keys.TAB);
+		Thread.sleep(15000);
 		
-/*		String xpath ="//input[@id='facilityMgtMainCif_WIFT008MT']";
-		for (int i = 0; i <200000; i++) {
-		
-			
-			  if
-			  (!driver.findElement(By.xpath(xpath)).getAttribute("initialvalue").isBlank()
-			  ||!driver.findElement(By.xpath(xpath)).getAttribute("initialvalue").isEmpty()
-			  ) { break;
-			 		
-			}
-			if (driver.findElement(By.xpath(xpath)).isEnabled())	{
-				break;
-			}
-				
-		}     */       
 		    }
     
     @And("User_610 Click facility Limit Details in Facilities Management")
     public void user_click_facility_limit_details_in_facilities_management() {
-    	waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Click_facility_Limit_Details_610());
-    	//clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Click_facility_Limit_Details_610());
     	
-    		for (int i = 0; i < 2000; i++) {
-    			try {
-    				if (FMS_WifakApplication_Obj.Click_facility_Limit_Details_610().isDisplayed()) {
-    					clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.Click_facility_Limit_Details_610());
-    					break;
-					}
- 
-    			} catch (Exception e) {
-    				if (i == 1999) {
-    					Assert.fail(e.getMessage());
-    				}
-    			}
-    		}
+    	    	
+    	waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Click_facility_Limit_Details_610());
+    	clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Click_facility_Limit_Details_610());
+    	
+    	for (int i = 0; i < 200; i++) {
+			try {
+				clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.Click_facility_Limit_Details_610());
+				break;
+			} catch (Exception e) {
+				if (i == 199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+    	
     }
     
     @And("^User_610 Click ProductClass In facility Limit Details$")
@@ -279,9 +279,12 @@ public class FMS_WifakApplication_Steps {
     	waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Enter_Previous_dataIn_MaturityDate_610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Enter_Previous_dataIn_MaturityDate_610());
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.Enter_Previous_dataIn_MaturityDate_610());
-		FMS_WifakApplication_Obj.Enter_Previous_dataIn_MaturityDate_610().sendKeys("0/01/2021");
-		
+		FMS_WifakApplication_Obj.Enter_Previous_dataIn_MaturityDate_610().clear();
+		FMS_WifakApplication_Obj.Enter_Previous_dataIn_MaturityDate_610().sendKeys("01/01/2021",Keys.TAB);
+		Thread.sleep(3000);
 	//	FMS_WifakApplication_Obj.Enter_Previous_dataIn_MaturityDate_610().sendKeys(testData.get("Maturity Date facility management"));
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Validate_dataIn_MaturityDate_610());
 		Assert.assertEquals(true, FMS_WifakApplication_Obj.Validate_dataIn_MaturityDate_610().isDisplayed());
     }
     
@@ -781,16 +784,17 @@ public class FMS_WifakApplication_Steps {
 	@And("^User_610 Click Search Button In Account No$")
 	public void User_610_click_search_button_in_account_no() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Click_Search_Button_Account_No_610());
-		// clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Click_Search_Button_Account_No());
+		 clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Click_Search_Button_Account_No_610());
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.Click_Search_Button_Account_No_610());
 	}
 
 	@And("^User_610 Enter Double Click Search Account No$")
 	public void User_610_enter_double_click_search_account_no() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Double_Click_Search_Account_No_610());
-		// clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Double_Click_Search_Account_No());
+		 clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Double_Click_Search_Account_No_610());
 		clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.Double_Click_Search_Account_No_610());
-		Thread.sleep(300000);
+		Thread.sleep(4000);
+		
 	}
 
 	@And("^AfterEnter ValueOn Product Class Search$")
@@ -878,62 +882,60 @@ public class FMS_WifakApplication_Steps {
 
 	@And("^User_610 Enter value on Catagory$")
 	public void enter_value_on_catagory() throws Throwable {
-		// waitHelper.waitForElementwithFluentwait(driver,
-		// FMS_WifakApplication_Obj.getEnter_value_on_Catagory());
-		// clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.getEnter_value_on_Catagory());
-		// clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.getEnter_value_on_Catagory());
-		// FMS_WifakApplication_Obj.getEnter_value_on_Catagory().sendKeys("1");;
-
-		for (int i = 0; i < 300; i++) {
-
-			try {
-				FMS_WifakApplication_Obj.Click_value_1_on_Catagory_610().click();
-
-//					FMS_WifakApplication_Obj.getEnter_value_on_Catagory().click();
-				FMS_WifakApplication_Obj.getEnter_value_on_Catagory_610().sendKeys("1");
-				FMS_WifakApplication_Obj.getEnter_value_on_Catagory_610().sendKeys(Keys.TAB);
-				break;
-
-			} catch (Exception e) {
-				if (i == 299) {
-					Assert.fail(e.getMessage());
-				}
-			}
-		}
-		Thread.sleep(5000);
-//			for (int i=0;i<300;i++) {
-//				if (FMS_WifakApplication_Obj.getEnter_value_on_Catagory().getAttribute("prevvalue").isBlank()) {
-//					
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Click_value_1_on_Catagory_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Click_value_1_on_Catagory_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.Click_value_1_on_Catagory_610());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.getEnter_value_on_Catagory_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.getEnter_value_on_Catagory_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.getEnter_value_on_Catagory_610());
+		FMS_WifakApplication_Obj.getEnter_value_on_Catagory_610().sendKeys(testData.get("Category FixedAssert"),Keys.TAB);  
+	//	Thread.sleep(4000);
+		
+//		for (int i = 0; i < 300; i++) {
+//			try {
+//				FMS_WifakApplication_Obj.Click_value_1_on_Catagory_610().click();
+//
+////					FMS_WifakApplication_Obj.getEnter_value_on_Catagory().click();
+//				FMS_WifakApplication_Obj.getEnter_value_on_Catagory_610().sendKeys("1");
+//				FMS_WifakApplication_Obj.getEnter_value_on_Catagory_610().sendKeys(Keys.TAB);
+//				break;
+//
+//			} catch (Exception e) {
+//				if (i == 299) {
+//					Assert.fail(e.getMessage());
 //				}
-//				
 //			}
+//		}
+		
+	//	Thread.sleep(5000);
+
 	}
 
 	@And("^User_610 Enter value on Class$")
 	public void enter_value_on_class() throws Throwable {
-//		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.getEnter_value_on_Class());
-//		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.getEnter_value_on_Class());
-//		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.getEnter_value_on_Class());
-//		FMS_WifakApplication_Obj.getEnter_value_on_Class().sendKeys("1234");
-
-		for (int i = 0; i < 300; i++) {
-
-			try {
-				FMS_WifakApplication_Obj.Click_value_1_on_Catagory_610().click();
-
-//				FMS_WifakApplication_Obj.getEnter_value_on_Catagory().click();
-				FMS_WifakApplication_Obj.getEnter_value_on_Class_610().sendKeys("1234");
-				FMS_WifakApplication_Obj.getEnter_value_on_Class_610().sendKeys(Keys.TAB);
-				break;
-
-			} catch (Exception e) {
-				if (i == 299) {
-					Assert.fail(e.getMessage());
-				}
-			}
-		}
-		Thread.sleep(5000);
-
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.getEnter_value_on_Class_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.getEnter_value_on_Class_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.getEnter_value_on_Class_610());
+		FMS_WifakApplication_Obj.getEnter_value_on_Class_610().sendKeys(testData.get("Class FixedAssert"),Keys.TAB);  
+	//	Thread.sleep(4000);
+		
+//		for (int i = 0; i < 300; i++) {
+//			try {
+//				FMS_WifakApplication_Obj.Click_value_1_on_Catagory_610().click();
+//
+////				FMS_WifakApplication_Obj.getEnter_value_on_Catagory().click();
+//				FMS_WifakApplication_Obj.getEnter_value_on_Class_610().sendKeys("1234");
+//				FMS_WifakApplication_Obj.getEnter_value_on_Class_610().sendKeys(Keys.TAB);
+//				break;
+//
+//			} catch (Exception e) {
+//				if (i == 299) {
+//					Assert.fail(e.getMessage());
+//				}
+//			}
+//		}
+		
 	}
 
 	@And("^User_610 Enter value on vendor$")
@@ -941,7 +943,10 @@ public class FMS_WifakApplication_Steps {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.getEnter_value_on_vendor_610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.getEnter_value_on_vendor_610());
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.getEnter_value_on_vendor_610());
-		FMS_WifakApplication_Obj.getEnter_value_on_vendor_610().sendKeys("1");
+//		FMS_WifakApplication_Obj.getEnter_value_on_vendor_610().sendKeys("1");
+		FMS_WifakApplication_Obj.getEnter_value_on_vendor_610().sendKeys(testData.get("Vendor  FixedAssert"),Keys.TAB);  
+//		Thread.sleep(4000);
+		
 	}
 
 	@And("^User_610 Enter value on quantity$")
@@ -949,7 +954,9 @@ public class FMS_WifakApplication_Steps {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.getEnter_value_on_quantity_610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.getEnter_value_on_quantity_610());
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.getEnter_value_on_quantity_610());
-		FMS_WifakApplication_Obj.getEnter_value_on_quantity_610().sendKeys("1");
+	//	FMS_WifakApplication_Obj.getEnter_value_on_quantity_610().sendKeys("1");
+		FMS_WifakApplication_Obj.getEnter_value_on_quantity_610().sendKeys(testData.get("Quantity FixedAssert"),Keys.TAB);  
+	//	Thread.sleep(4000);
 	}
 
 	@And("^User_610 Enter value on Unit$")
@@ -957,7 +964,9 @@ public class FMS_WifakApplication_Steps {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.getEnter_value_on_Unit_610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.getEnter_value_on_Unit_610());
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.getEnter_value_on_Unit_610());
-		FMS_WifakApplication_Obj.getEnter_value_on_Unit_610().sendKeys("1");
+	//	FMS_WifakApplication_Obj.getEnter_value_on_Unit_610().sendKeys("1");
+		FMS_WifakApplication_Obj.getEnter_value_on_Unit_610().sendKeys(testData.get("Unit  FixedAssert"),Keys.TAB);  
+	//	Thread.sleep(4000);
 	}
 
 	@And("^User_610 Enter value on Cy$")
@@ -965,7 +974,9 @@ public class FMS_WifakApplication_Steps {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.getEnter_value_on_Cy_610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.getEnter_value_on_Cy_610());
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.getEnter_value_on_Cy_610());
-		FMS_WifakApplication_Obj.getEnter_value_on_Cy_610().sendKeys("999");
+	//	FMS_WifakApplication_Obj.getEnter_value_on_Cy_610().sendKeys("999");
+		FMS_WifakApplication_Obj.getEnter_value_on_Cy_610().sendKeys(testData.get("CY  FixedAssert"),Keys.TAB);  
+	//	Thread.sleep(4000);
 	}
 
 	@And("^User_610 Enter value on UnitCost$")
@@ -973,24 +984,50 @@ public class FMS_WifakApplication_Steps {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.getEnter_value_on_UnitCost_610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.getEnter_value_on_UnitCost_610());
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.getEnter_value_on_UnitCost_610());
-		FMS_WifakApplication_Obj.getEnter_value_on_UnitCost_610().sendKeys("11");
+	//	FMS_WifakApplication_Obj.getEnter_value_on_UnitCost_610().sendKeys("11");
+		FMS_WifakApplication_Obj.getEnter_value_on_UnitCost_610().sendKeys(testData.get("UnitCost  FixedAssert"),Keys.TAB);  
+	//	Thread.sleep(4000);
 	}
 
 	@And("^User_610 Enter value on Vat Code$")
 	public void enter_value_on_vat_code() throws Throwable {
-		for (int i = 0; i < 200; i++) {
-			try {
-				JavascriptHelper.scrollIntoView(FMS_WifakApplication_Obj.Enter_value_on_Vat_Code_610());
-				clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Enter_value_on_Vat_Code_610());
-				FMS_WifakApplication_Obj.Enter_value_on_Vat_Code_610().click();
-				break;
-			} catch (Exception e) {
-				if (i == 199) {
-					Assert.fail(e.getMessage());
-				}
-			}
-		}
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Enter_value_on_Vat_Code_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Enter_value_on_Vat_Code_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.Enter_value_on_Vat_Code_610());
+	//	FMS_WifakApplication_Obj.getEnter_value_on_UnitCost_610().sendKeys("11");
+		FMS_WifakApplication_Obj.Enter_value_on_Vat_Code_610().sendKeys(testData.get("VatCode  FixedAssert"),Keys.TAB);  
+		Thread.sleep(4000);
+		
+//		for (int i = 0; i < 200; i++) {
+//			try {
+//				JavascriptHelper.scrollIntoView(FMS_WifakApplication_Obj.Enter_value_on_Vat_Code_610());
+//				clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Enter_value_on_Vat_Code_610());
+//				FMS_WifakApplication_Obj.Enter_value_on_Vat_Code_610().click();
+//				break;
+//			} catch (Exception e) {
+//				if (i == 199) {
+//					Assert.fail(e.getMessage());
+//				}
+//			}
+//		}
+		
 	}
+	
+	@And("User_{int} Validate Vat Amount Dispalying or Not")
+	public void user_validate_vat_amount_dispalying_or_not(Integer int1) throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ValidateVATAmountDisplaying_FixedAssert_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.ValidateVATAmountDisplaying_FixedAssert_610());
+				
+		String VatAmt= FMS_WifakApplication_Obj.ValidateVATAmountDisplaying_FixedAssert_610().getAttribute("title");
+		System.err.print("VatAmt :" + VatAmt );
+	    
+	    if (VatAmt.isEmpty()||VatAmt.isBlank()) {
+			Assert.fail();
+		}
+	    Thread.sleep(3000);
+	    clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.ValidateVATAmountDisplaying_FixedAssert_610());
+	    		   	}
+	
 
 	// -----------------------------------------------------
 
@@ -1101,9 +1138,9 @@ public class FMS_WifakApplication_Steps {
 
 	@And("^User_610 Enter The Value Solicitor Name$")
 	public void enter_the_value_solicitor_name() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.EnterTheValue_Solicitor_Name_610());
+	 	waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.EnterTheValue_Solicitor_Name_610());
 			clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.EnterTheValue_Solicitor_Name_610());
-			clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.EnterTheValue_Solicitor_Name_610());
+			clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.EnterTheValue_Solicitor_Name_610());
 			FMS_WifakApplication_Obj.EnterTheValue_Solicitor_Name_610().sendKeys(testData.get("Solicitor Name"),Keys.TAB);
 			
 //		for (int i = 0; i < 1000; i++) {
@@ -1127,7 +1164,7 @@ public class FMS_WifakApplication_Steps {
 	public void enter_the_value_estimator_name() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.EnterTheValue_Estimator_Name_610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.EnterTheValue_Estimator_Name_610());
-		clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.EnterTheValue_Estimator_Name_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.EnterTheValue_Estimator_Name_610());
 		FMS_WifakApplication_Obj.EnterTheValue_Estimator_Name_610().sendKeys(testData.get("Estimator Name"),Keys.TAB);  
 		Thread.sleep(4000);
 		
@@ -1323,25 +1360,33 @@ public class FMS_WifakApplication_Steps {
 		FMS_WifakApplication_Obj.Expiratin_date_additional_Details_610().sendKeys(testData.get("Expire Date"));
 		FMS_WifakApplication_Obj.Expiratin_date_additional_Details_610().sendKeys(Keys.TAB);
 	}
-
-	@Then("User_610 Validate holiday day allow or not")
-	public void User_610_validate_holiday_day_allow_or_not() {
-		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.validate_holidayDate_610());
-		Assert.assertTrue(FMS_WifakApplication_Obj.validate_holidayDate_610().isDisplayed());
-	}
-
+	
 	@And("^User_610 Confirm the Requested Holiday date$")
 	public void User_610_confirm_the_requested_holiday_date() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,FMS_WifakApplication_Obj.TheRequestedDate_additionalDetails_AFFF_610());
 		waitHelper.waitForElementwithFluentwait(driver,FMS_WifakApplication_Obj.Confirm_theRequested_Holiday_date_610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Confirm_theRequested_Holiday_date_610());
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.Confirm_theRequested_Holiday_date_610());
+		Thread.sleep(10000);
 	}
+	
+	@Then("User_610 Validate holiday day allow or not")
+	public void User_610_validate_holiday_day_allow_or_not() {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Expiratin_date_additional_Details_610());
+		
+		String prevalue = FMS_WifakApplication_Obj.Expiratin_date_additional_Details_610().getAttribute("prevvalue");
+		System.err.println(prevalue);
+		
+		Assert.assertEquals(true,!(FMS_WifakApplication_Obj.Expiratin_date_additional_Details_610().getAttribute("prevvalue").isBlank()));
+	}
+	
 
 	@Then("^User_610 Enter Holiday date in Expected Payment Date in Limit Details SubMenu$")
 	public void User_610_enter_holiday_date_in_expected_payment_date_in_limit_details_submenu() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,FMS_WifakApplication_Obj.ExpectedPaymenDate_inLimitDetails_SubMenu_610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.ExpectedPaymenDate_inLimitDetails_SubMenu_610());
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.ExpectedPaymenDate_inLimitDetails_SubMenu_610());
+		FMS_WifakApplication_Obj.ExpectedPaymenDate_inLimitDetails_SubMenu_610().clear();
 		FMS_WifakApplication_Obj.ExpectedPaymenDate_inLimitDetails_SubMenu_610().sendKeys(testData.get("Expected Payment Date"));
 		FMS_WifakApplication_Obj.ExpectedPaymenDate_inLimitDetails_SubMenu_610().sendKeys(Keys.TAB);
 	}
@@ -1351,6 +1396,16 @@ public class FMS_WifakApplication_Steps {
 		waitHelper.waitForElementwithFluentwait(driver,FMS_WifakApplication_Obj.Confirm_theRequested_Holiday_date_In_LimitsDetails_610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Confirm_theRequested_Holiday_date_In_LimitsDetails_610());
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.Confirm_theRequested_Holiday_date_In_LimitsDetails_610());
+	}
+	
+	@Given("User_{int} Validate Expected Payment Date is holiday day allow or not in product class")
+	public void user_validate_expected_payment_date_is_holiday_day_allow_or_not_in_product_class(Integer int1) {
+      waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ExpectedPaymenDate_inLimitDetails_SubMenu_610());
+		
+		String prevalue1 = FMS_WifakApplication_Obj.ExpectedPaymenDate_inLimitDetails_SubMenu_610().getAttribute("prevvalue");
+		System.err.println(prevalue1);
+		
+		Assert.assertEquals(true,!(FMS_WifakApplication_Obj.ExpectedPaymenDate_inLimitDetails_SubMenu_610().getAttribute("prevvalue").isBlank()));
 	}
 
 	// ---------------
@@ -2067,6 +2122,7 @@ public class FMS_WifakApplication_Steps {
 			try {
 				clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.CLEAN_FLAG_In_LimitsDetails_610());
 				FMS_WifakApplication_Obj.CLEAN_FLAG_In_LimitsDetails_610().sendKeys(Keys.TAB);
+				Thread.sleep(3000);
 				break;
 			} catch (Exception e) {
 				if (i == 199) {
@@ -2074,7 +2130,7 @@ public class FMS_WifakApplication_Steps {
 				}
 			}
 		}
-	}
+		}
 	
 	@Then("^User_610 Click the Product Class In Limits Details$")
 	public void click_the_product_class_in_limits_details() throws Throwable {
@@ -2398,17 +2454,17 @@ public class FMS_WifakApplication_Steps {
 			}
 		}
 		
-		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.sendAlertPopup1_610());
-		for (int i = 0; i < 2000; i++) {
-			try {
-				FMS_WifakApplication_Obj.sendAlertPopup1_610().click();
-				break;
-			} catch (Exception e) {
-				if (i == 1999) {
-					Assert.fail(e.getMessage());
-				}
-			}
-		}
+//		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.sendAlertPopup1_610());
+//		for (int i = 0; i < 2000; i++) {
+//			try {
+//				FMS_WifakApplication_Obj.sendAlertPopup1_610().click();
+//				break;
+//			} catch (Exception e) {
+//				if (i == 1999) {
+//					Assert.fail(e.getMessage());
+//				}
+//			}
+//		}
 		
 	}
 
@@ -3291,6 +3347,7 @@ public class FMS_WifakApplication_Steps {
 	public void user_double_click_on_the_retrieved_data_in_approve_menu() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approveSearchCodeResult_610());
 		clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.approveSearchCodeResult_610());
+		Thread.sleep(3000);
 	}
 
 	@When("^User_610 clicks on the Approve button in Approve menu under Facility Type$")
@@ -3935,14 +3992,14 @@ public class FMS_WifakApplication_Steps {
 	
 	//-------------Issue Facility Offer Screen
 	
-	@Given("User_{int} clicks Issue Facility Offer Screen")
+	@And("User_{int} clicks Issue Facility Offer Screen")
 	public void user_clicks_issue_facility_offer_screen(Integer int1) {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.IssueFacilityOffer_Screen__610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.IssueFacilityOffer_Screen__610());
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.IssueFacilityOffer_Screen__610());
 	}
 
-	@Given("User_{int} retrive the first data in Issue Facility Offer Screen")
+	@And("User_{int} retrive the first data in Issue Facility Offer Screen")
 	public void user_retrive_the_first_data_in_issue_facility_offer_screen(Integer int1) {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Enter_ValidateCode_InIssueFacilityOffer_Screen__610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Enter_ValidateCode_InIssueFacilityOffer_Screen__610());
@@ -3954,7 +4011,7 @@ public class FMS_WifakApplication_Steps {
 		clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_InIssueFacilityOffer_Screen__610());
 	}
 
-	@Given("User_{int} Click Issueoffer button in Issue Facility Offer Screen")
+	@And("User_{int} Click Issueoffer button in Issue Facility Offer Screen")
 	public void user_click_issueoffer_button_in_issue_facility_offer_screen(Integer int1) {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.issueoffer_btn_InIssueFacilityOffer_Screen__610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.issueoffer_btn_InIssueFacilityOffer_Screen__610());
@@ -3976,14 +4033,14 @@ public class FMS_WifakApplication_Steps {
 	
 	//--------------------------Client Response Screen
 
-	@Given("User_{int} clicks Client Response Screen")
+	@And("User_{int} clicks Client Response Screen")
 	public void user_clicks_client_response_screen(Integer int1) {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ClientResponse__610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.ClientResponse__610());
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.ClientResponse__610());
 	}
 
-	@Given("User_{int} retrive the first data in Client Response Screen")
+	@And("User_{int} retrive the first data in Client Response Screen")
 	public void user_retrive_the_first_data_in_client_response_screen(Integer int1) {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Enter_ValidateCode_InClientResponse__610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Enter_ValidateCode_InClientResponse__610());
@@ -3995,7 +4052,7 @@ public class FMS_WifakApplication_Steps {
 		clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_InClientResponse__610());
 	}
 
-	@Given("User_{int} Click Accept button in Client Response Offer Screen")
+	@And("User_{int} Click Accept button in Client Response Offer Screen")
 	public void user_click_accept_button_in_client_response_offer_screen(Integer int1) {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.accept_btn_InClientResponse__610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.accept_btn_InClientResponse__610());
@@ -4050,5 +4107,47 @@ public class FMS_WifakApplication_Steps {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.successokButton_610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.successokButton_610());
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.successokButton_610());
+	}
+	
+	//-------------------------------facility Management Maintenance screen
+	
+	
+	@And("User_{int} click maintenance screen in facility Management")
+	public void user_click_maintenance_screen_in_facility_management(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.FacilitiesManagement_MaintenanceScreen_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.FacilitiesManagement_MaintenanceScreen_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.FacilitiesManagement_MaintenanceScreen_610());
+	}
+
+	@And("User_{int} click search button in facility Management")
+	public void user_click_search_button_in_facility_management(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.SearchButton_FacilitiesManagement_MaintenanceScreen_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.SearchButton_FacilitiesManagement_MaintenanceScreen_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.SearchButton_FacilitiesManagement_MaintenanceScreen_610());
+	}
+
+	@And("User_{int} retrive the first data in facility Management")
+	public void user_retrive_the_first_data_in_facility_management(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Enter_ValidateCodeINApplicationRef_FacilitiesManagement_MaintenanceScreen_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Enter_ValidateCodeINApplicationRef_FacilitiesManagement_MaintenanceScreen_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.Enter_ValidateCodeINApplicationRef_FacilitiesManagement_MaintenanceScreen_610());
+		FMS_WifakApplication_Obj.Enter_ValidateCodeINApplicationRef_FacilitiesManagement_MaintenanceScreen_610().sendKeys(SuccessMsg,Keys.ENTER);
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_FacilitiesManagement_MaintenanceScreen_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_FacilitiesManagement_MaintenanceScreen_610());
+		clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_FacilitiesManagement_MaintenanceScreen_610());
+	}
+
+	@And("User_{int} click Journal Voucher Details in facility Management")
+	public void user_click_journal_voucher_details_in_facility_management(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.journalVoucherDetailsKey_FacilitiesManagement_MaintenanceScreen_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.journalVoucherDetailsKey_FacilitiesManagement_MaintenanceScreen_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.journalVoucherDetailsKey_FacilitiesManagement_MaintenanceScreen_610());
+	}
+
+	@And("User_{int} Validate the Account Number should displaying correct in JV Details")
+	public void user_validate_the_account_number_should_displaying_correct_in_jv_details(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.JVdetailsDivpopup_FacilitiesManagement_MaintenanceScreen_610());
+		Assert.assertEquals(true, FMS_WifakApplication_Obj.JVdetailsDivpopup_FacilitiesManagement_MaintenanceScreen_610().isDisplayed());
 	}
 }

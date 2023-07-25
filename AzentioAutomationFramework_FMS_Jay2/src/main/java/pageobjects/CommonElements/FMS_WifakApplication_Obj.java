@@ -405,7 +405,11 @@ public class FMS_WifakApplication_Obj {
 	}
 	
 	
-	
+	@FindBy(xpath =  "//td[@id='td_FmsIjaraFixedAssetsGrid_WIFT001MT_1_fmsFacilityAssetVO.VAT_AMOUNT']")
+	private WebElement ValidateVATAmountDisplaying_FixedAssert_610;
+	public WebElement ValidateVATAmountDisplaying_FixedAssert_610() {
+		return ValidateVATAmountDisplaying_FixedAssert_610;
+	}
 	
 	
 	
@@ -423,7 +427,7 @@ public class FMS_WifakApplication_Obj {
 	
 	//-------------- Holiday 
 	
-	@FindBy(id =  "applicationFacilityofferexpirydate_WIFT001MT")
+	@FindBy(xpath =  "//input[@id='applicationFacilityofferexpirydate_WIFT001MT']")
 	private WebElement Expiratin_date_additional_Details;
 	public WebElement Expiratin_date_additional_Details_610(){
 		return Expiratin_date_additional_Details;
@@ -2419,17 +2423,14 @@ public class FMS_WifakApplication_Obj {
 						
 				///------Final Approval Screen
 				
-				
-				
+								
 				@FindBy(xpath = "//button[@id='applicationfacility_finalapproval_btn_WIFT0061MT']")
 				private WebElement finalapproval_btn_InFinalApprovalScreenInAFFF__610;
 				public WebElement finalapproval_btn_InFinalApprovalScreenInAFFF__610() {
 					return finalapproval_btn_InFinalApprovalScreenInAFFF__610;
 				}
-				
-				
-				
-				
+								
+								
 				//---------Do you need to reload the tab
 				
 				@FindBy(xpath = "//div[text()='WARNING']")
@@ -2542,33 +2543,69 @@ public class FMS_WifakApplication_Obj {
 				}
 				
 				
+				//-------------Facilities Management  Maintenance
 				
 				
+				@FindBy(xpath = "//a[@id='WIFT008MT']/span[text()='Maintenance']")
+				private WebElement FacilitiesManagement_MaintenanceScreen_610;
+				public WebElement FacilitiesManagement_MaintenanceScreen_610() {
+					return FacilitiesManagement_MaintenanceScreen_610;
+				}
+				
+				@FindBy(xpath = "//a[@id='infoBarSearchButton_WIFT008MT']")
+				private WebElement SearchButton_FacilitiesManagement_MaintenanceScreen_610;
+				public WebElement SearchButton_FacilitiesManagement_MaintenanceScreen_610() {
+					return SearchButton_FacilitiesManagement_MaintenanceScreen_610;
+				}
+								
+				@FindBy(xpath = "//input[@id='facilityManagementGridTbl_Id_WIFT008MT_gs_fmsFacilityVO.CODE']")
+				private WebElement Enter_ValidateCodeIN_FacilitiesManagement_MaintenanceScreen_610;
+				public WebElement Enter_ValidateCodeIN_FacilitiesManagement_MaintenanceScreen_610() {
+					return Enter_ValidateCodeIN_FacilitiesManagement_MaintenanceScreen_610;
+				}
+				
+				@FindBy(xpath = "//input[@id='facilityManagementGridTbl_Id_WIFT008MT_gs_fmsFacilityVO.FROM_APPLICATION']")
+				private WebElement Enter_ValidateCodeINApplicationRef_FacilitiesManagement_MaintenanceScreen_610;
+				public WebElement Enter_ValidateCodeINApplicationRef_FacilitiesManagement_MaintenanceScreen_610() {
+					return Enter_ValidateCodeINApplicationRef_FacilitiesManagement_MaintenanceScreen_610;
+				}
+				
+				@FindBy(xpath = "//td[@id='td_facilityManagementGridTbl_Id_WIFT008MT_1_fmsFacilityVO.CODE']")
+				private WebElement ClickTheValue_ValidateCode_FacilitiesManagement_MaintenanceScreen_610;
+				public WebElement ClickTheValue_ValidateCode_FacilitiesManagement_MaintenanceScreen_610() {
+					return ClickTheValue_ValidateCode_FacilitiesManagement_MaintenanceScreen_610;
+				}
+				
+				@FindBy(xpath = "//label[@id='facilityManagementForm_WIFT008MT_journal_voucher_details_key']")
+				private WebElement journalVoucherDetailsKey_FacilitiesManagement_MaintenanceScreen_610;
+				public WebElement journalVoucherDetailsKey_FacilitiesManagement_MaintenanceScreen_610() {
+					return journalVoucherDetailsKey_FacilitiesManagement_MaintenanceScreen_610;
+				}
+								
+				@FindBy(xpath = "//span[@id='ui-dialog-title-facilityManagementJVdetailsDiv_id_WIFT008MT']")
+				private WebElement JVdetailsDivpopup_FacilitiesManagement_MaintenanceScreen_610;
+				public WebElement JVdetailsDivpopup_FacilitiesManagement_MaintenanceScreen_610() {
+					return JVdetailsDivpopup_FacilitiesManagement_MaintenanceScreen_610;
+				}
+				
+								
+				//--------- wait CIF No prevalue 
 				
 				
+				@FindBy(xpath = "//input[@id='facilityMgtMainCif_WIFT008MT']")
+				private WebElement waitCIFNOPrevalue_FacilitiesManagement_MaintenanceScreen_610;
+				public WebElement waitCIFNOPrevalue_FacilitiesManagement_MaintenanceScreen_610() {
+					return waitCIFNOPrevalue_FacilitiesManagement_MaintenanceScreen_610;
+				}
 				
 				
+				//----------The Requested Date 01/07/2023 Is a Holiday in AFFF
 				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
+				@FindBy(xpath = "//div[text()='[344] The Requested Date 01/07/2023 Is a Holiday']")
+				private WebElement TheRequestedDate_additionalDetails_AFFF_610;
+				public WebElement TheRequestedDate_additionalDetails_AFFF_610() {
+					return TheRequestedDate_additionalDetails_AFFF_610;
+				}
 				
 				
 				

@@ -3,6 +3,10 @@ Feature: Request For Financing
   @1108920
   Scenario: BAJI200117 - VAT on advance insurance is wrongly calculated - BAJI200034
     Given navigate to FMS application2 and login with valid credentials
+    And User_609 click Technical details
+    And User_609 click clear caches
+    And User_609 Click the ok button
+    And User_610 get the test data set id for AT_RF_010
     And User_610 Click Wifak Application first
     And User_610 Click Wifak Application Second
     And User_610 Click Application for financial facilities
@@ -18,7 +22,7 @@ Feature: Request For Financing
     And User_610 Select limit Details
     And User_610 Click Add button on limit Detail
     And User_610 Enter ValueOn Product Class
-    And AfterEnter ValueOn Product Class Search
+    Then User_610 Check Flag in Clean Level IN Limits Detalis SubMenu
     And User_610 Click Add button AfterEnter Value On Product Class
     #  And Click ok on the warrning Screen
     And User_610 Click Fixed Assert button
@@ -31,10 +35,47 @@ Feature: Request For Financing
     And User_610 Enter value on Cy
     And User_610 Enter value on UnitCost
     And User_610 Enter value on Vat Code
+    And User_610 Validate Vat Amount Dispalying or Not
 
+#-------------------------------------
+
+#S3 params -------------- all chech Credit Authorization flag
+    
+    @1159358_01
+    Scenario: FMS Param UnCheck All flag
+    Given navigate to FMS param application and login with valid credentials2
+    And User_610 clicks on the parameter module
+    And User_610 clicks on the Facility Type feature
+    And User_610 clicks on the update after approve menu in Facility type
+    And User_610 enter the code value in update after approve menu
+    And User_610 double click on the retrieved data in update after approve menu
+    And User_610 clicks on the facility details tab in update after approve
+    And User_610 clicks on the STP Facility Requirements option
+    And User_610 check the Customer Grading flag
+    And User_610 check the Overwrite Grading flag
+    And User_610 check the Credit Review flag
+    And User_610 check the Committee Approval flag
+    And User_610 check the Credit Authorization flag
+    And User_610 check the Issue Facility Offer flag
+    And User_610 check the Client Response flag
+    And User_610 check the Document Validation flag
+    And User_610 check the Final Approval flag
+    And User_610 check the Create Active Facility If Within Limits flag
+    And User_610 Check the Automatically Approve Facility If Within Limits flag
+    When User_610 clicks on the Update button
+    And User_610 after the update go to the Approve menu
+    And User_610 enter the code value in Approve menu
+    And User_610 double click on the retrieved data in Approve menu
+    When User_610 clicks on the Approve button in Approve menu under Facility Type
+    
+    
   @1159358
   Scenario: BAJI200084 - Some issues appears after the delivery of the modification BAJI200012
     Given navigate to FMS application2 and login with valid credentials
+    And User_609 click Technical details
+    And User_609 click clear caches
+    And User_609 Click the ok button
+    And User_610 get the test data set id for AT_RF_011
     And User_610 Click Wifak Application first
     And User_610 Click Wifak Application Second
     And User_610 Click Application for financial facilities
@@ -61,10 +102,35 @@ Feature: Request For Financing
     And User_610 Click Ok Button In Waring Screen
     And User_610 Click OK In Button Sucess Screen
     #  And Click Validate Button
+    And User_610 Click Save Button After In Limits Details
+    Then User_610 Click Ok Button In Waring Screen In Limits Details
+    And User_610 Click OK  Button In Sucess Screen In Limits Details
     And User_610 Click Document Details
     And User_610 Enter The Value Solicitor Name
     And User_610 Enter The Value Estimator Name
-    And User_610 Click Validate Button in Document Details
+    
+     And User_610 Click Validate Button in Document Details
+    And User_610 clicks the Approve Level1 link
+    And User_610 retrive the first data in approve level1
+    And User_610 select the Approve level1 decision as approve
+    And User_610 clicks on the level1 submit button
+    And User_610 clicks the Approve Level2 link
+    And User_610 retrive the first data in approve level2
+    And User_610 select the level2 decision as approve
+    And User_610 clicks on the level2 submit button
+    And User_610 clicks the Approve Level3 link
+    And User_610 retrive the first data in approve level3
+    And User_610 select the level3 decision as approve
+    When User_610 clicks on the level3 submit button
+    
+    #facility management
+    And User_610 click facility management
+    And User_610 click maintenance screen in facility Management
+    And User_610 click search button in facility Management
+    And User_610 retrive the first data in facility Management
+    And User_610 click Journal Voucher Details in facility Management
+    And User_610 Validate the Account Number should displaying correct in JV Details  
+    
     
     @665893
   Scenario: TSR - RIDB180130 Maturity Date of any sublimit
@@ -95,22 +161,18 @@ Feature: Request For Financing
     And User_610 Click on additional Details
     And User_610 Enter the Total Value
     Then User_610 Enter Holiday Date In Expiratin date in additional Details
-    And User_610 Validate holiday day allow or not
     And User_610 Confirm the Requested Holiday date
-    And User_610 Click Save Button After Document Details
-    And User_610 Click Ok Button In Waring Screen Document Details
-    And User_610 Click OK  Button In Sucess Screen Document Details
-    And User_610 Select limit Details
+    And User_610 Validate holiday day allow or not 
+    
+        And User_610 Select limit Details
     And User_610 Click Add button on limit Detail
     And User_610 Enter ValueOn Product Class
     Then User_610 Enter Holiday date in Expected Payment Date in Limit Details SubMenu
-    And User_610 Validate holiday day allow or not
     And User_610 Confirm the Requested Holiday date in Limit Details SubMenu
-
-  #   And  Confirm the Requested Holiday date in Limit Details SubMenu
-  # And Click Add button AfterEnter Value On Product Class
-  
-  @579604
+    And User_610 Validate Expected Payment Date is holiday day allow or not in product class 
+    
+    
+     @579604
   Scenario: TSR - KCB170047
     Given navigate to FMS application2 and login with valid credentials
     And User_610 Click Wifak Application first
