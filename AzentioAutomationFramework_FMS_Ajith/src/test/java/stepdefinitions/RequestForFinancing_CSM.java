@@ -16,7 +16,7 @@ import helper.Selenium_Actions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import pageobjects.CSM_App.CSM_App_Obj;
-import pageobjects.fms.ApplicationForFinancialFacilityObj;
+import pageobjects.fms.ApplicationForFinancialFacility_482_Obj;
 import pageobjects.fms.RequestForFinancingObj;
 import resources.BaseClass;
 
@@ -33,7 +33,7 @@ public class RequestForFinancing_CSM {
 	Map<String, String> testData;
 	CSMLogin csmLogin = new CSMLogin(driver);
 	RequestForFinancingObj requestForFinancing = new RequestForFinancingObj(driver);
-	ApplicationForFinancialFacilityObj applicationForFinancialFacilityObj = new ApplicationForFinancialFacilityObj(driver);
+	ApplicationForFinancialFacility_482_Obj applicationForFinancialFacilityObj = new ApplicationForFinancialFacility_482_Obj(driver);
 	
 	@And("User_482 Update test data set id for AT_RF_026")
     public void user_482_update_test_data_set_id_for_at_rf_026() {

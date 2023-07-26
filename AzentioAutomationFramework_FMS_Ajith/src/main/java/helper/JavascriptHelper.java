@@ -14,7 +14,7 @@ public class JavascriptHelper {
 	public  JavascriptHelper(WebDriver driver) {
 		this.driver = driver;
 			}
-
+	
 	public Object executeScript(String script) {
 		JavascriptExecutor exe = (JavascriptExecutor) driver;
 		Log.info(script);

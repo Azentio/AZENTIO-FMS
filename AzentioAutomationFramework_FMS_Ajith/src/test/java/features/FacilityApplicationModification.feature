@@ -38,6 +38,7 @@ And User_482 Click Random to Make Recommendations Select Options
 And User_482 Select Recommendations in Recommendations Tab
 And User_482 Click Recommend Button in Approval Committe Recommendations under Request Application
 And User_482 Click on Ok button in Confirm Pop up Menu
+#And User
 
 
 @AT_FAM_015

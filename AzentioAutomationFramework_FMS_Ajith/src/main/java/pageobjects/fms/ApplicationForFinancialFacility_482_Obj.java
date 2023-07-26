@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ApplicationForFinancialFacilityObj {
+public class ApplicationForFinancialFacility_482_Obj {
 	WebDriver driver;
 
-	public ApplicationForFinancialFacilityObj(WebDriver driver) {
+	public ApplicationForFinancialFacility_482_Obj(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -1669,6 +1669,17 @@ public class ApplicationForFinancialFacilityObj {
 		return repaymentPlan_WIFAK_482;
 	}
 	
+	@FindBy(xpath="//*[@id='profit_dist_method_WIFT001MT']")
+	private WebElement profitRecognitionMethod_WIFAK_482;
+	public WebElement profitRecognitionMethod_WIFAK_482() {
+		return profitRecognitionMethod_WIFAK_482;
+	}
+	
+	@FindBy(xpath="//*[@id='createSchedule_WIFT001MT']")
+	private WebElement createScheduleButton_WIFAK_482;
+	public WebElement createScheduleButton_WIFAK_482() {
+		return createScheduleButton_WIFAK_482;
+	}
 	
 
 	

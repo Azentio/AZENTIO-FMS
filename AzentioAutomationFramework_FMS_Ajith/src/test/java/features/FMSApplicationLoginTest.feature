@@ -14,3 +14,6 @@ And logout from the application
 @EndExecution
 Scenario: End exection
 Given Test Ended
+@CSMLogin
+Scenario: To Test the login functionality of IIS s application
+Given navigate to IIS application and login with valid credentials

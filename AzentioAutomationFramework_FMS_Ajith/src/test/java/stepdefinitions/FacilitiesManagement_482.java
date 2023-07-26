@@ -16,14 +16,14 @@ import dataProvider.ExcelData;
 import helper.Selenium_Actions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import pageobjects.fms.ApplicationForFinancialFacilityObj;
+import pageobjects.fms.ApplicationForFinancialFacility_482_Obj;
 import pageobjects.fmsparams.ApplicationForFinancialFacilityParamObj;
 import resources.BaseClass;
 
 public class FacilitiesManagement_482 {
 	WebDriver driver = BaseClass.driver;
 	Selenium_Actions seleniumActions = new Selenium_Actions(driver);
-	ApplicationForFinancialFacilityObj applicationForFinancialFacilityObj = new ApplicationForFinancialFacilityObj(driver);
+	ApplicationForFinancialFacility_482_Obj applicationForFinancialFacilityObj = new ApplicationForFinancialFacility_482_Obj(driver);
 	ApplicationForFinancialFacilityParamObj fmsParamObj = new ApplicationForFinancialFacilityParamObj(driver);
 	ConfigFileReader configFileReader = new ConfigFileReader();
 	String path = System.getProperty("user.dir") +"\\TestData\\FMSTestData.xlsx";

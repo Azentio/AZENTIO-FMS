@@ -143,6 +143,35 @@ public String getCSMApplicationUrl() {
 		else
 			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
 	}
+	public String getIISParamApplicationUrl() {
+		String url = properties.getProperty("IISParamsapplicationUrl");
+		if (url != null)
+			return url;
+		else
+			throw new RuntimeException("url not specified in the Configuration.properties file.");
+	}
+	public String getIISApplicationUrl() {
+		String url = properties.getProperty("IISapplicationUrl");
+		if (url != null)
+			return url;
+		else
+			throw new RuntimeException("url not specified in the Configuration.properties file.");
+	}
+	
+	public String getIISApplicationUserType() {
+		String userType = properties.getProperty("IIS_Application_UserType");
+		if (userType != null)
+			return userType;
+		else
+			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
+	}
+	public String getIISApplicationUserTypeSendAlert() {
+		String userType = properties.getProperty("IIS_ParamApplication_UserType");
+		if (userType != null)
+			return userType;
+		else
+			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
+	}
 	
 	
 	}

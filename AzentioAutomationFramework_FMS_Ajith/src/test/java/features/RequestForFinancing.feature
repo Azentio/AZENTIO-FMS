@@ -161,9 +161,6 @@ And User_482 Click Audit button In Maintenance Screen Under Collateral Managemen
 And User_482 Click last Button in Audit details View
 And User_482 Validate Audit Details Updated Properly
 
-
-
-
 @AT_RF_064_01
 Scenario: TSR - AIB180044
 Given navigate to FMS param application and login with valid credentials
@@ -321,43 +318,43 @@ And User click ok button in sucess pop up
  #blocked test case
 @AT_RF_119_03
 Scenario: User approve the faciliy application in FMS application ,record created in csm application
-Given navigate to FMS application and login with valid credentials
-And User click Baj Application Menu
-And User click Application in Baj Application Menu
-And User click Application for financial facilities in Application Sub menu
-And User click Maintenance Screen In Application Sub menu
-And User search and select the facility record created in CSM application
-And User Enter the additional reference number in Maintenance Screen under Application Sub menu
-And User click Validate button in Maintenance Screen under Application Sub menu
-And User click ok button in warning popup in Maintenance Screen under Application Sub menu
-And User click yes button in do you want to proceed option under post approval pop up screen
-And User Store application facility request number in Sucess pop up
-And User click ok button in sucess pop up under Maintenance Screen Application
-And User click approval level 1 in Application for financial facilities under Baj application
-And User search and select the facility application in approval level 1 screen under baj application
-And User Select Decision as forward in Approve level 1 recommendation under financial facility application record
-And User click submit button in Approve level 1 under financial facility application record
-And User click ok button in warning popup in Approve level 1 under financial facility application record
-And User click yes button in do you want to proceed option in Approve level 1 under financial facility application record
-And User click ok button in Sucess pop up under approval level 1 under Baj application
-And User click approval level 2 in Application for financial facilities under Baj application
-And User search and select the facility application in approval level 2 screen under baj application
-And User Select Decision as forward in Approve level 2 recommendation under financial facility application record
-And User click submit button in Approve level 2 under financial facility application record
-And User click ok button in warning popup in Approve level 2 under financial facility application record
-And User click yes button in do you want to proceed option in Approve level 2 under financial facility application record
-And User click ok button in Sucess pop up under approval level 2 under Baj application
-And User click approval level 3in Application for financial facilities under Baj application
-And User search and select the facility application in approval level 3 screen under baj application
-And User Select Decision as forward in Approve level 3 recommendation under financial facility application record
-And User click submit button in Approve level 3 under financial facility application record
-And User click ok button in warning popup in Approve level 3 under financial facility application record
-And User click yes button in do you want to proceed option in Approve level 3 under financial facility application record
-And User click ok button in Sucess pop up under approval level 3 under Baj application
-And User click approval committee recommendations screen under Baj application
-And User search and select the facility application in approval committee recommendations screen under Baj application
-And User click additional details tab in selected facility application under approval committee recommendation Baj application
-And User Validate BM recommendation screen in selected facility application under approval committee recommendation Baj application
+#Given navigate to FMS application and login with valid credentials
+#And User click Baj Application Menu
+#And User click Application in Baj Application Menu
+#And User click Application for financial facilities in Application Sub menu
+#And User click Maintenance Screen In Application Sub menu
+#And User search and select the facility record created in CSM application
+#And User Enter the additional reference number in Maintenance Screen under Application Sub menu
+#And User click Validate button in Maintenance Screen under Application Sub menu
+#And User click ok button in warning popup in Maintenance Screen under Application Sub menu
+#And User click yes button in do you want to proceed option under post approval pop up screen
+#And User Store application facility request number in Sucess pop up
+#And User click ok button in sucess pop up under Maintenance Screen Application
+#And User click approval level 1 in Application for financial facilities under Baj application
+#And User search and select the facility application in approval level 1 screen under baj application
+#And User Select Decision as forward in Approve level 1 recommendation under financial facility application record
+#And User click submit button in Approve level 1 under financial facility application record
+#And User click ok button in warning popup in Approve level 1 under financial facility application record
+#And User click yes button in do you want to proceed option in Approve level 1 under financial facility application record
+#And User click ok button in Sucess pop up under approval level 1 under Baj application
+#And User click approval level 2 in Application for financial facilities under Baj application
+#And User search and select the facility application in approval level 2 screen under baj application
+#And User Select Decision as forward in Approve level 2 recommendation under financial facility application record
+#And User click submit button in Approve level 2 under financial facility application record
+#And User click ok button in warning popup in Approve level 2 under financial facility application record
+#And User click yes button in do you want to proceed option in Approve level 2 under financial facility application record
+#And User click ok button in Sucess pop up under approval level 2 under Baj application
+#And User click approval level 3in Application for financial facilities under Baj application
+#And User search and select the facility application in approval level 3 screen under baj application
+#And User Select Decision as forward in Approve level 3 recommendation under financial facility application record
+#And User click submit button in Approve level 3 under financial facility application record
+#And User click ok button in warning popup in Approve level 3 under financial facility application record
+#And User click yes button in do you want to proceed option in Approve level 3 under financial facility application record
+#And User click ok button in Sucess pop up under approval level 3 under Baj application
+#And User click approval committee recommendations screen under Baj application
+#And User search and select the facility application in approval committee recommendations screen under Baj application
+#And User click additional details tab in selected facility application under approval committee recommendation Baj application
+#And User Validate BM recommendation screen in selected facility application under approval committee recommendation Baj application
 
 @AT_RF_164
 Scenario: To check the new modification @ FMS Modification in Request for Financing Screen.

@@ -8,11 +8,11 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Random;
-import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import dataProvider.ConfigFileReader;
@@ -21,13 +21,13 @@ import helper.Selenium_Actions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import pageobjects.fms.ApplicationForFinancialFacilityObj;
+import pageobjects.fms.ApplicationForFinancialFacility_482_Obj;
 import resources.BaseClass;
 
-public class ApplicationForFacility extends BaseClass {
+public class ApplicationForFacility_482 extends BaseClass {
 	WebDriver driver = BaseClass.driver;
 	Selenium_Actions seleniumActions = new Selenium_Actions(driver);
-	ApplicationForFinancialFacilityObj applicationForFinancialFacilityObj = new ApplicationForFinancialFacilityObj(driver);
+	ApplicationForFinancialFacility_482_Obj applicationForFinancialFacilityObj = new ApplicationForFinancialFacility_482_Obj(driver);
 	ConfigFileReader configFileReader = new ConfigFileReader();
 	String path = System.getProperty("user.dir") +"\\TestData\\FMSTestData.xlsx";
 	ExcelData excelData = new ExcelData(path,"ApplicationForFinancialFacility","DataSet ID");
@@ -59,6 +59,11 @@ public class ApplicationForFacility extends BaseClass {
 	@And("User Update test data set id for AT_AFF_019")
 	public void user_update_test_data_set_id_for_at_aff_019() {
 		testExecutionData = testExecution.getTestdata("AT_AFF_019");
+    	testData = excelData.getTestdata(testExecutionData.get("Data Set ID"));
+	}
+	@And("User_482 update test data set for AT_AFF_051")
+	public void user_update_test_data_set_id_for_at_aff_051() {
+		testExecutionData = testExecution.getTestdata("AT_AFF_051");
     	testData = excelData.getTestdata(testExecutionData.get("Data Set ID"));
 	}
 	@And("User_482 update test data set for AT_FM_061")
@@ -196,7 +201,7 @@ public class ApplicationForFacility extends BaseClass {
     	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.facilityTypeInRequestForFinancingScreen());
 		seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.facilityTypeInRequestForFinancingScreen());
 	    seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.facilityTypeInRequestForFinancingScreen());
-	    applicationForFinancialFacilityObj.facilityTypeInRequestForFinancingScreen().sendKeys(testData.get("FacilityType"));
+	    applicationForFinancialFacilityObj.facilityTypeInRequestForFinancingScreen().sendKeys(testData.get("Facility Type"));
     	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.totalLimitInRequestForFinancingScreen());
     	seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.totalLimitInRequestForFinancingScreen());
 		seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.totalLimitInRequestForFinancingScreen());
@@ -2613,5 +2618,32 @@ public class ApplicationForFacility extends BaseClass {
     	  drawDownRequestData.updateTestData(testExecutionData.get("Data Set ID"), "FacilityCode",facilityCode);
       	  System.out.println(facilityCode); 
       }
+      @Given("User_482 Click Product Class details in Limit Details")
+      public void user_click_product_class_details_in_limit_details() {
+    	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.productClassSelect_WIFAK_482());
+    	  seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.productClassSelect_WIFAK_482());
+    	  seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.productClassSelect_WIFAK_482());
+      }
+
+      @Given("User_482 Click Repayment Plan options Under WIFAK Application")
+      public void user_click_repayment_plan_options_under_Wifak_Application() {
+    	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.repaymentPlanOption());
+    	  seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.repaymentPlan_WIFAK_482());
+    	  seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.repaymentPlan_WIFAK_482());
+      }
+      @Given("User_482 Select Profit Recognition Method as Straight line")
+      public void user_482_select_profit_recognition_method_as_straight_line() {
+    	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.profitRecognitionMethod_WIFAK_482());
+    	  seleniumActions.getDropDownHelper().SelectUsingVisibleText(applicationForFinancialFacilityObj.profitRecognitionMethod_WIFAK_482(),"Straight Line");
+      }
+
+      @Given("User_482 Click Create schedule Button Under WIFAK Application")
+      public void user_482_click_create_schedule_button_under_wifak_application() {
+    	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.createScheduleButton_WIFAK_482());
+    	  seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.createScheduleButton_WIFAK_482());
+    	  seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.createScheduleButton_WIFAK_482());
+          
+      }
+
       
 }

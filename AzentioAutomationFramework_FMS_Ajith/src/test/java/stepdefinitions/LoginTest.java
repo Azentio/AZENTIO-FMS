@@ -19,6 +19,7 @@ import resources.BaseClass;
 public class LoginTest extends BaseClass {
 	WebDriver driver = BaseClass.driver;
 	FMSLogin FMSLogin = new FMSLogin(driver);
+	IISLogin iisLogin = new IISLogin(driver);
 	WaitHelper waitHelper = new WaitHelper(driver);
 	ClicksAndActionsHelper clicksAndActionHelper = new ClicksAndActionsHelper(driver);
 	FMSCommonWebElements fmsCommonWebElements = new FMSCommonWebElements(driver);
@@ -52,6 +53,13 @@ public class LoginTest extends BaseClass {
 		driver.get(configFileReader.getSADSApplicationUrl());
 		FMSLogin.loginIntoSadsApplication(configFileReader.getSADSApplicationUserType());
     }
+	@Given("^navigate to IIS application and login with valid credentials$")
+    public void navigate_to_iis_application_and_login_with_valid_credentials() throws Throwable {
+		driver.get(configFileReader.getIISParamApplicationUrl());
+		iisLogin.loginIntoIISApplication(configFileReader.getIISApplicationUrl());
+
+    }
+	
 	
 	@And("^logout from the application$")
 	public void logout_from_the_application() throws Throwable {

@@ -139,8 +139,20 @@ And User_482 click add icon in limit details under WIFAK Application
 And User_482 select the product class in limit details under WIFAK Application
 And User_482 check clean checkbox options in limit details under WIFAK Application
 And User_482 click add icon in limit details popup under WIFAK Application
+And User_482 click document details tab under WIFAK Application
+And User_482 enter solicitor name to select from look up in document details under WIFAK Application 
+And User_482 enter Estimator name to select from look up in document details under WIFAK Application
+And User_482 click Maininformation tab in WIFAK Application
+And User_482 click save button in Main Info tab under WIFAK Application
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Get the Code in Success Pop up Menu under WIFAK Application
+And User_482 Click on Ok button in Success Pop up Menu
 And User_482 Click Product Class details in Limit Details
-And User_482 Click Repayment Plan options
+And User_482 Click Repayment Plan options Under WIFAK Application
+And User_482 Select Profit Recognition Method as Straight line
+And User enter no of payments in repayment plan
+And User_482 Click Create schedule Button Under WIFAK Application
+And User_482 Click on Ok button in Confirm Pop up Menu
 
 @AT_AFF_100
 Scenario: Check the behavior of the following fields under the Application and Request Screen and under Limit Details window down payment
