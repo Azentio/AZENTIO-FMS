@@ -53,6 +53,7 @@ public class LoginTest extends BaseClass {
 			driver.get(configFileReader.getCSMApplicationUrl());
 			csmLogin.loginIntoCSMApplication(configFileReader.getCSMApplicationUserType());
 		}
+		
 //		@Given("^navigate to CSM param application and login with valid credentials$")
 //		public void navigate_to_csm_param_application_and_login_with_valid_credentials() throws Throwable {
 //			driver.get(configFileReader.getCSMparamsUrl());
@@ -66,6 +67,14 @@ public class LoginTest extends BaseClass {
 			driver.get(configFileReader.getIISParamUrl());
 			iisLogin.loginIntoIISParamApplication(configFileReader.getIISParamApplicationUserType());
 	    }
+		
+//		IIS_Core
+		@Given("^navigate to IIS application and login with valid credentials$")
+	    public void navigate_to_iis_application_and_login_with_valid_credentials() throws Throwable {
+			driver.get(configFileReader.getIISApplicationUrl());
+			iisLogin.loginIntoIISApplication(configFileReader.getIISApplicationUserType());
+	    }
+		
 		
 	
 	@And("^logout from the application$")

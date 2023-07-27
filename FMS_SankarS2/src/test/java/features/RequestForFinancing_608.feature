@@ -68,7 +68,7 @@ And User_608 validate Facility Custom Fields screen are available
 
 # FMS Param --> facility tye --> update after approve --> retrive the data -->
 # facility details tab --> STP Facility req division-- check all flags except "issue facility offer" flag
-# facility reports tab --> issue facility offer --> select reprot ID --> check "Auto print" flag --> Update @ Approve
+# facility reports tab --> issue facility offer --> select reprot ID --> check "Auto print" flag --> Update & Approve
 #
 # Sprint 3
 @AT_RF_034
@@ -157,7 +157,7 @@ And User_608 double click on the retrived data
 When User_608 clicks on the issue offer button under issue facility offer
 
 
-
+# FMS Core --> change the language in "Arabic" --> go to the mortgage management module --> Maintanance sceen --> verify field should be arabic language
 # Sprint 3
 @AT_RF_035
 Scenario: TSR - SBYB160013
@@ -171,7 +171,8 @@ And User_608 verify the Maintanance screen should be arabic language
 
 
 # Sprint 4
-# FMS Core --> WIFAK APP --> Application for financial facility --> Additional details tab --> To check the down payment and down payment vendor should be editable.
+# FMS Core --> WIFAK APP --> Application for financial facility --> 
+# Additional details tab --> To validate down payment and down payment vendor should be editable.
 # limit details --> Product class tab  --> Account label field and found transfer label should be visible
 @AT_RF_040
 Scenario: TSR - RIDB180129

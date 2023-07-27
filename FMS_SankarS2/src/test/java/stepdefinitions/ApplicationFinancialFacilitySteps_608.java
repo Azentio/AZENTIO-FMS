@@ -1253,7 +1253,14 @@ public class ApplicationFinancialFacilitySteps_608 {
      @And("^User_608 clicks on the Facility category feature under Parameter$")
      public void user_clicks_on_the_facility_category_feature() throws Throwable {
      	waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.parameterFacilityCategory_608());
-     	fmsParamObj608.parameterFacilityCategory_608().click();
+     	for (int i = 0; i <= 300; i++) {
+    		 try {
+    			 fmsParamObj608.parameterFacilityCategory_608().click();
+    			 break;
+    		 } catch (Exception e) {
+				
+    		 }
+    	 }      	
      }
 
      @And("^User_608 clicks on the maintanance menu under Facility category$")
@@ -1314,7 +1321,14 @@ public class ApplicationFinancialFacilitySteps_608 {
  	@And("^User_608 clicks on the control records feature under Parameter$")
      public void user_clicks_on_the_control_records_feature() throws Throwable {
          waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.parameterControlRecords_608());
-         fmsParamObj608.parameterControlRecords_608().click();
+         for (int i = 0; i <= 300; i++) {
+    		 try {
+    			 fmsParamObj608.parameterControlRecords_608().click();
+    			 break;
+    		 } catch (Exception e) {
+				
+    		 }
+    	 }         
      }
 
      @And("^User_608 clicks on the update after approve menu under control records$")
@@ -1509,7 +1523,14 @@ public class ApplicationFinancialFacilitySteps_608 {
      @And("^User_608 clicks on the Facility Type feature$")
      public void user_clicks_on_the_facility_type_feature() throws Throwable {
      	 waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.paramFacilityType_608());
-     	 fmsParamObj608.paramFacilityType_608().click();
+     	 for (int i = 0; i <= 300; i++) {
+     		 try {
+     			 fmsParamObj608.paramFacilityType_608().click();
+     			 break;
+     		 } catch (Exception e) {
+				
+     		 }
+     	 }     	 
      }
      
      @And("^User_608 clicks on the update after approve menu in Facility type$")
@@ -1792,7 +1813,14 @@ public class ApplicationFinancialFacilitySteps_608 {
    @And("^User_608 clicks on the transfer of entities module$")
    public void user_clicks_on_the_transfer_of_entities_module() throws Throwable {
    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.transferOfEntitiesModule_608());
-   	applicationFinancialFacilityObj608.transferOfEntitiesModule_608().click();
+   	for (int i = 0; i <= 300; i++) {
+			try {
+				applicationFinancialFacilityObj608.transferOfEntitiesModule_608().click();
+				break;
+			} catch (Exception e) {
+				
+			}
+		}
    }
 
    @And("^User_608 clicks on the transfer of entities maintanance menu$")

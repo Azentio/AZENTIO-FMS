@@ -5,14 +5,12 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
-import org.junit.Assume;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import com.aventstack.extentreports.Status;
 
-import Runner.NewExcelTestRunner;
 import dataProvider.ExcelData;
 import dataProvider.ExcelTest;
 import helper.ScreenshotHelper;

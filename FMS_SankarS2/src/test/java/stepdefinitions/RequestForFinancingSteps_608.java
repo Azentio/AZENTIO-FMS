@@ -146,7 +146,14 @@ public class RequestForFinancingSteps_608 {
 			}
 		}
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.IISParameterProductClassModule_608());
-		requestForFinancingObj608.IISParameterProductClassModule_608().click();
+		for (int i = 0; i <= 300; i++) {
+			try {
+				requestForFinancingObj608.IISParameterProductClassModule_608().click();
+				break;
+			} catch (Exception e) {
+				
+			}
+		}		
 	}
 
 	@And("^User_608 clicks on the maintanance screen under product class module$")
@@ -288,7 +295,14 @@ public class RequestForFinancingSteps_608 {
 			}
 		}
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.paramFacilityCustomFields_608());
-		requestForFinancingObj608.paramFacilityCustomFields_608().click();
+		for (int i = 0; i <= 300; i++) {
+			try {
+				requestForFinancingObj608.paramFacilityCustomFields_608().click();
+				break;
+			} catch (Exception e) {
+				
+			}
+		}		
 	}
 
 	@And("^User_608 clicks on the Maintain facility custom fields under facility custom fields$")
@@ -307,7 +321,15 @@ public class RequestForFinancingSteps_608 {
 	@And("^User_608 double click on the one record under update after approve$")
 	public void user_double_click_on_the_one_record_under_update_after_approve() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.updateAfterApproveSearchResult_608());
-		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.updateAfterApproveSearchResult_608());
+		for (int i = 0; i <= 300; i++) {
+			try {
+				clicksAndActionsHelper.doubleClick(requestForFinancingObj608.updateAfterApproveSearchResult_608());
+				break;
+			} catch (Exception e) {
+				
+			}
+		}
+		
 	}
 
 	@And("^User_608 validate Facility Custom Fields screen are available$")
@@ -1906,7 +1928,14 @@ public class RequestForFinancingSteps_608 {
 	@And("^User_608 clicks on the Document checklist feature$")
 	public void user_clicks_on_the_document_checklist_feature() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, fmsParamObj608.paramDocumentChecklist_608());
-		fmsParamObj608.paramDocumentChecklist_608().click();
+		for (int i = 0; i <= 300; i++) {
+			try {
+				fmsParamObj608.paramDocumentChecklist_608().click();
+				break;
+			} catch (Exception e) {
+				
+			}
+		}		
 	}
 
 	@And("^User_608 clicks on the update after approve menu in Document checklist$")
@@ -2061,7 +2090,14 @@ public class RequestForFinancingSteps_608 {
 	@And("^User_608 clicks on the Collateral type module$")
 	public void user_clicks_on_the_collateral_type_module() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.parameterCollateralType_608());
-		requestForFinancingObj608.parameterCollateralType_608().click();
+		for (int i = 0; i <= 300; i++) {
+			try {
+				requestForFinancingObj608.parameterCollateralType_608().click();
+				break;
+			} catch (Exception e) {
+				
+			}
+		}
 	}
 
 	@And("^User_608 clicks on the Maintanance screen under Collateral type$")

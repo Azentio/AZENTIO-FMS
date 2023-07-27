@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-24T18:24:23 IST" name="Default suite" finished-at="2023-07-24T18:30:16 IST" duration-ms="353642">
+  <suite started-at="2023-07-27T12:51:17 IST" name="Default suite" finished-at="2023-07-27T12:53:57 IST" duration-ms="160151">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5afa3c9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-07-24T18:24:23 IST" name="Default test" finished-at="2023-07-24T18:30:16 IST" duration-ms="353642">
+    <test started-at="2023-07-27T12:51:17 IST" name="Default test" finished-at="2023-07-27T12:53:57 IST" duration-ms="160151">
       <class name="Runner.TestApplication">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-07-24T18:24:23 IST" name="setUpClass" finished-at="2023-07-24T18:24:25 IST" duration-ms="2452" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-07-27T12:51:17 IST" name="setUpClass" finished-at="2023-07-27T12:51:20 IST" duration-ms="2462" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-07-24T18:24:25 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-24T18:28:52 IST" duration-ms="266828" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-07-27T12:51:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-27T12:53:41 IST" duration-ms="141510" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Authorize/Reject Application for Financial Facilities"]]>
+                <![CDATA["IIS Application"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[To check the Authorize/Reject Feature]"]]>
+                <![CDATA["Optional[To check the Incidental Charges Feature]"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-07-24T18:28:52 IST" name="tearDownClass" finished-at="2023-07-24T18:30:16 IST" duration-ms="84283" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-07-27T12:53:41 IST" name="tearDownClass" finished-at="2023-07-27T12:53:57 IST" duration-ms="16047" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
