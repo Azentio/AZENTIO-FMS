@@ -91,8 +91,8 @@ Feature: Request For Financing
     And User_610 Select limit Details
     And User_610 Click Add button on limit Detail
     And User_610 Enter ValueOn Product Class
-    And User_610 Click Search Button In Account No
-    And User_610 Enter Double Click Search Account No
+  #  And User_610 Click Search Button In Account No
+  #  And User_610 Enter Double Click Search Account No
     Then User_610 Check Flag in Clean Level IN Limits Detalis SubMenu
     And User_610 Click Add button AfterEnter Value On Product Class
     And User_610 User Click Charges Details
@@ -102,24 +102,27 @@ Feature: Request For Financing
     And User_610 Click Ok Button In Waring Screen
     And User_610 Click OK In Button Sucess Screen
     #  And Click Validate Button
-    And User_610 Click Save Button After In Limits Details
+   And User_610 Click Save Button After In Limits Details
     Then User_610 Click Ok Button In Waring Screen In Limits Details
     And User_610 Click OK  Button In Sucess Screen In Limits Details
     And User_610 Click Document Details
     And User_610 Enter The Value Solicitor Name
     And User_610 Enter The Value Estimator Name
-    
-     And User_610 Click Validate Button in Document Details
+    And User_610 Click Validate Button in Document Details
+    #validate level 1 2 3  reypayment schedule 
     And User_610 clicks the Approve Level1 link
     And User_610 retrive the first data in approve level1
+#    And User_610 Validate the Schedule Details displaying or Not
     And User_610 select the Approve level1 decision as approve
     And User_610 clicks on the level1 submit button
     And User_610 clicks the Approve Level2 link
     And User_610 retrive the first data in approve level2
+ #   And User_610 Validate the Schedule Details displaying or Not in Approvel2
     And User_610 select the level2 decision as approve
     And User_610 clicks on the level2 submit button
     And User_610 clicks the Approve Level3 link
     And User_610 retrive the first data in approve level3
+ #   And User_610 Validate the Schedule Details displaying or Not in Approvel3
     And User_610 select the level3 decision as approve
     When User_610 clicks on the level3 submit button
     
@@ -188,6 +191,10 @@ Feature: Request For Financing
     @574947
   Scenario: TSR-EWB170043
     Given navigate to FMS application2 and login with valid credentials
+    And User_609 click Technical details
+    And User_609 click clear caches
+    And User_609 Click the ok button
+    And User_610 get the test data set id for AT_RF_117
     And User_610 Click Wifak Application first
     And User_610 Click Wifak Application Second
     And User_610 Click Application for financial facilities
@@ -220,22 +227,30 @@ Feature: Request For Financing
     And User_610 Enter The Value Solicitor Name
     And User_610 Enter The Value Estimator Name
     And User_610 Click Validate Button in Document Details
+    #validate level 1 2 3  reypayment schedule 
     And User_610 clicks the Approve Level1 link
     And User_610 retrive the first data in approve level1
+    And User_610 Validate the Schedule Details displaying or Not
     And User_610 select the Approve level1 decision as approve
     And User_610 clicks on the level1 submit button
     And User_610 clicks the Approve Level2 link
     And User_610 retrive the first data in approve level2
+    And User_610 Validate the Schedule Details displaying or Not in Approvel2
     And User_610 select the level2 decision as approve
     And User_610 clicks on the level2 submit button
     And User_610 clicks the Approve Level3 link
     And User_610 retrive the first data in approve level3
+    And User_610 Validate the Schedule Details displaying or Not in Approvel3
     And User_610 select the level3 decision as approve
     When User_610 clicks on the level3 submit button
     
      @740809
   Scenario: TSR-AIBBI180258
     Given navigate to FMS application2 and login with valid credentials
+    And User_609 click Technical details
+    And User_609 click clear caches
+    And User_609 Click the ok button
+    And User_610 get the test data set id for AT_RF_154
     And User_610 Click Wifak Application first
     And User_610 Click Wifak Application Second
     And User_610 Click Application for financial facilities
@@ -253,20 +268,14 @@ Feature: Request For Financing
     And User_610 Enter ValueOn Product Class
     Then User_610 Check Flag in Clean Level IN Limits Detalis SubMenu
     And User_610 Click Add button AfterEnter Value On Product Class
+    Then User_610 Click the Product Class In Limits Details
     And User_610 Click Save Button After In Limits Details
     Then User_610 Click Ok Button In Waring Screen In Limits Details
     And User_610 Click OK  Button In Sucess Screen In Limits Details
-    Then User_610 Click the Product Class In Limits Details
-    And User_610 Click Repayment Plan In Limits Details
-    Then User_610 Enter the value in No Of Payments  In Repayment Plan
-    And User_610 Click Create Schedule In Repayment Plan
-    Then User_610 Click Warning popup No In Repayment Plan
-    And User_610 Click Save Button After In Repayment Plan
-    Then User_610 Click Ok Button In Waring Screen In Repayment Plan
-    And User_610 Click OK  Button In Sucess Screen In Repayment Plan
     And User_610 Click Document Details
     And User_610 Enter The Value Solicitor Name
     And User_610 Enter The Value Estimator Name
+    #approvel
     And User_610 Click Validate Button in Document Details
     And User_610 clicks the Approve Level1 link
     And User_610 retrive the first data in approve level1
@@ -280,6 +289,21 @@ Feature: Request For Financing
     And User_610 retrive the first data in approve level3
     And User_610 select the level3 decision as approve
     When User_610 clicks on the level3 submit button
+    # Update After Approve Screen
+    And User_610 Click Update After Approve Screen
+    And User_610 retrive the first data in Update After Approve Screen
+    And User_610 Click Addition Details Tab Update After Approve Screen
+    And User_610 Change the Date in Offer Expiry Date in Update After Approve Screen
+    And User_610 Click Validate Button Update After Approve Screen
+        # Approve
+    And User_610 clicks the Approve Level1 link
+    And User_610 retrive the first data in approve level1
+    And User_610 Click Addition Details Tab in approve level1
+    And User_610 Validate the Offer Expiry Date Change or Not in approve level1
 
-  # Then Click Update After Approve in Application For Finacial Facilities
-  # facilityManagement
+ 
+  
+    @12345
+  Scenario: TSR-AIBBI180258
+  #  Given navigate to IIS application and login with valid credentials
+    Given navigate to IIS param application and login with valid credentials

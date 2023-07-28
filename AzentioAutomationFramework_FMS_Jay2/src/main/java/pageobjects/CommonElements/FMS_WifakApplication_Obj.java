@@ -2244,6 +2244,12 @@ public class FMS_WifakApplication_Obj {
 			return approvel1_ScheduleDetails_In_LimitsDetails_610;
 		}
 		
+		@FindBy(xpath = "//td[@id='td_repaumentPlanScheduleGridTbl_Id_WIFT001AP1_1_VALUE_DATE']")
+		private WebElement approvel1_ValidateValuesIN_ScheduleDetails_In_LimitsDetails_610;
+		public WebElement approvel1_ValidateValuesIN_ScheduleDetails_In_LimitsDetails_610() {
+			return approvel1_ValidateValuesIN_ScheduleDetails_In_LimitsDetails_610;
+		}
+		
 		@FindBy(xpath = "//span[@id='ui-dialog-title-fmsRepaymentPlanDiv_id_WIFT001AP1']//parent::div/a/span[text()='close']")
 		private WebElement approvel1_CloseIcon_ScheduleDetails_In_LimitsDetails_610;
 		public WebElement approvel1_CloseIcon_ScheduleDetails_In_LimitsDetails_610() {
@@ -2256,6 +2262,95 @@ public class FMS_WifakApplication_Obj {
 			return approvel1_MainInformation_610;
 		}
 		
+		
+		//---------------approvel 2 limit nd repayment 
+		
+				@FindBy(xpath = "//li[@id='applicationFacilityLimitDetailsTabs_WIFT001AP2']")
+				private WebElement approvel2_LimitsDetails_610;
+				public WebElement approvel2_LimitsDetails_610() {
+					return approvel2_LimitsDetails_610;
+				}
+				
+				@FindBy(xpath = "//td[@id='td_ApplicationFacilityLimitDetailsGrid_WIFT001AP2_1_fmsAppLimitDetVO.GENERAL_FACILITY_TYPE']")
+				private WebElement approvel2_productClass_610;
+				public WebElement approvel2_productClass_610() {
+					return approvel2_productClass_610;
+				}
+				
+				@FindBy(xpath = "//button[@id='applicationfacility_repayplan_btn_WIFT001AP2']")
+				private WebElement approvel2_RepaymentPlan_btn_In_LimitsDetails_610;
+				public WebElement approvel2_RepaymentPlan_btn_In_LimitsDetails_610() {
+					return approvel2_RepaymentPlan_btn_In_LimitsDetails_610;
+				}
+				
+				@FindBy(xpath = "//li[@id='rePaymentPlanMainTab2_WIFT001AP2']")
+				private WebElement approvel2_ScheduleDetails_In_LimitsDetails_610;
+				public WebElement approvel2_ScheduleDetails_In_LimitsDetails_610() {
+					return approvel2_ScheduleDetails_In_LimitsDetails_610;
+				}
+				
+				@FindBy(xpath = "//td[@id='td_repaumentPlanScheduleGridTbl_Id_WIFT001AP2_1_VALUE_DATE']")
+				private WebElement approvel2_ValidateValuesIN_ScheduleDetails_In_LimitsDetails_610;
+				public WebElement approvel2_ValidateValuesIN_ScheduleDetails_In_LimitsDetails_610() {
+					return approvel2_ValidateValuesIN_ScheduleDetails_In_LimitsDetails_610;
+				}
+				
+				@FindBy(xpath = "//span[@id='ui-dialog-title-fmsRepaymentPlanDiv_id_WIFT001AP2']//parent::div/a/span[text()='close']")
+				private WebElement approvel2_CloseIcon_ScheduleDetails_In_LimitsDetails_610;
+				public WebElement approvel2_CloseIcon_ScheduleDetails_In_LimitsDetails_610() {
+					return approvel2_CloseIcon_ScheduleDetails_In_LimitsDetails_610;
+				}
+				
+				@FindBy(xpath = "//li[@id='applicationFacilityMainInfoTabs_WIFT001AP2']")
+				private WebElement approvel2_MainInformation_610;
+				public WebElement approvel2_MainInformation_610() {
+					return approvel2_MainInformation_610;
+				}
+				
+				//---------------approvel 2 limit nd repayment 
+				
+				@FindBy(xpath = "//li[@id='applicationFacilityLimitDetailsTabs_WIFT001AP3']")
+				private WebElement approvel3_LimitsDetails_610;
+				public WebElement approvel3_LimitsDetails_610() {
+					return approvel3_LimitsDetails_610;
+				}
+				
+				@FindBy(xpath = "//td[@id='td_ApplicationFacilityLimitDetailsGrid_WIFT001AP3_1_fmsAppLimitDetVO.GENERAL_FACILITY_TYPE']")
+				private WebElement approvel3_productClass_610;
+				public WebElement approvel3_productClass_610() {
+					return approvel3_productClass_610;
+				}
+				
+				@FindBy(xpath = "//button[@id='applicationfacility_repayplan_btn_WIFT001AP3']")
+				private WebElement approvel3_RepaymentPlan_btn_In_LimitsDetails_610;
+				public WebElement approvel3_RepaymentPlan_btn_In_LimitsDetails_610() {
+					return approvel3_RepaymentPlan_btn_In_LimitsDetails_610;
+				}
+				
+				@FindBy(xpath = "//li[@id='rePaymentPlanMainTab2_WIFT001AP3']")
+				private WebElement approvel3_ScheduleDetails_In_LimitsDetails_610;
+				public WebElement approvel3_ScheduleDetails_In_LimitsDetails_610() {
+					return approvel3_ScheduleDetails_In_LimitsDetails_610;
+				}
+				
+				@FindBy(xpath = "//td[@id='td_repaumentPlanScheduleGridTbl_Id_WIFT001AP3_1_VALUE_DATE']")
+				private WebElement approvel3_ValidateValuesIN_ScheduleDetails_In_LimitsDetails_610;
+				public WebElement approvel3_ValidateValuesIN_ScheduleDetails_In_LimitsDetails_610() {
+					return approvel3_ValidateValuesIN_ScheduleDetails_In_LimitsDetails_610;
+				}
+				
+				@FindBy(xpath = "//span[@id='ui-dialog-title-fmsRepaymentPlanDiv_id_WIFT001AP3']//parent::div/a/span[text()='close']")
+				private WebElement approvel3_CloseIcon_ScheduleDetails_In_LimitsDetails_610;
+				public WebElement approvel3_CloseIcon_ScheduleDetails_In_LimitsDetails_610() {
+					return approvel3_CloseIcon_ScheduleDetails_In_LimitsDetails_610;
+				}
+				
+				@FindBy(xpath = "//li[@id='applicationFacilityMainInfoTabs_WIFT001AP3']")
+				private WebElement approvel3_MainInformation_610;
+				public WebElement approvel3_MainInformation_610() {
+					return approvel3_MainInformation_610;
+				}
+				
 		//--------Floating Rate in limit Detail
 			
 		@FindBy(xpath = "//input[@id='lookuptxt_applicationfacilityLimitDetailsFLOATING_RATE_WIFT001MT']")
@@ -2609,31 +2704,68 @@ public class FMS_WifakApplication_Obj {
 				
 				
 				
+			//-------------Update After Approve	 in AFFF
 				
 				
+				@FindBy(xpath = "//span[text()='Update After Approve']")
+				private WebElement UpdateAfterApproveScreen_AFFF_610;
+				public WebElement UpdateAfterApproveScreen_AFFF_610() {
+					return UpdateAfterApproveScreen_AFFF_610;
+				}
 				
 				
+				@FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT001UP_gs_fmsApplVO.CODE']")
+				private WebElement Enter_ValidateCode_UpdateAfterApproveScreen_AFFF_610;
+				public WebElement Enter_ValidateCode_UpdateAfterApproveScreen_AFFF_610() {
+					return Enter_ValidateCode_UpdateAfterApproveScreen_AFFF_610;
+				}
+								
+				@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT001UP_1_fmsApplVO.CODE']")
+				private WebElement ClickTheValue_ValidateCode_UpdateAfterApproveScreen_AFFF_610;
+				public WebElement ClickTheValue_ValidateCode_UpdateAfterApproveScreen_AFFF_610() {
+					return ClickTheValue_ValidateCode_UpdateAfterApproveScreen_AFFF_610;
+				}
 				
 				
+				@FindBy(xpath = "//li[@id='applicationFacilityAdditionDetailsTabs_WIFT001UP']")
+				private WebElement AdditionDetailsTabs_In_UpdateAfterApproveScreen_AFFF_610;
+				public WebElement AdditionDetailsTabs_In_UpdateAfterApproveScreen_AFFF_610() {
+					return AdditionDetailsTabs_In_UpdateAfterApproveScreen_AFFF_610;
+				}
+				
+				@FindBy(xpath = "//input[@id='applicationFacilityofferexpirydate_WIFT001UP']")
+				private WebElement offerexpirydate_In_UpdateAfterApproveScreen_AFFF_610;
+				public WebElement offerexpirydate_In_UpdateAfterApproveScreen_AFFF_610() {
+					return offerexpirydate_In_UpdateAfterApproveScreen_AFFF_610;
+				}
+				
+				@FindBy(xpath = "//button[@id='applicationfacility_save_btn_WIFT001UP']")
+				private WebElement ValidateButtonAddDetailsSCreen_In_UpdateAfterApproveScreen_AFFF_610;
+				public WebElement ValidateButtonAddDetailsSCreen_In_UpdateAfterApproveScreen_AFFF_610() {
+					return ValidateButtonAddDetailsSCreen_In_UpdateAfterApproveScreen_AFFF_610;
+				}
+				
+				@FindBy(xpath = "//a[@id='dismissbut_WIFT001UP']/span")
+				private WebElement sendAlertPopup_In_UpdateAfterApproveScreen_AFFF_610;
+				public WebElement sendAlertPopup_In_UpdateAfterApproveScreen_AFFF_610() {
+					return sendAlertPopup_In_UpdateAfterApproveScreen_AFFF_610;
+				}
 				
 				
+				//------------Addition Details Tab in approve level1
 				
 				
+				@FindBy(xpath = "//li[@id='applicationFacilityAdditionDetailsTabs_WIFT001AP1']")
+				private WebElement AdditionDetailsTabs_In_Approvelevel1_AFFF_610;
+				public WebElement AdditionDetailsTabs_In_Approvelevel1_AFFF_610() {
+					return AdditionDetailsTabs_In_Approvelevel1_AFFF_610;
+				}
 				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
+				@FindBy(xpath = "//INPUT[@id='applicationFacilityofferexpirydate_WIFT001AP1']")
+				private WebElement ValidateOfferExpirydate_In_Approvelevel1_AFFF_610;
+				public WebElement ValidateOfferExpirydate_In_Approvelevel1_AFFF_610() {
+					return ValidateOfferExpirydate_In_Approvelevel1_AFFF_610;
+				}
 				
 				
 				

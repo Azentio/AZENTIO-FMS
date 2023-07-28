@@ -40,18 +40,22 @@ public class FMSLogin {
 		fmsCommonWebElements.fmsLoginButon().click();
 		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsCompanyCode());
 		fmsCommonWebElements.fmsCompanyCode().click();
+		
 		for (int i = 0; i <= 10; i++) {
 			fmsCommonWebElements.fmsCompanyCode().sendKeys(Keys.DELETE);
 		}
+		
 		fmsCommonWebElements.fmsCompanyCode().sendKeys(fmsLoginTestData.get("CompanyCode"));
 		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsCompanyAndBranchLogin());
 		clicksAndActionHelper.moveToElement(fmsCommonWebElements.fmsCompanyAndBranchLogin());
 		clicksAndActionHelper.clickOnElement(fmsCommonWebElements.fmsCompanyAndBranchLogin());
 		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsBranchCode());
 		fmsCommonWebElements.fmsBranchCode().click();
+		
 		for (int i = 0; i <= 10; i++) {
 			fmsCommonWebElements.fmsBranchCode().sendKeys(Keys.DELETE);
 		}
+		
 		fmsCommonWebElements.fmsBranchCode().sendKeys(fmsLoginTestData.get("BranchCode"));
 		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsCompanyAndBranchLogin());
 		fmsCommonWebElements.fmsCompanyAndBranchLogin().click();
@@ -144,19 +148,23 @@ public class FMSLogin {
 		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsLoginButon());
 		fmsCommonWebElements.fmsLoginButon().click();
 		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsCompanyCode());
-		fmsCommonWebElements.fmsCompanyCode().click();
+		fmsCommonWebElements.fmsCompanyCode().click(); 
+		
 		for (int i = 0; i <= 10; i++) {
 			fmsCommonWebElements.fmsCompanyCode().sendKeys(Keys.DELETE);
 		}
+		
 		fmsCommonWebElements.fmsCompanyCode().sendKeys(fmsLoginTestData.get("CompanyCode"));
 		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsCompanyAndBranchLogin());
 		clicksAndActionHelper.moveToElement(fmsCommonWebElements.fmsCompanyAndBranchLogin());
 		clicksAndActionHelper.clickOnElement(fmsCommonWebElements.fmsCompanyAndBranchLogin());
 		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsBranchCode());
 		fmsCommonWebElements.fmsBranchCode().click();
+		
 		for (int i = 0; i <= 10; i++) {
 			fmsCommonWebElements.fmsBranchCode().sendKeys(Keys.DELETE);
 		}
+		
 		fmsCommonWebElements.fmsBranchCode().sendKeys(fmsLoginTestData.get("BranchCode"));
 		waitHelper.waitForElementwithFluentwait(driver, fmsCommonWebElements.fmsCompanyAndBranchLogin());
 		fmsCommonWebElements.fmsCompanyAndBranchLogin().click();

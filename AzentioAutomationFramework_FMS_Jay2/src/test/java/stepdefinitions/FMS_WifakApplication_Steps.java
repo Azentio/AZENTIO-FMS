@@ -42,6 +42,7 @@ public class FMS_WifakApplication_Steps {
 	String SuccessMsg2;
 	String SuccessMsgFM;
 	String SuccessMsgRepay;
+	String OfferExpirydateUpdateAfterAFFF;
 	
 	int FinanceAmt;
 	int FCAmount;
@@ -141,6 +142,17 @@ public class FMS_WifakApplication_Steps {
 	public void get_the_test_data_set_id_for_at_rf_011() {
 		testData = fmsTransactionsExcelData.getTestdata("AT_RF_011");
 	}
+	
+	@And("User_610 get the test data set id for AT_RF_117")
+	public void get_the_test_data_set_id_for_at_rf_017() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_RF_117");
+	}
+	
+	@And("User_610 get the test data set id for AT_RF_154")
+	public void get_the_test_data_set_id_for_at_rf_054() {
+		testData = fmsTransactionsExcelData.getTestdata("AT_RF_154");
+	}
+	
 	
 	//--------- Committee recommendation
 	
@@ -2156,7 +2168,7 @@ public class FMS_WifakApplication_Steps {
 		for (int i = 0; i < 500; i++) {
 			try {
 				clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.No_Of_Payments_InRepaymentPlan_610());
-				FMS_WifakApplication_Obj.No_Of_Payments_InRepaymentPlan_610().sendKeys("10");
+				FMS_WifakApplication_Obj.No_Of_Payments_InRepaymentPlan_610().sendKeys("5");
 				break;
 			} catch (Exception e) {
 				if (i == 199) {
@@ -3751,7 +3763,8 @@ public class FMS_WifakApplication_Steps {
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvel1_ScheduleDetails_In_LimitsDetails_610());
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvel1_ScheduleDetails_In_LimitsDetails_610());
 		
-		Assert.assertEquals(true, FMS_WifakApplication_Obj.approvel1_ScheduleDetails_In_LimitsDetails_610().isDisplayed());
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvel1_ValidateValuesIN_ScheduleDetails_In_LimitsDetails_610());
+		Assert.assertEquals(true, FMS_WifakApplication_Obj.approvel1_ValidateValuesIN_ScheduleDetails_In_LimitsDetails_610().isDisplayed());
 		
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvel1_CloseIcon_ScheduleDetails_In_LimitsDetails_610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvel1_CloseIcon_ScheduleDetails_In_LimitsDetails_610());
@@ -3763,6 +3776,74 @@ public class FMS_WifakApplication_Steps {
 	}
 	
 	//---------
+	
+	//----approvel 2 limit nd repayment 
+	
+		@And("User_{int} Validate the Schedule Details displaying or Not in Approvel2")
+		public void user_validate_the_schedule_details_displaying_or_not_in_approvel2(Integer int1) {
+			waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvel2_LimitsDetails_610());
+			clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvel2_LimitsDetails_610());
+			clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvel2_LimitsDetails_610());
+			
+			waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvel2_productClass_610());
+			clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvel2_productClass_610());
+			clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvel2_productClass_610());
+			
+			waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvel2_RepaymentPlan_btn_In_LimitsDetails_610());
+			clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvel2_RepaymentPlan_btn_In_LimitsDetails_610());
+			clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvel2_RepaymentPlan_btn_In_LimitsDetails_610());
+			
+			waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvel2_ScheduleDetails_In_LimitsDetails_610());
+			clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvel2_ScheduleDetails_In_LimitsDetails_610());
+			clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvel2_ScheduleDetails_In_LimitsDetails_610());
+			
+			waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvel2_ValidateValuesIN_ScheduleDetails_In_LimitsDetails_610());
+			Assert.assertEquals(true, FMS_WifakApplication_Obj.approvel2_ValidateValuesIN_ScheduleDetails_In_LimitsDetails_610().isDisplayed());
+			
+			waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvel2_CloseIcon_ScheduleDetails_In_LimitsDetails_610());
+			clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvel2_CloseIcon_ScheduleDetails_In_LimitsDetails_610());
+			clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvel2_CloseIcon_ScheduleDetails_In_LimitsDetails_610());
+			
+			waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvel2_MainInformation_610());
+			clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvel2_MainInformation_610());
+			clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvel2_MainInformation_610());
+		}
+		
+		//----------------
+		
+		//----approvel 3 limit nd repayment 
+		
+		@And("User_{int} Validate the Schedule Details displaying or Not in Approvel3")
+		public void user_validate_the_schedule_details_displaying_or_not_in_approvel3(Integer int1) {
+			waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvel3_LimitsDetails_610());
+			clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvel3_LimitsDetails_610());
+			clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvel3_LimitsDetails_610());
+			
+			waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvel3_productClass_610());
+			clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvel3_productClass_610());
+			clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvel3_productClass_610());
+			
+			waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvel3_RepaymentPlan_btn_In_LimitsDetails_610());
+			clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvel3_RepaymentPlan_btn_In_LimitsDetails_610());
+			clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvel3_RepaymentPlan_btn_In_LimitsDetails_610());
+			
+			waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvel3_ScheduleDetails_In_LimitsDetails_610());
+			clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvel3_ScheduleDetails_In_LimitsDetails_610());
+			clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvel3_ScheduleDetails_In_LimitsDetails_610());
+			
+			waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvel3_ValidateValuesIN_ScheduleDetails_In_LimitsDetails_610());
+			Assert.assertEquals(true, FMS_WifakApplication_Obj.approvel3_ValidateValuesIN_ScheduleDetails_In_LimitsDetails_610().isDisplayed());
+			
+			waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvel3_CloseIcon_ScheduleDetails_In_LimitsDetails_610());
+			clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvel3_CloseIcon_ScheduleDetails_In_LimitsDetails_610());
+			clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvel3_CloseIcon_ScheduleDetails_In_LimitsDetails_610());
+			
+			waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.approvel3_MainInformation_610());
+			clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.approvel3_MainInformation_610());
+			clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.approvel3_MainInformation_610());
+		}
+		
+		//-------------
 	
 	@And("User_{int} Enter Floating Rate in limit Detail")
 	public void user_enter_floating_rate_in_limit_detail(Integer int1) {
@@ -4142,12 +4223,155 @@ public class FMS_WifakApplication_Steps {
 	public void user_click_journal_voucher_details_in_facility_management(Integer int1) {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.journalVoucherDetailsKey_FacilitiesManagement_MaintenanceScreen_610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.journalVoucherDetailsKey_FacilitiesManagement_MaintenanceScreen_610());
-		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.journalVoucherDetailsKey_FacilitiesManagement_MaintenanceScreen_610());
-	}
+		
+		for (int i = 0; i < 200; i++) {
+			try {
+
+				clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.journalVoucherDetailsKey_FacilitiesManagement_MaintenanceScreen_610());
+				break;
+			} catch (Exception e) {
+				if (i == 199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}	}
 
 	@And("User_{int} Validate the Account Number should displaying correct in JV Details")
 	public void user_validate_the_account_number_should_displaying_correct_in_jv_details(Integer int1) {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.JVdetailsDivpopup_FacilitiesManagement_MaintenanceScreen_610());
 		Assert.assertEquals(true, FMS_WifakApplication_Obj.JVdetailsDivpopup_FacilitiesManagement_MaintenanceScreen_610().isDisplayed());
 	}
+	
+	//--------------------------# Update After Approve Screen
+	
+	@And("User_{int} Click Update After Approve Screen")
+	public void user_click_update_after_approve_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.UpdateAfterApproveScreen_AFFF_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.UpdateAfterApproveScreen_AFFF_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.UpdateAfterApproveScreen_AFFF_610());
+	}
+
+	@And("User_{int} retrive the first data in Update After Approve Screen")
+	public void user_retrive_the_first_data_in_update_after_approve_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Enter_ValidateCode_UpdateAfterApproveScreen_AFFF_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Enter_ValidateCode_UpdateAfterApproveScreen_AFFF_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.Enter_ValidateCode_UpdateAfterApproveScreen_AFFF_610());
+	//	FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_UpdateAfterApproveScreen_AFFF_610().sendKeys(SuccessMsg,Keys.ENTER);
+		FMS_WifakApplication_Obj.Enter_ValidateCode_UpdateAfterApproveScreen_AFFF_610().sendKeys("5064",Keys.ENTER);
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_UpdateAfterApproveScreen_AFFF_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_UpdateAfterApproveScreen_AFFF_610());
+		clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.ClickTheValue_ValidateCode_UpdateAfterApproveScreen_AFFF_610());
+	}
+
+	@And("User_{int} Click Addition Details Tab Update After Approve Screen")
+	public void user_click_addition_details_tab_update_after_approve_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.AdditionDetailsTabs_In_UpdateAfterApproveScreen_AFFF_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.AdditionDetailsTabs_In_UpdateAfterApproveScreen_AFFF_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.AdditionDetailsTabs_In_UpdateAfterApproveScreen_AFFF_610());
+	}
+	
+	
+	@And("User_{int} Change the Date in Offer Expiry Date in Update After Approve Screen")
+	public void user_change_the_date_in_offer_expiry_date_in_update_after_approve_screen(Integer int1) throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.offerexpirydate_In_UpdateAfterApproveScreen_AFFF_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.offerexpirydate_In_UpdateAfterApproveScreen_AFFF_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.offerexpirydate_In_UpdateAfterApproveScreen_AFFF_610());
+		FMS_WifakApplication_Obj.offerexpirydate_In_UpdateAfterApproveScreen_AFFF_610().clear();
+	//    FMS_WifakApplication_Obj.offerexpirydate_In_UpdateAfterApproveScreen_AFFF_610().sendKeys("Offer Expiry Date UpdateAfter Approve AFFF",Keys.TAB);
+	    FMS_WifakApplication_Obj.offerexpirydate_In_UpdateAfterApproveScreen_AFFF_610().sendKeys("27/07/2023",Keys.TAB);
+	    
+	    
+	    OfferExpirydateUpdateAfterAFFF  = FMS_WifakApplication_Obj.offerexpirydate_In_UpdateAfterApproveScreen_AFFF_610().getAttribute("prevvalue");
+	    System.err.println(OfferExpirydateUpdateAfterAFFF);
+	    
+	    Thread.sleep(3000);
+	}
+
+	@And("User_{int} Click Validate Button Update After Approve Screen")
+	public void user_click_validate_button_update_after_approve_screen(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ValidateButtonAddDetailsSCreen_In_UpdateAfterApproveScreen_AFFF_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.ValidateButtonAddDetailsSCreen_In_UpdateAfterApproveScreen_AFFF_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.ValidateButtonAddDetailsSCreen_In_UpdateAfterApproveScreen_AFFF_610());
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.okButton_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.okButton_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.okButton_610());
+		
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.successPopup_610());
+		for (int i = 0; i < 2000; i++) {
+			try {
+				FMS_WifakApplication_Obj.successPopupOkBtn_610().click();
+				break;
+			} catch (Exception e) {
+				if (i == 1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.sendAlertPopup_In_UpdateAfterApproveScreen_AFFF_610());
+		for (int i = 0; i < 2000; i++) {
+			try {
+				FMS_WifakApplication_Obj.sendAlertPopup_In_UpdateAfterApproveScreen_AFFF_610().click();
+				break;
+			} catch (Exception e) {
+				if (i == 1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+			}
+	
+	
+	//------------Addition Details Tab in approve level1
+	
+	@And("User_{int} Click Addition Details Tab in approve level1")
+	public void user_click_addition_details_tab_in_approve_level1(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.AdditionDetailsTabs_In_Approvelevel1_AFFF_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.AdditionDetailsTabs_In_Approvelevel1_AFFF_610());
+		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.AdditionDetailsTabs_In_Approvelevel1_AFFF_610());
+	}
+
+	@And("User_{int} Validate the Offer Expiry Date Change or Not in approve level1")
+	public void user_validate_the_offer_expiry_date_change_or_not_in_approve_level1(Integer int1) {
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ValidateOfferExpirydate_In_Approvelevel1_AFFF_610());
+		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.ValidateOfferExpirydate_In_Approvelevel1_AFFF_610());
+		
+		 String  OfferExpirydateApprovel1  = FMS_WifakApplication_Obj.ValidateOfferExpirydate_In_Approvelevel1_AFFF_610().getAttribute("prevvalue");
+		 System.err.println(OfferExpirydateApprovel1);
+		 
+		 Assert.assertEquals(OfferExpirydateApprovel1, OfferExpirydateUpdateAfterAFFF);
+		    
+		    
+			}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

@@ -33,20 +33,56 @@ public class ApplicationForFinancialFacility_Steps extends BaseClass{
 	ApplicationForFinancialFacility_obj applicationFinancialObj = new ApplicationForFinancialFacility_obj(driver);
 	ConfigFileReader configFileReader = new ConfigFileReader();
 	FMSLogin FMSLogin = new FMSLogin(driver);
+	FMSLogin login = new FMSLogin(driver);
+	IISLogin IISLogin =new IISLogin(driver);
 	DropDownHelper dropdownhelper = new DropDownHelper(driver);
 	JavascriptHelper javascripthelper = new JavascriptHelper(driver);
+	
+	
+	//-----------------------FMS Login 
 	
 	@Given("^navigate to FMS param application and login with valid credentials2$")
     public void navigate_to_fms_param_application_and_login_with_valid_credentials2() throws Throwable {
 		driver.get(configFileReader.getFMSparamsUrl());
 		FMSLogin.loginIntoFmsParamApplication2(configFileReader.getFMSParamApplicationUserType());
     }
-
+	
+	@Given("^navigate to FMS application2 and login with valid credentials$")
+	public void navigate_to_fms_application2_and_login_with_valid_credentials() throws Throwable {
+		driver.get(configFileReader.getFMSApplicationUrl());
+		login.loginIntoFmsApplication2(configFileReader.getFMSApplicationUserType());
+	}
+	
+	
+     //-----------
+	
 	@Given("^navigate to FMS application and login with valid credentials2$")
 	public void navigate_to_fms_application_and_login_with_valid_credentials2() throws Throwable {
 		driver.get(configFileReader.getFMSApplicationUrl());
 		FMSLogin.loginIntoFmsApplication2(configFileReader.getFMSApplicationUserType());;
 	}
+	
+	//-------------------
+	
+	//----------IIS Login
+	
+	@Given("^navigate to IIS application and login with valid credentials$")
+	public void navigate_to_iis_application_and_login_with_valid_credentials() throws Throwable {
+		driver.get(configFileReader.getIISApplicationUrl());
+		IISLogin.loginIntoiisApplication2(configFileReader.getIISApplicationUserType());
+	}
+	
+	
+	@Given("^navigate to IIS param application and login with valid credentials$")
+    public void navigate_to_iis_param_application_and_login_with_valid_credentials() throws Throwable {
+		driver.get(configFileReader.getIISparamsUrl());
+		IISLogin.loginIntoiisParamApplication2(configFileReader.getIISParamApplicationUserType());
+    }
+	
+	
+	//---------------------------
+
+	
 
 	@Then("^Click on the Facility Type submenu$")
     public void click_on_the_facility_type_submenu() throws Throwable {

@@ -23,15 +23,8 @@ public class FMS_Reports_Pagination_Issue_Steps {
 	WaitHelper waitHelper = new WaitHelper(driver);
 	ClicksAndActionsHelper clicksAndActionsHelper = new ClicksAndActionsHelper(driver);
 	Selenium_Actions selenium_Actions = new Selenium_Actions(driver);
-	FMSLogin login = new FMSLogin(driver);
 	JavascriptHelper JavascriptHelper = new JavascriptHelper(driver);
 	
-
-	@Given("^navigate to FMS application2 and login with valid credentials$")
-	public void navigate_to_fms_application2_and_login_with_valid_credentials() throws Throwable {
-		driver.get(configFileReader.getFMSApplicationUrl());
-		login.loginIntoFmsApplication2(configFileReader.getFMSApplicationUserType());
-	}
 
 	@And("^User_610 click the reports menu$")
 	public void user_click_the_reports_menu() throws Throwable {
