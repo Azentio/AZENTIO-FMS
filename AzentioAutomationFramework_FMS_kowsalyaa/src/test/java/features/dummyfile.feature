@@ -6,4 +6,4 @@ Feature: Title of your feature
   @tag1
   Scenario: Title of your scenario
   
-And User_611 clicks the save button in update after approve under facility management
+ And User_611 enter the date in date submitted in drawdown request under request for financing

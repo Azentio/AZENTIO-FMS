@@ -14,10 +14,12 @@ import resources.BaseClass;
 public class LoginTest extends BaseClass {
 	WebDriver driver = BaseClass.driver;
 	FMSLogin FMSLogin = new FMSLogin(driver);
+	IISLogin IISLogin = new IISLogin(driver);
 	WaitHelper waitHelper = new WaitHelper(driver);
 	ClicksAndActionsHelper clicksAndActionHelper = new ClicksAndActionsHelper(driver);
 	FMSCommonWebElements fmsCommonWebElements = new FMSCommonWebElements(driver);
 	ConfigFileReader configFileReader = new ConfigFileReader();
+	
 	@Given("^navigate to FMS application and login with valid credentials$")
     public void navigate_to_fms_application_and_login_with_valid_credentials() throws Throwable {
 		driver.get(configFileReader.getFMSApplicationUrl());
@@ -31,6 +33,26 @@ public class LoginTest extends BaseClass {
 		System.out.println(configFileReader.getFMSParamApplicationUserType());
 		FMSLogin.loginIntoFmsParamApplication(configFileReader.getFMSParamApplicationUserType());
     }
+	
+	//--------------IIS Login
+	
+	@Given("^navigate to IIS application and login with valid credentials$")
+    public void navigate_to_iis_application_and_login_with_valid_credentials() throws Throwable {
+		driver.get(configFileReader.getIISApplicationUrl());
+		//System.out.println(configFileReader.getIISApplicationUserType());
+		IISLogin.loginIntoiisApplication(configFileReader.getIISApplicationUserType());
+    }
+
+	@Given("^navigate to IIS param application and login with valid credentials$")
+    public void navigate_to_iis_param_application_and_login_with_valid_credentials() throws Throwable {
+		driver.get(configFileReader.getIISParamUrl());
+		//System.out.println(configFileReader.getIISParamApplicationUserType());
+		IISLogin.loginIntoiisParamApplication(configFileReader.getIISParamApplicationUserType());
+    }
+	
+	//-------------------
+	
+	
 	@Given("^navigate to FMS sads application and login with valid credentials$")
     public void navigate_to_fms_sads_application_and_login_with_valid_credentials() throws Throwable {
 		driver.get(configFileReader.getSADSApplicationUrl());

@@ -487,6 +487,9 @@ Feature: To Test the Financial facilities in FMS Application
     And User_611 Enter the Maximumm value under Facility Risk Rating Maintenance screen
     
     
-    
+    @12345
+    Scenario: Check that the Facility Risk Rating main option contains the below sub options
+   # Given navigate to IIS application and login with valid credentials
+    Given navigate to IIS param application and login with valid credentials
     
     
