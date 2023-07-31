@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class IncidentalChargesObj_608 {
+public class IIS_ApplicationObj_608 {
 	
 	WebDriver driver;
-	public IncidentalChargesObj_608(WebDriver driver) {
+	public IIS_ApplicationObj_608(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -58,10 +58,22 @@ public class IncidentalChargesObj_608 {
 		return IIS_investment_deal_without_trade_deal_main_product_class_input;
 	}
 	
+	@FindBy(xpath = "//input[@id='lookuptxt_trsdealVO_DD_DEAL_CY_T022MT']")
+	private WebElement IIS_investment_deal_without_trade_deal_main_deal_cy_input;
+	public WebElement IISInvestmentDealWithoutTradeDealMainDealCYnput_608(){
+		return IIS_investment_deal_without_trade_deal_main_deal_cy_input;
+	}
+	
 	@FindBy(xpath = "//input[@id='trsdealVO_DD_DEAL_AMOUNT_T022MT']")
 	private WebElement IIS_investment_deal_without_trade_deal_main_amount_input;
 	public WebElement IISInvestmentDealWithoutTradeDealMainAmountInput_608(){
 		return IIS_investment_deal_without_trade_deal_main_amount_input;
+	}
+	
+	@FindBy(xpath = "//input[@id='trsdealVO_DD_DEAL_EXPECTED_YIELD_T022MT']")
+	private WebElement IIS_investment_deal_without_trade_deal_main_yield_margin_input;
+	public WebElement IISInvestmentDealWithoutTradeDealMainYieldMarginInput_608(){
+		return IIS_investment_deal_without_trade_deal_main_yield_margin_input;
 	}
 	
 	@FindBy(xpath = "//li[@id='investmentDealsMainTabs2_T022MT']")
@@ -130,11 +142,18 @@ public class IncidentalChargesObj_608 {
 		return IIS_investment_deal_without_trade_deal_main_repayment_plan_btn;
 	}
 	
-	@FindBy(xpath = "total_amt_T022MT")
+	@FindBy(xpath = "//input[@id='total_amt_T022MT']")
 	private WebElement IIS_investment_deal_without_trade_deal_main_repayment_amt_field;
 	public WebElement IISInvestmentDealWithoutTradeDealMainRepaymentAmtField_608(){
 		return IIS_investment_deal_without_trade_deal_main_repayment_amt_field;
 	}
+	
+	@FindBy(xpath = "//input[@id='No_Of_Payments_T022MT']")
+	private WebElement IIS_investment_deal_without_trade_deal_main_repayment_no_of_payment_input;
+	public WebElement IISInvestmentDealWithoutTradeDealMainRepaymentNoOfPaymentsInput_608(){
+		return IIS_investment_deal_without_trade_deal_main_repayment_no_of_payment_input;
+	}
+	
 	
 	@FindBy(xpath = "//input[@id='grace_period_compounding_yn_T022MT']")
 	private WebElement IIS_investment_deal_without_trade_deal_main_repayment_grace_period_checkbox;
@@ -457,6 +476,12 @@ public class IncidentalChargesObj_608 {
 		return IIS_settlement_menu_maintenance_success_popup_text;
 	}
 	
+	@FindBy(xpath = "//a[@menuvar='T06MT']//parent::td//following-sibling::td//span")
+	private WebElement IIS_settlement_maintenance_menu_close_icon;
+	public WebElement IISSettlementMaintenanceMenuCloseIcon_608() {
+		return IIS_settlement_maintenance_menu_close_icon;
+	}
+	
 	@FindBy(xpath = "//a[@id='T06P']")
 	private WebElement IIS_settlement_menu_approve;
 	public WebElement IISSettlementMenuApprove_608() {
@@ -488,10 +513,84 @@ public class IncidentalChargesObj_608 {
 	}
 	
 	@FindBy(xpath = "//div[@class='jMsgbox-contentWrap'][contains(text(),'proceed')]")
-	private WebElement IIS_settlement_approve_menu_confirm_proceed_popup;
+	private WebElement IIS_approve_menu_confirm_proceed_popup;
 	public WebElement IISApproveMenuConfirmPopupProceed_608() {
-		return IIS_settlement_approve_menu_confirm_proceed_popup;
+		return IIS_approve_menu_confirm_proceed_popup;
 	}
+	
+	@FindBy(xpath = "//a[@menuvar='T06P']//parent::td//following-sibling::td//span")
+	private WebElement IIS_settlement_approve_menu_close_icon;
+	public WebElement IISSettlementApproveMenuCloseIcon_608() {
+		return IIS_settlement_approve_menu_close_icon;
+	}
+	
+	@FindBy(xpath = "//a[@id='T06RR']")
+	private WebElement IIS_settlement_reverse_menu;
+	public WebElement IISSettlementReverseMenu_608() {
+		return IIS_settlement_reverse_menu;
+	}
+	
+	@FindBy(xpath = "//input[@id='settlementMgmtGridTbl_Id_T06RR_gs_trssetlmtvo.SETTLEMENT_NBR']")
+	private WebElement IIS_settlement_reverse_searchgrid_settlement_nbr_input;
+	public WebElement IISSettlementReverseSearchgirdSettlementNbrInput_608() {
+		return IIS_settlement_reverse_searchgrid_settlement_nbr_input;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_settlementMgmtGridTbl_Id_T06RR_1_trssetlmtvo.SETTLEMENT_NBR']")
+	private WebElement IIS_settlement_reverse_searchgrid_row;
+	public WebElement IISSettlementReverseSearchgirdRow_608() {
+		return IIS_settlement_reverse_searchgrid_row;
+	}
+	
+	@FindBy(xpath = "//input[@id='settlmentNo_T06RR']")
+	private WebElement IIS_settlement_reverse_settlement_nbr;
+	public WebElement IISSettlementReverseSettlementNbr_608() {
+		return IIS_settlement_reverse_settlement_nbr;
+	}
+	
+	@FindBy(xpath = "//div[@id='settlementToolBar_T06RR']/a")
+	private WebElement IIS_settlement_reverse_menu_reverse_btn;
+	public WebElement IISSettlementReverseMenuReverseBtn_608() {
+		return IIS_settlement_reverse_menu_reverse_btn;
+	}
+	
+	@FindBy(xpath = "//a[@id='T06V']")
+	private WebElement IIS_settlement_approve_reverse_menu;
+	public WebElement IISSettlementApproveReverseMenu_608() {
+		return IIS_settlement_approve_reverse_menu;
+	}
+	
+	@FindBy(xpath = "//input[@id='settlementMgmtGridTbl_Id_T06V_gs_trssetlmtvo.SETTLEMENT_NBR']")
+	private WebElement IIS_settlement_approve_reverse_searchgrid_settlement_nbr_input;
+	public WebElement IISSettlementApproveReverseSearchgirdSettlementNbrInput_608() {
+		return IIS_settlement_approve_reverse_searchgrid_settlement_nbr_input;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_settlementMgmtGridTbl_Id_T06V_1_trssetlmtvo.SETTLEMENT_NBR']")
+	private WebElement IIS_settlement_approve_reverse_searchgrid_row;
+	public WebElement IISSettlementApproveReverseSearchgirdRow_608() {
+		return IIS_settlement_approve_reverse_searchgrid_row;
+	}
+	
+	@FindBy(xpath = "//input[@id='settlmentNo_T06V']")
+	private WebElement IIS_settlement_approve_reverse_settlement_nbr;
+	public WebElement IISSettlementApproveReverseSettlementNbr_608() {
+		return IIS_settlement_approve_reverse_settlement_nbr;
+	}
+	
+	@FindBy(xpath = "//button[@id='settlement_Reverse_btn_T06V']")
+	private WebElement IIS_settlement_approve_reverse_menu_reverse_btn;
+	public WebElement IISSettlementApproveReverseMenuReverseBtn_608() {
+		return IIS_settlement_approve_reverse_menu_reverse_btn;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 //	Repayment Plan
