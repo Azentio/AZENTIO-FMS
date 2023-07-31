@@ -1,4 +1,4 @@
-package pageobjects.CommonElements;
+package pageobjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -498,7 +498,7 @@ public class Request_for_financing_Obj {
 		}	
 		
 		//input[@id='statusDesc_WIFT001MT']
-		@FindBy(xpath = "//input[@name='facilityManagementCO.statusDesc']")
+		@FindBy(xpath = "//label[text()='Status ']//following::td//input[@name='facilityManagementCO.statusDesc']")
 		private WebElement Check_the_Record_Status;
 		public WebElement Check_the_Record_Status() {
 			return Check_the_Record_Status;
@@ -1933,8 +1933,37 @@ public class Request_for_financing_Obj {
 				return SelectRecord_InauthoriceReject_underRequestForFinancing;
 			}
 			
+			//140578
 			
+			@FindBy(xpath = "//*[@id='alertsGrid_Id_RFFRF00AR_gs_alertsParamCO.userId']")
+			private WebElement SearchUser_inAlertPopup;
+			public WebElement SearchUser_inAlertPopup_607() {
+				return SearchUser_inAlertPopup;
+			}
 			
+			@FindBy(xpath = "//*[@id=\"td_alertsGrid_Id_RFFRF00AR_1_alertsParamCO.userId\"]")
+			private WebElement SelectUser_inAlertPopup;
+			public WebElement SelectUser_inAlertPopup_607() {
+				return SelectUser_inAlertPopup;
+			}
+			
+			@FindBy(xpath = "//*[@id='sendBut_RFFRF00AR']")
+			private WebElement ClickSendBtn_inAlertPuppop;
+			public WebElement ClickSendBtn_inAlertPuppop_607() {
+				return ClickSendBtn_inAlertPuppop;
+			}
+			
+			@FindBy(xpath = "//span[text()='Alerts']")
+			private WebElement AlertPopUp;
+			public WebElement AlertPopUp_607() {
+				return AlertPopUp;
+			}
+			
+			@FindBy(xpath = "//*[@id='td_trsAckTOutAlertGrid_Id_RCVALERT_1_sTodoDet.USER_ID']//ancestor::tr[1]//td/table//td//a[text()='Open Item']")
+			private WebElement ClickOpen_items_in_Alertpopup;
+			public WebElement ClickOpen_items_in_Alertpopup_607() {
+				return ClickOpen_items_in_Alertpopup;
+			}
 			
 			
 }

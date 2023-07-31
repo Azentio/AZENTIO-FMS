@@ -2,8 +2,8 @@
 Feature: Title of your feature
   I want to use this template for my feature file
   
-   @853171_2
-		Scenario: Open the facility management screen and link a collateral
+   @853171_2 
+		Scenario: Check and Uncheck the flags in FacilityType FMS_params
     Given navigate to FMS param application and login with valid credentials
     And User_610 clicks on the parameter module
     And User_610 clicks on the Facility Type feature
@@ -72,7 +72,7 @@ Feature: Title of your feature
     And User_607 Click Issue offer button In Issue Facility Offer Under Request For Financing
   
     @127912_2
-		Scenario: Open the facility management screen and link a collateral
+		Scenario: Check and Uncheck the flags in FacilityType FMS_params
     Given navigate to FMS param application and login with valid credentials
     And User_610 clicks on the parameter module
     And User_610 clicks on the Facility Type feature
@@ -148,7 +148,7 @@ Feature: Title of your feature
 		And User_607 Check Floating Rate In limit Details In Issue Facility Offer under WifakApplication
 		
 		@135014_2
-		Scenario: Open the facility management screen and link a collateral
+		Scenario: Check and Uncheck the flags in FacilityType FMS_params
     Given navigate to FMS param application and login with valid credentials
     And User_610 clicks on the parameter module
     And User_610 clicks on the Facility Type feature

@@ -148,7 +148,7 @@ Feature: Title of your feature
   
     
     @127765
-    Scenario: Open the facility management screen and link a collateral
+    Scenario: Check and Uncheck the flags in FacilityType FMS_params
     Given navigate to FMS param application and login with valid credentials
     And User_610 clicks on the parameter module
     And User_610 clicks on the Facility Type feature
@@ -219,7 +219,7 @@ Feature: Title of your feature
 #	  And User_607 Close All open tabs in wifiak application
 #
 		@127765_2
-		Scenario: Open the facility management screen and link a collateral
+		Scenario: Check and Uncheck the flags in FacilityType FMS_params
 		Given navigate to FMS application2 and login with valid credentials
     And Click Wifak Application first
     And Click Wifak Application Second
@@ -245,7 +245,7 @@ Feature: Title of your feature
     
     
     @127773
-    Scenario: Open the facility management screen and link a collateral
+    Scenario: Check and Uncheck the flags in FacilityType FMS_params
     Given navigate to FMS application2 and login with valid credentials
     And Click Wifak Application first
     And Click Wifak Application Second
@@ -274,7 +274,7 @@ Feature: Title of your feature
     
     
     @127822
-    Scenario: Open the facility management screen and link a collateral
+    Scenario: Check and Uncheck the flags in FacilityType FMS_params
     Given navigate to FMS param application and login with valid credentials
     And User_610 clicks on the parameter module
     And User_610 clicks on the Facility Type feature
@@ -344,7 +344,7 @@ Feature: Title of your feature
     #		need to close tab
     
     @127822_2
-    Scenario: Open the facility management screen and link a collateral
+    Scenario: Check and Uncheck the flags in FacilityType FMS_params
     Given navigate to FMS application2 and login with valid credentials
     And Click Wifak Application first
     And Click Wifak Application Second

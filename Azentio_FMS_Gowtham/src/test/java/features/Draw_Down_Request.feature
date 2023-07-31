@@ -105,8 +105,42 @@ Feature: Draw Down Request
     And User_607 Check Total Down Payment Percentage In limitDetails facilityMng mainteance
     And User_607 Check Total Down Payment In limitDetails facilityMng mainteance
 		
-#	excel pending	
-#	need to create 	facility in Request for financin 
+		@1039017_2
+		Scenario: Check following 4 new fields are added under the Facility Main Information tab of Facility Management screen:
+    Down Payment to Vendor %, Down Payment to Vendor, Total Down Payment % and Total Down Payment
+    Given navigate to FMS application2 and login with valid credentials
+		And User update test data for test case no 1265139
+		And User_607 Click Request under menu Options
+		And User_607 Click Request Financing under Request
+		And Click Request for financing
+    And Goto maintenace
+    And click the reason for submission search box
+    And click the customer search box
+    And click the facility type details
+    And Enter the facility type code under facility type
+    And Enter the total limit under global limit
+    And Click the Disbursement Sublimit under maintenance screen
+    And Add the limits under Disbursement Sublimit
+    And Add the product class values in product searchbox
+    And Add all the Above limit values
+    And Save all the values when limits are add
+    And Confirm the popup menu when all the limits are saved
+    And Click the final save popup message
+    And Click the validate button when all the values are saved
+    And Confirm the validate popup menu
+    And Click the final validate popup
+    And Click the Approve level1 screen under request for financing
+    And Search the value in approve1
+    And Select the record in approve1
+	  And User_607 Forward the record in Approve level1
+	  And User_607 Click Approve button in Approve lev1 under Request For Financing
+	  And User_607 Click Approval Committee Rcommendations under Request For Financing
+	  And User_607 Select record In Approval Committee Recommendations under Request For Financing
+	  And User_607 Click credit Committee Recommendations Tab In Approval Committee Recommendations under Request For Financing
+	  And User_607 Click RecommendationsArrow In credit Committee Recommendations Tab In Approval Committee Recommendations
+	  And User_607 Click Add In RecommendationsArrow In Approval Committee Recommendations
+	  And User_607 Select Approve In First Line In RecommendationsArrow In Approval Committee Recommendations
+	  And User_607 Click Recommebd button In Approval Committee Recommendations under Request For Financing
 		And Click Request for financin 
     And User_607 Click facility Management under Request for financin
     And User_607 Click mainteance facility Management under Request for financin

@@ -8,7 +8,7 @@ import helper.DropDownHelper;
 import helper.JavascriptHelper;
 import helper.Selenium_Actions;
 import helper.WaitHelper;
-import pageobjects.CommonElements.Client_Response_Obj;
+import pageobjects.Client_Response_Obj;
 import resources.BaseClass;
 
 public class Client_Response {

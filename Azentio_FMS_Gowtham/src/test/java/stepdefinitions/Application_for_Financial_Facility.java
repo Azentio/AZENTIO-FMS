@@ -133,6 +133,13 @@ public class Application_for_Financial_Facility {
 		driver.get(configFileReader.getFMSApplicationUrl());
 		login.loginIntoFmsApplication(configFileReader.getFMSApplicationUserType());
 	}
+	
+	@Given("navigate to FMS application2 and login with valid credentials for alert")
+	public void navigate_to_FMS_application2_and_login_with_valid_credentials_for_alert() throws Throwable {
+		driver.get(configFileReader.getFMSApplicationUrl());
+		login.loginIntoFmsApplication(configFileReader.getFMSApplicationUserTypeForAlert());
+	}
+	
 
 	@And("^Click Wifak Application first$")
 	public void click_wifak_application_first() throws Throwable {
@@ -2321,6 +2328,352 @@ public class Application_for_Financial_Facility {
 	    	waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonSuccessOk());
 	    	applicationFinancialObj.ButtonSuccessOk().click();
 		    
+		}
+
+		
+		// 127859
+		// Approval committee
+		
+		@And("^User_610 Click on Ok in Approval Committee Recommendations$")
+		public void User_609_Click_on_Ok_in_Approval_Committee_Recommendations() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation_Ok());
+			
+			for (int i = 0; i < 200; i++) {
+				try {
+					clicksAndActionsHelper.clickOnElement(applicationFinancialObj.WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation_Ok());
+					break;
+				} catch (Exception e) {
+					if (i == 199) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonSuccessOk());
+			for (int i = 0; i < 2000; i++) {
+				try {
+					applicationFinancialObj.ButtonSuccessOk().click();
+					break;
+				} catch (Exception e) {
+					if (i == 1999) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			
+			}
+		
+		
+//		@And("User_{int} click Approval Committee Recommendations Menu")
+//		public void user_click_approval_committee_recommendations_menu(Integer int1) {
+//			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ApprovalCommitteeRecommendationsScreen_610());
+//			clicksAndActionsHelper.moveToElement(applicationFinancialObj.ApprovalCommitteeRecommendationsScreen_610());
+//			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.ApprovalCommitteeRecommendationsScreen_610());
+//		}
+//
+//	@And("User_{int} enter facility code Approval Committee Recommendations Menu")
+//		public void user_enter_facility_approval_committee_recommendations_menu(Integer int1) throws Throwable {
+//			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.enterFacilityCodeIn_ApprovalCommitteeRecommendationsScreen_610());
+//			clicksAndActionsHelper.moveToElement(applicationFinancialObj.enterFacilityCodeIn_ApprovalCommitteeRecommendationsScreen_610());
+//			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.enterFacilityCodeIn_ApprovalCommitteeRecommendationsScreen_610());
+//			applicationFinancialObj.enterFacilityCodeIn_ApprovalCommitteeRecommendationsScreen_610().sendKeys(SuccessMsg, Keys.TAB);
+//			
+//		}
+//
+//	@And("User_{int} enter CIF code in  Approval Committee Recommendations Menu")
+//		public void user_enter_cif_code_in_approval_committee_recommendations_menu(Integer int1) throws Throwable {
+//			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.enterCIFCodeIn_ApprovalCommitteeRecommendationsScreen_610());
+//			clicksAndActionsHelper.moveToElement(applicationFinancialObj.enterCIFCodeIn_ApprovalCommitteeRecommendationsScreen_610());
+//			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.enterCIFCodeIn_ApprovalCommitteeRecommendationsScreen_610());
+//			applicationFinancialObj.enterCIFCodeIn_ApprovalCommitteeRecommendationsScreen_610().sendKeys(testData.get("CIF NO IN Approval Committee"), Keys.ENTER);
+//			Thread.sleep(5000);
+//		}
+//
+//	@Then("User_{int} validate facility with CIF code displaying in  Approval Committee Recommendations Menu")
+//		public void user_validate_facility_with_cif_code_displaying_in_approval_committee_recommendations_menu(Integer int1) {
+//			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ApprovalCommitteeRecommendationsScreen_610());
+//			clicksAndActionsHelper.moveToElement(applicationFinancialObj.ApprovalCommitteeRecommendationsScreen_610());
+//			Assert.assertEquals(true,applicationFinancialObj.ApprovalCommitteeRecommendationsScreen_610().isDisplayed());
+//			
+//			String xpath ="//table[@id='applicationFacilityGridTbl_Id_WIFT002MT']/tbody/tr[2]/td[text()='"+"000000"+SccuesscodeInApproveLev1UnderWifak+"']";
+//			                for (int i = 0; i < 200; i++) {
+//			                    try {
+//			                        WebElement Code  = driver.findElement(By.xpath(xpath));
+//			                        if (Code.isDisplayed()) {
+//			                            Assert.assertEquals(Code.isDisplayed(), true);
+//			                            clicksAndActionsHelper.doubleClick(Code);
+//			                        }
+//			                        break;
+//			                    } catch (Exception e) {
+//			                        if (i==199) {
+//			                            Assert.fail(e.getMessage());
+//			                        }
+//			                    }
+//			                }
+//			
+//		//	clicksAndActionsHelper.doubleClick(applicationFinancialObj.ApprovalCommitteeRecommendationsScreen_610());
+//			
+//		}
+//
+//	@And("^User_610 Click Recommend button in Approval Committee Recommendations$")
+//		public void User_609_Click_Recommend_button_in_Approval_Committee_Recommendations() throws Throwable {
+//			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.WifakApplication_ApprovalCommitteeRecommendations_Recommend());
+//			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.WifakApplication_ApprovalCommitteeRecommendations_Recommend());
+//			
+//			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.facilityAlreadyCreatedPopup_610());
+//			applicationFinancialObj.facilityAlreadyCreatedPopup_610().click();
+//		}
+//
+//	@And("^User_610 Select the decision in Approval Committee Recommendations$")
+//		public void User_609_Select_the_decision_in_Approval_Committee_Recommendations() throws Throwable {
+//			
+//			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ApprovalCommitteesRecommendationPopup_610());
+//			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.selectUserJAY_ApprovalCommitteesRecommendationPopup_610());
+//			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.selectUserJAY_ApprovalCommitteesRecommendationPopup_610());
+//			
+//			//User = fmsLoginExceldata.getTestdata("FMS_User11");	
+//		//	(//table[@id='ApplicationFacilityRecommendationGrid_WIFT002MT']//td[text()='JAY'])[1]
+////			String RecommendedBy = "(//table[@id='ApplicationFacilityRecommendationGrid_WIFT002MT']//td[text()='"+"JAY"+"'])[1]";
+////			WebElement RecommendedBy_user = driver.findElement(By.xpath(RecommendedBy));
+////			RecommendedBy_user.click();
+//			
+//			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation());
+//			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation());
+//			DropDownHelper.SelectUsingVisibleText(applicationFinancialObj.WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation(), testData.get("Committee Recommendations"));
+//		}
+//
+//	@And("^User_610 Click on Ok in Approval Committee Recommendations$")
+//		public void User_609_Click_on_Ok_in_Approval_Committee_Recommendations() throws Throwable {
+//			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation_Ok());
+//			
+//			for (int i = 0; i < 200; i++) {
+//				try {
+//					clicksAndActionsHelper.clickOnElement(applicationFinancialObj.WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation_Ok());
+//					break;
+//				} catch (Exception e) {
+//					if (i == 199) {
+//						Assert.fail(e.getMessage());
+//					}
+//				}
+//			}
+//			
+//			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonSuccessOk());
+//			for (int i = 0; i < 2000; i++) {
+//				try {
+//					applicationFinancialObj.ButtonSuccessOk().click();
+//					break;
+//				} catch (Exception e) {
+//					if (i == 1999) {
+//						Assert.fail(e.getMessage());
+//					}
+//				}
+//			}
+//			
+//			}
+
+	//---Authorize Reject Application
+		
+		@And("User_{int} Click Authorize Reject Application For Financial Facilities screen")
+		public void user_click_authorize_reject_application_for_financial_facilities_screen(Integer int1) {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.AuthorizeRejectApplicationForFinancialFacilitiesscreen_610());
+			for (int i = 0; i < 200; i++) {
+				try {
+					clicksAndActionsHelper.clickOnElement(applicationFinancialObj.AuthorizeRejectApplicationForFinancialFacilitiesscreen_610());
+					break;
+				} catch (Exception e) {
+					if (i == 199) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+
+	@And("User_{int} retrive the first data in Authorize Reject Application For Financial Facilities screen")
+		public void user_retrive_the_first_data_in_authorize_reject_application_for_financial_facilities_screen(Integer int1) {
+			waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.Enter_ValidateCode_AuthorizeRejectApplication_610());
+		    applicationFinancialObj.Enter_ValidateCode_AuthorizeRejectApplication_610().sendKeys(SccuesscodeInApproveLev1UnderWifak, Keys.ENTER);
+
+		waitHelper.waitForElementwithFluentwait(driver,applicationFinancialObj.ClickTheValue_AuthorizeRejectApplication_610());
+		clicksAndActionsHelper.doubleClick(applicationFinancialObj.ClickTheValue_AuthorizeRejectApplication_610());
+		}
+
+	@Given("User_{int} Click Authorize button in Authorize Reject Application For Financial Facilities screen")
+		public void user_click_authorize_button_in_authorize_reject_application_for_financial_facilities_screen(Integer int1) {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.authorize_btn_AuthorizeRejectApplication_610());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.authorize_btn_AuthorizeRejectApplication_610());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.authorize_btn_AuthorizeRejectApplication_610());
+			
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonConfirmOk());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.ButtonConfirmOk());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.ButtonConfirmOk());
+			
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonSuccessOk());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.ButtonSuccessOk());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.ButtonSuccessOk());
+			
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.dismiss_btn_AuthorizeRejectApplication_610());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.dismiss_btn_AuthorizeRejectApplication_610());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.dismiss_btn_AuthorizeRejectApplication_610());
+		}
+
+	//-------------Issue Facility Offer Screen
+		
+		@Given("User_{int} clicks Issue Facility Offer Screen")
+		public void user_clicks_issue_facility_offer_screen(Integer int1) {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.IssueFacilityOffer_Screen__610());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.IssueFacilityOffer_Screen__610());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.IssueFacilityOffer_Screen__610());
+		}
+
+		@Given("User_{int} retrive the first data in Issue Facility Offer Screen")
+		public void user_retrive_the_first_data_in_issue_facility_offer_screen(Integer int1) {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Enter_ValidateCode_InIssueFacilityOffer_Screen__610());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.Enter_ValidateCode_InIssueFacilityOffer_Screen__610());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.Enter_ValidateCode_InIssueFacilityOffer_Screen__610());
+			applicationFinancialObj.Enter_ValidateCode_InIssueFacilityOffer_Screen__610().sendKeys(SccuesscodeInApproveLev1UnderWifak,Keys.ENTER);
+			
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ClickTheValue_ValidateCode_InIssueFacilityOffer_Screen__610());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.ClickTheValue_ValidateCode_InIssueFacilityOffer_Screen__610());
+			clicksAndActionsHelper.doubleClick(applicationFinancialObj.ClickTheValue_ValidateCode_InIssueFacilityOffer_Screen__610());
+		}
+
+		@Given("User_{int} Click Issueoffer button in Issue Facility Offer Screen")
+		public void user_click_issueoffer_button_in_issue_facility_offer_screen(Integer int1) {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.issueoffer_btn_InIssueFacilityOffer_Screen__610());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.issueoffer_btn_InIssueFacilityOffer_Screen__610());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.issueoffer_btn_InIssueFacilityOffer_Screen__610());
+			
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonConfirmOk());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.ButtonConfirmOk());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.ButtonConfirmOk());
+			
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.errorPopup_InIssueFacilityOffer_Screen__610());
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.errorPopupOkButton_InIssueFacilityOffer_Screen__610());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.errorPopupOkButton_InIssueFacilityOffer_Screen__610());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.errorPopupOkButton_InIssueFacilityOffer_Screen__610());
+			
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonSuccessOk());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.ButtonSuccessOk());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.ButtonSuccessOk());
+		}
+		
+		//--------------------------Client Response Screen
+
+		@Given("User_{int} clicks Client Response Screen")
+		public void user_clicks_client_response_screen(Integer int1) {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ClientResponse__610());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.ClientResponse__610());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.ClientResponse__610());
+		}
+
+		@Given("User_{int} retrive the first data in Client Response Screen")
+		public void user_retrive_the_first_data_in_client_response_screen(Integer int1) {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Enter_ValidateCode_InClientResponse__610());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.Enter_ValidateCode_InClientResponse__610());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.Enter_ValidateCode_InClientResponse__610());
+			applicationFinancialObj.Enter_ValidateCode_InClientResponse__610().sendKeys(SccuesscodeInApproveLev1UnderWifak,Keys.ENTER);
+			
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ClickTheValue_ValidateCode_InClientResponse__610());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.ClickTheValue_ValidateCode_InClientResponse__610());
+			clicksAndActionsHelper.doubleClick(applicationFinancialObj.ClickTheValue_ValidateCode_InClientResponse__610());
+		}
+
+		@Given("User_{int} Click Accept button in Client Response Offer Screen")
+		public void user_click_accept_button_in_client_response_offer_screen(Integer int1) {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.accept_btn_InClientResponse__610());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.accept_btn_InClientResponse__610());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.accept_btn_InClientResponse__610());
+			
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonConfirmOk());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.ButtonConfirmOk());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.ButtonConfirmOk());
+			
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonSuccessOk());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.ButtonSuccessOk());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.ButtonSuccessOk());
+			
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.dismissBtn_InClientResponse__610());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.dismissBtn_InClientResponse__610());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.dismissBtn_InClientResponse__610());
+			
+			
+		}
+		
+		//-------------------------------Document Validation Screen
+
+		@Given("User_{int} clicks Document Validation Screen")
+		public void user_clicks_document_validation_screen(Integer int1) {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.DocumentValidation__610());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.DocumentValidation__610());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.DocumentValidation__610());
+		}
+
+		@Given("User_{int} retrive the first data in Document ValidationScreen")
+		public void user_retrive_the_first_data_in_document_validation_screen(Integer int1) {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Enter_ValidateCode_InDocumentValidation_Screen__610());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.Enter_ValidateCode_InDocumentValidation_Screen__610());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.Enter_ValidateCode_InDocumentValidation_Screen__610());
+			applicationFinancialObj.Enter_ValidateCode_InDocumentValidation_Screen__610().sendKeys(SccuesscodeInApproveLev1UnderWifak,Keys.ENTER);
+			
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ClickTheValue_ValidateCode_InDocumentValidation_Screen__610());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.ClickTheValue_ValidateCode_InDocumentValidation_Screen__610());
+			clicksAndActionsHelper.doubleClick(applicationFinancialObj.ClickTheValue_ValidateCode_InDocumentValidation_Screen__610());
+		}
+
+		@Given("User_{int} Click Validate button in Client Document Validation Screen")
+		public void user_click_validate_button_in_client_document_validation_screen(Integer int1) {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.validate_btn_InDocumentValidation_Screen__610());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.validate_btn_InDocumentValidation_Screen__610());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.validate_btn_InDocumentValidation_Screen__610());
+			
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonConfirmOk());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.ButtonConfirmOk());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.ButtonConfirmOk());
+			
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonSuccessOk());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.ButtonSuccessOk());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.ButtonSuccessOk());
+		}
+		
+		//final approve
+		
+		@And("User_{int} clicks Final Approval Screen")
+		public void user_clicks_final_approval_screen(Integer int1) {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.FinalApprovalScreenInAFFF__610());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.FinalApprovalScreenInAFFF__610());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.FinalApprovalScreenInAFFF__610());
+		}
+
+		@And("User_{int} retrive the first data in Final Approval Screen")
+		public void user_retrive_the_first_data_in_final_approval_screen(Integer int1) {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.Enter_ValidateCode_InFinalApprovalScreenInAFFF__610());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.Enter_ValidateCode_InFinalApprovalScreenInAFFF__610());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.Enter_ValidateCode_InFinalApprovalScreenInAFFF__610());
+			applicationFinancialObj.Enter_ValidateCode_InFinalApprovalScreenInAFFF__610().sendKeys(SccuesscodeInApproveLev1UnderWifak,Keys.ENTER);
+			
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ClickTheValue_ValidateCode_InFinalApprovalScreenInAFFF__610());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.ClickTheValue_ValidateCode_InFinalApprovalScreenInAFFF__610());
+			clicksAndActionsHelper.doubleClick(applicationFinancialObj.ClickTheValue_ValidateCode_InFinalApprovalScreenInAFFF__610());
+		}
+
+		@Given("User_{int} Click  Final Approval button in Final Approval Screen")
+		public void user_click_final_approval_button_in_final_approval_screen(Integer int1) {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.finalapproval_btn_InFinalApprovalScreenInAFFF__610());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.finalapproval_btn_InFinalApprovalScreenInAFFF__610());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.finalapproval_btn_InFinalApprovalScreenInAFFF__610());
+		}
+
+		@Given("User_{int} Validate the approved the Value in Final Approval Screen")
+		public void user_validate_the_approved_the_value_in_final_approval_screen(Integer int1) {
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonConfirmOk());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.ButtonConfirmOk());
+			
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonSuccessOk());
+			Assert.assertEquals(true, applicationFinancialObj.ButtonSuccessOk().isDisplayed());
+			
+			waitHelper.waitForElementwithFluentwait(driver, applicationFinancialObj.ButtonSuccessOk());
+			clicksAndActionsHelper.moveToElement(applicationFinancialObj.ButtonSuccessOk());
+			clicksAndActionsHelper.clickOnElement(applicationFinancialObj.ButtonSuccessOk());
 		}
 
 		

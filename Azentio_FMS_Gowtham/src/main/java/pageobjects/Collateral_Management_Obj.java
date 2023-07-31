@@ -1,4 +1,4 @@
-package pageobjects.CommonElements;
+package pageobjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -580,6 +580,61 @@ public class Collateral_Management_Obj {
 		return Close_WIFAKAPPLICATION_WIFAKAPPLICATION_FacilitiesManagement_Maintenance_tab;
 	}
 	
+	
+	// check alert flags in params
+	
+	
+
+	@FindBy(xpath="//*[@id='fmsControlRecordMaint_update_P007UP']")
+	private WebElement updateBtn_inControlRecord_params;
+	public WebElement updateBtn_inControlRecord_params607() {
+		return updateBtn_inControlRecord_params; 
+	}
+	
+	@FindBy(xpath="//td[text()='Control Record']")
+	private WebElement ControlRecordScreenInFSMParam_482;
+	public WebElement ControlRecordScreenInFSMParam_482() {
+		return ControlRecordScreenInFSMParam_482; 
+	}
+
+    @FindBy(xpath="//a[@id='P007UP']")
+	private WebElement updateAfterapproveScreen_ControlRecordInFSMParam_482;
+	public WebElement updateAfterapproveScreen_ControlRecordInFSMParam_482() {
+		return updateAfterapproveScreen_ControlRecordInFSMParam_482; 
+	}
+
+
+
+	@FindBy(xpath="//input[@id='FmsCtrlRecord_alertStatus_P007UP']")
+	private WebElement enableAlertsCheckBox_482;
+	public WebElement enableAlertsCheckBox_482() {
+		return enableAlertsCheckBox_482; 
+	}
+
+	@FindBy(xpath = "//button[@id='fmsControlRecordMaint_update_P007UP']")
+	private WebElement updateButton_UpdateAfterApproveInControlRecord_482;
+
+	public WebElement updateButton_UpdateAfterApproveInControlRecord_482() {
+		return updateButton_UpdateAfterApproveInControlRecord_482;
+	}
+
+	@FindBy(xpath = "//a[@id='P007P']")
+	private WebElement approveScreen_ControlRecordInFSMParam_482;
+
+	public WebElement approveScreen_ControlRecordInFSMParam_482() {
+		return approveScreen_ControlRecordInFSMParam_482;
+	}
+
+	@FindBy(xpath = "//button[@id='fmsControlRecordMaint_approve_P007P']")
+	private WebElement approveButtonInApproveScreenControlRecord_482;
+
+	public WebElement approveButtonInApproveScreenControlRecord_482() {
+		return approveButtonInApproveScreenControlRecord_482;
+	}
+	
+	
+	
+	
 	 //  check flag in param screen
 	
 		@FindBy(xpath = "//td[text()='Parameters']")
@@ -604,6 +659,13 @@ public class Collateral_Management_Obj {
 		private WebElement facility_type_search_code;
 		public WebElement facilityTypeSearchCode_610() {
 			return facility_type_search_code;
+		}
+		
+		
+		@FindBy(xpath = "//*[@id='fmsFacilityTypeListGridTbl_Id_P008UP_gs_BRIEF_NAME_ENG']")
+		private WebElement facility_type_breafName;
+		public WebElement facility_type_breafName_607() {
+			return facility_type_breafName;
 		}
 		
 		@FindBy(id = "td_fmsFacilityTypeListGridTbl_Id_P008UP_1_CODE")
@@ -737,6 +799,12 @@ public class Collateral_Management_Obj {
 		private WebElement approve_search_code;
 		public WebElement approveSearchCode_610() {
 			return approve_search_code;
+		}
+		
+		@FindBy(xpath = "//*[@id='fmsFacilityTypeListGridTbl_Id_P008P_gs_BRIEF_NAME_ENG']")
+		private WebElement approve_search_breafname;
+		public WebElement approve_search_breafname_607() {
+			return approve_search_breafname;
 		}
 		
 		@FindBy(xpath = "//*[@id='td_fmsFacilityTypeListGridTbl_Id_P008P_1_CODE']")

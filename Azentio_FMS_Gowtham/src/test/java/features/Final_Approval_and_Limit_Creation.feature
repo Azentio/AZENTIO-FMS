@@ -13,7 +13,7 @@ Feature: Title of your feature
     And User_610 clicks on the STP Facility Requirements option
     And User_610 unCheck the Mandatory Customer Grading flag
     And User_610 check the Customer Grading flag
-    And User_610 check the Overwrite Grading flag
+    And User_610 uncheck the Overwrite Grading flag
     And User_610 uncheck the Credit Review flag
     And User_610 uncheck the Committee Approval flag
     And User_610 uncheck the Credit Authorization flag
@@ -68,8 +68,35 @@ Feature: Title of your feature
 		And User retrive the first data in approve level3
 		And User select the level3 devision as approve
 		And User clicks on the level3 submit button
-		
-
+		#Approval Committee
+ 		And User Click Approval Committee Recommendations
+    And Select the record in Approval Committee Recommendations
+    And Click recommend button in the Approval Committee Recommendations Screen
+    And Enter the details in Recommendations
+    And Click ok button in the Recommendations screen
+    And User_610 Click on Ok in Approval Committee Recommendations
+		#Authorize Reject
+		And User_610 Click Authorize Reject Application For Financial Facilities screen
+		And User_610 retrive the first data in Authorize Reject Application For Financial Facilities screen
+		And User_610 Click Authorize button in Authorize Reject Application For Financial Facilities screen
+		#Issue Facility
+		And User_610 clicks Issue Facility Offer Screen
+    And User_610 retrive the first data in Issue Facility Offer Screen
+    And User_610 Click Issueoffer button in Issue Facility Offer Screen
+    #Client Response
+    And User_610 clicks Client Response Screen
+    And User_610 retrive the first data in Client Response Screen
+    And User_610 Click Accept button in Client Response Offer Screen
+    #Document Validation
+    And User_610 clicks Document Validation Screen
+    And User_610 retrive the first data in Document ValidationScreen
+    And User_610 Click Validate button in Client Document Validation Screen
+    #Final Approval Screen
+    And User_610 clicks Final Approval Screen
+    And User_610 retrive the first data in Final Approval Screen
+    And User_610 Click  Final Approval button in Final Approval Screen
+    And User_610 Validate the approved the Value in Final Approval Screen
+	
 		@899818
 		Scenario: ABSAI190416 - FMS 1704_Facility application with Charge line > Final Approval - Invalid/Missing Account
 		Given navigate to FMS application2 and login with valid credentials

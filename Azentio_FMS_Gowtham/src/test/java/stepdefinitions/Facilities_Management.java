@@ -22,7 +22,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pageobjects.CommonElements.Facilities_Management_Obj;
+import pageobjects.Facilities_Management_Obj;
 import resources.BaseClass;
 
 public class Facilities_Management {

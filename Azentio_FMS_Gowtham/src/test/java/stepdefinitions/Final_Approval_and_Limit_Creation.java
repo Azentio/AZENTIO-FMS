@@ -8,7 +8,7 @@ import helper.DropDownHelper;
 import helper.JavascriptHelper;
 import helper.Selenium_Actions;
 import helper.WaitHelper;
-import pageobjects.CommonElements.Request_for_financing_Obj;
+import pageobjects.Request_for_financing_Obj;
 import resources.BaseClass;
 
 public class Final_Approval_and_Limit_Creation {

@@ -31,11 +31,13 @@ Feature: Title of your feature
   @664435
   Scenario: BTII180015
     Given Login into CSM Application
+    And User update test data for test case no 664435
     And Click Request on FMS Core
     And Click request management under request
     And Click management process branch under request management
     And Select first approve status detail
     And Click process button in management process branch tab
+    
 
   @664435_2
   Scenario: BTII180015
@@ -84,10 +86,12 @@ Feature: Title of your feature
     Scenario: TSR - EWB180031
      Given navigate to FMS application2 and login with valid credentials
      And User update test data for test case no 636958
-     And Click Request for financin
-     And Click Request for financing
-     And Goto maintenace
-     And click the reason for submission search box
+     And User update test data for test case no 1265139
+		And User_607 Click Request under menu Options
+		And User_607 Click Request Financing under Request
+		And Click Request for financing
+    And Goto maintenace
+    And click the reason for submission search box
     And click the customer search box
     And click the facility type details
     And Enter the facility type code under facility type
@@ -111,8 +115,11 @@ Feature: Title of your feature
     @636958_2
     Scenario: TSR - EWB180031
     Given navigate to FMS application2 and login with valid credentials
-    And Click Request for financin
-    And Click Request for financing
+    And User update test data for test case no 1265139
+		And User_607 Click Request under menu Options
+		And User_607 Click Request Financing under Request
+		And Click Request for financing
+    And Goto maintenace
     And Click the Approve level1 screen under request for financing
     And Search the value in approve1
     And Select the record in approve1

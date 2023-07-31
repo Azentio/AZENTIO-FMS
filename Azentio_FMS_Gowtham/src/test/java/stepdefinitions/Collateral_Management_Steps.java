@@ -2,6 +2,7 @@ package stepdefinitions;
 
 import java.util.Map;
 
+import org.junit.Assume;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,7 +18,7 @@ import helper.WaitHelper;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-import pageobjects.CommonElements.Collateral_Management_Obj;
+import pageobjects.Collateral_Management_Obj;
 import resources.BaseClass;
 
 public class Collateral_Management_Steps {
@@ -38,6 +39,11 @@ public class Collateral_Management_Steps {
 	@And("^User_607 update test data for test case no 127727$")
 	public void user_update_test_data_for_test_case_no_127727() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("AT_CM_037");
+	}
+	
+	@And("^User_607 update test data for test case no 127735$")
+	public void user_update_test_data_for_test_case_no_127735() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("AT_CM_039");
 	}
 	
 	
@@ -250,6 +256,7 @@ public class Collateral_Management_Steps {
 	}
 	
 	//127735
+	
 	@And("^User click on the Collateral Management feature$")
     public void user_click_on_the_collateral_management_feature() throws Throwable {
     	for (int i = 0; i <= 300; i++) {
@@ -762,6 +769,96 @@ public class Collateral_Management_Steps {
 		}
 	}
 	
+	
+	//Alret Check in params
+	
+
+	@And ("User_482 click update button in Update after approve")
+    public void User_482_click_update_button_in_Update_after_approve() {
+    	waitHelper.waitForElementwithFluentwait(driver,Collateral_Management_Obj.updateBtn_inControlRecord_params607());
+    	for (int i = 0; i <500; i++) {
+    		Collateral_Management_Obj.updateBtn_inControlRecord_params607().click();
+    		break;
+		}
+    	
+    	waitHelper.waitForElementwithFluentwait(driver,Collateral_Management_Obj.confirmsavesuccessfullypopup());
+    	Collateral_Management_Obj.confirmsavesuccessfullypopup().click();
+    	
+    	waitHelper.waitForElementwithFluentwait(driver,Collateral_Management_Obj.confirmsavesuccessfullypopup());
+    	Collateral_Management_Obj.confirmsavesuccessfullypopup().click();
+	}
+
+	
+	@And("User_482 click Control record Sub Menu")
+    public void user_482_click_control_record_sub_menu() {
+    	waitHelper.waitForElementwithFluentwait(driver,Collateral_Management_Obj.ControlRecordScreenInFSMParam_482());
+		clicksAndActionsHelper.moveToElement(Collateral_Management_Obj.ControlRecordScreenInFSMParam_482());
+		clicksAndActionsHelper.clickOnElement(Collateral_Management_Obj.ControlRecordScreenInFSMParam_482());
+    }
+
+    @And("User_482 click Update After Approve in control record")
+    public void user_482_click_update_after_approve_in_control_record() {
+    	waitHelper.waitForElementwithFluentwait(driver,Collateral_Management_Obj.updateAfterapproveScreen_ControlRecordInFSMParam_482());
+		clicksAndActionsHelper.moveToElement(Collateral_Management_Obj.updateAfterapproveScreen_ControlRecordInFSMParam_482());
+		clicksAndActionsHelper.clickOnElement(Collateral_Management_Obj.updateAfterapproveScreen_ControlRecordInFSMParam_482());
+    }
+
+    @And("User_482 Check the Enable Alerts check box")
+    public void user_482_check_the_enable_alerts_check_box() {
+    	for (int i = 0; i <2000; i++) {
+			try {
+				JavascriptHelper.scrollIntoView(Collateral_Management_Obj.enableAlertsCheckBox_482());
+				break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+    	waitHelper.waitForElementwithFluentwait(driver,Collateral_Management_Obj.enableAlertsCheckBox_482());
+    	if (!Collateral_Management_Obj.enableAlertsCheckBox_482().isSelected()) {
+    		Collateral_Management_Obj.enableAlertsCheckBox_482().click();
+		}
+    	else {
+			Assume.assumeTrue(false);
+		}
+    	
+    }
+
+ @And("User_482 click approve screen in Control records")
+    public void user_482_click_approve_screen_in_control_records() {
+    	waitHelper.waitForElementwithFluentwait(driver,Collateral_Management_Obj.approveScreen_ControlRecordInFSMParam_482());
+		clicksAndActionsHelper.moveToElement(Collateral_Management_Obj.approveScreen_ControlRecordInFSMParam_482());
+		clicksAndActionsHelper.clickOnElement(Collateral_Management_Obj.approveScreen_ControlRecordInFSMParam_482());
+		
+    	waitHelper.waitForElementwithFluentwait(driver,Collateral_Management_Obj.confirmsavepopupokbutton());
+    	Collateral_Management_Obj.confirmsavepopupokbutton().click();
+		
+    	waitHelper.waitForElementwithFluentwait(driver,Collateral_Management_Obj.confirmsavesuccessfullypopup());
+    	Collateral_Management_Obj.confirmsavesuccessfullypopup().click();
+		
+		
+    }
+
+    @And("User_482 click approve button in aaprove screen")
+    public void user_482_click_approve_button_in_aaprove_screen() {
+    	waitHelper.waitForElementwithFluentwait(driver,Collateral_Management_Obj.approveButtonInApproveScreenControlRecord_482());
+		clicksAndActionsHelper.moveToElement(Collateral_Management_Obj.approveButtonInApproveScreenControlRecord_482());
+		clicksAndActionsHelper.clickOnElement(Collateral_Management_Obj.approveButtonInApproveScreenControlRecord_482());
+		
+		waitHelper.waitForElementwithFluentwait(driver,Collateral_Management_Obj.confirmsavepopupokbutton());
+    	Collateral_Management_Obj.confirmsavepopupokbutton().click();
+		
+    	waitHelper.waitForElementwithFluentwait(driver,Collateral_Management_Obj.confirmsavesuccessfullypopup());
+    	Collateral_Management_Obj.confirmsavesuccessfullypopup().click();
+		
+    }
+
+	
+	
+	
+	
 	//flag check and uncheck in params
 	
 	@And("^User_610 clicks on the parameter module$")
@@ -786,15 +883,23 @@ public class Collateral_Management_Steps {
 	@And("^User_610 enter the code value in update after approve menu$")
 	public void user_enter_the_code_value_in_update_after_approve_menu() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, Collateral_Management_Obj.facilityTypeSearchCode_610());
-		
 		Collateral_Management_Obj.facilityTypeSearchCode_610().sendKeys("9001", Keys.ENTER);
 		
 	}
 	@And("^User_610 enter the code value in update after approve menu for req$")
 	public void user_enter_the_code_value_in_update_after_approve_menu_for_req() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, Collateral_Management_Obj.facilityTypeSearchCode_610());
+		Collateral_Management_Obj.facilityTypeSearchCode_610().click();
+		Collateral_Management_Obj.facilityTypeSearchCode_610().sendKeys("19");
+	
 		
-		Collateral_Management_Obj.facilityTypeSearchCode_610().sendKeys("19", Keys.ENTER);
+		//waitHelper.waitForElementwithFluentwait(driver, Collateral_Management_Obj.facility_type_breafName_607());
+		
+		for (int i = 0; i < 1500; i++) {
+			Collateral_Management_Obj.facility_type_breafName_607().click();
+			Collateral_Management_Obj.facility_type_breafName_607().sendKeys("test", Keys.ENTER);
+			break;
+		}
 		
 	}
 
@@ -1113,9 +1218,13 @@ public class Collateral_Management_Steps {
 	@And("^User_610 enter the code value in Approve menu for req$")
 	public void user_enter_the_code_value_in_approve_menu_for_req() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, Collateral_Management_Obj.approveSearchCode_610());
-		// Collateral_Management_Obj.approveSearchCode_610().sendKeys(testData.get("Search
-		// Code"),Keys.ENTER);
+		Collateral_Management_Obj.approveSearchCode_610().click();
 		Collateral_Management_Obj.approveSearchCode_610().sendKeys("19", Keys.ENTER);
+		
+		waitHelper.waitForElementwithFluentwait(driver, Collateral_Management_Obj.approve_search_breafname_607());
+		Collateral_Management_Obj.approve_search_breafname_607().click();
+		Collateral_Management_Obj.approve_search_breafname_607().sendKeys("test", Keys.ENTER);
+		
 	}
 
 	@And("^User_610 double click on the retrieved data in Approve menu$")

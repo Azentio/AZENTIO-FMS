@@ -2,10 +2,8 @@ package stepdefinitions;
 
 import static org.testng.Assert.assertEquals;
 
-import java.util.Iterator;
 import java.util.Map;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -20,7 +18,7 @@ import helper.WaitHelper;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import pageobjects.CommonElements.Request_for_financing_Obj;
+import pageobjects.Request_for_financing_Obj;
 import resources.BaseClass;
 
 public class Request_for_financing_steps {
@@ -37,6 +35,8 @@ public class Request_for_financing_steps {
 	DropDownHelper DropDownHelper = new DropDownHelper(driver);
 	StringBuffer refID = new StringBuffer();
 	String path = System.getProperty("user.dir") + "\\TestData\\FMSTestData.xlsx";
+	ExcelData ExcelData =  new ExcelData(path, "Request", "Data Set ID");
+	ExcelData bajApplicationTestData =  new ExcelData(path, "Baj Application", "Data Set ID");
 	ExcelData fmsTransactionsExcelData = new ExcelData(path, "WIFAK_Application_TestData", "Data Set ID");
 	Map<String, String> testData;
 	ExcelData fmsTransactionsExcelData1 = new ExcelData(path, " REQUEST_FOR_FINANCIN ", "Data Set ID");
@@ -54,11 +54,16 @@ public class Request_for_financing_steps {
 	
 //	@Given("User update test data for test case no 1039018")
 //	public void user_update_test_data_for_test_case_no_1039018() {
-//		testData1 = fmsTransactionsExcelData1.getTestdata("AT_DDR_078");
+//		testData5 = fmsTransactionsExcelData5.getTestdata("AT_DDR_078");
 //	}
 	@Given("User update test data for test case no 1039018_2")
 	public void user_update_test_data_for_test_case_no_1039018_2() {
-		testData1 = fmsTransactionsExcelData1.getTestdata("AT_DDR_078");
+		testData5 = fmsTransactionsExcelData5.getTestdata("AT_DDR_078");
+	}
+	
+	@Given("User update test data for test case no 1265139")
+	public void user_update_test_data_for_test_case_no_1265139() {
+		testData5 = fmsTransactionsExcelData5.getTestdata("AT_CA_024");
 	}
 	
 	@Given("User_607 Click Request under menu Options")
@@ -92,7 +97,7 @@ public class Request_for_financing_steps {
 
 	@Given("User update test data for test case no 669589")
 	public void User_update_test_data_for_test_case_no_669589() {
-		testData1 = fmsTransactionsExcelData1.getTestdata("AT_RF_021");
+		testData5 = fmsTransactionsExcelData5.getTestdata("AT_RF_021");
 	}
 	
 	@And("^Goto maintenace$")
@@ -109,7 +114,7 @@ public class Request_for_financing_steps {
 		clicksAndActionsHelper.moveToElement(Request_for_financing_Obj.Select_reason_for_submission());
 //		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.Select_reason_for_submission(),
 //				"Modify Request");
-		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.Select_reason_for_submission(),testData1.get("Reason For Submission"));
+		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.Select_reason_for_submission(),testData5.get("Reason For Submission"));
 
 	}
 
@@ -119,7 +124,7 @@ public class Request_for_financing_steps {
 		clicksAndActionsHelper.moveToElement(Request_for_financing_Obj.enter_Existing_Facility_No());
 		Request_for_financing_Obj.enter_Existing_Facility_No().click();
 		//Request_for_financing_Obj.enter_Existing_Facility_No().sendKeys("1399");
-		Request_for_financing_Obj.enter_Existing_Facility_No().sendKeys(testData1.get("Existing Facility"));
+		Request_for_financing_Obj.enter_Existing_Facility_No().sendKeys(testData5.get("Existing Facility"));
 		Request_for_financing_Obj.Afertenter_Existing_Facility_No_ClickSearch().click();
 //				for (int i = 0; i <= 300; i++) {
 //					if (!(Request_for_financing_Obj.Afertenter_Existing_Facility_No_ClickSearch().getAttribute("prevvalue").isBlank())) {
@@ -178,7 +183,7 @@ public class Request_for_financing_steps {
 			try {
 				Request_for_financing_Obj.Click_and_enter_firstGroupID_onGroupLimit().click();
 				//Request_for_financing_Obj.Click_In_and_enter_firstGroupID_onGroupLimit().sendKeys("1");
-				Request_for_financing_Obj.Click_In_and_enter_firstGroupID_onGroupLimit().sendKeys(testData1.get("First GroupID"));
+				Request_for_financing_Obj.Click_In_and_enter_firstGroupID_onGroupLimit().sendKeys(testData5.get("First GroupID"));
 
 				break;
 			} catch (Exception e) {
@@ -197,7 +202,7 @@ public class Request_for_financing_steps {
 		clicksAndActionsHelper.moveToElement(Request_for_financing_Obj.Click_and_enter_firstGroupID_onGroupLimit());
 		Request_for_financing_Obj.Click_and_enter_firstlimit_onGroupLimit().click();
 		//Request_for_financing_Obj.Click_and_enter_firstlimit_onGroupLimit().sendKeys("2000");
-		Request_for_financing_Obj.Click_and_enter_firstlimit_onGroupLimit().sendKeys(testData1.get("First Group Limit"));
+		Request_for_financing_Obj.Click_and_enter_firstlimit_onGroupLimit().sendKeys(testData5.get("First Group Limit"));
 
 
 	}
@@ -221,7 +226,7 @@ public class Request_for_financing_steps {
 //				}
 //			}
 	//	Request_for_financing_Obj.Click_In_and_enter_FirstGroupname_onGroupLimit().sendKeys("dq");
-		Request_for_financing_Obj.Click_In_and_enter_FirstGroupname_onGroupLimit().sendKeys(testData1.get("First Group Name"));
+		Request_for_financing_Obj.Click_In_and_enter_FirstGroupname_onGroupLimit().sendKeys(testData5.get("First Group Name"));
 	}
 
 	@And("^Enter Second GroupID$")
@@ -244,7 +249,7 @@ public class Request_for_financing_steps {
 		clicksAndActionsHelper.moveToElement(Request_for_financing_Obj.Click_and_enter_secondGroupID_onGroupLimit());
 		Request_for_financing_Obj.Click_and_enter_secondGroupID_onGroupLimit().click();
 		//Request_for_financing_Obj.Click_In_and_enter_secondGroupID_onGroupLimit().sendKeys("2");
-		Request_for_financing_Obj.Click_In_and_enter_secondGroupID_onGroupLimit().sendKeys(testData1.get("Second GroupID"));
+		Request_for_financing_Obj.Click_In_and_enter_secondGroupID_onGroupLimit().sendKeys(testData5.get("Second GroupID"));
 
 	}
 
@@ -255,7 +260,7 @@ public class Request_for_financing_steps {
 		// clicksAndActionsHelper.moveToElement(Request_for_financing_Obj.Afterenter_value_on_SecondLimit_clickout());
 		Request_for_financing_Obj.Click_and_enter_secondlimit_onGroupLimit().click();
 		//Request_for_financing_Obj.Click_and_enter_secondlimit_onGroupLimit().sendKeys("10000");
-		Request_for_financing_Obj.Click_and_enter_secondlimit_onGroupLimit().sendKeys(testData1.get("Second Group Limit"));
+		Request_for_financing_Obj.Click_and_enter_secondlimit_onGroupLimit().sendKeys(testData5.get("Second Group Limit"));
 		Request_for_financing_Obj.Afterenter_value_on_SecondLimit_clickout().click();
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.CannotPoceed_After_enterHighvalue());
 		Assert.assertEquals(true, Request_for_financing_Obj.CannotPoceed_After_enterHighvalue().isDisplayed());
@@ -320,8 +325,14 @@ public class Request_for_financing_steps {
 	@And("^Click process button in management process branch tab$")
 	public void click_process_button_in_management_process_branch_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.get_approved_reqNo());
-		RequestNo = Request_for_financing_Obj.get_approved_reqNo().getAttribute("value");
-
+	    String RequestNo = Request_for_financing_Obj.get_approved_reqNo().getAttribute("value");
+		
+		// String transactionNo = CSMTransactionObject.getTransactionNumber().getText().substring(15, 19);
+      //  System.out.println(transactionNo);
+	    
+	    bajApplicationTestData.updateTestData(testData2.get("Data Set ID"), "Enter Request No", RequestNo);
+		System.out.println(bajApplicationTestData.getTestdata("Enter Request No"));
+		
 		waitHelper.waitForElementwithFluentwait(driver,
 				Request_for_financing_Obj.Click_ProcessButton_OnManagement_process_branch());
 		Request_for_financing_Obj.Click_ProcessButton_OnManagement_process_branch().click();
@@ -330,7 +341,7 @@ public class Request_for_financing_steps {
 
 	@Given("User update test data for test case no 664435")
 	public void user_update_test_data_for_test_case_no_664435() {
-		testData2 = fmsTransactionsExcelData2.getTestdata("AT_RF_022");
+		testData2 = bajApplicationTestData.getTestdata("AT_RF_022_D1");
 	}
 
 	
@@ -366,7 +377,6 @@ public class Request_for_financing_steps {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_searchOn_maintenance());
 		Request_for_financing_Obj.Click_searchOn_maintenance().click();
 	}
-	String RequestNo;
 	@And("^Enter Request No$")
 	public void enter_request_no() throws Throwable {
 		// waitHelper.waitForElementwithFluentwait(driver,
@@ -374,7 +384,7 @@ public class Request_for_financing_steps {
 		JavascriptHelper.scrollIntoView(Request_for_financing_Obj.Scroll_into_reqNo());
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Enter_req_no());
 		Request_for_financing_Obj.Enter_req_no().click();
-		Request_for_financing_Obj.Enter_req_no().sendKeys(RequestNo);
+		Request_for_financing_Obj.Enter_req_no().sendKeys(testData2.get("Enter Request No"));
 		Request_for_financing_Obj.Enter_req_no().sendKeys(Keys.ENTER);
 	}
 
@@ -422,7 +432,7 @@ public class Request_for_financing_steps {
 	// @652870
 	@Given("User update test data for test case no 652870")
 	public void user_update_test_data_for_test_case_no_652870(){
-		testData1 = fmsTransactionsExcelData1.getTestdata("AT_RF_052");
+		testData3 = fmsTransactionsExcelData3.getTestdata("AT_RF_052");
 	    
 	}
 	
@@ -453,7 +463,6 @@ public class Request_for_financing_steps {
 		//Request_for_financing_Obj.Click_Click_and_enter_CIF().sendKeys("8");
 		Request_for_financing_Obj.Click_Click_and_enter_CIF().sendKeys(testData3.get("CIF"));
 		Request_for_financing_Obj.Click_Click_and_enter_CIF().sendKeys(Keys.ENTER);
-
 	}
 
 	@And("^After enter CIF find if any alphabetic in ID number$")
@@ -471,7 +480,7 @@ public class Request_for_financing_steps {
 	// @652912
 	@Given("User update test data for test case no 652912")
 	public void user_update_test_data_for_test_case_no_652912() {
-		testData = fmsTransactionsExcelData1.getTestdata("AT_RF_053");
+		testData = fmsTransactionsExcelData5.getTestdata("AT_RF_053");
 	}
 
 	@And("^Click Facilities Management under WIFAK APPLICATION$")
@@ -584,14 +593,14 @@ public class Request_for_financing_steps {
 		waitHelper.waitForElementwithFluentwait(driver,
 				Request_for_financing_Obj.DoubleClick_select_firstRecord_on_maintenace());
 		clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.DoubleClick_select_firstRecord_on_maintenace());
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 	}
 
 	@Then("^Check the Status its on cancel$")
 	public void check_the_status_its_on_cancel() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Check_the_Record_Status());
 		String check = "";
-		for (int i = 0; i <= 300; i++) {
+		for (int i = 0; i <= 1000; i++) {
 			check = Request_for_financing_Obj.Check_the_Record_Status().getAttribute("value");
 			if (check.equalsIgnoreCase("Cancelled")) {
 				break;
@@ -603,11 +612,11 @@ public class Request_for_financing_steps {
 	// @636958
 	@Given("User update test data for test case no 636958")
 	public void user_update_test_data_for_test_case_no_636958() {
-		testData1 = fmsTransactionsExcelData1.getTestdata("AT_RF_054");
+		testData5 = fmsTransactionsExcelData5.getTestdata("AT_RF_054");
 	}
 	@Given("User update test data for test case no 853171")
 	public void user_update_test_data_for_test_case_no_853171() {
-		testData1 = fmsTransactionsExcelData1.getTestdata("AT_IFO_001");
+		testData5 = fmsTransactionsExcelData5.getTestdata("AT_IFO_001");
 	}
 	
 
@@ -616,7 +625,7 @@ public class Request_for_financing_steps {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.reasonforsubmisson());
 		// Request_for_financing_Obj.SelectUsingVisibleText(Request_for_financing_Obj.reasonforsubmisson(),
 		// "New Request");
-		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.reasonforsubmisson(),testData1.get("Reason For Submission"));
+		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.reasonforsubmisson(),testData5.get("Reason For Submission"));
 		//DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.reasonforsubmisson(),"New Request");
 	}
 
@@ -624,7 +633,7 @@ public class Request_for_financing_steps {
 	public void click_the_customer_search_box() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.customersearchbox());
 		Request_for_financing_Obj.customersearchbox().click();
-		Request_for_financing_Obj.customersearchbox().sendKeys(testData1.get("Customer Search Box"));
+		Request_for_financing_Obj.customersearchbox().sendKeys(testData5.get("Customer CIF"));
 		Request_for_financing_Obj.customersearchbox().sendKeys(Keys.TAB);
 		Thread.sleep(3000);
 	}
@@ -649,7 +658,7 @@ public class Request_for_financing_steps {
 	public void enter_the_facility_type_code_under_facility_type() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.facilitytypedetailssearchbox());
 		Request_for_financing_Obj.facilitytypedetailssearchbox().sendKeys("19");
-	//	Request_for_financing_Obj.facilitytypedetailssearchbox().sendKeys(testData1.get("Facility Type"));
+	//	Request_for_financing_Obj.facilitytypedetailssearchbox().sendKeys(testData5.get("Facility Type"));
 		Request_for_financing_Obj.facilitytypetouch().click();
 
 	}
@@ -666,7 +675,7 @@ public class Request_for_financing_steps {
 				}
 			}
 		}
-		Request_for_financing_Obj.totallimitsearchbox().sendKeys(testData1.get("Total Limit"));
+		Request_for_financing_Obj.totallimitsearchbox().sendKeys(testData5.get("Total Limit"));
 		Request_for_financing_Obj.facilitytypetouch().click();
 
 	}
@@ -674,16 +683,13 @@ public class Request_for_financing_steps {
 	@And("^Click the Disbursement Sublimit under maintenance screen$")
 	public void click_the_disbursement_sublimit_under_maintenance_screen() throws Throwable {
 
-//		for (int i = 0; i <= 1000; i++) {
-//			try {
-//				JavascriptHelper.scrollIntoView(Request_for_financing_Obj.disbursementsublimit());
-//				break;
-//			} catch (Exception e) {
-//				if (i == 300) {
-//					Assert.fail(e.getMessage());
-//				}
-//			}
-//		}
+		for (int i = 0; i <= 1000; i++) {
+			try {
+				JavascriptHelper.scrollIntoView(Request_for_financing_Obj.disbursementsublimit());
+				break;
+			} catch (Exception e) {
+			}
+		}
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.disbursementsublimit());
 		for (int i = 0; i <= 1000; i++) {
 			try {
@@ -708,7 +714,7 @@ public class Request_for_financing_steps {
 	@And("^Add the product class values in product searchbox$")
 	public void add_the_product_class_values_in_product_searchbox() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.productclasssearchbox());
-		Request_for_financing_Obj.productclasssearchbox().sendKeys(testData1.get("Product Class"));
+		Request_for_financing_Obj.productclasssearchbox().sendKeys(testData5.get("Product Class"));
 		Request_for_financing_Obj.productclasssearchbox().sendKeys(Keys.TAB);
 		
 		
@@ -758,7 +764,7 @@ public class Request_for_financing_steps {
 					} catch (Exception e) {
 					}
 				}
-				Request_for_financing_Obj.tenure().sendKeys(testData1.get("Tenure"));
+				Request_for_financing_Obj.tenure().sendKeys(testData5.get("Tenure"));
 				Request_for_financing_Obj.tenure().sendKeys(Keys.TAB);
 				break;
 			} catch (Exception e) {
@@ -772,7 +778,7 @@ public class Request_for_financing_steps {
 				// waitHelper.waitForElementwithFluentwait(driver,
 				// Request_for_financing_Obj.select_the_moths_in_tenure());
 				DropDownHelper.SelectUsingVisibleValue(Request_for_financing_Obj.select_the_moths_in_tenure(),
-						testData1.get("Months"));
+						testData5.get("Months"));
 				break;
 			} catch (Exception e) {
 				if (i == 299) {
@@ -789,7 +795,7 @@ public class Request_for_financing_steps {
 			try {
 				// JavascriptHelper.scrollIntoView(Request_for_financing_Obj.marginsearchbox());
 				Request_for_financing_Obj.marginsearchbox().clear();
-				Request_for_financing_Obj.marginsearchbox().sendKeys(testData1.get("Margin"), Keys.TAB);
+				Request_for_financing_Obj.marginsearchbox().sendKeys(testData5.get("Margin"), Keys.TAB);
 				break;
 			} catch (Exception e) {
 				if (i == 300) {
@@ -1073,10 +1079,10 @@ public class Request_for_financing_steps {
 		Request_for_financing_Obj.select_firstRow_in_RejectReason().click();
 
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.select_reasonForRejection());
-		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.select_reasonForRejection(), testData1.get("Reason For Rejection"));
+		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.select_reasonForRejection(), testData5.get("Reason For Rejection"));
 
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Type_detailsIn_reasonForRejection());
-		Request_for_financing_Obj.Type_detailsIn_reasonForRejection().sendKeys(testData1.get("Type Details"));
+		Request_for_financing_Obj.Type_detailsIn_reasonForRejection().sendKeys(testData5.get("Type Details"));
 
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.clickOk_reasonForRejection());
 		Request_for_financing_Obj.clickOk_reasonForRejection().click();
@@ -1248,7 +1254,7 @@ public class Request_for_financing_steps {
 
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.tenure());
 		clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.tenure());
-		Request_for_financing_Obj.tenure().sendKeys(testData1.get("Change Months in Tenure"));
+		Request_for_financing_Obj.tenure().sendKeys(testData5.get("Change Months in Tenure"));
 
 		waitHelper.waitForElementwithFluentwait(driver,
 				Request_for_financing_Obj.click_editbutton_in_exitstingproduct_Class());
@@ -1275,12 +1281,12 @@ public class Request_for_financing_steps {
 
 	@And("^Search the value in approve1$")
 	public void search_the_value_in_approve1() throws Throwable {
-//	    	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Search_value_on_approve1());
+	    //	waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Search_value_on_approve1());
 //	    	Request_for_financing_Obj.Search_value_on_approve1().click();
-//	    	Request_for_financing_Obj.Search_value_on_approve1().sendKeys("3988");
+//	    	Request_for_financing_Obj.Search_value_on_approve1().sendKeys(refIDinUnderMainteanceRequestForFinancing);
 //	    	Request_for_financing_Obj.Search_value_on_approve1().sendKeys(Keys.ENTER);
 
-		for (int i = 0; i <= 300; i++) {
+		for (int i = 0; i <= 500; i++) {
 			try {
 				// waitHelper.waitForElementwithFluentwait(driver,
 				// Request_for_financing_Obj.Click_clearsearch_inApproveLev_1());
@@ -1389,7 +1395,7 @@ public class Request_for_financing_steps {
 	
 	@Given("User_607 update test data for test case no 749102")
 	public void user_update_test_data_for_test_case_no_749102() {
-		testData1 = fmsTransactionsExcelData1.getTestdata("AT_RF_148");
+		testData4 = fmsTransactionsExcelData4.getTestdata("AT_RF_148");
 	}
 	
 	@Given("Click Parameters in MTS")
@@ -1667,7 +1673,7 @@ public class Request_for_financing_steps {
 	// @749155
 	@Given("User_607 update test data for test case no 749155")
 	public void user_update_test_data_for_test_case_no_749155() {
-		testData1 = fmsTransactionsExcelData1.getTestdata("AT_RF_148");
+		testData5 = fmsTransactionsExcelData5.getTestdata("AT_RF_150");
 	}
 
 	@Given("Click request under menu")
@@ -1723,13 +1729,13 @@ public class Request_for_financing_steps {
 		JavascriptHelper.scrollIntoView(Request_for_financing_Obj.click_ApproveButton_after_Customer_Grading_RecommendationsIn_approvelev1());
 		
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.select_Decision_in_approvelev1());
-		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.select_Decision_in_approvelev1(), testData1.get("Decision in approve level1"));
+		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.select_Decision_in_approvelev1(), testData5.get("Decision in approve level1"));
 
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Select_approveCommite_afterDecision());
-		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.Select_approveCommite_afterDecision(), testData1.get("Approve Commite after Decision"));
+		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.Select_approveCommite_afterDecision(), testData5.get("Approve Commite after Decision"));
 
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.After_select_approveCommite_selectIC());
-		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.After_select_approveCommite_selectIC(), testData1.get("Select approve Commite selectIC"));
+		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.After_select_approveCommite_selectIC(), testData5.get("Select approve Commite selectIC"));
 
 		
 	}
@@ -2413,10 +2419,10 @@ public class Request_for_financing_steps {
 			}
 		}
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.ForwardRecord_inApproveLev1_underRequestForFinancing_607());
-		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.ForwardRecord_inApproveLev1_underRequestForFinancing_607(), "Approval Committee");
+		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.ForwardRecord_inApproveLev1_underRequestForFinancing_607(), testData5.get("Approve Commite after Decision"));
 		
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.SelectApprovalCommittee_inApproveLev1_underRequestForFinancing_607());
-		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.SelectApprovalCommittee_inApproveLev1_underRequestForFinancing_607(), "Investment Committee");
+		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.SelectApprovalCommittee_inApproveLev1_underRequestForFinancing_607(), testData5.get("Approve Commite after Decision"));
 
 	}
 	StringBuffer refIDinApproveLev1UnderRequestForFinancing = new StringBuffer();
@@ -2486,7 +2492,7 @@ public class Request_for_financing_steps {
 	@Given("User_607 Select Approve In First Line In RecommendationsArrow In Approval Committee Recommendations")
 	public void user_select_approve_in_first_line_in_recommendations_arrow_in_approval_committee_recommendations() {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.SelectApprove_InFirstLineIn_RecommendationsArrow_InApproval_Committee_Recommendations_607());
-		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.SelectApprove_InFirstLineIn_RecommendationsArrow_InApproval_Committee_Recommendations_607(), "Approved");
+		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.SelectApprove_InFirstLineIn_RecommendationsArrow_InApproval_Committee_Recommendations_607(),testData5.get("credit Committee Recommendations"));
 		
 	}
 
@@ -2575,7 +2581,6 @@ public class Request_for_financing_steps {
 	public void user_select_record_in_authorize_reject_under_request_for_financing() {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.SelectRecordInAuthorizeReject_Under_RequestForFinancing_607());
 		clicksAndActionsHelper.doubleClick(Request_for_financing_Obj.SelectRecordInAuthorizeReject_Under_RequestForFinancing_607());
-	    
 	}
 
 	@Given("User_607 Click Authorize button In Authorize Reject Under Request For Financing")
@@ -2655,7 +2660,58 @@ public class Request_for_financing_steps {
 	}
 
 	
+	//140578
 	
+
+	@Given("User_607 Click Authorize button In Authorize Reject Under Request For Financing for alert")
+	public void user_click_authorize_button_in_authorize_reject_under_request_for_financing_for_alert() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_AuthorizeBtnInAuthorizeReject_Under_RequestForFinancing());
+		Request_for_financing_Obj.Click_AuthorizeBtnInAuthorizeReject_Under_RequestForFinancing().click();
+		
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.ButtonConfirmOk());
+    	Request_for_financing_Obj.ButtonConfirmOk().click();
+    	
+    	for (int i = 0; i < 2000; i++) {
+			try {
+		    	Request_for_financing_Obj.ButtonSuccessOk().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}
+		}
+    	
+	@Given("User_607 Search User in Alert Popup")
+	public void user_search_user_in_alert_popup() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.SearchUser_inAlertPopup_607());
+		Request_for_financing_Obj.SearchUser_inAlertPopup_607().sendKeys("MODEL.B",Keys.ENTER);
+	}
+
+	@Given("User_607 Select User in Alert Popup")
+	public void user_select_user_in_alert_popup() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.SelectUser_inAlertPopup_607());
+		Request_for_financing_Obj.SelectUser_inAlertPopup_607().click();
+	}
+
+	@Given("User_607 Click Send button in Alert Popup")
+	public void user_click_send_button_in_alert_popup() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.ClickSendBtn_inAlertPuppop_607());
+		Request_for_financing_Obj.ClickSendBtn_inAlertPuppop_607().click();
+	}
+
+	@Given("User_607 Click Open items in Alert popup")
+	public void user_click_open_items_in_alert_popup() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.AlertPopUp_607());
+		
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.ClickOpen_items_in_Alertpopup_607());
+		Request_for_financing_Obj.ClickOpen_items_in_Alertpopup_607().click();
+	}
+	
+	
+	
+
 	
 	
 	

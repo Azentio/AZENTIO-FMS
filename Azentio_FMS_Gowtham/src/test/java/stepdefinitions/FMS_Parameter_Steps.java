@@ -14,7 +14,7 @@ import helper.JavascriptHelper;
 import helper.Selenium_Actions;
 import helper.WaitHelper;
 import io.cucumber.java.en.Given;
-import pageobjects.CommonElements.FMS_Parameter_Obj;
+import pageobjects.FMS_Parameter_Obj;
 import resources.BaseClass;
 
 public class FMS_Parameter_Steps {

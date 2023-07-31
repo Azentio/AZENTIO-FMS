@@ -3,7 +3,7 @@ Feature: Title of your feature
   I want to use this template for my feature file
   
    @733338_2
-    Scenario: Open the facility management screen and link a collateral
+    Scenario: Check and Uncheck the flags in FacilityType FMS_params
     Given navigate to FMS param application and login with valid credentials
     And User_610 clicks on the parameter module
     And User_610 clicks on the Facility Type feature

@@ -1,8 +1,5 @@
 package stepdefinitions;
 
-import static org.junit.Assert.fail;
-
-import java.util.Iterator;
 import java.util.Map;
 
 import org.openqa.selenium.Keys;
@@ -17,7 +14,7 @@ import helper.JavascriptHelper;
 import helper.Selenium_Actions;
 import helper.WaitHelper;
 import io.cucumber.java.en.Given;
-import pageobjects.CommonElements.Draw_Down_Request_Obj;
+import pageobjects.Draw_Down_Request_Obj;
 import resources.BaseClass;
 
 public class Draw_Down_Request {

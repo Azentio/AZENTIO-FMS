@@ -1659,9 +1659,259 @@ public class Application_for_Financial_FacilityObj {
 	    }
 	    
 	    
+	 // 127859
+	    
+	    //approval commitee
+	    @FindBy(xpath = "//span[text()='OK']")
+		private WebElement WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation_Ok;
+		public WebElement WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation_Ok() {
+			return WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation_Ok;
+		}
 	    
 	    
+	    @FindBy(xpath = "//span[text()='Client Response ']")
+		private WebElement ClientResponse__610;
+		public WebElement ClientResponse__610() {
+			return ClientResponse__610;
+		}
+		
+		@FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT006MT_gs_fmsApplVO.CODE']")
+		private WebElement Enter_ValidateCode_InClientResponse__610;
+		public WebElement Enter_ValidateCode_InClientResponse__610() {
+			return Enter_ValidateCode_InClientResponse__610;
+		}
+		
+		@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT006MT_1_fmsApplVO.CODE']")
+		private WebElement ClickTheValue_ValidateCode_InClientResponse__610;
+		public WebElement ClickTheValue_ValidateCode_InClientResponse__610() {
+			return ClickTheValue_ValidateCode_InClientResponse__610;
+		}
+		
+		@FindBy(xpath = "//button[@id='applicationfacility_accept_btn_WIFT006MT']")
+		private WebElement accept_btn_InClientResponse__610;
+		public WebElement accept_btn_InClientResponse__610() {
+			return accept_btn_InClientResponse__610;
+		}
+		
+		//---1st ok
+		
+		@FindBy(xpath = "//a[@id='dismissbut_WIFT006MT']")
+		private WebElement dismissBtn_InClientResponse__610;
+		public WebElement dismissBtn_InClientResponse__610() {
+			return dismissBtn_InClientResponse__610;
+		}
+		
+		//--2nd success ok
+		
+		
+		
+		//----------------Document Validation
+		
+		@FindBy(xpath = "//span[text()='Document Validation']")
+		private WebElement DocumentValidation__610;
+		public WebElement DocumentValidation__610() {
+			return DocumentValidation__610;
+		}
+		
+		@FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT0062MT_gs_fmsApplVO.CODE']")
+		private WebElement Enter_ValidateCode_InDocumentValidation_Screen__610;
+		public WebElement Enter_ValidateCode_InDocumentValidation_Screen__610() {
+			return Enter_ValidateCode_InDocumentValidation_Screen__610;
+		}
+		
+		@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT0062MT_1_fmsApplVO.CODE']")
+		private WebElement ClickTheValue_ValidateCode_InDocumentValidation_Screen__610;
+		public WebElement ClickTheValue_ValidateCode_InDocumentValidation_Screen__610() {
+			return ClickTheValue_ValidateCode_InDocumentValidation_Screen__610;
+		}
+
+		@FindBy(xpath = "//button[@id='applicationfacility_documentvalidate_btn_WIFT0062MT']")
+		private WebElement validate_btn_InDocumentValidation_Screen__610;
+		public WebElement validate_btn_InDocumentValidation_Screen__610() {
+			return validate_btn_InDocumentValidation_Screen__610;
+		}
+		
+		
+		//-------ok 
+		//-----------success ok
+
+
+
+///------Final Approval Screen
+
+@FindBy(xpath = "//span[text()='Final Approval ']")
+private WebElement FinalApprovalScreenInAFFF__610;
+public WebElement FinalApprovalScreenInAFFF__610() {
+	return FinalApprovalScreenInAFFF__610;
+}
+
+@FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT0061MT_gs_fmsApplVO.CODE']")
+private WebElement Enter_ValidateCode_InFinalApprovalScreenInAFFF__610;
+public WebElement Enter_ValidateCode_InFinalApprovalScreenInAFFF__610() {
+	return Enter_ValidateCode_InFinalApprovalScreenInAFFF__610;
+}
+
+@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT0061MT_1_fmsApplVO.CODE']")
+private WebElement ClickTheValue_ValidateCode_InFinalApprovalScreenInAFFF__610;
+public WebElement ClickTheValue_ValidateCode_InFinalApprovalScreenInAFFF__610() {
+	return ClickTheValue_ValidateCode_InFinalApprovalScreenInAFFF__610;
+}
+
+@FindBy(xpath = "//li[@id='applicationFacilityLimitDetailsTabs_WIFT0061MT']")
+private WebElement LimitDetailsTabs_InFinalApprovalScreenInAFFF__610;
+public WebElement LimitDetailsTabs_InFinalApprovalScreenInAFFF__610() {
+	return LimitDetailsTabs_InFinalApprovalScreenInAFFF__610;
+}
+
+@FindBy(xpath = "//td[@id='td_ApplicationFacilityLimitDetailsGrid_WIFT0061MT_1_fmsAppLimitDetVO.GENERAL_FACILITY_TYPE']")
+private WebElement ProductClass_InFinalApprovalScreenInAFFF__610;
+public WebElement ProductClass_InFinalApprovalScreenInAFFF__610() {
+	return ProductClass_InFinalApprovalScreenInAFFF__610;
+}
+
+@FindBy(xpath = "//label[@id='applicationfacilityFormId_WIFT0061MT_Charges_Details_key']")
+private WebElement ChargesDetails_key_InFinalApprovalScreenInAFFF__610;
+public WebElement ChargesDetails_key_InFinalApprovalScreenInAFFF__610() {
+	return ChargesDetails_key_InFinalApprovalScreenInAFFF__610;
+}
+
+@FindBy(xpath = "//span[@id='ui-dialog-title-facilitySubLimitChargesDetailsDiv_id_WIFT0061MT']")
+private WebElement ChargesDetails_Screen_InFinalApprovalScreenInAFFF__610;
+public WebElement ChargesDetails_Screen_InFinalApprovalScreenInAFFF__610() {
+	return ChargesDetails_Screen_InFinalApprovalScreenInAFFF__610;
+}
+
+@FindBy(xpath = "//div[@id='applicationFacilityOtherDetailsCollapse_WIFT0061MT']")
+private WebElement otherDetails_InFinalApprovalScreenInAFFF__610;
+public WebElement otherDetails_InFinalApprovalScreenInAFFF__610() {
+	return otherDetails_InFinalApprovalScreenInAFFF__610;
+}
+
+
+@FindBy(xpath = "//input[@id='lookuptxt_applicationFacilityRejectReason_WIFT0061MT']")
+private WebElement RejectReasonIn_otherDetails_InFinalApprovalScreenInAFFF__610;
+public WebElement RejectReasonIn_otherDetails_InFinalApprovalScreenInAFFF__610() {
+	return RejectReasonIn_otherDetails_InFinalApprovalScreenInAFFF__610;
+}
+
+		
+@FindBy(xpath = "//textarea[@id='applicationFacilitycomments_WIFT0061MT']")
+private WebElement commentsIn_otherDetails_InFinalApprovalScreenInAFFF__610;
+public WebElement commentsIn_otherDetails_InFinalApprovalScreenInAFFF__610() {
+	return commentsIn_otherDetails_InFinalApprovalScreenInAFFF__610;
+}
+
+@FindBy(xpath = "//button[@id='applicationfacility_finalreject_btn_WIFT0061MT']")
+private WebElement rejectButtonIn_otherDetails_InFinalApprovalScreenInAFFF__610;
+public WebElement rejectButtonIn_otherDetails_InFinalApprovalScreenInAFFF__610() {
+	return rejectButtonIn_otherDetails_InFinalApprovalScreenInAFFF__610;
+}
+
+//---------------Issue Facility Offer 
+
+@FindBy(xpath = "//a[@id='WIFT005MT']/span[text()='Issue Facility Offer ']")
+private WebElement IssueFacilityOffer_Screen__610;
+public WebElement IssueFacilityOffer_Screen__610() {
+	return IssueFacilityOffer_Screen__610;
+}
+
+@FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT005MT_gs_fmsApplVO.CODE']")
+private WebElement Enter_ValidateCode_InIssueFacilityOffer_Screen__610;
+public WebElement Enter_ValidateCode_InIssueFacilityOffer_Screen__610() {
+	return Enter_ValidateCode_InIssueFacilityOffer_Screen__610;
+}
+
+@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT005MT_1_fmsApplVO.CODE']")
+private WebElement ClickTheValue_ValidateCode_InIssueFacilityOffer_Screen__610;
+public WebElement ClickTheValue_ValidateCode_InIssueFacilityOffer_Screen__610() {
+	return ClickTheValue_ValidateCode_InIssueFacilityOffer_Screen__610;
+}
+
+@FindBy(xpath = "//button[@id='applicationfacility_issueoffer_btn_WIFT005MT']")
+private WebElement issueoffer_btn_InIssueFacilityOffer_Screen__610;
+public WebElement issueoffer_btn_InIssueFacilityOffer_Screen__610() {
+	return issueoffer_btn_InIssueFacilityOffer_Screen__610;
+}
+
+//--1st ok button
+
+@FindBy(xpath = "//div[text()='ERROR']")
+private WebElement errorPopup_InIssueFacilityOffer_Screen__610;
+public WebElement errorPopup_InIssueFacilityOffer_Screen__610() {
+	return errorPopup_InIssueFacilityOffer_Screen__610;
+}
+
+@FindBy(xpath = "//div[text()='ERROR']/parent::div/following-sibling::center/input[@id='_popup_path_sol_ok']")
+private WebElement errorPopupOkButton_InIssueFacilityOffer_Screen__610;
+public WebElement errorPopupOkButton_InIssueFacilityOffer_Screen__610() {
+	return errorPopupOkButton_InIssueFacilityOffer_Screen__610;
+}
+
+//---2nd success ok
+
+//-------------------------Authorize Reject Application For Financial Facilities screen
+
+@FindBy(xpath = "//span[text()='Authorize/Reject Application For Financial Facilities']")
+private WebElement AuthorizeRejectApplicationForFinancialFacilitiesscreen_610;
+public WebElement AuthorizeRejectApplicationForFinancialFacilitiesscreen_610() {
+	return AuthorizeRejectApplicationForFinancialFacilitiesscreen_610;
+}
+
+@FindBy(xpath = "//input[@id='applicationFacilityGridTbl_Id_WIFT004MT_gs_fmsApplVO.CODE']")
+private WebElement Enter_ValidateCode_AuthorizeRejectApplication_610;
+public WebElement Enter_ValidateCode_AuthorizeRejectApplication_610() {
+	return Enter_ValidateCode_AuthorizeRejectApplication_610;
+}
+
+@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT004MT_1_fmsApplVO.CODE']")
+private WebElement ClickTheValue_AuthorizeRejectApplication_610;
+public WebElement ClickTheValue_AuthorizeRejectApplication_610() {
+	return ClickTheValue_AuthorizeRejectApplication_610;
+}
+
+@FindBy(xpath = "//label[@id='applicationfacilityFormId_WIFT004MT_approvalcommittiees_key']")
+private WebElement approvalcommittieeskey_AuthorizeRejectApplication_610;
+public WebElement approvalcommittieeskey_AuthorizeRejectApplication_610() {
+	return approvalcommittieeskey_AuthorizeRejectApplication_610;
+}
+
+
+
+//Approval commitee comments => (//td[@tdlabel='Recommended By' and text()='JAY'])[1]//parent::tr/td[@tdlabel='Comments']
+
+@FindBy(xpath = "(//td[@tdlabel='Recommended By' and text()='JAY'])[1]//parent::tr/td[@tdlabel='Comments']")
+private WebElement enterCMT_UserJAY_AuthorizeRejectApplication_610;
+public WebElement enterCMT_UserJAY_AuthorizeRejectApplication_610() {
+	return enterCMT_UserJAY_AuthorizeRejectApplication_610;
+}
+
+//------------------Authorize Reject Application
+		
+		
+		@FindBy(xpath = "//button[@id='applicationfacility_authorize_btn_WIFT004MT']")
+		private WebElement authorize_btn_AuthorizeRejectApplication_610;
+		public WebElement authorize_btn_AuthorizeRejectApplication_610() {
+			return authorize_btn_AuthorizeRejectApplication_610;
+		}
+		
+		//----ok
+		//----success ok
+		
+		@FindBy(xpath = "//a[@id='dismissbut_WIFT004MT']")
+		private WebElement dismiss_btn_AuthorizeRejectApplication_610;
+		public WebElement dismiss_btn_AuthorizeRejectApplication_610() {
+			return dismiss_btn_AuthorizeRejectApplication_610;
+		}
+
 	    
+	   //final approval
+		
+		
+		@FindBy(xpath = "//button[@id='applicationfacility_finalapproval_btn_WIFT0061MT']")
+		private WebElement finalapproval_btn_InFinalApprovalScreenInAFFF__610;
+		public WebElement finalapproval_btn_InFinalApprovalScreenInAFFF__610() {
+			return finalapproval_btn_InFinalApprovalScreenInAFFF__610;
+		}
 	    
 		
 	
