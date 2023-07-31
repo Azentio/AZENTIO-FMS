@@ -12,6 +12,7 @@ import org.testng.Assert;
 
 import dataProvider.ConfigFileReader;
 import dataProvider.ExcelData;
+import dataProvider.ExcelTest;
 import helper.ClicksAndActionsHelper;
 import helper.DropDownHelper;
 import helper.JavascriptHelper;
@@ -77,7 +78,7 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	
 	@And("^User_609 get the test data set id for AT_RF_145$")
     public void User_609_get_the_test_data_set_id_for_AT_RF_145() throws Throwable {
-    	testData = RequestForFinancingExcelData.getTestdata("AT_RF_145");	
+    	testData = RequestForFinancingExcelData.getTestdata("AT_RF_145");
     }
 	
 	@And("User_609 get the test data set id for AT_RF_192")
@@ -1159,29 +1160,20 @@ public class FMS_StepDefinition_609 extends BaseClass{
 			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.JournalVoucherDetails_wait_609());
 	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakapplictionSubmenu_FacilitiesManagement_JournalVoucherDetails());
 			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakapplictionSubmenu_FacilitiesManagement_JournalVoucherDetails());
-			
-			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakapplictionSubmenu_FacilitiesManagement_JournalVoucherDetails());
-
+			//clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakapplictionSubmenu_FacilitiesManagement_JournalVoucherDetails());
 	    }
-	    
 	    
 	    @Then("User_609 Validate the Journal Voucher Details is Displayed in Facilities Management under Wifak Application")
 	    public void User_609_validate_the_Journal_Voucher_Details_is_displayed_in_Facilities_Management_under_Wifak_Application() throws Throwable {
 	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.JournalVoucherDetails_popup_609());
-	    	
 	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.JournalVoucherDetails_Validate_609());
 	    	Assert.assertEquals(AccountName, FmsPageobjects_609.JournalVoucherDetails_Validate_609().getText());
-			
-
 	    }
 	    
-		
-		
 		@And("User_609 Enable the Clean Flag")
 		public void User_609_enable_the_clean_flag() {
 			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_Clean());
 			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Applicationforfinancialfacilities_Maintenance_LimitDetailsTab_Clean());  
-		   
 		}
 		
 		@And("User_609 Select the Purpose Of Financing")
@@ -1206,8 +1198,6 @@ public class FMS_StepDefinition_609 extends BaseClass{
 				}	
 			}
 		}
-
-		
 
 		@And("^User_609 Click on the add button$")
 		public void User_609_click_on_the_add_button() throws Throwable {
@@ -1335,7 +1325,7 @@ public class FMS_StepDefinition_609 extends BaseClass{
 	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.ApplicationNo_609());
 	    	ApplicationNo = FmsPageobjects_609.ApplicationNo_609().getText().substring(23, 27);
 	    	System.err.println("Reference Number: " + ApplicationNo); 
-	    	
+	    
 	    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.Application_Ok());
 			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.Application_Ok());  
 			
@@ -1347,6 +1337,7 @@ public class FMS_StepDefinition_609 extends BaseClass{
 		    public void User_609_Click_on_the_Approve_level1_Screen() throws Throwable {
 		    	waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApproveLevel1());
 				clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApproveLevel1());
+				System.out.println(testData.get("Revolving/One-Off"));
 		    }
 		    
 		    @And("^User_609 Select the Code in Approve level1$")
@@ -1705,6 +1696,7 @@ public class FMS_StepDefinition_609 extends BaseClass{
 			waitHelper.waitForElementwithFluentwait(driver, FmsPageobjects_609.WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation());
 			clicksAndActionHelper.clickOnElement(FmsPageobjects_609.WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation());
 			dropdownhelper.SelectUsingVisibleText(FmsPageobjects_609.WifakApplication_ApprovalCommitteeRecommendations_Recommend_Recommendation(), testData.get("Committee Recommendations"));
+	
 		}
 		
 		

@@ -1,7 +1,5 @@
 package stepdefinitions;
 
-import static org.testng.Assert.ARRAY_MISMATCH_TEMPLATE;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,8 +8,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.SkipException;
-import org.testng.annotations.Test;
 
 import dataProvider.ConfigFileReader;
 import dataProvider.ExcelData;
@@ -31,6 +27,8 @@ public class Application_Financial_Facility extends BaseClass {
 	String TestDataPath = System.getProperty("user.dir") + "\\TestData\\FMSTestData.xlsx";
 	ExcelData fmsParamLoginTestData = new ExcelData(TestDataPath, "FMSParam_login", "UserType");
 	ExcelData fmsLoginExceldata = new ExcelData(TestDataPath, "FMS_Login", "UserType");
+	ExcelData iisParamLoginTestData = new ExcelData(TestDataPath, "IISParam_login", "UserType");
+	ExcelData iisLoginExceldata = new ExcelData(TestDataPath, "IIS_Login", "UserType");
 	ExcelData sadsLoginExceldata = new ExcelData(TestDataPath, "SadsLogin", "UserType");
 	Map<String, String> fmsLoginTestData = new HashMap<>();
 	WaitHelper waitHelper = new WaitHelper(driver);
@@ -38,6 +36,7 @@ public class Application_Financial_Facility extends BaseClass {
 	Application_Financial_Facility_Pageobjects applicationFinancialObj = new Application_Financial_Facility_Pageobjects(driver);
 	ConfigFileReader configFileReader = new ConfigFileReader();
 	FMSLogin FMSLogin = new FMSLogin(driver);
+	
 	DropDownHelper dropdownhelper = new DropDownHelper(driver);
 	JavascriptHelper javascripthelper = new JavascriptHelper(driver);
 	//Map<String, String> testData;
@@ -49,12 +48,15 @@ public class Application_Financial_Facility extends BaseClass {
 		driver.get(configFileReader.getFMSparamsUrl());
 		FMSLogin.loginIntoFmsParamApplication2(configFileReader.getFMSParamApplicationUserType());
     }
-
+	
+	
+	
 	@Given("^navigate to FMS application and login with valid credentials2$")
 	public void navigate_to_fms_application_and_login_with_valid_credentials2() throws Throwable {
 		driver.get(configFileReader.getFMSApplicationUrl());
 		FMSLogin.loginIntoFmsApplication2(configFileReader.getFMSApplicationUserType());;
 	}
+	
 	
 	@Then("^Click on the facility type under parameters menu$")
 	public void click_on_the_facility_type_under_parameters_menu() throws Throwable {

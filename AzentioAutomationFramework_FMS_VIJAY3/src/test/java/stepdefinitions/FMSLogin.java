@@ -1,4 +1,3 @@
-
 package stepdefinitions;
 
 import java.util.HashMap;
@@ -19,6 +18,7 @@ public class FMSLogin {
 	ExcelData fmsParamLoginTestData = new ExcelData(TestDataPath, "FMSParam_login", "UserType");
 	ExcelData fmsLoginExceldata = new ExcelData(TestDataPath, "FMS_Login", "UserType");
 	ExcelData sadsLoginExceldata = new ExcelData(TestDataPath, "SadsLogin", "UserType");
+	
 	Map<String, String> fmsLoginTestData = new HashMap<>();
 	WaitHelper waitHelper = new WaitHelper(driver);
 	ClicksAndActionsHelper clicksAndActionHelper;
@@ -133,6 +133,9 @@ public class FMSLogin {
 		 * driver.quit();
 		 */
 	}
+	
+	
+	
 	public void loginIntoFmsApplication(String userType) {
 		fmsLoginTestData = fmsLoginExceldata.getTestdata(userType);
 		fmsCommonWebElements = new FMSCommonWebElements(driver);
@@ -236,6 +239,8 @@ public class FMSLogin {
 		 * driver.quit();
 		 */
 	}
+
+	
 
 	public void loginIntoSadsApplication(String userType) {
 		fmsLoginTestData = sadsLoginExceldata.getTestdata(userType);
