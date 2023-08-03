@@ -805,7 +805,7 @@ public class FMS_WifakApplication_Steps {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.Double_Click_Search_Account_No_610());
 		 clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Double_Click_Search_Account_No_610());
 		clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.Double_Click_Search_Account_No_610());
-		Thread.sleep(4000);
+		Thread.sleep(3000);
 		
 	}
 
@@ -865,7 +865,7 @@ public class FMS_WifakApplication_Steps {
 	public void user_enter_date_above_current_date() throws Throwable {
 	}
 
-	// ---------------------------@1108920
+	// ---------------------------@1108920     
 
 	@And("^User_610 Click Fixed Assert button$")
 	public void click_fixed_assert_button() throws Throwable {
@@ -930,23 +930,6 @@ public class FMS_WifakApplication_Steps {
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.getEnter_value_on_Class_610());
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.getEnter_value_on_Class_610());
 		FMS_WifakApplication_Obj.getEnter_value_on_Class_610().sendKeys(testData.get("Class FixedAssert"),Keys.TAB);  
-	//	Thread.sleep(4000);
-		
-//		for (int i = 0; i < 300; i++) {
-//			try {
-//				FMS_WifakApplication_Obj.Click_value_1_on_Catagory_610().click();
-//
-////				FMS_WifakApplication_Obj.getEnter_value_on_Catagory().click();
-//				FMS_WifakApplication_Obj.getEnter_value_on_Class_610().sendKeys("1234");
-//				FMS_WifakApplication_Obj.getEnter_value_on_Class_610().sendKeys(Keys.TAB);
-//				break;
-//
-//			} catch (Exception e) {
-//				if (i == 299) {
-//					Assert.fail(e.getMessage());
-//				}
-//			}
-//		}
 		
 	}
 
@@ -957,7 +940,7 @@ public class FMS_WifakApplication_Steps {
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.getEnter_value_on_vendor_610());
 //		FMS_WifakApplication_Obj.getEnter_value_on_vendor_610().sendKeys("1");
 		FMS_WifakApplication_Obj.getEnter_value_on_vendor_610().sendKeys(testData.get("Vendor  FixedAssert"),Keys.TAB);  
-//		Thread.sleep(4000);
+	//	Thread.sleep(1000);
 		
 	}
 
@@ -968,7 +951,7 @@ public class FMS_WifakApplication_Steps {
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.getEnter_value_on_quantity_610());
 	//	FMS_WifakApplication_Obj.getEnter_value_on_quantity_610().sendKeys("1");
 		FMS_WifakApplication_Obj.getEnter_value_on_quantity_610().sendKeys(testData.get("Quantity FixedAssert"),Keys.TAB);  
-	//	Thread.sleep(4000);
+	//	Thread.sleep(1000);
 	}
 
 	@And("^User_610 Enter value on Unit$")
@@ -978,7 +961,7 @@ public class FMS_WifakApplication_Steps {
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.getEnter_value_on_Unit_610());
 	//	FMS_WifakApplication_Obj.getEnter_value_on_Unit_610().sendKeys("1");
 		FMS_WifakApplication_Obj.getEnter_value_on_Unit_610().sendKeys(testData.get("Unit  FixedAssert"),Keys.TAB);  
-	//	Thread.sleep(4000);
+	//	Thread.sleep(1000);
 	}
 
 	@And("^User_610 Enter value on Cy$")
@@ -988,7 +971,7 @@ public class FMS_WifakApplication_Steps {
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.getEnter_value_on_Cy_610());
 	//	FMS_WifakApplication_Obj.getEnter_value_on_Cy_610().sendKeys("999");
 		FMS_WifakApplication_Obj.getEnter_value_on_Cy_610().sendKeys(testData.get("CY  FixedAssert"),Keys.TAB);  
-	//	Thread.sleep(4000);
+	//	Thread.sleep(1000);
 	}
 
 	@And("^User_610 Enter value on UnitCost$")
@@ -998,7 +981,7 @@ public class FMS_WifakApplication_Steps {
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.getEnter_value_on_UnitCost_610());
 	//	FMS_WifakApplication_Obj.getEnter_value_on_UnitCost_610().sendKeys("11");
 		FMS_WifakApplication_Obj.getEnter_value_on_UnitCost_610().sendKeys(testData.get("UnitCost  FixedAssert"),Keys.TAB);  
-	//	Thread.sleep(4000);
+		Thread.sleep(3000);
 	}
 
 	@And("^User_610 Enter value on Vat Code$")
@@ -1008,20 +991,8 @@ public class FMS_WifakApplication_Steps {
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.Enter_value_on_Vat_Code_610());
 	//	FMS_WifakApplication_Obj.getEnter_value_on_UnitCost_610().sendKeys("11");
 		FMS_WifakApplication_Obj.Enter_value_on_Vat_Code_610().sendKeys(testData.get("VatCode  FixedAssert"),Keys.TAB);  
-		Thread.sleep(4000);
-		
-//		for (int i = 0; i < 200; i++) {
-//			try {
-//				JavascriptHelper.scrollIntoView(FMS_WifakApplication_Obj.Enter_value_on_Vat_Code_610());
-//				clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.Enter_value_on_Vat_Code_610());
-//				FMS_WifakApplication_Obj.Enter_value_on_Vat_Code_610().click();
-//				break;
-//			} catch (Exception e) {
-//				if (i == 199) {
-//					Assert.fail(e.getMessage());
-//				}
-//			}
-//		}
+		Thread.sleep(3000);
+
 		
 	}
 	
@@ -1029,14 +1000,15 @@ public class FMS_WifakApplication_Steps {
 	public void user_validate_vat_amount_dispalying_or_not(Integer int1) throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.ValidateVATAmountDisplaying_FixedAssert_610());
 		clicksAndActionsHelper.moveToElement(FMS_WifakApplication_Obj.ValidateVATAmountDisplaying_FixedAssert_610());
-				
+	//	Thread.sleep(3000);
+		
 		String VatAmt= FMS_WifakApplication_Obj.ValidateVATAmountDisplaying_FixedAssert_610().getAttribute("title");
 		System.err.print("VatAmt :" + VatAmt );
 	    
 	    if (VatAmt.isEmpty()||VatAmt.isBlank()) {
 			Assert.fail();
 		}
-	    Thread.sleep(3000);
+	//    Thread.sleep(3000);
 	    clicksAndActionsHelper.doubleClick(FMS_WifakApplication_Obj.ValidateVATAmountDisplaying_FixedAssert_610());
 	    		   	}
 	
@@ -2466,17 +2438,17 @@ public class FMS_WifakApplication_Steps {
 			}
 		}
 		
-//		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.sendAlertPopup1_610());
-//		for (int i = 0; i < 2000; i++) {
-//			try {
-//				FMS_WifakApplication_Obj.sendAlertPopup1_610().click();
-//				break;
-//			} catch (Exception e) {
-//				if (i == 1999) {
-//					Assert.fail(e.getMessage());
-//				}
-//			}
-//		}
+		waitHelper.waitForElementwithFluentwait(driver, FMS_WifakApplication_Obj.sendAlertPopup1_610());
+		for (int i = 0; i < 2000; i++) {
+			try {
+				FMS_WifakApplication_Obj.sendAlertPopup1_610().click();
+				break;
+			} catch (Exception e) {
+				if (i == 1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
 		
 	}
 
@@ -3443,6 +3415,11 @@ public class FMS_WifakApplication_Steps {
 		clicksAndActionsHelper.clickOnElement(FMS_WifakApplication_Obj.enterCIFCodeIn_ApprovalCommitteeRecommendationsScreen_610());
 		FMS_WifakApplication_Obj.enterCIFCodeIn_ApprovalCommitteeRecommendationsScreen_610().sendKeys(testData.get("CIF NO IN Approval Committee"), Keys.ENTER);
 		Thread.sleep(5000);
+	}
+	
+	@Given("User_{int} retrive the first data in Approval Committee Recommendations Menu")
+	public void user_retrive_the_first_data_in_approval_committee_recommendations_menu(Integer int1) {
+	    
 	}
 
 	@Then("User_{int} validate facility with CIF code displaying in  Approval Committee Recommendations Menu")
