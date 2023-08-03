@@ -70,6 +70,18 @@ public class IIS_ApplicationObj_608 {
 		return IIS_investment_deal_without_trade_deal_main_amount_input;
 	}
 	
+	@FindBy(xpath = "//input[@id='trsdealVO_DD_PERIODICITY_NBR_T022MT']")
+	private WebElement IIS_investment_deal_without_trade_deal_main_tenure_input;
+	public WebElement IISInvestmentDealWithoutTradeDealMainTenureInput_608(){
+		return IIS_investment_deal_without_trade_deal_main_tenure_input;
+	}
+	
+	@FindBy(xpath = "//select[@id='trsdealVO_DD_PERIODICITY_TYPE_T022MT']")
+	private WebElement IIS_investment_deal_without_trade_deal_main_tenure_dropdown;
+	public WebElement IISInvestmentDealWithoutTradeDealMainTenureDropdown_608(){
+		return IIS_investment_deal_without_trade_deal_main_tenure_dropdown;
+	}
+	
 	@FindBy(xpath = "//input[@id='trsdealVO_DD_DEAL_EXPECTED_YIELD_T022MT']")
 	private WebElement IIS_investment_deal_without_trade_deal_main_yield_margin_input;
 	public WebElement IISInvestmentDealWithoutTradeDealMainYieldMarginInput_608(){
@@ -154,6 +166,29 @@ public class IIS_ApplicationObj_608 {
 		return IIS_investment_deal_without_trade_deal_main_repayment_no_of_payment_input;
 	}
 	
+	@FindBy(xpath = "//input[@id='grace_period_T022MT']")
+	private WebElement IIS_investment_deal_without_trade_deal_main_repayment_grace_period_input;
+	public WebElement IISInvestmentDealWithoutTradeDealMainRepaymentGracePeriodInput_608(){
+		return IIS_investment_deal_without_trade_deal_main_repayment_grace_period_input;
+	}
+	
+	@FindBy(xpath = "//select[@id='gracePeriodicity_T022MT']")
+	private WebElement IIS_investment_deal_without_trade_deal_main_repayment_grace_period_dropdown;
+	public WebElement IISInvestmentDealWithoutTradeDealMainRepaymentGracePeriodDropdown_608(){
+		return IIS_investment_deal_without_trade_deal_main_repayment_grace_period_dropdown;
+	}
+	
+	@FindBy(xpath = "//select[@id='profit_calculation_method_T022MT']")
+	private WebElement IIS_investment_deal_without_trade_deal_main_repayment_profit_calculation_method_dropdown;
+	public WebElement IISInvestmentDealWithoutTradeDealMainRepaymentProfitCalculationMethodDropdown_608(){
+		return IIS_investment_deal_without_trade_deal_main_repayment_profit_calculation_method_dropdown;
+	}
+	
+	@FindBy(xpath = "//select[@id='profit_dist_method_T022MT']")
+	private WebElement IIS_investment_deal_without_trade_deal_main_repayment_profit_recog_method_dropdown;
+	public WebElement IISInvestmentDealWithoutTradeDealMainRepaymentProfitRecogMethodDropdown_608(){
+		return IIS_investment_deal_without_trade_deal_main_repayment_profit_recog_method_dropdown;
+	}
 	
 	@FindBy(xpath = "//input[@id='grace_period_compounding_yn_T022MT']")
 	private WebElement IIS_investment_deal_without_trade_deal_main_repayment_grace_period_checkbox;
@@ -213,12 +248,7 @@ public class IIS_ApplicationObj_608 {
 	private WebElement IIS_investment_deal_without_trade_deal_approve_menu_approve_btn;
 	public WebElement IISInvestmentDealWithoutTradeDealApproveMenuApproveBtn_608(){
 		return IIS_investment_deal_without_trade_deal_approve_menu_approve_btn;
-	}
-	
-	
-	
-	
-	
+	}	
 	
 //	Tracking & Incidental Charges
 //	@AT_IC_010
@@ -512,6 +542,18 @@ public class IIS_ApplicationObj_608 {
 		return IIS_settlement_approve_menu_approve_btn;
 	}
 	
+	@FindBy(xpath = "//div[@class='jMsgbox-contentWrap'][contains(text(),'Collaterals')]")
+	private WebElement IIS_approve_menu_confirm_collateral_popup;
+	public WebElement IISApproveMenuConfirmCollateralPopup_608() {
+		return IIS_approve_menu_confirm_collateral_popup;
+	}
+	
+	@FindBy(xpath = "//div[@class='jMsgbox-contentWrap'][contains(text(),'continue')]")
+	private WebElement IIS_approve_menu_confirm_continue_popup;
+	public WebElement IISApproveMenuConfirmContinuePopup_608() {
+		return IIS_approve_menu_confirm_continue_popup;
+	}
+	
 	@FindBy(xpath = "//div[@class='jMsgbox-contentWrap'][contains(text(),'proceed')]")
 	private WebElement IIS_approve_menu_confirm_proceed_popup;
 	public WebElement IISApproveMenuConfirmPopupProceed_608() {
@@ -643,10 +685,214 @@ public class IIS_ApplicationObj_608 {
 	}
 	
 	
+//	Advance Principal Settlement module
+	@FindBy(xpath = "//td[contains(text(),'Advance Principal Settlement')]")
+	private WebElement IIS_advance_principal_settlement_module;
+	public WebElement IISAdvancePrincipalSettlementModule_608() {
+		return IIS_advance_principal_settlement_module;
+	}
+	
+	@FindBy(xpath = "//a[@id='T036MT']")
+	private WebElement IIS_advance_principal_settlement_maintenance;
+	public WebElement IISAdvancePrincipalSettlementMaintenance_608() {
+		return IIS_advance_principal_settlement_maintenance;
+	}
+	
+	@FindBy(xpath = "//input[@id='lookuptxt_dealNo_T036MT']")
+	private WebElement IIS_advance_principal_settlement_maintenance_deal_nbr_input;
+	public WebElement IISAdvancePrincipalSettlementMaintenanceDealNbrInput_608() {
+		return IIS_advance_principal_settlement_maintenance_deal_nbr_input;
+	}
+	
+	@FindBy(xpath = "//input[@id='advance_Principal_T036MT']")
+	private WebElement IIS_advance_principal_settlement_maintenance_advance_principal_input;
+	public WebElement IISAdvancePrincipalSettlementMaintenanceAdvancePrincipalInput_608() {
+		return IIS_advance_principal_settlement_maintenance_advance_principal_input;
+	}
+	
+	@FindBy(xpath = "//button[@id='automaticAllocationButton_T036MT']")
+	private WebElement IIS_advance_principal_settlement_maintenance_reschedule_allocate_btn;
+	public WebElement IISAdvancePrincipalSettlementMaintenanceRescheduleAllocateBtn_608() {
+		return IIS_advance_principal_settlement_maintenance_reschedule_allocate_btn;
+	}
+	
+	@FindBy(xpath = "//table[@id='settlementScheduleGridTbl_Id_T036MT']")
+	private WebElement IIS_advance_principal_settlement_maintenance_schedule_details_table;
+	public WebElement IISAdvancePrincipalSettlementMaintenanceScheduleDetailsTable_608() {
+		return IIS_advance_principal_settlement_maintenance_schedule_details_table;
+	}
+	
+	@FindBy(xpath = "//button[@id='savebutton_T036MT']")
+	private WebElement IIS_advance_principal_settlement_maintenance_save_btn;
+	public WebElement IISAdvancePrincipalSettlementMaintenanceSaveBtn_608() {
+		return IIS_advance_principal_settlement_maintenance_save_btn;
+	}
+	
+	@FindBy(xpath = "//a[@id='T036P']")
+	private WebElement IIS_advance_principal_settlement_approve_menu;
+	public WebElement IISAdvancePrincipalSettlementApproveMenu_608() {
+		return IIS_advance_principal_settlement_approve_menu;
+	}
+	
+	@FindBy(xpath = "//input[@id='settlementMgmtGridTbl_Id_T036P_gs_trssetlmtvo.DEAL_NBR']")
+	private WebElement IIS_advance_principal_settlement_approve_searchgrid_deal_nbr_input;
+	public WebElement IISAdvancePrincipalSettlementApproveMenuSearchgridDealNbrInput_608() {
+		return IIS_advance_principal_settlement_approve_searchgrid_deal_nbr_input;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_settlementMgmtGridTbl_Id_T036P_1_trssetlmtvo.SETTLEMENT_NBR']")
+	private WebElement IIS_advance_principal_settlement_approve_searchgrid_row;
+	public WebElement IISAdvancePrincipalSettlementApproveMenuSearchgridRow_608() {
+		return IIS_advance_principal_settlement_approve_searchgrid_row;
+	}
+	
+	@FindBy(xpath = "//input[@id='lookuptxt_dealNo_T036P']")
+	private WebElement IIS_advance_principal_settlement_approve_menu_deal_nbr;
+	public WebElement IISAdvancePrincipalSettlementApproveMenuDealNbr_608() {
+		return IIS_advance_principal_settlement_approve_menu_deal_nbr;
+	}
+	
+	@FindBy(xpath = "//button[@id='settlement_Approve_btn_T036P']")
+	private WebElement IIS_advance_principal_settlement_approve_menu_approveBtn;
+	public WebElement IISAdvancePrincipalSettlementApproveMenuApproveBtn_608() {
+		return IIS_advance_principal_settlement_approve_menu_approveBtn;
+	}
 	
 	
+//	Periodical Processing
+	@FindBy(xpath = "//td[text()='Periodical Processing']")
+	private WebElement IIS_periodical_processing_module;
+	public WebElement IISPeriodicalProcessingModule_608() {
+		return IIS_periodical_processing_module;
+	}
+	
+	@FindBy(xpath = "//td[text()='Post Accruals']")
+	private WebElement IIS_post_accruals_menu;
+	public WebElement IISPostAccrualsMenu_608() {
+		return IIS_post_accruals_menu;
+	}
+	
+	@FindBy(xpath = "//a[@id='T10EMF']")
+	private WebElement IIS_final_accruals_submenu;
+	public WebElement IISFinalAccrualsSubMenu_608() {
+		return IIS_final_accruals_submenu;
+	}
+	
+	@FindBy(xpath = "//input[@id='Specific_deal_T10EMF']")
+	private WebElement IIS_final_accruals_specific_deal_checkbox;
+	public WebElement IISFinalAccrualsSpecificDealCheckbox_608() {
+		return IIS_final_accruals_specific_deal_checkbox;
+	}
+	
+	@FindBy(xpath = "//input[@id='lookuptxt_postChargeAccuralProcessSpecificDeal_T10EMF']")
+	private WebElement IIS_final_accruals_specific_deal_input;
+	public WebElement IISFinalAccrualsSpecificDealInput_608() {
+		return IIS_final_accruals_specific_deal_input;
+	}
+	
+	@FindBy(xpath = "//input[@id='fromDate_T10EMF']")
+	private WebElement IIS_final_accruals_from_date_input;
+	public WebElement IISFinalAccrualsFromDateInput_608() {
+		return IIS_final_accruals_from_date_input;
+	}
+	
+	@FindBy(xpath = "//input[@id='toDate_T10EMF']")
+	private WebElement IIS_final_accruals_to_date_input;
+	public WebElement IISFinalAccrualsToDateInput_608() {
+		return IIS_final_accruals_to_date_input;
+	}
+	
+	@FindBy(xpath = "//button[@id='postChargeAccrualProcess_trialRun_T10EMF']")
+	private WebElement IIS_final_accruals_Ok_btn;
+	public WebElement IISFinalAccrualsOkBtn_608() {
+		return IIS_final_accruals_Ok_btn;
+	}
 	
 	
+//	Calculators Module
+	@FindBy(xpath = "//td[text()='Calculators']")
+	private WebElement IIS_calculators_module;
+	public WebElement IISCalculatorsModule_608() {
+		return IIS_calculators_module;
+	}
 	
+	@FindBy(xpath = "//a[@id='M0169']")
+	private WebElement IIS_calculators_reschedule_calculator_With_Profit;
+	public WebElement IISCalculatorsRescheduleCalculatorWithProfit_608() {
+		return IIS_calculators_reschedule_calculator_With_Profit;
+	}
+	
+	@FindBy(xpath = "//input[@id='lookuptxt_trsdealVO_SERIAL_NO_M0169']")
+	private WebElement IIS_reschedule_calculator_With_Profit_deal_nbr_input;
+	public WebElement IISRescheduleCalculatorWithProfitDealNbrInput_608() {
+		return IIS_reschedule_calculator_With_Profit_deal_nbr_input;
+	}
+	
+	@FindBy(xpath = "//div[@id='islamicRescheduleCalc_repaymentdet_collapspanel_M0169']")
+	private WebElement IIS_reschedule_calculator_With_Profit_repayment_details_panel;
+	public WebElement IISRescheduleCalculatorWithProfitRepaymentDetailsPanel_608() {
+		return IIS_reschedule_calculator_With_Profit_repayment_details_panel;
+	}
+	
+	@FindBy(xpath = "//input[@id='gracePeriod_M0169']")
+	private WebElement IIS_reschedule_calculator_With_Profit_repayment_details_first_pay_after_input;
+	public WebElement IISRescheduleCalculatorWithProfitRepaymentDetailsFirstPayAfterInput_608() {
+		return IIS_reschedule_calculator_With_Profit_repayment_details_first_pay_after_input;
+	}
+	
+	@FindBy(xpath = "//input[@id='no_of_payments_M0169']")
+	private WebElement IIS_reschedule_calculator_With_Profit_repayment_details_no_of_pay_input;
+	public WebElement IISRescheduleCalculatorWithProfitRepaymentDetailsNoOfPayInput_608() {
+		return IIS_reschedule_calculator_With_Profit_repayment_details_no_of_pay_input;
+	}
+	
+	@FindBy(xpath = "//button[@id='calculateBtn_M0169']")
+	private WebElement IIS_reschedule_calculator_With_Profit_calculate_btn;
+	public WebElement IISRescheduleCalculatorWithProfitCalculateBtn_608() {
+		return IIS_reschedule_calculator_With_Profit_calculate_btn;
+	}
+	
+	@FindBy(xpath = "//button[@id='rescheduleCalculatorUpdateBtn_M0169']")
+	private WebElement IIS_reschedule_calculator_With_Profit_update_btn;
+	public WebElement IISRescheduleCalculatorWithProfitUpdateBtn_608() {
+		return IIS_reschedule_calculator_With_Profit_update_btn;
+	}
+	
+//	Reschedule Repayment Plan module
+	@FindBy(xpath = "//td[text()='Reschedule Repayment Plan']")
+	private WebElement IIS_reschedule_repayment_plan_module;
+	public WebElement IISRescheduleRepaymentPlanModule_608() {
+		return IIS_reschedule_repayment_plan_module;
+	}
+	
+	@FindBy(xpath = "//a[@id='T041P']")
+	private WebElement IIS_reschedule_repayment_plan_approve_menu;
+	public WebElement IISRescheduleRepaymentPlanApproveMenu_608() {
+		return IIS_reschedule_repayment_plan_approve_menu;
+	}
+	
+	@FindBy(xpath = "//input[@id='repaymentPlanMgmtGridTbl_Id_T041P_gs_trspayplanVO.TRX_NBR']")
+	private WebElement IIS_reschedule_repayment_plan_approve_searchgrid_deal_input;
+	public WebElement IISRescheduleRepaymentPlanApproveSearchgridDealInput_608() {
+		return IIS_reschedule_repayment_plan_approve_searchgrid_deal_input;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_repaymentPlanMgmtGridTbl_Id_T041P_1_trspayplanVO.PLAN_NBR']")
+	private WebElement IIS_reschedule_repayment_plan_approve_searchgrid_row;
+	public WebElement IISRescheduleRepaymentPlanApproveSearchgridRow_608() {
+		return IIS_reschedule_repayment_plan_approve_searchgrid_row;
+	}
+	
+	@FindBy(xpath = "//input[@id='trx_nbr_hd_T041P']")
+	private WebElement IIS_reschedule_repayment_plan_approve_menu_deal_nbr;
+	public WebElement IISRescheduleRepaymentPlanApproveMenuDealNbr_608() {
+		return IIS_reschedule_repayment_plan_approve_menu_deal_nbr;
+	}
+	
+	@FindBy(xpath = "//a[@id='approvebutton_T041P']")
+	private WebElement IIS_reschedule_repayment_plan_approve_menu_approve_btn;
+	public WebElement IISRescheduleRepaymentPlanApproveMenuApproveBtn_608() {
+		return IIS_reschedule_repayment_plan_approve_menu_approve_btn;
+	}
 	
 }

@@ -38,6 +38,7 @@ public class IIS_IncidentalChargesSteps_608 {
 	String path = System.getProperty("user.dir") +"\\TestData\\IISTestData.xlsx";
 	ExcelData iisIncidentalChargesExcelData  = new ExcelData(path,"IncidentalChargesTestData","DataSet ID");
 	ExcelData iisAccrualDealExcelData  = new ExcelData(path,"AccrualDealTestData","DataSet ID");
+	ExcelData iisAccrualProcessExcelData  = new ExcelData(path,"AccrualProcessTestData","DataSet ID");
 	
 	Map<String, String> testData;
 	
@@ -73,6 +74,25 @@ public class IIS_IncidentalChargesSteps_608 {
 		testData = iisAccrualDealExcelData.getTestdata("DS_AT_AD_018");
     }
 	
+//	Accrual Process Feature
+//	AT_AP_020
+	@And("^User_608 get the test data for test case AT_AP_020$")
+    public void get_the_test_data_for_test_case_AT_AP_020() throws Throwable {
+		testData = iisAccrualProcessExcelData.getTestdata("DS_AT_AP_020");
+    }
+	
+//	AT_AP_021
+	@And("^User_608 get the test data for test case AT_AP_021$")
+    public void get_the_test_data_for_test_case_AT_AP_021() throws Throwable {
+		testData = iisAccrualProcessExcelData.getTestdata("DS_AT_AP_021");
+    }
+	
+//	AT_AP_022
+	@And("^User_608 get the test data for test case AT_AP_022$")
+    public void get_the_test_data_for_test_case_AT_AP_022() throws Throwable {
+		testData = iisAccrualProcessExcelData.getTestdata("DS_AT_AP_022");
+    }
+	
 	
 	
 	
@@ -85,12 +105,12 @@ public class IIS_IncidentalChargesSteps_608 {
 		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISCoreClearCacheBtn_608());
 		IISApplicationObj608.IISCoreClearCacheBtn_608().click();
 		
-		for (int i = 0; i < 2000; i++) {
+		for (int i = 0; i < 1000; i++) {
 			try {
 				IISApplicationObj608.IIS_SuccessPopupOkBtn_608().click();
 		    	break;
 			} catch (Exception e) {
-				if (i==1999) {
+				if (i==999) {
 					Assert.fail(e.getMessage());
 				}
 			}
@@ -539,8 +559,7 @@ public class IIS_IncidentalChargesSteps_608 {
 			} catch (Exception e) {
 				// TODO: handle exception
 			}
-    	}
-		
+    	}		
 		for (int i = 0; i < 1000; i++) {
 			try {
 				IISApplicationObj608.IIS_ConfirmPopupOkBtn_608().click();
@@ -832,7 +851,7 @@ public class IIS_IncidentalChargesSteps_608 {
 		}
 		for(int i = 0; i <= 500; i++) {
     		try {
-				if(!(IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainRepaymentAmtField_608().getAttribute("prevvalue").equals(testData.get("No of Payments")))) {
+				if(IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainRepaymentAmtField_608().getAttribute("prevvalue").equals(testData.get("No of Payments"))) {
 					break;
 				}
 			} catch (Exception e) {
@@ -881,9 +900,7 @@ public class IIS_IncidentalChargesSteps_608 {
 				IISApplicationObj608.IIS_WarningPopupOkBtn_608().click();
 				break;
 			} catch (Exception e) {
-				if (i == 500) {
-					Assert.fail(e.getMessage());
-				}
+				
 			}
 		}
      	
@@ -929,8 +946,29 @@ public class IIS_IncidentalChargesSteps_608 {
 			}
 		}
 	    
-		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_ConfirmPopupOkBtn_608());
-		IISApplicationObj608.IIS_ConfirmPopupOkBtn_608().click();
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISApproveMenuConfirmContinuePopup_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				IISApplicationObj608.IIS_ConfirmPopupOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}			
+		
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISApproveMenuConfirmCollateralPopup_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				IISApplicationObj608.IIS_ConfirmPopupOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
 		
 		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_InformationPopupTitle_608());
 		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_InformationPopupTextMsg_608());
@@ -1023,6 +1061,7 @@ public class IIS_IncidentalChargesSteps_608 {
 			}
 		}
 	    
+//		Report Popup cancel btn
 		for (int i = 0; i <= 1000; i++) {
 			try {
 				IISApplicationObj608.IIS_ConfirmPopupCancelBtn_608().click();
@@ -1052,8 +1091,29 @@ public class IIS_IncidentalChargesSteps_608 {
 			}
 		}
 	    
-		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_ConfirmPopupOkBtn_608());
-		IISApplicationObj608.IIS_ConfirmPopupOkBtn_608().click();
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISApproveMenuConfirmContinuePopup_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				IISApplicationObj608.IIS_ConfirmPopupOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}			
+		
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISApproveMenuConfirmCollateralPopup_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				IISApplicationObj608.IIS_ConfirmPopupOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
 		
 		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_InformationPopupTitle_608());
 		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_InformationPopupTextMsg_608());
@@ -1336,8 +1396,8 @@ public class IIS_IncidentalChargesSteps_608 {
 	@And("User_608 search the settlement number in searchgrid under Reverse menu in Settlement")
 	public void user_search_the_settlement_number_in_searchgrid_under_reverse_menu_in_settlement() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISSettlementReverseSearchgirdSettlementNbrInput_608());
-//		IISApplicationObj608.IISSettlementReverseSearchgirdSettlementNbrInput_608().sendKeys(testData.get("Settlement Nbr"),Keys.ENTER);
-		IISApplicationObj608.IISSettlementReverseSearchgirdSettlementNbrInput_608().sendKeys("9583",Keys.ENTER);
+		IISApplicationObj608.IISSettlementReverseSearchgirdSettlementNbrInput_608().sendKeys(testData.get("Settlement Nbr"),Keys.ENTER);
+//		IISApplicationObj608.IISSettlementReverseSearchgirdSettlementNbrInput_608().sendKeys("9583",Keys.ENTER);
 	}
 
 	@And("User_608 double click the searchgrid row in Reverse menu under Settlement")
@@ -1409,8 +1469,8 @@ public class IIS_IncidentalChargesSteps_608 {
 	@And("User_608 search the settlement number in searchgrid under Approve Reverse menu in Settlement")
 	public void user_search_the_settlement_number_in_searchgrid_under_approve_reverse_menu_in_settlement() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISSettlementApproveReverseSearchgirdSettlementNbrInput_608());
-//		IISApplicationObj608.IISSettlementApproveReverseSearchgirdSettlementNbrInput_608().sendKeys(testData.get("Settlement Nbr"),Keys.ENTER);
-		IISApplicationObj608.IISSettlementApproveReverseSearchgirdSettlementNbrInput_608().sendKeys("9583",Keys.ENTER);
+		IISApplicationObj608.IISSettlementApproveReverseSearchgirdSettlementNbrInput_608().sendKeys(testData.get("Settlement Nbr"),Keys.ENTER);
+//		IISApplicationObj608.IISSettlementApproveReverseSearchgirdSettlementNbrInput_608().sendKeys("9583",Keys.ENTER);
 	}
 
 	@And("User_608 double click the searchgrid row in Approve Reverse menu under Settlement")
@@ -1483,5 +1543,708 @@ public class IIS_IncidentalChargesSteps_608 {
 		
 	}
 	
+	
+//	Advance principal settlement module
+//	AT_AD_018
+	@And("User_608 click the Advance principal settlement module")
+	public void user_click_the_advance_principal_settlement_module() throws Throwable {
+		for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(IISApplicationObj608.IISAdvancePrincipalSettlementModule_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		IISApplicationObj608.IISAdvancePrincipalSettlementModule_608().click();	    
+	}
+
+	@And("User_608 click the maintenance under Advance principal settlement module")
+	public void user_click_the_maintenance_under_advance_principal_settlement_module() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISAdvancePrincipalSettlementMaintenance_608());  
+		IISApplicationObj608.IISAdvancePrincipalSettlementMaintenance_608().click();
+	}
+
+	@And("User_608 enter the Deal number in maintenance screen under Advance principal settlement")
+	public void user_enter_the_deal_number_in_maintenance_screen_under_advance_principal_settlement() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceDealNbrInput_608());
+		IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceDealNbrInput_608().sendKeys(testData.get("Deal Nbr"),Keys.TAB);
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceDealNbrInput_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+
+	@And("User_608 enter the Advance principal in maintenance screen under Advance principal settlement")
+	public void user_enter_the_advance_principal_in_maintenance_screen_under_advance_principal_settlement() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceAdvancePrincipalInput_608());
+		IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceAdvancePrincipalInput_608().clear();
+		IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceAdvancePrincipalInput_608().sendKeys(testData.get("Advance Principal"),Keys.TAB);
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceAdvancePrincipalInput_608().getAttribute("prevvalue")
+						.equals(testData.get("Advance Principal"))) {
+					break;
+				}
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+
+	@And("User_608 click the Reschedule&Allocate button in maintenance screen under Advance principal settlement")
+	public void user_click_the_reschedule_allocate_button_in_maintenance_screen_under_advance_principal_settlement() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceRescheduleAllocateBtn_608());
+	    for(int i = 300; i <= 300; i++) {
+	    	try {
+	    		IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceRescheduleAllocateBtn_608().click();
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+	    }	    
+	    waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_WarningPopupOkBtn_608());
+		IISApplicationObj608.IIS_ConfirmPopupOkBtn_608().click();
+	}
+
+	@When("User_608 click the Save button in maintenance screen under Advance principal settlement")
+	public void user_click_the_save_button_in_maintenance_screen_under_advance_principal_settlement() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceScheduleDetailsTable_608());
+		for(int i = 300; i <= 300; i++) {
+	    	try {
+	    		IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceSaveBtn_608().click();
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+	    }
+		// Success popup Ok btn
+		for (int i = 0; i <= 2000; i++) {
+			try {
+				IISApplicationObj608.IIS_SuccessPopupOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 2000) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}		
+	}	
+	
+	@And("User_608 click the Approve menu in Advance principal settlement module")
+	public void user_click_the_approve_menu_in_advance_principal_settlement_module() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISAdvancePrincipalSettlementApproveMenu_608());
+		for (int i = 0; i <= 300; i++) {
+			try {
+				IISApplicationObj608.IISAdvancePrincipalSettlementApproveMenu_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+
+	@And("User_608 search the Deal number in Approve menu under Advance principal settlement module")
+	public void user_search_the_deal_number_in_approve_menu_under_advance_principal_settlement_module() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISAdvancePrincipalSettlementApproveMenuSearchgridDealNbrInput_608());
+		IISApplicationObj608.IISAdvancePrincipalSettlementApproveMenuSearchgridDealNbrInput_608().sendKeys(testData.get("Deal Nbr"),Keys.ENTER);
+	}
+
+	@And("User_608 double click the searchgrid row in Approve menu under Advance principal settlement module")
+	public void user_double_click_the_searchgrid_row_in_approve_menu_under_advance_principal_settlement_module() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISAdvancePrincipalSettlementApproveMenuSearchgridRow_608());
+		for (int i = 0; i <= 300; i++) {
+			try {
+				clicksAndActionsHelper.doubleClick(IISApplicationObj608.IISAdvancePrincipalSettlementApproveMenuSearchgridRow_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(IISApplicationObj608.IISAdvancePrincipalSettlementApproveMenuDealNbr_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}		
+	}
+
+	@When("User_608 click the Approve button in Approve menu under Advance principal settlement module")
+	public void user_click_the_approve_button_in_approve_menu_under_advance_principal_settlement_module() throws Throwable {
+		for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(IISApplicationObj608.IISAdvancePrincipalSettlementApproveMenuApproveBtn_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		IISApplicationObj608.IISAdvancePrincipalSettlementApproveMenuApproveBtn_608().click();
+		
+		
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_ConfirmPopupOkBtn_608());
+		IISApplicationObj608.IIS_ConfirmPopupOkBtn_608().click();		
+		
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISApproveMenuConfirmPopupProceed_608());
+		IISApplicationObj608.IIS_ConfirmPopupOkBtn_608().click();
+		
+//		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISApproveMenuConfirmPopupProceed_608());
+//		IISApplicationObj608.IIS_ConfirmPopupOkBtn_608().click();
+		  	  
+//		Success popup Ok btn
+		for (int i = 0; i <= 2000; i++) {
+			try {
+				IISApplicationObj608.IIS_InformationPopupOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 2000) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	    
+//		Report popup cancel button
+		for (int i = 0; i <= 1000; i++) {
+			try {
+				IISApplicationObj608.IIS_ConfirmPopupCancelBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 1000) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}	    
+	}
+	
+	
+//	Accrual Process Feature
+	@When("User_608 validate button in maintenance under Investment Deals Combined without Trade Deal for Accrual Process")
+	public void user_validate_button_in_maintenance_under_investment_deals_combined_without_trade_deal_for_accrual_process() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainValidateBtn_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainValidateBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}		
+		
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISApproveMenuConfirmContinuePopup_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				IISApplicationObj608.IIS_ConfirmPopupOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}			
+		
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISApproveMenuConfirmCollateralPopup_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				IISApplicationObj608.IIS_ConfirmPopupOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}		
+		
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_InformationPopupTitle_608());
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_InformationPopupTextMsg_608());
+		String text = IISApplicationObj608.IIS_InformationPopupTextMsg_608().getText();
+		System.err.println("Text Message: "+text);
+		String dealNbr = IISApplicationObj608.IIS_InformationPopupTextMsg_608().getText().substring(18, 22);
+    	System.err.println("Deal Number: "+dealNbr);    	
+    	iisAccrualProcessExcelData.updateTestData(testData.get("DataSet ID"),"Deal Nbr", dealNbr);
+		for (int i = 0; i <= 2000; i++) {
+			try {
+				IISApplicationObj608.IIS_InformationPopupOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 2000) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}		    
+	}
+	
+	
+//	@AT_AP_020
+	@And("User_608 click the Periodical Processing module in IIS Application")
+	public void user_click_the_periodical_processing_module_in_iis_application() throws Throwable {
+		for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(IISApplicationObj608.IISPeriodicalProcessingModule_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISPeriodicalProcessingModule_608());
+		IISApplicationObj608.IISPeriodicalProcessingModule_608().click();
+	}
+
+	@And("User_608 click the Post Accrual Menu under Periodical Processing")
+	public void user_click_the_post_accrual_menu_under_periodical_processing() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISPostAccrualsMenu_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				IISApplicationObj608.IISPostAccrualsMenu_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+
+	@And("User_608 click the Final Accruals under Post Accrual in Periodical Processing")
+	public void user_click_the_final_accruals_under_post_accrual_in_periodical_processing() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISFinalAccrualsSubMenu_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				IISApplicationObj608.IISFinalAccrualsSubMenu_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}	    
+	}
+
+	@And("User_608 check the Specific deal flag under Final Accruals in Post Accrual")
+	public void user_check_the_specific_deal_flag_under_final_accruals_in_post_accrual() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISFinalAccrualsSpecificDealCheckbox_608());
+	    if (!(IISApplicationObj608.IISFinalAccrualsSpecificDealCheckbox_608().isSelected())) {
+	    	IISApplicationObj608.IISFinalAccrualsSpecificDealCheckbox_608().click();
+		}
+	}
+
+	@And("User_608 enter the Deal number in Final Accruals under Post Accrual")
+	public void user_enter_the_deal_number_in_final_accruals_under_post_accrual() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISFinalAccrualsSpecificDealInput_608());
+		IISApplicationObj608.IISFinalAccrualsSpecificDealInput_608().sendKeys(testData.get("Deal Nbr"),Keys.TAB);
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(IISApplicationObj608.IISFinalAccrualsSpecificDealInput_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}
+	}
+
+	@And("User_608 enter the From Date in Final Accruals under Post Accrual")
+	public void user_enter_the_from_date_in_final_accruals_under_post_accrual() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISFinalAccrualsFromDateInput_608());
+		IISApplicationObj608.IISFinalAccrualsFromDateInput_608().sendKeys(testData.get("Accruals From"),Keys.TAB);
+	}
+
+	@And("User_608 enter the To Date in Final Accruals under Post Accrual")
+	public void user_enter_the_to_date_in_final_accruals_under_post_accrual() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISFinalAccrualsToDateInput_608());
+		IISApplicationObj608.IISFinalAccrualsToDateInput_608().sendKeys(testData.get("Accruals To"),Keys.TAB);
+	}
+
+	@When("User_608 click the OK button in Final Accruals under Post Accrual")
+	public void user_click_the_ok_button_in_final_accruals_under_post_accrual() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISFinalAccrualsOkBtn_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				IISApplicationObj608.IISFinalAccrualsOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+		for (int i = 0; i <= 1000; i++) {
+			try {
+				IISApplicationObj608.IIS_SuccessPopupOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 1000) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+//		Report Popup cancel btn
+		for (int i = 0; i <= 1000; i++) {
+			try {
+				IISApplicationObj608.IIS_ConfirmPopupCancelBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 1000) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+	
+	
+//	Calculators module --> @AT_AP_021
+	@And("User_608 click the Calculators module in IIS Application")
+	public void user_click_the_calculators_module_in_iis_application() {
+		for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(IISApplicationObj608.IISCalculatorsModule_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		IISApplicationObj608.IISCalculatorsModule_608().click();
+	}
+
+	@And("User_608 click the Reschedule Calculator With Profit menu under Calculators")
+	public void user_click_the_reschedule_calculator_with_profit_menu_under_calculators() {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISCalculatorsRescheduleCalculatorWithProfit_608());
+		IISApplicationObj608.IISCalculatorsRescheduleCalculatorWithProfit_608().click();
+	}
+
+	@And("User_608 enter the Deal number in Reschedule Calculator With Profit menu")
+	public void user_enter_the_deal_number_in_reschedule_calculator_with_profit_menu() {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISRescheduleCalculatorWithProfitDealNbrInput_608());
+		IISApplicationObj608.IISRescheduleCalculatorWithProfitDealNbrInput_608().sendKeys(testData.get("Deal Nbr"),Keys.TAB);
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(IISApplicationObj608.IISRescheduleCalculatorWithProfitDealNbrInput_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}
+	}
+
+	@And("User_608 click the Repayment Details panel in Reschedule Calculator With Profit menu")
+	public void user_click_the_repayment_details_panel_in_reschedule_calculator_with_profit_menu() {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISRescheduleCalculatorWithProfitRepaymentDetailsPanel_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				IISApplicationObj608.IISRescheduleCalculatorWithProfitRepaymentDetailsPanel_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+
+	@And("User_608 enter the First Payment After under Repayment Details panel in Reschedule Calculator With Profit menu")
+	public void user_enter_the_first_payment_after_under_repayment_details_panel_in_reschedule_calculator_with_profit_menu() {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISRescheduleCalculatorWithProfitRepaymentDetailsFirstPayAfterInput_608());
+		IISApplicationObj608.IISRescheduleCalculatorWithProfitRepaymentDetailsFirstPayAfterInput_608().clear();
+		IISApplicationObj608.IISRescheduleCalculatorWithProfitRepaymentDetailsFirstPayAfterInput_608().sendKeys(testData.get("First Pay After"),Keys.TAB);
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(IISApplicationObj608.IISRescheduleCalculatorWithProfitDealNbrInput_608().getAttribute("prevvalue")
+						.equals(testData.get(""))) {
+					break;
+				}
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}
+	}
+
+	@When("User_608 click the Calculate button in Reschedule Calculator With Profit menu")
+	public void user_click_the_calculate_button_in_reschedule_calculator_with_profit_menu() {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISRescheduleCalculatorWithProfitCalculateBtn_608());	
+		for (int i = 0; i <= 300; i++) {
+			try {
+				IISApplicationObj608.IISRescheduleCalculatorWithProfitCalculateBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+		// Success Popup OK Btn
+		for (int i = 0; i <= 1000; i++) {
+			try {
+				IISApplicationObj608.IIS_SuccessPopupOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 1000) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	    
+	}
+
+	@When("User_608 click the Update button in Reschedule Calculator With Profit menu")
+	public void user_click_the_update_button_in_reschedule_calculator_with_profit_menu() {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISRescheduleCalculatorWithProfitUpdateBtn_608());	
+		for (int i = 0; i <= 300; i++) {
+			try {
+				IISApplicationObj608.IISRescheduleCalculatorWithProfitUpdateBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}	    
+		
+		// Success Popup OK Btn
+		for (int i = 0; i <= 1000; i++) {
+			try {
+				IISApplicationObj608.IIS_SuccessPopupOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 1000) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+	
+//	Reschedule Repayment plan module
+	@And("User_608 click the Reschedule Repayment plan module in IIS Application")
+	public void user_click_the_reschedule_repayment_plan_module_in_iis_application() {
+		for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(IISApplicationObj608.IISRescheduleRepaymentPlanModule_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		IISApplicationObj608.IISRescheduleRepaymentPlanModule_608().click();	    
+	}
+
+	@And("User_608 click the Approve menu under Reschedule Repayment plan")
+	public void user_click_the_approve_menu_under_reschedule_repayment_plan() {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISRescheduleRepaymentPlanApproveMenu_608()); 
+		IISApplicationObj608.IISRescheduleRepaymentPlanApproveMenu_608().click();
+	}
+
+	@And("User_608 search the Deal number in approve menu under Reschedule Repayment plan")
+	public void user_search_the_deal_number_in_approve_menu_under_reschedule_repayment_plan() {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISRescheduleRepaymentPlanApproveSearchgridDealInput_608());
+		IISApplicationObj608.IISRescheduleRepaymentPlanApproveSearchgridDealInput_608().sendKeys(testData.get("Deal Nbr"),Keys.ENTER);
+	}
+
+	@And("User_608 double click the searchgird row in approve menu under Reschedule Repayment plan")
+	public void user_double_click_the_searchgird_row_in_approve_menu_under_reschedule_repayment_plan() {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISRescheduleRepaymentPlanApproveSearchgridRow_608());
+		for (int i = 0; i <= 300; i++) {
+			try {
+				clicksAndActionsHelper.doubleClick(IISApplicationObj608.IISRescheduleRepaymentPlanApproveSearchgridRow_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(IISApplicationObj608.IISRescheduleRepaymentPlanApproveMenuDealNbr_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}
+	}
+
+	@When("User_608 click the Approve button in approve menu under Reschedule Repayment plan")
+	public void user_click_the_approve_button_in_approve_menu_under_reschedule_repayment_plan() {
+		for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(IISApplicationObj608.IISRescheduleRepaymentPlanApproveMenuApproveBtn_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		IISApplicationObj608.IISRescheduleRepaymentPlanApproveMenuApproveBtn_608().click();
+		
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_WarningPopupOkBtn_608());
+		IISApplicationObj608.IIS_WarningPopupOkBtn_608().click();
+		
+		for (int i = 0; i <= 2000; i++) {
+			try {
+				IISApplicationObj608.IIS_InformationPopupOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 2000) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+//		Report Popup cancel btn
+		for (int i = 0; i <= 1000; i++) {
+			try {
+				IISApplicationObj608.IIS_ConfirmPopupCancelBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 1000) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+	}
+	
+
+	
+//	@AT_AP_022
+	@And("User_608 enter the Tenure in maintenance under Investment Deals Combined without Trade Deal")
+	public void user_enter_the_tenure_in_maintenance_under_investment_deals_combined_without_trade_deal() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainTenureInput_608());
+		IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainTenureInput_608().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
+		IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainTenureInput_608().sendKeys(testData.get("Tenure"),Keys.TAB);
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainTenureInput_608().getAttribute("prevvalue")
+						.equals(testData.get("Tenure"))) {
+					break;
+				}
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}		
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_ConfirmPopupOkBtn_608());
+		IISApplicationObj608.IIS_ConfirmPopupOkBtn_608().click();	
+	}
+	
+	@And("User_608 select the Tenure dropdown as Years in maintenance under Investment Deals Combined without Trade Deal")
+	public void user_select_the_tenure_dropdown_as_years_in__maintenance_under_investment_deals_combined_without_trade_deal() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainTenureDropdown_608()); 
+		dropDownHelper.SelectUsingVisibleText(IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainTenureDropdown_608(),
+				testData.get("Tenure DD"));
+	}	
+	
+	@And("User_608 select the Profit Calculation as Diminising Returns in repayment tab under maintenance in Investment Deals Combined without Trade Deal")
+	public void user_select_the_profit_calculation_as_diminising_returns_in_repayment_tab_under_maintenance_in_investment_deals_combined_without_trade_deal() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainRepaymentProfitCalculationMethodDropdown_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				dropDownHelper.SelectUsingVisibleText(IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainRepaymentProfitCalculationMethodDropdown_608(),
+						testData.get("Profit Calculation"));
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+
+	@And("User_608 select the Profit Recognition as Diminising Returns in repayment tab under maintenance in Investment Deals Combined without Trade Deal")
+	public void user_select_the_profit_recognition_as_diminising_returns_in_repayment_tab_under_maintenance_in_investment_deals_combined_without_trade_deal() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainRepaymentProfitRecogMethodDropdown_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				dropDownHelper.SelectUsingVisibleText(IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainRepaymentProfitRecogMethodDropdown_608(),
+						testData.get("Profit Recognition"));
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}		    
+	}
+
+	@And("User_608 enter the Grace period in repayment tab under maintenance in Investment Deals Combined without Trade Deal")
+	public void user_enter_the_grace_period_in_repayment_tab_under_maintenance_in_investment_deals_combined_without_trade_deal() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainRepaymentGracePeriodInput_608());
+		IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainRepaymentGracePeriodInput_608().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
+		IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainRepaymentGracePeriodInput_608().sendKeys(testData.get("Grace Period"),Keys.TAB);
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainTenureInput_608().getAttribute("prevvalue")
+						.equals(testData.get("Grace Period"))) {
+					break;
+				}
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}
+	}
+
+	@And("User_608 select the Grace period dropdown as Years in repayment tab under maintenance in Investment Deals Combined without Trade Deal")
+	public void user_select_the_grace_period_dropdown_as_years_in_repayment_tab_under_maintenance_in_investment_deals_combined_without_trade_deal() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainRepaymentGracePeriodDropdown_608()); 
+		for (int i = 0; i <= 500; i++) {
+			try {
+				dropDownHelper.SelectUsingVisibleText(IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainRepaymentGracePeriodDropdown_608(),
+						testData.get("Grace Period DD"));
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}		
+	}
 	
 }

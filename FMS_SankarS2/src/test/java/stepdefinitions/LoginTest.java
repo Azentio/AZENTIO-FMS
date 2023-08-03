@@ -76,6 +76,14 @@ public class LoginTest extends BaseClass {
 	    }
 		
 		
+//		MTS_Application
+		@Given("^navigate to MTS application and login with valid credentials$")
+	    public void navigate_to_mts_application_and_login_with_valid_credentials() throws Throwable {
+			driver.get(configFileReader.getMTSApplicationUrl());
+			iisLogin.loginIntoMTSApplication(configFileReader.getMTSApplicationUserType());
+	    }
+		
+		
 	
 	@And("^logout from the application$")
 	public void logout_from_the_application() throws Throwable {

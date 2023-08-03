@@ -1,6 +1,8 @@
 Feature: To check the Accrual Deal Features
 
-## Create a investment deal without trade deal
+## Create deal in investment deal without trade deal --> validate and approve
+## Settlement --> Main --> using Deal number --> Click Automatic allocation --> Save & Approve
+
 @AT_AD_003
 Scenario: Create a future settlement for the installment 05/05/2007 on 15/04/2007
 
@@ -21,6 +23,7 @@ And User_608 select the maturity account in Contributor tab under maintenance in
 And User_608 click the Ok button in contributor tab under maintenance in Investment Deals Combined without Trade Deal
 And User_608 click the save button in maintenance under Investment Deals Combined without Trade Deal
 And User_608 click the Repayment plan button in maintenance under Investment Deals Combined without Trade Deal
+And User_608 uncheck the Compounding Grace Period Check box in repayment tab under maintenance in Investment Deals Combined without Trade Deal
 And User_608 click the create schedule button in repayment tab under maintenance in Investment Deals Combined without Trade Deal
 And User_608 close the repayment tab under maintenance in Investment Deals Combined without Trade Deal
 And User_608 validate button in maintenance under Investment Deals Combined without Trade Deal for Accrual Deal
@@ -42,6 +45,10 @@ And User_608 double click the searchgrid row in approve menu under Settlement
 And User_608 click the Approve button in approve menu under Settlement
 
 
+## Create deal in investment deal without trade deal --> validate and approve
+## Settlement --> Main --> using Deal number --> Click Automatic allocation --> Save & Approve
+## Settlement --> Reverse and approve the settlement
+## Again create the Settlement for this Deal.
 @AT_AD_015
 Scenario: Execute the TC 6 again
 
@@ -105,6 +112,8 @@ And User_608 double click the searchgrid row in approve menu under Settlement
 And User_608 click the Approve button in approve menu under Settlement
 
 
+## Create Accrual deal in investment deal without trade deal --> validate and approve
+## Advance principal settlement module --  enter principal amt --> save and approve
 @AT_AD_018
 Scenario: Do an Advance principal on 05/01/2008
 
@@ -125,18 +134,22 @@ And User_608 click the Ok button in contributor tab under maintenance in Investm
 And User_608 click the save button in maintenance under Investment Deals Combined without Trade Deal
 And User_608 click the Repayment plan button in maintenance under Investment Deals Combined without Trade Deal
 And User_608 enter the No of Payments in repayment tab under maintenance in Investment Deals Combined without Trade Deal
-#And User_608 uncheck the Compounding Grace Period Check box in repayment tab under maintenance in Investment Deals Combined without Trade Deal
-#And User_608 click the create schedule button in repayment tab under maintenance in Investment Deals Combined without Trade Deal
-#And User_608 close the repayment tab under maintenance in Investment Deals Combined without Trade Deal
-#And User_608 validate button in maintenance under Investment Deals Combined without Trade Deal for Accrual Deal
-#And User_608 get the test data for test case AT_AD_018
-#Then User_608 click the Approve menu under Investment Deals Combined without Trade Deal
-#And User_608 search the deal number in searchgrid under Approve menu in Investment Deals Combined without Trade Deal
-#And User_608 double click the searchgrid row in Approve menu under Investment Deals Combined without Trade Deal
-#When User_608 click the Approve button Approve menu in under Investment Deals Combined without Trade Deal
-
-
-
-
-
-
+And User_608 uncheck the Compounding Grace Period Check box in repayment tab under maintenance in Investment Deals Combined without Trade Deal
+And User_608 click the create schedule button in repayment tab under maintenance in Investment Deals Combined without Trade Deal
+And User_608 close the repayment tab under maintenance in Investment Deals Combined without Trade Deal
+And User_608 validate button in maintenance under Investment Deals Combined without Trade Deal for Accrual Deal
+And User_608 get the test data for test case AT_AD_018
+Then User_608 click the Approve menu under Investment Deals Combined without Trade Deal
+And User_608 search the deal number in searchgrid under Approve menu in Investment Deals Combined without Trade Deal
+And User_608 double click the searchgrid row in Approve menu under Investment Deals Combined without Trade Deal
+When User_608 click the Approve button Approve menu in under Investment Deals Combined without Trade Deal
+And User_608 click the Advance principal settlement module
+And User_608 click the maintenance under Advance principal settlement module
+And User_608 enter the Deal number in maintenance screen under Advance principal settlement
+And User_608 enter the Advance principal in maintenance screen under Advance principal settlement
+And User_608 click the Reschedule&Allocate button in maintenance screen under Advance principal settlement
+When User_608 click the Save button in maintenance screen under Advance principal settlement
+And User_608 click the Approve menu in Advance principal settlement module
+And User_608 search the Deal number in Approve menu under Advance principal settlement module
+And User_608 double click the searchgrid row in Approve menu under Advance principal settlement module
+When User_608 click the Approve button in Approve menu under Advance principal settlement module

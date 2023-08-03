@@ -4,11 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 import dataProvider.ExcelData;
 import helper.ClicksAndActionsHelper;
 import helper.WaitHelper;
+import pageobjects.CommonElements.FMSCommonWebElements;
 import pageobjects.CommonElements.IISCommonElements;
 
 public class IISLogin {	
@@ -112,6 +114,74 @@ public class IISLogin {
 		 */
 	}
 	
+	
+	public void loginIntoMTSApplication(String userType) {
+		iisLoginTestData = iisLoginExceldata.getTestdata(userType);
+		iisCommonWebElements = new IISCommonElements(driver);
+		clicksAndActionHelper = new ClicksAndActionsHelper(driver);
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisUserName());
+		iisCommonWebElements.iisUserName().click();
+		iisCommonWebElements.iisUserName().sendKeys(iisLoginTestData.get("UserName"));
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisPassword());
+		iisCommonWebElements.iisPassword().click();
+		iisCommonWebElements.iisPassword().sendKeys(iisLoginTestData.get("Password"));
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisLoginButon());
+		iisCommonWebElements.iisLoginButon().click();
+
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisCompanyCode());
+		iisCommonWebElements.iisCompanyCode().click();
+		for (int i = 0; i <= 10; i++) {
+			iisCommonWebElements.iisCompanyCode().sendKeys(Keys.DELETE);
+		}
+		iisCommonWebElements.iisCompanyCode().sendKeys(iisLoginTestData.get("CompanyCode"));
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisCompanyAndBranchLogin());
+		clicksAndActionHelper.moveToElement(iisCommonWebElements.iisCompanyAndBranchLogin());
+		clicksAndActionHelper.clickOnElement(iisCommonWebElements.iisCompanyAndBranchLogin());
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisBranchCode());
+		iisCommonWebElements.iisBranchCode().click();
+		for (int i = 0; i <= 10; i++) {
+			iisCommonWebElements.iisBranchCode().sendKeys(Keys.DELETE);
+		}
+		iisCommonWebElements.iisBranchCode().sendKeys(iisLoginTestData.get("BranchCode"));
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisCompanyAndBranchLogin());
+		iisCommonWebElements.iisCompanyAndBranchLogin().click();
+		for (int i = 0; i <= 50; i++) {
+
+			String headOffice = iisCommonWebElements.iisBranchCodeValidation().getAttribute("prevvalue");
+
+			if (!(headOffice.isBlank())) {
+				break;
+			}
+
+		}
+
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisContinueButton());
+		iisCommonWebElements.iisContinueButton().click();
+		for (int i = 0; i <200; i++) {
+			try {
+				if (iisCommonWebElements.iis_UserAlreadyLoginPopUp().isDisplayed()) {
+					iisCommonWebElements.iis_UserAlreadyLoginYes().click();
+					break;
+				}
+			} catch (Exception e) {
+				
+			}
+		}
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisContinueButton());
+		iisCommonWebElements.iisContinueButton().click();
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisLoginValidation());
+		Assert.assertTrue(iisCommonWebElements.iisLoginValidation().isDisplayed());
+		/*
+		 * waitHelper.waitForElementwithFluentwait(driver,
+		 * iisCommonWebElements.fmsLogoutButton());
+		 * clicksAndActionHelper.moveToElement(iisCommonWebElements.fmsLogoutButton());
+		 * clicksAndActionHelper.clickOnElement(iisCommonWebElements.fmsLogoutButton());
+		 * waitHelper.waitForElementwithFluentwait(driver,
+		 * iisCommonWebElements.fmsUserName());
+		 * Assert.assertTrue(iisCommonWebElements.fmsUserName().isDisplayed());
+		 * driver.quit();
+		 */
+	}
 	
 
 	

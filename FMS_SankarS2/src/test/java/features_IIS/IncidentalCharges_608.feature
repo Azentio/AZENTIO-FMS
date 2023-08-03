@@ -1,5 +1,6 @@
 Feature: To check the Incidental Charges Feature
 
+# IIS --> tracking&incidental charges --> Retrieve the approved record --> Reverse the Record & Approve
 @AT_IC_010
 Scenario: Checking the Deal Incidental charges Functionality fro Reversal
 
@@ -17,6 +18,9 @@ And User_608 double click the searchgrid row in Approve Reverse menu under Track
 When User_608 click the Reverse button in Approve Reverse menu under Tracking & Incidental Charges
 
 
+# IIS --> Create a "investment deal without trade deal" ,
+# Tracking&incidental charges --> Main --> retrieve the record --> Save & Approve
+# Repayment plan --> Main --> retrieve the record --> schedule details tab --> incidental charges column validate the hyper link
 @AT_IC_022
 Scenario: Check On moving the cursor on incidental charge field, system showing the hyper link
 
@@ -37,6 +41,7 @@ And User_608 select the maturity account in Contributor tab under maintenance in
 And User_608 click the Ok button in contributor tab under maintenance in Investment Deals Combined without Trade Deal
 And User_608 click the save button in maintenance under Investment Deals Combined without Trade Deal
 And User_608 click the Repayment plan button in maintenance under Investment Deals Combined without Trade Deal
+And User_608 uncheck the Compounding Grace Period Check box in repayment tab under maintenance in Investment Deals Combined without Trade Deal
 And User_608 click the create schedule button in repayment tab under maintenance in Investment Deals Combined without Trade Deal
 And User_608 close the repayment tab under maintenance in Investment Deals Combined without Trade Deal
 And User_608 validate button in maintenance under Investment Deals Combined without Trade Deal for Incidental Charges
