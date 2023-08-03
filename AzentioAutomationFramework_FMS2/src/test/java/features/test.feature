@@ -1,4 +1,5 @@
 Feature: test
 @00001
 Scenario: test
-And User_608 Validate the Document validation field is displayed under STP Facility Requirements
+And User_608 Select the value in Revolving Oneoff dropdown
+And User_608 Validate that Expiration date field is displayed

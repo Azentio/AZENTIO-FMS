@@ -59,6 +59,14 @@ public class Collateral_Management_Steps {
 	public void get_the_test_data_for_test_case_AT_CM_006() {
 		testData = fmsTransactionsExcelData.getTestdata("DS01_AT_CM_006");
 	}
+	@And("User_074 get the test data for test case AT_RF_027")
+	public void User_074_get_the_test_data_for_test_case_AT_RF_027() {
+		testData = fmsTransactionsExcelData.getTestdata("DS01_AT_RF_027");
+	}
+	@And("User_074 get the test data for test case AT_RF_105")
+	public void User_074_get_the_test_data_for_test_case_AT_RF_105() {
+		testData = fmsTransactionsExcelData.getTestdata("DS01_AT_RF_105");
+	}
 	
 	
 //	@AT_RF_035

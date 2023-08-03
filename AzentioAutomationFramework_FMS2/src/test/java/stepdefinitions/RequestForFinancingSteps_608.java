@@ -18,6 +18,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageobjects.ApplicationFinancialFacilityObj_608;
+import pageobjects.FacilitiesManagementObj_608;
 import pageobjects.Facility_TypeObj_608;
 import pageobjects.RequestForFinancingObj_608;
 import resources.BaseClass;
@@ -30,6 +31,7 @@ public class RequestForFinancingSteps_608 {
 	ApplicationFinancialFacilityObj_608 applicationFinancialFacilityObj608 = new ApplicationFinancialFacilityObj_608(
 			driver);
 	Facility_TypeObj_608 facilityTypeObj608 = new Facility_TypeObj_608(driver);
+	FacilitiesManagementObj_608 facilityManagementObj608 = new FacilitiesManagementObj_608(driver);
 	WaitHelper waitHelper = new WaitHelper(driver);
 	JavascriptHelper javaScriptHelper = new JavascriptHelper(driver);
 	ClicksAndActionsHelper clicksAndActionsHelper = new ClicksAndActionsHelper(driver);
@@ -46,12 +48,12 @@ public class RequestForFinancingSteps_608 {
 	Map<String, String> testData;
 
 //	@AT_FM_043
-	@And("User_608 get the test data for test case AT_FM_043_FMSParam")
+	@And("User_074 get the test data for test case AT_FM_043_FMSParam")
 	public void user_get_the_test_data_for_test_case_at_fm__fms_param() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_043");
 	}
 
-	@And("User_608 get the test data for test case AT_FM_043_FMSCore")
+	@And("User_074 get the test data for test case AT_FM_043_FMSCore")
 	public void user_get_the_test_data_for_test_case_at_fm__fms_core() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_043");
 	}
@@ -62,88 +64,92 @@ public class RequestForFinancingSteps_608 {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_098");
 	}
 
-//    @AT_RF_098_User_608
-	@And("^User_608 get the test data for test case AT_RF_098_User_608$")
+//    @AT_RF_098_User_074
+	@And("^User_074 get the test data for test case AT_RF_098_User_074$")
 	public void get_the_test_data_for_test_case_AT_RF_098user2() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_098");
 	}
 
 //  @AT_RF_157
-	@And("User_608 get the test data for test case AT_RF_157")
+	@And("User_074 get the test data for test case AT_RF_157")
 	public void get_the_test_data_for_test_case_at_rf_157() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_157");
 	}
-	@And("User_608 get the test data for test case AT_FAID_011")
+	@And("User_074 get the test data for test case AT_FAID_011")
 	public void get_the_test_data_for_test_case_at_faid_011() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FAID_011");
 	}
-	@And("User_608 get the test data for test case AT_FAID_012")
+	@And("User_074 get the test data for test case AT_FAID_012")
 	public void get_the_test_data_for_test_case_at_faid_012() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FAID_012");
 	}
-	@And("User_608 get the test data for test case AT_FAM_009")
+	@And("User_074 get the test data for test case AT_FAM_009")
 	public void get_the_test_data_for_test_case_at_fam_009() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FAM_009");
 	}
-	@And("User_608 get the test data for test case AT_FAM_010")
+	@And("User_074 get the test data for test case AT_FAM_010")
 	public void get_the_test_data_for_test_case_at_fam_010() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FAM_010");
 	}
-	@And("User_608 get the test data for test case AT_FAM_011")
+	@And("User_074 get the test data for test case AT_FAM_011")
 	public void get_the_test_data_for_test_case_at_fam_011() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FAM_011");
 	}
+	@And("User_074 get the test data for test case AT_DDR_001")
+	public void get_the_test_data_for_test_case_at_ddr_001() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_DDR_001");
+	}
 
 //	@AT_RF_158_Param
-	@And("^User_608 get the test data for test case AT_RF_158_Param$")
+	@And("^User_074 get the test data for test case AT_RF_158_Param$")
 	public void get_the_test_data_for_test_case_atrf158param() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS02_AT_RF_158");
 	}
 
 //	@AT_RF_158_Core
-	@And("^User_608 get the test data for test case AT_RF_158_Core$")
+	@And("^User_074 get the test data for test case AT_RF_158_Core$")
 	public void get_the_test_data_for_test_case_atrf158core() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS01_AT_RF_158");
 	}
 
 //	@AT_DDR_025
-	@And("^User_608 get the test data for test case AT_DDR_025$")
+	@And("^User_074 get the test data for test case AT_DDR_025$")
 	public void get_the_test_data_for_test_case_AT_DDR_025() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_DDR_025");
 	}
 
 //	@AT_CM_043
-	@And("^User_608 get the test data for test case AT_CM_043$")
+	@And("^User_074 get the test data for test case AT_CM_043$")
 	public void get_the_test_data_for_test_case_AT_CM_043() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_CM_043");
 	}
 
 ////	@AT_FM_058
-//	@And("User_608 get the test data for test case AT_FM_058")
+//	@And("User_074 get the test data for test case AT_FM_058")
 //	public void user_get_the_test_data_for_test_case_AT_FM_058() throws Throwable {
 //		testData = fmsTransactionsExcelData.getTestdata("DS_AT_FM_058");
 //	}
 
 //	@AT_RF_014_IISParam
-	@And("^User_608 get the test data for test case AT_RF_014_IISParam$")
+	@And("^User_074 get the test data for test case AT_RF_014_IISParam$")
 	public void get_the_test_data_for_test_case_AT_RF_014iisparam() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_RF_014");
 	}
 
 //	@AT_DDR_021
-	@And("^User_608 get the test data for test case AT_DDR_021$")
+	@And("^User_074 get the test data for test case AT_DDR_021$")
 	public void get_the_test_data_for_test_case_AT_DDR_021() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_DDR_021");
 	}
 
 //	@AT_RF_014
-	@And("^User_608 clicks on the parameter feature in IIS Param application$")
+	@And("^User_074 clicks on the parameter feature in IIS Param application$")
 	public void user_clicks_on_the_parameter_feature_in_iis_param_application() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.IISParameterFeature_608());
 		requestForFinancingObj608.IISParameterFeature_608().click();
 	}
 
-	@And("^User_608 clicks on the product class module uder parameter feature$")
+	@And("^User_074 clicks on the product class module uder parameter feature$")
 	public void user_clicks_on_the_product_class_module_uder_parameter_feature() throws Throwable {
 		for (int i = 0; i <= 300; i++) {
 			try {
@@ -159,19 +165,19 @@ public class RequestForFinancingSteps_608 {
 		requestForFinancingObj608.parameterProductClassModule_608().click();
 	}
 
-	@And("^User_608 clicks on the maintanance screen under product class module$")
+	@And("^User_074 clicks on the maintanance screen under product class module$")
 	public void user_clicks_on_the_maintanance_screen_under_product_class_module() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.productClassMaintanance_608());
 		requestForFinancingObj608.productClassMaintanance_608().click();
 	}
 
-	@And("^User_608 clicks on the search button in maintanance under product class$")
+	@And("^User_074 clicks on the search button in maintanance under product class$")
 	public void user_clicks_on_the_search_button_in_maintanance_under_product_class() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.productClassMainSearchBtn_608());
 		requestForFinancingObj608.productClassMainSearchBtn_608().click();
 	}
 
-	@And("^User_608 enter the class code in maintanance under product class$")
+	@And("^User_074 enter the class code in maintanance under product class$")
 	public void user_enter_the_class_code_in_maintanance_under_product_class() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.productClassMainSearchedRow_608());
 //    	requestForFinancingObj608.productClassMainSearchClass().sendKeys("1");
@@ -179,13 +185,13 @@ public class RequestForFinancingSteps_608 {
 		requestForFinancingObj608.productClassMainSearchClass_608().sendKeys(Keys.ENTER);
 	}
 
-	@And("^User_608 double click on the retrived data in maitanance under product class$")
+	@And("^User_074 double click on the retrived data in maitanance under product class$")
 	public void user_double_click_on_the_retrived_data_in_maitanance_under_product_class() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.productClassMainSearchRowLabel_608());
 		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.productClassMainSearchedRow_608());
 	}
 
-	@And("^User_608 clicks on the additional information tab in maitanance under product class$")
+	@And("^User_074 clicks on the additional information tab in maitanance under product class$")
 	public void user_clicks_on_the_additional_information_tab_in_maitanance_under_product_class() throws Throwable {
 		for (int i = 0; i < 500; i++) {
 			try {
@@ -201,13 +207,13 @@ public class RequestForFinancingSteps_608 {
 //    	requestForFinancingObj608.productClassMainAdditionalInfoTab().click();
 	}
 
-	@And("^User_608 clicks on the repayment plan tab under additional information tab$")
+	@And("^User_074 clicks on the repayment plan tab under additional information tab$")
 	public void user_clicks_on_the_repayment_plan_tab_under_additional_information_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.mainAdditionalInfoRepaymentTab_608());
 		requestForFinancingObj608.mainAdditionalInfoRepaymentTab_608().click();
 	}
 
-	@And("^User_608 enter the value in number of payments under repayment plan tab$")
+	@And("^User_074 enter the value in number of payments under repayment plan tab$")
 	public void user_enter_the_value_in_number_of_payments_under_repayment_plan_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.repaymentTabNoOfPaymentInput_608());
 		requestForFinancingObj608.repaymentTabNoOfPaymentInput_608().clear();
@@ -216,7 +222,7 @@ public class RequestForFinancingSteps_608 {
 		requestForFinancingObj608.repaymentTabNoOfPaymentInput_608().sendKeys(Keys.TAB);
 	}
 
-	@And("^User_608 select the dropdown in number of payments under repayment plan tab$")
+	@And("^User_074 select the dropdown in number of payments under repayment plan tab$")
 	public void user_select_the_dropdown_in_number_of_payments_under_repayment_plan_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.repaymentTabNoOfPaymentDropdown_608());
@@ -225,7 +231,7 @@ public class RequestForFinancingSteps_608 {
 				testData.get("No of Payment Select"));
 	}
 
-	@Then("^User_608 clicks save the button in maintanance under product class$")
+	@Then("^User_074 clicks save the button in maintanance under product class$")
 	public void user_clicks_save_the_button_in_maintanance_under_product_class() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.productClassMainSaveBtn_608());
 		requestForFinancingObj608.productClassMainSaveBtn_608().click();
@@ -238,19 +244,19 @@ public class RequestForFinancingSteps_608 {
 	}
 
 //  AT_RF_014_FMSCore
-	@And("^User_608 clicks the limit details first row$")
+	@And("^User_074 clicks the limit details first row$")
 	public void user_clicks_the_limit_details_first_row() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.limitDetailsFirstRow_608());
 		requestForFinancingObj608.limitDetailsFirstRow_608().click();
 	}
 
-	@And("^User_608 clicks the repayment plan button under limit details tab$")
+	@And("^User_074 clicks the repayment plan button under limit details tab$")
 	public void user_clicks_the_repayment_plan_button_under_limit_details_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.limitDetailsRepaymentPlanBtn_608());
 		requestForFinancingObj608.limitDetailsRepaymentPlanBtn_608().click();
 	}
 
-	@Then("^User_608 validate the Rounding factor dropdown$")
+	@Then("^User_074 validate the Rounding factor dropdown$")
 	public void user_validate_the_rounding_factor_dropdown() throws Throwable {
 		for (int i = 0; i <= 300; i++) {
 			try {
@@ -269,7 +275,7 @@ public class RequestForFinancingSteps_608 {
 		Assert.assertEquals(testData.get("No of Payment Select"), roundingfactorDropdown);
 	}
 
-	@Then("^User_608 validate the No of payments input$")
+	@Then("^User_074 validate the No of payments input$")
 	public void user_validate_the_no_of_payments_input() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.fmsRepaymentPlanNoOfPaymentsInput_608());
@@ -278,7 +284,7 @@ public class RequestForFinancingSteps_608 {
 	}
 
 //  @AT_RF_024 -- FMS Param
-	@And("^User_608 clicks on the Facility custom fields under Parameter$")
+	@And("^User_074 clicks on the Facility custom fields under Parameter$")
 	public void user_clicks_on_the_facility_custom_fields_under_parameter() throws Throwable {
 		for (int i = 0; i <= 300; i++) {
 			try {
@@ -294,26 +300,26 @@ public class RequestForFinancingSteps_608 {
 		requestForFinancingObj608.paramFacilityCustomFields_608().click();
 	}
 
-	@And("^User_608 clicks on the Maintain facility custom fields under facility custom fields$")
+	@And("^User_074 clicks on the Maintain facility custom fields under facility custom fields$")
 	public void user_clicks_on_the_maintain_facility_custom_fields_under_facility_custom_fields() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.maintainFacilityCustomFields_608());
 		requestForFinancingObj608.maintainFacilityCustomFields_608().click();
 	}
 
-	@And("^User_608 clicks on the Update after approve in Maintain facility custom fields$")
+	@And("^User_074 clicks on the Update after approve in Maintain facility custom fields$")
 	public void user_clicks_on_the_update_after_approve_in_maintain_facility_custom_fields() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.maintainFacilityCustomUpdateAterApprove_608());
 		requestForFinancingObj608.maintainFacilityCustomUpdateAterApprove_608().click();
 	}
 
-	@And("^User_608 double click on the one record under update after approve$")
+	@And("^User_074 double click on the one record under update after approve$")
 	public void user_double_click_on_the_one_record_under_update_after_approve() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.updateAfterApproveSearchResult_608());
 		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.updateAfterApproveSearchResult_608());
 	}
 
-	@And("^User_608 validate Facility Custom Fields screen are available$")
+	@And("^User_074 validate Facility Custom Fields screen are available$")
 	public void user_validate_facility_custom_fields_screen_are_available() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityCustomFieldsBox_608());
 		boolean facilityCustomFieldsBox = requestForFinancingObj608.facilityCustomFieldsBox_608().isDisplayed();
@@ -321,7 +327,7 @@ public class RequestForFinancingSteps_608 {
 	}
 
 //  @AT_RF_034_FMSParam
-	@And("^User_608 uncheck the Issue Facility Offer flag$")
+	@And("^User_074 uncheck the Issue Facility Offer flag$")
 	public void user_uncheck_the_issue_facility_offer_flag() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.issueFacilityOfferFlag_608());
 		WebElement issueFacilityOfferFlag = facilityTypeObj608.issueFacilityOfferFlag_608();
@@ -330,14 +336,14 @@ public class RequestForFinancingSteps_608 {
 		}
 	}
 
-	@And("^User_608 move to facility reports tab in update after approve$")
+	@And("^User_074 move to facility reports tab in update after approve$")
 	public void user_move_to_facility_reports_tab_in_update_after_approve() throws Throwable {
 		Thread.sleep(5000);
 		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.facilityTypeFacilityReports_608());
 		facilityTypeObj608.facilityTypeFacilityReports_608().click();
 	}
 
-	@And("^User_608 clicks on the search option in issue facility offer under facility reports$")
+	@And("^User_074 clicks on the search option in issue facility offer under facility reports$")
 	public void user_clicks_on_the_search_option_in_issue_facility_offer_under_facility_reports() throws Throwable {
 		for (int i = 0; i <= 300; i++) {
 			try {
@@ -355,14 +361,14 @@ public class RequestForFinancingSteps_608 {
 		facilityTypeObj608.facilityReportsIssueFacilityOfferLookup_608().click();
 	}
 
-	@And("^User_608 double click on any one retrived data$")
+	@And("^User_074 double click on any one retrived data$")
 	public void user_double_click_on_any_one_retrived_data() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				facilityTypeObj608.facilityReportsIssueFacilityOfferLookupData_608());
 		clicksAndActionsHelper.doubleClick(facilityTypeObj608.facilityReportsIssueFacilityOfferLookupData_608());
 	}
 
-	@And("^User_608 check the auto print flag under issue facility offer$")
+	@And("^User_074 check the auto print flag under issue facility offer$")
 	public void user_check_the_auto_print_flag_under_issue_facility_offer() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				facilityTypeObj608.facilityReportsIssueFacilityOfferAutoPrintFlag_608());
@@ -373,20 +379,20 @@ public class RequestForFinancingSteps_608 {
 	}
 
 //  @AT_RF_034_FMSCore
-	@And("^User_608 clicks the issue facility offer under WIFAK Application$")
+	@And("^User_074 clicks the issue facility offer under WIFAK Application$")
 	public void user_clicks_the_issue_facility_offer_under_wifak_application() throws Throwable {
 //    	System.out.println("Ref No: "+refID);
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.WIFAKAppIssueFacilityOffer_608());
 		requestForFinancingObj608.WIFAKAppIssueFacilityOffer_608().click();
 	}
 
-	@And("^User_608 double click on the retrived data$")
+	@And("^User_074 double click on the retrived data$")
 	public void user_double_click_on_the_retrived_data() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.issueFacilityOfferSearchResult_608());
 		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.issueFacilityOfferSearchResult_608());
 	}
 
-	@When("^User_608 clicks on the issue offer button under issue facility offer$")
+	@When("^User_074 clicks on the issue offer button under issue facility offer$")
 	public void user_clicks_on_the_issue_offer_button_under_issue_facility_offer() throws Throwable {
 		for (int i = 0; i <= 300; i++) {
 			try {
@@ -405,7 +411,7 @@ public class RequestForFinancingSteps_608 {
 	}
 
 //  @AT_RF_035
-	@And("^User_608 clicks on the the mortgage management module$")
+	@And("^User_074 clicks on the the mortgage management module$")
 	public void user_clicks_on_the_the_mortgage_management_module() throws Throwable {
 		for (int i = 0; i <= 300; i++) {
 			try {
@@ -421,13 +427,13 @@ public class RequestForFinancingSteps_608 {
 		requestForFinancingObj608.arabicMortgageManagementModule_608().click();
 	}
 
-	@And("^User_608 clicks on the Maintanance screen under mortgage management module$")
+	@And("^User_074 clicks on the Maintanance screen under mortgage management module$")
 	public void user_clicks_on_the_maintanance_screen_under_mortgage_management_module() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.mortgageManagementMain_608());
 		requestForFinancingObj608.mortgageManagementMain_608().click();
 	}
 
-	@And("^User_608 verify the Maintanance screen should be arabic language$")
+	@And("^User_074 verify the Maintanance screen should be arabic language$")
 	public void user_verify_the_maintanance_screen_should_be_arabic_language() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.mortgageManagementMainLabel_608());
 		for (int i = 0; i <= 300; i++) {
@@ -447,14 +453,14 @@ public class RequestForFinancingSteps_608 {
 	}
 
 //  @AT_RF_040  
-	@Then("^User_608 validate the visibility of Account No input box in limit details$")
+	@Then("^User_074 validate the visibility of Account No input box in limit details$")
 	public void user_validate_the_visibility_of_account_no_input_box_in_limit_details() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.limitDetailsAccNoInput_608());
 		boolean accNoDisplayed = requestForFinancingObj608.limitDetailsAccNoInput_608().isDisplayed();
 		Assert.assertEquals(true, accNoDisplayed);
 	}
 
-	@Then("^User_608 validate the visibility of Fund Transfer rate input box in limit details$")
+	@Then("^User_074 validate the visibility of Fund Transfer rate input box in limit details$")
 	public void user_validate_the_visibility_of_fund_transfer_rate_input_box_in_limit_details() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.limitDetailsFundTransferRateInput_608());
@@ -631,15 +637,15 @@ public class RequestForFinancingSteps_608 {
 		applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
 	}
 
-//  @AT_RF_098_User_608
-	@And("^User_608 clicks on the search button in Application for financial facility main screen$")
+//  @AT_RF_098_User_074
+	@And("^User_074 clicks on the search button in Application for financial facility main screen$")
 	public void user_clicks_on_the_search_button_in_application_for_financial_facility_main_screen() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.applicationFinancialFacilitySearchBtn_608());
 		requestForFinancingObj608.applicationFinancialFacilitySearchBtn_608().click();
 	}
 
-	@And("^User_608 search the code in Application for financial facility main screen$")
+	@And("^User_074 search the code in Application for financial facility main screen$")
 	public void user_search_the_code_in_application_for_financial_facility_main_screen() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				applicationFinancialFacilityObj608.applicationFinancialFacilitySearchCode_608());
@@ -647,7 +653,7 @@ public class RequestForFinancingSteps_608 {
 				.sendKeys(testData.get("Search Code"), Keys.ENTER);
 	}
 
-	@And("^User_608 double click searched record in Application for financial facility main screen$")
+	@And("^User_074 double click searched record in Application for financial facility main screen$")
 	public void user_double_click_searched_record_in_application_for_financial_facility_main_screen() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				applicationFinancialFacilityObj608.applicationFinancialFacilitySearchResult_608());
@@ -655,7 +661,7 @@ public class RequestForFinancingSteps_608 {
 				.doubleClick(applicationFinancialFacilityObj608.applicationFinancialFacilitySearchResult_608());
 	}
 
-	@And("^User_608 clicks on the Approval committee button$")
+	@And("^User_074 clicks on the Approval committee button$")
 	public void user_clicks_on_the_approval_committee_button() throws Throwable {
 		for (int i = 0; i <= 500; i++) {
 			try {
@@ -673,21 +679,21 @@ public class RequestForFinancingSteps_608 {
 		requestForFinancingObj608.applicationFinancialFacilityApprovalCommittieeBtn_608().click();
 	}
 
-	@And("^User_608 click the User1 name in Recommented by column$")
+	@And("^User_074 click the User1 name in Recommented by column$")
 	public void user_click_the_user1_name_in_recommented_by_column() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.applicationFinancialFacilityApprovalCommittieeRecommendByLabel_608());
 		requestForFinancingObj608.applicationFinancialFacilityApprovalCommittieeRecommendByLabel_608().click();
 	}
 
-	@And("^User_608 clicks on the more comments button$")
+	@And("^User_074 clicks on the more comments button$")
 	public void user_clicks_on_the_more_comments_button() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.applicationFinancialFacilityApprovalCommittieeMoreCommentsBtn_608());
 		requestForFinancingObj608.applicationFinancialFacilityApprovalCommittieeMoreCommentsBtn_608().click();
 	}
 
-	@Then("^User_608 validate the more comments text in input field$")
+	@Then("^User_074 validate the more comments text in input field$")
 	public void user_validate_the_more_comments_text_in_input_field() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.applicationFinancialFacilityApprovalCommittieeMoreCommentsText_608());
@@ -698,20 +704,20 @@ public class RequestForFinancingSteps_608 {
 	}
 
 //  @AT_RF_099_FMSParam
-	@And("^User_608 clicks the Application Requirements Details option$")
+	@And("^User_074 clicks the Application Requirements Details option$")
 	public void user_clicks_the_application_requirements_details_option() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.applicationReqDetails_608());
 		facilityTypeObj608.applicationReqDetails_608().click();
 	}
 
-	@And("^User_608 select the collateral as application level$")
+	@And("^User_074 select the collateral as application level$")
 	public void user_select_the_collateral_as_application_level() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.selectCollateral_608());
 		facilityTypeObj608.selectCollateral_608().click();
 		dropDownHelper.SelectUsingVisibleText(facilityTypeObj608.selectCollateral_608(), testData.get("Collateral"));
 	}
 
-	@And("^User_608 select the Collaterals defined at the level of as sublimit$")
+	@And("^User_074 select the Collaterals defined at the level of as sublimit$")
 	public void user_select_the_collaterals_defined_at_the_level_of_as_sublimit() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.selectCollateralDefinedLevel_608());
 		facilityTypeObj608.selectCollateralDefinedLevel_608().click();
@@ -727,7 +733,7 @@ public class RequestForFinancingSteps_608 {
 		}
 	}
 
-	@And("^User_608 validate visibility of Collateral details button under limit details tab$")
+	@And("^User_074 validate visibility of Collateral details button under limit details tab$")
 	public void user_validate_visibility_of_collateral_details_button_under_limit_details_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				applicationFinancialFacilityObj608.limitDetailsCollateralDetailsBtn_608());
@@ -737,20 +743,20 @@ public class RequestForFinancingSteps_608 {
 	}
 
 //  @AT_RF_157
-	@And("^User_608 clicks on the Draw Down request module under WIFAK Application$")
+	@And("^User_074 clicks on the Draw Down request module under WIFAK Application$")
 	public void user_clicks_on_the_draw_down_request_module_under_WIFAK_Application() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.wifakApplicationDrawDownRequest_608());
 		requestForFinancingObj608.wifakApplicationDrawDownRequest_608().click();
 	}
 
-	@And("^User_608 clicks on the Maintanance under Draw Down request in WIFAK Application$")
+	@And("^User_074 clicks on the Maintanance under Draw Down request in WIFAK Application$")
 	public void user_clicks_on_the_maintanance_under_draw_down_request_in_WIFAK_Application() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawDownRequestMaintanance_608());
 		requestForFinancingObj608.drawDownRequestMaintanance_608().click();
 	}
 
-	@And("^User_608 enter the Facility Reference in main screen under WIFAK Draw Down request$")
+	@And("^User_074 enter the Facility Reference in main screen under WIFAK Draw Down request$")
 	public void user_enter_the_facility_reference_in_main_screen_under_WIFAK_draw_down_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainFacilityRef_608());
 //    	requestForFinancingObj608.drawdownMainFacilityRef().sendKeys("1469",Keys.TAB);
@@ -784,7 +790,7 @@ public class RequestForFinancingSteps_608 {
 
 	}
 
-	@And("^User_608 select the draw down type in main screen under Draw Down request$")
+	@And("^User_074 select the draw down type in main screen under Draw Down request$")
 	public void user_select_the_draw_down_type_in_main_screen_under_draw_down_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainDrawDownTypeLookup_608());
 		requestForFinancingObj608.drawdownMainDrawDownTypeLookup_608().click();
@@ -793,20 +799,20 @@ public class RequestForFinancingSteps_608 {
 		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.drawdownMainDrawdownTypeValue_608());
 	}
 
-	@And("^User_608 enter the Description in main screen under Draw Down request$")
+	@And("^User_074 enter the Description in main screen under Draw Down request$")
 	public void user_enter_the_description_in_main_screen_under_draw_down_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainDescription_608());
 //    	requestForFinancingObj608.drawdownMainDescription().sendKeys("Test");
 		requestForFinancingObj608.drawdownMainDescription_608().sendKeys(testData.get("Description"));
 	}
 
-	@And("User_608 click on the draw down additional details tab")
+	@And("User_074 click on the draw down additional details tab")
 	public void user_click_on_the_draw_down_additional_details_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownAdditionalDetailsTab_608());
 		requestForFinancingObj608.drawdownAdditionalDetailsTab_608().click();
 	}
 
-	@And("^User_608 select the product class in additional screen under Draw Down request$")
+	@And("^User_074 select the product class in additional screen under Draw Down request$")
 	public void user_select_the_product_class_in_additional_screen_under_draw_down_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.drawdownAdditionalProductClassLookup_608());
@@ -828,7 +834,7 @@ public class RequestForFinancingSteps_608 {
 		}
 	}
 
-	@And("^User_608 give the FC Amount in additional screen under Draw Down request$")
+	@And("^User_074 give the FC Amount in additional screen under Draw Down request$")
 	public void user_give_the_fc_amount_in_additional_screen_under_draw_down_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownAdditionalFCAmount_608());
 		requestForFinancingObj608.drawdownAdditionalFCAmount_608().clear();
@@ -846,7 +852,7 @@ public class RequestForFinancingSteps_608 {
 		}
 	}
 
-	@And("^User_608 enter the value date in main screen under Draw Down request$")
+	@And("^User_074 enter the value date in main screen under Draw Down request$")
 	public void user_enter_the_value_date_in_main_screen_under_draw_down_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainInfoTab_608());
 		requestForFinancingObj608.drawdownMainInfoTab_608().click();
@@ -856,7 +862,7 @@ public class RequestForFinancingSteps_608 {
 		requestForFinancingObj608.drawdownMainValueDate_608().sendKeys(testData.get("Value Date"), Keys.TAB);
 	}
 
-	@When("^User_608 click the save button under in maintanance under Draw Down request$")
+	@When("^User_074 click the save button under in maintanance under Draw Down request$")
 	public void user_click_the_save_button_under_in_maintanance_under_draw_down_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainSaveBtn_608());
 		requestForFinancingObj608.drawdownMainSaveBtn_608().click();
@@ -884,25 +890,25 @@ public class RequestForFinancingSteps_608 {
 		}
 	}
 
-	@Then("User_608 click on the Verify link under Draw Down request")
+	@Then("User_074 click on the Verify link under Draw Down request")
 	public void user_click_on_the_verify_link_under_draw_down_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawDownRequestVerify_608());
 		requestForFinancingObj608.drawDownRequestVerify_608().click();
 	}
 
-	@And("User_608 click on the clear button in verify under Draw Down request")
+	@And("User_074 click on the clear button in verify under Draw Down request")
 	public void user_click_on_the_clear_button_in_verify_under_draw_down_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownVerifyClearBtn_608());
 		requestForFinancingObj608.drawdownVerifyClearBtn_608().click();
 	}
 
-	@And("User_608 double click on the code in verify under Draw Down request")
+	@And("User_074 double click on the code in verify under Draw Down request")
 	public void user_double_click_on_the_code_in_verify_under_draw_down_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownVerifyCode_608());
 		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.drawdownVerifyCode_608());
 	}
 
-	@When("User_608 click on the verify button in Verify link under Draw Down request")
+	@When("User_074 click on the verify button in Verify link under Draw Down request")
 	public void user_click_on_the_verify_button_in_verify_link_under_draw_down_request() throws Throwable {
 		for (int i = 0; i <= 300; i++) {
 			try {
@@ -942,25 +948,25 @@ public class RequestForFinancingSteps_608 {
 
 	}
 
-	@Then("User_608 click on the Approve link under Draw Down request")
+	@Then("User_074 click on the Approve link under Draw Down request")
 	public void user_click_on_the_approve_link_under_draw_down_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawDownRequestApprove_608());
 		requestForFinancingObj608.drawDownRequestApprove_608().click();
 	}
 
-	@And("User_608 click on the clear button in Approve under Draw Down request")
+	@And("User_074 click on the clear button in Approve under Draw Down request")
 	public void user_click_on_the_clear_button_in_approve_under_draw_down_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownApproveClearBtn_608());
 		requestForFinancingObj608.drawdownApproveClearBtn_608().click();
 	}
 
-	@And("User_608 double click on the code in Approve under Draw Down request")
+	@And("User_074 double click on the code in Approve under Draw Down request")
 	public void user_double_click_on_the_code_in_approve_under_draw_down_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownApproveCode_608());
 		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.drawdownApproveCode_608());
 	}
 
-	@When("User_608 click on the Approve button in Approve link under Draw Down request")
+	@When("User_074 click on the Approve button in Approve link under Draw Down request")
 	public void user_click_on_the_approve_button_in_approve_link_under_draw_down_request() throws Throwable {
 		for (int i = 0; i <= 300; i++) {
 			try {
@@ -988,7 +994,7 @@ public class RequestForFinancingSteps_608 {
 
 	}
 
-	@Then("User_608 again clicks on the Maintanance under Draw Down request")
+	@Then("User_074 again clicks on the Maintanance under Draw Down request")
 	public void user_again_clicks_on_the_maintanance_under_draw_down_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawDownRequestMaintanance_608());
 		requestForFinancingObj608.drawDownRequestMaintanance_608().click();
@@ -997,65 +1003,65 @@ public class RequestForFinancingSteps_608 {
 		applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
 	}
 
-	@And("User_608 clicks on the search button in main screen under Draw Down request")
+	@And("User_074 clicks on the search button in main screen under Draw Down request")
 	public void user_clicks_on_the_search_button_in_main_screen_under_draw_down_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainSearchBtn_608());
 		requestForFinancingObj608.drawdownMainSearchBtn_608().click();
 	}
 
-	@And("User_608 click the clear button in main screen under Draw Down request")
+	@And("User_074 click the clear button in main screen under Draw Down request")
 	public void user_click_the_clear_button_in_main_screen_under_draw_down_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainClearBtn_608());
 		requestForFinancingObj608.drawdownMainClearBtn_608().click();
 	}
 
-	@And("User_608 double click on the first line code in main screen under Draw Down request")
+	@And("User_074 double click on the first line code in main screen under Draw Down request")
 	public void user_double_click_on_the_first_line_code_in_main_screen_under_draw_down_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainCode_608());
 		requestForFinancingObj608.drawdownMainCode_608().click();
 	}
 
-	@And("User_608 click on the Status Details button in main screen under Draw Down request")
+	@And("User_074 click on the Status Details button in main screen under Draw Down request")
 	public void user_click_on_the_status_details_button_in_main_screen_under_draw_down_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainStatusDetailsBtn_608());
 		requestForFinancingObj608.drawdownMainStatusDetailsBtn_608().click();
 	}
 
-	@And("User_608 verify the Status Details tab User Name in main screen under Draw Down request")
+	@And("User_074 verify the Status Details tab User Name in main screen under Draw Down request")
 	public void user_verify_the_status_details_tab_user_name_in_main_screen_under_draw_down_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.drawdownMainStatusDetailsTab_608());
 		String userName = requestForFinancingObj608.drawdownMainStatusDetailsUserName_608().getAttribute("title");
-		System.out.println("User_608 Name: " + userName);
+		System.out.println("User_074 Name: " + userName);
 	}
 
-	@Then("User_608 clicks on the Facility Closure Request module")
+	@Then("User_074 clicks on the Facility Closure Request module")
 	public void user_clicks_on_the_facility_closure_request_module() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.wifakApplicationFacilityClosureRequest_608());
 		requestForFinancingObj608.wifakApplicationFacilityClosureRequest_608().click();
 	}
 
-	@And("User_608 click on the Maintanance under Facility Closure Request module")
+	@And("User_074 click on the Maintanance under Facility Closure Request module")
 	public void user_click_on_the_maintanance_under_facility_closure_request_module() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.facilityClosureRequestMaintanance_608());
 		requestForFinancingObj608.facilityClosureRequestMaintanance_608().click();
 	}
 
-	@And("User_608 enter the Facility ref in main screen under Facility Closure Request")
+	@And("User_074 enter the Facility ref in main screen under Facility Closure Request")
 	public void user_enter_the_facility_ref_in_main_screen_under_facility_closure_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityClosureMainFacilityRef_608());
 		requestForFinancingObj608.facilityClosureMainFacilityRef_608().sendKeys("1336", Keys.TAB);
 	}
 
-	@And("User_608 enter the Closure reason in main screen under Facility Closure Request")
+	@And("User_074 enter the Closure reason in main screen under Facility Closure Request")
 	public void user_enter_the_closure_reason_in_main_screen_under_facility_closure_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.facilityClosureMainClosureReason_608());
 		requestForFinancingObj608.facilityClosureMainClosureReason_608().sendKeys("test");
 	}
 
-	@And("User_608 click on the Save button in main screen under Facility Closure Request")
+	@And("User_074 click on the Save button in main screen under Facility Closure Request")
 	public void user_click_on_the_save_button_in_main_screen_under_facility_closure_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityClosureMainSaveBtn_608());
 		requestForFinancingObj608.facilityClosureMainSaveBtn_608().click();
@@ -1071,25 +1077,25 @@ public class RequestForFinancingSteps_608 {
 		requestForFinancingObj608.facilityClosureMainSendAlertPopup_608().click();
 	}
 
-	@Then("User_608 clicks on the Approve under Facility Closure Request module")
+	@Then("User_074 clicks on the Approve under Facility Closure Request module")
 	public void user_clicks_on_the_approve_under_facility_closure_request_module() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityClosureRequestApprove_608());
 		requestForFinancingObj608.facilityClosureRequestApprove_608().click();
 	}
 
-	@And("User_608 click on the clear button in approve screen under Facility Closure Request")
+	@And("User_074 click on the clear button in approve screen under Facility Closure Request")
 	public void user_click_on_the_clear_button_in_approve_screen_under_facility_closure_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityClosureApproveClearBtn_608());
 		requestForFinancingObj608.facilityClosureApproveClearBtn_608().click();
 	}
 
-	@And("User_608 double click on the code in approve screen under Facility Closure Request")
+	@And("User_074 double click on the code in approve screen under Facility Closure Request")
 	public void user_double_click_on_the_code_in_approve_screen_under_facility_closure_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityClosureApproveCode_608());
 		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.facilityClosureApproveCode_608());
 	}
 
-	@When("User_608 click on the Approve button in approve screen under Facility Closure Request")
+	@When("User_074 click on the Approve button in approve screen under Facility Closure Request")
 	public void user_click_on_the_approve_button_in_approve_screen_under_facility_closure_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityClosureApproveBtn_608());
 		requestForFinancingObj608.facilityClosureApproveBtn_608().click();
@@ -1101,7 +1107,7 @@ public class RequestForFinancingSteps_608 {
 		applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
 	}
 
-	@Then("User_608 again click the Maintanance under Facility Closure Request module")
+	@Then("User_074 again click the Maintanance under Facility Closure Request module")
 	public void user_again_click_the_maintanance_under_facility_closure_request_module() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.facilityClosureRequestMaintanance_608());
@@ -1111,21 +1117,21 @@ public class RequestForFinancingSteps_608 {
 		applicationFinancialFacilityObj608.WarningPopupOkBtn_608().click();
 	}
 
-	@And("User_608 click on the search button in main screen under Facility Closure Request")
+	@And("User_074 click on the search button in main screen under Facility Closure Request")
 	public void user_click_on_the_search_button_in_main_screen_under_facility_closure_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityClosureMainSearchBtn_608());
 		requestForFinancingObj608.facilityClosureMainSearchBtn_608().click();
 
 	}
 
-	@And("User_608 double click on the code in main screen under Facility Closure Request")
+	@And("User_074 double click on the code in main screen under Facility Closure Request")
 	public void user_double_click_on_the_code_in_main_screen_under_facility_closure_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.facilityClosureMainCode_608());
 		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.facilityClosureMainCode_608());
 
 	}
 
-	@And("User_608 click the Status details button in main screen under Facility Closure Request")
+	@And("User_074 click the Status details button in main screen under Facility Closure Request")
 	public void user_click_the_status_details_button_in_main_screen_under_facility_closure_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.facilityClosureMainStatusDetailsBtn_608());
@@ -1133,7 +1139,7 @@ public class RequestForFinancingSteps_608 {
 
 	}
 
-	@Then("User_608 verify the Status details tab in main screen under Facility Closure Request")
+	@Then("User_074 verify the Status details tab in main screen under Facility Closure Request")
 	public void user_verify_the_status_details_tab_in_main_screen_under_facility_closure_request() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.facilityClosureMainStatusDetailsTab_608());
@@ -1142,7 +1148,7 @@ public class RequestForFinancingSteps_608 {
 	}
 
 //	@AT_RF_141
-	@And("User_608 clicks on the Request module")
+	@And("User_074 clicks on the Request module")
 	public void user_clicks_on_the_request_module() throws Throwable {
 		for (int i = 0; i <= 300; i++) {
 			try {
@@ -1158,39 +1164,39 @@ public class RequestForFinancingSteps_608 {
 		requestForFinancingObj608.FMSCoreRequestModule_608().click();
 	}
 
-	@And("User_608 clicks on the Request Financing under Request module")
+	@And("User_074 clicks on the Request Financing under Request module")
 	public void user_clicks_on_the_request_financing_under_request_module() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.requestFinancingFeature_608());
 		requestForFinancingObj608.requestFinancingFeature_608().click();
 	}
 
-	@And("User_608 clicks on the Request for Financing under Request Financing feature")
+	@And("User_074 clicks on the Request for Financing under Request Financing feature")
 	public void user_clicks_on_the_request_for_financing_under_request_financing_feature() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.requestForFinancingFeature_608());
 		requestForFinancingObj608.requestForFinancingFeature_608().click();
 	}
 
-	@And("User_608 clicks on the Maintanance screen under Request for Financing")
+	@And("User_074 clicks on the Maintanance screen under Request for Financing")
 	public void user_clicks_on_the_maintanance_screen_under_request_for_financing() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.requestForFinancingMaintanance_608());
 		requestForFinancingObj608.requestForFinancingMaintanance_608().click();
 	}
 
-	@And("User_608 click the search button under the maintanance screen in Request for Financing")
+	@And("User_074 click the search button under the maintanance screen in Request for Financing")
 	public void user_click_the_search_button_under_the_maintanance_screen_in_request_for_financing() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.requestForFinancingMaintananceSearchBtn_608());
 		requestForFinancingObj608.requestForFinancingMaintananceSearchBtn_608().click();
 	}
 
-	@And("User_608 click the clear button under the maintanance screen in Request for Financing")
+	@And("User_074 click the clear button under the maintanance screen in Request for Financing")
 	public void user_click_the_clear_button_under_the_maintanance_screen_in_request_for_financing() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.requestForFinancingMaintananceClearBtn_608());
 		requestForFinancingObj608.requestForFinancingMaintananceClearBtn_608().click();
 	}
 
-	@Then("User_608 validate the CIF short Name available under the maintanance screen in Request for Financing")
+	@Then("User_074 validate the CIF short Name available under the maintanance screen in Request for Financing")
 	public void user_validate_the_cif_short_name_available_under_the_maintanance_screen_in_request_for_financing()
 			throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
@@ -1205,7 +1211,7 @@ public class RequestForFinancingSteps_608 {
 
 	}
 
-	@And("User_608 validate the CIF long Name available under the maintanance screen in Request for Financing")
+	@And("User_074 validate the CIF long Name available under the maintanance screen in Request for Financing")
 	public void user_validate_the_cif_long_name_available_under_the_maintanance_screen_in_request_for_financing()
 			throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
@@ -1220,44 +1226,44 @@ public class RequestForFinancingSteps_608 {
 	}
 
 //	@AT_RF_141_arabic
-	@And("^User_608 click on the language option in FMS core$")
+	@And("^User_074 click on the language option in FMS core$")
 	public void user_click_on_the_language_option_in_fms_core() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.FMSCoreLanguageBtn_608());
 		requestForFinancingObj608.FMSCoreLanguageBtn_608().click();
 	}
 
-	@And("^User_608 click on the arabic under language option$")
+	@And("^User_074 click on the arabic under language option$")
 	public void user_click_on_the_arabic_under_language_option() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.arabicLanguage_608());
 		requestForFinancingObj608.arabicLanguage_608().click();
 	}
 
-	@And("User_608 clicks on the Funding Request module in arabic")
+	@And("User_074 clicks on the Funding Request module in arabic")
 	public void user_clicks_on_the_funding_request_module_in_arabic() {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.arabicFundingRequest_608());
 		requestForFinancingObj608.arabicFundingRequest_608().click();
 	}
 
-	@And("User_608 clicks on the Request under Funding Request")
+	@And("User_074 clicks on the Request under Funding Request")
 	public void user_clicks_on_the_request_under_funding_request() {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.arabicRequest_608());
 		requestForFinancingObj608.arabicRequest_608().click();
 	}
 
-	@And("User_608 clicks on the Funding Request in Request under Funding Request")
+	@And("User_074 clicks on the Funding Request in Request under Funding Request")
 	public void user_clicks_on_the_funding_request_in_request_under_funding_request() {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.arabicRequestFundingRequest_608());
 		requestForFinancingObj608.arabicRequestFundingRequest_608().click();
 	}
 
-	@And("User_608 click the approval committee under Funding Request in Request")
+	@And("User_074 click the approval committee under Funding Request in Request")
 	public void user_click_the_approval_committee_under_funding_request_in_request() {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.arabicFundingRequestApprovalCommittee_608());
 		requestForFinancingObj608.arabicFundingRequestApprovalCommittee_608().click();
 	}
 
-	@Then("User_608 validate the search grid value are displayed in arbic language under approval committee")
+	@Then("User_074 validate the search grid value are displayed in arbic language under approval committee")
 	public void user_validate_the_search_grid_value_are_displayed_in_arbic_language_under_approval_committee() {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.arabicApprovalCommitteeSearchGrid_608());
@@ -1266,7 +1272,7 @@ public class RequestForFinancingSteps_608 {
 	}
 
 //	@AT_FM_043_FMSParam
-	@And("User_608 uncheck the Committee Approval flag")
+	@And("User_074 uncheck the Committee Approval flag")
 	public void user_uncheck_the_committee_approval_flag() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.committeeApprovalFlag_608());
 		WebElement committeeApprovalFlag = facilityTypeObj608.committeeApprovalFlag_608();
@@ -1275,7 +1281,7 @@ public class RequestForFinancingSteps_608 {
 		}
 	}
 
-	@And("User_608 select the member as atleast one under Committee approval flag")
+	@And("User_074 select the member as atleast one under Committee approval flag")
 	public void user_select_the_member_as_atleast_one_under_committee_approval_flag() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.committeeApprovalFlagMemberDropdown_608());
 		dropDownHelper.SelectUsingVisibleText(facilityTypeObj608.committeeApprovalFlagMemberDropdown_608(),
@@ -1283,7 +1289,7 @@ public class RequestForFinancingSteps_608 {
 	}
 
 //	@AT_FM_043_FMSCore	
-	@And("User_608 select the Reason for submission under main screen in Request for Financing")
+	@And("User_074 select the Reason for submission under main screen in Request for Financing")
 	public void user_select_the_reason_for_submission_under_main_screen_in_request_for_financing() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.requestForFinancingMainReasonForDropdown_608());
@@ -1291,7 +1297,7 @@ public class RequestForFinancingSteps_608 {
 				testData.get("Reason For Submission"));
 	}
 
-	@And("User_608 enter the CIF no in main screen under Request for Financing")
+	@And("User_074 enter the CIF no in main screen under Request for Financing")
 	public void user_enter_the_cif_no_in_main_screen_under_request_for_financing() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.requestForFinancingMainCustomerInput_608());
@@ -1310,7 +1316,7 @@ public class RequestForFinancingSteps_608 {
 		}
 	}
 
-	@And("User_608 enter the facility type in main screen under Request for Financing")
+	@And("User_074 enter the facility type in main screen under Request for Financing")
 	public void user_enter_the_facility_type_in_main_screen_under_request_for_financing() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.requestForFinancingMainFacilityTypeInput_608());
@@ -1329,7 +1335,7 @@ public class RequestForFinancingSteps_608 {
 		}
 	}
 
-	@And("User_608 enter the total limit in main screen under Request for Financing")
+	@And("User_074 enter the total limit in main screen under Request for Financing")
 	public void user_enter_the_total_limit_in_main_screen_under_request_for_financing() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.requestForFinancingMainTotalLimitInput_608());
@@ -1348,14 +1354,14 @@ public class RequestForFinancingSteps_608 {
 		}
 	}
 
-	@And("User_608 move to the sublimit tab in main screen under Request for Financing")
+	@And("User_074 move to the sublimit tab in main screen under Request for Financing")
 	public void user_move_to_the_sublimit_tab_in_main_screen_under_request_for_financing() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.requestForFinancingMainSublimitTab_608());
 		requestForFinancingObj608.requestForFinancingMainSublimitTab_608().click();
 	}
 
-	@And("User_608 click the add new button in sublimit tab under main screen in Request for Financing")
+	@And("User_074 click the add new button in sublimit tab under main screen in Request for Financing")
 	public void user_click_the_add_new_button_in_sublimit_tab_under_main_screen_in_request_for_financing()
 			throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
@@ -1363,7 +1369,7 @@ public class RequestForFinancingSteps_608 {
 		requestForFinancingObj608.requestForFinancingMainSublimitTabAddNewBtn_608().click();
 	}
 
-	@And("User_608 enter the product class in limit details tab under sublimit tab")
+	@And("User_074 enter the product class in limit details tab under sublimit tab")
 	public void user_enter_the_product_class_in_limit_details_tab_under_sublimit_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.requestForFinancingMainSublimitTabProductClassInput_608());
@@ -1382,7 +1388,7 @@ public class RequestForFinancingSteps_608 {
 		}
 	}
 
-	@And("User_608 enter the margin value in limit details tab under sublimit tab")
+	@And("User_074 enter the margin value in limit details tab under sublimit tab")
 	public void user_enter_the_margin_value_in_limit_details_tab_under_sublimit_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.requestForFinancingMainSublimitTabAddNewMarginInput_608());
@@ -1391,7 +1397,7 @@ public class RequestForFinancingSteps_608 {
 				.sendKeys(testData.get("Margin Value"), Keys.TAB);
 	}
 
-	@And("User_608 click the add button in limit details tab under sublimit tab")
+	@And("User_074 click the add button in limit details tab under sublimit tab")
 	public void user_click_the_add_button_in_limit_details_tab_under_sublimit_tab() throws Throwable {
 		for (int i = 0; i <= 300; i++) {
 			try {
@@ -1409,7 +1415,7 @@ public class RequestForFinancingSteps_608 {
 		requestForFinancingObj608.requestForFinancingMainSublimitTabAddBtn_608().click();
 	}
 
-	@When("User_608 click the Save button in main screen under Request for Financing")
+	@When("User_074 click the Save button in main screen under Request for Financing")
 	public void user_click_the_save_button_in_main_screen_under_request_for_financing() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.requestForFinancingMainSaveBtn_608());
 		requestForFinancingObj608.requestForFinancingMainSaveBtn_608().click();
@@ -1431,7 +1437,7 @@ public class RequestForFinancingSteps_608 {
 
 	}
 
-	@And("User_608 click the Validate button in main screen Request for Financing")
+	@And("User_074 click the Validate button in main screen Request for Financing")
 	public void user_click_the_validate_button_in_main_screen_request_for_financing() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.requestForFinancingMainValidateBtn_608());
@@ -1484,14 +1490,14 @@ public class RequestForFinancingSteps_608 {
 
 	}
 
-	@Then("User_608 click the approve level1 under Request for Financing")
+	@Then("User_074 click the approve level1 under Request for Financing")
 	public void user_click_the_approve_level1_under_request_for_financing() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.requestForFinancingApproveLevel1_608());
 		requestForFinancingObj608.requestForFinancingApproveLevel1_608().click();
 	}
 
-	@And("User_608 enter the request code in approve level1 under Request for Financing")
+	@And("User_074 enter the request code in approve level1 under Request for Financing")
 	public void user_enter_the_request_code_in_approve_level1_under_request_for_financing() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.requestForFinancingApproveLevel1Code_608());
@@ -1499,14 +1505,14 @@ public class RequestForFinancingSteps_608 {
 				Keys.ENTER);
 	}
 
-	@And("User_608 double click on the first row in approve level1 under Request for Financing")
+	@And("User_074 double click on the first row in approve level1 under Request for Financing")
 	public void user_double_click_on_the_first_row_in_approve_level1_under_request_for_financing() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.requestForFinancingApproveLevel1FirstRow_608());
 		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.requestForFinancingApproveLevel1FirstRow_608());
 	}
 
-	@And("User_608 move to customer grading tab in approve level1 under Request for Financing")
+	@And("User_074 move to customer grading tab in approve level1 under Request for Financing")
 	public void user_move_to_customer_grading_tab_in_approve_level1_under_request_for_financing() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.approveLevel1CustomerGradingTab_608());
@@ -1523,7 +1529,7 @@ public class RequestForFinancingSteps_608 {
 
 	}
 
-	@And("User_608 select the approve level1 recommendation decision as forward in approve level1 under Request for Financing")
+	@And("User_074 select the approve level1 recommendation decision as forward in approve level1 under Request for Financing")
 	public void user_select_the_approve_level1_recommendation_decision_as_forward_in_approve_level1_under_request_for_financing()
 			throws Throwable {
 		for (int i = 0; i <= 300; i++) {
@@ -1542,7 +1548,7 @@ public class RequestForFinancingSteps_608 {
 				testData.get("Approve1 Decision"));
 	}
 
-	@And("User_608 select the decision forward to as approval committee in approve level1 under Request for Financing")
+	@And("User_074 select the decision forward to as approval committee in approve level1 under Request for Financing")
 	public void user_select_the_decision_forward_to_as_approval_committee_in_approve_level1_under_request_for_financing()
 			throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
@@ -1552,7 +1558,7 @@ public class RequestForFinancingSteps_608 {
 				testData.get("Decision Forward To"));
 	}
 
-	@And("User_608 select the approval committee in approve level1 under Request for Financing")
+	@And("User_074 select the approval committee in approve level1 under Request for Financing")
 	public void user_select_the_approval_committee_in_approve_level1_under_request_for_financing() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.approveLevel1CustomerGradingApproveCommittee_608());
@@ -1562,7 +1568,7 @@ public class RequestForFinancingSteps_608 {
 
 	}
 
-	@And("User_608 click the Approve button in approve level1 under Request for Financing")
+	@And("User_074 click the Approve button in approve level1 under Request for Financing")
 	public void user_click_the_approve_button_in_approve_level1_under_request_for_financing() throws Throwable {
 		for (int i = 0; i <= 300; i++) {
 			try {
@@ -1596,14 +1602,14 @@ public class RequestForFinancingSteps_608 {
 
 	}
 
-	@Then("User_608 click the Approval committee recommendation under Request for Financing")
+	@Then("User_074 click the Approval committee recommendation under Request for Financing")
 	public void user_click_the_approval_committee_recommendation_under_request_for_financing() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.requestForFinancingApprovalCommitteeRecom_608());
 		requestForFinancingObj608.requestForFinancingApprovalCommitteeRecom_608().click();
 	}
 
-	@And("User_608 enter the code in Approval committee recommendation under Request for Financing")
+	@And("User_074 enter the code in Approval committee recommendation under Request for Financing")
 	public void user_enter_the_code_in_approval_committee_recommendation_under_request_for_financing()
 			throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
@@ -1612,7 +1618,7 @@ public class RequestForFinancingSteps_608 {
 				.sendKeys(testData.get("Request Code"), Keys.ENTER);
 	}
 
-	@And("User_608 double click on the first row in Approval committee recommendation under Request for Financing")
+	@And("User_074 double click on the first row in Approval committee recommendation under Request for Financing")
 	public void user_double_click_on_the_first_row_in_approval_committee_recommendation_under_request_for_financing()
 			throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
@@ -1621,7 +1627,7 @@ public class RequestForFinancingSteps_608 {
 				.doubleClick(requestForFinancingObj608.requestForFinancingApprovalCommitteeRecomRow1_608());
 	}
 
-	@And("User_608 move to credit committee recommendation tab in approval committee under Request for Financing")
+	@And("User_074 move to credit committee recommendation tab in approval committee under Request for Financing")
 	public void user_move_to_credit_committee_recommendation_tab_in_approval_committee_under_request_for_financing()
 			throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
@@ -1639,21 +1645,21 @@ public class RequestForFinancingSteps_608 {
 
 	}
 
-	@And("User_608 click the Recommendation division in credit committee under approval committee")
+	@And("User_074 click the Recommendation division in credit committee under approval committee")
 	public void user_click_the_recommendation_division_in_credit_committee_under_approval_committee() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.approvalCommitteeCreditCommitteeRecommDiv_608());
 		requestForFinancingObj608.approvalCommitteeCreditCommitteeRecommDiv_608().click();
 	}
 
-	@And("User_608 click the plus icon in Recommendation division under credit committee")
+	@And("User_074 click the plus icon in Recommendation division under credit committee")
 	public void user_click_the_plus_icon_in_recommendation_division_under_credit_committee() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.approvalCommitteeCreditCommitteeRecommPlusIcon_608());
 		requestForFinancingObj608.approvalCommitteeCreditCommitteeRecommPlusIcon_608().click();
 	}
 
-	@And("User_608 select the Recommendation dropdown in Recommendation division under credit committee")
+	@And("User_074 select the Recommendation dropdown in Recommendation division under credit committee")
 	public void user_select_the_recommendation_dropdown_in_recommendation_division_under_credit_committee()
 			throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
@@ -1667,7 +1673,7 @@ public class RequestForFinancingSteps_608 {
 				testData.get("Recommendation"));
 	}
 
-	@When("User_608 click the Recommendation button under Approval committee recommendation")
+	@When("User_074 click the Recommendation button under Approval committee recommendation")
 	public void user_click_the_recommendation_button_under_approval_committee_recommendation() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.approvalCommitteeRecommendationBtn_608());
@@ -1691,7 +1697,7 @@ public class RequestForFinancingSteps_608 {
 	}
 
 //	@AT_DDR_021
-	@And("User_608 enter the Down Payment Percentage in main screen under Request for Financing")
+	@And("User_074 enter the Down Payment Percentage in main screen under Request for Financing")
 	public void user_enter_the_down_payment_percentage_in_main_screen_under_request_for_financing() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.requestForFinancingMainDownPaymentPercentInput_608());
@@ -1710,7 +1716,7 @@ public class RequestForFinancingSteps_608 {
 		}
 	}
 
-	@And("User_608 enter the product class Down Payment Percentage in limit details tab under sublimit tab")
+	@And("User_074 enter the product class Down Payment Percentage in limit details tab under sublimit tab")
 	public void user_enter_the_product_class_down_payment_percentage_in_limit_details_tab_under_sublimit_tab()
 			throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
@@ -1730,7 +1736,7 @@ public class RequestForFinancingSteps_608 {
 		}
 	}
 
-	@And("User_608 select the approve level1 recommendation decision as approve in approve level1 under Request for Financing")
+	@And("User_074 select the approve level1 recommendation decision as approve in approve level1 under Request for Financing")
 	public void user_select_the_approve_level1_recommendation_decision_as_approve_in_approve_level1_under_request_for_financing()
 			throws Throwable {
 		for (int i = 0; i <= 300; i++) {
@@ -1748,7 +1754,7 @@ public class RequestForFinancingSteps_608 {
 				requestForFinancingObj608.approveLevel1CustomerGradingApproveDecision_608(), testData.get("Decision"));
 	}
 
-	@And("User_608 validate the Down Payment percentage should be correctly in approve level1 under Request for Financing")
+	@And("User_074 validate the Down Payment percentage should be correctly in approve level1 under Request for Financing")
 	public void user_validate_the_down_payment_percentage_should_be_correctly_in_approve_level1_under_request_for_financing()
 			throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
@@ -1759,19 +1765,19 @@ public class RequestForFinancingSteps_608 {
 	}
 
 //  @AT_RF_101_FMSParam
-	@And("^User_608 clicks on the Document checklist feature$")
+	@And("^User_074 clicks on the Document checklist feature$")
 	public void user_clicks_on_the_document_checklist_feature() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.paramDocumentChecklist_608());
 		facilityTypeObj608.paramDocumentChecklist_608().click();
 	}
 
-	@And("^User_608 clicks on the update after approve menu in Document checklist$")
+	@And("^User_074 clicks on the update after approve menu in Document checklist$")
 	public void user_clicks_on_the_update_after_approve_menu_in_document_checklist() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.documentChecklistUpdateAfterApprove_608());
 		facilityTypeObj608.documentChecklistUpdateAfterApprove_608().click();
 	}
 
-	@And("^User_608 retrive the one data in update after approve in Document checklist$")
+	@And("^User_074 retrive the one data in update after approve in Document checklist$")
 	public void user_retrive_the_one_data_in_update_after_approve_in_document_checklist() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.documentChecklistCode_608());
 		for (int i = 0; i <= 300; i++) {
@@ -1787,7 +1793,7 @@ public class RequestForFinancingSteps_608 {
 
 	}
 
-	@And("^User_608 click the add new button under update after approve in Document checklist$")
+	@And("^User_074 click the add new button under update after approve in Document checklist$")
 	public void user_click_the_add_new_button_under_update_after_approve_in_document_checklist() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.documentChecklistRow2_608());
 		facilityTypeObj608.documentChecklistRow2_608().click();
@@ -1799,7 +1805,7 @@ public class RequestForFinancingSteps_608 {
 		facilityTypeObj608.documentChecklistAddNewBtn_608().click();
 	}
 
-	@And("^User_608 add the new record under Document details in update after approve$")
+	@And("^User_074 add the new record under Document details in update after approve$")
 	public void user_add_the_new_record_under_document_details_in_update_after_approve() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.documentChecklistRow2_608());
 		facilityTypeObj608.documentChecklistRow2_608().click();
@@ -1812,7 +1818,7 @@ public class RequestForFinancingSteps_608 {
 
 	}
 
-	@And("^User_608 clicks on the update button under the update after approve in Document checklist$")
+	@And("^User_074 clicks on the update button under the update after approve in Document checklist$")
 	public void user_clicks_on_the_update_button_under_the_update_after_approve_in_document_checklist()
 			throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.documentChecklistUpdateBtn_608());
@@ -1826,19 +1832,19 @@ public class RequestForFinancingSteps_608 {
 
 	}
 
-	@And("^User_608 move to the approve menu under Document checklist$")
+	@And("^User_074 move to the approve menu under Document checklist$")
 	public void user_move_to_the_approve_menu_under_document_checklist() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.documentChecklistApproveMenu_608());
 		facilityTypeObj608.documentChecklistApproveMenu_608().click();
 	}
 
-	@And("^User_608 retrive the first data in approve under Document checklist$")
+	@And("^User_074 retrive the first data in approve under Document checklist$")
 	public void user_retrive_the_first_data_in_approve_under_document_checklist() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.documentChecklistApproveCode_608());
 		clicksAndActionsHelper.doubleClick(facilityTypeObj608.documentChecklistApproveCode_608());
 	}
 
-	@And("^User_608 clicks on the Approve button under approve in Document checklist$")
+	@And("^User_074 clicks on the Approve button under approve in Document checklist$")
 	public void user_clicks_on_the_approve_button_under_approve_in_document_checklist() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.documentChecklistApproveBtn_608());
 		for (int i = 0; i < 300; i++) {
@@ -1867,13 +1873,13 @@ public class RequestForFinancingSteps_608 {
 		applicationFinancialFacilityObj608.SuccessPopupOkBtn_608().click();
 	}
 
-	@And("^User_608 clicks on the Document management tab in update after approve menu$")
+	@And("^User_074 clicks on the Document management tab in update after approve menu$")
 	public void user_clicks_on_the_document_management_tab_in_update_after_approve_menu() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.facilityTypeDocManagementTab_608());
 		facilityTypeObj608.facilityTypeDocManagementTab_608().click();
 	}
 
-	@And("^User_608 check the Application creation checkbox under Document management tab$")
+	@And("^User_074 check the Application creation checkbox under Document management tab$")
 	public void user_check_the_application_creation_checkbox_under_document_management_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, facilityTypeObj608.applicationCreationLabel_608());
 		facilityTypeObj608.applicationCreationLabel_608().click();
@@ -1885,19 +1891,19 @@ public class RequestForFinancingSteps_608 {
 	}
 
 //  @AT_RF_158_Param
-	@And("^User_608 clicks on the Collateral type module$")
+	@And("^User_074 clicks on the Collateral type module$")
 	public void user_clicks_on_the_collateral_type_module() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.parameterCollateralType_608());
 		requestForFinancingObj608.parameterCollateralType_608().click();
 	}
 
-	@And("^User_608 clicks on the Maintanance screen under Collateral type$")
+	@And("^User_074 clicks on the Maintanance screen under Collateral type$")
 	public void user_clicks_on_the_maintanance_screen_under_collateral_type() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.collateralTypeMaintanance_608());
 		requestForFinancingObj608.collateralTypeMaintanance_608().click();
 	}
 
-	@And("^User_608 enter the code under Collateral Type main screen$")
+	@And("^User_074 enter the code under Collateral Type main screen$")
 	public void user_enter_the_code_under_collateral_type_main_screen() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.collateralTypeMainCode_608());
 //    	requestForFinancingObj608.collateralTypeMainCode_608().sendKeys("1260");
@@ -1915,7 +1921,7 @@ public class RequestForFinancingSteps_608 {
 
 	}
 
-	@And("^User_608 enter the Brief description under Collateral Type main screen$")
+	@And("^User_074 enter the Brief description under Collateral Type main screen$")
 	public void user_enter_the_brief_description_under_collateral_type_main_screen() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.collateralTypeMainBriefDescrip_608());
 //    	requestForFinancingObj608.collateralTypeMainBriefDescrip_608().sendKeys("Test1");
@@ -1923,14 +1929,14 @@ public class RequestForFinancingSteps_608 {
 
 	}
 
-	@And("^User_608 enter the Long description under Collateral Type main screen$")
+	@And("^User_074 enter the Long description under Collateral Type main screen$")
 	public void user_enter_the_long_description_under_collateral_type_main_screen() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.collateralTypeMainLongDescrip_608());
 //    	requestForFinancingObj608.collateralTypeMainLongDescrip_608().sendKeys("Test1");
 		requestForFinancingObj608.collateralTypeMainLongDescrip_608().sendKeys(testData.get("Long Description"));
 	}
 
-	@And("^User_608 select the Asset type as cash under Collateral Type main screen$")
+	@And("^User_074 select the Asset type as cash under Collateral Type main screen$")
 	public void user_select_the_asset_type_as_cash_under_collateral_type_main_screen() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.collateralTypeMainAssetTypeDropdown_608());
@@ -1939,7 +1945,7 @@ public class RequestForFinancingSteps_608 {
 				testData.get("Asset Type"));
 	}
 
-	@When("^User_608 clicks on the save button under Collateral Type main screen$")
+	@When("^User_074 clicks on the save button under Collateral Type main screen$")
 	public void user_clicks_on_the_save_button_under_collateral_type_main_screen() throws Throwable {
 		for (int i = 0; i <= 300; i++) {
 			try {
@@ -1962,26 +1968,26 @@ public class RequestForFinancingSteps_608 {
 		requestForFinancingObj608.successPopupOkBtn_608().click();
 	}
 
-	@And("^User_608 clicks on the Approve screen under Collateral Type$")
+	@And("^User_074 clicks on the Approve screen under Collateral Type$")
 	public void user_clicks_on_the_approve_screen_under_collateral_type() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.collateralTypeApprove_608());
 		requestForFinancingObj608.collateralTypeApprove_608().click();
 	}
 
-	@And("^User_608 search the code under Collateral Type approve screen$")
+	@And("^User_074 search the code under Collateral Type approve screen$")
 	public void user_search_the_code_under_collateral_type_approve_screen() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.collateralTypeApproveCode_608());
 //    	requestForFinancingObj608.collateralTypeApproveCode_608().sendKeys("1260");
 		requestForFinancingObj608.collateralTypeApproveCode_608().sendKeys(testData.get("Collateral Type"), Keys.ENTER);
 	}
 
-	@And("^User_608 double click on the searched result under Collateral Type approve screen$")
+	@And("^User_074 double click on the searched result under Collateral Type approve screen$")
 	public void user_double_click_on_the_searched_result_under_collateral_type_approve_screen() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.collateralTypeApproveCodeRow1_608());
 		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.collateralTypeApproveCodeRow1_608());
 	}
 
-	@When("^User_608 clicks on the Approve button under Collateral Type approve screen$")
+	@When("^User_074 clicks on the Approve button under Collateral Type approve screen$")
 	public void user_clicks_on_the_approve_button_under_collateral_type_approve_screen() throws Throwable {
 		for (int i = 0; i <= 300; i++) {
 			try {
@@ -2004,7 +2010,7 @@ public class RequestForFinancingSteps_608 {
 	}
 
 //  @AT_RF_158_Core
-	@And("^User_608 click on the Collateral Management feature$")
+	@And("^User_074 click on the Collateral Management feature$")
 	public void user_click_on_the_collateral_management_feature() throws Throwable {
 		for (int i = 0; i <= 300; i++) {
 			try {
@@ -2020,14 +2026,14 @@ public class RequestForFinancingSteps_608 {
 		requestForFinancingObj608.FMSCollateralManagement_608().click();
 	}
 
-	@And("^User_608 click on the Maintanace screen under Collateral Management$")
+	@And("^User_074 click on the Maintanace screen under Collateral Management$")
 	public void user_click_on_the_maintanace_screen_under_collateral_management() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.collateralManagementMaintanance_608());
 		requestForFinancingObj608.collateralManagementMaintanance_608().click();
 	}
 
-	@And("^User_608 enter the Collateral type under main information in Collateral Management main Screen$")
+	@And("^User_074 enter the Collateral type under main information in Collateral Management main Screen$")
 	public void user_enter_the_collateral_type_under_main_information_in_collateral_management_main_screen()
 			throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.mainInfoCollateralType_608());
@@ -2046,7 +2052,7 @@ public class RequestForFinancingSteps_608 {
 
 	}
 
-	@And("^User_608 give the valid from date under main information in Collateral Management main Screen$")
+	@And("^User_074 give the valid from date under main information in Collateral Management main Screen$")
 	public void user_give_the_valid_from_date_under_main_information_in_collateral_management_main_screen()
 			throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.mainInfoValidFromDate_608());
@@ -2064,7 +2070,7 @@ public class RequestForFinancingSteps_608 {
 		}
 	}
 
-	@And("^User_608 give the valid to date under main information in Collateral Management main Screen$")
+	@And("^User_074 give the valid to date under main information in Collateral Management main Screen$")
 	public void user_give_the_valid_to_date_under_main_information_in_collateral_management_main_screen()
 			throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.mainInfoValidToDate_608());
@@ -2082,7 +2088,7 @@ public class RequestForFinancingSteps_608 {
 		}
 	}
 
-	@And("^User_608 enter the brief description under main information in Collateral Management main Screen$")
+	@And("^User_074 enter the brief description under main information in Collateral Management main Screen$")
 	public void user_enter_the_brief_description_under_main_information_in_collateral_management_main_screen()
 			throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.mainInfoBriefDescrip_608());
@@ -2090,7 +2096,7 @@ public class RequestForFinancingSteps_608 {
 		requestForFinancingObj608.mainInfoBriefDescrip_608().sendKeys(testData.get("Brief Description"));
 	}
 
-	@And("^User_608 enter the long description under main information in Collateral Management main Screen$")
+	@And("^User_074 enter the long description under main information in Collateral Management main Screen$")
 	public void user_enter_the_long_description_under_main_information_in_collateral_management_main_screen()
 			throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.mainInfoLongDescrip_608());
@@ -2098,7 +2104,7 @@ public class RequestForFinancingSteps_608 {
 		requestForFinancingObj608.mainInfoLongDescrip_608().sendKeys(testData.get("Long Description"));
 	}
 
-	@And("^User_608 enter the Collateral currency under main information in Collateral Management main Screen$")
+	@And("^User_074 enter the Collateral currency under main information in Collateral Management main Screen$")
 	public void user_enter_the_collateral_currency_under_main_information_in_collateral_management_main_screen()
 			throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.mainInfoCollateralCurrency_608());
@@ -2118,7 +2124,7 @@ public class RequestForFinancingSteps_608 {
 		}
 	}
 
-	@And("^User_608 move to the Collateral cash details tab in Collateral Management main Screen$")
+	@And("^User_074 move to the Collateral cash details tab in Collateral Management main Screen$")
 	public void user_move_to_the_collateral_cash_details_tab_in_collateral_management_main_screen() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.CollateralCashDetailsTab_608());
 		for (int i = 0; i < 2000; i++) {
@@ -2134,20 +2140,20 @@ public class RequestForFinancingSteps_608 {
 
 	}
 
-	@And("^User_608 click the add new icon under Collateral cash details tab$")
+	@And("^User_074 click the add new icon under Collateral cash details tab$")
 	public void user_click_the_add_new_icon_under_collateral_cash_details_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.CollateralCashDetailsAddIcon_608());
 		requestForFinancingObj608.CollateralCashDetailsAddIcon_608().click();
 	}
 
-	@And("^User_608 click the additional reference lookup under Collateral cash details tab$")
+	@And("^User_074 click the additional reference lookup under Collateral cash details tab$")
 	public void user_click_the_additional_reference_lookup_under_collateral_cash_details_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.CollateralCashDetailsAdditionalRefLookup_608());
 		requestForFinancingObj608.CollateralCashDetailsAdditionalRefLookup_608().click();
 	}
 
-	@And("^User_608 select the any cy value under additional reference lookup$")
+	@And("^User_074 select the any cy value under additional reference lookup$")
 	public void user_select_the_any_cy_value_under_additional_reference_lookup() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.CollateralCashDetailsAdditionalRefRow1_608());
@@ -2156,7 +2162,7 @@ public class RequestForFinancingSteps_608 {
 		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.CollateralCashDetailsAdditionalRefRow1_608());
 	}
 
-	@And("^User_608 enter the amount value under Collateral cash details tab$")
+	@And("^User_074 enter the amount value under Collateral cash details tab$")
 	public void user_enter_the_amount_value_under_collateral_cash_details_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.CollateralCashDetailsAmount_608());
 //    	requestForFinancingObj608.CollateralCashDetailsAmount_608().sendKeys("1000");
@@ -2173,7 +2179,7 @@ public class RequestForFinancingSteps_608 {
 		}
 	}
 
-	@When("^User_608 click the save button under Collateral Management main Screen$")
+	@When("^User_074 click the save button under Collateral Management main Screen$")
 	public void user_click_the_save_button_under_collateral_management_main_screen() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.collateralManagementMaintananceSaveBtn_608());
@@ -2209,19 +2215,19 @@ public class RequestForFinancingSteps_608 {
 
 	}
 
-	@And("^User_608 move to the Approve screen under Collateral Management$")
+	@And("^User_074 move to the Approve screen under Collateral Management$")
 	public void user_move_to_the_approve_screen_under_collateral_management() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.collateralManagementApprove_608());
 		requestForFinancingObj608.collateralManagementApprove_608().click();
 	}
 
-	@And("User_608 enter the Code in Collateral Management Approve screen search grid")
+	@And("User_074 enter the Code in Collateral Management Approve screen search grid")
 	public void user_enter_the_code_in_collateral_management_approve_screen_search_grid() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.collateralManagementApproveMenuSearchgridCodeInput_608());
 		requestForFinancingObj608.collateralManagementApproveMenuSearchgridCodeInput_608().sendKeys(testData.get("Collateral Code"), Keys.ENTER);		
 	}
 
-	@And("User_608 double click the Code Collateral Management Approve screen search grid")
+	@And("User_074 double click the Code Collateral Management Approve screen search grid")
 	public void user_double_click_the_code_collateral_management_approve_screen_search_grid() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.collateralManagementApproveMenuSearchgridRow1_608());
@@ -2240,21 +2246,21 @@ public class RequestForFinancingSteps_608 {
 
 	}
 
-	@And("^User_608 click the clear button under approve screen in Collateral Management$")
+	@And("^User_074 click the clear button under approve screen in Collateral Management$")
 	public void user_click_the_clear_button_under_approve_screen_in_collateral_management() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.collateralManagementApproveClearBtn_608());
 		requestForFinancingObj608.collateralManagementApproveClearBtn_608().click();
 	}
 
-	@And("^User_608 double click on the first row in approve screen$")
+	@And("^User_074 double click on the first row in approve screen$")
 	public void user_double_click_on_the_first_row_in_approve_screen() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.collateralManagementApproveFirstRow_608());
 		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.collateralManagementApproveFirstRow_608());
 	}
 
-	@When("^User_608 click the approve button under Collateral Management approve screen$")
+	@When("^User_074 click the approve button under Collateral Management approve screen$")
 	public void user_click_the_approve_button_under_collateral_management_approve_screen() throws Throwable {
 		for (int i = 0; i <= 300; i++) {
 			try {
@@ -2278,7 +2284,7 @@ public class RequestForFinancingSteps_608 {
 	}
 
 //  @AT_DDR_025
-	@And("User_608 select the application for dropdown as new facility under Application for financial facility")
+	@And("User_074 select the application for dropdown as new facility under Application for financial facility")
 	public void user_select_the_application_for_dropdown_as_new_facility_under_application_for_financial_facility()
 			throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
@@ -2287,14 +2293,14 @@ public class RequestForFinancingSteps_608 {
 				testData.get("Application For"));
 	}
 
-	@And("User_608 enter the CIF No in main info tab in Application for financial facility Maintanance")
+	@And("User_074 enter the CIF No in main info tab in Application for financial facility Maintanance")
 	public void user_enter_the_cif_no_in_main_info_tab_in_application_for_financial_facility_maintanance()
 			throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, applicationFinancialFacilityObj608.mainCIFNo_608());
 		applicationFinancialFacilityObj608.mainCIFNo_608().sendKeys(testData.get("CIF No"), Keys.TAB);
 	}
 
-	@And("User_608 validate the CIF status displayed should be blacklist under Application for financial facility")
+	@And("User_074 validate the CIF status displayed should be blacklist under Application for financial facility")
 	public void user_validate_the_cif_status_displayed_should_be_blacklist_under_application_for_financial_facility()
 			throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.CIFBlacklistPopupMsg_608());
@@ -2306,7 +2312,7 @@ public class RequestForFinancingSteps_608 {
 		requestForFinancingObj608.CIFBlacklistPopupCancelBtn_608().click();
 	}
 
-	@And("User_608 enter the CIF No under main information in Collateral Management main Screen")
+	@And("User_074 enter the CIF No under main information in Collateral Management main Screen")
 	public void user_enter_the_cif_no_under_main_information_in_collateral_management_main_screen() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.CollateralManagementMainInfoCIFNoInput_608());
@@ -2314,7 +2320,7 @@ public class RequestForFinancingSteps_608 {
 				Keys.TAB);
 	}
 
-	@And("User_608 validate the CIF status displayed should be blacklist under Collateral Management maintanance")
+	@And("User_074 validate the CIF status displayed should be blacklist under Collateral Management maintanance")
 	public void user_validate_the_cif_status_displayed_should_be_blacklist_under_collateral_management_maintanance()
 			throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.CIFBlacklistPopupMsg_608());
@@ -2322,7 +2328,7 @@ public class RequestForFinancingSteps_608 {
 //    	System.err.println("CIF Blacklist Message in Collateral: "+CIFblacklistMsg);
 		Assert.assertEquals(testData.get("CIF Blacklist Msg"), CIFblacklistMsg);
 	}
-	@And("User_608 select the existing facility number under main screen in Request for Financing")
+	@And("User_074 select the existing facility number under main screen in Request for Financing")
 	public void user_select_the_existing_facility_number_under_main_screen_in_request_for_financing() {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.RequestForFinancing_ExistingFacilityNoField());
@@ -2331,7 +2337,7 @@ public class RequestForFinancingSteps_608 {
 	    
 	}
 
-	@And("User_608 Update the total limit value under main screen in Request for Financing")
+	@And("User_074 Update the total limit value under main screen in Request for Financing")
 	public void user_update_the_total_limit_value_under_main_screen_in_request_for_financing() {
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.requestForFinancingMainTotalLimitInput_608());
@@ -2342,18 +2348,108 @@ public class RequestForFinancingSteps_608 {
 	    
 	}
 
-	@And("User_608 Validate that updated limit value is reflected in sublimit tab")
+	@And("User_074 Validate that updated limit value is reflected in sublimit tab")
 	public void user_validate_that_updated_limit_value_is_reflected_in_sublimit_tab(){
 		waitHelper.waitForElementwithFluentwait(driver,
 				requestForFinancingObj608.RequestForFinancing_ExistingValueInSublimitSection());
 		String totallimit = requestForFinancingObj608.RequestForFinancing_ExistingValueInSublimitSection().getText();
         Assert.assertEquals(testData.get("UpdatedTotalLimit"),totallimit.split("[.]")[0].replace(",", ""));
 	}
-	@And("User_608 Validate the Document validation field is displayed under STP Facility Requirements")
+	@And("User_074 Validate the Document validation field is displayed under STP Facility Requirements")
 	public void user_validate_the_document_validation_field_is_displayed_under_stp_facility_requirements() {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.Param_FacilityType_DocumentValidationFieldText());
 		boolean documentvalidation = requestForFinancingObj608.Param_FacilityType_DocumentValidationFieldText().isDisplayed();
 		Assert.assertEquals(true, documentvalidation);
 	}
+	@And("User_074 Select the value in Revolving Oneoff dropdown")
+	public void user_select_the_value_in_revolving_oneoff_dropdown() {
+		waitHelper.waitForElementwithFluentwait(driver,
+				requestForFinancingObj608.RequestForFinancing_REvolvingOneoffDropdown());
+		dropDownHelper.SelectUsingVisibleText(requestForFinancingObj608.RequestForFinancing_REvolvingOneoffDropdown(),
+				testData.get("Revolving OneOff Value"));
+	}
+	@And("User_074 Validate that Expiration date field is displayed")
+	public void user_validate_that_expiration_date_field_is_displayed() {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.RequestForFinancing_ExpirationDateField());
+		boolean expirationdatefield = requestForFinancingObj608.RequestForFinancing_ExpirationDateField().isDisplayed();
+		Assert.assertEquals(true, expirationdatefield);
+	}
+	@And("User_074 double click the any one row in Facilities Management Maintanance Search grid under WIFAK Application")
+	public void user_double_click_the_any_one_row_in_facilities_management_maintanance_search_grid_under_wifak_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakFacilitiesManagementMainSearchgridRow_608());
+		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.wifakFacilitiesManagementMainSearchgridRow_608());
+		for(int i = 0; i <= 500; i++) {
+	 		try {
+					if(!(facilityManagementObj608.wifakFacilitiesManagementMainApplicationRefInput_608().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+	 	}
+		String RefCode = facilityManagementObj608.wifakFacilitiesManagementMainApplicationRefInput_608().getAttribute("prevvalue");
+		fmsTransactionsExcelData.updateTestData(testData.get("DataSet ID"), "Reference Code", RefCode);
+		
+	}
+	@And("User_074 enter the Status in Facilities Management Maintanance Search grid under WIFAK Application")
+	public void user_enter_the_status_in_facilities_management_maintanance_search_grid_under_wifak_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakFacilitiesManagementMainSearchgridStatusInput_608());
+		requestForFinancingObj608.wifakFacilitiesManagementMainSearchgridStatusInput_608().sendKeys(testData.get("Status"),Keys.ENTER);
+	}
+	@And("User_074 click the Collateral details button in Facilities Management Maintanance under WIFAK Application")
+	public void user_click_the_collateral_details_button_in_facilities_management_maintanance_under_wifak_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakFacilitiesManagementMainLimitDetailsTabCollateralDetailsBtn_608());
+		requestForFinancingObj608.wifakFacilitiesManagementMainLimitDetailsTabCollateralDetailsBtn_608().click();
+	}
+
+	@And("User_074 click the add new icon in collateral details tab Facilities Management Maintanance under WIFAK Application")
+	public void user_click_the_add_new_icon_in_collateral_details_tab_facilities_management_maintanance_under_wifak_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTab_608());
+//		for (int i = 0; i <= 300; i++) {
+//			try {
+//				javaScriptHelper.scrollIntoView(requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_608());
+//				javaScriptHelper.JSEClick(requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_608());
+////				requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_608().click();
+//				System.err.println("Element clicked..........");
+//				break;
+//			} catch (Exception e) {
+//				if (i == 300) {
+//					Assert.fail(e.getMessage());
+//				}
+//			}
+//		}
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_608());
+		clicksAndActionsHelper.doubleClick(requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_608());
+//		requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_608().click();
+//		requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_608().click();
+	}
+
+	@And("User_074 enter the Collateral code in collateral details tab Facilities Management Maintanance under WIFAK Application")
+	public void user_enter_the_collateral_code_in_collateral_details_tab_facilities_management_maintanance_under_wifak_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabFirstRow_608());
+		requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabFirstRow_608().click();
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabFirstRowCollateralInput_608());
+		requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabFirstRowCollateralInput_608().sendKeys(testData.get("Collateral Code"),Keys.TAB);
+		for (int i = 0; i <= 500; i++) {
+			try {
+				if (!(requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabFirstRowCollateralInput_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}		
+	}
+
+	@And("User_074 Click the OK button in collateral details tab Facilities Management Maintanance under WIFAK Application")
+	public void user_click_the_ok_button_in_collateral_details_tab_facilities_management_maintanance_under_wifak_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabOkBtn_608());
+		requestForFinancingObj608.wifakFacilitiesManagementMainCollateralDetailsTabOkBtn_608().click();
+	}
+	@And("User_074 enter the Application Ref code in search grid under Approve screen in WIFAK Facilities Management")
+    public void user_enter_the_application_ref_code_in_search_grid_under_approve_screen_in_wifak_facilities_management() throws Throwable {
+    	waitHelper.waitForElementwithFluentwait(driver, facilityManagementObj608.wifakFacilitiesManagementApproveSearchAppRefInput_608());
+    	facilityManagementObj608.wifakFacilitiesManagementApproveSearchAppRefInput_608().sendKeys(testData.get("Reference Code"),Keys.ENTER); 
+    }
 
 }

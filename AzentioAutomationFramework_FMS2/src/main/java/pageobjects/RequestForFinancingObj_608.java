@@ -1312,5 +1312,57 @@ public class RequestForFinancingObj_608 {
 	public WebElement Param_FacilityType_DocumentValidationFieldText() {
 		return Param_FacilityType_DocumentValidationFieldText;
 	}
+	@FindBy(xpath = "//select[@id='requestFinancingRevolvingOneOff_RFFRF00MT']")
+	private WebElement RequestForFinancing_REvolvingOneoffDropdown;
+	public WebElement RequestForFinancing_REvolvingOneoffDropdown() {
+		return RequestForFinancing_REvolvingOneoffDropdown;
+	}
+	@FindBy(xpath = "//label[@id='requestFinancingFormId_RFFRF00MT_Expiration_Date_key']")
+	private WebElement RequestForFinancing_ExpirationDateField;
+	public WebElement RequestForFinancing_ExpirationDateField() {
+		return RequestForFinancing_ExpirationDateField;
+	}
+	@FindBy(xpath = "//span[text()='Ok']")
+	private WebElement wifak_facilities_management_main_collateral_details_tab_Ok_btn;
+	public WebElement wifakFacilitiesManagementMainCollateralDetailsTabOkBtn_608() {
+		return wifak_facilities_management_main_collateral_details_tab_Ok_btn;
+	}
+	@FindBy(xpath = "//input[@name='lookupTxt_fmsAppcollateralsVO.COLLATERAL']")
+	private WebElement wifak_facilities_management_main_collateral_details_tab_first_row_collateral_input;
+	public WebElement wifakFacilitiesManagementMainCollateralDetailsTabFirstRowCollateralInput_608() {
+		return wifak_facilities_management_main_collateral_details_tab_first_row_collateral_input;
+	}	
+	@FindBy(xpath = "//td[@id='td_FacilityCollateralGrid_WIFT008MT_1_rn']")
+	private WebElement wifak_facilities_management_main_collateral_details_tab_first_row;
+	public WebElement wifakFacilitiesManagementMainCollateralDetailsTabFirstRow_608() {
+		return wifak_facilities_management_main_collateral_details_tab_first_row;
+	}
+	@FindBy(xpath = "//td[@id='add_FacilityCollateralGrid_WIFT008MT']/div/span")
+	private WebElement wifak_facilities_management_main_collateral_details_tab_add_icon;
+	public WebElement wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_608() {
+		return wifak_facilities_management_main_collateral_details_tab_add_icon;
+	}
+	@FindBy(xpath = "//div[@id='facilitySubLimitCollateralDetailsDiv_id_WIFT008MT']")
+	private WebElement wifak_facilities_management_main_collateral_details_tab;
+	public WebElement wifakFacilitiesManagementMainCollateralDetailsTab_608() {
+		return wifak_facilities_management_main_collateral_details_tab;
+	}
+	@FindBy(xpath = "//input[@id='facilityManagementGridTbl_Id_WIFT008MT_gs_statusDesc']")
+	private WebElement wifak_facilities_management_main_searchgrid_status_input;
+	public WebElement wifakFacilitiesManagementMainSearchgridStatusInput_608() {
+		return wifak_facilities_management_main_searchgrid_status_input;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_facilityManagementGridTbl_Id_WIFT008MT_2_fmsFacilityVO.CODE']")
+	private WebElement wifak_facilities_management_main_searchgrid_rows;
+	public WebElement wifakFacilitiesManagementMainSearchgridRow_608() {
+		return wifak_facilities_management_main_searchgrid_rows;
+	}
+	
+	@FindBy(xpath = "//button[@id='facilityManagement_collateralDetails_btn_WIFT008MT']")
+	private WebElement wifak_facilities_management_main_limit_details_tab_collateral_details_btn;
+	public WebElement wifakFacilitiesManagementMainLimitDetailsTabCollateralDetailsBtn_608() {
+		return wifak_facilities_management_main_limit_details_tab_collateral_details_btn;
+	}
 	
 }

@@ -508,7 +508,41 @@ public class WIFAK_ApplicationObj_608 {
 	public WebElement FMS_LogoutLink() {
 		return FMS_LogoutLink;
 	}
-	
+	@FindBy(xpath = "//a[@id='WIFT0062MT']")
+	private WebElement FMS_DocumentValidationButton;
+	public WebElement FMS_DocumentValidationButton() {
+		return FMS_DocumentValidationButton;
+	}
+	@FindBy(xpath = "//td[contains(text(),'Clear')]")
+	private WebElement FMS_DocumentValidation_ClearButton;
+	public WebElement FMS_DocumentValidation_ClearButton() {
+		return FMS_DocumentValidation_ClearButton;
+	}
+	@FindBy(xpath = "//td[@id='td_applicationFacilityGridTbl_Id_WIFT0062MT_1_fmsApplVO.CODE']")
+	private WebElement FMS_DocumentValidation_ExistingRecord;
+	public WebElement FMS_DocumentValidation_ExistingRecord() {
+		return FMS_DocumentValidation_ExistingRecord;
+	}
+	@FindBy(xpath = "//li[@id='applicationFacilityLimitDetailsTabs_WIFT0062MT']")
+	private WebElement FMS_DocumentValidation_LimitDetailsTab;
+	public WebElement FMS_DocumentValidation_LimitDetailsTab() {
+		return FMS_DocumentValidation_LimitDetailsTab;
+	}
+	@FindBy(xpath = "//td[@id='td_ApplicationFacilityLimitDetailsGrid_WIFT0062MT_1_fmsAppLimitDetVO.GENERAL_FACILITY_TYPE']")
+	private WebElement FMS_DocumentValidation_LimitDetails_ExistingRecord;
+	public WebElement FMS_DocumentValidation_LimitDetails_ExistingRecord() {
+		return FMS_DocumentValidation_LimitDetails_ExistingRecord;
+	}
+	@FindBy(xpath = "//button[@id='applicationfacility_documentchecklist_btn_WIFT0062MT']")
+	private WebElement FMS_DocumentValidation_DocumentChecklistButton;
+	public WebElement FMS_DocumentValidation_DocumentChecklistButton() {
+		return FMS_DocumentValidation_DocumentChecklistButton;
+	}
+	@FindBy(xpath = "//td[@id='td_FacilityDocumentCheckListGrid_WIFT0062MT_1_DOC_CODE']")
+	private WebElement FMS_DocumentValidation_DocumentChecklist_ExistingRecord;
+	public WebElement FMS_DocumentValidation_DocumentChecklist_ExistingRecord() {
+		return FMS_DocumentValidation_DocumentChecklist_ExistingRecord;
+	}
 	
 	
 	
