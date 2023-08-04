@@ -165,7 +165,7 @@ public String getCSMApplicationUrl() {
 		else
 			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
 	}
-	public String getIISApplicationUserTypeSendAlert() {
+	public String getIISParamApplicationUserType() {
 		String userType = properties.getProperty("IIS_ParamApplication_UserType");
 		if (userType != null)
 			return userType;

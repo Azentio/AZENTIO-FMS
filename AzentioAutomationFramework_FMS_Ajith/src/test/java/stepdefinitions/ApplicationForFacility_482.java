@@ -9,10 +9,10 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Random;
 
+import org.jsoup.Connection.Base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import dataProvider.ConfigFileReader;
@@ -632,7 +632,7 @@ public class ApplicationForFacility_482 extends BaseClass {
 			try {
 				seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.mainFacilityType());
 				seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.mainFacilityType());
-				applicationForFinancialFacilityObj.mainFacilityType().sendKeys(testData.get("FacilityType"));
+				applicationForFinancialFacilityObj.mainFacilityType().sendKeys(testData.get("Facility Type"));
 				seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.facilityTouch());
 				seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.facilityTouch());
 				break;
@@ -652,7 +652,7 @@ public class ApplicationForFacility_482 extends BaseClass {
 			try {
 				seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.mainCountryOfFinancing());
 				seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.mainCountryOfFinancing());
-				applicationForFinancialFacilityObj.mainCountryOfFinancing().sendKeys(testData.get("CountryofFinancing"));
+				applicationForFinancialFacilityObj.mainCountryOfFinancing().sendKeys(testData.get("Country of Financing"));
 				seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.facilityTouch());
 				seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.facilityTouch());
 				break;
@@ -896,7 +896,7 @@ public class ApplicationForFacility_482 extends BaseClass {
     	seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.mainAdditionalTabTotalValue());
 		seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.mainAdditionalTabTotalValue());
 		seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.mainAdditionalTabTotalValue());
-		applicationForFinancialFacilityObj.mainAdditionalTabTotalValue().sendKeys(testData.get("TotalValue"));
+		applicationForFinancialFacilityObj.mainAdditionalTabTotalValue().sendKeys(testData.get("Total Value"));
 		applicationForFinancialFacilityObj.mainAdditionalTabTotalValue().sendKeys(Keys.ENTER);
     	
     }
@@ -1931,7 +1931,7 @@ public class ApplicationForFacility_482 extends BaseClass {
   				}
   			}
   		}
-    	  applicationForFinancialFacilityObj.facilityRatingInMainInformationWIFAKApplication().sendKeys("1");
+    	  applicationForFinancialFacilityObj.facilityRatingInMainInformationWIFAKApplication().sendKeys(testData.get("Facility Rating"));
     	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.marketedByRandomClickInMainInformationTab());
     	  seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.marketedByRandomClickInMainInformationTab());
     	  seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.marketedByRandomClickInMainInformationTab());
@@ -1948,6 +1948,7 @@ public class ApplicationForFacility_482 extends BaseClass {
 
       @And("^User_482 click document details tab under WIFAK Application$")
       public void user_482_click_document_details_tab_under_wifak_application() throws Throwable {
+    	  
     	  for (int i = 0; i <2000; i++) {
   			try {
   			 seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.documentDetailsUnderWIFAKApplication());
@@ -2627,21 +2628,28 @@ public class ApplicationForFacility_482 extends BaseClass {
 
       @Given("User_482 Click Repayment Plan options Under WIFAK Application")
       public void user_click_repayment_plan_options_under_Wifak_Application() {
-    	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.repaymentPlanOption());
+    	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.repaymentPlan_WIFAK_482());
     	  seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.repaymentPlan_WIFAK_482());
     	  seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.repaymentPlan_WIFAK_482());
       }
       @Given("User_482 Select Profit Recognition Method as Straight line")
       public void user_482_select_profit_recognition_method_as_straight_line() {
     	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.profitRecognitionMethod_WIFAK_482());
-    	  seleniumActions.getDropDownHelper().SelectUsingVisibleText(applicationForFinancialFacilityObj.profitRecognitionMethod_WIFAK_482(),"Straight Line");
+    	  seleniumActions.getDropDownHelper().SelectUsingVisibleText(applicationForFinancialFacilityObj.profitRecognitionMethod_WIFAK_482(),testData.get("ProfitRecognitionMethod"));
+      }
+      @Given("User_482 enter no of payments in repayment plan for WIFAK Application")
+      public void user_482_enter_no_of_payments_in_repayment_plan_for_wifak_application() {
+    	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.no_Of_Payments_RepaymentPlan_WIFAK_482());
+    	  seleniumActions.getClickAndActionsHelper().doubleClick(applicationForFinancialFacilityObj.no_Of_Payments_RepaymentPlan_WIFAK_482());
+    	  applicationForFinancialFacilityObj.no_Of_Payments_RepaymentPlan_WIFAK_482().sendKeys(testData.get("No of payments"));
       }
 
       @Given("User_482 Click Create schedule Button Under WIFAK Application")
-      public void user_482_click_create_schedule_button_under_wifak_application() {
+      public void user_482_click_create_schedule_button_under_wifak_application() throws InterruptedException {
     	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.createScheduleButton_WIFAK_482());
     	  seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.createScheduleButton_WIFAK_482());
     	  seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.createScheduleButton_WIFAK_482());
+    	  Thread.sleep(1000000);
           
       }
 

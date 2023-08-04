@@ -4,5 +4,4 @@ Feature: Title of your feature
 
   @tag1
   Scenario: Title of your scenario
-And User_482 Select Profit Recognition Method as Straight line
-And User Click Creative schedule Button Under WIFAK Application
+And User_482 Click Automatic Allocation Button

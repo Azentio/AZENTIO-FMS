@@ -1669,6 +1669,12 @@ public class ApplicationForFinancialFacility_482_Obj {
 		return repaymentPlan_WIFAK_482;
 	}
 	
+	@FindBy(xpath="//input[@id='No_Of_Payments_WIFT001MT']")
+	private WebElement no_Of_Payments_RepaymentPlan_WIFAK_482;
+	public WebElement no_Of_Payments_RepaymentPlan_WIFAK_482() {
+		return no_Of_Payments_RepaymentPlan_WIFAK_482;
+	}
+	
 	@FindBy(xpath="//*[@id='profit_dist_method_WIFT001MT']")
 	private WebElement profitRecognitionMethod_WIFAK_482;
 	public WebElement profitRecognitionMethod_WIFAK_482() {

@@ -3,7 +3,9 @@ package tests;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Map;
 
+import dataProvider.ExcelData;
 import helper.AlertHelper;
 import helper.DropDownHelper;
 import helper.GenericHelper;
@@ -72,14 +74,18 @@ public class helpercheck extends BaseClass {
 //	      props.store(new FileOutputStream(path), null);
 	      
 	      
-	        String value ="16 January 2021";
-	        SimpleDateFormat fromUser = new SimpleDateFormat("dd MMMM yyyy");
-		    SimpleDateFormat myFormat = new SimpleDateFormat("dd/MM/yyyy");
-		    String reformattedStr = myFormat.format(fromUser.parse(value));
-		    System.out.println(reformattedStr);
-	      
-				
-	    
+//	        String value ="16 January 2021";
+//	        SimpleDateFormat fromUser = new SimpleDateFormat("dd MMMM yyyy");
+//		    SimpleDateFormat myFormat = new SimpleDateFormat("dd/MM/yyyy");
+//		    String reformattedStr = myFormat.format(fromUser.parse(value));
+//		    System.out.println(reformattedStr);
+//	      
+		String path = System.getProperty("user.dir") +"\\TestData\\IISTestData.xlsx";
+		ExcelData iisIncidentalChargesExcelData  = new ExcelData(path,"IncidentalChargesTestData","DataSet ID");
+		ExcelData testExecution = new ExcelData(path,"TestExecution","TestCaseID");		
+		Map<String, String> testdataExecution = testExecution.getTestdata("AT_IC_019");
+		Map<String, String> testdata = iisIncidentalChargesExcelData.getTestdata(testdataExecution.get("Data Set ID"));
+		System.out.println(testdata.get("Deal Nbr"));
 		
 		
 	}

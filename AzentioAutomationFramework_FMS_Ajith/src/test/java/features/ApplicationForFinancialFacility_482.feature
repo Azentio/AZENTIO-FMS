@@ -147,10 +147,11 @@ And User_482 click save button in Main Info tab under WIFAK Application
 And User_482 Click on Ok button in Confirm Pop up Menu
 And User_482 Get the Code in Success Pop up Menu under WIFAK Application
 And User_482 Click on Ok button in Success Pop up Menu
+And User_482 click Limit Details tab in WIFAK Application
 And User_482 Click Product Class details in Limit Details
 And User_482 Click Repayment Plan options Under WIFAK Application
 And User_482 Select Profit Recognition Method as Straight line
-And User enter no of payments in repayment plan
+And User_482 enter no of payments in repayment plan for WIFAK Application
 And User_482 Click Create schedule Button Under WIFAK Application
 And User_482 Click on Ok button in Confirm Pop up Menu
 

@@ -18,7 +18,6 @@ import dataProvider.ConfigFileReader;
 public class BaseClass {
 	Logger log = LogManager.getLogger(BaseClass.class.getName());
 	public static WebDriver driver;
-	
 	public WebDriver initializeDriver( )throws IOException {
 	
 	ConfigFileReader configFileReader=new ConfigFileReader();

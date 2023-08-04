@@ -55,11 +55,16 @@ public class LoginTest extends BaseClass {
     }
 	@Given("^navigate to IIS application and login with valid credentials$")
     public void navigate_to_iis_application_and_login_with_valid_credentials() throws Throwable {
-		driver.get(configFileReader.getIISParamApplicationUrl());
-		iisLogin.loginIntoIISApplication(configFileReader.getIISApplicationUrl());
+		driver.get(configFileReader.getIISApplicationUrl());
+		iisLogin.loginIntoIISApplication(configFileReader.getIISApplicationUserType());
 
     }
-	
+	@Given("^navigate to IIS Param Application and login with valid credentials$")
+    public void navigate_to_iis_Param_application_and_login_with_valid_credentials() throws Throwable {
+		driver.get(configFileReader.getIISParamApplicationUrl());
+		iisLogin.loginIntoIISParamApplication(configFileReader.getIISParamApplicationUserType());
+
+    }
 	
 	@And("^logout from the application$")
 	public void logout_from_the_application() throws Throwable {
