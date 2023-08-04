@@ -32,7 +32,7 @@ Feature: Title of your feature
   Scenario: BTII180015
     Given Login into CSM Application
     And User update test data for test case no 664435
-    And Click Request on FMS Core
+    And Click Request on CSM Core
     And Click request management under request
     And Click management process branch under request management
     And Select first approve status detail

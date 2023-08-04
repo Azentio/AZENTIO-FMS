@@ -275,8 +275,8 @@ public class Request_for_financing_steps {
 		CSMLogin.loginIntoCSMApplication(configFileReader.getCSMApplicationUserType());
 	}
 
-	@And("^Click Request on FMS Core$")
-	public void click_request_on_fms_core() throws Throwable {
+	@And("^Click Request on CSM Core$")
+	public void click_request_on_csm_core() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_request_OnCSM());
 		Request_for_financing_Obj.Click_request_OnCSM().click();
 	}

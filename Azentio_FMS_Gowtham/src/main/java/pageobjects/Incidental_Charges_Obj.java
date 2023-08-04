@@ -14,7 +14,7 @@ public class Incidental_Charges_Obj {
 		PageFactory.initElements(driver, this);
 	}
 	
-	// Clear cache for FMS Core
+	// Clear cache for IIS Core
 		@FindBy(xpath = "//span[@id='tech_details_icon']")
 		private WebElement IIS_core_tech_details_icon;
 		public WebElement IISCoreTechDetailsIcon_608() {
@@ -256,6 +256,12 @@ public class Incidental_Charges_Obj {
 			return IIS_confirm_popup_ok_btn;
 		}
 		
+		@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
+		private WebElement CconfirmSave_popup_ok_btn;
+		public WebElement CconfirmSave_popup_ok_btn(){
+			return CconfirmSave_popup_ok_btn;
+		}
+		
 		@FindBy(xpath = "//input[@id='_popup_path_sol_confirm']")
 		private WebElement IIS_confirm_popup_cancel_btn;
 		public WebElement IIS_ConfirmPopupCancelBtn_608(){
@@ -291,6 +297,13 @@ public class Incidental_Charges_Obj {
 		public WebElement IIS_InformationPopupOkBtn_608(){
 			return IIS_information_popup_ok_btn;
 		}
+		
+		@FindBy(xpath = "//input[@id='_popup_path_sol_ok']")
+		private WebElement SuccessFully_Saved_popup_ok_btn;
+		public WebElement SuccessFully_Saved_popup_ok_btn_607(){
+			return SuccessFully_Saved_popup_ok_btn;
+		}
+		
 
 		@FindBy(xpath = "//a[@id='T07V']")
 		private WebElement IIS_tracking_incidental_charges_approve_reverse_menu;
@@ -376,16 +389,298 @@ public class Incidental_Charges_Obj {
 		
 		
 		
+		@FindBy(xpath = "//td[text()='Repayment Plan']")
+		private WebElement Click_Repayment_Plan_Under_Menu;
+		public WebElement Click_Repayment_Plan_Under_Menu_607(){
+			return Click_Repayment_Plan_Under_Menu;
+		}
+		
+		@FindBy(xpath = "//*[@id='T04MT']")
+		private WebElement Click_Mainteance_Under_Repayment_Plan;
+		public WebElement Click_Mainteance_Under_Repayment_Plan_607(){
+			return Click_Mainteance_Under_Repayment_Plan;
+		}
+		
+		@FindBy(xpath = "//*[@id='infoBarSearchButton_T04MT']")
+		private WebElement Click_Search_InMainteance_Under_Repayment_Plan;
+		public WebElement Click_Search_InMainteance_Under_Repayment_Plan_607(){
+			return Click_Search_InMainteance_Under_Repayment_Plan;
+		}
+		
+		@FindBy(xpath = "//*[@id='repaymentPlanMgmtGridTbl_Id_T04MT_gs_trspayplanVO.TRX_NBR']")
+		private WebElement SearchDealRecord_InMainteance_Under_Repayment_Plan;
+		public WebElement SearchDealRecord_InMainteance_Under_Repayment_Plan_607(){
+			return SearchDealRecord_InMainteance_Under_Repayment_Plan;
+		}
+		
+		@FindBy(xpath = "//*[@id='td_repaymentPlanMgmtGridTbl_Id_T04MT_1_trspayplanVO.PLAN_NBR']")
+		private WebElement SelectRecord_InMainteance_Under_Repayment_Plan;
+		public WebElement SelectRecord_InMainteance_Under_Repayment_Plan_607(){
+			return SelectRecord_InMainteance_Under_Repayment_Plan;
+		}
+		
+		@FindBy(xpath = "//*[@id='rePaymentPlanMainTab2_T04MT']")
+		private WebElement Click_ScheduleDetails_InMainteance_Under_Repayment_Plan;
+		public WebElement Click_ScheduleDetails_InMainteance_Under_Repayment_Plan_607(){
+			return Click_ScheduleDetails_InMainteance_Under_Repayment_Plan;
+		}
+		
+		@FindBy(xpath = "//*[@id='td_repaumentPlanScheduleGridTbl_Id_T04MT_1_incidentalCharge']")
+		private WebElement getIncidentalCharge_InMainteance_Under_Repayment_Plan;
+		public WebElement getIncidentalCharge_InMainteance_Under_Repayment_Plan_607(){
+			return getIncidentalCharge_InMainteance_Under_Repayment_Plan;
+		}
+		
+		@FindBy(xpath = "//*[@id='lookuptxt_dealNo_T06MT']")
+		private WebElement DealNbr_InSettlementDetailsTab_InMainteance_UnderSettlement;
+		public WebElement DealNbr_InSettlementDetailsTab_InMainteance_UnderSettlement_607(){
+			return DealNbr_InSettlementDetailsTab_InMainteance_UnderSettlement;
+		}
+		
+		@FindBy(xpath = "//*[@id='settlementTab2_T06MT']")
+		private WebElement Click_ScheduleDetailsTab_InMainteance_UnderSettlement;
+		public WebElement Click_ScheduleDetailsTab_InMainteance_UnderSettlement_607(){
+			return Click_ScheduleDetailsTab_InMainteance_UnderSettlement;
+		}
+		
+		@FindBy(xpath = "//*[@id=\"td_settlementScheduleGridTbl_Id_T06MT_1_trspayplandetvo.CAPITAL_AMT\"]")
+		private WebElement Principal_Charge_InsuranceAmt_InScheduleDetails_InMainteance_UnderSettlement;
+		public WebElement Principal_Charge_InsuranceAmt_InScheduleDetails_InMainteance_UnderSettlement_607(){
+			return Principal_Charge_InsuranceAmt_InScheduleDetails_InMainteance_UnderSettlement;
+		}
+		
+		@FindBy(xpath = "//*[@id='crossCyPartyAmount_T06MT']")
+		private WebElement EnterAmount_Received_FromParty_InSettlementDetailsTab_InMainteance_UnderSettlement;
+		public WebElement EnterAmount_Received_FromParty_InSettlementDetailsTab_InMainteance_UnderSettlement_607(){
+			return EnterAmount_Received_FromParty_InSettlementDetailsTab_InMainteance_UnderSettlement;
+		}
+		
+		@FindBy(xpath = "//*[@id='td_settlementScheduleGridTbl_Id_T06MT_1_trssetlmtdetvo.LINE_NBR']")
+		private WebElement SelectFirstLine_BeforeEnterSettlement_InScheduleDetailstab_InMainteance_UnderSettlement;
+		public WebElement SelectFirstLine_BeforeEnterSettlement_InScheduleDetailstab_InMainteance_UnderSettlement_607(){
+			return SelectFirstLine_BeforeEnterSettlement_InScheduleDetailstab_InMainteance_UnderSettlement;
+		}
+		
+		@FindBy(xpath = "//*[@id='1_trssetlmtdetvo.SETTLEMENT_AMOUNT_settlementScheduleGridTbl_Id_T06MT']")
+		private WebElement EnterSettlement_InScheduleDetailstab_InMainteance_UnderSettlement;
+		public WebElement EnterSettlement_InScheduleDetailstab_InMainteance_UnderSettlement_607(){
+			return EnterSettlement_InScheduleDetailstab_InMainteance_UnderSettlement;
+		}
+		
+		@FindBy(xpath = "//*[@id='settlementTab1_T06MT']")
+		private WebElement Click_settlementDetailsTab_InMainteance_UnderSettlement;
+		public WebElement Click_settlementDetailsTab_InMainteance_UnderSettlement_607(){
+			return Click_settlementDetailsTab_InMainteance_UnderSettlement;
+		}
+		
+		@FindBy(xpath = "//*[@id='savebutton_T06MT']")
+		private WebElement ClickSavebtn_InMainteance_UnderSettlement;
+		public WebElement ClickSavebtn_InMainteance_UnderSettlement_607(){
+			return ClickSavebtn_InMainteance_UnderSettlement;
+		}
+		
+		@FindBy(xpath = "//*[@id='T06P']")
+		private WebElement ClickApprove_UnderSettlement;
+		public WebElement ClickApprove_UnderSettlement_607(){
+			return ClickApprove_UnderSettlement;
+		}
+		
+		@FindBy(xpath = "//*[@id='settlementMgmtGridTbl_Id_T06P_gs_trssetlmtvo.DEAL_NBR']")
+		private WebElement SearchDeal_InApprove_UnderSettlement;
+		public WebElement SearchDeal_InApprove_UnderSettlement_607(){
+			return SearchDeal_InApprove_UnderSettlement;
+		}
+		
+		@FindBy(xpath = "//*[@id='td_settlementMgmtGridTbl_Id_T06P_1_trssetlmtvo.SETTLEMENT_NBR']")
+		private WebElement SelectRecord_InApprove_UnderSettlement;
+		public WebElement SelectRecord_InApprove_UnderSettlement_607(){
+			return SelectRecord_InApprove_UnderSettlement;
+		}
+		
+		@FindBy(xpath = "//*[@id='settlement_Approve_btn_T06P']")
+		private WebElement ClickApproveBtn_InApprove_UnderSettlement;
+		public WebElement ClickApproveBtn_InApprove_UnderSettlement_607(){
+			return ClickApproveBtn_InApprove_UnderSettlement;
+		}
+		
+		//126188
+		
+		@FindBy(xpath = "//*[@id='td_settlementScheduleGridTbl_Id_T06MT_2_trssetlmtdetvo.LINE_NBR']")
+		private WebElement SelectSecondLine_BeforeEnterSettlement_InScheduleDetailstab_InMainteance_UnderSettlement;
+		public WebElement SelectSecondLine_BeforeEnterSettlement_InScheduleDetailstab_InMainteance_UnderSettlement_607(){
+			return SelectSecondLine_BeforeEnterSettlement_InScheduleDetailstab_InMainteance_UnderSettlement;
+		}
+		
+		@FindBy(xpath = "//*[@id='2_trssetlmtdetvo.SETTLEMENT_AMOUNT_settlementScheduleGridTbl_Id_T06MT']")
+		private WebElement EnterSecondSettlement_InScheduleDetailstab_InMainteance_UnderSettlement;
+		public WebElement EnterSecondSettlement_InScheduleDetailstab_InMainteance_UnderSettlement_607(){
+			return EnterSecondSettlement_InScheduleDetailstab_InMainteance_UnderSettlement;
+		}
 		
 		
+		//126189
 		
+		@FindBy(xpath = "//*[@id='td_settlementScheduleGridTbl_Id_T06MT_3_trssetlmtdetvo.LINE_NBR']")
+		private WebElement SelectThirdLine_BeforeEnterSettlement_InScheduleDetailstab_InMainteance_UnderSettlement;
+		public WebElement SelectThirdLine_BeforeEnterSettlement_InScheduleDetailstab_InMainteance_UnderSettlement_607(){
+			return SelectThirdLine_BeforeEnterSettlement_InScheduleDetailstab_InMainteance_UnderSettlement;
+		}
 		
+		@FindBy(xpath = "//*[@id='3_trssetlmtdetvo.SETTLEMENT_AMOUNT_settlementScheduleGridTbl_Id_T06MT']")
+		private WebElement EnterThirdSettlement_InScheduleDetailstab_InMainteance_UnderSettlement;
+		public WebElement EnterThirdSettlement_InScheduleDetailstab_InMainteance_UnderSettlement_607(){
+			return EnterThirdSettlement_InScheduleDetailstab_InMainteance_UnderSettlement;
+		}
 		
+		//130739
 		
+		@FindBy(xpath = "//td[text()='Tracking & Incidental Charges']")
+		private WebElement Click_Tracking_Incidental_Charges_under_menu;
+		public WebElement Click_Tracking_Incidental_Charges_under_menu_607(){
+			return Click_Tracking_Incidental_Charges_under_menu;
+		}
 		
+		@FindBy(xpath = "//*[@id='T07MT']")
+		private WebElement Click_Mainteance_Under_Tracking_Incidental_Charges_under_menu;
+		public WebElement Click_Mainteance_Under_Tracking_Incidental_Charges_under_menu_607(){
+			return Click_Mainteance_Under_Tracking_Incidental_Charges_under_menu;
+		}
 		
+		@FindBy(xpath = "//*[@id=\"lookuptxt_trs_deal_serial_no_T07MT\"]")
+		private WebElement EnterDealNbr_InMainteance_Under_Tracking_Incidental_Charges_under_menu;
+		public WebElement EnterDealNbr_InMainteance_Under_Tracking_Incidental_Charges_under_menu_607(){
+			return EnterDealNbr_InMainteance_Under_Tracking_Incidental_Charges_under_menu;
+		}
 		
-	
-	
-	
+		@FindBy(xpath = "//*[@id='lookuptxt_charges_code_T07MT']")
+		private WebElement EnterChargeCode_InMainteance_Under_Tracking_Incidental_Charges_under_menu;
+		public WebElement EnterChargeCode_InMainteance_Under_Tracking_Incidental_Charges_under_menu_607(){
+			return EnterChargeCode_InMainteance_Under_Tracking_Incidental_Charges_under_menu;
+		}
+		
+		@FindBy(xpath = "//*[@id='trstrackdetVO_CHARGE_ALLOCATION_CRITERIA_T07MT']")
+		private WebElement Select_ChargeAllocationCriteria_InMainteance_Under_Tracking_Incidental_Charges_under_menu;
+		public WebElement Select_ChargeAllocationCriteria_InMainteance_Under_Tracking_Incidental_Charges_under_menu_607(){
+			return Select_ChargeAllocationCriteria_InMainteance_Under_Tracking_Incidental_Charges_under_menu;
+		}
+		
+		@FindBy(xpath = "//*[@id='spanLookup_drAcc_sl_T07MT']")
+		private WebElement ClickSearch_BtnInAccounts_InMainteance_Under_Tracking_Incidental_Charges_under_menu;
+		public WebElement ClickSearch_BtnInAccounts_InMainteance_Under_Tracking_Incidental_Charges_under_menu_607(){
+			return ClickSearch_BtnInAccounts_InMainteance_Under_Tracking_Incidental_Charges_under_menu;
+		}
+		
+		@FindBy(xpath = "//*[@id='td_gridtab_drAcc_sl_T07MT_1_amfVO.BRANCH_CODE']")
+		private WebElement SelectGLCode_InAccounts_InMainteance_Under_Tracking_Incidental_Charges_under_menu;
+		public WebElement SelectGLCode_InAccounts_InMainteance_Under_Tracking_Incidental_Charges_under_menu_607(){
+			return SelectGLCode_InAccounts_InMainteance_Under_Tracking_Incidental_Charges_under_menu;
+		}
+		
+		@FindBy(xpath = "//*[@id='incidentalcharges_save_T07MT']")
+		private WebElement ClickSave_Btn_InMainteance_Under_Tracking_Incidental_Charges_under_menu;
+		public WebElement ClickSave_Btn_InMainteance_Under_Tracking_Incidental_Charges_under_menu_607(){
+			return ClickSave_Btn_InMainteance_Under_Tracking_Incidental_Charges_under_menu;
+		}
+		
+		@FindBy(xpath = "//*[@id='T07P']")
+		private WebElement ClickApprove_Under_Tracking_Incidental_Charges_under_menu;
+		public WebElement ClickApprove_Under_Tracking_Incidental_Charges_under_menu_607(){
+			return ClickApprove_Under_Tracking_Incidental_Charges_under_menu;
+		}
+		
+		@FindBy(xpath = "//*[@id='IncidentalChargesGridTbl_Id_T07P_gs_trstrackVO.TRS_DEAL_SERIAL_NO']")
+		private WebElement SearchDealnbr_InApprove_Under_Tracking_Incidental_Charges_under_menu;
+		public WebElement SearchDealnbr_InApprove_Under_Tracking_Incidental_Charges_under_menu_607(){
+			return SearchDealnbr_InApprove_Under_Tracking_Incidental_Charges_under_menu;
+		}
+		
+		@FindBy(xpath = "//*[@id='td_IncidentalChargesGridTbl_Id_T07P_1_trstrackVO.TRACK_NBR']")
+		private WebElement SelectRecord_InApprove_Under_Tracking_Incidental_Charges_under_menu;
+		public WebElement SelectRecord_InApprove_Under_Tracking_Incidental_Charges_under_menu_607(){
+			return SelectRecord_InApprove_Under_Tracking_Incidental_Charges_under_menu;
+		}
+		
+		@FindBy(xpath = "//*[@id='incidentalchargesMainTabToolBar_T07P']//a")
+		private WebElement ClickApproveBtn_InApprove_Under_Tracking_Incidental_Charges_under_menu;
+		public WebElement ClickApproveBtn_InApprove_Under_Tracking_Incidental_Charges_under_menu_607(){
+			return ClickApproveBtn_InApprove_Under_Tracking_Incidental_Charges_under_menu;
+		}
+		
+		@FindBy(xpath = "//*[@id='_popup_path_sol_confirm']")
+		private WebElement ClickCancel_in_ReportGeneration;
+		public WebElement ClickCancel_in_ReportGeneration_607(){
+			return ClickCancel_in_ReportGeneration;
+		}
+		
+		@FindBy(xpath = "//div[@class='jMsgbox-contentWrap'][contains(text(),'continue')]")
+	    private WebElement IIS_approve_menu_confirm_continue_popup;
+	    public WebElement IISApproveMenuConfirmContinuePopup_608() {
+	        return IIS_approve_menu_confirm_continue_popup;
+	    }
+
+	    @FindBy(xpath = "//div[@class='jMsgbox-contentWrap'][contains(text(),'proceed')]")
+	    private WebElement IIS_approve_menu_confirm_proceed_popup;
+	    public WebElement IISApproveMenuConfirmPopupProceed_608() {
+	        return IIS_approve_menu_confirm_proceed_popup;
+	    }
+	    
+	    @FindBy(xpath = "//div[@class='jMsgbox-contentWrap'][contains(text(),'Collaterals')]")
+	    private WebElement IIS_approve_menu_confirm_collateral_popup;
+	    public WebElement IISApproveMenuConfirmCollateralPopup_608() {
+	        return IIS_approve_menu_confirm_collateral_popup;
+	    }
+		
+	    //130740
+	  
+	    @FindBy(xpath = "(//*[@id='infoBarSearchButton_T022MT'])[1]")
+	    private WebElement Click_SearchIn_mainteance_under_InvestmentDealsCombinedWithoutTradDeal;
+	    public WebElement Click_SearchIn_mainteance_under_InvestmentDealsCombinedWithoutTradDeal_607() {
+	        return Click_SearchIn_mainteance_under_InvestmentDealsCombinedWithoutTradDeal;
+	    }
+	  
+	    @FindBy(xpath = "//*[@id='investmentDealsGridTbl_Id_T022MT_gs_trsdealVO.SERIAL_NO']")
+	    private WebElement SearchRecordIn_mainteance_under_InvestmentDealsCombinedWithoutTradDeal;
+	    public WebElement SearchRecordIn_mainteance_under_InvestmentDealsCombinedWithoutTradDeal_607() {
+	        return SearchRecordIn_mainteance_under_InvestmentDealsCombinedWithoutTradDeal;
+	    }
+	  
+	    @FindBy(xpath = "//*[@id='td_investmentDealsGridTbl_Id_T022MT_1_trsdealVO.SERIAL_NO']")
+	    private WebElement SelectRecordIn_mainteance_under_InvestmentDealsCombinedWithoutTradDeal;
+	    public WebElement SelectRecordIn_mainteance_under_InvestmentDealsCombinedWithoutTradDeal_607() {
+	        return SelectRecordIn_mainteance_under_InvestmentDealsCombinedWithoutTradDeal;
+	    }
+	  
+	    @FindBy(xpath = "//*[@id='pmtInstrBtn_T022MT']")
+	    private WebElement Click_PaymentInstruction_In_mainteance_under_InvestmentDealsCombinedWithoutTradDeal;
+	    public WebElement Click_PaymentInstruction_In_mainteance_under_InvestmentDealsCombinedWithoutTradDeal_607() {
+	        return Click_PaymentInstruction_In_mainteance_under_InvestmentDealsCombinedWithoutTradDeal;
+	    }
+	  
+	    @FindBy(xpath = "//*[@id='showJVD_btn_T022MT']")
+	    private WebElement Click_JournalVoucherDetails_InPaymentInstruction_In_mainteance_under_InvestmentDealsCombinedWithoutTradDeal;
+	    public WebElement Click_JournalVoucherDetails_InPaymentInstruction_In_mainteance_under_InvestmentDealsCombinedWithoutTradDeal_607() {
+	        return Click_JournalVoucherDetails_InPaymentInstruction_In_mainteance_under_InvestmentDealsCombinedWithoutTradDeal;
+	    }
+	  
+	    @FindBy(xpath = "//*[@id='td_transactionAccountJvList_Id_T022MT_3_trsaccountvo.CV_AMOUNT']")
+	    private WebElement CheckIncidental_Charges_InJournalVoucherDetails_InPaymentInstruction_In_mainteance_under_InvestmentDealsCombinedWithoutTradDeal;
+	    public WebElement CheckIncidental_Charges_InJournalVoucherDetails_InPaymentInstruction_In_mainteance_under_InvestmentDealsCombinedWithoutTradDeal_607() {
+	        return CheckIncidental_Charges_InJournalVoucherDetails_InPaymentInstruction_In_mainteance_under_InvestmentDealsCombinedWithoutTradDeal;
+	    }
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
 }
