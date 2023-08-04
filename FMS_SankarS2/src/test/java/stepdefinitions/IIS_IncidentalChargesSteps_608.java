@@ -2,6 +2,7 @@ package stepdefinitions;
 
 import java.util.Map;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,6 +19,7 @@ import helper.WaitHelper;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pageobjects.MTS.MTS_ApplicationObj_608;
 import pageobjects.iisParam.IIS_ApplicationObj_608;
 import resources.BaseClass;
 
@@ -34,11 +36,13 @@ public class IIS_IncidentalChargesSteps_608 {
 	IISLogin login = new IISLogin(driver);
 	
 	IIS_ApplicationObj_608 IISApplicationObj608 = new IIS_ApplicationObj_608(driver);
+	MTS_ApplicationObj_608 MTSApplicationObj608 = new MTS_ApplicationObj_608(driver);
 	
 	String path = System.getProperty("user.dir") +"\\TestData\\IISTestData.xlsx";
 	ExcelData iisIncidentalChargesExcelData  = new ExcelData(path,"IncidentalChargesTestData","DataSet ID");
 	ExcelData iisAccrualDealExcelData  = new ExcelData(path,"AccrualDealTestData","DataSet ID");
 	ExcelData iisAccrualProcessExcelData  = new ExcelData(path,"AccrualProcessTestData","DataSet ID");
+	ExcelData MTSEODExcelData  = new ExcelData(path,"MTSTestData","DataSet ID");
 	
 	Map<String, String> testData;
 	
@@ -93,6 +97,17 @@ public class IIS_IncidentalChargesSteps_608 {
 		testData = iisAccrualProcessExcelData.getTestdata("DS_AT_AP_022");
     }
 	
+//	AT_AP_023_01
+	@And("^User_608 get the test data for test case AT_AP_023_01$")
+    public void get_the_test_data_for_test_case_AT_AP_023_01() throws Throwable {
+		testData = iisAccrualProcessExcelData.getTestdata("DS_AT_AP_023_01");
+    }
+	
+//	AT_AP_023_02
+	@And("^User_608 get the test data for test case AT_AP_023_02$")
+    public void get_the_test_data_for_test_case_AT_AP_023_02() throws Throwable {
+		testData = MTSEODExcelData.getTestdata("DS_AT_AP_023_02");
+    }
 	
 	
 	
@@ -2246,5 +2261,509 @@ public class IIS_IncidentalChargesSteps_608 {
 			}
 		}		
 	}
+	
+	
+//	MTS Application
+//	@AT_AP_023_02
+	@And("User_608 click the Parameter module in MTS Application")
+	public void user_click_the_parameter_module_in_mts_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSParameterModule_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				MTSApplicationObj608.MTSParameterModule_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+
+	@And("User_608 click the Batch menu under Parameter module")
+	public void user_click_the_batch_menu_under_parameter_module() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSParameterBatch_608()); 
+		for (int i = 0; i <= 500; i++) {
+			try {
+				MTSApplicationObj608.MTSParameterBatch_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+
+	@And("User_608 click the maintenance screen under Batch menu")
+	public void user_click_the_maintenance_screen_under_batch_menu() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSParameterBatchMaintenance_608()); 
+		for (int i = 0; i <= 500; i++) {
+			try {
+				MTSApplicationObj608.MTSParameterBatchMaintenance_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}	    
+	}
+
+	@And("User_608 enter the Additional Ref number in maintenance under Batch menu")
+	public void user_enter_the_additional_ref_number_in_maintenance_under_batch_menu() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSParamBatchMaintenanceAdditionalRefNbr_608());
+		MTSApplicationObj608.MTSParamBatchMaintenanceAdditionalRefNbr_608().sendKeys(testData.get("Additional Ref"),Keys.TAB);
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(MTSApplicationObj608.MTSParamBatchMaintenanceAdditionalRefNbr_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}
+	}
+
+	@And("User_608 enter the Brief name in maintenance under Batch menu")
+	public void user_enter_the_brief_name_in_maintenance_under_batch_menu() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSParamBatchMaintenanceBriefName_608());
+		MTSApplicationObj608.MTSParamBatchMaintenanceBriefName_608().sendKeys(testData.get("Brief Name"),Keys.TAB);
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(MTSApplicationObj608.MTSParamBatchMaintenanceBriefName_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}	    
+	}
+
+	@And("User_608 enter the Long name in maintenance under Batch menu")
+	public void user_enter_the_long_name_in_maintenance_under_batch_menu() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSParamBatchMaintenanceLongName_608());
+		MTSApplicationObj608.MTSParamBatchMaintenanceLongName_608().sendKeys(testData.get("Long Name"),Keys.TAB);
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(MTSApplicationObj608.MTSParamBatchMaintenanceLongName_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}	    
+	}
+
+	@And("User_608 enter the Menu ref number in maintenance under Batch menu")
+	public void user_enter_the_menu_ref_number_in_maintenance_under_batch_menu() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSParamBatchMaintenanceMenuRefNbr_608());
+		MTSApplicationObj608.MTSParamBatchMaintenanceMenuRefNbr_608().sendKeys(testData.get("Menu Ref"),Keys.TAB);
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(MTSApplicationObj608.MTSParamBatchMaintenanceMenuRefNbr_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}	    
+	}
+
+	@And("User_608 select Periodicity as Daily in maintenance under Batch menu")
+	public void user_select_periodicity_as_daily_in_maintenance_under_batch_menu() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSParamBatchMaintenancePeriodicityDropdown_608());
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				dropDownHelper.SelectUsingVisibleText(MTSApplicationObj608.MTSParamBatchMaintenancePeriodicityDropdown_608(), testData.get("Periodicity DD"));
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}
+	}
+
+	@And("User_608 click the Oracle BAJ under Companies in Batch Details tab under maintenance")
+	public void user_click_the_oracle_baj_under_companies_in_batch_details_tab_under_maintenance() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSParamBatchMainBatchDetailsTabOracleBAJ_608()); 
+		for (int i = 0; i <= 300; i++) {
+			try {
+				MTSApplicationObj608.MTSParamBatchMainBatchDetailsTabOracleBAJ_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}	    
+	}
+
+	@And("User_608 select the Head office under Oracle BAJ in Batch Details tab under maintenance")
+	public void user_select_the_head_office_under_oracle_baj_in_batch_details_tab_under_maintenance() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSParamBatchMainBatchDetailsTabOracleBAJHeadOffice_608()); 
+		for (int i = 0; i <= 300; i++) {
+			try {
+				MTSApplicationObj608.MTSParamBatchMainBatchDetailsTabOracleBAJHeadOffice_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	    
+	}
+
+	@And("User_608 select the ICD Treasury-Invest under Oracle BAJ in Batch Details tab under maintenance")
+	public void user_select_the_icd_treasury_invest_under_oracle_baj_in_batch_details_tab_under_maintenance() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSParamBatchMainBatchDetailsTabOracleBAJICDTreasury_608()); 
+		for (int i = 0; i <= 300; i++) {
+			try {
+				MTSApplicationObj608.MTSParamBatchMainBatchDetailsTabOracleBAJICDTreasury_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	    
+	}
+
+	@And("User_608 click the Financing Treasury under processes in Batch Details tab under maintenance")
+	public void user_click_the_financing_treasury_under_processes_in_batch_details_tab_under_maintenance() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSParamBatchMainProcessFinancingTreasury_608()); 
+		for (int i = 0; i <= 300; i++) {
+			try {
+				MTSApplicationObj608.MTSParamBatchMainProcessFinancingTreasury_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	    
+	}
+
+	@And("User_608 select the Create settlement under Financing Treasury in Batch Details tab under maintenance")
+	public void user_select_the_create_settlement_under_financing_treasury_in_batch_details_tab_under_maintenance() throws Throwable {	    
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSParamBatchMainProcessFinancingTreasuryCreateSettlement_608()); 
+		for (int i = 0; i <= 300; i++) {
+			try {
+				MTSApplicationObj608.MTSParamBatchMainProcessFinancingTreasuryCreateSettlement_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+
+	@And("User_608 select the Approve settlement under Financing Treasury in Batch Details tab under maintenance")
+	public void user_select_the_approve_settlement_under_financing_treasury_in_batch_details_tab_under_maintenance() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSParamBatchMainProcessFinancingTreasuryApproveSettlement_608()); 
+		for (int i = 0; i <= 300; i++) {
+			try {
+				MTSApplicationObj608.MTSParamBatchMainProcessFinancingTreasuryApproveSettlement_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	    
+	}
+
+	@And("User_608 select the Profit Accrual Process under Financing Treasury in Batch Details tab under maintenance")
+	public void user_select_the_profit_accrual_process_under_financing_treasury_in_batch_details_tab_under_maintenance() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSParamBatchMainProcessFinancingTreasuryProfitAccrualProcess_608()); 
+		for (int i = 0; i <= 300; i++) {
+			try {
+				MTSApplicationObj608.MTSParamBatchMainProcessFinancingTreasuryProfitAccrualProcess_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	    
+	}
+
+	@And("User_608 click the Batch Control tab in maintenance under Batch menu")
+	public void user_click_the_batch_control_tab_in_maintenance_under_batch_menu() throws Throwable {
+		for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(MTSApplicationObj608.MTSParamBatchMainBatchControlTab_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	
+		for (int i = 0; i <= 300; i++) {
+			try {
+				MTSApplicationObj608.MTSParamBatchMainBatchControlTab_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}	    
+	}
+
+	@And("User_608 select the Process Batch as Manual under Batch Control tab in maintenance")
+	public void user_select_the_process_batch_as_manual_under_batch_control_tab_in_maintenance() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSParamBatchMainBatchControlTabProcessBatchDropdown_608());
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				dropDownHelper.SelectUsingVisibleText(MTSApplicationObj608.MTSParamBatchMainBatchControlTabProcessBatchDropdown_608(), testData.get("Process Batch DD"));
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}	    
+	}
+
+	@When("User_608 click Save btn under maintenance in under Batch menu")
+	public void user_click_save_btn_under_maintenance_in_under_batch_menu() throws Throwable {
+		for (int i = 0; i <= 500; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(MTSApplicationObj608.MTSParamBatchMaintenanceSaveBtn_608());
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		MTSApplicationObj608.MTSParamBatchMaintenanceSaveBtn_608().click();
+		
+		for (int i = 0; i <= 1000; i++) {
+			try {
+				IISApplicationObj608.IIS_InformationPopupOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 1000) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	    
+	}
+	
+	
+	@And("User_608 click the Approve screen under Batch menu")
+	public void user_click_the_approve_screen_under_batch_menu() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSParamBatchApproveMenu_608()); 
+		for (int i = 0; i <= 300; i++) {
+			try {
+				MTSApplicationObj608.MTSParamBatchApproveMenu_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+
+	@And("User_608 search the Additional Ref number in Approve screen searchgrid under Batch menu")
+	public void user_search_the_additional_ref_number_in_approve_screen_searchgrid_under_batch_menu() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSParamBatchApproveMenuSearchgridAdditionalRefInput_608());
+		MTSApplicationObj608.MTSParamBatchApproveMenuSearchgridAdditionalRefInput_608().sendKeys(testData.get("Additional Ref"),Keys.ENTER);
+	}
+
+	@And("User_608 double click the searchgird row in Approve menu under Batch menu")
+	public void user_double_click_the_searchgird_row_in_approve_menu_under_batch_menu() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSParamBatchApproveMenuSearchgridRow_608());
+		for (int i = 0; i <= 300; i++) {
+			try {
+				clicksAndActionsHelper.doubleClick(MTSApplicationObj608.MTSParamBatchApproveMenuSearchgridRow_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(MTSApplicationObj608.MTSParamBatchApproveMenuAdditionalRef_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}
+	}
+
+	@When("User_608 click the Approve button in Approve menu under Batch menu")
+	public void user_click_the_approve_button_in_approve_menu_under_batch_menu() throws Throwable {
+		for (int i = 0; i <= 500; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(MTSApplicationObj608.MTSParamBatchApproveMenuApproveBtn_608());
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		MTSApplicationObj608.MTSParamBatchApproveMenuApproveBtn_608().click();
+		
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_WarningPopupOkBtn_608());
+		IISApplicationObj608.IIS_WarningPopupOkBtn_608().click();
+		
+		for (int i = 0; i <= 1000; i++) {
+			try {
+				IISApplicationObj608.IIS_InformationPopupOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 1000) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}		
+
+	}
+	
+	
+	@And("User_608 Refresh the MTS Application")
+	public void user_refresh_the_mts_application() throws Throwable {
+		for (int i = 0; i <= 500; i++) {
+			try {
+				driver.navigate().refresh();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	    
+	}
+
+	@And("User_608 click the Process module in MTS Application")
+	public void user_click_the_process_module_in_mts_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSProcessModule_608());
+		MTSApplicationObj608.MTSProcessModule_608().click();
+	}
+
+	@And("User_608 click the Batch Process menu under Process module")
+	public void user_click_the_batch_process_menu_under_process_module() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSProcessBatchProcessMenu_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				MTSApplicationObj608.MTSProcessBatchProcessMenu_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+
+	@And("User_608 click the created batch option under Batch process menu")
+	public void user_click_the_created_batch_option_under_batch_process_menu() throws Throwable {
+		Thread.sleep(5000);
+		String newBatch = testData.get("Brief Name");
+		System.err.println("Brief Name: "+newBatch);
+		WebElement newBatchmenu = driver.findElement(By.xpath("//td[contains(text(),'"+newBatch+"')]"));
+		for (int i = 0; i <= 500; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(newBatchmenu);
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		waitHelper.waitForElementwithFluentwait(driver, newBatchmenu);
+		for (int i = 0; i <= 500; i++) {
+			try {
+				newBatchmenu.click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}	    
+	}
+
+	@And("User_608 click the batch run menu under new batch in Batch Process")
+	public void user_click_the_batch_run_menu_under_new_batch_in_batch_process() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSProcessBatchProcessMenuBatchRun_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				MTSApplicationObj608.MTSProcessBatchProcessMenuBatchRun_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+
+	@And("User_608 enter the batch run date in batch run menu under Batch Process")
+	public void user_enter_the_batch_run_date_in_batch_run_menu_under_batch_process() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSProcessBatchProcessMenuBatchRunDate_608());
+		MTSApplicationObj608.MTSProcessBatchProcessMenuBatchRunDate_608().sendKeys(testData.get("Batch Run Date"),Keys.TAB);	    
+	}
+
+	@When("User_608 click the Run button in  batch run menu under Batch Process")
+	public void user_click_the_run_button_in_batch_run_menu_under_batch_process() {
+		waitHelper.waitForElementwithFluentwait(driver, MTSApplicationObj608.MTSProcessBatchProcessMenuBatchRunOptRunBtn_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				MTSApplicationObj608.MTSProcessBatchProcessMenuBatchRunOptRunBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_WarningPopupOkBtn_608());
+		IISApplicationObj608.IIS_WarningPopupOkBtn_608().click();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }
