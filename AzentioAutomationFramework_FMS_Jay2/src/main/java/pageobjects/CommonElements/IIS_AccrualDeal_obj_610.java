@@ -538,6 +538,8 @@ public class IIS_AccrualDeal_obj_610 {
 	public WebElement IIS_InformationPopupOkBtn_610(){
 		return IIS_information_popup_ok_btn;
 	}
+	
+	
 
 	
 }

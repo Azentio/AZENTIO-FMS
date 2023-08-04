@@ -93,7 +93,7 @@ public class IIS_AccrualDeal_Steps_610 {
 		public void user_610_click_the_maintenance_under_investment_deals_combined_without_trade_deal() throws Throwable {
 			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IIS_InvestmentDealWithoutTradeDeal_Maintenance_610());
 			IIS_AccrualDeal_obj_610.IIS_InvestmentDealWithoutTradeDeal_Maintenance_610().click();
-		}
+			Thread.sleep(3000);		}
 
 		@And("User_610 Select the Party in Investment Deals Combined without Trade Deal")
 		public void user_610_Select_the_party_in_investment_deals_combined_without_trade_deal() throws Throwable {
@@ -166,6 +166,7 @@ public class IIS_AccrualDeal_Steps_610 {
 			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ProductClass_610());
 			IIS_AccrualDeal_obj_610.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ProductClass_610().click();
 			IIS_AccrualDeal_obj_610.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ProductClass_610().sendKeys(testData.get("Product Class"),Keys.ENTER);
+			Thread.sleep(2000);
 			
 			//table[@id='gridtab_investmentDeals_CLASS_T022MT']/tbody/tr/td[text()='92']
 			String xpath ="//table[@id='gridtab_investmentDeals_CLASS_T022MT']/tbody/tr/td[text()='"+testData.get("Product Class")+"']";
@@ -273,6 +274,7 @@ public class IIS_AccrualDeal_Steps_610 {
 			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ContributorDetails_Maturity_610());
 			IIS_AccrualDeal_obj_610.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ContributorDetails_Maturity_610().click();
 			IIS_AccrualDeal_obj_610.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ContributorDetails_Maturity_610().sendKeys(testData.get("Maturity GL"),Keys.ENTER);
+			Thread.sleep(4000);
 			
 			//table[@id='gridtab_matr_ac_sl_T022MT']/tbody/tr/td[text()='411001']
 			String xpath ="//table[@id='gridtab_matr_ac_sl_T022MT']/tbody/tr/td[text()='"+testData.get("Maturity GL")+"']";
@@ -428,13 +430,7 @@ public class IIS_AccrualDeal_Steps_610 {
 			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IIS_ConfirmOkPopUp_610());
 			IIS_AccrualDeal_obj_610.IIS_ConfirmOk_610().click();
 			Thread.sleep(5000);
-			
-			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IIS_InformationPopupTitle_610());
-			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IIS_InformationPopupTextMsg_610());
-			String text1 = IIS_AccrualDeal_obj_610.IIS_InformationPopupTextMsg_610().getText();
-			System.err.println("Text Message: "+text1);
-			String dealNbr = IIS_AccrualDeal_obj_610.IIS_InformationPopupTextMsg_610().getText().substring(18, 22);
-	    	System.err.println("Deal Number: "+dealNbr);    
+						 
 	    	
 			//div[@id='div__popup_path_sol_confirm']/div[2]/div
 			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IIS_ConfirmOkPopUp_610());
@@ -564,7 +560,7 @@ public class IIS_AccrualDeal_Steps_610 {
 		@And("User_610 enter the Deal number in maintenance menu under Settlement")
 		public void user_enter_the_deal_number_in_maintenance_menu_under_settlement() throws Throwable {
 			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISSettlementMenuMaintenanceDealNbrInput_610());
-			IIS_AccrualDeal_obj_610.IISSettlementMenuMaintenanceDealNbrInput_610().sendKeys(testData.get("Deal Nbr"),Keys.TAB);
+			IIS_AccrualDeal_obj_610.IISSettlementMenuMaintenanceDealNbrInput_610().sendKeys(testData.get("Deal_Number"),Keys.TAB);
 			for(int i = 0; i <= 500; i++) {
 	    		try {
 					if(!(IIS_AccrualDeal_obj_610.IISSettlementMenuMaintenanceDealNbrInput_610().getAttribute("prevvalue").isBlank())) {
@@ -633,7 +629,7 @@ public class IIS_AccrualDeal_Steps_610 {
 			String settlementNbr = IIS_AccrualDeal_obj_610.IISSettlementMenuMaintenanceSuccessPopupText_610().getText().substring(25, 29);
 	    	System.err.println("Settlement Number: "+settlementNbr);  
 	    	
-	    	accuraldealExcelData.updateTestData(testData.get("DataSet ID"),"Settlement Nbr", settlementNbr);
+//     	accuraldealExcelData.updateTestData(testData.get("DataSet ID"),"Settlement Nbr", settlementNbr);
 			
 			for (int i = 0; i <= 2000; i++) {
 				try {
@@ -683,7 +679,7 @@ public class IIS_AccrualDeal_Steps_610 {
 		@And("User_610 enter the settlement number in searchgrid under approve menu in Settlement")
 		public void user_enter_the_settlement_number_in_searchgrid_under_approve_menu_in_settlement() throws Throwable {
 			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISSettlementMenuApproveSearchgridSettlementNbrInput_610());
-			IIS_AccrualDeal_obj_610.IISSettlementMenuApproveSearchgridSettlementNbrInput_610().sendKeys(testData.get("Settlement Nbr"),Keys.ENTER);
+			IIS_AccrualDeal_obj_610.IISSettlementMenuApproveSearchgridSettlementNbrInput_610().sendKeys(testData.get("settlementNbr"),Keys.ENTER);
 //			IIS_AccrualDeal_obj_610.IISSettlementMenuApproveSearchgridSettlementNbrInput_610().sendKeys("9581",Keys.ENTER);
 		}
 
@@ -748,7 +744,165 @@ public class IIS_AccrualDeal_Steps_610 {
            }
 		
 		
+		//----------------Reverse
+						//	Settlement --> Reverse
 		
+		
+		@And("User_610 click the Reverse menu under Settlement module")
+		public void user_click_the_reverse_menu_under_settlement_module() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISSettlementReverseMenu_610()); 
+			IIS_AccrualDeal_obj_610.IISSettlementReverseMenu_610().click();
+		}
+
+		@And("User_610 search the settlement number in searchgrid under Reverse menu in Settlement")
+		public void user_search_the_settlement_number_in_searchgrid_under_reverse_menu_in_settlement() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISSettlementReverseSearchgirdSettlementNbrInput_610());
+//			IIS_AccrualDeal_obj_610.IISSettlementReverseSearchgirdSettlementNbrInput_610().sendKeys(testData.get("Settlement Nbr"),Keys.ENTER);
+			IIS_AccrualDeal_obj_610.IISSettlementReverseSearchgirdSettlementNbrInput_610().sendKeys("9583",Keys.ENTER);
+		}
+
+		@And("User_610 double click the searchgrid row in Reverse menu under Settlement")
+		public void user_double_click_the_searchgrid_row_in_reverse_menu_under_settlement() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISSettlementReverseSearchgirdRow_610());
+			for (int i = 0; i <= 300; i++) {
+				try {
+					clicksAndActionsHelper.doubleClick(IIS_AccrualDeal_obj_610.IISSettlementReverseSearchgirdRow_610());
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			
+			for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(IIS_AccrualDeal_obj_610.IISSettlementReverseSettlementNbr_610().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}
+			
+		}
+
+		@And("User_610 click the Reverse button in Reverse menu under Settlement")
+		public void user_click_the_reverse_button_in_reverse_menu_under_settlement() throws Throwable {
+			for (int i = 0; i <= 300; i++) {
+				try {
+					javaScriptHelper.scrollIntoView(IIS_AccrualDeal_obj_610.IISSettlementReverseMenuReverseBtn_610());
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			IIS_AccrualDeal_obj_610.IISSettlementReverseMenuReverseBtn_610().click();
+			
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IIS_WarningPopupOkBtn_610());
+			IIS_AccrualDeal_obj_610.IIS_ConfirmPopupOkBtn_610().click();		
+			
+			for (int i = 0; i <= 2000; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.IIS_SuccessPopupOkBtn_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 2000) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}	
+			
+		}
+		
+		
+//		Settlement --> Approve Reverse
+		@And("User_610 click the Approve Reverse menu under Settlement module")
+		public void user_click_the_approve_reverse_menu_under_settlement_module() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISSettlementApproveReverseMenu_610()); 
+			IIS_AccrualDeal_obj_610.IISSettlementApproveReverseMenu_610().click();
+		}
+
+		@And("User_610 search the settlement number in searchgrid under Approve Reverse menu in Settlement")
+		public void user_search_the_settlement_number_in_searchgrid_under_approve_reverse_menu_in_settlement() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISSettlementApproveReverseSearchgirdSettlementNbrInput_610());
+//			IIS_AccrualDeal_obj_610.IISSettlementApproveReverseSearchgirdSettlementNbrInput_610().sendKeys(testData.get("Settlement Nbr"),Keys.ENTER);
+			IIS_AccrualDeal_obj_610.IISSettlementApproveReverseSearchgirdSettlementNbrInput_610().sendKeys("9583",Keys.ENTER);
+		}
+
+		@And("User_610 double click the searchgrid row in Approve Reverse menu under Settlement")
+		public void user_double_click_the_searchgrid_row_in_approve_reverse_menu_under_settlement() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISSettlementApproveReverseSearchgirdRow_610());
+			for (int i = 0; i <= 300; i++) {
+				try {
+					clicksAndActionsHelper.doubleClick(IIS_AccrualDeal_obj_610.IISSettlementApproveReverseSearchgirdRow_610());
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			
+			for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(IIS_AccrualDeal_obj_610.IISSettlementApproveReverseSettlementNbr_610().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}
+			
+		}
+
+		@And("User_610 click the Reverse button in Approve Reverse menu under Settlement")
+		public void user_click_the_reverse_button_in_approve_reverse_menu_under_settlement() throws Throwable {
+			for (int i = 0; i <= 300; i++) {
+				try {
+					javaScriptHelper.scrollIntoView(IIS_AccrualDeal_obj_610.IISSettlementApproveReverseMenuReverseBtn_610());
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			IIS_AccrualDeal_obj_610.IISSettlementApproveReverseMenuReverseBtn_610().click();
+			
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IIS_WarningPopupOkBtn_610());
+			IIS_AccrualDeal_obj_610.IIS_ConfirmPopupOkBtn_610().click();		
+			
+			for (int i = 0; i <= 2000; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.IIS_SuccessPopupOkBtn_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 2000) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			
+			// Report popup Cancel
+			for (int i = 0; i <= 500; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.IIS_ConfirmPopupCancelBtn_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			
+		}
 		
 		
 		

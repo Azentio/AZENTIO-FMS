@@ -9,22 +9,41 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">129,379</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">88,961</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Runner.TestApplication</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1691056606802</td><td rowspan="1">118023</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Runner.TestApplication</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1691149123105</td><td rowspan="1">79604</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">Runner.TestApplication#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Create a Non Upfront deal with 48 monthly installments at month beginning in T022 screen&quot;</td><td>&quot;Optional[To check the Incidental Charges Feature]&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//table[@id=&apos;gridtab_matr_ac_sl_T022MT&apos;]/tbody/tr/td[text()=&apos;411001&apos;]&quot;}
+<h2>Default test</h2><h3 id="m0">Runner.TestApplication#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Create a Non Upfront deal with 48 monthly installments at month beginning in T022 screen&quot;</td><td>&quot;Optional[To check the Incidental Charges Feature]&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span class=&quot;ui-icon ui-icon-search live-search-ui&quot;&gt;&lt;/span&gt; is not clickable at point (1055, 138). Other element would receive the click: &lt;div class=&quot;jMsgbox-background&quot; style=&quot;position: fixed; width: 1920px; height: 918px; z-index: 999999; opacity: 0.6; top: 0px; left: 0px;&quot;&gt;&lt;/div&gt;
   (Session info: chrome=115.0.5790.170)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [96f55bbba1310ac7ce3b1493e291f33d, findElement {using=xpath, value=//table[@id=&apos;gridtab_matr_ac_sl_T022MT&apos;]/tbody/tr/td[text()=&apos;411001&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.170, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ININDC~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52368}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52368/devtoo..., se:cdpVersion: 115.0.5790.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 96f55bbba1310ac7ce3b1493e291f33d
-	at org.testng.Assert.fail(Assert.java:99)
-	at stepdefinitions.IIS_AccrualDeal_Steps_610.user_610_select_the_maturity_account_in_contributor_tab_under_maintenance_in_investment_deals_combined_without_trade_deal(IIS_AccrualDeal_Steps_610.java:289)
-	at ✽.User_610 select the maturity account in Contributor tab under maintenance in Investment Deals Combined without Trade Deal(file:///C:/Users/inindc00610/git/AZENTIO-FMS-Jay7/AzentioAutomationFramework_FMS_Jay2/src/test/java/feature_IIS/AccrualDeal_610.feature:21)
+Command: [42d357cafa7ec51d15c0f55931f9537a, clickElement {id=A5B13A53105C51ADF0C221CDDE1535A2_element_412}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.170, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ININDC~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65020}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65020/devtoo..., se:cdpVersion: 115.0.5790.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (42d357cafa7ec51d15c0f55931f9537a)] -&gt; xpath: //span[@id=&apos;spanLookup_trsdealVO_DEAL_TYPE_T022MT&apos;]/span]
+Session ID: 42d357cafa7ec51d15c0f55931f9537a
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy46.click(Unknown Source)
+	at stepdefinitions.IIS_AccrualDeal_Steps_610.user_610_Select_the_category_in_investment_deals_combined_without_trade_deal(IIS_AccrualDeal_Steps_610.java:137)
+	at ✽.User_610 Select the Category in Investment Deals Combined without Trade Deal(file:///C:/Users/inindc00610/git/AZENTIO-FMS-Jay7/AzentioAutomationFramework_FMS_Jay2/src/test/java/feature_IIS/AccrualDeal_610.feature:13)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
