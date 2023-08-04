@@ -106,11 +106,28 @@ public class ApplicationforfinancialfacilityOBJ_611 {
 		return additional_tab_expire_calender;
 	}
 
-	@FindBy(xpath = "//*[@id=\"ui-datepicker-div\"]/table/tbody/tr[5]/td[4]")
+	@FindBy(xpath = "//input[@id='applicationFacilityofferexpirydate_WIFT001MT']")
 	private WebElement additional_tab_expire_date;
 	public WebElement additionalTabExpireDate_611() {
 		return additional_tab_expire_date;
 	}
+	// Clear cache for FMS Core
+		@FindBy(xpath = "//span[@id='tech_details_icon']")
+		private WebElement FMS_core_tech_details_icon;
+		public WebElement FMSCoreTechDetailsIcon_611() {
+			return FMS_core_tech_details_icon;
+		}
+		
+		@FindBy(xpath = "//label[@id='clear_cache_key']")
+		private WebElement FMS_core_clear_cache_btn;
+		public WebElement FMSCoreClearCacheBtn_611() {
+			return FMS_core_clear_cache_btn;
+		}
+//		@FindBy(xpath = "//input[@id='_popup_path_sol_ok']")
+//		private WebElement success_popup_ok_btn;
+//		public WebElement SuccessPopupOkBtn_611() {
+//			return success_popup_ok_btn;
+//		}
 	@FindBy(xpath = "//*[@id=\"applicationFacilityLimitDetailsTabs_WIFT001MT\"]")
 	private WebElement Limitdetails_Tab;
 	public WebElement limitdetailstab_611() {
@@ -144,19 +161,18 @@ public class ApplicationforfinancialfacilityOBJ_611 {
     public WebElement documentdetailstab_611() {
 		return Documentdetails_Tab;
 	}
-    @FindBy(xpath="//input[@name='applicationFacilityCO.fmsApplSolestVO.SOLICITOR']")
-	private WebElement DocumentdetailsTab_SolicitorName_searchbox;
-    public WebElement solicitornamesearchbox_611() {
-		return DocumentdetailsTab_SolicitorName_searchbox;
+    @FindBy(xpath = "//input[@id='lookuptxt_applicationFacilitysolicitor_WIFT001MT']")
+	private WebElement document_details_solicitor_name;
+	public WebElement documentDetailsSolicitorName_611() {
+		return document_details_solicitor_name;
 	}
-  
-    
-    @FindBy(xpath="//input[@name='applicationFacilityCO.fmsApplSolestVO.ESTIMATOR']")
-	private WebElement DocumentdetailsTab_EstimatorName_searchbox;
-    public WebElement estimatornamesearchbox_611() {
-		return DocumentdetailsTab_EstimatorName_searchbox;
-	}
-
+	
+	@FindBy(xpath = "//input[@id='lookuptxt_applicationFacilityEstimator_WIFT001MT']")
+	private WebElement document_details_estimator_name;
+	public WebElement documentDetailsEstimatorName_611() {
+		return document_details_estimator_name;
+	}	
+	//id="applicationfacilityLimitPopupFormId_WIFT001MT_bank_no_key"
     @FindBy(xpath = "//button[@id='applicationfacility_save_as_draft_btn_WIFT001MT']")
 	private WebElement limit_details_save_btn;
 	public WebElement limitDetailsSaveBtn_611() {
@@ -206,7 +222,7 @@ public class ApplicationforfinancialfacilityOBJ_611 {
 	//jay
 	@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
     private WebElement warning_popup_ok_btn;
-    public WebElement WarningPopupOkBtn() {
+    public WebElement WarningPopupOkBtn_611() {
         return warning_popup_ok_btn;
     }
 
@@ -225,7 +241,7 @@ public class ApplicationforfinancialfacilityOBJ_611 {
 
     @FindBy(xpath = "//input[@id='_popup_path_sol_ok']")
     private WebElement success_popup1;
-    public WebElement successPopup1() {
+    public WebElement SuccessPopupOkBtn_611() {
         return success_popup1;
     }
 
@@ -1604,5 +1620,78 @@ public class ApplicationforfinancialfacilityOBJ_611 {
 	public WebElement FMUpdateafterapprovemargindetailsbtntouch_611() {
 		return FM_Updateafterapprove_Margindetailsbtntouch;
 	}
+	//678142
+	@FindBy(xpath = "//button[@id='facilityMangementJVDetails_btn_WIFT008MT']")
+	private WebElement wifak_facilities_management_main_journal_voucher_details_btn;
+	public WebElement wifakFacilitiesManagementMaintananceJournalVoucherDetailsBtn_611() {
+		return wifak_facilities_management_main_journal_voucher_details_btn;
+	}
+	
+	@FindBy(xpath = "//table[@id='facManagementAccountJvList_Id_WIFT008MT']")
+	private WebElement wifak_facilities_management_main_jv_details_tab_account_details;
+	public WebElement wifakFacilitiesManagementMaintananceJVDetailsTabAccountDetails_611() {
+		return wifak_facilities_management_main_jv_details_tab_account_details;
+	}
+	@FindBy(xpath = "//a[@id='WIFT008CN']")
+	private WebElement wifak_facilities_management_cancel_reverse_menu;
+	public WebElement wifakFacilitiesManagementCancelMenu_611() {
+		return wifak_facilities_management_cancel_reverse_menu;
+	}
+	
+	@FindBy(xpath = "//input[@id='facilityManagementGridTbl_Id_WIFT008CN_gs_fmsFacilityVO.FROM_APPLICATION']")
+	private WebElement wifak_facilities_management_cancel_search_app_ref_input;
+	public WebElement wifakFacilitiesManagementCancelSearchAppRefInput_611() {
+		return wifak_facilities_management_cancel_search_app_ref_input;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_facilityManagementGridTbl_Id_WIFT008CN_1_fmsFacilityVO.CODE']")
+	private WebElement wifak_facilities_management_cancel_search_grid_first_row;
+	public WebElement wifakFacilitiesManagementCancelSearchGridFirstRow_611() {
+		return wifak_facilities_management_cancel_search_grid_first_row;
+	}
+	
+	@FindBy(xpath = "//input[@id='facilityMgtMainCif_WIFT008CN']")
+	private WebElement wifak_facilities_management_cancel_CIFNo_input;
+	public WebElement wifakFacilitiesManagementCancelCIFNoInput_611() {
+		return wifak_facilities_management_cancel_CIFNo_input;
+	}
+	
+	@FindBy(xpath = "//button[@id='facilityManagement_cancel_btn_WIFT008CN']")
+	private WebElement wifak_facilities_management_cancel_menu_cancel_btn;
+	public WebElement wifakFacilitiesManagementCancelMenuCancelBtn_611() {
+		return wifak_facilities_management_cancel_menu_cancel_btn;
+	}
+	//678142
+	//WIFAK Facilities Management Approve/Reject Cancel menu
+	@FindBy(xpath = "//a[@id='WIFT008CR']")
+	private WebElement wifak_facilities_management_approve_cancel_menu;
+	public WebElement wifakFacilitiesManagementApproveCancelMenu_611() {
+		return wifak_facilities_management_approve_cancel_menu;
+	}
+	
+	@FindBy(xpath = "//input[@id='facilityManagementGridTbl_Id_WIFT008CR_gs_fmsFacilityVO.FROM_APPLICATION']")
+	private WebElement wifak_facilities_management_approve_cancel_search_app_ref_input;
+	public WebElement wifakFacilitiesManagementApproveCancelSearchAppRefInput_611() {
+		return wifak_facilities_management_approve_cancel_search_app_ref_input;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_facilityManagementGridTbl_Id_WIFT008CR_1_fmsFacilityVO.CODE']")
+	private WebElement wifak_facilities_management_approve_cancel_search_grid_first_row;
+	public WebElement wifakFacilitiesManagementApproveCancelSearchGridFirstRow_611() {
+		return wifak_facilities_management_approve_cancel_search_grid_first_row;
+	}
+	
+	@FindBy(xpath = "//input[@id='facilityMgtMainCif_WIFT008CR']")
+	private WebElement wifak_facilities_management_approve_cancel_CIFNo_input;
+	public WebElement wifakFacilitiesManagementApproveCancelCIFNoInput_611() {
+		return wifak_facilities_management_approve_cancel_CIFNo_input;
+	}
+	
+	@FindBy(xpath = "//button[@id='facilityManagement_approve_cancel_btn_WIFT008CR']")
+	private WebElement wifak_facilities_management_approve_cancel_menu_approve_reverse_btn;
+	public WebElement wifakFacilitiesManagementApproveCancelMenuApproveCancelBtn_611() {
+		return wifak_facilities_management_approve_cancel_menu_approve_reverse_btn;
+	}
+	
 }
 

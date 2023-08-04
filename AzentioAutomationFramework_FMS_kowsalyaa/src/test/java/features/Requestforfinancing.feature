@@ -57,43 +57,63 @@ Feature: To Test the Financial facilities in FMS Application
     @678142_Fmscore
   Scenario: The system is reversing the off balance sheet entries upon cancelling the facility.
     Given navigate to FMS application and login with valid credentials
-    And Click the first Wifak Appliaction
-    And Click the second Wifak Appliaction
-    And Click the application for financial facilities under second Wifak Appliaction
-    And Click the maintenance underapplication for financial facilities
-    And Click the Main information
-    And Select a new facility under application
-    And Enter the CIF num under cif details
-    And Enter the facility type under facility type details
-    And Enter the country of financing under facility type details
-    And Enter the facility rating under facility type details
-    And Click the Additional details
-    And Enter the currency code under Additional details
-    And Enter the total value under Additional details
-    And Enter the Expiry date
-    And Click the limit details tab
-    And Click the add button under limit details tab
-    And user Clicks the product class value one
-    And user Enter the Customer account details
-    And Click the add button
-    And Click the doucmentdetailstab
-    And Enter the value for slicitorname
-    And Enter the value for estimators name
-    And User Clicks the charge details
-    And User clicks the save button
-    And User clicks the validate button
-    And User clicks the Approve Level1 link
-    And User retrive the first data in approve level1
-    And select the Approve level1 decision as approve
-    And User clicks on the level1 submit button
-    And User clicks the Approve Level2 link
-    And User retrive the first data in approve level2
-    And User select the level2 decision as approve
-    And User clicks on the level2 submit button
-    And User clicks the Approve Level3 link
-    And User retrive the first data in approve level3
-    And User select the level3 decision as approve
-    And User clicks on the level3 submit button
+    And User_611 Get the data set Id for AT_RF_029
+    And User_611 Click the first Wifak Application
+    And User_611 Click the second Wifak Application
+    And User_611 Click the application for financial facilities under second Wifak Appliaction
+    And User_611 Click the maintenance under application for financial facilities
+    And User_611 Click the Main information
+    And User_611 Select a new facility under application
+    And User_611 Enter the CIF num under cif details
+    And User_611 Enter the facility type under facility type details
+    And User_611 Enter the country of financing under facility type details
+    And User_611 Enter the facility rating under facility type details
+    And User_611 Click the Additional details
+    And User_611 Enter the currency code under Additional details
+    And User_611 Enter the total value under Additional details
+    And User_611 Enter the Expiry date
+    And User_611 Click the limit details tab
+    And User_611 Click the add button under limit details tab
+    And User_611 Clicks the product class value one
+    And User_611 click the clean flag under product calss in limit details tab
+    And User_611 Click the add button
+    And User_611 Click the doucmentdetailstab
+    And User_611 Enter the value for solicitorname
+    And User_611 Enter the value for estimators name
+    And User_611 clicks the save button
+    And User_611 clicks the validate button
+    And User_611 clicks the Approve Level1 link
+    And User_611 retrive the first data in approve level1
+    And User_611 select the Approve level1 decision as Approve
+    And User_611 clicks on the level1 submit button
+    And User_611 clicks the Approve Level2 link
+    And User_611 retrive the first data in approve level2
+    And User_611 select the level2 decision as approve
+    And User_611 clicks on the level2 submit button
+    And User_611 clicks the Approve Level3 link
+    And User_611 retrive the first data in approve level3
+    And User_611 select the level3 decision as approve
+    And User_611 clicks on the level3 submit button
+    And User_611 clicks the facility management under wifak application
+    And User_611 clicks the maintenance under facility management
+    And User_611 clicks the Infosearch button
+    And User_611 enter the Application Ref code
+    And User_611 click the Journal voucher details button in Facilities Management Maintanance
+		Then User_611 validate Account details should be displayed in JV Details tab under Facilities Management Maintanance
+		And User_611 click the Cancel menu under Facilities Management in WIFAK Application
+		And User_611 enter the Application Ref number in search grid under Cancel screen in WIFAK Facilities Management
+		And User_611 double click on the search grid first row in Cancel screen under WIFAK Facilities Management
+		And User_611 click the Cancel button in Cancel screen under WIFAK Facilities Management
+		And User_611 click the Approve\Reject Cancel menu under Facilities Management in WIFAK Application
+		And User_611 enter the Application Ref number in search grid under Approve\Reject Cancel screen in WIFAK Facilities Management
+		And User_611 double click on the search grid first row in Approve\Reject Cancel screen under WIFAK Facilities Management
+		And User_611 click the Approve Cancel button in Approve\Reject Cancel screen under WIFAK Facilities Management
+		And User_611 clicks the facility management under wifak application
+    And User_611 clicks the maintenance under facility management
+    And User_611 clicks the Infosearch button
+    And User_611 enter the Application Ref code
+    And User_611 click the Journal voucher details button in Facilities Management Maintanance
+		Then User_611 validate Account details should be displayed in JV Details tab under Facilities Management Maintanance
     
     @434947
   Scenario: TSR-BMK150100

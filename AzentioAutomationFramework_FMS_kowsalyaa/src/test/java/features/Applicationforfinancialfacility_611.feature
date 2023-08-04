@@ -225,6 +225,8 @@ Feature: To Test the Financial facilities in FMS Application
    @808942_Fms_Core
    Scenario: MFI190036 - FMS_DrawDown_DD Additional Details_VAT Flag 
    Given navigate to FMS application and login with valid credentials
+   And User_611 Get the data set Id for AT_FM_029
+   And User_611 clear the caches in FMS Application
     And User_611 Click the first Wifak Application
     And User_611 Click the second Wifak Application
     And User_611 Click the application for financial facilities under second Wifak Appliaction
@@ -236,12 +238,13 @@ Feature: To Test the Financial facilities in FMS Application
     And User_611 Enter the country of financing under facility type details
     And User_611 Enter the facility rating under facility type details
     And User_611 Click the Additional details
-    And User_611 Enter the currency code under Additional details
+    #And User_611 Enter the currency code under Additional details
     And User_611 Enter the total value under Additional details
-    And User_611 Enter the Expiry date
+    And User_611 enter the expire date in additional info tab
     And User_611 Click the limit details tab
     And User_611 Click the add button under limit details tab
     And User_611 Clicks the product class value one
+    And User_611 click the clean flag under product calss in limit details tab
     And User_611 Click the add button
     And User_611 Click the doucmentdetailstab
     And User_611 Enter the value for solicitorname
@@ -264,7 +267,7 @@ Feature: To Test the Financial facilities in FMS Application
     And User_611 clicks the maintenance under facility management
     And User_611 clicks the Infosearch button
     And User_611 enter the Application Ref code
-    And User_611 clicks the Facility Limit Details Tab
+    And User_611 clicks the Facility Limit Details Tab in maintenance under facility management
     And User_611 clicks the Draw Down Request Menu
     And User_611 clicks the maintenance Under Draw Down Request Menu
     And User_611 enter the facility Reference Code
@@ -318,7 +321,7 @@ Feature: To Test the Financial facilities in FMS Application
     And User_611 clicks the maintenance under facility management
     And User_611 clicks the Infosearch button
     And User_611 enter the Application Ref code
-    And User_611 clicks the Facility Limit Details Tab
+    And User_611 clicks the Facility Limit Details Tab in maintenance under facility management
     And User_611 clicks the Draw Down Request Menu
     And User_611 clicks the maintenance Under Draw Down Request Menu
     And User_611 enter the facility Reference Code

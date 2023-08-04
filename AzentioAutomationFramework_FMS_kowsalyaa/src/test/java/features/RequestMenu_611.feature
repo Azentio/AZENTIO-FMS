@@ -50,15 +50,15 @@ And User_611 click the search button in maintanance screen under Facilities Mana
 And User_611 search the facility with CIF number in maintanance screen under Facilities Management
 Then User_611 retrieve the facility in maintanance screen under Facilities Management
  And User_611 clicks the Draw Down Request under Request Financing
-    And User_611 clicks the Maintenence in Draw Down Request under request for financing
-    And User_611 enter the facility reference value in drawdown request under request for financing
-    And user_611 enter the Drawdown type in drawdown request under request for financing
-    And User_611 enter the Discription English in drawdown request under request for financing
-    And User_611 enter the Discription arab in drawdown request under request for financing
-    And User_611 enter the date in date submitted in drawdown request under request for financing
-    And User_611 enter the date in value date in drawdown request under request for financing
-    And User_611 clicks the Drawdown Additional Details Tab in drawdown request under request for financing
-    And User_611 enter the product class L and N  in drawdown request Additional details tab under request for financing
+ And User_611 clicks the Maintenence in Draw Down Request under request for financing
+And User_611 enter the facility reference value in drawdown request under request for financing
+And user_611 enter the Drawdown type in drawdown request under request for financing
+And User_611 enter the Discription English in drawdown request under request for financing
+And User_611 enter the Discription arab in drawdown request under request for financing
+And User_611 enter the date in date submitted in drawdown request under request for financing
+And User_611 enter the date in value date in drawdown request under request for financing
+ And User_611 clicks the Drawdown Additional Details Tab in drawdown request under request for financing
+And User_611 enter the product class L and N  in drawdown request Additional details tab under request for financing
     
    
     

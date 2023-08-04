@@ -51,6 +51,7 @@ public class RequestMenuSteps_611 {
 					} catch (Exception e) {
 						if(i == 300) {
 							Assert.fail(e.getMessage());
+							break;
 						}
 					}
 		    	}
