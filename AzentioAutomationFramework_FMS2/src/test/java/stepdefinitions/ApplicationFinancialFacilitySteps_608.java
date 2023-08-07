@@ -272,6 +272,14 @@ public class ApplicationFinancialFacilitySteps_608 {
     public void get_the_test_data_for_test_case_AT_AFF_033() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_AFF_033");
     }
+	@And("^User_074 get the test data for test case AT_AFF_028$")
+    public void get_the_test_data_for_test_case_AT_AFF_028() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_AFF_028");
+    }
+	@And("^User_074 get the test data for test case AT_AFF_003")
+    public void get_the_test_data_for_test_case_AT_AFF_003() throws Throwable {
+		testData = fmsTransactionsExcelData.getTestdata("DS_AT_AFF_003");
+    }
 	@And("^User_074 get the test data for test case AT_AFF_082$")
     public void get_the_test_data_for_test_case_AT_AFF_082() throws Throwable {
 		testData = fmsTransactionsExcelData.getTestdata("DS_AT_AFF_082");

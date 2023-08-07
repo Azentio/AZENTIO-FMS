@@ -2,30 +2,31 @@ Feature: To Test the FMS application
 @AT_AFF_003
 Scenario: SBI190056 - Error while approving an application - CC1RF00P1
 #This test case also cover the functionality of test case no AT_AFF_009
-Given navigate to FMS application2 and login with valid credentials
-And Update test data for test case no AT_AFF_003
-And User clicks on the WIFAK_Application first link
-And User clicks on the WIFAK_Application second link
-And User clicks on the Application for financial facility link
-And User clicks the maintanance menu
-And User select the application for dropdown as new facility
-And User enter the CIF No in main info tab
-And User enter the facility type in main info tab
-And User enter the country of financing in main info tab
-And User enter the facility rating in main info tab
-And User clicks on the additinal details tab
-And User enter the total value in additional info tab
-And User enter the expire date in additional info tab
-And User clicks the limit details tab
-And User clicks the add new record button in limit details tab
-And User enter the product class details
-And User retrive the one account number
-And User clicks on the add button
-And User move to the Document details tab
-And User enter the Solicitor Name
-And User enter the Estimator Name
-And User clicks the save button
-And User clicks the validate button
+Given navigate to FMS application and login with valid credentials
+And User_074 get the test data for test case AT_AFF_003
+And User_074 clicks on the WIFAK_Application first link
+And User_074 clicks on the WIFAK_Application second link
+And User_074 clicks on the Application for financial facility link
+And User_074 clicks the maintanance menu under Application for financial facility
+And User_074 select the application for dropdown as new facility
+And User_074 enter the CIF No in main info tab
+And User_074 enter the facility type in main info tab
+And User_074 enter the country of financing in main info tab
+And User_074 enter the facility rating in main info tab
+And User_074 clicks on the additional details tab
+And User_074 enter the total value in additional info tab
+And User_074 enter the expire date in additional info tab
+And User_074 clicks the limit details tab
+And User_074 clicks the add new record button in limit details tab
+And User_074 select the Item in limit Details
+And User_074 select the Maturity date in limit Details
+And User_074 enter the Margin rate in limit Details
+And User_074 clicks on the product class add button
+And User_074 move to the Document details tab
+And User_074 enter the Solicitor Name
+And User_074 enter the Estimator Name
+And User_074 clicks the save button
+And User_074 clicks on the validate button
 
 @AT_AFF_023
 Scenario: ABEI190241 - Customization and Missing Element Issue on FMS
@@ -55,30 +56,31 @@ Then User Validate the Facility Rating Field is Displayed as Required
 
 @AT_AFF_028
 Scenario: ABSAI190175 - FMS_Application for Financial Facility > Maintenance > Final Validate - NullPoint Exception error
-Given navigate to FMS application2 and login with valid credentials
-And Update test data for test case no AT_AFF_028
-And User clicks on the WIFAK_Application first link
-And User clicks on the WIFAK_Application second link
-And User clicks on the Application for financial facility link
-And User clicks the maintanance menu
-And User select the application for dropdown as new facility
-And User enter the CIF No in main info tab
-And User enter the facility type in main info tab
-And User enter the country of financing in main info tab
-And User enter the facility rating in main info tab
-And User clicks on the additinal details tab
-And User enter the total value in additional info tab
-And User enter the expire date in additional info tab
-And User clicks the limit details tab
-And User clicks the add new record button in limit details tab
-And User enter the product class details
-And User retrive the one account number
-And User clicks on the add button
-And User move to the Document details tab
-And User enter the Solicitor Name
-And User enter the Estimator Name
-And User clicks the save button
-And User clicks the validate button
+Given navigate to FMS application and login with valid credentials
+And User_074 get the test data for test case AT_AFF_028
+And User_074 clicks on the WIFAK_Application first link
+And User_074 clicks on the WIFAK_Application second link
+And User_074 clicks on the Application for financial facility link
+And User_074 clicks the maintanance menu under Application for financial facility
+And User_074 select the application for dropdown as new facility
+And User_074 enter the CIF No in main info tab
+And User_074 enter the facility type in main info tab
+And User_074 enter the country of financing in main info tab
+And User_074 enter the facility rating in main info tab
+And User_074 clicks on the additional details tab
+And User_074 enter the total value in additional info tab
+And User_074 enter the expire date in additional info tab
+And User_074 clicks the limit details tab
+And User_074 clicks the add new record button in limit details tab
+And User_074 select the Item in limit Details
+And User_074 select the Maturity date in limit Details
+And User_074 enter the Margin rate in limit Details
+And User_074 clicks on the product class add button
+And User_074 move to the Document details tab
+And User_074 enter the Solicitor Name
+And User_074 enter the Estimator Name
+And User_074 clicks the save button
+And User_074 clicks on the validate button
 
 
 @AT_AFF_097
