@@ -165,7 +165,9 @@ public class IIS_AccrualDeal_Steps_610 {
 			
 			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ProductClass_610());
 			IIS_AccrualDeal_obj_610.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ProductClass_610().click();
-			IIS_AccrualDeal_obj_610.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ProductClass_610().sendKeys(testData.get("Product Class"),Keys.ENTER);
+			IIS_AccrualDeal_obj_610.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ProductClass_610().sendKeys(testData.get("Product Class"));
+			Thread.sleep(2000);
+			IIS_AccrualDeal_obj_610.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ProductClass_610().sendKeys(Keys.ENTER);
 			Thread.sleep(2000);
 			
 			//table[@id='gridtab_investmentDeals_CLASS_T022MT']/tbody/tr/td[text()='92']
@@ -273,12 +275,15 @@ public class IIS_AccrualDeal_Steps_610 {
 			
 			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ContributorDetails_Maturity_610());
 			IIS_AccrualDeal_obj_610.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ContributorDetails_Maturity_610().click();
-			IIS_AccrualDeal_obj_610.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ContributorDetails_Maturity_610().sendKeys(testData.get("Maturity GL"),Keys.ENTER);
-			Thread.sleep(4000);
+			IIS_AccrualDeal_obj_610.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ContributorDetails_Maturity_610().sendKeys(testData.get("Maturity GL"));
+			Thread.sleep(2000);
+			IIS_AccrualDeal_obj_610.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ContributorDetails_Maturity_610().sendKeys(Keys.ENTER);
+			Thread.sleep(2000);
 			
 			//table[@id='gridtab_matr_ac_sl_T022MT']/tbody/tr/td[text()='411001']
 			String xpath ="//table[@id='gridtab_matr_ac_sl_T022MT']/tbody/tr/td[text()='"+testData.get("Maturity GL")+"']";
-			for (int i = 0; i < 200; i++) {
+			
+			for (int i = 0; i < 1000; i++) {
 				try {
 					WebElement Code  = driver.findElement(By.xpath(xpath));
 					if (Code.isDisplayed()) {
@@ -287,7 +292,7 @@ public class IIS_AccrualDeal_Steps_610 {
 						break;
 					}
 				} catch (Exception e) {
-					if (i==199) {
+					if (i==1999) {
 						Assert.fail(e.getMessage());
 					}
 				}	
@@ -745,6 +750,7 @@ public class IIS_AccrualDeal_Steps_610 {
 		
 		
 		//----------------Reverse
+		
 						//	Settlement --> Reverse
 		
 		
@@ -821,6 +827,7 @@ public class IIS_AccrualDeal_Steps_610 {
 		
 		
 //		Settlement --> Approve Reverse
+		
 		@And("User_610 click the Approve Reverse menu under Settlement module")
 		public void user_click_the_approve_reverse_menu_under_settlement_module() throws Throwable {
 			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISSettlementApproveReverseMenu_610()); 
@@ -874,6 +881,7 @@ public class IIS_AccrualDeal_Steps_610 {
 					}
 				}
 			}
+			
 			IIS_AccrualDeal_obj_610.IISSettlementApproveReverseMenuReverseBtn_610().click();
 			
 			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IIS_WarningPopupOkBtn_610());
@@ -906,10 +914,628 @@ public class IIS_AccrualDeal_Steps_610 {
 		
 		
 		
+	//-------------------------------------profit accural------------------------------------------	
+		
+		@And("User_610 click the periodical processing menu in Menu option under iis application menu")
+		public void user_click_the_periodical_processing_menu_in_menu_option_under_iis_application_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISperiodicalprocessingmenu_610()); 
+			IIS_AccrualDeal_obj_610.IISperiodicalprocessingmenu_610().click();
+		   		}
+
+		@And("User_610 click the post accruals menu in periodical processing menu under iis application menu")
+		public void user_click_the_post_accruals_menu_in_periodical_processing_menu_under_iis_application_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISperiodicalprocessingpostaccruals_610()); 
+			IIS_AccrualDeal_obj_610.IISperiodicalprocessingpostaccruals_610().click();
+		  		}
+
+		@And("User_610 click the final accrual menu in post accrual menu under iis application menu")
+		public void user_click_the_final_accrual_menu_in_post_accrual_menu_under_iis_application_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISperiodicalprocessingpostaccrualsfinalaccruals_610()); 
+			IIS_AccrualDeal_obj_610.IISperiodicalprocessingpostaccrualsfinalaccruals_610().click();
+		}
+
+		@And("User_610 click the specific deal flag checkbox in final accrual under iis application menu")
+		public void user_click_the_specific_deal_flag_checkbox_in_final_accrual_under_iis_application_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISperiodicalprocessingpostaccrualsfinalaccrualsspecificdealflagcheckbox_610()); 
+			IIS_AccrualDeal_obj_610.IISperiodicalprocessingpostaccrualsfinalaccrualsspecificdealflagcheckbox_610().click();
+		}
+
+		@And("User_610 enter the deal number in final accrual under iis application menu")
+		public void user_enter_the_deal_number_in_final_accrual_under_iis_application_menu() throws Throwable{
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISperiodicalprocessingpostaccrualsfinalaccrualsdealnumsearchbox_610());
+			IIS_AccrualDeal_obj_610.IISperiodicalprocessingpostaccrualsfinalaccrualsdealnumsearchbox_610().sendKeys(testData.get("Deal No"),Keys.TAB);
+		
+		}
+
+		@And("User_610 enter the from date in final accrual under iis application menu")
+		public void user_enter_ther_from_date_in_final_accrual_under_iis_application_menu()throws Throwable{
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISperiodicalprocessingpostaccrualsfinalaccrualsfromdate_610());
+			IIS_AccrualDeal_obj_610.IISperiodicalprocessingpostaccrualsfinalaccrualsfromdate_610().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
+			IIS_AccrualDeal_obj_610.IISperiodicalprocessingpostaccrualsfinalaccrualsfromdate_610().sendKeys(testData.get("From date"),Keys.TAB);
+		   
+		}
+
+		@And("User_610 enter the to date in final accrual under iis application menu")
+		public void user_enter_ther_to_date_in_final_accrual_under_iis_application_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISperiodicalprocessingpostaccrualsfinalaccrualstodate_610());
+			IIS_AccrualDeal_obj_610.IISperiodicalprocessingpostaccrualsfinalaccrualstodate_610().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
+			IIS_AccrualDeal_obj_610.IISperiodicalprocessingpostaccrualsfinalaccrualstodate_610().sendKeys(testData.get("To date"),Keys.TAB);
+		}
+		
+		@And("User_610 click the ok button in final accrual under iis application menu")
+		public void user_click_the_ok_button_in_final_accrual_under_iis_application_menu() throws Throwable{
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISperiodicalprocessingpostaccrualsfinalaccrualsokbtn_610()); 
+			IIS_AccrualDeal_obj_610.IISperiodicalprocessingpostaccrualsfinalaccrualsokbtn_610().click();
+			
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IIS_SuccessPopupOkBtn_610());  //--------
+			for (int i = 0; i < 2000; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.IIS_SuccessPopupOkBtn_610().click();             //---------------
+			    	break;
+				} catch (Exception e) {
+					if (i==1999) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
 		
 		
+		//--------------------------------------jv ------------------------------------
+		
+//		@And("User_610 click the Maintenance under Investment Deals Combined without Trade Deal")
+//		public void user_click_the_maintenance_under_investment_deals_combined_without_trade_deal() throws Throwable {
+//			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISInvestmentDealWithoutTradeDealMaintenanceMenu_610());
+//			IIS_AccrualDeal_obj_610.IISInvestmentDealWithoutTradeDealMaintenanceMenu_610().click();
+//		}
+
+		@And("User_610 Click ok Confirm popup")
+		public void user_click_ok_confirm_popup() {
+			  waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IIS_ConfirmCancel_610());
+			  IIS_AccrualDeal_obj_610.IIS_ConfirmCancel_610().click();
+		}
+
+		@And("User_610 Click Search In mainteance under Investment Deals Combined Without Trad Deal")
+		public void user_click_search_in_mainteance_under_investment_deals_combined_without_trad_deal() {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.Click_SearchIn_mainteance_under_InvestmentDealsCombinedWithoutTradDeal_610());
+			for (int i = 0; i < 700; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.Click_SearchIn_mainteance_under_InvestmentDealsCombinedWithoutTradDeal_610().click();
+				} catch (Exception e) {
+				}
+				break;
+			}
+		}
+
+		@And("User_610 Search Record In mainteance under Investment Deals Combined Without Trad Deal")
+		public void user_search_record_in_mainteance_under_investment_deals_combined_without_trad_deal() {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.SearchRecordIn_mainteance_under_InvestmentDealsCombinedWithoutTradDeal_610());
+			IIS_AccrualDeal_obj_610.SearchRecordIn_mainteance_under_InvestmentDealsCombinedWithoutTradDeal_610().sendKeys(testData.get("Deal No"));
+		}
+
+		@And("User_610 Select Record In mainteance under Investment Deals Combined Without Trad Deal")
+		public void user_select_record_in_mainteance_under_investment_deals_combined_without_trad_deal() {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.SelectRecordIn_mainteance_under_InvestmentDealsCombinedWithoutTradDeal_610());
+			clicksAndActionsHelper.doubleClick(IIS_AccrualDeal_obj_610.SelectRecordIn_mainteance_under_InvestmentDealsCombinedWithoutTradDeal_610());
+		}
+
+		@And("User_610 Click Payment Instruction In mainteance under Investment Deals Combined Without Trad Deal")
+		public void user_click_payment_instruction_in_mainteance_under_investment_deals_combined_without_trad_deal() {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.Click_PaymentInstruction_In_mainteance_under_InvestmentDealsCombinedWithoutTradDeal_610());
+			for (int i = 0; i < 200; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.Click_PaymentInstruction_In_mainteance_under_InvestmentDealsCombinedWithoutTradDeal_610().click();	
+					break;
+				} catch (Exception e) {
+				}
+			}
+		}
+
+		@And("User_610 Click Journal Voucher Details In Payment Instruction In mainteance under Investment Deals Combined Without Trad Deal")
+		public void user_click_journal_voucher_details_in_payment_instruction_in_mainteance_under_investment_deals_combined_without_trad_dea() {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.Click_JournalVoucherDetails_InPaymentInstruction_In_mainteance_under_InvestmentDealsCombinedWithoutTradDeal_610());
+			IIS_AccrualDeal_obj_610.Click_JournalVoucherDetails_InPaymentInstruction_In_mainteance_under_InvestmentDealsCombinedWithoutTradDeal_610().click();
+		}
+		
+		@And("User_610 Check Incidental Charges In Journal Voucher Details In Payment Instruction In mainteance under Investment Deals Combined Without Trad Deal")
+		public void user_check_incidental_charges_in_journal_voucher_details_in_payment_instruction_in_mainteance_under_investment_deals_combined_without_trad_deal() {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.CheckIncidental_Charges_InJournalVoucherDetails_InPaymentInstruction_In_mainteance_under_InvestmentDealsCombinedWithoutTradDeal_610());
+			String CvAmmount = IIS_AccrualDeal_obj_610.CheckIncidental_Charges_InJournalVoucherDetails_InPaymentInstruction_In_mainteance_under_InvestmentDealsCombinedWithoutTradDeal_610().getText();
+			System.out.println(CvAmmount);
+		}
 		
 		
+//	-----------------------------------	MTS Application----------------------------------------
+//		@AT_AP_023_02
+		
+		@And("User_610 click the Parameter module in MTS Application")
+		public void user_click_the_parameter_module_in_mts_application() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSParameterModule_610());
+			for (int i = 0; i <= 500; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.MTSParameterModule_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+
+		@And("User_610 click the Batch menu under Parameter module")
+		public void user_click_the_batch_menu_under_parameter_module() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSParameterBatch_610()); 
+			for (int i = 0; i <= 500; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.MTSParameterBatch_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+
+		@And("User_610 click the maintenance screen under Batch menu")
+		public void user_click_the_maintenance_screen_under_batch_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSParameterBatchMaintenance_610()); 
+			for (int i = 0; i <= 500; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.MTSParameterBatchMaintenance_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}	    
+		}
+
+		@And("User_610 enter the Additional Ref number in maintenance under Batch menu")
+		public void user_enter_the_additional_ref_number_in_maintenance_under_batch_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSParamBatchMaintenanceAdditionalRefNbr_610());
+			IIS_AccrualDeal_obj_610.MTSParamBatchMaintenanceAdditionalRefNbr_610().sendKeys(testData.get("Additional Ref"),Keys.TAB);
+			for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(IIS_AccrualDeal_obj_610.MTSParamBatchMaintenanceAdditionalRefNbr_610().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}
+		}
+
+		@And("User_610 enter the Brief name in maintenance under Batch menu")
+		public void user_enter_the_brief_name_in_maintenance_under_batch_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSParamBatchMaintenanceBriefName_610());
+			IIS_AccrualDeal_obj_610.MTSParamBatchMaintenanceBriefName_610().sendKeys(testData.get("Brief Name"),Keys.TAB);
+			for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(IIS_AccrualDeal_obj_610.MTSParamBatchMaintenanceBriefName_610().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}	    
+		}
+
+		@And("User_610 enter the Long name in maintenance under Batch menu")
+		public void user_enter_the_long_name_in_maintenance_under_batch_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSParamBatchMaintenanceLongName_610());
+			IIS_AccrualDeal_obj_610.MTSParamBatchMaintenanceLongName_610().sendKeys(testData.get("Long Name"),Keys.TAB);
+			for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(IIS_AccrualDeal_obj_610.MTSParamBatchMaintenanceLongName_610().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}	    
+		}
+
+		@And("User_610 enter the Menu ref number in maintenance under Batch menu")
+		public void user_enter_the_menu_ref_number_in_maintenance_under_batch_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSParamBatchMaintenanceMenuRefNbr_610());
+			IIS_AccrualDeal_obj_610.MTSParamBatchMaintenanceMenuRefNbr_610().sendKeys(testData.get("Menu Ref"),Keys.TAB);
+			for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(IIS_AccrualDeal_obj_610.MTSParamBatchMaintenanceMenuRefNbr_610().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}	    
+		}
+
+		@And("User_610 select Periodicity as Daily in maintenance under Batch menu")
+		public void user_select_periodicity_as_daily_in_maintenance_under_batch_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSParamBatchMaintenancePeriodicityDropdown_610());
+			for(int i = 0; i <= 500; i++) {
+	    		try {
+					dropDownHelper.SelectUsingVisibleText(IIS_AccrualDeal_obj_610.MTSParamBatchMaintenancePeriodicityDropdown_610(), testData.get("Periodicity DD"));
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}
+		}
+
+		@And("User_610 click the Oracle BAJ under Companies in Batch Details tab under maintenance")
+		public void user_click_the_oracle_baj_under_companies_in_batch_details_tab_under_maintenance() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSParamBatchMainBatchDetailsTabOracleBAJ_610()); 
+			for (int i = 0; i <= 300; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.MTSParamBatchMainBatchDetailsTabOracleBAJ_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}	    
+		}
+
+		@And("User_610 select the Head office under Oracle BAJ in Batch Details tab under maintenance")
+		public void user_select_the_head_office_under_oracle_baj_in_batch_details_tab_under_maintenance() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSParamBatchMainBatchDetailsTabOracleBAJHeadOffice_610()); 
+			for (int i = 0; i <= 300; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.MTSParamBatchMainBatchDetailsTabOracleBAJHeadOffice_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		    
+		}
+
+		@And("User_610 select the ICD Treasury-Invest under Oracle BAJ in Batch Details tab under maintenance")
+		public void user_select_the_icd_treasury_invest_under_oracle_baj_in_batch_details_tab_under_maintenance() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSParamBatchMainBatchDetailsTabOracleBAJICDTreasury_610()); 
+			for (int i = 0; i <= 300; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.MTSParamBatchMainBatchDetailsTabOracleBAJICDTreasury_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		    
+		}
+
+		@And("User_610 click the Financing Treasury under processes in Batch Details tab under maintenance")
+		public void user_click_the_financing_treasury_under_processes_in_batch_details_tab_under_maintenance() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSParamBatchMainProcessFinancingTreasury_610()); 
+			for (int i = 0; i <= 300; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.MTSParamBatchMainProcessFinancingTreasury_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		    
+		}
+
+		@And("User_610 select the Create settlement under Financing Treasury in Batch Details tab under maintenance")
+		public void user_select_the_create_settlement_under_financing_treasury_in_batch_details_tab_under_maintenance() throws Throwable {	    
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSParamBatchMainProcessFinancingTreasuryCreateSettlement_610()); 
+			for (int i = 0; i <= 300; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.MTSParamBatchMainProcessFinancingTreasuryCreateSettlement_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+
+		@And("User_610 select the Approve settlement under Financing Treasury in Batch Details tab under maintenance")
+		public void user_select_the_approve_settlement_under_financing_treasury_in_batch_details_tab_under_maintenance() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSParamBatchMainProcessFinancingTreasuryApproveSettlement_610()); 
+			for (int i = 0; i <= 300; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.MTSParamBatchMainProcessFinancingTreasuryApproveSettlement_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		    
+		}
+
+		@And("User_610 select the Profit Accrual Process under Financing Treasury in Batch Details tab under maintenance")
+		public void user_select_the_profit_accrual_process_under_financing_treasury_in_batch_details_tab_under_maintenance() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSParamBatchMainProcessFinancingTreasuryProfitAccrualProcess_610()); 
+			for (int i = 0; i <= 300; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.MTSParamBatchMainProcessFinancingTreasuryProfitAccrualProcess_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		    
+		}
+
+		@And("User_610 click the Batch Control tab in maintenance under Batch menu")
+		public void user_click_the_batch_control_tab_in_maintenance_under_batch_menu() throws Throwable {
+			for (int i = 0; i <= 300; i++) {
+				try {
+					javaScriptHelper.scrollIntoView(IIS_AccrualDeal_obj_610.MTSParamBatchMainBatchControlTab_610());
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		
+			for (int i = 0; i <= 300; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.MTSParamBatchMainBatchControlTab_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}	    
+		}
+
+		@And("User_610 select the Process Batch as Manual under Batch Control tab in maintenance")
+		public void user_select_the_process_batch_as_manual_under_batch_control_tab_in_maintenance() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSParamBatchMainBatchControlTabProcessBatchDropdown_610());
+			for(int i = 0; i <= 500; i++) {
+	    		try {
+					dropDownHelper.SelectUsingVisibleText(IIS_AccrualDeal_obj_610.MTSParamBatchMainBatchControlTabProcessBatchDropdown_610(), testData.get("Process Batch DD"));
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}	    
+		}
+
+		@When("User_610 click Save btn under maintenance in under Batch menu")
+		public void user_click_save_btn_under_maintenance_in_under_batch_menu() throws Throwable {
+			for (int i = 0; i <= 500; i++) {
+				try {
+					javaScriptHelper.scrollIntoView(IIS_AccrualDeal_obj_610.MTSParamBatchMaintenanceSaveBtn_610());
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			IIS_AccrualDeal_obj_610.MTSParamBatchMaintenanceSaveBtn_610().click();
+			
+			for (int i = 0; i <= 1000; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.IIS_InformationPopupOkBtn_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 1000) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		    
+		}
 		
 		
+		@And("User_610 click the Approve screen under Batch menu")
+		public void user_click_the_approve_screen_under_batch_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSParamBatchApproveMenu_610()); 
+			for (int i = 0; i <= 300; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.MTSParamBatchApproveMenu_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+
+		@And("User_610 search the Additional Ref number in Approve screen searchgrid under Batch menu")
+		public void user_search_the_additional_ref_number_in_approve_screen_searchgrid_under_batch_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSParamBatchApproveMenuSearchgridAdditionalRefInput_610());
+			IIS_AccrualDeal_obj_610.MTSParamBatchApproveMenuSearchgridAdditionalRefInput_610().sendKeys(testData.get("Additional Ref"),Keys.ENTER);
+		}
+
+		@And("User_610 double click the searchgird row in Approve menu under Batch menu")
+		public void user_double_click_the_searchgird_row_in_approve_menu_under_batch_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSParamBatchApproveMenuSearchgridRow_610());
+			for (int i = 0; i <= 300; i++) {
+				try {
+					clicksAndActionsHelper.doubleClick(IIS_AccrualDeal_obj_610.MTSParamBatchApproveMenuSearchgridRow_610());
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			
+			for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(IIS_AccrualDeal_obj_610.MTSParamBatchApproveMenuAdditionalRef_610().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}
+		}
+
+		@When("User_610 click the Approve button in Approve menu under Batch menu")
+		public void user_click_the_approve_button_in_approve_menu_under_batch_menu() throws Throwable {
+			for (int i = 0; i <= 500; i++) {
+				try {
+					javaScriptHelper.scrollIntoView(IIS_AccrualDeal_obj_610.MTSParamBatchApproveMenuApproveBtn_610());
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			IIS_AccrualDeal_obj_610.MTSParamBatchApproveMenuApproveBtn_610().click();
+			
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IIS_WarningPopupOkBtn_610());
+			IIS_AccrualDeal_obj_610.IIS_WarningPopupOkBtn_610().click();
+			
+			for (int i = 0; i <= 1000; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.IIS_InformationPopupOkBtn_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 1000) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}		
+
+		}
+		
+		
+		@And("User_610 Refresh the MTS Application")
+		public void user_refresh_the_mts_application() throws Throwable {
+			for (int i = 0; i <= 500; i++) {
+				try {
+					driver.navigate().refresh();
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		    
+		}
+
+		@And("User_610 click the Process module in MTS Application")
+		public void user_click_the_process_module_in_mts_application() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSProcessModule_610());
+			IIS_AccrualDeal_obj_610.MTSProcessModule_610().click();
+		}
+
+		@And("User_610 click the Batch Process menu under Process module")
+		public void user_click_the_batch_process_menu_under_process_module() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSProcessBatchProcessMenu_610());
+			for (int i = 0; i <= 500; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.MTSProcessBatchProcessMenu_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+
+		@And("User_610 click the created batch option under Batch process menu")
+		public void user_click_the_created_batch_option_under_batch_process_menu() throws Throwable {
+			Thread.sleep(5000);
+			String newBatch = testData.get("Brief Name");
+			System.err.println("Brief Name: "+newBatch);
+			WebElement newBatchmenu = driver.findElement(By.xpath("//td[contains(text(),'"+newBatch+"')]"));
+			for (int i = 0; i <= 500; i++) {
+				try {
+					javaScriptHelper.scrollIntoView(newBatchmenu);
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			waitHelper.waitForElementwithFluentwait(driver, newBatchmenu);
+			for (int i = 0; i <= 500; i++) {
+				try {
+					newBatchmenu.click();
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}	    
+		}
+
+		@And("User_610 click the batch run menu under new batch in Batch Process")
+		public void user_click_the_batch_run_menu_under_new_batch_in_batch_process() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSProcessBatchProcessMenuBatchRun_610());
+			for (int i = 0; i <= 500; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.MTSProcessBatchProcessMenuBatchRun_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+
+		@And("User_610 enter the batch run date in batch run menu under Batch Process")
+		public void user_enter_the_batch_run_date_in_batch_run_menu_under_batch_process() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSProcessBatchProcessMenuBatchRunDate_610());
+			IIS_AccrualDeal_obj_610.MTSProcessBatchProcessMenuBatchRunDate_610().sendKeys(testData.get("Batch Run Date"),Keys.TAB);	    
+		}
+
+		@When("User_610 click the Run button in  batch run menu under Batch Process")
+		public void user_click_the_run_button_in_batch_run_menu_under_batch_process() {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.MTSProcessBatchProcessMenuBatchRunOptRunBtn_610());
+			for (int i = 0; i <= 500; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.MTSProcessBatchProcessMenuBatchRunOptRunBtn_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IIS_WarningPopupOkBtn_610());
+			IIS_AccrualDeal_obj_610.IIS_WarningPopupOkBtn_610().click();
+		}
+		
+//		-----------------------------------	MTS Application  end ----------------------------------------
 }

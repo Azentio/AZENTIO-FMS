@@ -35,6 +35,7 @@ public class ApplicationForFinancialFacility_Steps extends BaseClass{
 	FMSLogin FMSLogin = new FMSLogin(driver);
 	FMSLogin login = new FMSLogin(driver);
 	IISLogin IISLogin =new IISLogin(driver);
+	
 	DropDownHelper dropdownhelper = new DropDownHelper(driver);
 	JavascriptHelper javascripthelper = new JavascriptHelper(driver);
 	
@@ -80,9 +81,22 @@ public class ApplicationForFinancialFacility_Steps extends BaseClass{
     }
 	
 	
-	//---------------------------
+	//---------------------------MTS Login
 
+	@Given("^navigate to MTS application and login with valid credentials$")
+	public void navigate_to_mts_application_and_login_with_valid_credentials() throws Throwable {
+		driver.get(configFileReader.getMTSApplicationUrl());
+		IISLogin.loginIntoiisApplication2(configFileReader.getMTSApplicationUserType());
+	}
 	
+	
+	@Given("^navigate to MTS param application and login with valid credentials$")
+    public void navigate_to_mts_param_application_and_login_with_valid_credentials() throws Throwable {
+		driver.get(configFileReader.getIISparamsUrl());
+		IISLogin.loginIntoiisParamApplication2(configFileReader.getIISParamApplicationUserType());
+    }
+	
+	//-------------------
 
 	@Then("^Click on the Facility Type submenu$")
     public void click_on_the_facility_type_submenu() throws Throwable {
