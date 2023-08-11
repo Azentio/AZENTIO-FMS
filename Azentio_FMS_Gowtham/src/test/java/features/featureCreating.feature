@@ -5,6 +5,5 @@ Feature: Title of your feature
 
   @tag1
   Scenario: Title of your scenario
-      And User_607 Check Incidental Charges In Journal Voucher Details In Payment Instruction In mainteance under Investment Deals Combined Without Trad Deal 
-
+And Click Cancel on report generated 
 		

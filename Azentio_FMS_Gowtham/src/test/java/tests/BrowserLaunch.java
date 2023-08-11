@@ -9,13 +9,18 @@ import dataProvider.ConfigFileReader;
 public class BrowserLaunch  {
 public static void main(String[] args) throws InterruptedException {
 	//System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
-	ConfigFileReader config = new ConfigFileReader();
-	ChromeOptions options = new ChromeOptions();
-	options.addArguments("--remote-allow-origins=*");
-	WebDriver driver = new ChromeDriver(options);
-	driver.get(config.getFMSApplicationUrl());
-	driver.manage().window().maximize();
-	Thread.sleep(5000);
-	driver.quit();
+//	ConfigFileReader config = new ConfigFileReader();
+//	ChromeOptions options = new ChromeOptions();
+//	options.addArguments("--remote-allow-origins=*");
+//	WebDriver driver = new ChromeDriver(options);
+//	driver.get(config.getFMSApplicationUrl());
+//	driver.manage().window().maximize();
+//	Thread.sleep(5000);
+//	driver.quit();
+	
+	String i = "3333,33.3";
+	
+	String str = i.replace(",","");
+	System.out.println(str);
 }
 }

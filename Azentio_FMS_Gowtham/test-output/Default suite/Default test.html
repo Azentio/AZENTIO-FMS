@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Aug 04 16:27:21 IST 2023</td>
+<td>Started on:</td><td>Fri Aug 11 17:27:08 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>405 seconds (405101 ms)</td>
+<tr><td>Total time:</td><td>86 seconds (86333 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,78 +67,17 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Checking the Deal Incidental charges Functionality", "Optional[Incidental_Charges]"</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span id=&quot;spanLookup_drAcc_sl_T07MT&quot; class=&quot;ui-search ui-state-default ui-state-focus liveSearchSpanCorner liveSearchSpanSize liveSearchSpanDisplay&quot; onclick=&quot;liveSearch(options_drAcc_sl_T07MT_liveSearch);return false;&quot; role=&quot;button&quot; tabindex=&quot;0&quot; oldtabindex=&quot;0&quot;&gt;...&lt;/span&gt; is not clickable at point (1108, 420). Other element would receive the click: &lt;div class=&quot;jMsgbox-contentWrap&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=115.0.5790.170)
-Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bd0104a513a67eac3884b0aab39dac7b, clickElement {id=865C330A4247718B1E6344194E911DB0_element_1083}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.170, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ININDC~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54905}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54905/devtoo..., se:cdpVersion: 115.0.5790.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (bd0104a513a67eac3884b0aab39dac7b)] -&gt; xpath: //*[@id=&apos;spanLookup_drAcc_sl_T07MT&apos;]]
-Session ID: bd0104a513a67eac3884b0aab39dac7b
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-	at jdk.internal.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at jdk.proxy2/jdk.proxy2.$Proxy46.click(Unknown Source)
-	at stepdefinitions.Incidental_Charges.user_click_search_button_in_accounts_in_mainteance_under_tracking_incidental_charges_under_menu(Incidental_Charges.java:820)
-	at ✽.User_607 Click Search button In Accounts In Mainteance Under Tracking Incidental Charges under menu(file:///C:/Users/inindc00607/git/AZENTIO-FMS_10/Azentio_FMS_Gowtham/src/test/java/features/Incidental_Charges.feature:240)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1573658111", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1573658111'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span id=&quot;spanLookup_drAcc_sl_T07MT&quot; class=&quot;ui-search ui-state-default ui-state-focus liveSearchSpanCorner liveSearchSpanSize liveSearchSpanDisplay&quot; onclick=&quot;liveSearch(options_drAcc_sl_T07MT_liveSearch);return false;&quot; role=&quot;button&quot; tabindex=&quot;0&quot; oldtabindex=&quot;0&quot;&gt;...&lt;/span&gt; is not clickable at point (1108, 420). Other element would receive the click: &lt;div class=&quot;jMsgbox-contentWrap&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=115.0.5790.170)
-Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bd0104a513a67eac3884b0aab39dac7b, clickElement {id=865C330A4247718B1E6344194E911DB0_element_1083}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.170, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ININDC~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54905}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54905/devtoo..., se:cdpVersion: 115.0.5790.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (bd0104a513a67eac3884b0aab39dac7b)] -&gt; xpath: //*[@id=&apos;spanLookup_drAcc_sl_T07MT&apos;]]
-Session ID: bd0104a513a67eac3884b0aab39dac7b
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-	at jdk.internal.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at jdk.proxy2/jdk.proxy2.$Proxy46.click(Unknown Source)
-	at stepdefinitions.Incidental_Charges.user_click_search_button_in_accounts_in_mainteance_under_tracking_incidental_charges_under_menu(Incidental_Charges.java:820)
-	at ✽.User_607 Click Search button In Accounts In Mainteance Under Tracking Incidental Charges under menu(file:///C:/Users/inindc00607/git/AZENTIO-FMS_10/Azentio_FMS_Gowtham/src/test/java/features/Incidental_Charges.feature:240)
-</pre></div></td>
-<td>366</td>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Run the accrual / Profit transfer process and confirm system does not reverse the accrual entries and profit adjust to incomes a/c", "Optional[Accrual Process]"</td>
+<td></td>
+<td>67</td>
 <td>Runner.TestApplication@5149d738</td></tr>
 </table><p>
 </body>
