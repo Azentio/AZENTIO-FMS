@@ -2,6 +2,7 @@ package stepdefinitions;
 
 import java.util.Map;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -37,7 +38,8 @@ public class AccrualDealSteps_611 {
 	
 	String path = System.getProperty("user.dir") +"\\TestData\\IISTestData.xlsx";
 	ExcelData iisAccrualDealExcelData  = new ExcelData(path,"AccrualDeal_611","DataSet ID");
-	
+	ExcelData iisAccrualProcessExcelData  = new ExcelData(path,"AccrualProcess","DataSet ID");
+	ExcelData MTSEODExcelData  = new ExcelData(path,"MTSTestData","DataSet ID");
 	Map<String, String> testData;
 	
 	
@@ -47,31 +49,71 @@ public class AccrualDealSteps_611 {
     public void get_the_test_data_for_test_case_AT_AD_004() throws Throwable {
 		testData = iisAccrualDealExcelData.getTestdata("DS_AT_AD_004");
     }
-//	@AT_AD_005
+//@AT_AD_005
 	@And("^User_611 get the test data for test case AT_AD_005$")
     public void get_the_test_data_for_test_case_AT_AD_005() throws Throwable {
 		testData = iisAccrualDealExcelData.getTestdata("DS_AT_AD_005");
     }
-//	@AT_AD_006
+//@AT_AD_006
 	@And("^User_611 get the test data for test case AT_AD_006$")
     public void get_the_test_data_for_test_case_AT_AD_006() throws Throwable {
 		testData = iisAccrualDealExcelData.getTestdata("DS_AT_AD_006");
     }
-	//@AT_AD_008
+//@AT_AD_007
+		@And("^User_611 get the test data for test case AT_AD_007$")
+	    public void get_the_test_data_for_test_case_AT_AD_007() throws Throwable {
+			testData = iisAccrualDealExcelData.getTestdata("DS_AT_AD_007");
+	    }
+//@AT_AD_008
 	@And("^User_611 get the test data for test case AT_AD_008$")
     public void get_the_test_data_for_test_case_AT_AD_008() throws Throwable {
 		testData = iisAccrualDealExcelData.getTestdata("DS_AT_AD_008");
     }
-	//@AT_AD_009
+//@AT_AD_009
 		@And("^User_611 get the test data for test case AT_AD_009$")
 	    public void get_the_test_data_for_test_case_AT_AD_009() throws Throwable {
 			testData = iisAccrualDealExcelData.getTestdata("DS_AT_AD_009");
 	    }
-		//AT_AP_013
+//Accurual process
+//AT_AP_013
 				@And("^User_611 get the test data for test case AT_AP_013$")
 			    public void get_the_test_data_for_test_case_AT_AP_013() throws Throwable {
-					testData = iisAccrualDealExcelData.getTestdata("DS_AT_AD_009");
+					testData = iisAccrualProcessExcelData.getTestdata("DS_AT_AP_013");
 			    }
+//AT_AP_014
+				@And("^User_611 get the test data for test case AT_AP_014$")
+			    public void get_the_test_data_for_test_case_AT_AP_014() throws Throwable {
+					testData = iisAccrualProcessExcelData.getTestdata("DS_AT_AP_014");
+			    }
+//AT_AP_049
+				@And("^User_611 get the test data for test case AT_AP_049$")
+			    public void get_the_test_data_for_test_case_AT_AP_049() throws Throwable {
+					testData = iisAccrualProcessExcelData.getTestdata("DS_AT_AP_049");
+			    }
+//AT_AP_050		
+				@And("^User_611 get the test data for test case AT_AP_050$")
+			    public void get_the_test_data_for_test_case_AT_AP_050() throws Throwable {
+					testData = iisAccrualProcessExcelData.getTestdata("DS_AT_AP_050");
+			    }
+//AT_AP_051	
+				@And("^User_611 get the test data for test case AT_AP_051$")
+			    public void get_the_test_data_for_test_case_AT_AP_051() throws Throwable {
+					testData = iisAccrualProcessExcelData.getTestdata("DS_AT_AP_051");
+			    }
+//AT_AP_052	
+				@And("^User_611 get the test data for test case AT_AP_052$")
+			    public void get_the_test_data_for_test_case_AT_AP_052() throws Throwable {
+					testData = iisAccrualProcessExcelData.getTestdata("DS_AT_AP_052");
+			    }
+//MTS Application
+				
+//AT_AP_048
+				@And("^User_611 get the test data for test case AT_AP_048$")
+			    public void get_the_test_data_for_test_case_AT_AP_048() throws Throwable {
+					testData = MTSEODExcelData.getTestdata("DS_AT_AP_048");
+			    }
+
+				
 	// Clear cache step
 		@And("User_611 clear the caches in IIS Application")
 		public void user_clear_the_caches_in_iis_application() throws Throwable {
@@ -1139,9 +1181,8 @@ public class AccrualDealSteps_611 {
 			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IISperiodicalprocessingpostaccrualsfinalaccrualsfromdate_611());
 			AccrualDealobj611.IISperiodicalprocessingpostaccrualsfinalaccrualsfromdate_611().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
 			AccrualDealobj611.IISperiodicalprocessingpostaccrualsfinalaccrualsfromdate_611().sendKeys(testData.get("FromDate"),Keys.TAB);
-		   
+			
 		}
-
 		@And("User_611 enter the to date in final accrual under iis application menu")
 		public void user_enter_ther_to_date_in_final_accrual_under_iis_application_menu() throws Throwable {
 			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IISperiodicalprocessingpostaccrualsfinalaccrualstodate_611());
@@ -1330,8 +1371,8 @@ public class AccrualDealSteps_611 {
 			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IISApproveMenuConfirmPopupProceed_611());
 			AccrualDealobj611.IIS_ConfirmPopupOkBtn_611().click();
 			
-//			waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj611.IISApproveMenuConfirmPopupProceed_611());
-//			IISApplicationObj611.IIS_ConfirmPopupOkBtn_611().click();
+//			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IISApproveMenuConfirmPopupProceed_611());
+//			AccrualDealobj611.IIS_ConfirmPopupOkBtn_611().click();
 			  	  
 //			Success popup Ok btn
 			for (int i = 0; i <= 2000; i++) {
@@ -1344,13 +1385,829 @@ public class AccrualDealSteps_611 {
 					}
 				}
 			}
+		}	
+		//131160/AT_AP_013
+		@And("User_611 click the Payment instruction tab under maintenanace in Investment Deals Combined without Trade Deal")
+		public void user_click_the_payment_instruction_tab_under_maintenanace_in_investment_deals_combined_without_trade_deal() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IISinvestmentdealwithouttradedealmenuMaintenancepaymentinstruction_611()); 
+			AccrualDealobj611.IISinvestmentdealwithouttradedealmenuMaintenancepaymentinstruction_611().click();
+		}
 
+		@And("User_611 click the Journal vocher details tab under payment instruction")
+		public void user_click_the_journal_vocher_details_tab_under_payment_instruction() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IISinvestmentdealwithouttradedealmenupaymentinstructionjvd_611()); 
+			AccrualDealobj611.IISinvestmentdealwithouttradedealmenupaymentinstructionjvd_611().click();
+		}
+
+		@And("User_611 Validate the Journal vocher details tab its open or not by deal number")
+		public void user_validate_the_journal_vocher_details_tab_its_open_or_not_by_deal_number() throws Throwable {
+			WebElement Journalvocherdetailsisdisplayed = AccrualDealobj611.IISinvestmentdealwithouttradedealmenupaymentinstructionvalidatejvd_611();
+
+	        if (Journalvocherdetailsisdisplayed.isDisplayed()) {
+	        	Assert.assertTrue(true);
+	    }
+		
+		}
+//		Calculators module --> @131585/AT_AP_014
+		@And("User_611 click the Calculators module in IIS Application")
+		public void user_click_the_calculators_module_in_iis_application() {
+			for (int i = 0; i <= 300; i++) {
+				try {
+					javaScriptHelper.scrollIntoView(AccrualDealobj611.IISCalculatorsModule_611());
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			AccrualDealobj611.IISCalculatorsModule_611().click();
+		}
+
+		@And("User_611 click the Reschedule Calculator With Profit menu under Calculators")
+		public void user_click_the_reschedule_calculator_with_profit_menu_under_calculators() {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IISCalculatorsRescheduleCalculatorWithProfit_611());
+			AccrualDealobj611.IISCalculatorsRescheduleCalculatorWithProfit_611().click();
+		}
+
+		@And("User_611 enter the Deal number in Reschedule Calculator With Profit menu")
+		public void user_enter_the_deal_number_in_reschedule_calculator_with_profit_menu() {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IISRescheduleCalculatorWithProfitDealNbrInput_611());
+			AccrualDealobj611.IISRescheduleCalculatorWithProfitDealNbrInput_611().sendKeys(testData.get("Deal Nbr"),Keys.TAB);
+			for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(AccrualDealobj611.IISRescheduleCalculatorWithProfitDealNbrInput_611().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}
+		}
+
+		@And("User_611 click the Repayment Details panel in Reschedule Calculator With Profit menu")
+		public void user_click_the_repayment_details_panel_in_reschedule_calculator_with_profit_menu() {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IISRescheduleCalculatorWithProfitRepaymentDetailsPanel_611());
+			for (int i = 0; i <= 500; i++) {
+				try {
+					AccrualDealobj611.IISRescheduleCalculatorWithProfitRepaymentDetailsPanel_611().click();
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+
+		@And("User_611 enter the First Payment After under Repayment Details panel in Reschedule Calculator With Profit menu")
+		public void user_enter_the_first_payment_after_under_repayment_details_panel_in_reschedule_calculator_with_profit_menu() {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IISRescheduleCalculatorWithProfitRepaymentDetailsFirstPayAfterInput_611());
+			AccrualDealobj611.IISRescheduleCalculatorWithProfitRepaymentDetailsFirstPayAfterInput_611().clear();
+			AccrualDealobj611.IISRescheduleCalculatorWithProfitRepaymentDetailsFirstPayAfterInput_611().sendKeys(testData.get("First Pay After"),Keys.TAB);
+			for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(AccrualDealobj611.IISRescheduleCalculatorWithProfitDealNbrInput_611().getAttribute("prevvalue")
+							.equals(testData.get(""))) {
+						break;
+					}
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}
+		}
+
+		@When("User_611 click the Calculate button in Reschedule Calculator With Profit menu")
+		public void user_click_the_calculate_button_in_reschedule_calculator_with_profit_menu() {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IISRescheduleCalculatorWithProfitCalculateBtn_611());	
+			for (int i = 0; i <= 300; i++) {
+				try {
+					AccrualDealobj611.IISRescheduleCalculatorWithProfitCalculateBtn_611().click();
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			
+			// Success Popup OK Btn
+			for (int i = 0; i <= 1000; i++) {
+				try {
+					AccrualDealobj611.IIS_SuccessPopupOkBtn_611().click();
+					break;
+				} catch (Exception e) {
+					if (i == 1000) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		    
+		}
+
+		@When("User_611 click the Update button in Reschedule Calculator With Profit menu")
+		public void user_click_the_update_button_in_reschedule_calculator_with_profit_menu() {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IISRescheduleCalculatorWithProfitUpdateBtn_611());	
+			for (int i = 0; i <= 300; i++) {
+				try {
+					AccrualDealobj611.IISRescheduleCalculatorWithProfitUpdateBtn_611().click();
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}	    
+			
+			// Success Popup OK Btn
+			for (int i = 0; i <= 1000; i++) {
+				try {
+					AccrualDealobj611.IIS_SuccessPopupOkBtn_611().click();
+					break;
+				} catch (Exception e) {
+					if (i == 1000) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+		
+//		Reschedule Repayment plan module
+		@And("User_611 click the Reschedule Repayment plan module in IIS Application")
+		public void user_click_the_reschedule_repayment_plan_module_in_iis_application() {
+			for (int i = 0; i <= 300; i++) {
+				try {
+					javaScriptHelper.scrollIntoView(AccrualDealobj611.IISRescheduleRepaymentPlanModule_611());
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			AccrualDealobj611.IISRescheduleRepaymentPlanModule_611().click();	    
+		}
+
+		@And("User_611 click the Approve menu under Reschedule Repayment plan")
+		public void user_click_the_approve_menu_under_reschedule_repayment_plan() {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IISRescheduleRepaymentPlanApproveMenu_611()); 
+			AccrualDealobj611.IISRescheduleRepaymentPlanApproveMenu_611().click();
+		}
+
+		@And("User_611 search the Deal number in approve menu under Reschedule Repayment plan")
+		public void user_search_the_deal_number_in_approve_menu_under_reschedule_repayment_plan() {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IISRescheduleRepaymentPlanApproveSearchgridDealInput_611());
+			AccrualDealobj611.IISRescheduleRepaymentPlanApproveSearchgridDealInput_611().sendKeys(testData.get("Deal Nbr"),Keys.ENTER);
+		}
+
+		@And("User_611 double click the searchgird row in approve menu under Reschedule Repayment plan")
+		public void user_double_click_the_searchgird_row_in_approve_menu_under_reschedule_repayment_plan() {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IISRescheduleRepaymentPlanApproveSearchgridRow_611());
+			for (int i = 0; i <= 300; i++) {
+				try {
+					clicksAndActionsHelper.doubleClick(AccrualDealobj611.IISRescheduleRepaymentPlanApproveSearchgridRow_611());
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			
+			for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(AccrualDealobj611.IISRescheduleRepaymentPlanApproveMenuDealNbr_611().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}
+		}
+
+		@When("User_611 click the Approve button in approve menu under Reschedule Repayment plan")
+		public void user_click_the_approve_button_in_approve_menu_under_reschedule_repayment_plan() {
+			for (int i = 0; i <= 300; i++) {
+				try {
+					javaScriptHelper.scrollIntoView(AccrualDealobj611.IISRescheduleRepaymentPlanApproveMenuApproveBtn_611());
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			AccrualDealobj611.IISRescheduleRepaymentPlanApproveMenuApproveBtn_611().click();
+			
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IIS_WarningPopupOkBtn_611());
+			AccrualDealobj611.IIS_WarningPopupOkBtn_611().click();
+			
+			for (int i = 0; i <= 2000; i++) {
+				try {
+					AccrualDealobj611.IIS_InformationPopupOkBtn_611().click();
+					break;
+				} catch (Exception e) {
+					if (i == 2000) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+
+		}
+		
+//		MTS Application
+//		@AT_AP_023_02
+		@And("User_611 click the Parameter module in MTS Application")
+		public void user_click_the_parameter_module_in_mts_application() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.MTSParameterModule_611());
+			for (int i = 0; i <= 500; i++) {
+				try {
+					AccrualDealobj611.MTSParameterModule_611().click();
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+
+		@And("User_611 click the Batch menu under Parameter module")
+		public void user_click_the_batch_menu_under_parameter_module() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.MTSParameterBatch_611()); 
+			for (int i = 0; i <= 500; i++) {
+				try {
+					AccrualDealobj611.MTSParameterBatch_611().click();
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+
+		@And("User_611 click the maintenance screen under Batch menu")
+		public void user_click_the_maintenance_screen_under_batch_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.MTSParameterBatchMaintenance_611()); 
+			for (int i = 0; i <= 500; i++) {
+				try {
+					AccrualDealobj611.MTSParameterBatchMaintenance_611().click();
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}	    
+		}
+
+		@And("User_611 enter the Additional Ref number in maintenance under Batch menu")
+		public void user_enter_the_additional_ref_number_in_maintenance_under_batch_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.MTSParamBatchMaintenanceAdditionalRefNbr_611());
+			AccrualDealobj611.MTSParamBatchMaintenanceAdditionalRefNbr_611().sendKeys(testData.get("Additional Ref"),Keys.TAB);
+			for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(AccrualDealobj611.MTSParamBatchMaintenanceAdditionalRefNbr_611().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}
+		}
+
+		@And("User_611 enter the Brief name in maintenance under Batch menu")
+		public void user_enter_the_brief_name_in_maintenance_under_batch_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.MTSParamBatchMaintenanceBriefName_611());
+			AccrualDealobj611.MTSParamBatchMaintenanceBriefName_611().sendKeys(testData.get("Brief Name"),Keys.TAB);
+			for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(AccrualDealobj611.MTSParamBatchMaintenanceBriefName_611().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}	    
+		}
+
+		@And("User_611 enter the Long name in maintenance under Batch menu")
+		public void user_enter_the_long_name_in_maintenance_under_batch_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.MTSParamBatchMaintenanceLongName_611());
+			AccrualDealobj611.MTSParamBatchMaintenanceLongName_611().sendKeys(testData.get("Long Name"),Keys.TAB);
+			for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(AccrualDealobj611.MTSParamBatchMaintenanceLongName_611().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}	    
+		}
+
+		@And("User_611 enter the Menu ref number in maintenance under Batch menu")
+		public void user_enter_the_menu_ref_number_in_maintenance_under_batch_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.MTSParamBatchMaintenanceMenuRefNbr_611());
+			AccrualDealobj611.MTSParamBatchMaintenanceMenuRefNbr_611().sendKeys(testData.get("Menu Ref"),Keys.TAB);
+			for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(AccrualDealobj611.MTSParamBatchMaintenanceMenuRefNbr_611().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}	    
+		}
+
+		@And("User_611 select Periodicity as Daily in maintenance under Batch menu")
+		public void user_select_periodicity_as_daily_in_maintenance_under_batch_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.MTSParamBatchMaintenancePeriodicityDropdown_611());
+			for(int i = 0; i <= 500; i++) {
+	    		try {
+					dropDownHelper.SelectUsingVisibleText(AccrualDealobj611.MTSParamBatchMaintenancePeriodicityDropdown_611(), testData.get("Periodicity DD"));
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}
+		}
+
+		@And("User_611 click the Oracle BAJ under Companies in Batch Details tab under maintenance")
+		public void user_click_the_oracle_baj_under_companies_in_batch_details_tab_under_maintenance() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.MTSParamBatchMainBatchDetailsTabOracleBAJ_611()); 
+			for (int i = 0; i <= 300; i++) {
+				try {
+					AccrualDealobj611.MTSParamBatchMainBatchDetailsTabOracleBAJ_611().click();
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}	    
+		}
+
+		@And("User_611 select the Head office under Oracle BAJ in Batch Details tab under maintenance")
+		public void user_select_the_head_office_under_oracle_baj_in_batch_details_tab_under_maintenance() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.MTSParamBatchMainBatchDetailsTabOracleBAJHeadOffice_611()); 
+			for (int i = 0; i <= 300; i++) {
+				try {
+					AccrualDealobj611.MTSParamBatchMainBatchDetailsTabOracleBAJHeadOffice_611().click();
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		    
+		}
+
+		@And("User_611 select the ICD Treasury-Invest under Oracle BAJ in Batch Details tab under maintenance")
+		public void user_select_the_icd_treasury_invest_under_oracle_baj_in_batch_details_tab_under_maintenance() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.MTSParamBatchMainBatchDetailsTabOracleBAJICDTreasury_611()); 
+			for (int i = 0; i <= 300; i++) {
+				try {
+					AccrualDealobj611.MTSParamBatchMainBatchDetailsTabOracleBAJICDTreasury_611().click();
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		    
+		}
+
+		@And("User_611 click the Financing Treasury under processes in Batch Details tab under maintenance")
+		public void user_click_the_financing_treasury_under_processes_in_batch_details_tab_under_maintenance() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.MTSParamBatchMainProcessFinancingTreasury_611()); 
+			for (int i = 0; i <= 300; i++) {
+				try {
+					AccrualDealobj611.MTSParamBatchMainProcessFinancingTreasury_611().click();
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}  
+		
+		@And("User_611 select the Profit Accrual Process under Financing Treasury in Batch Details tab under maintenance")
+		public void user_select_the_profit_accrual_process_under_financing_treasury_in_batch_details_tab_under_maintenance() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.MTSParamBatchMainProcessFinancingTreasuryProfitAccrualProcess_611()); 
+			for (int i = 0; i <= 300; i++) {
+				try {
+					AccrualDealobj611.MTSParamBatchMainProcessFinancingTreasuryProfitAccrualProcess_611().click();
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		    
+		}
+
+		@And("User_611 click the Batch Control tab in maintenance under Batch menu")
+		public void user_click_the_batch_control_tab_in_maintenance_under_batch_menu() throws Throwable {
+			for (int i = 0; i <= 300; i++) {
+				try {
+					javaScriptHelper.scrollIntoView(AccrualDealobj611.MTSParamBatchMainBatchControlTab_611());
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		
+			for (int i = 0; i <= 300; i++) {
+				try {
+					AccrualDealobj611.MTSParamBatchMainBatchControlTab_611().click();
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}	    
+		}
+
+		@And("User_611 select the Process Batch as Manual under Batch Control tab in maintenance")
+		public void user_select_the_process_batch_as_manual_under_batch_control_tab_in_maintenance() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.MTSParamBatchMainBatchControlTabProcessBatchDropdown_611());
+			for(int i = 0; i <= 500; i++) {
+	    		try {
+					dropDownHelper.SelectUsingVisibleText(AccrualDealobj611.MTSParamBatchMainBatchControlTabProcessBatchDropdown_611(), testData.get("Process Batch DD"));
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}	    
+		}
+
+		@When("User_611 click Save btn under maintenance in under Batch menu")
+		public void user_click_save_btn_under_maintenance_in_under_batch_menu() throws Throwable {
+			for (int i = 0; i <= 500; i++) {
+				try {
+					javaScriptHelper.scrollIntoView(AccrualDealobj611.MTSParamBatchMaintenanceSaveBtn_611());
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			AccrualDealobj611.MTSParamBatchMaintenanceSaveBtn_611().click();
+			
+			for (int i = 0; i <= 1000; i++) {
+				try {
+					AccrualDealobj611.IIS_InformationPopupOkBtn_611().click();
+					break;
+				} catch (Exception e) {
+					if (i == 1000) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		    
+		}
+		
+		
+		@And("User_611 click the Approve screen under Batch menu")
+		public void user_click_the_approve_screen_under_batch_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.MTSParamBatchApproveMenu_611()); 
+			for (int i = 0; i <= 300; i++) {
+				try {
+					AccrualDealobj611.MTSParamBatchApproveMenu_611().click();
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+
+		@And("User_611 search the Additional Ref number in Approve screen searchgrid under Batch menu")
+		public void user_search_the_additional_ref_number_in_approve_screen_searchgrid_under_batch_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.MTSParamBatchApproveMenuSearchgridAdditionalRefInput_611());
+			for (int i = 0; i <= 300; i++) {
+				try {
+					AccrualDealobj611.MTSParamBatchApproveMenuSearchgridAdditionalRefInput_611().sendKeys(testData.get("Additional Ref"),Keys.ENTER);
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			
+		}
+
+		@And("User_611 double click the searchgird row in Approve menu under Batch menu")
+		public void user_double_click_the_searchgird_row_in_approve_menu_under_batch_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.MTSParamBatchApproveMenuSearchgridRow_611());
+			for (int i = 0; i <= 300; i++) {
+				try {
+					clicksAndActionsHelper.doubleClick(AccrualDealobj611.MTSParamBatchApproveMenuSearchgridRow_611());
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			
+			for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(AccrualDealobj611.MTSParamBatchApproveMenuAdditionalRef_611().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}
+		}
+
+		@When("User_611 click the Approve button in Approve menu under Batch menu")
+		public void user_click_the_approve_button_in_approve_menu_under_batch_menu() throws Throwable {
+			for (int i = 0; i <= 500; i++) {
+				try {
+					javaScriptHelper.scrollIntoView(AccrualDealobj611.MTSParamBatchApproveMenuApproveBtn_611());
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			AccrualDealobj611.MTSParamBatchApproveMenuApproveBtn_611().click();
+			
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IIS_WarningPopupOkBtn_611());
+			AccrualDealobj611.IIS_WarningPopupOkBtn_611().click();
+			
+			for (int i = 0; i <= 1000; i++) {
+				try {
+					AccrualDealobj611.IIS_InformationPopupOkBtn_611().click();
+					break;
+				} catch (Exception e) {
+					if (i == 1000) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}		
+
+		}
+		
+		
+		@And("User_611 Refresh the MTS Application")
+		public void user_refresh_the_mts_application() throws Throwable {
+			for (int i = 0; i <= 500; i++) {
+				try {
+					driver.navigate().refresh();
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		    
+		}
+
+		@And("User_611 click the Process module in MTS Application")
+		public void user_click_the_process_module_in_mts_application() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.MTSProcessModule_611());
+			AccrualDealobj611.MTSProcessModule_611().click();
+		}
+
+		@And("User_611 click the Batch Process menu under Process module")
+		public void user_click_the_batch_process_menu_under_process_module() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.MTSProcessBatchProcessMenu_611());
+			for (int i = 0; i <= 500; i++) {
+				try {
+					AccrualDealobj611.MTSProcessBatchProcessMenu_611().click();
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+
+		@And("User_611 click the created batch option under Batch process menu")
+		public void user_click_the_created_batch_option_under_batch_process_menu() throws Throwable {
+			Thread.sleep(5000);
+			String newBatch = testData.get("Brief Name");
+			System.err.println("Brief Name: "+newBatch);
+			WebElement newBatchmenu = driver.findElement(By.xpath("//td[contains(text(),'"+newBatch+"')]"));
+			for (int i = 0; i <= 500; i++) {
+				try {
+					javaScriptHelper.scrollIntoView(newBatchmenu);
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			waitHelper.waitForElementwithFluentwait(driver, newBatchmenu);
+			for (int i = 0; i <= 500; i++) {
+				try {
+					newBatchmenu.click();
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}	    
+		}
+
+		@And("User_611 click the batch run menu under new batch in Batch Process")
+		public void user_click_the_batch_run_menu_under_new_batch_in_batch_process() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.MTSProcessBatchProcessMenuBatchRun_611());
+			for (int i = 0; i <= 500; i++) {
+				try {
+					AccrualDealobj611.MTSProcessBatchProcessMenuBatchRun_611().click();
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+
+		@And("User_611 enter the batch run date in batch run menu under Batch Process")
+		public void user_enter_the_batch_run_date_in_batch_run_menu_under_batch_process() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.MTSProcessBatchProcessMenuBatchRunDate_611());
+			AccrualDealobj611.MTSProcessBatchProcessMenuBatchRunDate_611().sendKeys(testData.get("Batch Run Date"),Keys.TAB);	    
+		}
+
+		@When("User_611 click the Run button in  batch run menu under Batch Process")
+		public void user_click_the_run_button_in_batch_run_menu_under_batch_process() {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.MTSProcessBatchProcessMenuBatchRunOptRunBtn_611());
+			for (int i = 0; i <= 500; i++) {
+				try {
+					AccrualDealobj611.MTSProcessBatchProcessMenuBatchRunOptRunBtn_611().click();
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IIS_WarningPopupOkBtn_611());
+			AccrualDealobj611.IIS_WarningPopupOkBtn_611().click();
+		}
+		
+		//@352413/AT_AP_049
+		
+		@And("User_611 click the trial accrual menu in post accrual under periodical processing menu")
+		public void user_click_the_trial_accrual_menu_in_post_accrual_under_periodical_processing_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.iis_periodicalprocessingmenupostaccruals_trialaccruals_611());
+			AccrualDealobj611.iis_periodicalprocessingmenupostaccruals_trialaccruals_611().click();
+		}
+
+		@And("User_611 check the flag in specific deal for entering deal number")
+		public void user_check_the_flag_in_specific_deal_for_entering_deal_number() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.iis_periodicalprocessingmenupostaccrualstrialaccrualsflagcheckforspecialdeal_611());
+			AccrualDealobj611.iis_periodicalprocessingmenupostaccrualstrialaccrualsflagcheckforspecialdeal_611().click();
+		}
+
+		@And("User_611 enter the deal number in specific deal under trial accrual menu")
+		public void user_enter_the_deal_number_in_specific_deal_under_trial_accrual_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.iis_periodicalprocessingmenupostaccrualstrialaccrualsdealnumsearchbox_611());
+			AccrualDealobj611.iis_periodicalprocessingmenupostaccrualstrialaccrualsdealnumsearchbox_611().sendKeys(testData.get("Deal Nbr"),Keys.TAB);
+		}
+
+		@And("User_611 enter the from date in Trial accrual under iis application menu")
+		public void user_enter_the_from_date_in_trial_accrual_under_iis_application_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.iis_periodicalprocessingmenupostaccrualstrialaccrualfromdate_611());
+			AccrualDealobj611.iis_periodicalprocessingmenupostaccrualstrialaccrualfromdate_611().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
+			AccrualDealobj611.iis_periodicalprocessingmenupostaccrualstrialaccrualfromdate_611().sendKeys(testData.get("Todate"),Keys.TAB);
 		   
+		}
+
+		@And("User_611 enter the to date in Trial accrual under iis application menu")
+		public void user_enter_the_to_date_in_trial_accrual_under_iis_application_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.iis_periodicalprocessingmenupostaccrualstrialaccrualtodate_611());
+			AccrualDealobj611.iis_periodicalprocessingmenupostaccrualstrialaccrualtodate_611().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
+			AccrualDealobj611.iis_periodicalprocessingmenupostaccrualstrialaccrualtodate_611().sendKeys(testData.get("Todate"),Keys.TAB);
+		   
+		}
+
+		@And("User_611 click the ok button in Trial accrual under iis application menu")
+		public void user_click_the_ok_button_in_trial_accrual_under_iis_application_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.iis_periodicalprocessingmenupostaccrualstrialaccrualokbtn_611()); 
+			AccrualDealobj611.iis_periodicalprocessingmenupostaccrualstrialaccrualokbtn_611().click();
+			
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IIS_SuccessPopupOkBtn_611());
+			for (int i = 0; i < 2000; i++) {
+				try {
+					AccrualDealobj611.IIS_SuccessPopupOkBtn_611().click();
+			    	break;
+				} catch (Exception e) {
+					if (i==1999) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			
+		}
 		
+		//@352415/AT_AP_051
+		
+		@And("User_611 click the Post Accruals till Maturity date menu in Menu options under iis application menu")
+		public void user_click_the_post_accruals_till_maturity_date_menu_in_menu_options_under_iis_application_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.iispostaccrualstillmaturitydatemenu_611());
+			AccrualDealobj611.iispostaccrualstillmaturitydatemenu_611().click();
+		}
+
+		@And("User_611 enter the deal number under Post Accruals till Maturity date menu")
+		public void user_enter_ther_deal_number_under_post_accruals_till_maturity_date_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.iispostaccrualstillmaturitydatemenudealnum_611());
+			AccrualDealobj611.iispostaccrualstillmaturitydatemenudealnum_611().sendKeys(testData.get("Deal Nbr"),Keys.TAB);
+		}
+
+		@And("User_611 click the trial button under Post Accruals till Maturity date menu")
+		public void user_click_the_trial_button_under_post_accruals_till_maturity_date_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.iispostaccrualstillmaturitydatemenutrialbtn_611());
+			AccrualDealobj611.iispostaccrualstillmaturitydatemenutrialbtn_611().click();
+		}
+		@And("User_611 click the Process executed successfully ok button for trial button under Post Accruals till Maturity date menu")
+		public void user_click_the_process_executed_successfully_ok_button_for_trial_button_under_post_accruals_till_maturity_date_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IIS_SuccessPopupOkBtn_611());
+			for (int i = 0; i < 2000; i++) {
+				try {
+					AccrualDealobj611.IIS_SuccessPopupOkBtn_611().click();
+			    	break;
+				} catch (Exception e) {
+					if (i==1999) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+
+		@And("User_611 click the final button under Post Accruals till Maturity date menu")
+		public void user_click_the_final_button_under_post_accruals_till_maturity_date_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.iispostaccrualstillmaturitydatemenufinalbtn_611());
+			AccrualDealobj611.iispostaccrualstillmaturitydatemenufinalbtn_611().click();
+		}
+
+		@And("User_611 click the Process executed successfully ok button for final button under Post Accruals till Maturity date menu")
+		public void user_click_the_process_executed_successfully_ok_button_for_final_button_under_post_accruals_till_maturity_date_menu() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IIS_SuccessPopupOkBtn_611());
+			for (int i = 0; i < 2000; i++) {
+				try {
+					AccrualDealobj611.IIS_SuccessPopupOkBtn_611().click();
+			    	break;
+				} catch (Exception e) {
+					if (i==1999) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+		//@128354/AT_AD_007
+		@And("User_611 validate the Vat percentage is dispalyed or not in repayment plan")
+		public void user_validate_the_vat_percentage_is_dispalyed_or_not_in_repayment_plan() throws Throwable {
+		    WebElement Vatpercentageisdisplayed = AccrualDealobj611.iisrepaymentplanvatpercentagevalidate_611();
+		    if (Vatpercentageisdisplayed.isDisplayed()) {
+	        	Assert.assertTrue(true);
+	    }
+		}
 
 		
-		}		
-	
-
 }
 

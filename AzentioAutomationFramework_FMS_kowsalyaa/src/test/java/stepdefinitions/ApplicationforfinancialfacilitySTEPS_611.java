@@ -99,6 +99,10 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
     public void User_611_Get_the_data_set_Id_for_AT_FM_029() throws Throwable {
 		testData = FMS_AppforFinancialfacilityExcelData.getTestdata("AT_FM_029");
     }
+	@And("^User_611 Get the data set Id for AT_FM_031")
+    public void User_611_Get_the_data_set_Id_for_AT_FM_031() throws Throwable {
+		testData = FMS_AppforFinancialfacilityExcelData.getTestdata("AT_FM_031");
+    }
 	
 	@And("^User_611 Click the first Wifak Application$")
     public void click_the_first_wifak_appliaction() throws Throwable {

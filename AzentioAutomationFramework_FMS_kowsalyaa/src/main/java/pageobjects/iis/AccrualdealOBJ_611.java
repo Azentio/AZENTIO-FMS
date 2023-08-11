@@ -542,8 +542,342 @@ public class AccrualdealOBJ_611 {
 	public WebElement IISinvestmentdealwithouttradedealmenuMaintenanceJournalVocherdetails_611() {
 		return IIS_investmentdealwithouttradedealmenu_Maintenance_JournalVocherdetails;
 	}
-   
-
-
-
+	//131160/AT_AP_013
+	@FindBy(xpath = "//button[@id='pmtInstrBtn_T022MT']")
+	private WebElement IIS_investmentdealwithouttradedealmenu_Maintenance_Paymentinstruction;
+	public WebElement IISinvestmentdealwithouttradedealmenuMaintenancepaymentinstruction_611() {
+		return IIS_investmentdealwithouttradedealmenu_Maintenance_Paymentinstruction;
+	}
+	@FindBy(xpath = "//a[@id='showJVD_btn_T022MT']")
+	private WebElement IIS_investmentdealwithouttradedealmenuPaymentinstruction_Jvd;
+	public WebElement IISinvestmentdealwithouttradedealmenupaymentinstructionjvd_611() {
+		return IIS_investmentdealwithouttradedealmenuPaymentinstruction_Jvd;
+	}
+	@FindBy(xpath = "//span[@id='ui-dialog-title-JVDetailsId']")
+	private WebElement IIS_investmentdealwithouttradedealmenuPaymentinstruction_validateJvd;
+	public WebElement IISinvestmentdealwithouttradedealmenupaymentinstructionvalidatejvd_611() {
+		return IIS_investmentdealwithouttradedealmenuPaymentinstruction_validateJvd;
+	}
+//	Calculators Module
+	@FindBy(xpath = "//td[text()='Calculators']")
+	private WebElement IIS_calculators_module;
+	public WebElement IISCalculatorsModule_611() {
+		return IIS_calculators_module;
+	}
+	
+	@FindBy(xpath = "//a[@id='M0169']")
+	private WebElement IIS_calculators_reschedule_calculator_With_Profit;
+	public WebElement IISCalculatorsRescheduleCalculatorWithProfit_611() {
+		return IIS_calculators_reschedule_calculator_With_Profit;
+	}
+	
+	@FindBy(xpath = "//input[@id='lookuptxt_trsdealVO_SERIAL_NO_M0169']")
+	private WebElement IIS_reschedule_calculator_With_Profit_deal_nbr_input;
+	public WebElement IISRescheduleCalculatorWithProfitDealNbrInput_611() {
+		return IIS_reschedule_calculator_With_Profit_deal_nbr_input;
+	}
+	
+	@FindBy(xpath = "//div[@id='islamicRescheduleCalc_repaymentdet_collapspanel_M0169']")
+	private WebElement IIS_reschedule_calculator_With_Profit_repayment_details_panel;
+	public WebElement IISRescheduleCalculatorWithProfitRepaymentDetailsPanel_611() {
+		return IIS_reschedule_calculator_With_Profit_repayment_details_panel;
+	}
+	
+	@FindBy(xpath = "//input[@id='gracePeriod_M0169']")
+	private WebElement IIS_reschedule_calculator_With_Profit_repayment_details_first_pay_after_input;
+	public WebElement IISRescheduleCalculatorWithProfitRepaymentDetailsFirstPayAfterInput_611() {
+		return IIS_reschedule_calculator_With_Profit_repayment_details_first_pay_after_input;
+	}
+	
+	@FindBy(xpath = "//input[@id='no_of_payments_M0169']")
+	private WebElement IIS_reschedule_calculator_With_Profit_repayment_details_no_of_pay_input;
+	public WebElement IISRescheduleCalculatorWithProfitRepaymentDetailsNoOfPayInput_611() {
+		return IIS_reschedule_calculator_With_Profit_repayment_details_no_of_pay_input;
+	}
+	
+	@FindBy(xpath = "//button[@id='calculateBtn_M0169']")
+	private WebElement IIS_reschedule_calculator_With_Profit_calculate_btn;
+	public WebElement IISRescheduleCalculatorWithProfitCalculateBtn_611() {
+		return IIS_reschedule_calculator_With_Profit_calculate_btn;
+	}
+	
+	@FindBy(xpath = "//button[@id='rescheduleCalculatorUpdateBtn_M0169']")
+	private WebElement IIS_reschedule_calculator_With_Profit_update_btn;
+	public WebElement IISRescheduleCalculatorWithProfitUpdateBtn_611() {
+		return IIS_reschedule_calculator_With_Profit_update_btn;
+	}
+	
+//	Reschedule Repayment Plan module
+	@FindBy(xpath = "//td[text()='Reschedule Repayment Plan']")
+	private WebElement IIS_reschedule_repayment_plan_module;
+	public WebElement IISRescheduleRepaymentPlanModule_611() {
+		return IIS_reschedule_repayment_plan_module;
+	}
+	
+	@FindBy(xpath = "//a[@id='T041P']")
+	private WebElement IIS_reschedule_repayment_plan_approve_menu;
+	public WebElement IISRescheduleRepaymentPlanApproveMenu_611() {
+		return IIS_reschedule_repayment_plan_approve_menu;
+	}
+	
+	@FindBy(xpath = "//input[@id='repaymentPlanMgmtGridTbl_Id_T041P_gs_trspayplanVO.TRX_NBR']")
+	private WebElement IIS_reschedule_repayment_plan_approve_searchgrid_deal_input;
+	public WebElement IISRescheduleRepaymentPlanApproveSearchgridDealInput_611() {
+		return IIS_reschedule_repayment_plan_approve_searchgrid_deal_input;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_repaymentPlanMgmtGridTbl_Id_T041P_1_trspayplanVO.PLAN_NBR']")
+	private WebElement IIS_reschedule_repayment_plan_approve_searchgrid_row;
+	public WebElement IISRescheduleRepaymentPlanApproveSearchgridRow_611() {
+		return IIS_reschedule_repayment_plan_approve_searchgrid_row;
+	}
+	
+	@FindBy(xpath = "//input[@id='trx_nbr_hd_T041P']")
+	private WebElement IIS_reschedule_repayment_plan_approve_menu_deal_nbr;
+	public WebElement IISRescheduleRepaymentPlanApproveMenuDealNbr_611() {
+		return IIS_reschedule_repayment_plan_approve_menu_deal_nbr;
+	}
+	
+	@FindBy(xpath = "//a[@id='approvebutton_T041P']")
+	private WebElement IIS_reschedule_repayment_plan_approve_menu_approve_btn;
+	public WebElement IISRescheduleRepaymentPlanApproveMenuApproveBtn_611() {
+		return IIS_reschedule_repayment_plan_approve_menu_approve_btn;
+	}
+	
+//	MTS - Parameters
+	@FindBy(xpath = "//td[text()='Parameters']")
+	private WebElement MTS_parameter_module;
+	public WebElement MTSParameterModule_611() {
+		return MTS_parameter_module;
+	}
+	
+	@FindBy(xpath = "//td[text()='Batch']")
+	private WebElement MTS_parameter_batch;
+	public WebElement MTSParameterBatch_611() {
+		return MTS_parameter_batch;
+	}
+	
+	@FindBy(xpath = "//a[@id='P0003MT']")
+	private WebElement MTS_parameter_batch_maintenance;
+	public WebElement MTSParameterBatchMaintenance_611() {
+		return MTS_parameter_batch_maintenance;
+	}
+	
+	@FindBy(xpath = "//input[@id='additionalReference_P0003MT']")
+	private WebElement MTS_param_batch_maintenance_additional_ref_nbr;
+	public WebElement MTSParamBatchMaintenanceAdditionalRefNbr_611() {
+		return MTS_param_batch_maintenance_additional_ref_nbr;
+	}
+	
+	@FindBy(xpath = "//input[@id='briefName_P0003MT']")
+	private WebElement MTS_param_batch_maintenance_brief_name;
+	public WebElement MTSParamBatchMaintenanceBriefName_611() {
+		return MTS_param_batch_maintenance_brief_name;
+	}
+	
+	@FindBy(xpath = "//input[@id='LongName_P0003MT']")
+	private WebElement MTS_param_batch_maintenance_long_name;
+	public WebElement MTSParamBatchMaintenanceLongName_611() {
+		return MTS_param_batch_maintenance_long_name;
+	}
+	
+	@FindBy(xpath = "//input[@id='menuReference_P0003MT']")
+	private WebElement MTS_param_batch_maintenance_menu_ref_nbr;
+	public WebElement MTSParamBatchMaintenanceMenuRefNbr_611() {
+		return MTS_param_batch_maintenance_menu_ref_nbr;
+	}
+	
+	@FindBy(xpath = "//select[@id='batchPeriodicity_P0003MT']")
+	private WebElement MTS_param_batch_maintenance_periodicity_dropdown;
+	public WebElement MTSParamBatchMaintenancePeriodicityDropdown_611() {
+		return MTS_param_batch_maintenance_periodicity_dropdown;
+	}
+		
+	@FindBy(xpath = "//a[contains(text(),'Oracle BAJ')]/preceding-sibling::ins")
+	private WebElement MTS_param_batch_main_batch_details_oracle_baj;
+	public WebElement MTSParamBatchMainBatchDetailsTabOracleBAJ_611() {
+		return MTS_param_batch_main_batch_details_oracle_baj;
+	}
+	
+	@FindBy(xpath = "(//a[contains(text(),'Head Office')]/ins)[1]")
+	private WebElement MTS_param_batch_main_batch_details_oracle_baj_head_office;
+	public WebElement MTSParamBatchMainBatchDetailsTabOracleBAJHeadOffice_611() {
+		return MTS_param_batch_main_batch_details_oracle_baj_head_office;
+	}
+	
+	@FindBy(xpath = "(//a[contains(text(),'Treasury-Invest')]/ins)[1]")
+	private WebElement MTS_param_batch_main_batch_details_oracle_baj_ICD_treasury;
+	public WebElement MTSParamBatchMainBatchDetailsTabOracleBAJICDTreasury_611() {
+		return MTS_param_batch_main_batch_details_oracle_baj_ICD_treasury;
+	}
+	
+	@FindBy(xpath = "//li[@nodecode='Financing And Treasury']/ins")
+	private WebElement MTS_param_batch_main_process_financing_treasury;
+	public WebElement MTSParamBatchMainProcessFinancingTreasury_611() {
+		return MTS_param_batch_main_process_financing_treasury;
+	}
+	
+	@FindBy(xpath = "(//li[@nodecode='16']/a/ins)[1]")
+	private WebElement MTS_param_batch_main_process_financing_treasury_create_settlement;
+	public WebElement MTSParamBatchMainProcessFinancingTreasuryCreateSettlement_611() {
+		return MTS_param_batch_main_process_financing_treasury_create_settlement;
+	}
+	
+	@FindBy(xpath = "(//li[@nodecode='17']/a/ins)[1]")
+	private WebElement MTS_param_batch_main_process_financing_treasury_approve_settlement;
+	public WebElement MTSParamBatchMainProcessFinancingTreasuryApproveSettlement_611() {
+		return MTS_param_batch_main_process_financing_treasury_approve_settlement;
+	}
+	
+	@FindBy(xpath = "(//li[@nodecode='28']/a/ins)[1]")
+	private WebElement MTS_param_batch_main_process_financing_treasury_profit_accrual_process;
+	public WebElement MTSParamBatchMainProcessFinancingTreasuryProfitAccrualProcess_611() {
+		return MTS_param_batch_main_process_financing_treasury_profit_accrual_process;
+	}
+	
+	@FindBy(xpath = "//li[@id='batchControlTabs_P0003MT']")
+	private WebElement MTS_param_batch_main_batch_control_tab;
+	public WebElement MTSParamBatchMainBatchControlTab_611() {
+		return MTS_param_batch_main_batch_control_tab;
+	}
+	
+	@FindBy(xpath = "//select[@id='processBatch2_P0003MT']")
+	private WebElement MTS_param_batch_main_batch_control_tab_process_batch_dropdown;
+	public WebElement MTSParamBatchMainBatchControlTabProcessBatchDropdown_611() {
+		return MTS_param_batch_main_batch_control_tab_process_batch_dropdown;
+	}
+	
+	@FindBy(xpath = "//select[@id='processBatchOpenedBranch_P0003MT']")
+	private WebElement MTS_param_batch_main_batch_control_tab_opened_branch_dropdown;
+	public WebElement MTSParamBatchMainBatchControlTabOpenedBranchDropdown_611() {
+		return MTS_param_batch_main_batch_control_tab_opened_branch_dropdown;
+	}
+	
+	@FindBy(xpath = "//button[@id='batchMaintForm_Save_Btn_P0003MT']")
+	private WebElement MTS_param_batch_maintenance_save_btn;
+	public WebElement MTSParamBatchMaintenanceSaveBtn_611() {
+		return MTS_param_batch_maintenance_save_btn;
+	}
+	
+	@FindBy(xpath = "//a[@id='P0003AP']")
+	private WebElement MTS_param_batch_approve_menu;
+	public WebElement MTSParamBatchApproveMenu_611() {
+		return MTS_param_batch_approve_menu;
+	}
+	
+	@FindBy(xpath = "//input[contains(@id,'ADDITIONAL_REFERENCE')]")
+	private WebElement MTS_param_batch_approve_menu_searchgrid_additional_ref_input;
+	public WebElement MTSParamBatchApproveMenuSearchgridAdditionalRefInput_611() {
+		return MTS_param_batch_approve_menu_searchgrid_additional_ref_input;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_batchGridTbl_Id_P0003AP_1_eodBatchMasterVO.BATCH_CODE']")
+	private WebElement MTS_param_batch_approve_menu_searchgrid_row;
+	public WebElement MTSParamBatchApproveMenuSearchgridRow_611() {
+		return MTS_param_batch_approve_menu_searchgrid_row;
+	}
+	
+	@FindBy(xpath = "//input[@id='additionalReference_P0003AP']")
+	private WebElement MTS_param_batch_approve_menu_additional_ref;
+	public WebElement MTSParamBatchApproveMenuAdditionalRef_611() {
+		return MTS_param_batch_approve_menu_additional_ref;
+	}
+	
+	@FindBy(xpath = "//button[@id='batchMaintForm_Approve_Btn_P0003AP']")
+	private WebElement MTS_param_batch_approve_menu_approve_btn;
+	public WebElement MTSParamBatchApproveMenuApproveBtn_611() {
+		return MTS_param_batch_approve_menu_approve_btn;
+	}
+	
+//	MTS - Process
+	@FindBy(xpath = "//td[text()='Process']")
+	private WebElement MTS_process_module;
+	public WebElement MTSProcessModule_611() {
+		return MTS_process_module;
+	}
+	
+	@FindBy(xpath = "//td[text()='Batch Process']")
+	private WebElement MTS_process_batch_process_menu;
+	public WebElement MTSProcessBatchProcessMenu_611() {
+		return MTS_process_batch_process_menu;
+	}	
+		
+	@FindBy(xpath = "//span[text()='Batch Run']")
+	private WebElement MTS_process_batch_process_menu_batch_run;
+	public WebElement MTSProcessBatchProcessMenuBatchRun_611() {
+		return MTS_process_batch_process_menu_batch_run;
+	}
+		
+	@FindBy(xpath = "//input[contains(@id,'runningDate')]")
+	private WebElement MTS_process_batch_process_menu_batch_run_Date;
+	public WebElement MTSProcessBatchProcessMenuBatchRunDate_611() {
+		return MTS_process_batch_process_menu_batch_run_Date;
+	}
+	
+	@FindBy(xpath = "//button[contains(@id,'batchRun_Btn_Run')]")
+	private WebElement MTS_process_batch_process_menu_batch_run_opt_run_btn;
+	public WebElement MTSProcessBatchProcessMenuBatchRunOptRunBtn_611() {
+		return MTS_process_batch_process_menu_batch_run_opt_run_btn;
+	}
+	
+	//@352413/AT_AP_049
+	@FindBy(xpath = "//a[@id='T10EMT']")
+	private WebElement IIS_Periodicalprocessing_PostAccruals_TrialAccruals;
+	public WebElement iis_periodicalprocessingmenupostaccruals_trialaccruals_611() {
+		return IIS_Periodicalprocessing_PostAccruals_TrialAccruals;
+	}
+	@FindBy(xpath = "//input[@id='Specific_deal_T10EMT']")
+	private WebElement IIS_Periodicalprocessing_PostAccruals_TrialAccruals_Flagcheckforspecficdeal;
+	public WebElement iis_periodicalprocessingmenupostaccrualstrialaccrualsflagcheckforspecialdeal_611() {
+		return IIS_Periodicalprocessing_PostAccruals_TrialAccruals_Flagcheckforspecficdeal;
+	}
+	@FindBy(xpath = "//input[@id='lookuptxt_postChargeAccuralProcessSpecificDeal_T10EMT']")
+	private WebElement IIS_Periodicalprocessing_PostAccruals_TrialAccruals_Dealnumsearchbox;
+	public WebElement iis_periodicalprocessingmenupostaccrualstrialaccrualsdealnumsearchbox_611() {
+		return IIS_Periodicalprocessing_PostAccruals_TrialAccruals_Dealnumsearchbox;
+	}
+	@FindBy(xpath = "//input[@id='fromDate_T10EMT']")
+	private WebElement IIS_Periodicalprocessing_PostAccruals_TrialAccrual_Fromdate;
+	public WebElement iis_periodicalprocessingmenupostaccrualstrialaccrualfromdate_611() {
+		return IIS_Periodicalprocessing_PostAccruals_TrialAccrual_Fromdate;
+	}
+	@FindBy(xpath = "//input[@id='toDate_T10EMT']")
+	private WebElement IIS_Periodicalprocessing_PostAccruals_TrialAccrual_Todate;
+	public WebElement iis_periodicalprocessingmenupostaccrualstrialaccrualtodate_611() {
+		return IIS_Periodicalprocessing_PostAccruals_TrialAccrual_Todate;
+	}
+	@FindBy(xpath = "//button[@id='postChargeAccrualProcess_trialRun_T10EMT']")
+	private WebElement IIS_Periodicalprocessing_PostAccruals_TrialAccrual_okbtn;
+	public WebElement iis_periodicalprocessingmenupostaccrualstrialaccrualokbtn_611() {
+		return IIS_Periodicalprocessing_PostAccruals_TrialAccrual_okbtn;
+	}
+	//352415/AT_AP_051
+	@FindBy(xpath = "//a[@id='T10MM']")
+	private WebElement IIS_PostAccrualsTillMaturityDateMenu;
+	public WebElement iispostaccrualstillmaturitydatemenu_611() {
+		return IIS_PostAccrualsTillMaturityDateMenu;
+	}
+	@FindBy(xpath = "//input[@id='lookuptxt_postChargeAccuralProcessSpecificDeal_T10MM']")
+	private WebElement IIS_PostAccrualsTillMaturityDateMenu_DealNum;
+	public WebElement iispostaccrualstillmaturitydatemenudealnum_611() {
+		return IIS_PostAccrualsTillMaturityDateMenu_DealNum;
+	}
+	@FindBy(xpath = "//button[@id='postChargeAccrualProcess_trialRun_T10MM']")
+	private WebElement IIS_PostAccrualsTillMaturityDateMenu_Trialbtn;
+	public WebElement iispostaccrualstillmaturitydatemenutrialbtn_611() {
+		return IIS_PostAccrualsTillMaturityDateMenu_Trialbtn;
+	}
+	@FindBy(xpath = "//button[@id='postChargeAccrualProcess_FinalRun_T10MM']")
+	private WebElement IIS_PostAccrualsTillMaturityDateMenu_finalbtn;
+	public WebElement iispostaccrualstillmaturitydatemenufinalbtn_611() {
+		return IIS_PostAccrualsTillMaturityDateMenu_finalbtn;
+	}
+	//@128354/AT_AD_007
+	@FindBy(xpath = "//input[@id='VAT_percentage_T022MT']")
+	private WebElement IIS_Repaymentplan_Vatpercentagevalidate;
+	public WebElement iisrepaymentplanvatpercentagevalidate_611() {
+		return IIS_Repaymentplan_Vatpercentagevalidate;
+	}
+	
+	
 }

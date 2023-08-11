@@ -15,6 +15,7 @@ public class LoginTest extends BaseClass {
 	WebDriver driver = BaseClass.driver;
 	FMSLogin FMSLogin = new FMSLogin(driver);
 	IISLogin IISLogin = new IISLogin(driver);
+	
 	WaitHelper waitHelper = new WaitHelper(driver);
 	ClicksAndActionsHelper clicksAndActionHelper = new ClicksAndActionsHelper(driver);
 	FMSCommonWebElements fmsCommonWebElements = new FMSCommonWebElements(driver);
@@ -51,6 +52,13 @@ public class LoginTest extends BaseClass {
     }
 	
 	//-------------------
+	
+//	MTS_Application
+	@Given("^navigate to MTS application and login with valid credentials$")
+    public void navigate_to_mts_application_and_login_with_valid_credentials() throws Throwable {
+		driver.get(configFileReader.getMTSApplicationUrl());
+		IISLogin.loginIntoMTSApplication(configFileReader.getMTSApplicationUserType());
+    }
 	
 	
 	@Given("^navigate to FMS sads application and login with valid credentials$")

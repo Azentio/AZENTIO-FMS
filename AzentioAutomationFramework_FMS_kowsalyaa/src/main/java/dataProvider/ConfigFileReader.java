@@ -171,6 +171,20 @@ public class ConfigFileReader {
 		else
 			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
 	}
+	public String getMTSApplicationUrl() {
+		String url = properties.getProperty("MTSapplicationUrl");
+		if (url != null)
+			return url;
+		else
+			throw new RuntimeException("url not specified in the Configuration.properties file.");
+		}
+	public String getMTSApplicationUserType() {
+		String userType = properties.getProperty("MTS_Application_UserType");
+		if (userType != null)
+			return userType;
+		else
+			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
+	}
 	
 	public String getIISApplicationUserType() {
 		String userType = properties.getProperty("IIS_Application_UserType");
@@ -179,5 +193,6 @@ public class ConfigFileReader {
 		else
 			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
 	}
+	
 	
 	}
