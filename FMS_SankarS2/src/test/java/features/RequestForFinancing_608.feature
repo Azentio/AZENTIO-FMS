@@ -24,7 +24,7 @@ Then User_608 clicks save the button in maintanance under product class
 # limit details --> repayment plan btn --> validate no of payments dropdown "Nearest 1"
 @AT_RF_014
 @AT_RF_014_FMSCore
-Scenario: IIS Param Application
+Scenario: TSR - CDMI180057
 
 Given navigate to FMS application and login with valid credentials
 And User_608 get the test data for test case AT_RF_014_FMSCore

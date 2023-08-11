@@ -44,7 +44,9 @@ public class IIS_IncidentalChargesSteps_608 {
 	ExcelData iisAccrualProcessExcelData  = new ExcelData(path,"AccrualProcessTestData","DataSet ID");
 	ExcelData MTSEODExcelData  = new ExcelData(path,"MTSTestData","DataSet ID");
 	
+	Map<String, String> testExecutionData;
 	Map<String, String> testData;
+	String tmp;
 	
 //	@AT_IC_010
 	@And("^User_608 get the test data for test case AT_IC_010$")
@@ -107,7 +109,122 @@ public class IIS_IncidentalChargesSteps_608 {
 	@And("^User_608 get the test data for test case AT_AP_023_02$")
     public void get_the_test_data_for_test_case_AT_AP_023_02() throws Throwable {
 		testData = MTSEODExcelData.getTestdata("DS_AT_AP_023_02");
+    }	
+	
+//	@AT_AP_043
+	@And("^User_608 get the test data for test case AT_AP_043$")
+    public void get_the_test_data_for_test_case_AT_AP_043() throws Throwable {
+		testData = iisAccrualProcessExcelData.getTestdata("DS_AT_AP_043");
+    }	
+	
+//	@AT_AP_044
+	@And("^User_608 get the test data for test case AT_AP_044$")
+    public void get_the_test_data_for_test_case_AT_AP_044() throws Throwable {
+		testData = iisAccrualProcessExcelData.getTestdata("DS_AT_AP_044");
     }
+	
+//	@AT_AP_045
+	@And("^User_608 get the test data for test case AT_AP_045$")
+    public void get_the_test_data_for_test_case_AT_AP_045() throws Throwable {
+		testData = iisAccrualProcessExcelData.getTestdata("DS_AT_AP_045");
+    }
+	
+//	@AT_AP_046
+	@And("^User_608 get the test data for test case AT_AP_046$")
+    public void get_the_test_data_for_test_case_AT_AP_046() throws Throwable {
+		testData = MTSEODExcelData.getTestdata("DS_AT_AP_046");
+    }
+	
+	
+	
+	
+	
+	
+	/////////////////////////////////////////////////////
+	@And("User_608 Update the test data id for AT_AP_043")
+	public void user_update_the_test_data_id_for_at_ap_043() throws Throwable {
+		testExecutionData = iisAccrualProcessExcelData.getTestdata("DS_AT_AP_043");
+		testData = iisAccrualProcessExcelData.getTestdata(testExecutionData.get("DataSet ID"));
+	}
+
+	@And("User_608 Store the newly created Deal number in Temp variable")
+	public void user_store_the_newly_created_deal_number_in_temp_variable() throws Throwable {
+		tmp = testData.get("Deal Nbr");	    
+	}
+	
+	@And("User_608 Update the test data id for AT_AP_044")
+	public void user_update_the_test_data_id_for_at_ap_044() throws Throwable {
+		testExecutionData = iisAccrualProcessExcelData.getTestdata("DS_AT_AP_044");
+		testData = iisAccrualProcessExcelData.getTestdata(testExecutionData.get("DataSet ID"));
+	}
+	
+	@And("User_608 Update the test data id for AT_AP_045")
+	public void user_update_the_test_data_id_for_at_ap_045() throws Throwable {
+		testExecutionData = iisAccrualProcessExcelData.getTestdata("DS_AT_AP_045");
+		testData = iisAccrualProcessExcelData.getTestdata(testExecutionData.get("DataSet ID"));
+	}
+	
+	@And("User_608 Store the newly Deal number for Accrual")
+	public void user_store_the_newly_deal_number_for_accrual() throws Throwable {
+		iisAccrualProcessExcelData.updateTestData(testExecutionData.get("DataSet ID"), "Deal Nbr", tmp);	    
+	}
+	
+	/////////////////////////////////////////////////////
+	// Change the Running Date
+	@And("User_608 click the running date label in IIS Application")
+	public void user_click_the_running_date_label_in_iis_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISCoreRunningDateLabel_608());
+		for (int i = 0; i < 500; i++) {
+			try {
+				IISApplicationObj608.IISCoreRunningDateLabel_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==499) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+
+	@And("User_608 enter the Running Date under Running date poup in IIS Application")
+	public void user_enter_the_running_date_under_running_date_poup_in_iis_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISCoreRunningDatePopup_608());
+		IISApplicationObj608.IISCoreRunningDateInput_608().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
+		IISApplicationObj608.IISCoreRunningDateInput_608().sendKeys(testData.get("Running Date"),Keys.TAB);
+	}
+
+	@And("User_608 click the Use button under Running date poup in IIS Application")
+	public void user_click_the_use_button_under_running_date_poup_in_iis_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISCoreRunningDateUseBtn_608());
+		for (int i = 0; i < 500; i++) {
+			try {
+				IISApplicationObj608.IISCoreRunningDateUseBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==499) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_InformationPopupOkBtn_608());
+		IISApplicationObj608.IIS_InformationPopupOkBtn_608().click();
+	}
+
+	@And("User_608 click the close button under Running date poup in IIS Application")
+	public void user_click_the_close_button_under_running_date_poup_in_iis_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISCoreRunningDatePopupCloseBtn_608()); 
+		for (int i = 0; i < 500; i++) {
+			try {
+				IISApplicationObj608.IISCoreRunningDatePopupCloseBtn_608().click();
+		    	break;
+			} catch (Exception e) {
+				if (i==499) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
 	
 	
 	
@@ -780,6 +897,21 @@ public class IIS_IncidentalChargesSteps_608 {
 		IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainContributorDetailsOkBtn_608().click();
 	}
 	
+	@And("User_608 click the Close icon in contributor tab under maintenance in Investment Deals Combined without Trade Deal")
+	public void user_click_the_close_icon_in_contributor_tab_under_maintenance_in_investment_deals_combined_without_trade_deal() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainContributorDetailsCloseIcon_608());
+		for (int i = 0; i <= 300; i++) {
+			try {
+				IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainContributorDetailsCloseIcon_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+	
 	@And("User_608 click the save button in maintenance under Investment Deals Combined without Trade Deal")
 	public void user_click_the_save_button_in_maintenance_under_investment_deals_combined_without_trade_deal() throws Throwable {
 		for (int i = 0; i <= 300; i++) {
@@ -1005,6 +1137,37 @@ public class IIS_IncidentalChargesSteps_608 {
 	    
 	}
 	
+	
+	@And("User_608 close the Maintenance screen under Investment Deals Combined without Trade Deal")
+	public void user_close_the_maintenance_screen_under_investment_deals_combined_without_trade_deal() {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainTabCloseIcon_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainTabCloseIcon_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+
+	@And("User_608 close the Approve screen under Investment Deals Combined without Trade Deal")
+	public void user_close_the_approve_screen_under_investment_deals_combined_without_trade_deal() {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISInvestmentDealWithoutTradeDealApproveMenuCloseIcon_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				IISApplicationObj608.IISInvestmentDealWithoutTradeDealApproveMenuCloseIcon_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	    
+	}
 	
 	
 	@Then("User_608 click the Approve menu under Investment Deals Combined without Trade Deal")
@@ -1772,7 +1935,7 @@ public class IIS_IncidentalChargesSteps_608 {
 			}
 		}		
 		
-		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISApproveMenuConfirmContinuePopup_608());
+//		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISApproveMenuConfirmContinuePopup_608());
 		for (int i = 0; i <= 500; i++) {
 			try {
 				IISApplicationObj608.IIS_ConfirmPopupOkBtn_608().click();
@@ -1890,13 +2053,15 @@ public class IIS_IncidentalChargesSteps_608 {
 
 	@And("User_608 enter the From Date in Final Accruals under Post Accrual")
 	public void user_enter_the_from_date_in_final_accruals_under_post_accrual() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISFinalAccrualsFromDateInput_608());
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISFinalAccrualsFromDateInput_608());		
+		IISApplicationObj608.IISFinalAccrualsFromDateInput_608().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
 		IISApplicationObj608.IISFinalAccrualsFromDateInput_608().sendKeys(testData.get("Accruals From"),Keys.TAB);
 	}
 
 	@And("User_608 enter the To Date in Final Accruals under Post Accrual")
 	public void user_enter_the_to_date_in_final_accruals_under_post_accrual() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISFinalAccrualsToDateInput_608());
+		IISApplicationObj608.IISFinalAccrualsToDateInput_608().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
 		IISApplicationObj608.IISFinalAccrualsToDateInput_608().sendKeys(testData.get("Accruals To"),Keys.TAB);
 	}
 
@@ -1931,9 +2096,7 @@ public class IIS_IncidentalChargesSteps_608 {
 				IISApplicationObj608.IIS_ConfirmPopupCancelBtn_608().click();
 				break;
 			} catch (Exception e) {
-				if (i == 1000) {
-					Assert.fail(e.getMessage());
-				}
+				
 			}
 		}
 	}

@@ -13,6 +13,40 @@ public class IIS_ApplicationObj_608 {
 		PageFactory.initElements(driver, this);
 	}
 	
+	
+	// Change Running Date
+	@FindBy(xpath = "//span[@id='hdr_runn_date']")
+	private WebElement IIS_core_running_date_label;
+	public WebElement IISCoreRunningDateLabel_608() {
+		return IIS_core_running_date_label;
+	}
+	
+	@FindBy(xpath = "//span[@id='ui-dialog-title-running_date_div']")
+	private WebElement IIS_core_running_date_popup;
+	public WebElement IISCoreRunningDatePopup_608() {
+		return IIS_core_running_date_popup;
+	}
+	
+	@FindBy(xpath = "//input[@id='global_user_run_date']")
+	private WebElement IIS_core_running_date_input;
+	public WebElement IISCoreRunningDateInput_608() {
+		return IIS_core_running_date_input;
+	}
+	
+	@FindBy(xpath = "(//span[contains(text(),'Use')]//ancestor::button)[1]")
+	private WebElement IIS_core_running_date_use_btn;
+	public WebElement IISCoreRunningDateUseBtn_608() {
+		return IIS_core_running_date_use_btn;
+	}
+	
+	@FindBy(xpath = "//button[@id='_header_rundate_dialog_close']")
+	private WebElement IIS_core_running_date_popup_close_btn;
+	public WebElement IISCoreRunningDatePopupCloseBtn_608() {
+		return IIS_core_running_date_popup_close_btn;
+	}
+	
+	
+	
 	// Clear cache for FMS Core
 	@FindBy(xpath = "//span[@id='tech_details_icon']")
 	private WebElement IIS_core_tech_details_icon;
@@ -142,6 +176,12 @@ public class IIS_ApplicationObj_608 {
 		return IIS_investment_deal_without_trade_deal_main_contributor_details_Ok_btn;
 	}
 	
+	@FindBy(xpath = "//span[contains(text(),'close')]")
+	private WebElement IIS_investment_deal_without_trade_deal_main_contributor_details_close_icon;
+	public WebElement IISInvestmentDealWithoutTradeDealMainContributorDetailsCloseIcon_608(){
+		return IIS_investment_deal_without_trade_deal_main_contributor_details_close_icon;
+	}
+	
 	@FindBy(xpath = "//button[@id='investmentDeals_Save_btn_T022MT']")
 	private WebElement IIS_investment_deal_without_trade_deal_main_save_btn;
 	public WebElement IISInvestmentDealWithoutTradeDealMainSaveBtn_608(){
@@ -219,6 +259,12 @@ public class IIS_ApplicationObj_608 {
 	public WebElement IISInvestmentDealWithoutTradeDealMainValidateBtn_608(){
 		return IIS_investment_deal_without_trade_deal_main_validate_btn;
 	}
+	
+	@FindBy(xpath = "//a[@menuvar='T022MT']//parent::td//following-sibling::td//span")
+	private WebElement IIS_investment_deal_without_trade_deal_main_tab_close_icon;
+	public WebElement IISInvestmentDealWithoutTradeDealMainTabCloseIcon_608(){
+		return IIS_investment_deal_without_trade_deal_main_tab_close_icon;
+	}
 
 	@FindBy(xpath = "//a[@id='T022P']")
 	private WebElement IIS_investment_deal_without_trade_deal_approve_menu;
@@ -249,6 +295,12 @@ public class IIS_ApplicationObj_608 {
 	public WebElement IISInvestmentDealWithoutTradeDealApproveMenuApproveBtn_608(){
 		return IIS_investment_deal_without_trade_deal_approve_menu_approve_btn;
 	}	
+	
+	@FindBy(xpath = "//a[@menuvar='T022P']//parent::td//following-sibling::td//span")
+	private WebElement IIS_investment_deal_without_trade_deal_approve_menu_close_icon;
+	public WebElement IISInvestmentDealWithoutTradeDealApproveMenuCloseIcon_608(){
+		return IIS_investment_deal_without_trade_deal_approve_menu_close_icon;
+	}
 	
 //	Tracking & Incidental Charges
 //	@AT_IC_010
@@ -894,5 +946,43 @@ public class IIS_ApplicationObj_608 {
 	public WebElement IISRescheduleRepaymentPlanApproveMenuApproveBtn_608() {
 		return IIS_reschedule_repayment_plan_approve_menu_approve_btn;
 	}
+	
+	
+//	Periodical Processing --> Reschedule Repayment Plan - Installments Settled Not On the Due Date	
+	@FindBy(xpath = "//a[@id='T10RA']")	
+	private WebElement IIS_periodical_process_reschedule_repayment_plan_settled_not_on_due_date;
+	public WebElement IISPeriodicalProcessRescheduleRepaymentSettledNotOntheDueDate_608() {
+		return IIS_periodical_process_reschedule_repayment_plan_settled_not_on_due_date;
+	}
+	
+	@FindBy(xpath = "//input[@id='repaymentPlanLateSettlementCO_effectiveDate_T10RA']")
+	private WebElement IIS_periodical_process_reschedule_repayment_plan_settled_not_on_due_date_transaction_date;
+	public WebElement IISPeriodicalProcessRescheduleRepaymentSettledNotOntheDueDateTransactionDate_608() {
+		return IIS_periodical_process_reschedule_repayment_plan_settled_not_on_due_date_transaction_date;
+	}
+	
+	@FindBy(xpath = "//input[@id='jqg_repaymentPlanLateSettlementGridId_T10RA_1']")
+	private WebElement IIS_periodical_process_reschedule_repayment_plan_settled_not_on_due_date_settlement_grid;
+	public WebElement IISPeriodicalProcessRescheduleRepaymentSettledNotOntheDueDateSettlementGrid_608() {
+		return IIS_periodical_process_reschedule_repayment_plan_settled_not_on_due_date_settlement_grid;
+	}
+	
+	@FindBy(xpath = "//a[@id='repaymentPlanLateSettlementProcessBtn_T10RA']")
+	private WebElement IIS_periodical_process_reschedule_repayment_plan_settled_not_on_due_date_process_btn;
+	public WebElement IISPeriodicalProcessRescheduleRepaymentSettledNotOntheDueDateProcessBtn_608() {
+		return IIS_periodical_process_reschedule_repayment_plan_settled_not_on_due_date_process_btn;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }
