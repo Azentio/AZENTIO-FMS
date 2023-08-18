@@ -15,6 +15,7 @@ import dataProvider.ConfigFileReader;
 
 
 public class BaseClass {
+	
 	Logger log = LogManager.getLogger(BaseClass.class.getName());
 	public static WebDriver driver;
 	
@@ -24,9 +25,12 @@ public class BaseClass {
 	String browserName =configFileReader.getBrowser();
 	
 	if(browserName.equalsIgnoreCase("chrome")) {
+	
 		ChromeOptions options = new ChromeOptions();
+		
 		options.addArguments("--remote-allow-origins=*");
 		options.addArguments("--incognito");
+	
 		driver = new ChromeDriver(options);
 		
 	}else if(browserName.equalsIgnoreCase("firefox")) {

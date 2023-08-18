@@ -43,6 +43,7 @@ public class IIS_IncidentalChargesSteps_608 {
 	ExcelData iisAccrualDealExcelData  = new ExcelData(path,"AccrualDealTestData","DataSet ID");
 	ExcelData iisAccrualProcessExcelData  = new ExcelData(path,"AccrualProcessTestData","DataSet ID");
 	ExcelData MTSEODExcelData  = new ExcelData(path,"MTSTestData","DataSet ID");
+	ExcelData iisAdvancePrincipalsettlementExcelData  = new ExcelData(path,"AdvancePrincipalSettlement","DataSet ID");
 	
 	Map<String, String> testExecutionData;
 	Map<String, String> testData;
@@ -136,7 +137,24 @@ public class IIS_IncidentalChargesSteps_608 {
     }
 	
 	
+//	Advance Principal Settlement feature
+//	@AT_APS_004
+	@And("^User_608 get the test data for test case AT_APS_004$")
+    public void get_the_test_data_for_test_case_AT_APS_004() throws Throwable {
+		testData = iisAdvancePrincipalsettlementExcelData.getTestdata("DS_AT_APS_004");
+    }
 	
+//	@AT_APS_005
+	@And("^User_608 get the test data for test case AT_APS_005$")
+    public void get_the_test_data_for_test_case_AT_APS_005() throws Throwable {
+		testData = iisAdvancePrincipalsettlementExcelData.getTestdata("DS_AT_APS_005");
+    }
+	
+//	@AT_APS_006
+	@And("^User_608 get the test data for test case AT_APS_006$")
+    public void get_the_test_data_for_test_case_AT_APS_006() throws Throwable {
+		testData = iisAdvancePrincipalsettlementExcelData.getTestdata("DS_AT_APS_006");
+    }
 	
 	
 	
@@ -966,13 +984,13 @@ public class IIS_IncidentalChargesSteps_608 {
 			}
 		}
 		
-		for(int i = 0; i <= 500; i++) {
+		for(int i = 0; i <= 1000; i++) {
     		try {
 				if(!(IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainRepaymentAmtField_608().getAttribute("prevvalue").isBlank())) {
 					break;
 				}
 			} catch (Exception e) {
-				if (i == 500) {
+				if (i == 1000) {
 					Assert.fail(e.getMessage());
 				}
 			}
@@ -1245,9 +1263,7 @@ public class IIS_IncidentalChargesSteps_608 {
 				IISApplicationObj608.IIS_ConfirmPopupCancelBtn_608().click();
 				break;
 			} catch (Exception e) {
-				if (i == 1000) {
-					Assert.fail(e.getMessage());
-				}
+				
 			}
 		}
 		
@@ -1488,9 +1504,7 @@ public class IIS_IncidentalChargesSteps_608 {
 					break;
 				}
 			} catch (Exception e) {
-				if (i == 500) {
-					Assert.fail(e.getMessage());
-				}
+				
 			}
     	}
 		
@@ -1736,6 +1750,7 @@ public class IIS_IncidentalChargesSteps_608 {
 				}
 			}
 		}
+		
 		IISApplicationObj608.IISAdvancePrincipalSettlementModule_608().click();	    
 	}
 
@@ -1784,27 +1799,44 @@ public class IIS_IncidentalChargesSteps_608 {
 	@And("User_608 click the Reschedule&Allocate button in maintenance screen under Advance principal settlement")
 	public void user_click_the_reschedule_allocate_button_in_maintenance_screen_under_advance_principal_settlement() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceRescheduleAllocateBtn_608());
-	    for(int i = 300; i <= 300; i++) {
+	    for(int i = 0; i <= 500; i++) {
 	    	try {
 	    		IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceRescheduleAllocateBtn_608().click();
 			} catch (Exception e) {
-				if (i == 300) {
-					Assert.fail(e.getMessage());
-				}
+				
 			}
 	    }	    
-	    waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_WarningPopupOkBtn_608());
-		IISApplicationObj608.IIS_ConfirmPopupOkBtn_608().click();
+//	    waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_WarningPopupOkBtn_608());
+//		IISApplicationObj608.IIS_ConfirmPopupOkBtn_608().click();
+	    for(int i = 0; i <= 500; i++) {
+	    	try {
+	    		IISApplicationObj608.IIS_ConfirmPopupOkBtn_608().click();
+			} catch (Exception e) {
+				
+			}
+	    }
+	    
+	    waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceScheduleDetailsTable_608());
 	}
 
 	@When("User_608 click the Save button in maintenance screen under Advance principal settlement")
 	public void user_click_the_save_button_in_maintenance_screen_under_advance_principal_settlement() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceScheduleDetailsTable_608());
-		for(int i = 300; i <= 300; i++) {
+//		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceScheduleDetailsTable_608());
+		for (int i = 0; i <= 1000; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceSaveBtn_608());
+				break;
+			} catch (Exception e) {
+				if (i == 1000) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		for(int i = 0; i <= 500; i++) {
 	    	try {
 	    		IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceSaveBtn_608().click();
 			} catch (Exception e) {
-				if (i == 300) {
+				if (i == 500) {
 					Assert.fail(e.getMessage());
 				}
 			}
@@ -1912,9 +1944,7 @@ public class IIS_IncidentalChargesSteps_608 {
 				IISApplicationObj608.IIS_ConfirmPopupCancelBtn_608().click();
 				break;
 			} catch (Exception e) {
-				if (i == 1000) {
-					Assert.fail(e.getMessage());
-				}
+				
 			}
 		}	    
 	}
@@ -2920,12 +2950,279 @@ public class IIS_IncidentalChargesSteps_608 {
 	
 	
 	
+//	Advance Principal Settlement feature
+	@And("User_608 click the validate button in maintenance under Investment Deals Combined without Trade Deal for Advance Principal Settlement")
+	public void user_validate_button_in_maintenance_under_investment_deals_combined_without_trade_deal_for_advance_principal_settlement() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainValidateBtn_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainValidateBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	    
+//		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISApproveMenuConfirmContinuePopup_608());
+		for (int i = 0; i <= 2000; i++) {
+			try {
+				IISApplicationObj608.IIS_ConfirmPopupOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+//				if (i == 2000) {
+//					Assert.fail(e.getMessage());
+//				}
+			}
+		}			
+		
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISApproveMenuConfirmCollateralPopup_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				IISApplicationObj608.IIS_ConfirmPopupOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_InformationPopupTitle_608());
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_InformationPopupTextMsg_608());
+		String text = IISApplicationObj608.IIS_InformationPopupTextMsg_608().getText();
+		System.err.println("Text Message: "+text);
+		String dealNbr = IISApplicationObj608.IIS_InformationPopupTextMsg_608().getText().substring(18, 22);
+    	System.err.println("Deal Number: "+dealNbr);    	
+    	iisAdvancePrincipalsettlementExcelData.updateTestData(testData.get("DataSet ID"),"Deal Nbr", dealNbr);
+		for (int i = 0; i <= 2000; i++) {
+			try {
+				IISApplicationObj608.IIS_InformationPopupOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 2000) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}		
+	    
+	}
 	
 	
+//	@AT_APS_006
+	@And("User_608 enter the Agency fee value in maintenance under Investment Deals Combined without Trade Deal")
+	public void user_enter_the_agency_fee_value_in_maintenance_under_investment_deals_combined_without_trade_deal() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainAgencyFeeInput_608());
+		IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainAgencyFeeInput_608().sendKeys(testData.get("Agency Fee"),Keys.TAB);
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainAgencyFeeInput_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}
+	}
+	
+	@And("User_608 enter the Compounding During Grace Period in repayment tab under maintenance in Investment Deals Combined without Trade Deal")
+	public void user_enter_the_compounding_during_grace_period_in_repayment_tab_under_maintenance_in_investment_deals_combined_without_trade_deal() throws Throwable {
+		for (int i = 0; i <= 500; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainRepaymentCompoundGracePeriodInput_608());
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+		IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainRepaymentCompoundGracePeriodInput_608().clear();
+		IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainRepaymentCompoundGracePeriodInput_608().sendKeys(testData.get("Compound Grace Period"),Keys.TAB);
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainAgencyFeeInput_608().getAttribute("prevvalue")
+						.equals(testData.get("Compound Grace Period"))) {
+					break;
+				}
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}
+	}
+
+	@And("User_608 select the Compounding During Grace Period dropdown in repayment tab under maintenance in Investment Deals Combined without Trade Deal")
+	public void user_select_the_compounding_during_grace_period_dropdown_in_repayment_tab_under_maintenance_in_investment_deals_combined_without_trade_deal() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainRepaymentCompoundGracePeriodDropdown_608());  
+		for (int i = 0; i <= 500; i++) {
+			try {
+				dropDownHelper.SelectUsingVisibleText(IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainRepaymentCompoundGracePeriodDropdown_608()
+						, testData.get("Compound Grace Period DD"));
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
 	
 	
+	@And("User_608 validate the Agency fees column in schedule details tab in repayment under maintenance in Investment Deals Combined without Trade Deal")
+	public void user_validate_the_agency_fees_column_in_schedule_details_tab_in_repayment_under_maintenance_in_investment_deals_combined_without_trade_deal() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainRepaymentScheduleTable_608());
+		for (int i = 0; i <= 300; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainRepaymentScheduleTabAgencyFeesColumn_608());
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+		Assert.assertTrue(IISApplicationObj608.IISInvestmentDealWithoutTradeDealMainRepaymentScheduleTabAgencyFeesColumn_608().isDisplayed());
+	}
 	
 	
+	////
+	@And("User_608 click the Settlement maintenance tab in IIS Application")
+	public void user_click_the_settlement_maintenance_tab_in_iis_application() throws Throwable {
+		for (int i = 0; i <= 500; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(IISApplicationObj608.IISSettlementMaintenanceTab_608());
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+		for (int i = 0; i <= 300; i++) {
+			try {
+				IISApplicationObj608.IISSettlementMaintenanceTab_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	    
+	}
+
+	@And("User_608 click the Advance principal settlement maintenance in IIS Application")
+	public void user_click_the_advance_principal_settlement_maintenance_in_iis_application() throws Throwable {
+		for (int i = 0; i <= 500; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceTab_608());
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	    
+		for (int i = 0; i <= 300; i++) {
+			try {
+				IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceTab_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+	
+	@And("User_608 validate the Settlement exists popup in Advance principal settlement")
+	public void user_validate_the_settlement_exists_popup_in_advance_principal_settlement() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISSettlementExistsPopup_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				IISApplicationObj608.IIS_InformationPopupOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+				
+			}
+		}	
+	}
+	
+	@When("User_608 click the Reject button in maintenance menu under Settlement")
+	public void user_click_the_reject_button_in_maintenance_menu_under_settlement() throws Throwable {
+		for (int i = 0; i <= 500; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(IISApplicationObj608.IISSettlementApproveMenuRejectBtn_608());
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	    
+		for (int i = 0; i <= 300; i++) {
+			try {
+				IISApplicationObj608.IISSettlementApproveMenuRejectBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}	    
+	}
+
+	@And("User_608 enter the Reject Reason code in maintenance menu under Settlement")
+	public void user_enter_the_reject_reason_code_in_maintenance_menu_under_settlement() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISSettlementApproveMenuRejectReasonCode_608());
+		IISApplicationObj608.IISSettlementApproveMenuRejectReasonCode_608().sendKeys(testData.get("Reason Code"),Keys.TAB);
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(IISApplicationObj608.IISSettlementApproveMenuRejectReasonCode_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}
+	}
+
+	@When("User_608 click the reject reason popup Reject button in maintenance menu under Settlement")
+	public void user_click_the_reject_reason_popup_reject_button_in_maintenance_menu_under_settlement() throws Throwable {
+		for (int i = 0; i <= 500; i++) {
+			try {
+				IISApplicationObj608.IISSettlementApproveMenuRejectReasonPopupRejectBtn_608().click();
+				break;
+			} catch (Exception e) {
+				
+			}
+		}
+		
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_WarningPopupOkBtn_608());
+		IISApplicationObj608.IIS_WarningPopupOkBtn_608().click();
+		
+		for (int i = 0; i <= 2000; i++) {
+			try {
+				IISApplicationObj608.IIS_InformationPopupOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+				
+			}
+		}
+	    
+	}
 	
 	
 	

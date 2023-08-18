@@ -497,11 +497,17 @@ public class IIS_ApplicationObj_608 {
 	}
 		
 	
-//	Settlement
+//	Settlement	
 	@FindBy(xpath = "//td[text()='Settlement']")
 	private WebElement IIS_settlement_menu;
 	public WebElement IISSettlementMenu_608() {
 		return IIS_settlement_menu;
+	}
+	
+	@FindBy(xpath = "//a[@menuvar='T06MT']")
+	private WebElement IIS_settlement_maintenance_tab;
+	public WebElement IISSettlementMaintenanceTab_608() {
+		return IIS_settlement_maintenance_tab;
 	}
 	
 	@FindBy(xpath = "//a[@id='T06MT']")
@@ -593,6 +599,24 @@ public class IIS_ApplicationObj_608 {
 	public WebElement IISSettlementApproveMenuApproveBtn_608() {
 		return IIS_settlement_approve_menu_approve_btn;
 	}
+	
+	@FindBy(xpath = "//div[@id='settlementToolBar_T06P']/a")
+	private WebElement IIS_settlement_approve_menu_reject_btn;
+	public WebElement IISSettlementApproveMenuRejectBtn_608() {
+		return IIS_settlement_approve_menu_reject_btn;
+	}
+	
+	@FindBy(xpath = "//input[@id='lookuptxt_trsRejectHistoryVO_REASON_CODE_T06P']")
+	private WebElement IIS_settlement_approve_menu_reject_reason_code;
+	public WebElement IISSettlementApproveMenuRejectReasonCode_608() {
+		return IIS_settlement_approve_menu_reject_reason_code;
+	}
+	
+	@FindBy(xpath = "btnInvDealReject_T06P")
+	private WebElement IIS_settlement_approve_menu_reject_reason_popup_reject_btn;
+	public WebElement IISSettlementApproveMenuRejectReasonPopupRejectBtn_608() {
+		return IIS_settlement_approve_menu_reject_reason_popup_reject_btn;
+	}	
 	
 	@FindBy(xpath = "//div[@class='jMsgbox-contentWrap'][contains(text(),'Collaterals')]")
 	private WebElement IIS_approve_menu_confirm_collateral_popup;
@@ -744,6 +768,12 @@ public class IIS_ApplicationObj_608 {
 		return IIS_advance_principal_settlement_module;
 	}
 	
+	@FindBy(xpath = "//a[@menuvar='T036MT']")
+	private WebElement IIS_advance_principal_settlement_maintenance_tab;
+	public WebElement IISAdvancePrincipalSettlementMaintenanceTab_608() {
+		return IIS_advance_principal_settlement_maintenance_tab;
+	}
+	
 	@FindBy(xpath = "//a[@id='T036MT']")
 	private WebElement IIS_advance_principal_settlement_maintenance;
 	public WebElement IISAdvancePrincipalSettlementMaintenance_608() {
@@ -778,6 +808,12 @@ public class IIS_ApplicationObj_608 {
 	private WebElement IIS_advance_principal_settlement_maintenance_save_btn;
 	public WebElement IISAdvancePrincipalSettlementMaintenanceSaveBtn_608() {
 		return IIS_advance_principal_settlement_maintenance_save_btn;
+	}
+	
+	@FindBy(xpath = "//div[contains(text(),'Active Settlement Exists')]")
+	private WebElement IIS_settlement_exists_popup;
+	public WebElement IISSettlementExistsPopup_608() {
+		return IIS_settlement_exists_popup;
 	}
 	
 	@FindBy(xpath = "//a[@id='T036P']")
@@ -974,15 +1010,30 @@ public class IIS_ApplicationObj_608 {
 	}
 	
 	
+//	AT_APS_006
+	@FindBy(xpath = "//input[@id='trsdeal2VO_AGENCY_FEE_PCNT_T022MT']")
+	private WebElement IIS_investment_deal_without_trade_deal_main_agency_fee_input;
+	public WebElement IISInvestmentDealWithoutTradeDealMainAgencyFeeInput_608() {
+		return IIS_investment_deal_without_trade_deal_main_agency_fee_input;
+	} 
 	
+	@FindBy(xpath = "//input[@id='grace_compound_periodicity_nbr_T022MT']")
+	private WebElement IIS_investment_deal_without_trade_deal_main_repayment_compound_grace_period_input;
+	public WebElement IISInvestmentDealWithoutTradeDealMainRepaymentCompoundGracePeriodInput_608(){
+		return IIS_investment_deal_without_trade_deal_main_repayment_compound_grace_period_input;
+	}
 	
+	@FindBy(xpath = "//select[@id='grace_compound_periodicity_T022MT']")
+	private WebElement IIS_investment_deal_without_trade_deal_main_repayment_compound_grace_period_dropdown;
+	public WebElement IISInvestmentDealWithoutTradeDealMainRepaymentCompoundGracePeriodDropdown_608(){
+		return IIS_investment_deal_without_trade_deal_main_repayment_compound_grace_period_dropdown;
+	}
 	
-	
-	
-	
-	
-	
-	
+	@FindBy(xpath = "//th[@id='repaumentPlanScheduleGridTbl_Id_T022MT_AGENCY_FEE_AMT']")
+	private WebElement IIS_investment_deal_without_trade_deal_main_repayment_schedule_tab_agency_fees_col;
+	public WebElement IISInvestmentDealWithoutTradeDealMainRepaymentScheduleTabAgencyFeesColumn_608(){
+		return IIS_investment_deal_without_trade_deal_main_repayment_schedule_tab_agency_fees_col;
+	}
 	
 	
 }
