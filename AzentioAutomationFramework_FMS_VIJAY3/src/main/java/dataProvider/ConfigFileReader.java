@@ -52,6 +52,14 @@ public class ConfigFileReader {
 			throw new RuntimeException("url not specified in the Configuration.properties file.");
 	}
 	
+	public String getMTSApplicationUrl() {
+		String url = properties.getProperty("MTSapplicationUrl");
+		if (url != null)
+			return url;
+		else
+			throw new RuntimeException("url not specified in the Configuration.properties file.");
+	}
+	
 public String getSADSApplicationUrl() {
 		String url = properties.getProperty("SADSapplicationUrl");
 		if (url != null)
@@ -140,6 +148,13 @@ public String getCSMApplicationUrl() {
 	}
 	public String getIISParamApplicationUserType() {
 		String userType = properties.getProperty("IIS_ParamApplication_UserType");
+		if (userType != null)
+			return userType;
+		else
+			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
+	}
+	public String getMTSApplicationUserType() {
+		String userType = properties.getProperty("MTS_Application_UserType");
 		if (userType != null)
 			return userType;
 		else

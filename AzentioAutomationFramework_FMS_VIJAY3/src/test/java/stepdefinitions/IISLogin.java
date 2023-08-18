@@ -242,9 +242,85 @@ public class IISLogin {
 		 */
 	}
 
+
 	
+	public void loginIntomtsApplication2(String userType) {
+		iisLoginTestData = iisLoginExceldata.getTestdata(userType);
+		iisCommonWebElements = new IISCommonWebElements(driver);
+		clicksAndActionHelper = new ClicksAndActionsHelper(driver);
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisUserName());
+		iisCommonWebElements.iisUserName().click();
+		iisCommonWebElements.iisUserName().sendKeys(iisLoginTestData.get("UserName"));
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisPassword());
+		iisCommonWebElements.iisPassword().click();
+		iisCommonWebElements.iisPassword().sendKeys(iisLoginTestData.get("Password"));
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisLoginButon());
+		iisCommonWebElements.iisLoginButon().click();
+		for (int i = 0; i <200; i++) {
+			try {
+				if (iisCommonWebElements.iis_UserAlreadyLoginPopUp().isDisplayed()) {
+					iisCommonWebElements.iis_UserAlreadyLoginYes().click();
+					break;
+				}
+			} catch (Exception e) {
+				
+			}
+		}
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisContinueButton());
+		iisCommonWebElements.iisContinueButton().click();
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisLoginValidation());
+		Assert.assertTrue(iisCommonWebElements.iisLoginValidation().isDisplayed());
+		/*
+		 * waitHelper.waitForElementwithFluentwait(driver,
+		 * iisCommonWebElements.iisLogoutButton());
+		 * clicksAndActionHelper.moveToElement(iisCommonWebElements.iisLogoutButton());
+		 * clicksAndActionHelper.clickOnElement(iisCommonWebElements.iisLogoutButton());
+		 * waitHelper.waitForElementwithFluentwait(driver,
+		 * iisCommonWebElements.iisUserName());
+		 * Assert.assertTrue(iisCommonWebElements.iisUserName().isDisplayed());
+		 * driver.quit();
+		 */
+	}
 
 
+
+	public void loginIntoSadsApplication2(String userType) {
+		iisLoginTestData = iisLoginExceldata.getTestdata(userType);
+		iisCommonWebElements = new IISCommonWebElements(driver);
+		clicksAndActionHelper = new ClicksAndActionsHelper(driver);
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisUserName());
+		iisCommonWebElements.iisUserName().click();
+		iisCommonWebElements.iisUserName().sendKeys(iisLoginTestData.get("UserName"));
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisPassword());
+		iisCommonWebElements.iisPassword().click();
+		iisCommonWebElements.iisPassword().sendKeys(iisLoginTestData.get("Password"));
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisLoginButon());
+		iisCommonWebElements.iisLoginButon().click();
+		for (int i = 0; i <200; i++) {
+			try {
+				if (iisCommonWebElements.iis_UserAlreadyLoginPopUp().isDisplayed()) {
+					iisCommonWebElements.iis_UserAlreadyLoginYes().click();
+					break;
+				}
+			} catch (Exception e) {
+				
+			}
+		}
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisContinueButton());
+		iisCommonWebElements.iisContinueButton().click();
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisLoginValidation());
+		Assert.assertTrue(iisCommonWebElements.iisLoginValidation().isDisplayed());
+		/*
+		 * waitHelper.waitForElementwithFluentwait(driver,
+		 * iisCommonWebElements.iisLogoutButton());
+		 * clicksAndActionHelper.moveToElement(iisCommonWebElements.iisLogoutButton());
+		 * clicksAndActionHelper.clickOnElement(iisCommonWebElements.iisLogoutButton());
+		 * waitHelper.waitForElementwithFluentwait(driver,
+		 * iisCommonWebElements.iisUserName());
+		 * Assert.assertTrue(iisCommonWebElements.iisUserName().isDisplayed());
+		 * driver.quit();
+		 */
+	}
 	
 }
 
