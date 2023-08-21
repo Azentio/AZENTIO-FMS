@@ -1687,6 +1687,12 @@ public class ApplicationForFinancialFacility_482_Obj {
 		return createScheduleButton_WIFAK_482;
 	}
 	
+	@FindBy(xpath="//input[@id='total_amt_WIFT001MT']")
+	private WebElement totalAmountRepayment_WIFAK_482;
+	public WebElement totalAmountRepayment_WIFAK_482() {
+		return totalAmountRepayment_WIFAK_482;
+	}
+	
 
 	
 }

@@ -5,6 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoField;
 import java.time.temporal.TemporalAccessor;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Random;
@@ -13,6 +14,7 @@ import org.jsoup.Connection.Base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import dataProvider.ConfigFileReader;
@@ -2649,7 +2651,28 @@ public class ApplicationForFacility_482 extends BaseClass {
     	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.createScheduleButton_WIFAK_482());
     	  seleniumActions.getClickAndActionsHelper().moveToElement(applicationForFinancialFacilityObj.createScheduleButton_WIFAK_482());
     	  seleniumActions.getClickAndActionsHelper().clickOnElement(applicationForFinancialFacilityObj.createScheduleButton_WIFAK_482());
-    	  Thread.sleep(1000000);
+    	  seleniumActions.getWaitHelper().waitForElementwithFluentwait(driver,applicationForFinancialFacilityObj.totalAmountRepayment_WIFAK_482());
+    	  int TotalAmount = Integer.parseInt(applicationForFinancialFacilityObj.totalAmountRepayment_WIFAK_482().getAttribute("prevvalue").replace(",", "").replace(".000", ""));
+    	  System.err.println(TotalAmount);
+    	  int noOfPayments = Integer.parseInt(testData.get("No of payments"));
+    	  System.err.println(noOfPayments);
+    	  int installAmountCalculated = TotalAmount/noOfPayments;
+    	  System.err.println(installAmountCalculated);
+    	  List<WebElement> InstallmentWebElement = driver.findElements(By.xpath("//td[@tdlabel='Installment Amount']"));
+    	  
+    	  for (int i = 1; i <InstallmentWebElement.size(); i++) {
+    		  int InstallmentAmountSystem = Integer.parseInt(InstallmentWebElement.get(i).getText().replace(",","").replace(".00", ""));
+    		  System.err.println(InstallmentAmountSystem);
+    		   if (installAmountCalculated!=InstallmentAmountSystem) {
+				Assert.fail("installment amount not calculated in the system ");
+			}
+    		 
+    		  if (i==noOfPayments) {
+				break;
+			}
+    		  
+		}
+    	  
           
       }
 

@@ -8,7 +8,7 @@ import io.cucumber.testng.CucumberOptions;
 import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
-@CucumberOptions(features = {"src/test/java/features_IIS"},
+@CucumberOptions(features = {"src/test/java/features_IIS","src/test/java/features"},
                 glue = "stepdefinitions",
                // dryRun = true,
                 //monochrome=false, //to make steps in color
@@ -16,7 +16,7 @@ import utilities.ExtentTestManager;
                            "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                            "rerun:ReRunScenarios/FailedReRun.txt"}
                //dryRun = false //to check compilation errors                                      
-               , tags="@AT_IC_019"
+               , tags="@AT_AFF_051"
 
 )
 public class TestApplication extends AbstractTestNGCucumberTests {
