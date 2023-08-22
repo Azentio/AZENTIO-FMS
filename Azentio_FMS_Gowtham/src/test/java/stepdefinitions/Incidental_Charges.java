@@ -45,6 +45,11 @@ public class Incidental_Charges {
 		testData = IncidentalCharges.getTestdata("DS_AT_IC_005");
     }
 	
+	@And("^User_607 get the test data for test ID AT_AP_025")
+    public void get_the_test_data_for_test_case_AT_AP_025() throws Throwable {
+		testData = IncidentalCharges.getTestdata("DS_AT_AP_025");
+    }
+	
 	@And("^User_607 get the test data for test ID AT_IC_006")
     public void get_the_test_data_for_test_case_AT_IC_006() throws Throwable {
 		testData = IncidentalCharges.getTestdata("DS_AT_IC_006");
@@ -64,6 +69,12 @@ public class Incidental_Charges {
 	public void get_the_test_data_for_test_case_AT_AP_078() throws Throwable {
 		testData = Accrual_Process.getTestdata("DS_AT_AP_078");
     }
+	
+	@And ("User_607 get the test data for test ID AT_APS_007")
+	public void get_the_test_data_for_test_case_AT_APS_007() throws Throwable {
+		testData = Accrual_Process.getTestdata("DS_AT_APS_007");
+    }
+
 	
 	@And ("User_607 get the test data for test ID AT_AP_009")
 	public void get_the_test_data_for_test_case_AT_AP_009() throws Throwable {
@@ -88,6 +99,16 @@ public class Incidental_Charges {
 	@And ("User_607 get the test data for test ID AT_AP_054")
 	public void get_the_test_data_for_test_case_AT_AP_054() throws Throwable {
 		testData = Accrual_Process.getTestdata("DS_AT_AP_054");
+    }
+	
+	@And ("User_607 get the test data for test ID AT_APY_006")
+	public void get_the_test_data_for_test_case_AT_APY_006() throws Throwable {
+		testData = Accrual_Process.getTestdata("DS_AT_APY_006");
+    }
+	
+	@And ("User_607 get the test data for test ID AT_APY_007")
+	public void get_the_test_data_for_test_case_AT_APY_007() throws Throwable {
+		testData = Accrual_Process.getTestdata("DS_AT_APY_007");
     }
 	
 	// Clear cache step
@@ -1247,14 +1268,14 @@ public class Incidental_Charges {
 	public void user_tenure_days_in_mainteance_under_investment_deal_without_trade_deal_menu() {
 		waitHelper.waitForElementwithFluentwait(driver, Incidental_Charges_Obj.Tenure_dateIn_mainteance_Under_investment_deal_without_trade_deal_menu_607());
 		clicksAndActionsHelper.doubleClick(Incidental_Charges_Obj.Tenure_dateIn_mainteance_Under_investment_deal_without_trade_deal_menu_607());
-		Incidental_Charges_Obj.Tenure_dateIn_mainteance_Under_investment_deal_without_trade_deal_menu_607().sendKeys("3",Keys.TAB);
+		Incidental_Charges_Obj.Tenure_dateIn_mainteance_Under_investment_deal_without_trade_deal_menu_607().sendKeys(testData.get("Tenure days"),Keys.TAB);
 	  
 	}
 
 	@Given("User_607 Tenure month In mainteance Under investment deal without trade deal menu")
 	public void user_tenure_month_in_mainteance_under_investment_deal_without_trade_deal_menu() {
 		waitHelper.waitForElementwithFluentwait(driver, Incidental_Charges_Obj.Tenure_monthIn_mainteance_Under_investment_deal_without_trade_deal_menu_607());
-		DropDownHelper.SelectUsingVisibleText(Incidental_Charges_Obj.Tenure_monthIn_mainteance_Under_investment_deal_without_trade_deal_menu_607(), "Months");
+		DropDownHelper.SelectUsingVisibleText(Incidental_Charges_Obj.Tenure_monthIn_mainteance_Under_investment_deal_without_trade_deal_menu_607(), testData.get("Tenure month"));
 	    
 	}
 	
@@ -1262,7 +1283,7 @@ public class Incidental_Charges {
 	public void user_number_of_payments_in_repayment_plan_in_mainteance_under_investment_deal_without_trade_deal_menu() {
 		waitHelper.waitForElementwithFluentwait(driver, Incidental_Charges_Obj.No_Of_Payments_InRepaymentPlan_In_mainteance_Under_investment_deal_without_trade_deal_menu_607());
 		clicksAndActionsHelper.doubleClick(Incidental_Charges_Obj.No_Of_Payments_InRepaymentPlan_In_mainteance_Under_investment_deal_without_trade_deal_menu_607());
-		Incidental_Charges_Obj.No_Of_Payments_InRepaymentPlan_In_mainteance_Under_investment_deal_without_trade_deal_menu_607().sendKeys("3",Keys.TAB);
+		Incidental_Charges_Obj.No_Of_Payments_InRepaymentPlan_In_mainteance_Under_investment_deal_without_trade_deal_menu_607().sendKeys(testData.get("Number Of Payments"),Keys.TAB);
 	}
 	
 	@Given("User_607 Click Cancel on report generated")
@@ -1271,5 +1292,53 @@ public class Incidental_Charges {
 		Incidental_Charges_Obj.IIS_ConfirmPopupCancelBtn_607().click();
 		
 	}
+	
+	//@1222687 
+	
+
+	@Given("User_607 Click Advance Repayment Under Menu Options")
+	public void user_click_advance_repayment_under_menu_options() {
+		waitHelper.waitForElementwithFluentwait(driver, Incidental_Charges_Obj.Click_AdvanceRepayment_Under_MenuOptions_607());
+		Incidental_Charges_Obj.Click_AdvanceRepayment_Under_MenuOptions_607().click();
+	    
+	}
+	
+	@Given("User_607 Click Mainteance Under Advance Repayment")
+	public void user_click_mainteance_under_advance_repayment() {
+		waitHelper.waitForElementwithFluentwait(driver, Incidental_Charges_Obj.Click_Mainteance_Under_AdvanceRepayment());
+		Incidental_Charges_Obj.Click_Mainteance_Under_AdvanceRepayment().click();
+	}
+	
+	@Given("User_607 Enter Deal Nbr In Mainteance Under Advance Repayment")
+	public void user_enter_deal_nbr_in_mainteance_under_advance_repayment() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Incidental_Charges_Obj.Enter_DealNbrIn_Mainteance_Under_AdvanceRepayment_607());
+		Incidental_Charges_Obj.Enter_DealNbrIn_Mainteance_Under_AdvanceRepayment_607().sendKeys(testData.get("Deal No"),Keys.TAB);
+		Thread.sleep(5000);
+	}
+	
+	@Given("User_607 Check generate Repay Plan Based On label In Mainteance Under Advance Repayment")
+	public void user_check_generate_repay_plan_based_on_label_in_mainteance_under_advance_repayment() {
+		waitHelper.waitForElementwithFluentwait(driver, Incidental_Charges_Obj.Check_generate_Repay_Plan_Based_On_label_In_Mainteance_Under_AdvanceRepayment_607());
+		if (!Incidental_Charges_Obj.Check_generate_Repay_Plan_Based_On_label_In_Mainteance_Under_AdvanceRepayment_607().isDisplayed()) {
+			Assert.fail();
+		}
+		
+	}
+	
+	//1357287
+	
+	@Given("User_607 Click Additional Details Tab In Mainteance Under Investment Deals")
+	public void user_click_additional_details_tab_in_mainteance_under_investment_deals() {
+		waitHelper.waitForElementwithFluentwait(driver, Incidental_Charges_Obj.Click_Additional_DetailsTab_InMainteance_Under_Investment_Deals_607());
+		Incidental_Charges_Obj.Click_Additional_DetailsTab_InMainteance_Under_Investment_Deals_607().click();
+	}
+
+	@Given("User_607 Click advance Payment button In Additional Details Tab In Mainteance Under Investment Deals")
+	public void user_click_advance_payment_button_in_additional_details_tab_in_mainteance_under_investment_deals() {
+		waitHelper.waitForElementwithFluentwait(driver, Incidental_Charges_Obj.ClickadvancePaymentBtn_InAdditional_DetailsTab_InMainteance_Under_Investment_Deals_607());
+		Incidental_Charges_Obj.ClickadvancePaymentBtn_InAdditional_DetailsTab_InMainteance_Under_Investment_Deals_607().click();
+	}
+	
+	
 	
 }

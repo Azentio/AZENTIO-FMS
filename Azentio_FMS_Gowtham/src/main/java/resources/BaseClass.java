@@ -21,7 +21,7 @@ public class BaseClass {
 	public WebDriver initializeDriver( )throws IOException {
 	
 	ConfigFileReader configFileReader=new ConfigFileReader();
-	String browserName =configFileReader.getBrowser();
+	String browserName = configFileReader.getBrowser();
 	
 	if(browserName.equalsIgnoreCase("chrome")) {
 		ChromeOptions options = new ChromeOptions();

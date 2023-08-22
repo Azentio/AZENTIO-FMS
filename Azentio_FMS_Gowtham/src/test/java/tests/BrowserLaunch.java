@@ -18,9 +18,26 @@ public static void main(String[] args) throws InterruptedException {
 //	Thread.sleep(5000);
 //	driver.quit();
 	
-	String i = "3333,33.3";
+//	String i = "3333,33.3";
+//	
+//	String str = i.replace(",","");
+//	System.out.println(str);
 	
-	String str = i.replace(",","");
-	System.out.println(str);
+//	int i = 10;
+//	for (int j = 0; j < 100; j++) {
+//		if (i==40) {
+//			break;
+//		}
+//		else {
+//			i=i+1;
+//			System.out.println(i);
+//		}
+//	}
+	
+	
+	
+	
+	
+	
 }
 }

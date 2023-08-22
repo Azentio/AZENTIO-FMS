@@ -9,13 +9,13 @@ import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
 @CucumberOptions(features = {
-		"src/test/java/features/Accrual_Process.feature"}, 
+		"src/test/java/features/Asset_Management.feature"}, 
 		glue = "stepdefinitions",
 		// monochrome=false, //to make steps in color
-		plugin = { "pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+		plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"rerun:ReRunScenarios/FailedReRun.txt" }
 //, dryRun = true //to check compilation errors
-		, tags = "@1376676"
+		, tags = "@1080829"
 )
 public class TestApplication extends AbstractTestNGCucumberTests {
 	/*

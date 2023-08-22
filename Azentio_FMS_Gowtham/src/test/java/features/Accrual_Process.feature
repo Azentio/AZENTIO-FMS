@@ -296,6 +296,168 @@ Feature: Accrual Process
     And User_607 click the ok button in final accrual under iis application menu
     
     
+    @1222687
+    Scenario: BTII210009 - Advance Payment is not working
+    Given navigate to IIS application and login with valid credentials
+    And User_607 get the test data for test ID AT_APY_006
+    And User_607 clear the caches in IIS Application
+    And User_607 click the Investment Deals Combined without Trade Deal menu
+    And User_607 click the Maintenance under Investment Deals Combined without Trade Deal
+    And User_607 enter the Party in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 enter the category in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 enter the product class in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 enter the amount in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 click the Contributor details tab in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 double click the Contributor details row in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 click the Nostro details lookup in contributor tab under maintenance in Investment Deals Combined without Trade Deal
+    And User_607 double click the Nostro account in contributor tab under maintenance in Investment Deals Combined without Trade Deal
+    And User_607 select the maturity account in Contributor tab under maintenance in Investment Deals Combined without Trade Deal
+    And User_607 click the Ok button in contributor tab under maintenance in Investment Deals Combined without Trade Deal
+    And User_607 click the save button in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 click the Repayment plan button in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 click the create schedule button in repayment tab under maintenance in Investment Deals Combined without Trade Deal
+    And User_607 close the repayment tab under maintenance in Investment Deals Combined without Trade Deal
+    And User_607 validate button in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 Update the value in excel
+    And User_607 get the test data for test ID AT_APY_006
+    Then User_607 click the Approve menu under Investment Deals Combined without Trade Deal
+    And User_607 search the deal number in searchgrid under Approve menu in Investment Deals Combined without Trade Deal
+    And User_607 double click the searchgrid row in Approve menu under Investment Deals Combined without Trade Deal
+    When User_607 click the Approve button Approve menu in under Investment Deals Combined without Trade Deal
+    And User_607 Click Advance Repayment Under Menu Options
+    And User_607 Click Mainteance Under Advance Repayment
+    And User_607 Enter Deal Nbr In Mainteance Under Advance Repayment
+    And User_607 Check generate Repay Plan Based On label In Mainteance Under Advance Repayment
+    
+    
+    @1357287
+    Scenario: Validate Modification under Advance payment
+    Given navigate to IIS application and login with valid credentials
+    And User_607 get the test data for test ID AT_APY_007
+    And User_607 clear the caches in IIS Application
+    And User_607 click the Investment Deals Combined without Trade Deal menu
+    And User_607 click the Maintenance under Investment Deals Combined without Trade Deal
+    And User_607 enter the Party in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 enter the category in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 enter the product class in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 enter the amount in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 click the Contributor details tab in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 double click the Contributor details row in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 click the Nostro details lookup in contributor tab under maintenance in Investment Deals Combined without Trade Deal
+    And User_607 double click the Nostro account in contributor tab under maintenance in Investment Deals Combined without Trade Deal
+    And User_607 select the maturity account in Contributor tab under maintenance in Investment Deals Combined without Trade Deal
+    And User_607 click the Ok button in contributor tab under maintenance in Investment Deals Combined without Trade Deal
+    And User_607 Click Additional Details Tab In Mainteance Under Investment Deals 
+    And User_607 Click advance Payment button In Additional Details Tab In Mainteance Under Investment Deals
+   
+    #And User_607 click the save button in maintenance under Investment Deals Combined without Trade Deal
+    #And User_607 click the Repayment plan button in maintenance under Investment Deals Combined without Trade Deal
+    #And User_607 click the create schedule button in repayment tab under maintenance in Investment Deals Combined without Trade Deal
+    #And User_607 close the repayment tab under maintenance in Investment Deals Combined without Trade Deal
+    #And User_607 validate button in maintenance under Investment Deals Combined without Trade Deal
+    #And User_607 Update the value in excel
+    #And User_607 get the test data for test ID AT_APY_007
+    #Then User_607 click the Approve menu under Investment Deals Combined without Trade Deal
+    #And User_607 search the deal number in searchgrid under Approve menu in Investment Deals Combined without Trade Deal
+    #And User_607 double click the searchgrid row in Approve menu under Investment Deals Combined without Trade Deal
+    #When User_607 click the Approve button Approve menu in under Investment Deals Combined without Trade Deal
+    #And User_607 Click Advance Repayment Under Menu Options
+    #And User_607 Click Mainteance Under Advance Repayment
+    #And User_607 Enter Deal Nbr In Mainteance Under Advance Repayment
+    #And User_607 Check generate Repay Plan Based On label In Mainteance Under Advance Repayment
+    
+    @252437
+    Scenario: 12.4 Create a settlement manually on 20/06/2014 to settlement the installment due on 08/06/2014
+    Given navigate to IIS application and login with valid credentials
+    And User_607 get the test data for test ID AT_AP_025
+    And User_607 clear the caches in IIS Application
+    And User_607 click the Investment Deals Combined without Trade Deal menu
+    And User_607 click the Maintenance under Investment Deals Combined without Trade Deal
+    And User_607 enter the Party in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 enter the category in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 enter the product class in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 enter the amount in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 click the Contributor details tab in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 double click the Contributor details row in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 click the Nostro details lookup in contributor tab under maintenance in Investment Deals Combined without Trade Deal
+    And User_607 double click the Nostro account in contributor tab under maintenance in Investment Deals Combined without Trade Deal
+    And User_607 select the maturity account in Contributor tab under maintenance in Investment Deals Combined without Trade Deal
+    And User_607 click the Ok button in contributor tab under maintenance in Investment Deals Combined without Trade Deal
+    And User_607 click the save button in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 click the Repayment plan button in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 click the create schedule button in repayment tab under maintenance in Investment Deals Combined without Trade Deal
+    And User_607 close the repayment tab under maintenance in Investment Deals Combined without Trade Deal
+    And User_607 validate button in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 get the test data for test ID AT_AP_025
+    And User_607 Update the value in excel
+    And User_607 get the test data for test ID AT_AP_025
+    Then User_607 click the Approve menu under Investment Deals Combined without Trade Deal
+    And User_607 search the deal number in searchgrid under Approve menu in Investment Deals Combined without Trade Deal
+    And User_607 double click the searchgrid row in Approve menu under Investment Deals Combined without Trade Deal
+    When User_607 click the Approve button Approve menu in under Investment Deals Combined without Trade Deal
+    #Settlement for deal
+    And User_607 Click Settlement Under Menu
+    And User_607 Click Mainteance Under Settlement
+    And User_607 DealNbr In Settlement Details Tab In Mainteance Under Settlement
+    And User_607 Click Schedule Details Tab In Mainteance Under Settlement
+    And User_607 Get Principal Charge Insurance Amt In Schedule Details In Mainteance Under Settlement
+    And User_607 Click settlement Details tab In Mainteance Under Settlement
+    And User_607 Enter Amount Received From Party In Settlement Details Tab In Mainteance Under Settlement
+    And User_607 Click Schedule Details Tab In Mainteance Under Settlement
+    And User_607 Enter Settlement In Schedule Details tab In Mainteance Under Settlement
+    And User_607 Click Save button In Mainteance Under Settlement
+    And User_607 Click ok on save successfully
+    And User_607 Click approve Under Settlement
+    And User_607 Search Deal In Approve Under Settlement
+    And User_607 Select Record In Approve Under Settlement
+    And User_607 Click Approve button In Approve Under Settlement
+    And User_607 Click ok Confirm popup
+    And User_607 Click ok Confirm popup
+    And User_607 Click ok on save successfully
+    
+    
+    @258494
+    Scenario: 1.2 Run the accrual from Periodical process on 31/03/2014 during the grace period
+    Given navigate to IIS application and login with valid credentials
+    And User_607 get the test data for test ID AT_APS_007
+    And User_607 clear the caches in IIS Application
+    And User_607 click the Investment Deals Combined without Trade Deal menu
+    And User_607 click the Maintenance under Investment Deals Combined without Trade Deal
+    And User_607 enter the Party in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 enter the category in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 enter the product class in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 enter the amount in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 click the Contributor details tab in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 double click the Contributor details row in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 click the Nostro details lookup in contributor tab under maintenance in Investment Deals Combined without Trade Deal
+    And User_607 double click the Nostro account in contributor tab under maintenance in Investment Deals Combined without Trade Deal
+    And User_607 select the maturity account in Contributor tab under maintenance in Investment Deals Combined without Trade Deal
+    And User_607 click the Ok button in contributor tab under maintenance in Investment Deals Combined without Trade Deal
+    And User_607 click the save button in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 click the Repayment plan button in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 click the create schedule button in repayment tab under maintenance in Investment Deals Combined without Trade Deal
+    And User_607 close the repayment tab under maintenance in Investment Deals Combined without Trade Deal
+    And User_607 validate button in maintenance under Investment Deals Combined without Trade Deal
+    And User_607 Update the value in excel
+    And User_607 get the test data for test ID AT_APS_007
+    Then User_607 click the Approve menu under Investment Deals Combined without Trade Deal
+    And User_607 search the deal number in searchgrid under Approve menu in Investment Deals Combined without Trade Deal
+    And User_607 double click the searchgrid row in Approve menu under Investment Deals Combined without Trade Deal
+    When User_607 click the Approve button Approve menu in under Investment Deals Combined without Trade Deal
+    
+    And User_607 click the periodical processing menu in Menu option under iis application menu
+    And User_607 click the post accruals menu in periodical processing menu under iis application menu
+    And User_607 click the final accrual menu in post accrual menu under iis application menu
+    And User_607 click the specific deal flag checkbox in final accrual under iis application menu
+    And User_607 enter the deal number in final accrual under iis application menu
+    And User_607 enter the from date in final accrual under iis application menu
+    And User_607 enter the to date in final accrual under iis application menu
+    And User_607 click the ok button in final accrual under iis application menu
+    
+    
+    
+    
+    
     
     
     

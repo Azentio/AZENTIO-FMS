@@ -825,18 +825,86 @@ public class Incidental_Charges_Obj {
 		
 		
 		
+		//@1222687
+		
+		@FindBy(xpath = "//td[text()='Advance Repayment']")
+		private WebElement Click_AdvanceRepayment_Under_MenuOptions;
+		public WebElement Click_AdvanceRepayment_Under_MenuOptions_607() {
+			return Click_AdvanceRepayment_Under_MenuOptions;
+		}
 		
 		
+		@FindBy(xpath = "//*[@id='T049MT']")
+		private WebElement Click_Mainteance_Under_AdvanceRepayment;
+		public WebElement Click_Mainteance_Under_AdvanceRepayment() {
+			return Click_Mainteance_Under_AdvanceRepayment;
+		}
 		
+		@FindBy(xpath = "//*[@id='lookuptxt_dealNo_T049MT']")
+		private WebElement Enter_DealNbrIn_Mainteance_Under_AdvanceRepayment;
+		public WebElement Enter_DealNbrIn_Mainteance_Under_AdvanceRepayment_607() {
+			return Enter_DealNbrIn_Mainteance_Under_AdvanceRepayment;
+		}
 		
-		
-		
-		
+		@FindBy(xpath = "//*[@id='generate_Repay_Plan_Based_On_label']")
+		private WebElement Check_generate_Repay_Plan_Based_On_label_In_Mainteance_Under_AdvanceRepayment;
+		public WebElement Check_generate_Repay_Plan_Based_On_label_In_Mainteance_Under_AdvanceRepayment_607() {
+			return Check_generate_Repay_Plan_Based_On_label_In_Mainteance_Under_AdvanceRepayment;
+		}
 	    
-	    
-	    
-	    
-	    
-	    
+	    //1357287
+		
+		@FindBy(xpath = "//td[text()='Investment Deals']")
+		private WebElement Click_Investment_Deals_MenuOptions;
+		public WebElement Click_Investment_Deals_MenuOptions_607() {
+			return Click_Investment_Deals_MenuOptions;
+		}
+		
+		@FindBy(xpath = "//*[@id='T02MT']")
+		private WebElement Click_Mainteance_Under_Investment_Deals;
+		public WebElement Click_Mainteance_Under_Investment_Deals_607() {
+			return Click_Mainteance_Under_Investment_Deals;
+		}
+		
+		@FindBy(xpath = "//*[@id='investmentDealsMainTabs3_T022MT']")
+		private WebElement Click_Additional_DetailsTab_InMainteance_Under_Investment_Deals;
+		public WebElement Click_Additional_DetailsTab_InMainteance_Under_Investment_Deals_607() {
+			return Click_Additional_DetailsTab_InMainteance_Under_Investment_Deals;
+		}
+		
+		@FindBy(xpath = "//*[@id='advancePaymentBtn_T022MT']")
+		private WebElement ClickadvancePaymentBtn_InAdditional_DetailsTab_InMainteance_Under_Investment_Deals;
+		public WebElement ClickadvancePaymentBtn_InAdditional_DetailsTab_InMainteance_Under_Investment_Deals_607() {
+			return ClickadvancePaymentBtn_InAdditional_DetailsTab_InMainteance_Under_Investment_Deals;
+		}
+		
+		@FindBy(xpath = "//*[@id='trsdealAdvancePaymentVO_payment_type_T022MT']")
+		private WebElement PaymentTypeDropDown_InAdvancePayment_InAdditional_DetailsTab_InMainteance_Under_Investment_Deals;
+		public WebElement PaymentTypeDropDown_InAdvancePayment_InAdditional_DetailsTab_InMainteance_Under_Investment_Deals_607() {
+			return PaymentTypeDropDown_InAdvancePayment_InAdditional_DetailsTab_InMainteance_Under_Investment_Deals;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	    
 }

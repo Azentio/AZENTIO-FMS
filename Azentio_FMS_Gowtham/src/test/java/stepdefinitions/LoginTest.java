@@ -67,6 +67,12 @@ public class LoginTest extends BaseClass {
 		driver.get(configFileReader.getIIS_ApplicationURL());
 		iis_login.loginIntoIISApplication(configFileReader.getIISApplicationUserType());
 	}
+	
+	@Given("navigate to IIS param application and login with valid credentials")
+	public void navigate_to_IIS_param_application_and_login_with_valid_credentials() {
+		driver.get(configFileReader.getIISparam_ApplicationURL());
+		iis_login.loginIntoIISApplication(configFileReader.getIISparamApplicationUserType());
+	}
 
 
 }

@@ -119,23 +119,31 @@ public String getCSMApplicationUrl() {
 	}
 	
 	public String getITRS_ApplicationURL() {
-		String userType = properties.getProperty("ITRSapplicationUrl");
-		if (userType != null)
-			return userType;
+		String url = properties.getProperty("ITRSapplicationUrl");
+		if (url != null)
+			return url;
 		else
 			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
 	}
 	public String getMTS_ApplicationURL() {
-		String userType = properties.getProperty("MTSapplicationUrl");
-		if (userType != null)
-			return userType;
+		String url = properties.getProperty("MTSapplicationUrl");
+		if (url != null)
+			return url;
 		else
 			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
 	}
 	public String getIIS_ApplicationURL() {
-		String userType = properties.getProperty("IISapplicationUrl");
-		if (userType != null)
-			return userType;
+		String url = properties.getProperty("IISapplicationUrl");
+		if (url != null)
+			return url;
+		else
+			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
+	}
+	
+	public String getIISparam_ApplicationURL() {
+		String url = properties.getProperty("IISparamapplicationUrl");
+		if (url != null)
+			return url;
 		else
 			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
 	}
@@ -190,6 +198,13 @@ public String getCSMApplicationUrl() {
 			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
 	}
 
+	public String getIISparamApplicationUserType() {
+		String userType = properties.getProperty("IISparam_Application_UserType");
+		if (userType != null)
+			return userType;
+		else
+			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
+	}
 	
 	
 	}
