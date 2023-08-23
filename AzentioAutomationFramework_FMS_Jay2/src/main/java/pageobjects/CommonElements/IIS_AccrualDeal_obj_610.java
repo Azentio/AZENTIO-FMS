@@ -817,7 +817,110 @@ public class IIS_AccrualDeal_obj_610 {
 		 //----------------MTS POM end------ Parameters ---------------------------
 		
 		
+		//---------IIS Params ----------------------------------------
+		
+		@FindBy(xpath = "//td[text()='Parameters']")
+		private WebElement IIS_parameter_feature;
+		public WebElement IISParameterFeature_610() {
+			return IIS_parameter_feature;
+		}
+		
+		@FindBy(xpath = "//td[text()='Product Class']")
+		private WebElement IIS_parameter_product_class_module;
+		public WebElement IISParameterProductClassModule_610() {
+			return IIS_parameter_product_class_module;
+		}
+		
+		@FindBy(xpath = "//a[@id='M003MT']")
+		private WebElement IIS_product_class_maintanance;
+		public WebElement IISProductClassMaintanance_610() {
+			return IIS_product_class_maintanance;
+		}
+	        
+	        @FindBy(xpath = "//a[@id='infoBarSearchButton_M003MT']")
+		private WebElement IIS_product_class_maintenance_search_btn;
+		public WebElement IISProductClassMaintenanceSearchBtn_610() {
+			return IIS_product_class_maintenance_search_btn;
+		}
+		
+		@FindBy(xpath = "//input[@id='iISProductClassListGridTbl_Id_M003MT_gs_trsctrlclassVO.CLASS']")
+		private WebElement IIS_product_class_main_searchgrid_class_input;
+		public WebElement IISProductClassMainSearchgridClassInput_610() {
+			return IIS_product_class_main_searchgrid_class_input;
+		}
+		
+		@FindBy(xpath = "//td[@id='td_iISProductClassListGridTbl_Id_M003MT_1_trsctrlclassVO.CLASS']")
+		private WebElement IIS_product_class_main_searchgrid_row;
+		public WebElement IISProductClassMainSearchgridRow_610() {
+			return IIS_product_class_main_searchgrid_row;
+		}
 		
 		
+		@FindBy(xpath = "//td[contains(@id,'td_iISProductClassListGridTbl_Id_M003MT') and @title='0160']")
+		private WebElement IIS_product_class_main_search_result_row;
+		public WebElement IISProductClassMainSearchResultRow_610() {
+			return IIS_product_class_main_search_result_row;
+		}
+		
+		@FindBy(xpath = "//input[@id='iisProductClassCategoryNameEng_M003MT']")
+		private WebElement IIS_product_class_maintenance_category_name;
+		public WebElement IISProductClassMaintenanceCategoryName_610() {
+			return IIS_product_class_maintenance_category_name;
+		}
+		
+		@FindBy(xpath = "//li[@id='iisProductClassAdditionalInformation_M003MT']")
+		private WebElement IIS_product_class_main_additional_information_tab;
+		public WebElement IISProductClassMainAdditionalInformationTab_610() {
+			return IIS_product_class_main_additional_information_tab;
+		}	
+		
+		@FindBy(xpath = "//button[@id='iISProductClassMaint_save_M003MT']")
+		private WebElement IIS_product_class_maintenance_save_btn;
+		public WebElement IISProductClassMaintenanceSaveBtn_610() {
+			return IIS_product_class_maintenance_save_btn;
+		}
+		
+		@FindBy(xpath = "//input[@id='iisProductClassDefaultAssetsFromFmsYN_M003MT']")
+		private WebElement IIS_product_class_main_additional_info_tab_default_asset_from_fms_checkbox;
+		public WebElement IISProductClassMainAdditionalInfoTabDefaultAssetFromFMSCheckbox_610() {
+			return IIS_product_class_main_additional_info_tab_default_asset_from_fms_checkbox;
+		}
+		
+
+		//------------------Set Fiscal implication 
+		
+		@FindBy(xpath = "//label[@id='iisProductClassMaintFormId_M003MT_set_fiscal_implication_key']")
+		private WebElement setFiscalImplicationKey_InGeneralInformation_610;
+		public WebElement setFiscalImplicationKey_InGeneralInformation_610() {
+			return setFiscalImplicationKey_InGeneralInformation_610;
+		}
+		
+		@FindBy(xpath = "//span[@id='ui-dialog-title-FiscalImplicationDiv_M003MT']")
+		private WebElement FiscalImplication_Popup_UndersetFiscalImplication_610;
+		public WebElement FiscalImplication_Popup_UndersetFiscalImplication_610() {
+			return FiscalImplication_Popup_UndersetFiscalImplication_610;
+		}
+		
+		@FindBy(xpath = "//b[text()='Asset Management Screen']")
+		private WebElement AssetManagementScreen_UndersetFiscalImplication_610;
+		public WebElement AssetManagementScreen_UndersetFiscalImplication_610() {
+			return AssetManagementScreen_UndersetFiscalImplication_610;
+		}
+		
+		//---------------------Asset Repossession Screen
+		
+		
+		@FindBy(xpath = "//legend[@id=\"legend\"]/b[text()='Asset Repossession Screen']")
+		private WebElement AssetRepossessionScreen_UndersetFiscalImplication_610;
+		public WebElement AssetRepossessionScreen_UndersetFiscalImplication_610() {
+			return AssetRepossessionScreen_UndersetFiscalImplication_610;
+		}
+		
+//		@FindBy(xpath = "//legend[@id=\"legend\"]/b[text()='Asset Repossession Screen']")
+//		private WebElement AssetRepossessionScreen_UndersetFiscalImplication_610;
+//		public WebElement AssetRepossessionScreen_UndersetFiscalImplication_610() {
+//			return AssetRepossessionScreen_UndersetFiscalImplication_610;
+//		}
+//		
 		
 }

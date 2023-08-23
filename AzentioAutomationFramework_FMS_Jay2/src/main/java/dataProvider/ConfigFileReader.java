@@ -162,7 +162,7 @@ public String getFMSparamsUrl() {
 			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
 	}
 	
-	//------------
+	//------------ IIS URL ---------------------
 	
 	public String getIISparamsUrl() {
 		String url = properties.getProperty("IISparamsUrl");

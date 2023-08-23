@@ -8,7 +8,7 @@ import io.cucumber.testng.CucumberOptions;
 import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
-@CucumberOptions(features = {"src/test/java/feature_IIS/AccrualDeal_610.feature"},
+@CucumberOptions(features = {"src/test/java/feature_IIS/IIS_Asset_Management_610.feature"},
                 glue = "stepdefinitions",
                 
                 //monochrome=false, //to make steps in color
@@ -17,10 +17,8 @@ import utilities.ExtentTestManager;
                            "rerun:ReRunScenarios/FailedReRun.txt"}
           //   ,  dryRun = true //to check compilation errors                                      													
             //   , tags="@127788" 
-            		,   tags="@128357"
-            				+ ""
-            				+ ""
-
+            		,   tags="@1077666"
+            				
 )
 public class TestApplication extends AbstractTestNGCucumberTests {
 	/*.

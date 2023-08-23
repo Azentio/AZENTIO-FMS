@@ -38,7 +38,11 @@ public class IIS_AccrualDeal_Steps_610 {
 	
 	String path = System.getProperty("user.dir") +"\\TestData\\IISTestData.xlsx";
 	ExcelData iisIncidentalChargesExcelData  = new ExcelData(path,"Accrual_Deal","DataSet ID");
-	ExcelData accuraldealExcelData  = new ExcelData(path,"IIS_AccuralDeal_610","DataSet ID");
+	
+	ExcelData accuraldealExcelData  = new ExcelData(path,"IIS_Accrual_Deal_610","DataSet ID");
+	ExcelData accuralprocessExcelData  = new ExcelData(path,"IIS_Accrual_Process_610","DataSet ID");
+	//ExcelData assetmanagementExcelData  = new ExcelData(path,"IIS_Asset_Management_610","DataSet ID");
+	ExcelData assetManagementExcelData  = new ExcelData(path,"IIS_Asset_Management_610","DataSet ID");
 	
 	Map<String, String> testData;
 	
@@ -54,9 +58,20 @@ public class IIS_AccrualDeal_Steps_610 {
 		
 //		@AT_AD_003
 		@And("^User_610 get the test data for test case AT_AD_003$")
-	    public void get_the_test_data_for_test_case_AT_AD_003() throws Throwable {
+	    public void User_610_get_the_test_data_for_test_case_AT_AD_003() throws Throwable {
 			testData = accuraldealExcelData.getTestdata("DS_AT_AD_003");
 	    }
+		
+		//-------------------Asset Management-------------------
+		
+
+		
+		@And("^User_610 get the test data set id for AT_AM_002$")
+	    public void user_610_get_the_test_data_set_id_for_AT_AM_002() throws Throwable {
+	    	testData = assetManagementExcelData.getTestdata("AT_AM_002_D1");
+	    }
+		
+		
 		
 		
 		// Clear cache step
@@ -1538,4 +1553,203 @@ public class IIS_AccrualDeal_Steps_610 {
 		}
 		
 //		-----------------------------------	MTS Application  end ----------------------------------------
+		
+		
+//            ------------------------------IIS Prams  @408271 ----------------------------------------------------------
+		
+		
+		
+		@And("^User_610 clicks on the parameter feature in IIS Param application$")
+		public void user_clicks_on_the_parameter_feature_in_iis_param_application() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISParameterFeature_610());
+			IIS_AccrualDeal_obj_610.IISParameterFeature_610().click();
+		}
+
+		@And("^User_610 clicks on the product class module under parameter feature$")
+		public void user_clicks_on_the_product_class_module_under_parameter_feature() throws Throwable {
+			for (int i = 0; i <= 300; i++) {
+				try {
+					javaScriptHelper.scrollIntoView(IIS_AccrualDeal_obj_610.IISParameterProductClassModule_610());
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISParameterProductClassModule_610());
+			for (int i = 0; i <= 300; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.IISParameterProductClassModule_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}		
+		}
+
+		@And("^User_610 clicks on the maintenance menu under product class module$")
+		public void user_clicks_on_the_maintenance_menu_under_product_class_module() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISProductClassMaintanance_610());
+			IIS_AccrualDeal_obj_610.IISProductClassMaintanance_610().click();
+		}
+
+	@And("^User_610 clicks on the search button in maintenance screen under product class$")
+		public void user_clicks_on_the_search_button_in_maintenance_screen_under_product_class() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISProductClassMaintenanceSearchBtn_610());
+			for (int i = 0; i <= 300; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.IISProductClassMaintenanceSearchBtn_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 300) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}	
+		}
+		
+		@And("^User_610 enter the product class code in searchgrid under maintenance in product class$")
+		public void user_enter_the_product_class_code_in_searchgrid_under_maintenance_in_product_class() throws Throwable {			
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISProductClassMainSearchgridRow_610());
+			System.err.println(testData.get("Product Class"));
+			//clicksAndActionsHelper.clickOnElement(IIS_AccrualDeal_obj_610.IISProductClassMainSearchgridClassInput_610());
+//			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISProductClassMainSearchgridClassInput_610());
+			for (int i = 0; i <= 500; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.IISProductClassMainSearchgridClassInput_610().sendKeys(testData.get("Product Class"));
+					IIS_AccrualDeal_obj_610.IISProductClassMainSearchgridClassInput_610().sendKeys(Keys.ENTER);
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			
+		}
+		
+		@And("^User_610 double click the searchgrid row in maintenance under product class$")
+		public void user_double_click_the_searchgrid_row_in_maintenance_under_product_class() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISProductClassMainSearchResultRow_610());
+			for (int i = 0; i < 500; i++) {
+				try {
+					clicksAndActionsHelper.doubleClick(IIS_AccrualDeal_obj_610.IISProductClassMainSearchResultRow_610());
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			
+			for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(!(IIS_AccrualDeal_obj_610.IISProductClassMaintenanceCategoryName_610().getAttribute("prevvalue").isBlank())) {
+						break;
+					}
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}		
+			
+		}
+		
+		@And("^User_610 clicks on the additional information tab in maintenance screen under product class$")
+		public void user_clicks_on_the_additional_information_tab_in_maitanance_screen_under_product_class() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISProductClassMainAdditionalInformationTab_610());
+			for (int i = 0; i < 500; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.IISProductClassMainAdditionalInformationTab_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+		
+		@And("User_610 validate the default assets from fms flag is available in maintenance under product class")
+		public void user_validate_the_default_assets_from_fms_flag_is_available_in_maintenance_under_product_class() throws Throwable {
+			for (int i = 0; i <= 500; i++) {
+				try {
+					javaScriptHelper.scrollIntoView(IIS_AccrualDeal_obj_610.IISProductClassMainAdditionalInfoTabDefaultAssetFromFMSCheckbox_610());
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISProductClassMainAdditionalInfoTabDefaultAssetFromFMSCheckbox_610());
+			WebElement defaultAssetFromFMSFlag = IIS_AccrualDeal_obj_610.IISProductClassMainAdditionalInfoTabDefaultAssetFromFMSCheckbox_610();
+			defaultAssetFromFMSFlag.click();
+			Assert.assertTrue(defaultAssetFromFMSFlag.isDisplayed());
+			if(defaultAssetFromFMSFlag.isSelected()) {
+				defaultAssetFromFMSFlag.click();
+			}
+		}
+		
+		@When("User_610 clicks the Save button in maintenance menu under product class module")
+		public void user_clicks_the_save_button_in_maintenance_menu_under_product_class_module() throws Throwable {
+			for (int i = 0; i <= 500; i++) {
+				try {
+					javaScriptHelper.scrollIntoView(IIS_AccrualDeal_obj_610.IISProductClassMaintenanceSaveBtn_610());
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IISProductClassMaintenanceSaveBtn_610());
+			for (int i = 0; i < 500; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.IISProductClassMaintenanceSaveBtn_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.IIS_WarningPopupOkBtn_610());
+			IIS_AccrualDeal_obj_610.IIS_WarningPopupOkBtn_610().click();
+			
+			for (int i = 0; i <= 2000; i++) {
+				try {
+					IIS_AccrualDeal_obj_610.IIS_InformationPopupOkBtn_610().click();
+					break;
+				} catch (Exception e) {
+					if (i == 2000) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+		
+		//--------------------------------Set Fiscal implication under product class
+		
+		@And("User_{int} clicks on the Set Fiscal implication  in Fiscal Implication screen under product class")
+		public void user_clicks_on_the_set_fiscal_implication_in_fiscal_implication_screen_under_product_class(Integer int1) {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.setFiscalImplicationKey_InGeneralInformation_610());
+			javaScriptHelper.scrollIntoView(IIS_AccrualDeal_obj_610.setFiscalImplicationKey_InGeneralInformation_610());
+			IIS_AccrualDeal_obj_610.setFiscalImplicationKey_InGeneralInformation_610().click();
+		}
+
+		@And("User_{int} validate the Asset Management Screen is available in maintenance under Set Fiscal implication")
+		public void user_validate_the_asset_management_screen_is_available_in_maintenance_under_set_fiscal_implication(Integer int1) throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.FiscalImplication_Popup_UndersetFiscalImplication_610());
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.AssetManagementScreen_UndersetFiscalImplication_610());
+			javaScriptHelper.scrollIntoView(IIS_AccrualDeal_obj_610.AssetManagementScreen_UndersetFiscalImplication_610());
+			Assert.assertEquals(true, IIS_AccrualDeal_obj_610.AssetManagementScreen_UndersetFiscalImplication_610().isDisplayed());
+			Thread.sleep(3000);
+		//	IIS_AccrualDeal_obj_610.setFiscalImplicationKey_InGeneralInformation_610().click();
+		}
 }
