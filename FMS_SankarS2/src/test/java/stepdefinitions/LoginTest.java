@@ -75,6 +75,14 @@ public class LoginTest extends BaseClass {
 			iisLogin.loginIntoIISApplication(configFileReader.getIISApplicationUserType());
 	    }
 		
+		@Given("^User2 navigate to IIS application and login with valid credentials$")
+	    public void user2_navigate_to_iis_application_and_login_with_valid_credentials() throws Throwable {
+			driver.get(configFileReader.getIISApplicationUrl());
+			iisLogin.loginIntoIISApplication2(configFileReader.getIISApplicationUserType2());
+	    }
+		
+		
+		
 		
 //		MTS_Application
 		@Given("^navigate to MTS application and login with valid credentials$")

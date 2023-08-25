@@ -345,7 +345,18 @@ And User_608 enter the batch run date in batch run menu under Batch Process
 When User_608 click the Run button in  batch run menu under Batch Process
 
 
+@AT_AP_035
+Scenario: Run the profit accrual on 02/06/2014 from periodical process
 
+Given navigate to IIS application and login with valid credentials
+And User_608 get the test data for test case AT_AP_035
+And User_608 clear the caches in IIS Application
+And User_608 click the Periodical Processing module in IIS Application
+And User_608 click the Post Accrual Menu under Periodical Processing
+And User_608 click the Final Accruals under Post Accrual in Periodical Processing
+And User_608 check the Specific deal flag under Final Accruals in Post Accrual
+And User_608 enter the Deal number in Final Accruals under Post Accrual
+When User_608 click the OK button in Final Accruals under Post Accrual
 
 
 

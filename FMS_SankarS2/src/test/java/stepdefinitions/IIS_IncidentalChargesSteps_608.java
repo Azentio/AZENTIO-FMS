@@ -44,6 +44,9 @@ public class IIS_IncidentalChargesSteps_608 {
 	ExcelData iisAccrualProcessExcelData  = new ExcelData(path,"AccrualProcessTestData","DataSet ID");
 	ExcelData MTSEODExcelData  = new ExcelData(path,"MTSTestData","DataSet ID");
 	ExcelData iisAdvancePrincipalsettlementExcelData  = new ExcelData(path,"AdvancePrincipalSettlement","DataSet ID");
+	ExcelData iisAssetManagementExcelData  = new ExcelData(path,"AssetManagement","DataSet ID");
+	ExcelData iisAlertFeatureExcelData  = new ExcelData(path,"AlertTestData","DataSet ID");
+	ExcelData iisPenaltyFeatureExcelData  = new ExcelData(path,"PenaltyTestData","DataSet ID");
 	
 	Map<String, String> testExecutionData;
 	Map<String, String> testData;
@@ -136,6 +139,12 @@ public class IIS_IncidentalChargesSteps_608 {
 		testData = MTSEODExcelData.getTestdata("DS_AT_AP_046");
     }
 	
+//	@AT_AP_035
+	@And("^User_608 get the test data for test case AT_AP_035$")
+    public void get_the_test_data_for_test_case_AT_AP_035() throws Throwable {
+		testData = iisAccrualProcessExcelData.getTestdata("DS_AT_AP_035");
+    }
+	
 	
 //	Advance Principal Settlement feature
 //	@AT_APS_004
@@ -154,6 +163,42 @@ public class IIS_IncidentalChargesSteps_608 {
 	@And("^User_608 get the test data for test case AT_APS_006$")
     public void get_the_test_data_for_test_case_AT_APS_006() throws Throwable {
 		testData = iisAdvancePrincipalsettlementExcelData.getTestdata("DS_AT_APS_006");
+    }
+	
+//	@AT_APS_016
+	@And("^User_608 get the test data for test case AT_APS_016$")
+    public void get_the_test_data_for_test_case_AT_APS_016() throws Throwable {
+		testData = iisAdvancePrincipalsettlementExcelData.getTestdata("DS_AT_APS_016");
+    }
+	
+//	@AT_APS_017
+	@And("^User_608 get the test data for test case AT_APS_017$")
+    public void get_the_test_data_for_test_case_AT_APS_017() throws Throwable {
+		testData = iisAdvancePrincipalsettlementExcelData.getTestdata("DS_AT_APS_017");
+    }
+	
+	
+	
+//	Asset Management Feature
+//	@AT_AM_001
+	@And("^User_608 get the test data for test case AT_AM_001$")
+    public void get_the_test_data_for_test_case_AT_AM_001() throws Throwable {
+		testData = iisAssetManagementExcelData.getTestdata("DS_AT_AM_001");
+    }
+	
+	
+//	Alert Feature
+//	@AT_AL_003
+	@And("^User_608 get the test data for test case AT_AL_003$")
+    public void get_the_test_data_for_test_case_AT_AL_003() throws Throwable {
+		testData = iisAlertFeatureExcelData.getTestdata("DS_AT_AL_003");
+    }
+	
+//	Penalty Feature
+//	@AT_PNLT_001
+	@And("^User_608 get the test data for test case AT_PNLT_001$")
+    public void get_the_test_data_for_test_case_AT_PNLT_001() throws Throwable {
+		testData = iisPenaltyFeatureExcelData.getTestdata("DS_AT_PNLT_001");
     }
 	
 	
@@ -2376,9 +2421,9 @@ public class IIS_IncidentalChargesSteps_608 {
 					Assert.fail(e.getMessage());
 				}
 			}
-    	}		
-		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_ConfirmPopupOkBtn_608());
-		IISApplicationObj608.IIS_ConfirmPopupOkBtn_608().click();	
+    	}	
+//		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_ConfirmPopupOkBtn_608());
+//		IISApplicationObj608.IIS_ConfirmPopupOkBtn_608().click();	
 	}
 	
 	@And("User_608 select the Tenure dropdown as Years in maintenance under Investment Deals Combined without Trade Deal")
@@ -3201,12 +3246,14 @@ public class IIS_IncidentalChargesSteps_608 {
 
 	@When("User_608 click the reject reason popup Reject button in maintenance menu under Settlement")
 	public void user_click_the_reject_reason_popup_reject_button_in_maintenance_menu_under_settlement() throws Throwable {
-		for (int i = 0; i <= 500; i++) {
+		for (int i = 0; i <= 1000; i++) {
 			try {
 				IISApplicationObj608.IISSettlementApproveMenuRejectReasonPopupRejectBtn_608().click();
 				break;
 			} catch (Exception e) {
-				
+				if (i == 1000) {
+					Assert.fail(e.getMessage());
+				}
 			}
 		}
 		
@@ -3218,11 +3265,432 @@ public class IIS_IncidentalChargesSteps_608 {
 				IISApplicationObj608.IIS_InformationPopupOkBtn_608().click();
 				break;
 			} catch (Exception e) {
-				
+				if (i == 2000) {
+					Assert.fail(e.getMessage());
+				}
 			}
 		}
 	    
 	}
+	
+	
+//	@AT_APS_016
+	@And("User_608 validate the Show Schedule button is available in Advance principal settlement maintenance screen")
+	public void user_validate_the_show_schedule_button_is_available_in_advance_principal_settlement_maintenance_screen() throws Throwable {
+		for (int i = 0; i <= 500; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceShowScheduleBtn_608());
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}		
+		Assert.assertTrue(IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceShowScheduleBtn_608().isDisplayed());	    
+	}
+
+	@And("User_608 click the Schedule details tab in Advance principal settlement maintenance screen")
+	public void user_click_the_schedule_details_tab_in_advance_principal_settlement_maintenance_screen() throws Throwable {
+		for (int i = 0; i <= 500; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceScheduleDetailsTab_608());
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+		for (int i = 0; i <= 300; i++) {
+			try {
+				IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceScheduleDetailsTab_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	    
+	}
+
+	@And("User_608 enter the settlement amount under Schedule details tab in Advance principal settlement maintenance")
+	public void user_enter_the_settlement_amount_under_schedule_details_tab_in_advance_principal_settlement_maintenance() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceScheduleDetailsTableRow_608());
+		IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceScheduleDetailsTableRow_608().click();
+		for (int i = 0; i <= 1000; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceScheduleDetailsSettlementInput_608());
+				break;
+			} catch (Exception e) {
+				if (i == 1000) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceScheduleDetailsSettlementInput_608());
+		
+		IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceScheduleDetailsSettlementInput_608().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
+		IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceScheduleDetailsSettlementInput_608().sendKeys(testData.get("Settlement Amt"),Keys.TAB);
+		for (int i = 0; i < 500; i++) {
+			try {
+				IISApplicationObj608.IISAdvancePrincipalSettlementMaintenanceScheduleDetailsSettlementInput_608().getAttribute("prevvalue")
+				.equals(testData.get("Settlement Amt"));				
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+	}
+		
+	
+//	@AT_AM_001
+	@And("^User_608 clicks on the search button in maintenance screen under product class$")
+	public void user_clicks_on_the_search_button_in_maintenance_screen_under_product_class() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISProductClassMaintenanceSearchBtn_608());
+		for (int i = 0; i <= 300; i++) {
+			try {
+				IISApplicationObj608.IISProductClassMaintenanceSearchBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}	
+	}
+	
+	@And("^User_608 enter the product class code in searchgrid under maintenance in product class$")
+	public void user_enter_the_product_class_code_in_searchgrid_under_maintenance_in_product_class() throws Throwable {		
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISProductClassMainSearchgridRow_608());
+//		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISProductClassMainSearchgridClassInput_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				IISApplicationObj608.IISProductClassMainSearchgridClassInput_608().sendKeys(testData.get("Product Class"),Keys.ENTER);
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+	}
+	
+	@And("^User_608 double click the searchgrid row in maintenance under product class$")
+	public void user_double_click_the_searchgrid_row_in_maintenance_under_product_class() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISProductClassMainSearchResultRow_608());
+		for (int i = 0; i < 500; i++) {
+			try {
+				IISApplicationObj608.IISProductClassMainSearchResultRow_608().getAttribute("title")
+				.equals(testData.get("Product Class"));				
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}		
+		
+		for (int i = 0; i < 500; i++) {
+			try {
+				clicksAndActionsHelper.doubleClick(IISApplicationObj608.IISProductClassMainSearchResultRow_608());
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+		for(int i = 0; i <= 500; i++) {
+    		try {
+				if(!(IISApplicationObj608.IISProductClassMaintenanceCategoryName_608().getAttribute("prevvalue").isBlank())) {
+					break;
+				}
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+    	}		
+		
+	}
+	
+	@And("^User_608 clicks on the additional information tab in maintenance screen under product class$")
+	public void user_clicks_on_the_additional_information_tab_in_maitanance_screen_under_product_class() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISProductClassMainAdditionalInformationTab_608());
+		for (int i = 0; i < 500; i++) {
+			try {
+				IISApplicationObj608.IISProductClassMainAdditionalInformationTab_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+	
+	@And("User_608 validate the default assets from fms flag is available in maintenance under product class")
+	public void user_validate_the_default_assets_from_fms_flag_is_available_in_maintenance_under_product_class() throws Throwable {
+		for (int i = 0; i <= 500; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(IISApplicationObj608.IISProductClassMainAdditionalInfoTabDefaultAssetFromFMSCheckbox_608());
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISProductClassMainAdditionalInfoTabDefaultAssetFromFMSCheckbox_608());
+		WebElement defaultAssetFromFMSFlag = IISApplicationObj608.IISProductClassMainAdditionalInfoTabDefaultAssetFromFMSCheckbox_608();
+		defaultAssetFromFMSFlag.click();
+		Assert.assertTrue(defaultAssetFromFMSFlag.isDisplayed());
+		if(defaultAssetFromFMSFlag.isSelected()) {
+			defaultAssetFromFMSFlag.click();
+		}
+		Thread.sleep(2000);
+	}
+	
+	@When("User_608 clicks the Save button in maintenance menu under product class module")
+	public void user_clicks_the_save_button_in_maintenance_menu_under_product_class_module() throws Throwable {
+		for (int i = 0; i <= 500; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(IISApplicationObj608.IISProductClassMaintenanceSaveBtn_608());
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISProductClassMaintenanceSaveBtn_608());
+		for (int i = 0; i < 500; i++) {
+			try {
+				IISApplicationObj608.IISProductClassMaintenanceSaveBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_WarningPopupOkBtn_608());
+		IISApplicationObj608.IIS_WarningPopupOkBtn_608().click();
+		
+		for (int i = 0; i <= 2000; i++) {
+			try {
+				IISApplicationObj608.IIS_InformationPopupOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 2000) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+	
+	
+//	IIS Param --> Control Record
+	@And("User_608 click the Control Record module under parameter in IIS Param")
+	public void user_click_the_control_record_module_under_parameter_in_iis_param() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISParamControlRecordModule_608());
+		for (int i = 0; i <= 2000; i++) {
+			try {
+				IISApplicationObj608.IISParamControlRecordModule_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 2000) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+
+	@And("User_608 click the maintenance menu under Control Record module in parameter")
+	public void user_click_the_maintenance_menu_under_control_record_module_in_parameter() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISParamControlRecordMaintenanceMenu_608());
+		IISApplicationObj608.IISParamControlRecordMaintenanceMenu_608().click();
+	}
+
+	@And("User_608 click the investment deal tab under maintenance in Control Record")
+	public void user_click_the_investment_deal_tab_under_maintenance_in_control_record() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISParamControlRecordMainInvestmentDealTab_608());
+		for (int i = 0; i <= 2000; i++) {
+			try {
+				IISApplicationObj608.IISParamControlRecordMainInvestmentDealTab_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 2000) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+
+	@And("User_608 click the System tab under investment deal under maintenance in Control Record")
+	public void user_click_the_system_tab_under_investment_deal_under_maintenance_in_control_record() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISParamControlRecordMainInvestmentDealSystemTab_608());
+		for (int i = 0; i <= 2000; i++) {
+			try {
+				IISApplicationObj608.IISParamControlRecordMainInvestmentDealSystemTab_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 2000) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}	    
+	}
+
+	@And("User_608 click the Enable alerts flag under System tab in investment deal under Control Record maintenance")
+	public void user_click_the_enable_alerts_flag_under_system_tab_in_investment_deal_under_control_record_maintenance() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISParamControlRecordMainInvestmentDealSystemTabEnableAlert_608());
+		WebElement enableAlertFlag = IISApplicationObj608.IISParamControlRecordMainInvestmentDealSystemTabEnableAlert_608();
+		enableAlertFlag.click();
+		if(!(enableAlertFlag.isSelected())) {
+			enableAlertFlag.click();
+		}
+	}
+
+	@When("User_608 clicks the Save button under maintenance in Control Record")
+	public void user_clicks_the_save_button_under_maintenance_in_control_record() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISParamControlRecordMaintenanceSaveBtn_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				IISApplicationObj608.IISParamControlRecordMaintenanceSaveBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IIS_WarningPopupOkBtn_608());
+		IISApplicationObj608.IIS_WarningPopupOkBtn_608().click();
+		
+		for (int i = 0; i <= 2000; i++) {
+			try {
+				IISApplicationObj608.IIS_InformationPopupOkBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 2000) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+		
+	}
+	
+	
+//	IIS Application Send Alert Popup
+	@And("User_608 enter the userID in searchgrid under send alert popup in IIS Application")
+	public void user_enter_the_user_id_in_searchgrid_under_send_alert_popup_in_iis_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISSendAlertPopup_608());
+		IISApplicationObj608.IISSendAlertPopupSearchgridUserIDInput_608().sendKeys("VAK",Keys.ENTER);	    
+	}
+
+	@And("User_608 select the row in searchgrid under send alert popup in IIS Application")
+	public void user_select_the_row_in_searchgrid_under_send_alert_popup_in_iis_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISSendAlertPopupSearchgridRow_608()); 
+		for (int i = 0; i <= 500; i++) {
+			try {
+				IISApplicationObj608.IISSendAlertPopupSearchgridRow_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+
+	@And("User_608 click the Send button under send alert popup in IIS Application")
+	public void user_click_the_send_button_under_send_alert_popup_in_iis_application() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISSendAlertPopupSendBtn_608());
+		for (int i = 0; i <= 500; i++) {
+			try {
+				IISApplicationObj608.IISSendAlertPopupSendBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+	
+	
+//	Penalty Feature
+//	@AT_PNLT_001
+	@And("User_608 click the limit tab under additional info tab in maintenance screen under product class")
+	public void user_click_the_limit_tab_under_additional_info_tab_in_maintenance_screen_under_product_class() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISProductClassMainAdditionalInfoLimitTab_608());  
+		for (int i = 0; i <= 500; i++) {
+			try {
+				IISApplicationObj608.IISProductClassMainAdditionalInfoLimitTab_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+
+	@And("User_608 validate Apply Penalty on due payment flag is available in limit tab under additional info tab in maintenance")
+	public void user_validate_apply_penalty_on_due_payment_flag_is_available_in_limit_tab_under_additional_info_tab_in_maintenance() throws Throwable {
+		for (int i = 0; i <= 500; i++) {
+			try {
+				javaScriptHelper.scrollIntoView(IISApplicationObj608.IISProductClassAdditionalInfoLimitTabPenaltyDuePaymentLabel_608());
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISProductClassAdditionalInfoLimitTabPenaltyDuePaymentFlag_608());
+	    Assert.assertTrue(IISApplicationObj608.IISProductClassAdditionalInfoLimitTabPenaltyDuePaymentFlag_608().isDisplayed());
+	}
+
+	@And("User_608 validate grace period field is available in limit tab under additional info tab in maintenance")
+	public void user_validate_grace_period_field_is_available_in_limit_tab_under_additional_info_tab_in_maintenance() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISProductClassAdditionalInfoLimitTabGracePeriodInput_608());
+	    Assert.assertTrue(IISApplicationObj608.IISProductClassAdditionalInfoLimitTabGracePeriodInput_608().isDisplayed());
+	}
+
+	@And("User_608 enter the grace period value in limit tab under additional info tab in maintenance")
+	public void user_enter_the_grace_period_value_in_limit_tab_under_additional_info_tab_in_maintenance() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISProductClassAdditionalInfoLimitTabGracePeriodInput_608());
+		IISApplicationObj608.IISProductClassAdditionalInfoLimitTabGracePeriodInput_608().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
+	    IISApplicationObj608.IISProductClassAdditionalInfoLimitTabGracePeriodInput_608().sendKeys(testData.get("Grace Period"),Keys.TAB);
+	}
+
+	@And("User_608 validate penalty percentage field is available in limit tab under additional info tab in maintenance")
+	public void user_validate_penalty_percentage_field_is_available_in_limit_tab_under_additional_info_tab_in_maintenance() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISProductClassAdditionalInfoLimitTabPenaltyPercentageInput_608());
+	    Assert.assertTrue(IISApplicationObj608.IISProductClassAdditionalInfoLimitTabPenaltyPercentageInput_608().isDisplayed());	    
+	}
+
+	@And("User_608 enter the penalty percentage value in limit tab under additional info tab in maintenance")
+	public void user_enter_the_penalty_percentage_value_in_limit_tab_under_additional_info_tab_in_maintenance() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj608.IISProductClassAdditionalInfoLimitTabPenaltyPercentageInput_608());
+		IISApplicationObj608.IISProductClassAdditionalInfoLimitTabPenaltyPercentageInput_608().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
+	    IISApplicationObj608.IISProductClassAdditionalInfoLimitTabPenaltyPercentageInput_608().sendKeys(testData.get("Penalty Percentage"),Keys.TAB);	    
+	}
+	
 	
 	
 	

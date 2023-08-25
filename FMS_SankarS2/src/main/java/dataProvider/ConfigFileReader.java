@@ -191,6 +191,14 @@ public class ConfigFileReader {
 			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
 	}
 	
+	public String getIISApplicationUserType2() {
+		String userType = properties.getProperty("IIS_Application_UserType2");
+		if (userType != null)
+			return userType;
+		else
+			throw new RuntimeException("User Type is not specified in the Configuration.properties file.");
+	}
+	
 	public String getMTSApplicationUserType() {
 		String userType = properties.getProperty("MTS_Application_UserType");
 		if (userType != null)

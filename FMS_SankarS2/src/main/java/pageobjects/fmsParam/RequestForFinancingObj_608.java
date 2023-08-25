@@ -48,7 +48,7 @@ public class RequestForFinancingObj_608 {
 	private WebElement IIS_product_class_main_search_row_label;
 	public WebElement IISProductClassMainSearchRowLabel_608() {
 		return IIS_product_class_main_search_row_label;
-	}
+	}	
 	
 	@FindBy(xpath = "//input[@id='classCode_M003MT']")
 	private WebElement IIS_product_class_main_product_class;

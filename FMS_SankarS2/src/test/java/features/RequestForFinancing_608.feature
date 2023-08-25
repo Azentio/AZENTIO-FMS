@@ -9,11 +9,11 @@ Scenario: IIS Param Application
 Given navigate to IIS param application and login with valid credentials
 And User_608 get the test data for test case AT_RF_014_IISParam
 And User_608 clicks on the parameter feature in IIS Param application
-And User_608 clicks on the product class module uder parameter feature
-And User_608 clicks on the maintanance screen under product class module
-And User_608 clicks on the search button in maintanance under product class
-And User_608 enter the class code in maintanance under product class
-And User_608 double click on the retrived data in maitanance under product class
+And User_608 clicks on the product class module under parameter feature
+And User_608 clicks on the maintenance menu under product class module
+And User_608 clicks on the search button in maintenance under product class
+And User_608 enter the class code in maintenance under product class
+And User_608 double click on the retrived data in maintenance under product class
 And User_608 clicks on the additional information tab in maitanance under product class
 And User_608 clicks on the repayment plan tab under additional information tab
 And User_608 enter the value in number of payments under repayment plan tab

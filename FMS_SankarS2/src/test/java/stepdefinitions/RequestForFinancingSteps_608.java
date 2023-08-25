@@ -133,8 +133,8 @@ public class RequestForFinancingSteps_608 {
 		requestForFinancingObj608.IISParameterFeature_608().click();
 	}
 
-	@And("^User_608 clicks on the product class module uder parameter feature$")
-	public void user_clicks_on_the_product_class_module_uder_parameter_feature() throws Throwable {
+	@And("^User_608 clicks on the product class module under parameter feature$")
+	public void user_clicks_on_the_product_class_module_under_parameter_feature() throws Throwable {
 		for (int i = 0; i <= 300; i++) {
 			try {
 				javaScriptHelper.scrollIntoView(requestForFinancingObj608.IISParameterProductClassModule_608());
@@ -151,39 +151,52 @@ public class RequestForFinancingSteps_608 {
 				requestForFinancingObj608.IISParameterProductClassModule_608().click();
 				break;
 			} catch (Exception e) {
-				
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
 			}
 		}		
 	}
 
-	@And("^User_608 clicks on the maintanance screen under product class module$")
-	public void user_clicks_on_the_maintanance_screen_under_product_class_module() throws Throwable {
+	@And("^User_608 clicks on the maintenance menu under product class module$")
+	public void user_clicks_on_the_maintenance_menu_under_product_class_module() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.IISProductClassMaintanance_608());
 		requestForFinancingObj608.IISProductClassMaintanance_608().click();
 	}
 
-	@And("^User_608 clicks on the search button in maintanance under product class$")
-	public void user_clicks_on_the_search_button_in_maintanance_under_product_class() throws Throwable {
+	@And("^User_608 clicks on the search button in maintenance under product class$")
+	public void user_clicks_on_the_search_button_in_maintenance_under_product_class() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.IISProductClassMainSearchBtn_608());
-		requestForFinancingObj608.IISProductClassMainSearchBtn_608().click();
+		for (int i = 0; i <= 300; i++) {
+			try {
+				requestForFinancingObj608.IISProductClassMainSearchBtn_608().click();
+				break;
+			} catch (Exception e) {
+				if (i == 300) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}	
 	}
 
-	@And("^User_608 enter the class code in maintanance under product class$")
-	public void user_enter_the_class_code_in_maintanance_under_product_class() throws Throwable {
+	@And("^User_608 enter the class code in maintenance under product class$")
+	public void user_enter_the_class_code_in_maintenance_under_product_class() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.IISProductClassMainSearchedRow_608());
 //    	requestForFinancingObj608.productClassMainSearchClass().sendKeys("1");
 		requestForFinancingObj608.IISProductClassMainSearchClass_608().sendKeys(testData.get("Class"),Keys.ENTER);
 	}
 
-	@And("^User_608 double click on the retrived data in maitanance under product class$")
-	public void user_double_click_on_the_retrived_data_in_maitanance_under_product_class() throws Throwable {
-		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.IISProductClassMainSearchRowLabel_608());
+	@And("^User_608 double click on the retrived data in maintenance under product class$")
+	public void user_double_click_on_the_retrived_data_in_maintenance_under_product_class() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, requestForFinancingObj608.IISProductClassMainSearchedRow_608());
 		for (int i = 0; i < 500; i++) {
 			try {
-				clicksAndActionsHelper.doubleClick(requestForFinancingObj608.IISProductClassMainSearchRowLabel_608());
+				clicksAndActionsHelper.doubleClick(requestForFinancingObj608.IISProductClassMainSearchedRow_608());
 				break;
 			} catch (Exception e) {
-				
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
 			}
 		}		
 	}
