@@ -8,13 +8,13 @@ import io.cucumber.testng.CucumberOptions;
 import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
-@CucumberOptions(features = { "src/test/java/iis_features/AccuralProcess_609.feature" }, 
+@CucumberOptions(features = { "src/test/java/iis_features/AdvancePrincipalSettlement_609.feature" }, 
 				dryRun = !true,// dryRun = false //to check compilation errors
 				glue = "stepdefinitions",
 				// monochrome=false, //to make steps in color
 				plugin = { "pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 							"rerun:ReRunScenarios/FailedReRun.txt" }
-				,tags = "@AT_AP_023_02"
+				,tags = "@399949"
 				
 
 )

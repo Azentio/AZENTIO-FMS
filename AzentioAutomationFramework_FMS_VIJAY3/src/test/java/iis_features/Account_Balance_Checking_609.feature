@@ -4,7 +4,7 @@ Feature: Account Balance Checking
 Scenario: Check whether the account balance is checking during deal approval
 
 Given navigate to IIS application and login with valid credentials
-And User_609 get the test data set id for AT_AP_024
+And User_609 get the test data set id for AT_ABC_007
 And User_609 clear the caches in IIS Application
 And User_609 Click the Investment Deals Combined without Trade Deal menu
 And User_609 Click the Maintenance under Investment Deals Combined without Trade Deal

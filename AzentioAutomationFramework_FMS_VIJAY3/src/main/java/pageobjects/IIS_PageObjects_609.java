@@ -1141,5 +1141,102 @@ public class IIS_PageObjects_609 {
 		return Sads_SMART_SMARTOPTIONSTYPES_Maintenance_609;
 	}
 	
+	///****************************************** Advance Principal Settlement **************************************************************///
 	
+	@FindBy(xpath = "//td[contains(text(),'Advance Principal Settlement')]")
+	private WebElement IIS_AdvancePrincipalSettlement_609;
+	public WebElement IIS_AdvancePrincipalSettlement_609() {
+		return IIS_AdvancePrincipalSettlement_609;
+	}
+	
+	@FindBy(xpath = "//a[@id='T036MT']/span[text()='Maintenance']")
+	private WebElement IIS_AdvancePrincipalSettlement_Maintenance_609;
+	public WebElement IIS_AdvancePrincipalSettlement_Maintenance_609() {
+		return IIS_AdvancePrincipalSettlement_Maintenance_609;
+	}
+
+	
+	@FindBy(xpath = "//span[@id='spanLookup_dealNo_T036MT']/span")
+	private WebElement IIS_AdvancePrincipalSettlement_Maintenance_DealNoSearch_609;
+	public WebElement IIS_AdvancePrincipalSettlement_Maintenance_DealNoSearch_609() {
+		return IIS_AdvancePrincipalSettlement_Maintenance_DealNoSearch_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='gridtab_dealNo_T036MT_gs_trspayplanvo.TRX_NBR']")
+	private WebElement IIS_AdvancePrincipalSettlement_Maintenance_DealNo_609;
+	public WebElement IIS_AdvancePrincipalSettlement_Maintenance_DealNo_609() {
+		return IIS_AdvancePrincipalSettlement_Maintenance_DealNo_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='advance_Principal_T036MT']")
+	private WebElement IIS_AdvancePrincipalSettlement_Maintenance_AdvancePrincipal_609;
+	public WebElement IIS_AdvancePrincipalSettlement_Maintenance_AdvancePrincipal_609() {
+		return IIS_AdvancePrincipalSettlement_Maintenance_AdvancePrincipal_609;
+	}
+	
+//	@FindBy(xpath = "//li[@id='settlementTab2_T036MT']/a/span[text()='Schedule Details']")
+//	private WebElement IIS_AdvancePrincipalSettlement_Maintenance_ScheduleDetails_609;
+//	public WebElement IIS_AdvancePrincipalSettlement_Maintenance_ScheduleDetails_609() {
+//		return IIS_AdvancePrincipalSettlement_Maintenance_ScheduleDetails_609;
+//	}
+	
+	
+	
+	
+	
+	
+	
+	@FindBy(xpath = "//button[@id='automaticAllocationButton_T036MT']")
+	private WebElement IIS_AdvancePrincipalSettlement_Maintenance_RescheduleAllocateBtn_609;
+	public WebElement IIS_AdvancePrincipalSettlement_Maintenance_RescheduleAllocateBtn_609() {
+		return IIS_AdvancePrincipalSettlement_Maintenance_RescheduleAllocateBtn_609;
+	}
+	
+	@FindBy(xpath = "//table[@id='settlementScheduleGridTbl_Id_T036MT']")
+	private WebElement IIS_AdvancePrincipalSettlement_Maintenance_ScheduleDetailsTable_609;
+	public WebElement IIS_AdvancePrincipalSettlement_Maintenance_ScheduleDetailsTable_609() {
+		return IIS_AdvancePrincipalSettlement_Maintenance_ScheduleDetailsTable_609;
+	}
+	
+	@FindBy(xpath = "//button[@id='savebutton_T036MT']")
+	private WebElement IIS_AdvancePrincipalSettlement_Maintenance_Save_609;
+	public WebElement IIS_AdvancePrincipalSettlement_Maintenance_Save_609() {
+		return IIS_AdvancePrincipalSettlement_Maintenance_Save_609;
+	}
+	
+	@FindBy(xpath = "//div[contains(text(),'Active Settlement Exists')]")
+	private WebElement IIS_settlement_exists_popup;
+	public WebElement IISSettlementExistsPopup_608() {
+		return IIS_settlement_exists_popup;
+	}
+	
+	@FindBy(xpath = "//a[@id='T036P']/span[text()='Approve']")
+	private WebElement IIS_AdvancePrincipalSettlement_Approve_609;
+	public WebElement IIS_AdvancePrincipalSettlement_Approve_609() {
+		return IIS_AdvancePrincipalSettlement_Approve_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='settlementMgmtGridTbl_Id_T036P_gs_trssetlmtvo.DEAL_NBR']")
+	private WebElement IIS_AdvancePrincipalSettlement_Approve_DealNbr_609;
+	public WebElement IIS_AdvancePrincipalSettlement_Approve_DealNbr_609() {
+		return IIS_AdvancePrincipalSettlement_Approve_DealNbr_609;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_settlementMgmtGridTbl_Id_T036P_1_trssetlmtvo.SETTLEMENT_NBR']")
+	private WebElement IIS_advance_principal_settlement_approve_searchgrid_row;
+	public WebElement IISAdvancePrincipalSettlementApproveMenuSearchgridRow_608() {
+		return IIS_advance_principal_settlement_approve_searchgrid_row;
+	}
+	
+	@FindBy(xpath = "//input[@id='lookuptxt_dealNo_T036P']")
+	private WebElement IIS_advance_principal_settlement_approve_menu_deal_nbr;
+	public WebElement IISAdvancePrincipalSettlementApproveMenuDealNbr_608() {
+		return IIS_advance_principal_settlement_approve_menu_deal_nbr;
+	}
+	
+	@FindBy(xpath = "//button[@id='settlement_Approve_btn_T036P']")
+	private WebElement IIS_AdvancePrincipalSettlement_Approve_ApproveBtn_609;
+	public WebElement IIS_AdvancePrincipalSettlement_Approve_ApproveBtn_609() {
+		return IIS_AdvancePrincipalSettlement_Approve_ApproveBtn_609;
+	}	
 }

@@ -49,8 +49,9 @@ public class IIS_StepDefinition_609 extends BaseClass {
 	
 	String path = System.getProperty("user.dir") +"\\TestData\\IISTestData.xlsx";
 	ExcelData iisIncidentalChargesExcelData  = new ExcelData(path,"IIS_IncidentalCharges_609","DataSet ID");
+	ExcelData iisAccountBalanceCheckingExcelData  = new ExcelData(path,"IIS_AccountBalanceChecking_609","DataSet ID");
 	ExcelData iisAccuralDealExcelData  = new ExcelData(path,"IIS_AccuralDeal_609","DataSet ID");
-	
+	ExcelData iisAdvancePrincipalSettlementExcelData = new ExcelData(path,"IIS_AdvancePrincipalSettlement","DataSet ID");
 	ExcelData iisAccrualProcessExcelData = new ExcelData(path, "IIS_AccrualProcess_609", "DataSet ID");
 	ExcelData mtsExcelData = new ExcelData(path, "MTS_TestData_609", "DataSet ID");
 	
@@ -94,6 +95,7 @@ public class IIS_StepDefinition_609 extends BaseClass {
     	testData = iisAccuralDealExcelData.getTestdata("AT_AD_002_D1");
     }
 	
+	//**IncidentalCharges**//
 	@And("^User_609 get the test data set id for AT_IC_023$")
     public void user_609_get_the_test_data_set_id_for_AT_IC_023() throws Throwable {
     	testData = iisIncidentalChargesExcelData.getTestdata("AT_IC_023_D1");
@@ -107,6 +109,11 @@ public class IIS_StepDefinition_609 extends BaseClass {
 	@And("^User_609 get the test data set id for AT_IC_025$")
     public void user_609_get_the_test_data_set_id_for_AT_IC_025() throws Throwable {
     	testData = iisIncidentalChargesExcelData.getTestdata("AT_IC_025_D1");
+    }
+	
+	@And("^User_609 get the test data set id for AT_ABC_007$")
+    public void user_609_get_the_test_data_set_id_for_AT_ABC_007() throws Throwable {
+    	testData = iisAccountBalanceCheckingExcelData.getTestdata("AT_ABC_007_D1");
     }
 	
 	@And("^User_609 get the test data set id for AT_AP_024$")
@@ -139,6 +146,21 @@ public class IIS_StepDefinition_609 extends BaseClass {
     	testData = mtsExcelData.getTestdata("AT_AP_062_D1");
     }
 
+	
+	@And("^User_609 get the test data set id for AT_APS_030$")
+    public void user_609_get_the_test_data_set_id_for_AT_APS_030() throws Throwable {
+    	testData = iisAdvancePrincipalSettlementExcelData.getTestdata("AT_APS_030_D1");
+    }
+	
+	@And("^User_609 get the test data set id for AT_APS_031$")
+    public void user_609_get_the_test_data_set_id_for_AT_APS_031() throws Throwable {
+    	testData = iisAdvancePrincipalSettlementExcelData.getTestdata("AT_APS_031_D1");
+    }
+	
+	@And("^User_609 get the test data set id for AT_APS_032$")
+    public void user_609_get_the_test_data_set_id_for_AT_APS_032() throws Throwable {
+    	testData = iisAdvancePrincipalSettlementExcelData.getTestdata("AT_APS_032_D1");
+    }
 	
 	// Clear cache step
 	@And("User_609 clear the caches in IIS Application")
@@ -258,7 +280,7 @@ public class IIS_StepDefinition_609 extends BaseClass {
 				WebElement Code  = driver.findElement(By.xpath(xpath));
 				if (Code.isDisplayed()) {
 					clicksAndActionHelper.doubleClick(Code);
-					Thread.sleep(1000);
+					Thread.sleep(3000);
 					break;
 				}
 			} catch (Exception e) {
@@ -274,14 +296,14 @@ public class IIS_StepDefinition_609 extends BaseClass {
 		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_InvestmentDealWithoutTradeDeal_Maintenance_Amount_609());
 		IIS_PageObjects_609.IIS_InvestmentDealWithoutTradeDeal_Maintenance_Amount_609().clear();
 		IIS_PageObjects_609.IIS_InvestmentDealWithoutTradeDeal_Maintenance_Amount_609().sendKeys(testData.get("Amount"),Keys.TAB);
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 	}
 
 	@And("User_609 Enter the Tenure in Investment Deals Combined without Trade Deal")
 	public void user_609_Enter_the_tenure_in_investment_deals_combined_without_trade_deal() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_InvestmentDealWithoutTradeDeal_Maintenance_Tenure_609());
 		clicksAndActionHelper.doubleClick(IIS_PageObjects_609.IIS_InvestmentDealWithoutTradeDeal_Maintenance_Tenure_609());
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		IIS_PageObjects_609.IIS_InvestmentDealWithoutTradeDeal_Maintenance_Tenure_609().sendKeys(testData.get("Tenure"),Keys.TAB);
 		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_ConfirmOk_609());
 		IIS_PageObjects_609.IIS_ConfirmOk_609().click();
@@ -2021,6 +2043,116 @@ public class IIS_StepDefinition_609 extends BaseClass {
 		
 		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_Ok_609());
 		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.IIS_Ok_609());
+	}
+	
+  ///******************************************** Advance Principal Settlement *************************************************************///
+	
+	@And("User_609 Click the Advance Principal Settlement menu")
+	public void User_609_Click_the_Advance_Principal_Settlement_menu() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_609());	
+			
+	}
+	
+	@And("User_609 Click the Maintenance under Advance Principal Settlement")
+	public void User_609_Click_the_Maintenance_under_Advance_Principal_Settlement() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_Maintenance_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_Maintenance_609());	
+			
+	}
+	
+	@And("User_609 Select the Deal number in Maintenance screen under Advance Principal Settlement")
+	public void User_609_Select_the_Deal_number_in_Maintenance_screen_under_Advance_Principal_Settlement() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_Maintenance_DealNoSearch_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_Maintenance_DealNoSearch_609());
+		
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_Maintenance_DealNo_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_Maintenance_DealNo_609());
+		IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_Maintenance_DealNo_609().sendKeys(testData.get(Deal_Number),Keys.ENTER);
+
+		//table[@id='gridtab_dealNo_T036MT']/tbody/tr/td[text()='5689']
+		String xpath ="//table[@id='gridtab_dealNo_T036MT']/tbody/tr/td[text()='"+Deal_Number+"']";
+		for (int i = 0; i < 200; i++) {
+			try {
+				WebElement Code  = driver.findElement(By.xpath(xpath));
+				if (Code.isDisplayed()) {
+					clicksAndActionHelper.doubleClick(Code);
+					break;
+				}
+			} catch (Exception e) {
+				if (i==199) {
+					Assert.fail(e.getMessage());
+				}
+			}	
+		}
+	}
+	
+	@And("User_609 Enter the Advance Principal in Maintenance under Advance Principal Settlement")
+	public void User_609_Enter_the_Advance_Principal_in_Maintenance_under_Advance_Principal_Settlement() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_Maintenance_AdvancePrincipal_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_Maintenance_AdvancePrincipal_609());
+		IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_Maintenance_AdvancePrincipal_609().sendKeys(testData.get("Advance Principal"),Keys.TAB);
+			
+	}
+	
+	@And("User_609 Click the Reschedule&Allocate Button in Maintenance under Advance Principal Settlement")
+	public void User_609_Click_the_RescheduleAllocate_Button_in_Maintenance_under_Advance_Principal_Settlement() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_Maintenance_RescheduleAllocateBtn_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_Maintenance_RescheduleAllocateBtn_609());		
+	}
+	
+	@And("User_609 Click the Save button in Maintenance under Advance Principal Settlement")
+	public void User_609_Click_the_Save_button_in_Maintenance_under_Advance_Principal_Settlement() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_Maintenance_ScheduleDetailsTable_609());
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_Maintenance_Save_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_Maintenance_Save_609());		
+	}
+	
+	@And("User_609 Click the Approve Screen in Advance Principal Settlement")
+	public void User_609_Click_the_Approve_Screen_in_Advance_Principal_Settlement() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_Approve_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_Approve_609());		
+	}
+	
+	@And("User_609 Select the Deal number in Approve under Advance Principal Settlement")
+	public void User_609_Select_the_Deal_number_in_Approve_under_Advance_Principal_Settlement() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_Maintenance_ScheduleDetailsTable_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_Maintenance_Save_609());		
+		IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_Maintenance_DealNo_609().sendKeys(testData.get(Deal_Number),Keys.ENTER);
+
+		//table[@id='settlementMgmtGridTbl_Id_T036P']/tbody/tr[2]/td[@tdlabel='Deal Nbr' and text()='000000005689']
+		String xpath ="//table[@id='settlementMgmtGridTbl_Id_T036P']/tbody/tr[2]/td[@tdlabel='Deal Nbr' and text()='"+"00000000"+Deal_Number+"']";
+		for (int i = 0; i < 200; i++) {
+			try {
+				WebElement Code  = driver.findElement(By.xpath(xpath));
+				if (Code.isDisplayed()) {
+					clicksAndActionHelper.doubleClick(Code);
+					break;
+				}
+			} catch (Exception e) {
+				if (i==199) {
+					Assert.fail(e.getMessage());
+				}
+			}	
+		}
+	}
+	
+	
+	@And("User_609 Click the Approve button in Approve under Advance Principal Settlement")
+	public void User_609_Click_the_Approve_button_in_Approve_under_Advance_Principal_Settlement() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_Approve_ApproveBtn_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.IIS_AdvancePrincipalSettlement_Approve_ApproveBtn_609());	
+		
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_ConfirmOkPopUp_609());
+		IIS_PageObjects_609.IIS_ConfirmOk_609().click();
+		Thread.sleep(3000);
+		
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_ConfirmOkPopUp_609());
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_ConfirmOk_609());
+		if (IIS_PageObjects_609.IIS_ConfirmOk_609().isDisplayed()) {
+			IIS_PageObjects_609.IIS_ConfirmOk_609().click();
+		}
+		
 	}
 	
 	
