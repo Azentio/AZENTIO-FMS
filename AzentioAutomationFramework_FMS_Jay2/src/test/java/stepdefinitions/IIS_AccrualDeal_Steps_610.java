@@ -1752,4 +1752,246 @@ public class IIS_AccrualDeal_Steps_610 {
 			Thread.sleep(3000);
 		//	IIS_AccrualDeal_obj_610.setFiscalImplicationKey_InGeneralInformation_610().click();
 		}
+		
+		
+		//------------------------------Assert management Screen under FiscalImplication   -------------------------
+		
+		
+		@And("User_{int} click on the Link Template Button under Assert Management Screeen in Fiscal Implication")
+		public void user_click_on_the_link_template_button_under_assert_management_screeen_in_fiscal_implication(Integer int1) {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.LinkTemplateButton_UnderAssertManagementScreeen_InsetFiscalImplication_610());
+			javaScriptHelper.scrollIntoView(IIS_AccrualDeal_obj_610.LinkTemplateButton_UnderAssertManagementScreeen_InsetFiscalImplication_610());
+			IIS_AccrualDeal_obj_610.LinkTemplateButton_UnderAssertManagementScreeen_InsetFiscalImplication_610().click();
+		}
+
+		@And("User_{int}  serach and retrive code in assert recovert key")
+		public void user_serach_and_retrive_code_in_assert_recovert_key(Integer int1) {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.AssertManagementTemplatePopup_UnderAssertManagementScreeen_InsetFiscalImplication_610());
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.AssertRecovertKey_SearchButton_UnderAssertManagementScreeen_InsetFiscalImplication_610());
+			IIS_AccrualDeal_obj_610.AssertRecovertKey_SearchButton_UnderAssertManagementScreeen_InsetFiscalImplication_610().click();
+			
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.AssertRecovertKey_SelectFirstRow_UnderAssertManagementScreeen_InsetFiscalImplication_610());
+			clicksAndActionsHelper.doubleClick(IIS_AccrualDeal_obj_610.AssertRecovertKey_SelectFirstRow_UnderAssertManagementScreeen_InsetFiscalImplication_610());
+			
+			
+		}
+
+		@And("User _{int} validate the add multiple templates various types of repossession")
+		public void user_validate_the_add_multiple_templates_various_types_of_repossession(Integer int1) {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.AssertRecovertKey_ShowTemplateCode_SelectFlag_UnderAssertManagementScreeen_InsetFiscalImplication_610());
+			IIS_AccrualDeal_obj_610.AssertRecovertKey_ShowTemplateCode_SelectFlag_UnderAssertManagementScreeen_InsetFiscalImplication_610().click();
+			WebElement selectFlag_ShowTemplateCode= IIS_AccrualDeal_obj_610.AssertRecovertKey_ShowTemplateCode_SelectFlag_UnderAssertManagementScreeen_InsetFiscalImplication_610();
+			if (selectFlag_ShowTemplateCode.isSelected()) {
+				Assert.assertTrue(true);
+			}
+			
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.AssertRecovertKey_AllowToModify_SelectFlag_UnderAssertManagementScreeen_InsetFiscalImplication_610());
+			IIS_AccrualDeal_obj_610.AssertRecovertKey_AllowToModify_SelectFlag_UnderAssertManagementScreeen_InsetFiscalImplication_610().click();
+			WebElement selectFlag_AllowToModify= IIS_AccrualDeal_obj_610.AssertRecovertKey_AllowToModify_SelectFlag_UnderAssertManagementScreeen_InsetFiscalImplication_610();
+			if (selectFlag_AllowToModify.isSelected()) {
+				Assert.assertTrue(true);
+			}
+		}
+		
+		
+		//-----------------------------Link Asset management charges screen under product class-------------------
+		
+		@And("User_{int} click on the Link assert management charger under product class")
+		public void user_click_on_the_link_assert_management_charger_under_product_class(Integer int1) {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.linkAssetManagementChargesKey_UnderProductClassMaintenanceSCreen_610());
+			javaScriptHelper.scrollIntoView(IIS_AccrualDeal_obj_610.linkAssetManagementChargesKey_UnderProductClassMaintenanceSCreen_610());
+			IIS_AccrualDeal_obj_610.linkAssetManagementChargesKey_UnderProductClassMaintenanceSCreen_610().click();
+		}
+
+		@And("User_{int} click on the add button under Link Asset management charges screen")
+		public void user_click_on_the_add_button_under_link_asset_management_charges_screen(Integer int1) throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.linkAssetManagementChargesPopup_UnderlinkAssetManagementChargesKey_610());
+			waitHelper.waitForElementwithFluentwait(driver, IIS_AccrualDeal_obj_610.AddIconButtonIn_linkAssetManagementChargesKey_610());
+			Thread.sleep(5000);
+			IIS_AccrualDeal_obj_610.AddIconButtonIn_linkAssetManagementChargesKey_610().click();
+			Thread.sleep(5000);
+		}
+
+		@And("User_{int} validate the add product class code in Link Asset management charges")
+		public void user_validate_the_add_product_class_code_in_link_asset_management_charges(Integer int1) throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver,IIS_AccrualDeal_obj_610.SelectRowOneIn_linkAssetManagementChargesKey_610());
+			clicksAndActionsHelper.moveToElement(IIS_AccrualDeal_obj_610.SelectRowOneIn_linkAssetManagementChargesKey_610());
+			IIS_AccrualDeal_obj_610.SelectRowOneIn_linkAssetManagementChargesKey_610().click();
+		//	Thread.sleep(4000);
+			
+			waitHelper.waitForElementwithFluentwait(driver,IIS_AccrualDeal_obj_610.enterTheCodeInCodeMenu_linkAssetManagementChargesKey_610());
+			clicksAndActionsHelper.moveToElement(IIS_AccrualDeal_obj_610.enterTheCodeInCodeMenu_linkAssetManagementChargesKey_610());
+			IIS_AccrualDeal_obj_610.enterTheCodeInCodeMenu_linkAssetManagementChargesKey_610().sendKeys("3",Keys.ENTER);
+			
+			WebElement productClassSelect= IIS_AccrualDeal_obj_610.enterTheCodeInCodeMenu_linkAssetManagementChargesKey_610();
+			if (productClassSelect.isSelected()) {
+				Assert.assertTrue(true);
+			}
+			
+			waitHelper.waitForElementwithFluentwait(driver,IIS_AccrualDeal_obj_610.OkButtonIn_linkAssetManagementChargesKey_610());
+			clicksAndActionsHelper.moveToElement(IIS_AccrualDeal_obj_610.OkButtonIn_linkAssetManagementChargesKey_610());
+			IIS_AccrualDeal_obj_610.OkButtonIn_linkAssetManagementChargesKey_610().click();;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 }

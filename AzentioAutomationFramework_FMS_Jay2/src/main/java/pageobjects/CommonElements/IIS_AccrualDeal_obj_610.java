@@ -923,4 +923,274 @@ public class IIS_AccrualDeal_obj_610 {
 //		}
 //		
 		
+		
+		//--------------------Assert Management Screeen under FiscalImplication
+		
+		@FindBy(xpath = "//label[@id='LinkTemplate']")
+		private WebElement LinkTemplateButton_UnderAssertManagementScreeen_InsetFiscalImplication_610;
+		public WebElement LinkTemplateButton_UnderAssertManagementScreeen_InsetFiscalImplication_610() {
+			return LinkTemplateButton_UnderAssertManagementScreeen_InsetFiscalImplication_610;
+		}
+		
+		@FindBy(xpath = "//span[@id='ui-dialog-title-FiscalImplicationDiv1_M003MT']")
+		private WebElement AssertManagementTemplatePopup_UnderAssertManagementScreeen_InsetFiscalImplication_610;
+		public WebElement AssertManagementTemplatePopup_UnderAssertManagementScreeen_InsetFiscalImplication_610() {
+			return AssertManagementTemplatePopup_UnderAssertManagementScreeen_InsetFiscalImplication_610;
+		}
+		
+		@FindBy(xpath = "//span[@id='spanLookup_iisProductClassTemplateCodeAssetRecovery_M003MT']")
+		private WebElement AssertRecovertKey_SearchButton_UnderAssertManagementScreeen_InsetFiscalImplication_610;
+		public WebElement AssertRecovertKey_SearchButton_UnderAssertManagementScreeen_InsetFiscalImplication_610() {
+			return AssertRecovertKey_SearchButton_UnderAssertManagementScreeen_InsetFiscalImplication_610;
+		}
+		
+		@FindBy(xpath = "//td[@id='td_gridtab_iisProductClassTemplateCodeAssetRecovery_M003MT_1_CODE']")
+		private WebElement AssertRecovertKey_SelectFirstRow_UnderAssertManagementScreeen_InsetFiscalImplication_610;
+		public WebElement AssertRecovertKey_SelectFirstRow_UnderAssertManagementScreeen_InsetFiscalImplication_610() {
+			return AssertRecovertKey_SelectFirstRow_UnderAssertManagementScreeen_InsetFiscalImplication_610;
+		}
+		
+		@FindBy(xpath = "//input[@id='iisProductClasstmpltshowassetrecoveryYN_M003MT']")
+		private WebElement AssertRecovertKey_ShowTemplateCodeSelectFlag_UnderAssertManagementScreeen_InsetFiscalImplication_610;
+		public WebElement AssertRecovertKey_ShowTemplateCode_SelectFlag_UnderAssertManagementScreeen_InsetFiscalImplication_610() {
+			return AssertRecovertKey_ShowTemplateCodeSelectFlag_UnderAssertManagementScreeen_InsetFiscalImplication_610;
+		}
+		
+		@FindBy(xpath = "//input[@id='iisProductClasstmpltmodifyassetrecoveryYN_M003MT']")
+		private WebElement AssertRecovertKey_AllowToModify_SelectFlag_UnderAssertManagementScreeen_InsetFiscalImplication_610;
+		public WebElement AssertRecovertKey_AllowToModify_SelectFlag_UnderAssertManagementScreeen_InsetFiscalImplication_610() {
+			return AssertRecovertKey_AllowToModify_SelectFlag_UnderAssertManagementScreeen_InsetFiscalImplication_610;
+		}
+		
+		
+		
+		//-------------------------Link assert management charger ----------------
+		
+		
+		@FindBy(xpath = "//label[@id='iisProductClassMaintFormId_M003MT_link_asset_management_charges_key']")
+		private WebElement linkAssetManagementChargesKey_UnderProductClassMaintenanceSCreen_610;
+		public WebElement linkAssetManagementChargesKey_UnderProductClassMaintenanceSCreen_610() {
+			return linkAssetManagementChargesKey_UnderProductClassMaintenanceSCreen_610;
+		}
+		
+		@FindBy(xpath = "//span[@id='ui-dialog-title-LinkLinkAssetManagementChargesDiv_M003MT']")
+		private WebElement linkAssetManagementChargesPopup_UnderlinkAssetManagementChargesKey_610;
+		public WebElement linkAssetManagementChargesPopup_UnderlinkAssetManagementChargesKey_610() {
+			return linkAssetManagementChargesPopup_UnderlinkAssetManagementChargesKey_610;
+		}
+		
+		@FindBy(xpath = "//td[@id='add_iISProductClassLinkAssetManagementChargesGrid_Id_M003MT']")
+		private WebElement AddIconButtonIn_linkAssetManagementChargesKey_610;
+		public WebElement AddIconButtonIn_linkAssetManagementChargesKey_610() {
+			return AddIconButtonIn_linkAssetManagementChargesKey_610;
+		}
+		
+		@FindBy(xpath = "//td[@id='td_iISProductClassLinkAssetManagementChargesGrid_Id_M003MT_1_rn']")
+		private WebElement SelectRowOneIn_linkAssetManagementChargesKey_610;
+		public WebElement SelectRowOneIn_linkAssetManagementChargesKey_610() {
+			return SelectRowOneIn_linkAssetManagementChargesKey_610;
+		}
+						
+		
+		@FindBy(xpath = "//input[@name='lookupTxt_trsclasslinkasstmgmtchargeVO.CHARGE_CODE']")
+		private WebElement enterTheCodeInCodeMenu_linkAssetManagementChargesKey_610;
+		public WebElement enterTheCodeInCodeMenu_linkAssetManagementChargesKey_610() {
+			return enterTheCodeInCodeMenu_linkAssetManagementChargesKey_610;
+		}
+		
+		@FindBy(xpath = "//button[@id='linkAssetManagementCharges_save_btn_M003MT']")
+		private WebElement OkButtonIn_linkAssetManagementChargesKey_610;
+		public WebElement OkButtonIn_linkAssetManagementChargesKey_610() {
+			return OkButtonIn_linkAssetManagementChargesKey_610;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 }
