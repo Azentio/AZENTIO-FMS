@@ -14,10 +14,7 @@ Feature: To Test the Financial facilities in FMS Application
     And User_611 Click the Disbursement Sublimit under maintenance screen
     And User_611 Add the limits under Disbursement Sublimit
     And User_611 Add the product class values in product searchbox
-    #And User_611 Enter the Facility risk rating value
-    #And User_611 Enter the date of FRR value date
-    #And User_611 Click the Clean flag check box
-    And User_611 Add the Margin values in Margin
+   	And User_611 Add the Margin values in Margin
     And User_611 Add all the Above limit values
     And User_611 Save all the values when limits are add
     And User_611 Click the validate button when all the values are saved
@@ -48,7 +45,6 @@ Feature: To Test the Financial facilities in FMS Application
     @585803_FMS_Param
   Scenario: Check that the “Estimators” are reflected at the level of Application for Financial Facilities
     Given navigate to FMS param application and login with valid credentials
-    
     And User_611 Click the parameters menu in param application
     And User_611 click the estimators menu under parameters
     And User_611 click  the maintenance under estimators
@@ -82,7 +78,7 @@ Feature: To Test the Financial facilities in FMS Application
     And User_611 Click the Additional details
     And User_611 Enter the currency code under Additional details
     And User_611 Enter the total value under Additional details
-    And User_611 Enter the Expiry date
+    And User_611 enter the expire date in additional info tab
     And User_611 Click the doucmentdetailstab
     And User_611 Click the estimators search box
     And User_611 Enter the estimators code
@@ -104,7 +100,7 @@ Feature: To Test the Financial facilities in FMS Application
     And User_611 Click the Additional details
     And User_611 Enter the currency code under Additional details
     And User_611 Enter the total value under Additional details
-    And User_611 Enter the Expiry date
+    And User_611 enter the expire date in additional info tab
     And User_611 Click the limit details tab
     And User_611 Click the add button under limit details tab
     And User_611 Enter the Product class value two
@@ -129,7 +125,7 @@ Feature: To Test the Financial facilities in FMS Application
     And User_611 Click the Additional details
     And User_611 Enter the currency code under Additional details
     And User_611 Enter the total value under Additional details
-    And User_611 Enter the Expiry date
+   And User_611 enter the expire date in additional info tab
     And User_611 Click the limit details tab
     And User_611 Click the add button under limit details tab
     And User_611 Enter the Product class value two
@@ -167,7 +163,7 @@ Feature: To Test the Financial facilities in FMS Application
     And User_611 Click the Additional details
     And User_611 Enter the currency code under Additional details
     And User_611 Enter the total value under Additional details
-    And User_611 Enter the Expiry date
+    And User_611 enter the expire date in additional info tab
     And User_611 Click the limit details tab
     And User_611 Click the add button under limit details tab
     And User_611 Enter the Product class value two
@@ -390,7 +386,7 @@ Feature: To Test the Financial facilities in FMS Application
     And User_611 Click the Additional details
     And User_611 Enter the currency code under Additional details
     And User_611 Enter the total value under Additional details
-    And User_611 Enter the Expiry date
+    And User_611 enter the expire date in additional info tab
     And User_611 Click the limit details tab
     And User_611 Click the add button under limit details tab
     And User_611 Clicks the product class value one
@@ -490,10 +486,40 @@ Feature: To Test the Financial facilities in FMS Application
     And User_611 Enter the Mininumm value under Facility Risk Rating Maintenance screen
     And User_611 Enter the Maximumm value under Facility Risk Rating Maintenance screen
     
-    
-    @12345
-    Scenario: Check that the Facility Risk Rating main option contains the below sub options
-   # Given navigate to IIS application and login with valid credentials
-    Given navigate to IIS param application and login with valid credentials
+    @678324_FMS_Param
+  Scenario: Check that the param purpose of financing will show in FMS Application
+    Given navigate to FMS param application and login with valid credentials
+    And User_611 Click the parameters menu in param application
+    And User_611  clicks the Purpose of financing under parameters
+    And User_611 clicks the Maintenance under Purpose of financing
+    And User_611 Enter a code under maintenance screen
+    And User_611 Enter a Addditional number under maintenance screen
+    And User_611 Enter a Discription under maintenance screen
+    And User_611 clicks the Product class to add
+    And User_611 save the Product class details
+    And User_611 clicks the approve menu under Purpose of financing
+    Then User_611 clicks the final approve
+
+  @678324_FMS_Core
+  Scenario: Check that the param purpose of financing will show in FMS Application
+    Given navigate to FMS application and login with valid credentials
+    And User_611 Click the first Wifak Application
+    And User_611 Click the second Wifak Application
+    And User_611 Click the application for financial facilities under second Wifak Appliaction
+    And User_611 Click the maintenance under application for financial facilities
+    And User_611 Click the Main information
+    And User_611 Select a new facility under application
+    And User_611 Enter the CIF num under cif details
+    And User_611 Enter the facility type under facility type details
+    And User_611 Enter the country of financing under facility type details
+    And User_611 Enter the facility rating under facility type details
+    And User_611 Click the Additional details
+    And User_611 Enter the currency code under Additional details
+    And User_611 Enter the total value under Additional details
+    And User_611 enter the expire date in additional info tab
+    And User_611 Click the limit details tab
+    And User_611 Click the add button under limit details tab
+    And User_611 Clicks the product class value one
+    And user_611 clicks the Purpose of financing to retrive the value
     
     

@@ -879,5 +879,89 @@ public class AccrualdealOBJ_611 {
 		return IIS_Repaymentplan_Vatpercentagevalidate;
 	}
 	
+	//Advance Payment Feature
+	//1358470/AT_APY_011
 	
+	@FindBy(xpath = "//td[text()='Advance Payment']")
+	private WebElement IIS_AdvancePaymentMenu;
+	public WebElement iisAdvancepaymentmenu_611() {
+		return IIS_AdvancePaymentMenu;
+	}
+	@FindBy(xpath = "//span[text()='Maintenance']")
+	private WebElement IIS_AdvancePaymentMenu_Maintenancetab;
+	public WebElement iisAdvancepaymentmenumaintenancetab_611() {
+		return IIS_AdvancePaymentMenu_Maintenancetab;
+	}
+	@FindBy(xpath = "//span[text()='Query']")
+	private WebElement IIS_AdvancePaymentMenu_QueryTab;
+	public WebElement iisAdvancepaymentmenuquerytab_611() {
+		return IIS_AdvancePaymentMenu_QueryTab;
+	}
+	@FindBy(xpath = "//span[text()='Verify']")
+	private WebElement IIS_AdvancePaymentMenu_Verifytab;
+	public WebElement iisAdvancepaymentmenuverifytab_611() {
+		return IIS_AdvancePaymentMenu_Verifytab;
+	}
+	@FindBy(xpath = "//span[text()='Approve']")
+	private WebElement IIS_AdvancePaymentMenu_Approvetab;
+	public WebElement iisAdvancepaymentmenuApprovetab_611() {
+		return IIS_AdvancePaymentMenu_Approvetab;
+	}
+	@FindBy(xpath = "//span[text()='Reverse']")
+	private WebElement IIS_AdvancePaymentMenu_Reversetab;
+	public WebElement iisAdvancepaymentmenureversetab_611() {
+		return IIS_AdvancePaymentMenu_Reversetab;
+	}
+	@FindBy(xpath = "//td[text()='Update After Approve']")
+	private WebElement IIS_AdvancePaymentMenu_UpdateAfterApprovetab;
+	public WebElement iisAdvancepaymentmenuupdateafterapprovetab_611() {
+		return IIS_AdvancePaymentMenu_UpdateAfterApprovetab;
+	}
+	@FindBy(xpath = "//td[text()='Batch Advance Payment']")
+	private WebElement IIS_AdvancePaymentMenu_BatchAdvancePaymenttab;
+	public WebElement iisAdvancepaymentmenubatchadvancepaymenttab_611() {
+		return IIS_AdvancePaymentMenu_BatchAdvancePaymenttab;
+	}
+	@FindBy(xpath = "//td[text()='Advance Payment-Increase']")
+	private WebElement IIS_AdvancePaymentMenu_Advancepaymentincreasetab;
+	public WebElement iisAdvancepaymentmenuadvancepaymentincreasetab_611() {
+		return IIS_AdvancePaymentMenu_Advancepaymentincreasetab;
+	}
+	@FindBy(xpath = "//td[text()='Advance Payment-Cancel']")
+	private WebElement IIS_AdvancePaymentMenu_Advancepaymentcanceltab;
+	public WebElement iisAdvancepaymentmenuadvancepaymentcanceltab_611() {
+		return IIS_AdvancePaymentMenu_Advancepaymentcanceltab;
+	}
+//@261524/AT_APS_023
+	@FindBy(xpath = "//input[@id='trsdealVO_DD_PERIODICITY_NBR_T022MT']")
+	private WebElement IIS_investment_deal_without_trade_deal_main_tenure_input;
+	public WebElement IISInvestmentDealWithoutTradeDealMainTenureInput_611(){
+		return IIS_investment_deal_without_trade_deal_main_tenure_input;
+	}
+	
+	@FindBy(xpath = "//select[@id='trsdealVO_DD_PERIODICITY_TYPE_T022MT']")
+	private WebElement IIS_investment_deal_without_trade_deal_main_tenure_dropdown;
+	public WebElement IISInvestmentDealWithoutTradeDealMainTenureDropdown_611(){
+		return IIS_investment_deal_without_trade_deal_main_tenure_dropdown;
+	}
+	@FindBy(xpath = "//select[@id='profit_calculation_method_T022MT']")
+	private WebElement IIS_investment_deal_without_trade_deal_main_repayment_profit_calculation_method_dropdown;
+	public WebElement IISInvestmentDealWithoutTradeDealMainRepaymentProfitCalculationMethodDropdown_611(){
+		return IIS_investment_deal_without_trade_deal_main_repayment_profit_calculation_method_dropdown;
+	}
+	@FindBy(xpath = "//select[@id='profit_dist_method_T022MT']")
+	private WebElement IIS_investment_deal_without_trade_deal_main_repayment_profit_recog_method_dropdown;
+	public WebElement IISInvestmentDealWithoutTradeDealMainRepaymentProfitRecogMethodDropdown_611(){
+		return IIS_investment_deal_without_trade_deal_main_repayment_profit_recog_method_dropdown;
+	}
+	@FindBy(xpath = "//input[@id='grace_period_T022MT']")
+	private WebElement IIS_investment_deal_without_trade_deal_main_repayment_grace_period_input;
+	public WebElement IISInvestmentDealWithoutTradeDealMainRepaymentGracePeriodInput_611(){
+		return IIS_investment_deal_without_trade_deal_main_repayment_grace_period_input;
+	}
+	@FindBy(xpath = "//select[@id='gracePeriodicity_T022MT']")
+	private WebElement IIS_investment_deal_without_trade_deal_main_repayment_grace_period_dropdown;
+	public WebElement IISInvestmentDealWithoutTradeDealMainRepaymentGracePeriodDropdown_611(){
+		return IIS_investment_deal_without_trade_deal_main_repayment_grace_period_dropdown;
+	}
 }

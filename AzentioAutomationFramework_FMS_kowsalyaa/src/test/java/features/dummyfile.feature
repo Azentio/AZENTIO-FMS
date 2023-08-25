@@ -6,4 +6,4 @@ Feature: Title of your feature
   @tag1
   Scenario: Title of your scenario
   
-And User_611 validate the Vat percentage is dispalyed or not in repayment plan
+And User_0072 update test data set id for Transaction_CSM

@@ -270,7 +270,17 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
     	clickandactionhelper.doubleClick(wifakapplicationobj_611.retrivedvaluedoubleclick_611());
         Thread.sleep(3000);
     }
-    
+    @Given("User_611 validate the estimators code is displayed from param application")
+    public void user_validate_the_estimators_code_is_displayed_from_param_application() throws Throwable  {
+    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.estimatorsnamesecondsearchbox_611());
+    	WebElement estimatorcodeisdisplayed = wifakapplicationobj_611.estimatorsnamesecondsearchbox_611();
+
+        if (estimatorcodeisdisplayed.isDisplayed()) {
+        	Assert.assertTrue(true);
+        	
+        }
+    }
+   
     @And("^User_611 enter the expire date in additional info tab$")
 	public void user_enter_the_expire_date_in_additional_info_tab() throws Throwable {
     	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.additionalTabExpireDate_611());
@@ -2574,8 +2584,6 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 		    	wifakapplicationobj_611.wifakFacilitiesManagementApproveCancelMenu_611().click();
 		    }
 
-		    
-
 		    @And("User_611 double click on the search grid first row in Approve\\Reject Cancel screen under WIFAK Facilities Management")
 		    public void user_double_click_on_the_search_grid_first_row_in_approve_reject_cancel_screen_under_wifak_facilities_management() {
 		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.wifakFacilitiesManagementApproveCancelSearchGridFirstRow_611());
@@ -2633,10 +2641,16 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.wifakFacilitiesManagementApproveCancelSearchAppRefInput_611());
 		    	wifakapplicationobj_611.wifakFacilitiesManagementApproveCancelSearchAppRefInput_611().sendKeys(testData.get("Reference Code"),Keys.ENTER);
 		    }
-
 		    
-
-
+		    //@678324_FMS_Core
+	    
+		    @And("^user_611 clicks the Purpose of financing to retrive the value$")
+		    public void user_clicks_the_purpose_of_financing_to_retrive_the_value() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.purposeoffinancing_611());
+		    	Thread.sleep(3000);
+		    	wifakapplicationobj_611.purposeoffinancing_611().click();
+		    	
+		    }	
 }
 
 

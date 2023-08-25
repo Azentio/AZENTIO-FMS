@@ -8,14 +8,14 @@ import io.cucumber.testng.CucumberOptions;
 import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
-@CucumberOptions(features = {"src/test/java/IISfeatures/AccrualProcess_611.feature"},
+@CucumberOptions(features = {"src/test/java/IISfeatures/AdvancePrincipalSettlement_611.feature"},
                 glue = "stepdefinitions",
                 monochrome=true, //to make steps in color
                 plugin = { "pretty",
                            "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                            "rerun:ReRunScenarios/FailedReRun.txt"}
                //dryRun = false //to check compilation errors                                      
-            , tags="@352414/AT_AP_050"
+            , tags="@261524/AT_APS_023"
 
 )
 public class TestApplication extends AbstractTestNGCucumberTests {

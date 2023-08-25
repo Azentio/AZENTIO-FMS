@@ -1693,5 +1693,12 @@ public class ApplicationforfinancialfacilityOBJ_611 {
 		return wifak_facilities_management_approve_cancel_menu_approve_reverse_btn;
 	}
 	
+	//@678324_FMS_Core
+	@FindBy(xpath ="//td[text()='Purpose of Financing']")
+	private WebElement Parameter_PurposeOfFinancing;
+	public WebElement purposeoffinancing_611() {
+		return Parameter_PurposeOfFinancing;
+	}			
+	
 }
 

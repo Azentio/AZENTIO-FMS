@@ -38,6 +38,8 @@ public class AccrualDealSteps_611 {
 	
 	String path = System.getProperty("user.dir") +"\\TestData\\IISTestData.xlsx";
 	ExcelData iisAccrualDealExcelData  = new ExcelData(path,"AccrualDeal_611","DataSet ID");
+	ExcelData iisAdvancePrincialSettlementExcelData  = new ExcelData(path,"AccrualPrincipalSettlement_611","DataSet ID");
+	ExcelData iisAdvancePayment  = new ExcelData(path,"AdvancePayment_611","DataSet ID");
 	ExcelData iisAccrualProcessExcelData  = new ExcelData(path,"AccrualProcess","DataSet ID");
 	ExcelData MTSEODExcelData  = new ExcelData(path,"MTSTestData","DataSet ID");
 	Map<String, String> testData;
@@ -74,6 +76,43 @@ public class AccrualDealSteps_611 {
 	    public void get_the_test_data_for_test_case_AT_AD_009() throws Throwable {
 			testData = iisAccrualDealExcelData.getTestdata("DS_AT_AD_009");
 	    }
+//Advance Principal Settlement
+//AT_APS_001
+		@And("^User_611 get the test data for test case AT_APS_001")
+	    public void get_the_test_data_for_test_case_AT_APS_001() throws Throwable {
+			testData = iisAdvancePrincialSettlementExcelData.getTestdata("AT_APS_001");
+	    }
+		@And("^User_611 get the test data for test case AT_APS_002")
+	    public void get_the_test_data_for_test_case_AT_APS_002() throws Throwable {
+			testData = iisAdvancePrincialSettlementExcelData.getTestdata("AT_APS_002");
+	    }
+		@And("^User_611 get the test data for test case AT_APS_019")
+	    public void get_the_test_data_for_test_case_AT_APS_019() throws Throwable {
+			testData = iisAdvancePrincialSettlementExcelData.getTestdata("AT_APS_019");
+	    }
+		@And("^User_611 get the test data for test case AT_APS_020")
+	    public void get_the_test_data_for_test_case_AT_APS_020() throws Throwable {
+			testData = iisAdvancePrincialSettlementExcelData.getTestdata("AT_APS_020");
+	    }
+		@And("^User_611 get the test data for test case AT_APS_021")
+	    public void get_the_test_data_for_test_case_AT_APS_021() throws Throwable {
+			testData = iisAdvancePrincialSettlementExcelData.getTestdata("AT_APS_021");
+	    }
+		@And("^User_611 get the test data for test case AT_APS_022")
+	    public void get_the_test_data_for_test_case_AT_APS_022() throws Throwable {
+			testData = iisAdvancePrincialSettlementExcelData.getTestdata("AT_APS_022");
+	    }
+		@And("^User_611 get the test data for test case AT_APS_023")
+	    public void get_the_test_data_for_test_case_AT_APS_023() throws Throwable {
+			testData = iisAdvancePrincialSettlementExcelData.getTestdata("AT_APS_023");
+	    }
+//Advance Payment
+//AT_APY_012
+		@And("^User_611 get the test data for test case AT_APY_012")
+	    public void get_the_test_data_for_test_case_AT_APY_012() throws Throwable {
+			testData = iisAdvancePrincialSettlementExcelData.getTestdata("AT_APY_012");
+	    }
+		
 //Accurual process
 //AT_AP_013
 				@And("^User_611 get the test data for test case AT_AP_013$")
@@ -675,8 +714,7 @@ public class AccrualDealSteps_611 {
 			}
 			
 		}
-		
-		
+	
 //		@AT_AD_003
 		@When("User_611 validate button in maintenance under Investment Deals Combined without Trade Deal for Accrual Deal")
 		public void user_validate_button_in_maintenance_under_investment_deals_combined_without_trade_deal_for_accrual_deal() throws Throwable {
@@ -715,7 +753,6 @@ public class AccrualDealSteps_611 {
 					}
 				}
 			}
-			
 			
 			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IIS_InformationPopupTitle_611());
 			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IIS_InformationPopupTextMsg_611());
@@ -1151,7 +1188,7 @@ public class AccrualDealSteps_611 {
 			AccrualDealobj611.IISperiodicalprocessingmenu_611().click();
 		   		}
 
-		@And("User_611 click the post accruals menu in periodical processing menu under iis application menu")
+        @And("User_611 click the post accruals menu in periodical processing menu under iis application menu")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 		public void user_click_the_post_accruals_menu_in_periodical_processing_menu_under_iis_application_menu() throws Throwable {
 			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IISperiodicalprocessingpostaccruals_611()); 
 			AccrualDealobj611.IISperiodicalprocessingpostaccruals_611().click();
@@ -2202,12 +2239,213 @@ public class AccrualDealSteps_611 {
 		//@128354/AT_AD_007
 		@And("User_611 validate the Vat percentage is dispalyed or not in repayment plan")
 		public void user_validate_the_vat_percentage_is_dispalyed_or_not_in_repayment_plan() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.iisrepaymentplanvatpercentagevalidate_611());
 		    WebElement Vatpercentageisdisplayed = AccrualDealobj611.iisrepaymentplanvatpercentagevalidate_611();
 		    if (Vatpercentageisdisplayed.isDisplayed()) {
 	        	Assert.assertTrue(true);
 	    }
 		}
+		//Advance Payment Feature
+		//1358470/AT_APY_011
+		
+		@And("User_611 Validate the Advance Payment menu in IIS application")
+		public void user_validate_the_advance_payment_menu_in_iis_application() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.iisAdvancepaymentmenu_611());
+			WebElement advancepaymentisdisplayed = AccrualDealobj611.iisAdvancepaymentmenu_611();
+		    if (advancepaymentisdisplayed.isDisplayed()) {
+	        	Assert.assertTrue(true);
+		    }
+		}
+
+		@And("User_611 Validate the Maintenance Submenu under Advance Payment menu in IIS application")
+		public void user_validate_the_maintenance_submenu_under_advance_payment_menu_in_iis_application() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.iisAdvancepaymentmenumaintenancetab_611());
+			WebElement advancepaymentmaintenanceisdisplayed = AccrualDealobj611.iisAdvancepaymentmenumaintenancetab_611();
+		    if (!advancepaymentmaintenanceisdisplayed.isDisplayed()) {
+	        	Assert.fail();
+		    }
+		}
+
+		@And("User_611 Validate the Query Submenu under Advance Payment menu in IIS application")
+		public void user_validate_the_query_submenu_under_advance_payment_menu_in_iis_application() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.iisAdvancepaymentmenuquerytab_611());
+			WebElement advancepaymentqueryisdisplayed = AccrualDealobj611.iisAdvancepaymentmenuquerytab_611();
+		    if (advancepaymentqueryisdisplayed.isDisplayed()) {
+	        	Assert.assertTrue(true);
+		    }
+		}
+
+		@And("User_611 Validate the Verify Submenu under Advance Payment menu in IIS application")
+		public void user_validate_the_verify_submenu_under_advance_payment_menu_in_iis_application() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.iisAdvancepaymentmenuverifytab_611());
+			WebElement advancepaymentverifyisdisplayed = AccrualDealobj611.iisAdvancepaymentmenuverifytab_611();
+		    if (advancepaymentverifyisdisplayed.isDisplayed()) {
+	        	Assert.assertTrue(true);
+		    }
+		}
+
+		@And("User_611 Validate the Approve Submenu under Advance Payment menu in IIS application")
+		public void user_validate_the_approve_submenu_under_advance_payment_menu_in_iis_application() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.iisAdvancepaymentmenuApprovetab_611());
+			WebElement advancepaymentapproveisdisplayed = AccrualDealobj611.iisAdvancepaymentmenuApprovetab_611();
+		    if (advancepaymentapproveisdisplayed.isDisplayed()) {
+	        	Assert.assertTrue(true);
+		    }
+		}
+
+		@And("User_611 Validate the Reverse Submenu under Advance Payment menu in IIS application")
+		public void user_validate_the_reverse_submenu_under_advance_payment_menu_in_iis_application() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.iisAdvancepaymentmenureversetab_611());
+			WebElement advancepaymentreverseisdisplayed = AccrualDealobj611.iisAdvancepaymentmenureversetab_611();
+		    if (advancepaymentreverseisdisplayed.isDisplayed()) {
+	        	Assert.assertTrue(true);
+		    }
+		}
+
+		@And("User_611 Validate the update after approve Submenu under Advance Payment menu in IIS application")
+		public void user_validate_the_update_after_approve_submenu_under_advance_payment_menu_in_iis_application() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.iisAdvancepaymentmenuupdateafterapprovetab_611());
+			WebElement advancepaymentupdateaftapproveisdisplayed = AccrualDealobj611.iisAdvancepaymentmenuupdateafterapprovetab_611();
+		    if (advancepaymentupdateaftapproveisdisplayed.isDisplayed()) {
+	        	Assert.assertTrue(true);
+		    }
+		}
+
+		@And("User_611 Validate the Batch Advance Payment Submenu under Advance Payment menu in IIS application")
+		public void user_validate_the_batch_advance_payment_submenu_under_advance_payment_menu_in_iis_application() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.iisAdvancepaymentmenubatchadvancepaymenttab_611());
+			WebElement batchadvancepaymentisdisplayed = AccrualDealobj611.iisAdvancepaymentmenubatchadvancepaymenttab_611();
+		    if (batchadvancepaymentisdisplayed.isDisplayed()) {
+	        	Assert.assertTrue(true);
+		    }
+		}
+
+		@And("User_611 Validate the Advance Payment-Increase Submenu under Advance Payment menu in IIS application")
+		public void user_validate_the_advance_payment_increase_submenu_under_advance_payment_menu_in_iis_application() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.iisAdvancepaymentmenuadvancepaymentincreasetab_611());
+			WebElement advancepaymentincreaseisdisplayed = AccrualDealobj611.iisAdvancepaymentmenuadvancepaymentincreasetab_611();
+		    if (advancepaymentincreaseisdisplayed.isDisplayed()) {
+	        	Assert.assertTrue(true);
+		    }
+		}
+
+		@And("User_611 Validate the  Advance Payment-Cancel Submenu under Advance Payment menu in IIS application")
+		public void user_validate_the_advance_payment_cancel_submenu_under_advance_payment_menu_in_iis_application() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.iisAdvancepaymentmenuadvancepaymentcanceltab_611());
+			WebElement advancepaymentcancelisdisplayed = AccrualDealobj611.iisAdvancepaymentmenuadvancepaymentcanceltab_611();
+		    if (advancepaymentcancelisdisplayed.isDisplayed()) {
+	        	Assert.assertTrue(true);
+		    }
+		}
+//@261524/AT_APS_023
+		@And("User_611 enter the Tenure in maintenance under Investment Deals Combined without Trade Deal")
+		public void user_enter_the_tenure_in_maintenance_under_investment_deals_combined_without_trade_deal() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IISInvestmentDealWithoutTradeDealMainTenureInput_611());
+			AccrualDealobj611.IISInvestmentDealWithoutTradeDealMainTenureInput_611().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
+			AccrualDealobj611.IISInvestmentDealWithoutTradeDealMainTenureInput_611().sendKeys(testData.get("Tenure"),Keys.TAB);
+			for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(AccrualDealobj611.IISInvestmentDealWithoutTradeDealMainTenureInput_611().getAttribute("prevvalue")
+							.equals(testData.get("Tenure"))) {
+						break;
+					}
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}		
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IIS_ConfirmPopupOkBtn_611());
+			AccrualDealobj611.IIS_ConfirmPopupOkBtn_611().click();	
+		}
+		
+		@And("User_611 select the Tenure dropdown as Years in maintenance under Investment Deals Combined without Trade Deal")
+		public void user_select_the_tenure_dropdown_as_years_in__maintenance_under_investment_deals_combined_without_trade_deal() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IISInvestmentDealWithoutTradeDealMainTenureDropdown_611()); 
+			dropDownHelper.SelectUsingVisibleText(AccrualDealobj611.IISInvestmentDealWithoutTradeDealMainTenureDropdown_611(),
+					testData.get("Tenure DD"));
+		}	
+		@And("User_611 select the Profit Calculation as Diminising Returns in repayment tab under maintenance in Investment Deals Combined without Trade Deal")
+		public void user_select_the_profit_calculation_as_diminising_returns_in_repayment_tab_under_maintenance_in_investment_deals_combined_without_trade_deal() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IISInvestmentDealWithoutTradeDealMainRepaymentProfitCalculationMethodDropdown_611());
+			for (int i = 0; i <= 500; i++) {
+				try {
+					dropDownHelper.SelectUsingVisibleText(AccrualDealobj611.IISInvestmentDealWithoutTradeDealMainRepaymentProfitCalculationMethodDropdown_611(),
+							testData.get("Profit Calculation"));
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		}
+
+		@And("User_611 select the Profit Recognition as Diminising Returns in repayment tab under maintenance in Investment Deals Combined without Trade Deal")
+		public void user_select_the_profit_recognition_as_diminising_returns_in_repayment_tab_under_maintenance_in_investment_deals_combined_without_trade_deal() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IISInvestmentDealWithoutTradeDealMainRepaymentProfitRecogMethodDropdown_611());
+			for (int i = 0; i <= 500; i++) {
+				try {
+					dropDownHelper.SelectUsingVisibleText(AccrualDealobj611.IISInvestmentDealWithoutTradeDealMainRepaymentProfitRecogMethodDropdown_611(),
+							testData.get("Profit Recognition"));
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}		    
+		}
+
+		@And("User_611 enter the Grace period in repayment tab under maintenance in Investment Deals Combined without Trade Deal")
+		public void user_enter_the_grace_period_in_repayment_tab_under_maintenance_in_investment_deals_combined_without_trade_deal() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IISInvestmentDealWithoutTradeDealMainRepaymentGracePeriodInput_611());
+			AccrualDealobj611.IISInvestmentDealWithoutTradeDealMainRepaymentGracePeriodInput_611().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
+			AccrualDealobj611.IISInvestmentDealWithoutTradeDealMainRepaymentGracePeriodInput_611().sendKeys(testData.get("Grace Period"),Keys.TAB);
+			for(int i = 0; i <= 500; i++) {
+	    		try {
+					if(AccrualDealobj611.IISInvestmentDealWithoutTradeDealMainTenureInput_611().getAttribute("prevvalue")
+							.equals(testData.get("Grace Period"))) {
+						break;
+					}
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+	    	}
+		}
+
+		@And("User_611 select the Grace period dropdown as Years in repayment tab under maintenance in Investment Deals Combined without Trade Deal")
+		public void user_select_the_grace_period_dropdown_as_years_in_repayment_tab_under_maintenance_in_investment_deals_combined_without_trade_deal() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IISInvestmentDealWithoutTradeDealMainRepaymentGracePeriodDropdown_611()); 
+			for (int i = 0; i <= 500; i++) {
+				try {
+					dropDownHelper.SelectUsingVisibleText(AccrualDealobj611.IISInvestmentDealWithoutTradeDealMainRepaymentGracePeriodDropdown_611(),
+							testData.get("Grace Period DD"));
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}		
+		}
+		@When("User_611 validate button in maintenance under Investment Deals Combined without Trade Deal for Accrual Process")
+		public void user_validate_button_in_maintenance_under_investment_deals_combined_without_trade_deal_for_accrual_process() throws Throwable {
+			waitHelper.waitForElementwithFluentwait(driver, AccrualDealobj611.IISInvestmentDealWithoutTradeDealMainValidateBtn_611());
+			for (int i = 0; i <= 500; i++) {
+				try {
+					AccrualDealobj611.IISInvestmentDealWithoutTradeDealMainValidateBtn_611().click();
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}		
 
 		
-}
 
+		}
+}

@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\inindc00611\AppData\Local\Temp\testng-eclipse--2090895464\testng-customsuite.xml</span>
+                    <span>C:\Users\inindc00611\AppData\Local\Temp\testng-eclipse--2097736388\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Periodical Process - Post Accruals / Final Accruals - T10EMF&quot;, &quot;Optional[To check the Accrual Proce...)">runScenario("Periodical Process - Post Accruals / Final Accruals - T10EMF", "Optional[To check the Accrual Proce...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Create a 10 years non upfront deal with 1 year grace period&quot;, &quot;Optional[To check Advance Principal ...)">runScenario("Create a 10 years non upfront deal with 1 year grace period", "Optional[To check Advance Principal ...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -127,20 +127,31 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Periodical Process - Post Accruals / Final Accruals - T10EMF&quot;, &quot;Optional[To check the Accrual Proce...)">
-                  </a> <!-- runScenario("Periodical Process - Post Accruals / Final Accruals - T10EMF", "Optional[To check the Accrual Proce...) -->
+                  <a name="runScenario(&quot;Create a 10 years non upfront deal with 1 year grace period&quot;, &quot;Optional[To check Advance Principal ...)">
+                  </a> <!-- runScenario("Create a 10 years non upfront deal with 1 year grace period", "Optional[To check Advance Principal ...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Periodical Process - Post Accruals / Final Accruals - T10EMF", "Optional[To check the Accrual Process Features]")</span>
-                  <div class="stack-trace">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:98)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at jdk.proxy2/jdk.proxy2.$Proxy46.sendKeys(Unknown Source)
-	at stepdefinitions.AccrualDealSteps_611.user_search_the_deal_number_in_searchgrid_under_approve_menu_in_investment_deals_combined_without_trade_deal(AccrualDealSteps_611.java:601)
-	at ✽.User_611 search the deal number in searchgrid under Approve menu in Investment Deals Combined without Trade Deal(file:///C:/Users/inindc00611/git/FMS1/AzentioAutomationFramework_FMS_kowsalyaa/src/test/java/IISfeatures/AccrualProcess_611.feature:214)
+                  <span class="parameters">("Create a 10 years non upfront deal with 1 year grace period", "Optional[To check Advance Principal Settlement features]")</span>
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.111 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe 
+Host info: host: &apos;DESKTOP-PSK9T3C&apos;, ip: &apos;10.81.234.59&apos;
+Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:148)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:106)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:229)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:101)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:71)
+	at resources.BaseClass.initializeDriver(BaseClass.java:29)
+	at stepdefinitions.HooksClass.browserSetup(HooksClass.java:42)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -152,7 +163,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\inindc00611\AppData\Local\Temp\testng-eclipse--2090895464\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\inindc00611\AppData\Local\Temp\testng-eclipse--2097736388\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -213,12 +224,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'Runner.TestApplication')
-data.setCell(0, 3, 175779);
+data.setCell(0, 3, 11875);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -252,12 +263,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("Periodical Process - Post Accruals / Final Accruals - T10EMF", "Optional[To check the Accrual Proce...)</span>
-                <span class="method-start">3664 ms</span>
+                <span class="method-name">runScenario("Create a 10 years non upfront deal with 1 year grace period", "Optional[To check Advance Principal ...)</span>
+                <span class="method-start">2175 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">179451 ms</span>
+                <span class="method-start">14073 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
