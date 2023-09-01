@@ -76,6 +76,14 @@ public class IIS_ApplicationObj {
 		return IIS_investment_deal_without_trade_deal_main_tenure_input;
 	}
 	
+	@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")                         //newly added
+	private WebElement IIS_investment_deal_without_trade_deal_main_tenure_input_popup;
+	public WebElement IIS_investment_deal_without_trade_deal_main_tenure_input_popup(){
+		return IIS_investment_deal_without_trade_deal_main_tenure_input_popup;
+	}
+	
+	
+	
 	@FindBy(xpath = "//select[@id='trsdealVO_DD_PERIODICITY_TYPE_T022MT']")
 	private WebElement IIS_investment_deal_without_trade_deal_main_tenure_dropdown;
 	public WebElement IISInvestmentDealWithoutTradeDealMainTenureDropdown(){

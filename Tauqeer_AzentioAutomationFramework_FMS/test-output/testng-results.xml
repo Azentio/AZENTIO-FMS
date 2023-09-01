@@ -2,53 +2,47 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-17T13:54:28 AST" name="Default suite" finished-at="2023-08-17T13:54:47 AST" duration-ms="18835">
+  <suite started-at="2023-08-29T14:14:39 AST" name="Default suite" finished-at="2023-08-29T14:18:17 AST" duration-ms="218359">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5afa3c9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-08-17T13:54:28 AST" name="Default test" finished-at="2023-08-17T13:54:47 AST" duration-ms="18835">
+    <test started-at="2023-08-29T14:14:39 AST" name="Default test" finished-at="2023-08-29T14:18:17 AST" duration-ms="218359">
       <class name="Runner.TestApplication">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-08-17T13:54:28 AST" name="setUpClass" finished-at="2023-08-17T13:54:31 AST" duration-ms="3045" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-08-29T14:14:39 AST" name="setUpClass" finished-at="2023-08-29T14:14:41 AST" duration-ms="1564" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-08-17T13:54:31 AST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-08-17T13:54:39 AST" duration-ms="7774" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-08-29T14:14:41 AST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-08-29T14:17:58 AST" duration-ms="197008" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Create a 10 years non upfront deal with 1 year grace period"]]>
+                <![CDATA["Run the accrual and settlement process on the installment dates from EOD and settle the installment"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[To check the Accrual Process Features]"]]>
+                <![CDATA["Optional[To check the Advance Principle Settlement]"]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.IllegalStateException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The path to the driver executable The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://chromedriver.chromium.org/. The latest version can be downloaded from https://chromedriver.chromium.org/downloads]]>
+              <![CDATA[Cannot invoke "String.contains(java.lang.CharSequence)" because "toEscape" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The path to the driver executable The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://chromedriver.chromium.org/. The latest version can be downloaded from https://chromedriver.chromium.org/downloads
-at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:149)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:42)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:315)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:456)
-at org.openqa.selenium.chrome.ChromeDriverService.createServiceWithConfig(ChromeDriverService.java:165)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:71)
-at resources.BaseClass.initializeDriver(BaseClass.java:29)
-at stepdefinitions.HooksClass.browserSetup(HooksClass.java:42)
+              <![CDATA[java.lang.AssertionError: Cannot invoke "String.contains(java.lang.CharSequence)" because "toEscape" is null
+at org.testng.Assert.fail(Assert.java:99)
+at stepdefinitions.IIS_IncidentalCharges.user_select_the_grace_period_dropdown_as_Years_in_repayment_tab_in_maintenance_under_investment_deals_combined_without_trade_deal_tab(IIS_IncidentalCharges.java:492)
+at ✽.user select the grace period dropdown as Years in repayment tab in maintenance under investment deals combined without trade deal tab(file:///C:/Users/inindc00616/git/AZENTIO-FMS/Tauqeer_AzentioAutomationFramework_FMS/src/test/java/features/IIS_AdvancePrincipleSettlement.feature:80)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-08-17T13:54:39 AST" name="tearDownClass" finished-at="2023-08-17T13:54:47 AST" duration-ms="7608" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@5afa3c9]" started-at="2023-08-29T14:17:58 AST" name="tearDownClass" finished-at="2023-08-29T14:18:17 AST" duration-ms="19686" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.openqa.selenium.Keys;
@@ -31,12 +32,12 @@ public class IIS_IncidentalCharges extends BaseClass {
 	IIS_ApplicationObj IISApplicationObj = new IIS_ApplicationObj(driver);
 
 	
-	String path = System.getProperty("user.dir") +"\\TestData\\FMSTestData.xlsx";
+	String path = System.getProperty("user.dir")+"\\TestData\\FMSTestData.xlsx";
 	ExcelData iisIncidentalChargesExcelData  = new ExcelData(path,"IncidentalCharges","DataSet ID");
 	ExcelData iisAccrualDealExcelData  = new ExcelData(path,"AccrualDeal","DataSet ID");
 	
 	ExcelData iisAccrualProcessExcelData  = new ExcelData(path,"AccrualProcess","DataSet ID");
-	Map<String, String> testData;
+	Map<String, String> testData = new HashMap<>();
 	
 	
 
@@ -94,8 +95,10 @@ public class IIS_IncidentalCharges extends BaseClass {
 	@Then("^user enter the party in maintenance under investment deals combined without trade deal tab$")
 	public void user_enter_the_party_in_maintenance_under_investment_deals_combined_without_trade_deal_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj.IISInvestmentDealWithoutTradeDealMainPartyInput());
-		IISApplicationObj.IISInvestmentDealWithoutTradeDealMainPartyInput().sendKeys(testData.get("Party Value"),Keys.TAB);
-//		IISApplicationObj.IISInvestmentDealWithoutTradeDealMainPartyInput().sendKeys("727",Keys.TAB);
+	//	IISApplicationObj.IISInvestmentDealWithoutTradeDealMainPartyInput().sendKeys(testData.get("Party Value").trim(),Keys.TAB);
+	//	System.out.println(testData.get("Party Value").trim());
+		
+		IISApplicationObj.IISInvestmentDealWithoutTradeDealMainPartyInput().sendKeys("727",Keys.TAB);
 		for(int i = 0; i <= 500; i++) {
     		try {
 				if(!(IISApplicationObj.IISInvestmentDealWithoutTradeDealMainPartyInput().getAttribute("prevvalue").isBlank())) {
@@ -118,8 +121,8 @@ public class IIS_IncidentalCharges extends BaseClass {
 	@Then("^user enter the category in maintenance under investment deals combined without trade deal tab$")
 	public void user_enter_the_category_in_maintenance_under_investment_deals_combined_without_trade_deal_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj.IISInvestmentDealWithoutTradeDealMainCategoryInput());
-		IISApplicationObj.IISInvestmentDealWithoutTradeDealMainCategoryInput().sendKeys(testData.get("Category Code"),Keys.TAB);
-//		IISApplicationObj.IISInvestmentDealWithoutTradeDealMainCategoryInput().sendKeys("3",Keys.TAB);
+	//	IISApplicationObj.IISInvestmentDealWithoutTradeDealMainCategoryInput().sendKeys(testData.get("Category Code"),Keys.TAB);
+		IISApplicationObj.IISInvestmentDealWithoutTradeDealMainCategoryInput().sendKeys("11",Keys.TAB);
 		for(int i = 0; i <= 500; i++) {
     		try {
 				if(!(IISApplicationObj.IISInvestmentDealWithoutTradeDealMainCategoryInput().getAttribute("prevvalue").isBlank())) {
@@ -135,8 +138,8 @@ public class IIS_IncidentalCharges extends BaseClass {
 	@Then("^user enter the product class in maintenance under investment deals combined without trade deal tab$")
 	public void user_enter_the_product_class_in_maintenance_under_investment_deals_combined_without_trade_deal_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj.IISInvestmentDealWithoutTradeDealMainProductClassInput());
-		IISApplicationObj.IISInvestmentDealWithoutTradeDealMainProductClassInput().sendKeys(testData.get("Product Class"),Keys.TAB);
-//		IISApplicationObj.IISInvestmentDealWithoutTradeDealMainProductClassInput().sendKeys("100",Keys.TAB);
+	//	IISApplicationObj.IISInvestmentDealWithoutTradeDealMainProductClassInput().sendKeys(testData.get("Product Class"),Keys.TAB);
+		IISApplicationObj.IISInvestmentDealWithoutTradeDealMainProductClassInput().sendKeys("163",Keys.TAB);
 		for(int i = 0; i <= 500; i++) {
     		try {
 				if(!(IISApplicationObj.IISInvestmentDealWithoutTradeDealMainDealCYnput().getAttribute("prevvalue").isBlank())) {
@@ -152,8 +155,8 @@ public class IIS_IncidentalCharges extends BaseClass {
 	@Then("^user enter the amount in maintenance under investment deals combined without trade deal tab$")
 	public void user_enter_the_amount_in_maintenance_under_investment_deals_combined_without_trade_deal_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj.IISInvestmentDealWithoutTradeDealMainAmountInput());
-		IISApplicationObj.IISInvestmentDealWithoutTradeDealMainAmountInput().sendKeys(testData.get("Amount"),Keys.TAB);
-//		IISApplicationObj.IISInvestmentDealWithoutTradeDealMainAmountInput().sendKeys("10000",Keys.TAB);
+//		IISApplicationObj.IISInvestmentDealWithoutTradeDealMainAmountInput().sendKeys(testData.get("Amount"),Keys.TAB);
+		IISApplicationObj.IISInvestmentDealWithoutTradeDealMainAmountInput().sendKeys("1800000",Keys.TAB);
 		for(int i = 0; i <= 500; i++) {
     		try {
 				if(!(IISApplicationObj.IISInvestmentDealWithoutTradeDealMainAmountInput().getAttribute("prevvalue").isBlank())) {
@@ -169,7 +172,8 @@ public class IIS_IncidentalCharges extends BaseClass {
 	public void user_enter_the_tenure_in_maintenance_under_investment_deals_combined_without_trade_deal_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj.IISInvestmentDealWithoutTradeDealMainTenureInput());
 		IISApplicationObj.IISInvestmentDealWithoutTradeDealMainTenureInput().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
-		IISApplicationObj.IISInvestmentDealWithoutTradeDealMainTenureInput().sendKeys(testData.get("Tenure"),Keys.TAB);
+	//	IISApplicationObj.IISInvestmentDealWithoutTradeDealMainTenureInput().sendKeys(testData.get("Tenure"),Keys.TAB);
+		IISApplicationObj.IISInvestmentDealWithoutTradeDealMainTenureInput().sendKeys("1",Keys.TAB);
 		for(int i = 0; i <= 500; i++) {
     		try {
 				if(IISApplicationObj.IISInvestmentDealWithoutTradeDealMainTenureInput().getAttribute("prevvalue")
@@ -189,8 +193,13 @@ public class IIS_IncidentalCharges extends BaseClass {
 	@Then("^user select the tenure dropdown as years in maintenance under investment deals combined without trade deal tab$")
 	public void user_select_the_tenure_dropdown_as_years_in_maintenance_under_investment_deals_combined_without_trade_deal_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj.IISInvestmentDealWithoutTradeDealMainTenureDropdown()); 
-		dropDownHelper.SelectUsingVisibleText(IISApplicationObj.IISInvestmentDealWithoutTradeDealMainTenureDropdown(),
-				testData.get("Tenure DD"));
+		/*
+		 * dropDownHelper.SelectUsingVisibleText(IISApplicationObj.
+		 * IISInvestmentDealWithoutTradeDealMainTenureDropdown(),
+		 * testData.get("Tenure DD"));
+		 */
+		dropDownHelper.SelectUsingVisibleText(IISApplicationObj.IISInvestmentDealWithoutTradeDealMainTenureDropdown(),"Years");
+		
 	}	
 	
 	@Then("User enter the yield details Margin value in maintenance under Investment Deals Combined without Trade Deal")
@@ -412,8 +421,13 @@ public class IIS_IncidentalCharges extends BaseClass {
 		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj.IISInvestmentDealWithoutTradeDealMainRepaymentProfitCalculationMethodDropdown());
 		for (int i = 0; i <= 500; i++) {
 			try {
-				dropDownHelper.SelectUsingVisibleText(IISApplicationObj.IISInvestmentDealWithoutTradeDealMainRepaymentProfitCalculationMethodDropdown(),
-						testData.get("Profit Calculation"));
+				/*
+				 * dropDownHelper.SelectUsingVisibleText(IISApplicationObj.
+				 * IISInvestmentDealWithoutTradeDealMainRepaymentProfitCalculationMethodDropdown
+				 * (), testData.get("Profit Calculation"));
+				 */
+				dropDownHelper.SelectUsingVisibleText(IISApplicationObj.
+						  IISInvestmentDealWithoutTradeDealMainRepaymentProfitCalculationMethodDropdown (), "Diminishing Returns");
 				break;
 			} catch (Exception e) {
 				if (i == 500) {
@@ -428,8 +442,13 @@ public class IIS_IncidentalCharges extends BaseClass {
 		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj.IISInvestmentDealWithoutTradeDealMainRepaymentProfitRecogMethodDropdown());
 		for (int i = 0; i <= 500; i++) {
 			try {
+				/*
+				 * dropDownHelper.SelectUsingVisibleText(IISApplicationObj.
+				 * IISInvestmentDealWithoutTradeDealMainRepaymentProfitRecogMethodDropdown(),
+				 * testData.get("Profit Recognition"));
+				 */
 				dropDownHelper.SelectUsingVisibleText(IISApplicationObj.IISInvestmentDealWithoutTradeDealMainRepaymentProfitRecogMethodDropdown(),
-						testData.get("Profit Recognition"));
+						"Diminishing Returns");
 				break;
 			} catch (Exception e) {
 				if (i == 500) {
@@ -443,7 +462,8 @@ public class IIS_IncidentalCharges extends BaseClass {
 	public void user_enter_the_grace_period_in_repayment_tab_in_maintenance_under_investment_deals_combined_without_trade_deal_tab() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, IISApplicationObj.IISInvestmentDealWithoutTradeDealMainRepaymentGracePeriodInput());
 		IISApplicationObj.IISInvestmentDealWithoutTradeDealMainRepaymentGracePeriodInput().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
-		IISApplicationObj.IISInvestmentDealWithoutTradeDealMainRepaymentGracePeriodInput().sendKeys(testData.get("Grace Period"),Keys.TAB);
+	//	IISApplicationObj.IISInvestmentDealWithoutTradeDealMainRepaymentGracePeriodInput().sendKeys(testData.get("Grace Period"),Keys.TAB);
+		IISApplicationObj.IISInvestmentDealWithoutTradeDealMainRepaymentGracePeriodInput().sendKeys("1",Keys.TAB);
 		for(int i = 0; i <= 500; i++) {
     		try {
 				if(IISApplicationObj.IISInvestmentDealWithoutTradeDealMainTenureInput().getAttribute("prevvalue")
