@@ -51,6 +51,21 @@ public class AccrualDealSteps_611 {
     public void get_the_test_data_for_test_case_AT_AD_004() throws Throwable {
 		testData = iisAccrualDealExcelData.getTestdata("DS_AT_AD_004");
     }
+//	@AT_PNLT_008
+	@And("^User_611 get the test data for test case AT_PNLT_008$")
+    public void get_the_test_data_for_test_case_AT_PNLT_008() throws Throwable {
+		testData = iisAccrualDealExcelData.getTestdata("DS_AT_PNLT_008");
+    }
+//	@AT_PNLT_009
+	@And("^User_611 get the test data for test case AT_PNLT_009$")
+    public void get_the_test_data_for_test_case_AT_PNLT_009() throws Throwable {
+		testData = iisAccrualDealExcelData.getTestdata("DS_AT_PNLT_009");
+    }
+//	@AT_PNLT_009
+	@And("^User_611 get the test data for test case AT_PNLT_010$")
+    public void get_the_test_data_for_test_case_AT_PNLT_010() throws Throwable {
+		testData = iisAccrualDealExcelData.getTestdata("DS_AT_PNLT_010");
+    }
 //@AT_AD_005
 	@And("^User_611 get the test data for test case AT_AD_005$")
     public void get_the_test_data_for_test_case_AT_AD_005() throws Throwable {
@@ -124,6 +139,26 @@ public class AccrualDealSteps_611 {
 			    public void get_the_test_data_for_test_case_AT_AP_014() throws Throwable {
 					testData = iisAccrualProcessExcelData.getTestdata("DS_AT_AP_014");
 			    }
+//AT_PNLT_011
+				@And("^User_611 get the test data for test case AT_PNLT_011$")
+			    public void get_the_test_data_for_test_case_AT_PNLT_011() throws Throwable {
+					testData = iisAccrualProcessExcelData.getTestdata("DS_AT_PNLT_011");
+			    }
+//AT_PNLT_012
+				@And("^User_611 get the test data for test case AT_PNLT_012$")
+			    public void get_the_test_data_for_test_case_AT_PNLT_012() throws Throwable {
+					testData = iisAccrualProcessExcelData.getTestdata("DS_AT_PNLT_012");
+			    }
+//AT_PNLT_013
+				@And("^User_611 get the test data for test case AT_PNLT_013$")
+			    public void get_the_test_data_for_test_case_AT_PNLT_013() throws Throwable {
+					testData = iisAccrualProcessExcelData.getTestdata("DS_AT_PNLT_013");
+			    }
+//AT_PNLT_010_02
+				@And("^User_611 get the test data for test case AT_PNLT_010_02$")
+			    public void get_the_test_data_for_test_case_AT_PNLT_010_02() throws Throwable {
+					testData = iisAccrualProcessExcelData.getTestdata("DS_AT_PNLT_010_02");
+			    }
 //AT_AP_049
 				@And("^User_611 get the test data for test case AT_AP_049$")
 			    public void get_the_test_data_for_test_case_AT_AP_049() throws Throwable {
@@ -151,6 +186,24 @@ public class AccrualDealSteps_611 {
 			    public void get_the_test_data_for_test_case_AT_AP_048() throws Throwable {
 					testData = MTSEODExcelData.getTestdata("DS_AT_AP_048");
 			    }
+				
+//AT_PNLT_008_01
+				@And("^User_611 get the test data for test case AT_PNLT_008_01$")
+			    public void get_the_test_data_for_test_case_AT_PNLT_008_01() throws Throwable {
+					testData = MTSEODExcelData.getTestdata("DS_AT_PNLT_008_01");
+			    }
+				
+//AT_PNLT_009_01
+				@And("^User_611 get the test data for test case AT_PNLT_009_01$")
+			    public void get_the_test_data_for_test_case_AT_PNLT_009_01() throws Throwable {
+					testData = MTSEODExcelData.getTestdata("DS_AT_PNLT_009_01");
+			    }
+//AT_PNLT_010_01
+				@And("^User_611 get the test data for test case AT_PNLT_010_01$")
+			    public void get_the_test_data_for_test_case_AT_PNLT_010_01() throws Throwable {
+					testData = MTSEODExcelData.getTestdata("DS_AT_PNLT_010_01");
+			    }
+
 
 				
 	// Clear cache step

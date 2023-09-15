@@ -1698,7 +1698,235 @@ public class ApplicationforfinancialfacilityOBJ_611 {
 	private WebElement Parameter_PurposeOfFinancing;
 	public WebElement purposeoffinancing_611() {
 		return Parameter_PurposeOfFinancing;
-	}			
+	}	
 	
+	//@678324_FMS_param
+		@FindBy(xpath ="//span[text()='Maintenance']")
+		private WebElement PurposeOfFinancing_Maintenence;
+		public WebElement purposeoffinancingmaintenance_611() {
+			return PurposeOfFinancing_Maintenence;
+		
+	    }
+		@FindBy(xpath ="//input[@id='purposefinancingFormIdCode_P038MT']")
+		private WebElement Maintenence_Code;
+		public WebElement maintenancecode_611() {
+			return Maintenence_Code;
+		}
+		@FindBy(xpath ="//input[@id='purposefinancingFormIdAdditionalNumber_P038MT']")
+		private WebElement Additional_Number;
+		public WebElement additionalnumber_611() {
+			return Additional_Number;
+		}
+		@FindBy(xpath ="//input[@id='purposefinancingFormIdDescription_eng_P038MT']")
+		private WebElement Discription;
+		public WebElement discription_611() {
+			return Discription;
+		}
+		@FindBy(xpath ="//span[text()='Product Class']")
+		private WebElement Product_Class;
+		public WebElement productclass_611() {
+			return Product_Class;
+		}
+		@FindBy(xpath ="//*[@id=\"add_purposeFinancingProductClassGrid_P038MT\"]/div/span")
+		private WebElement Product_Class_Addbutton;
+		public WebElement productclassaddbutton_611() {
+			return Product_Class_Addbutton;
+		}
+		@FindBy(xpath ="new_1685274582032_purposeFinancingProductClassVO.PRODUCTCLASS_lookuptxt_purposeFinancingProductClassGrid_P038MT")
+		private WebElement Product_Class_Searchbutton;
+		public WebElement productclasssearchbutton_611() {
+			return Product_Class_Searchbutton;
+		}
+		@FindBy(xpath ="//label[@id='purposefinancingFormId_P038MT_Save_key']")
+		private WebElement Product_Class_Savebutton ;
+		public WebElement productclasssavebutton_611() {
+			return Product_Class_Savebutton;
+		}
+		@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
+		private WebElement Save_button_confirm_ok;
+		public WebElement saveButtonConfirmOk_611() {
+			return Save_button_confirm_ok;
+		}
+		
+		@FindBy(xpath = "//*[@id='_popup_path_sol_ok']")
+		private WebElement Save_button_success_ok;
+		public WebElement saveButtonSuccessOk_611() {
+			return Save_button_success_ok;
+		}
+		@FindBy(xpath ="//a[@id='P038P']]")
+		private WebElement Purposeofinancing_Approve ;
+		public WebElement purposeoffinancingapprove_611() {
+			return Purposeofinancing_Approve;
+		}
+		@FindBy(xpath ="//input[@id='purposeFinancingListGridTbl_Id_P038P_gs_purposeFinancingVO.CODE']")
+		private WebElement Approve_Searchbox ;
+		public WebElement approvesearchbox_611() {
+			return Approve_Searchbox;
+		}
+		@FindBy(xpath ="//tr[@id='1']")
+		private WebElement Approve_Searchbox_Retrivedata ;
+		public WebElement approvesearchboxretrivedata_611() {
+			return Approve_Searchbox_Retrivedata;
+		}
+		@FindBy(xpath ="//label[@id='purposefinancingFormId_P038P_approve_key']")
+		private WebElement Param_Approve_button ;
+		public WebElement paramapprovebutton_611() {
+			return Param_Approve_button;
+		}
+		//@640897
+		@FindBy(xpath = "//input[@id='facilityManagementGridTbl_Id_WIFT008MT_gs_statusDesc']")
+		private WebElement wifak_facilities_management_main_searchgrid_status_input;
+		public WebElement wifakFacilitiesManagementMainSearchgridStatusInput_611() {
+			return wifak_facilities_management_main_searchgrid_status_input;
+		}
+		
+		@FindBy(xpath = "//td[@id='td_facilityManagementGridTbl_Id_WIFT008MT_2_fmsFacilityVO.CODE']")
+		private WebElement wifak_facilities_management_main_searchgrid_rows;
+		public WebElement wifakFacilitiesManagementMainSearchgridRow_611() {
+			return wifak_facilities_management_main_searchgrid_rows;
+		}
+		@FindBy(xpath = "//input[@id='lookuptxt_facilityMgtMainApplicationRef_WIFT008MT']")
+		private WebElement wifak_facilities_management_main_application_ref_input;
+		public WebElement wifakFacilitiesManagementMainApplicationRefInput_611() {
+			return wifak_facilities_management_main_application_ref_input;
+		}
+		
+		
+		@FindBy(xpath = "//button[@id='facilityManagement_collateralDetails_btn_WIFT008MT']")
+		private WebElement wifak_facilities_management_main_limit_details_tab_collateral_details_btn;
+		public WebElement wifakFacilitiesManagementMainLimitDetailsTabCollateralDetailsBtn_611() {
+			return wifak_facilities_management_main_limit_details_tab_collateral_details_btn;
+		}
+		
+		@FindBy(xpath = "//div[@id='facilitySubLimitCollateralDetailsDiv_id_WIFT008MT']")
+		private WebElement wifak_facilities_management_main_collateral_details_tab;
+		public WebElement wifakFacilitiesManagementMainCollateralDetailsTab_611() {
+			return wifak_facilities_management_main_collateral_details_tab;
+		}
+		
+		@FindBy(xpath = "//td[@id='add_FacilityCollateralGrid_WIFT008MT']/div/span")
+		private WebElement wifak_facilities_management_main_collateral_details_tab_add_icon;
+		public WebElement wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_611() {
+			return wifak_facilities_management_main_collateral_details_tab_add_icon;
+		}
+		
+		@FindBy(xpath = "//td[@id='td_FacilityCollateralGrid_WIFT008MT_1_rn']")
+		private WebElement wifak_facilities_management_main_collateral_details_tab_first_row;
+		public WebElement wifakFacilitiesManagementMainCollateralDetailsTabFirstRow_611() {
+			return wifak_facilities_management_main_collateral_details_tab_first_row;
+		}
+		
+		@FindBy(xpath = "//input[@name='lookupTxt_fmsAppcollateralsVO.COLLATERAL']")
+		private WebElement wifak_facilities_management_main_collateral_details_tab_first_row_collateral_input;
+		public WebElement wifakFacilitiesManagementMainCollateralDetailsTabFirstRowCollateralInput_611() {
+			return wifak_facilities_management_main_collateral_details_tab_first_row_collateral_input;
+		}	
+		
+		@FindBy(xpath = "//span[text()='Ok']")
+		private WebElement wifak_facilities_management_main_collateral_details_tab_Ok_btn;
+		public WebElement wifakFacilitiesManagementMainCollateralDetailsTabOkBtn_611() {
+			return wifak_facilities_management_main_collateral_details_tab_Ok_btn;
+		}
+		@FindBy(xpath = "//input[@id='facilityManagementGridTbl_Id_WIFT008AP_gs_fmsFacilityVO.FROM_APPLICATION']")
+		private WebElement wifak_facilities_management_approve_search_app_ref_input;
+		public WebElement wifakFacilitiesManagementApproveSearchAppRefInput_611() {
+			return wifak_facilities_management_approve_search_app_ref_input;
+		}
+		@FindBy(xpath = "//td[@id='td_FacilityManagementFacilityLimitDetailsGrid_WIFT008MT_1_fmsFacilityDetVO.GENERAL_FACILITY_TYPE']")
+		private WebElement wifak_facilities_management_main_facility_limit_details_product_class_row;
+		public WebElement wifakFacilitiesManagementMainFacilityLimitDetailsProductClassRow_611() {
+			return wifak_facilities_management_main_facility_limit_details_product_class_row;
+		}
+		@FindBy(xpath = "//button[@id='facilitymanagement_save_btn_WIFT008MT']")
+		private WebElement wifak_facilities_management_maintanance_save_btn;
+		public WebElement wifakFacilitiesManagementMaintananceSaveBtn_611() {
+			return wifak_facilities_management_maintanance_save_btn;
+		}
+		@FindBy(xpath = "//a[@id='WIFT008AP']")
+		private WebElement wifak_facilities_management_approve_menu;
+		public WebElement wifakFacilitiesManagementApproveMenu_611() {
+			return wifak_facilities_management_approve_menu;
+		}
+		@FindBy(xpath = "//td[@id='td_facilityManagementGridTbl_Id_WIFT008AP_1_fmsFacilityVO.CODE']")
+		private WebElement wifak_facilities_management_approve_search_grid_first_row;
+		public WebElement wifakFacilitiesManagementApproveSearchGridFirstRow_611() {
+			return wifak_facilities_management_approve_search_grid_first_row;
+		}
+		@FindBy(xpath = "//input[@id='facilityMgtMainCif_WIFT008AP']")
+		private WebElement wifak_facilities_management_approve_CIFNo_input;
+		public WebElement wifakFacilitiesManagementApproveCIFNoInput_611() {
+			return wifak_facilities_management_approve_CIFNo_input;
+		}
+		@FindBy(xpath = "//button[@id='facilityManagement_approve_btn_WIFT008AP']")
+		private WebElement wifak_facilities_management_approve_menu_approve_btn;
+		public WebElement wifakFacilitiesManagementApproveMenuApproveBtn_611() {
+			return wifak_facilities_management_approve_menu_approve_btn;
+		}
+		//
+		@FindBy(xpath = "//td[text()='Collateral Type']")
+		private WebElement parameter_collateral_type;
+		public WebElement parameterCollateralType_611() {
+			return parameter_collateral_type;
+		}
+		
+		@FindBy(xpath = "//a[@id='P002MT']")
+		private WebElement collateral_type_maintanance;
+		public WebElement collateralTypeMaintanance_611() {
+			return collateral_type_maintanance;
+		}
+		
+		@FindBy(xpath = "//input[@id='txt_code_P002MT']")
+		private WebElement collateral_type_main_code;
+		public WebElement collateralTypeMainCode_611() {
+			return collateral_type_main_code;
+		}
+		
+		@FindBy(xpath = "//input[@id='txt_brief_description_eng_P002MT']")
+		private WebElement collateral_type_main_brief_descrip;
+		public WebElement collateralTypeMainBriefDescrip_611() {
+			return collateral_type_main_brief_descrip;
+		}
+		
+		@FindBy(xpath = "//input[@id='txt_long_description_eng_P002MT']")
+		private WebElement collateral_type_main_long_descrip;
+		public WebElement collateralTypeMainLongDescrip_611() {
+			return collateral_type_main_long_descrip;
+		}
+		
+		@FindBy(xpath = "//select[@id='txt_asset_type_P002MT']")
+		private WebElement collateral_type_main_asset_type_dropdown;
+		public WebElement collateralTypeMainAssetTypeDropdown_611() {
+			return collateral_type_main_asset_type_dropdown;
+		}
+		
+		@FindBy(xpath = "//button[@id='collateralTypeMaint_save_P002MT']")
+		private WebElement collateral_type_main_save_btn;
+		public WebElement collateralTypeMainSaveBtn_611() {
+			return collateral_type_main_save_btn;
+		}
+		
+		@FindBy(xpath = "//a[@id='P002P']")
+		private WebElement collateral_type_approve;
+		public WebElement collateralTypeApprove_611() {
+			return collateral_type_approve;
+		}
+		
+		@FindBy(xpath = "//input[@id='collateralTypeListGridTbl_Id_P002P_gs_fmsColatTypeVo.CODE']")
+		private WebElement collateral_type_approve_code;
+		public WebElement collateralTypeApproveCode_611() {
+			return collateral_type_approve_code;
+		}
+		
+		@FindBy(linkText = "//*[@id='1']")
+		private WebElement collateral_type_approve_code_row1;
+		public WebElement collateralTypeApproveCodeRow1_611() {
+			return collateral_type_approve_code_row1;
+		}
+		
+		@FindBy(xpath = "//button[@id='collateralTypeMaint_approve_P002P']")
+		private WebElement collateral_type_approve_btn;
+		public WebElement collateralTypeApproveBtn_611() {
+			return collateral_type_approve_btn;
+		}
 }
 

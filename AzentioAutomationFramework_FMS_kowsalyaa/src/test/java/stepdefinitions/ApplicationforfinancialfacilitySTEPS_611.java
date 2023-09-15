@@ -42,6 +42,7 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 	
 	String path = System.getProperty("user.dir") +"\\TestData\\FMSTestData.xlsx";
 	ExcelData FMS_AppforFinancialfacilityExcelData = new ExcelData(path,"FMS_AppforFinancialfacility","Data Set ID");
+	ExcelData fmsCollateralManagementExcelData = new ExcelData(path, "CollateralManagementTestData", "DataSet ID");
   // ExcelData RepaymentplanExcelData = new ExcelData(path,"Repaymentplan","Data Set ID");
     Map<String, String> testData;
 	
@@ -103,7 +104,22 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
     public void User_611_Get_the_data_set_Id_for_AT_FM_031() throws Throwable {
 		testData = FMS_AppforFinancialfacilityExcelData.getTestdata("AT_FM_031");
     }
-	
+	@And("^User_611 Get the data set Id for AT_RF_042")
+    public void User_611_Get_the_data_set_Id_for_AT_RF_042() throws Throwable {
+		testData = fmsCollateralManagementExcelData.getTestdata("AT_RF_042");
+    }
+	@And("^User_611 Get the data set Id for AT_RF_043")
+    public void User_611_Get_the_data_set_Id_for_AT_RF_043() throws Throwable {
+		testData = fmsCollateralManagementExcelData.getTestdata("AT_RF_043");
+    }
+	@And("^User_611 get the test data for test case AT_RF_041_Param$")
+	public void get_the_test_data_for_test_case_AT_RF_041_param() throws Throwable {
+		testData = fmsCollateralManagementExcelData.getTestdata("AT_RF_041");
+	}
+	@And("^User_611 get the test data for test case AT_RF_041_Core$")
+	public void get_the_test_data_for_test_case_AT_RF_041_Core() throws Throwable {
+		testData = fmsCollateralManagementExcelData.getTestdata("AT_RF_041");
+	}
 	@And("^User_611 Click the first Wifak Application$")
     public void click_the_first_wifak_appliaction() throws Throwable {
 		waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.wifakapplication1_611());
@@ -297,7 +313,7 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
     	} 
 	}
  // Clear cache step
- 	@And("User_608 clear the caches in FMS Application")
+ 	@And("User_611 clear the caches in FMS Application")
  	public void user_clear_the_caches_in_fms_application() throws Throwable {
  		waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.FMSCoreTechDetailsIcon_611());
  		wifakapplicationobj_611.FMSCoreTechDetailsIcon_611().click();
@@ -1792,7 +1808,7 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 	    
 	  //  @808942_Fmsparam
 	    
-	    @And("^User_611 clicks the Parameter in FMS Param$")
+	    @And("^User_611 clicks on the Parameter module in FMS Param$")
 	     public void user_clicks_on_the_parameter_module() throws Throwable {
 	    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.fmsParamParameter_611());
 	    	wifakapplicationobj_611.fmsParamParameter_611().click();
@@ -2651,7 +2667,381 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 		    	wifakapplicationobj_611.purposeoffinancing_611().click();
 		    	
 		    }	
+		    
+		  //@678324_Fms_param
+		    @And("^User_611 clicks the Purpose of financing under parameters$")
+		    public void user_clicks_the_purpose_of_financing_under_parameters() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.purposeoffinancing_611());
+		    	wifakapplicationobj_611.purposeoffinancing_611().click();
+		       
+		    }
+
+		    @And("^User_611 clicks the Maintenance under Purpose of financing$")
+		    public void user_clicks_the_maintenance_under_purpose_of_financing() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.purposeoffinancingmaintenance_611());
+		    	wifakapplicationobj_611.purposeoffinancingmaintenance_611().click();
+		       
+		    }
+
+		    @And("^User_611 Enter a code under maintenance screen$")
+		    public void user_enter_a_code_under_maintenance_screen() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.maintenancecode_611());
+		    	wifakapplicationobj_611.maintenancecode_611().sendKeys("6565");
+		       
+		    }
+
+		    @And("^User_611 Enter a Addditional number under maintenance screen$")
+		    public void user_enter_a_addditional_number_under_maintenance_screen() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.additionalnumber_611());
+		    	wifakapplicationobj_611.additionalnumber_611().sendKeys("123456");
+		       
+		    }
+
+		    @And("^User_611 Enter a Discription under maintenance screen$")
+		    public void user_enter_a_discription_under_maintenance_screen() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.discription_611());
+		    	wifakapplicationobj_611.discription_611().sendKeys("123456");
+		       
+		    }
+
+		    @And("^User_611 clicks the Product class to add$")
+		    public void user_clicks_the_product_class_to_add() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.productclass_611());
+		    	wifakapplicationobj_611.productclass_611().click();
+				 
+				// waitHelper.waitForElementwithFluentwait(driver, purposeoffinancing.productclassaddbutton());
+		    	wifakapplicationobj_611.productclassaddbutton_611().click();
+				 
+				// waitHelper.waitForElementwithFluentwait(driver, purposeoffinancing.productclasssearchbutton());
+		    	wifakapplicationobj_611.productclasssearchbutton_611().sendKeys("1");
+		    	wifakapplicationobj_611.productclasssearchbutton_611().sendKeys(Keys.TAB);
+		      
+		       
+		    }
+
+		    @And("^User_611 save the Product class details$")
+		    public void user_save_the_product_class_details() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.productclasssavebutton_611());
+		    	wifakapplicationobj_611.productclasssavebutton_611().click();
+				 
+				 waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.saveButtonConfirmOk_611());
+				 wifakapplicationobj_611.saveButtonConfirmOk_611().click();
+				 
+				 waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.saveButtonSuccessOk_611());
+				 wifakapplicationobj_611.saveButtonSuccessOk_611().click();
+				 
+		       
+		    }
+
+		    @And("^User_611 clicks the approve menu under Purpose of financing$")
+		    public void user_clicks_the_approve_menu_under_purpose_of_financing() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.purposeoffinancingapprove_611());
+		    	wifakapplicationobj_611.purposeoffinancingapprove_611().click();
+				 
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.approvesearchbox_611());
+				 wifakapplicationobj_611.approvesearchbox_611().sendKeys("6565");
+				 wifakapplicationobj_611.approvesearchbox_611().sendKeys(Keys.ENTER);
+				 clickandactionhelper.doubleClick(wifakapplicationobj_611.approvesearchboxretrivedata_611());
+		       
+		    }
+		    @Then("^User_611 clicks the final approve$")
+		    public void user_clicks_the_final_approve() throws Throwable {
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.paramapprovebutton_611());
+		    	wifakapplicationobj_611.paramapprovebutton_611().click();
+		       
+	 }
+//			@640897
+			@And("User_611 enter the Status in Facilities Management Maintanance Search grid under WIFAK Application")
+			public void user_enter_the_status_in_facilities_management_maintanance_search_grid_under_wifak_application() throws Throwable {
+				waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.wifakFacilitiesManagementMainSearchgridStatusInput_611());
+				wifakapplicationobj_611.wifakFacilitiesManagementMainSearchgridStatusInput_611().sendKeys(testData.get("Status"),Keys.ENTER);
+			}
+
+			@And("User_611 double click the any one row in Facilities Management Maintanance Search grid under WIFAK Application")
+			public void user_double_click_the_any_one_row_in_facilities_management_maintanance_search_grid_under_wifak_application() throws Throwable {
+				waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.wifakFacilitiesManagementMainSearchgridRow_611());
+				clickandactionhelper.doubleClick(wifakapplicationobj_611.wifakFacilitiesManagementMainSearchgridRow_611());
+				for(int i = 0; i <= 500; i++) {
+			 		try {
+							if(!(wifakapplicationobj_611.wifakFacilitiesManagementMainApplicationRefInput_611().getAttribute("prevvalue").isBlank())) {
+								break;
+							}
+						} catch (Exception e) {
+							// TODO: handle exception
+						}
+			 	}
+				String RefCode = wifakapplicationobj_611.wifakFacilitiesManagementMainApplicationRefInput_611().getAttribute("prevvalue");
+				fmsCollateralManagementExcelData.updateTestData(testData.get("DataSet ID"), "Reference Code", RefCode);
+				
+			}
+			
+			@And("User_611 click the Collateral details button in Facilities Management Maintanance under WIFAK Application")
+			public void user_click_the_collateral_details_button_in_facilities_management_maintanance_under_wifak_application() throws Throwable {
+				waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.wifakFacilitiesManagementMainLimitDetailsTabCollateralDetailsBtn_611());
+				wifakapplicationobj_611.wifakFacilitiesManagementMainLimitDetailsTabCollateralDetailsBtn_611().click();
+			}
+
+			@And("User_611 click the add new icon in collateral details tab Facilities Management Maintanance under WIFAK Application")
+			public void user_click_the_add_new_icon_in_collateral_details_tab_facilities_management_maintanance_under_wifak_application() throws Throwable {
+				waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.wifakFacilitiesManagementMainCollateralDetailsTab_611());
+//				for (int i = 0; i <= 300; i++) {
+//					try {
+//						javaScriptHelper.scrollIntoView(requestForFinancingObj611.wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_611());
+//						javaScriptHelper.JSEClick(requestForFinancingObj611.wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_611());
+////						requestForFinancingObj611.wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_611().click();
+//						System.err.println("Element clicked..........");
+//						break;
+//					} catch (Exception e) {
+//						if (i == 300) {
+//							Assert.fail(e.getMessage());
+//						}
+//					}
+//				}
+				waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_611());
+				clickandactionhelper.doubleClick(wifakapplicationobj_611.wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_611());
+//				requestForFinancingObj611.wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_611().click();
+//				requestForFinancingObj611.wifakFacilitiesManagementMainCollateralDetailsTabAddIcon_611().click();
+			}
+
+			@And("User_611 enter the Collateral code in collateral details tab Facilities Management Maintanance under WIFAK Application")
+			public void user_enter_the_collateral_code_in_collateral_details_tab_facilities_management_maintanance_under_wifak_application() throws Throwable {
+				waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.wifakFacilitiesManagementMainCollateralDetailsTabFirstRow_611());
+				wifakapplicationobj_611.wifakFacilitiesManagementMainCollateralDetailsTabFirstRow_611().click();
+				waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.wifakFacilitiesManagementMainCollateralDetailsTabFirstRowCollateralInput_611());
+				wifakapplicationobj_611.wifakFacilitiesManagementMainCollateralDetailsTabFirstRowCollateralInput_611().sendKeys(testData.get("Collateral Code"),Keys.TAB);
+				for (int i = 0; i <= 500; i++) {
+					try {
+						if (!(wifakapplicationobj_611.wifakFacilitiesManagementMainCollateralDetailsTabFirstRowCollateralInput_611().getAttribute("prevvalue").isBlank())) {
+							break;
+						}
+					} catch (Exception e) {
+						// TODO: handle exception
+					}
+				}		
+			}
+
+			@And("User_611 Click the OK button in collateral details tab Facilities Management Maintanance under WIFAK Application")
+			public void user_click_the_ok_button_in_collateral_details_tab_facilities_management_maintanance_under_wifak_application() throws Throwable {
+				waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.wifakFacilitiesManagementMainCollateralDetailsTabOkBtn_611());
+				wifakapplicationobj_611.wifakFacilitiesManagementMainCollateralDetailsTabOkBtn_611().click();
+			}
+			
+			@And("User_611 enter the Application Ref code in search grid under Approve screen in WIFAK Facilities Management")
+		    public void user_enter_the_application_ref_code_in_search_grid_under_approve_screen_in_wifak_facilities_management() throws Throwable {
+				waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.wifakFacilitiesManagementApproveSearchAppRefInput_611());
+				wifakapplicationobj_611.wifakFacilitiesManagementApproveSearchAppRefInput_611().sendKeys(testData.get("Reference Code"),Keys.ENTER); 
+		    }
+			@And("User_611 select the Facility limit details product class row in Facilities Management Maintanance under WIFAK Application")
+			 public void user_select_the_facility_limit_details_product_class_row_in_facilities_management_maintanance_under_wifak_application() throws Throwable {
+				waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.wifakFacilitiesManagementMainFacilityLimitDetailsProductClassRow_611());
+			 	wifakapplicationobj_611.wifakFacilitiesManagementMainFacilityLimitDetailsProductClassRow_611().click();
+			 }
+			@When("User_611 click the Save Button under Maintanance under WIFAK Facilities Management")
+		    public void user_click_the_save_button_under_maintanance_under_wifak_facilities_management() throws Throwable {
+				waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.wifakFacilitiesManagementMaintananceSaveBtn_611());
+				wifakapplicationobj_611.wifakFacilitiesManagementMaintananceSaveBtn_611().click();
+		    	
+		    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.WarningPopupOkBtn_611());
+		    	wifakapplicationobj_611.WarningPopupOkBtn_611().click();
+		    	
+		    	for (int i = 0; i < 2000; i++) {
+					try {
+						wifakapplicationobj_611.SuccessPopupOkBtn_611().click();
+				    	break;
+					} catch (Exception e) {
+						if (i==1999) {
+							Assert.fail(e.getMessage());
+						}
+					}
+				}   
+	
+			}
+			@And("User_611 click the Approve menu under Facilities Management in WIFAK Application")
+		    public void user_click_the_approve_reject_under_facilities_management_in_wifak_application() throws Throwable {
+				waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.wifakFacilitiesManagementApproveMenu_611());
+		    	wifakapplicationobj_611.wifakFacilitiesManagementApproveMenu_611().click();
+		    }
+			@And("User_611 double click on the search grid first row in Approve screen under WIFAK Facilities Management")
+		    public void user_double_click_on_the_search_grid_first_row_in_approve_screen_under_wifak_facilities_management() throws Throwable {
+				waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.wifakFacilitiesManagementApproveSearchGridFirstRow_611());
+				clickandactionhelper.doubleClick(wifakapplicationobj_611.wifakFacilitiesManagementApproveSearchGridFirstRow_611());
+		    	for(int i = 0; i <= 1000; i++) {
+		    		try {
+						if(!(wifakapplicationobj_611.wifakFacilitiesManagementApproveCIFNoInput_611().getAttribute("prevvalue").isBlank())) {
+							break;
+						}
+					} catch (Exception e) {
+						// TODO: handle exception
+					}
+		    	}    	
+		    }
+			
+			 @And("User_611 click the Approve button in Approve screen under WIFAK Facilities Management")
+			    public void user_click_the_approve_button_in_approve_screen_under_wifak_facilities_management() throws Throwable {
+			    	for (int i = 0; i <= 300; i++) {
+						try {
+							javascripthelper.scrollIntoView(wifakapplicationobj_611.wifakFacilitiesManagementApproveMenuApproveBtn_611());
+							break;
+						} catch (Exception e) {
+							if (i == 300) {
+								Assert.fail(e.getMessage());
+							}
+						}
+			    	}
+			    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.wifakFacilitiesManagementApproveMenuApproveBtn_611());
+			    	wifakapplicationobj_611.wifakFacilitiesManagementApproveMenuApproveBtn_611().click();
+			    	
+			    	waithelper.waitForElementwithFluentwait(driver,wifakapplicationobj_611.WarningPopupOkBtn_611());
+			    	wifakapplicationobj_611.WarningPopupOkBtn_611().click();    	
+			    	
+			    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.SuccessPopupOkBtn_611());
+			    	for (int i = 0; i < 2000; i++) {
+						try {
+							wifakapplicationobj_611.SuccessPopupOkBtn_611().click();
+					    	break;
+						} catch (Exception e) {
+							if (i==1999) {
+								Assert.fail(e.getMessage());
+							}
+						}
+					} 
+			    	
+			    }
+			 
+			 @And("^User_611 clicks on the Collateral type module$")
+				public void user_clicks_on_the_collateral_type_module() throws Throwable {
+				 waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.parameterCollateralType_611());
+					for (int i = 0; i <= 300; i++) {
+						try {
+							wifakapplicationobj_611.parameterCollateralType_611().click();
+							break;
+						} catch (Exception e) {
+							
+						}
+					}
+				}
+
+				@And("^User_611 clicks on the Maintanance screen under Collateral type$")
+				public void user_clicks_on_the_maintanance_screen_under_collateral_type() throws Throwable {
+					waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.collateralTypeMaintanance_611());
+					wifakapplicationobj_611.collateralTypeMaintanance_611().click();
+				}
+
+				@And("^User_611 enter the code under Collateral Type main screen$")
+				public void user_enter_the_code_under_collateral_type_main_screen() throws Throwable {
+					waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.collateralTypeMainCode_611());
+//			    	requestForFinancingObj611.collateralTypeMainCode_611().sendKeys("1260");
+					wifakapplicationobj_611.collateralTypeMainCode_611().sendKeys(testData.get("Collateral Type"), Keys.TAB);
+
+					for (int i = 0; i <= 500; i++) {
+						try {
+							if (!(wifakapplicationobj_611.collateralTypeMainCode_611().getAttribute("prevvalue").isBlank())) {
+								break;
+							}
+						} catch (Exception e) {
+							// TODO: handle exception
+						}
+					}
+
+				}
+
+				@And("^User_611 enter the Brief description under Collateral Type main screen$")
+				public void user_enter_the_brief_description_under_collateral_type_main_screen() throws Throwable {
+					waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.collateralTypeMainBriefDescrip_611());
+//			    	requestForFinancingObj611.collateralTypeMainBriefDescrip_611().sendKeys("Test1");
+					wifakapplicationobj_611.collateralTypeMainBriefDescrip_611().sendKeys(testData.get("Brief Description"));
+
+				}
+
+				@And("^User_611 enter the Long description under Collateral Type main screen$")
+				public void user_enter_the_long_description_under_collateral_type_main_screen() throws Throwable {
+					waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.collateralTypeMainLongDescrip_611());
+//			    	requestForFinancingObj611.collateralTypeMainLongDescrip_611().sendKeys("Test1");
+					wifakapplicationobj_611.collateralTypeMainLongDescrip_611().sendKeys(testData.get("Long Description"));
+				}
+
+				@And("^User_611 select the Asset type as cash under Collateral Type main screen$")
+				public void user_select_the_asset_type_as_cash_under_collateral_type_main_screen() throws Throwable {
+					waithelper.waitForElementwithFluentwait(driver,
+							wifakapplicationobj_611.collateralTypeMainAssetTypeDropdown_611());
+//			    	dropDownHelper.SelectUsingVisibleText(requestForFinancingObj611.collateralTypeMainAssetTypeDropdown_611(), "Cash");
+					dropdownhelper.SelectUsingVisibleText(wifakapplicationobj_611.collateralTypeMainAssetTypeDropdown_611(),
+							testData.get("Asset Type"));
+				}
+
+				@When("^User_611 clicks on the save button under Collateral Type main screen$")
+				public void user_clicks_on_the_save_button_under_collateral_type_main_screen() throws Throwable {
+					for (int i = 0; i <= 300; i++) {
+						try {
+							javascripthelper.scrollIntoView(wifakapplicationobj_611.collateralTypeMainSaveBtn_611());
+							break;
+						} catch (Exception e) {
+							if (i == 300) {
+								Assert.fail(e.getMessage());
+							}
+						}
+					}
+
+					waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.collateralTypeMainSaveBtn_611());
+					wifakapplicationobj_611.collateralTypeMainSaveBtn_611().click();
+
+					waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.confirmPopupOkBtn_611());
+					wifakapplicationobj_611.confirmPopupOkBtn_611().click();
+
+					waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.successPopupOkBtn_611());
+					wifakapplicationobj_611.successPopupOkBtn_611().click();
+				}
+
+				@And("^User_611 clicks on the Approve screen under Collateral Type$")
+				public void user_clicks_on_the_approve_screen_under_collateral_type() throws Throwable {
+					waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.collateralTypeApprove_611());
+					wifakapplicationobj_611.collateralTypeApprove_611().click();
+				}
+
+				@And("^User_611 search the code under Collateral Type approve screen$")
+				public void user_search_the_code_under_collateral_type_approve_screen() throws Throwable {
+					waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.collateralTypeApproveCode_611());
+//			    	requestForFinancingObj611.collateralTypeApproveCode_611().sendKeys("1260");
+					wifakapplicationobj_611.collateralTypeApproveCode_611().sendKeys(testData.get("Collateral Type"), Keys.ENTER);
+				}
+
+				@And("^User_611 double click on the searched result under Collateral Type approve screen$")
+				public void user_double_click_on_the_searched_result_under_collateral_type_approve_screen() throws Throwable {
+					waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.collateralTypeApproveCodeRow1_611());
+					for (int i = 0; i <= 300; i++) {
+						try {
+							clickandactionhelper.doubleClick(wifakapplicationobj_611.collateralTypeApproveCodeRow1_611());
+							break;
+						} catch (Exception e) {
+							
+						}
+					}
+				}
+
+				@When("^User_611 clicks on the Approve button under Collateral Type approve screen$")
+				public void user_clicks_on_the_approve_button_under_collateral_type_approve_screen() throws Throwable {
+					for (int i = 0; i <= 300; i++) {
+						try {
+							javascripthelper.scrollIntoView(wifakapplicationobj_611.collateralTypeApproveBtn_611());
+							break;
+						} catch (Exception e) {
+							if (i == 300) {
+								Assert.fail(e.getMessage());
+							}
+						}
+					}
+					waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.collateralTypeApproveBtn_611());
+					wifakapplicationobj_611.collateralTypeApproveBtn_611().click();
+
+					waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.confirmPopupOkBtn_611());
+					wifakapplicationobj_611.confirmPopupOkBtn_611().click();
+
+					waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.successPopupOkBtn_611());
+					wifakapplicationobj_611.successPopupOkBtn_611().click();
+				}
+				
 }
+
 
 
 		    

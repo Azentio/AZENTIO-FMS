@@ -490,7 +490,7 @@ Feature: To Test the Financial facilities in FMS Application
   Scenario: Check that the param purpose of financing will show in FMS Application
     Given navigate to FMS param application and login with valid credentials
     And User_611 Click the parameters menu in param application
-    And User_611  clicks the Purpose of financing under parameters
+    And User_611 clicks the Purpose of financing under parameters
     And User_611 clicks the Maintenance under Purpose of financing
     And User_611 Enter a code under maintenance screen
     And User_611 Enter a Addditional number under maintenance screen

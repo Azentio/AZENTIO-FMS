@@ -1,9 +1,4 @@
-
-@tag
-Feature: Title of your feature
-  I want to use this template for my feature file
-
-  @tag1
-  Scenario: Title of your scenario
+Feature: Title of your features
+Scenario: Title of your scenario
   
-And User_0072 update test data set id for Transaction_CSM
+And User_611 Clicks the search box in Kuls application
