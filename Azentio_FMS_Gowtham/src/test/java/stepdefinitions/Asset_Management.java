@@ -35,8 +35,37 @@ public class Asset_Management {
 	DropDownHelper DropDownHelper = new DropDownHelper(driver);
 	
 	String path = System.getProperty("user.dir") + "\\TestData\\IISTestData.xlsx";
-	ExcelData IncidentalCharges =  new ExcelData(path, "IncidentalCharges", "Data Set ID");
+	ExcelData AssetManagement =  new ExcelData(path, "Asset_Management", "Data Set ID");
 	Map<String, String> testData;
+	
+	
+	@And ("User_607 get the test data for test ID AT_AM_007")
+	public void get_the_test_data_for_test_case_AT_AM_007() throws Throwable {
+		testData = AssetManagement.getTestdata("DS_AT_AM_007");
+    }
+	
+	@And ("User_607 get the test data for test ID AT_AM_008")
+	public void get_the_test_data_for_test_case_AT_AM_008() throws Throwable {
+		testData = AssetManagement.getTestdata("DS_AT_AM_008");
+    }
+	
+	@And ("User_607 get the test data for test ID AT_AM_009")
+	public void get_the_test_data_for_test_case_AT_AM_009() throws Throwable {
+		testData = AssetManagement.getTestdata("DS_AT_AM_009");
+    }
+	
+	@And ("User_607 get the test data for test ID AT_AM_010")
+	public void get_the_test_data_for_test_case_AT_AM_010() throws Throwable {
+		testData = AssetManagement.getTestdata("DS_AT_AM_010");
+    }
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	//@1077670
@@ -83,7 +112,7 @@ public class Asset_Management {
 		}
 		waitHelper.waitForElementwithFluentwait(driver, Asset_Management_Obj.SelectRecord_InmainteanceUnder_ProductClass_underParameters_IISparam_607());
 		waitHelper.waitForElementwithFluentwait(driver, Asset_Management_Obj.SearchRecord_InmainteanceUnder_ProductClass_underParameters_IISparam_607());
-		Asset_Management_Obj.SearchRecord_InmainteanceUnder_ProductClass_underParameters_IISparam_607().sendKeys("100",Keys.ENTER);
+		Asset_Management_Obj.SearchRecord_InmainteanceUnder_ProductClass_underParameters_IISparam_607().sendKeys(testData.get("Search Product Class Record"),Keys.ENTER);
 	}
 
 	@And("User_607 Select Record In mainteance Under Product Class under Parameters IISparam")
@@ -170,7 +199,7 @@ public class Asset_Management {
 	@And("User_607 Search Code without flat amount In Link Asset Management Charges In mainteance Under Product Class under Parameters IISparam")
 	public void user_search_code_without_flat_amount_in_link_asset_management_charges_in_mainteance_under_product_class_under_parameters_ii_sparam() {
 		waitHelper.waitForElementwithFluentwait(driver, Asset_Management_Obj.SearchCode_InLinkAssetManagementCharges_InmainteanceUnder_ProductClass_underParameters_IISparam_607());
-		Asset_Management_Obj.SearchCode_InLinkAssetManagementCharges_InmainteanceUnder_ProductClass_underParameters_IISparam_607().sendKeys("1",Keys.ENTER);
+		Asset_Management_Obj.SearchCode_InLinkAssetManagementCharges_InmainteanceUnder_ProductClass_underParameters_IISparam_607().sendKeys(testData.get("Search Code without flat amount"),Keys.ENTER);
 	}
 
 	@And("User_607 Check Cannot Proceed In Link Asset Management Charges In mainteance Under Product Class under Parameters IISparam")
@@ -184,7 +213,7 @@ public class Asset_Management {
 	@And("User_607 Search Code define charge code amount In Link Asset Management Charges In mainteance Under Product Class under Parameters IISparam")
 	public void user_search_code_define_charge_code_amount_in_link_asset_management_charges_in_mainteance_under_product_class_under_parameters_ii_sparam() {
 		waitHelper.waitForElementwithFluentwait(driver, Asset_Management_Obj.SearchCode_InLinkAssetManagementCharges_InmainteanceUnder_ProductClass_underParameters_IISparam_607());
-		Asset_Management_Obj.SearchCode_InLinkAssetManagementCharges_InmainteanceUnder_ProductClass_underParameters_IISparam_607().sendKeys("3",Keys.ENTER);
+		Asset_Management_Obj.SearchCode_InLinkAssetManagementCharges_InmainteanceUnder_ProductClass_underParameters_IISparam_607().sendKeys(testData.get("Search Code define charge code amount"),Keys.ENTER);
 
 	}
 
@@ -200,7 +229,7 @@ public class Asset_Management {
 	@And("User_607 Select Allow Edit In Link Asset Management Charges In mainteance Under Product Class under Parameters IISparam")
 	public void user_select_allow_edit_in_link_asset_management_charges_in_mainteance_under_product_class_under_parameters_ii_sparam() {
 		waitHelper.waitForElementwithFluentwait(driver, Asset_Management_Obj.SelectAllowEdit_InLinkAssetManagementCharges_InmainteanceUnder_ProductClass_underParameters_IISparam_607());
-		DropDownHelper.SelectUsingVisibleText(Asset_Management_Obj.SelectAllowEdit_InLinkAssetManagementCharges_InmainteanceUnder_ProductClass_underParameters_IISparam_607(), "Yes");
+		DropDownHelper.SelectUsingVisibleText(Asset_Management_Obj.SelectAllowEdit_InLinkAssetManagementCharges_InmainteanceUnder_ProductClass_underParameters_IISparam_607(), testData.get("Select Allow Edit"));
 	}
 
 	@And("User_607 Click Ok button In Link Asset Management Charges In mainteance Under Product Class under Parameters IISparam")
@@ -237,8 +266,8 @@ public class Asset_Management {
 	@Given("User_607 Check the new values are available in Repossession Type field")
 	public void user_check_the_new_values_are_available_in_repossession_type_field() {
 		waitHelper.waitForElementwithFluentwait(driver, Asset_Management_Obj.SelectRepossession_Type_InMainteance_Under_AssetRepossessionReturn_607());
-		DropDownHelper.SelectUsingVisibleText(Asset_Management_Obj.SelectRepossession_Type_InMainteance_Under_AssetRepossessionReturn_607(), "Asset Repossession");
-		DropDownHelper.SelectUsingVisibleText(Asset_Management_Obj.SelectRepossession_Type_InMainteance_Under_AssetRepossessionReturn_607(), "Asset Return");
+		DropDownHelper.SelectUsingVisibleText(Asset_Management_Obj.SelectRepossession_Type_InMainteance_Under_AssetRepossessionReturn_607(), testData.get("Repossession Type field1"));
+		DropDownHelper.SelectUsingVisibleText(Asset_Management_Obj.SelectRepossession_Type_InMainteance_Under_AssetRepossessionReturn_607(), testData.get("Repossession Type field2"));
 		
 		waitHelper.waitForElementwithFluentwait(driver, Asset_Management_Obj.IIS_SuccessPopupOkBtn_607());
 		Asset_Management_Obj.IIS_SuccessPopupOkBtn_607().click();
@@ -331,8 +360,8 @@ public class Asset_Management {
 	@Given("User_607 Check the new values are available in Repossession Type under field Asset Management Finalization")
 	public void user_check_the_new_values_are_available_in_repossession_type_field_under_asset_management_finalization() {
 		waitHelper.waitForElementwithFluentwait(driver, Asset_Management_Obj.SelectRepossession_Type_InMainteance_Under_AssetManagementFinalization_607());
-		DropDownHelper.SelectUsingVisibleText(Asset_Management_Obj.SelectRepossession_Type_InMainteance_Under_AssetManagementFinalization_607(), "Asset Repossession finalization");
-		DropDownHelper.SelectUsingVisibleText(Asset_Management_Obj.SelectRepossession_Type_InMainteance_Under_AssetManagementFinalization_607(), "Asset Return finalization");
+		DropDownHelper.SelectUsingVisibleText(Asset_Management_Obj.SelectRepossession_Type_InMainteance_Under_AssetManagementFinalization_607(), testData.get("Repossession Type field1"));
+		DropDownHelper.SelectUsingVisibleText(Asset_Management_Obj.SelectRepossession_Type_InMainteance_Under_AssetManagementFinalization_607(), testData.get("Repossession Type field2"));
 		
 		waitHelper.waitForElementwithFluentwait(driver, Asset_Management_Obj.IIS_SuccessPopupOkBtn_607());
 		Asset_Management_Obj.IIS_SuccessPopupOkBtn_607().click();

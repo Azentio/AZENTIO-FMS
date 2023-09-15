@@ -3,6 +3,7 @@ Feature: Asset Management
   @1077670
   Scenario: Check the columns mentioned in the FRS are available under the button “Link Asset management charges”
     Given navigate to IIS param application and login with valid credentials
+    And User_607 get the test data for test ID AT_AM_007
     And User_607 Click Parameters under Menu In IISparam
     And User_607 Click Product Class under Parameters IISparam
     And User_607 Click mainteance Under Product Class under Parameters IISparam
@@ -18,6 +19,7 @@ Feature: Asset Management
   @1077671
   Scenario: Check the default value and validation for the columns available under Link Asset management charges screen
     Given navigate to IIS param application and login with valid credentials
+    And User_607 get the test data for test ID AT_AM_008
     And User_607 Click Parameters under Menu In IISparam
     And User_607 Click Product Class under Parameters IISparam
     And User_607 Click mainteance Under Product Class under Parameters IISparam
@@ -42,6 +44,7 @@ Feature: Asset Management
   @1080828
   Scenario: Check the availability of the new menu added under the Asset Management screen for Asset Repossession/Return with sub menu options like Maintenance, verify, approve, query and reverse
     Given navigate to IIS application and login with valid credentials
+    And User_607 get the test data for test ID AT_AM_009
     And User_607 Click Asset Management under Menu Options
     And User_607 Click Asset Repossession Return under Asset Management
     And User_607 Click Mainteance Under Asset Repossession Return
@@ -58,6 +61,7 @@ Feature: Asset Management
   @1080829
   Scenario: Check the existing asset repossession screen is renamed to “Asset Management Finalization and is available under the Asset Management screen with sub menu options like Maintenance, verify, approve, query and reverse
     Given navigate to IIS application and login with valid credentials
+    And User_607 get the test data for test ID AT_AM_010
     And User_607 Click Asset Management under Menu Options
     And User_607 Click Asset Management Finalization under Asset Management
     And User_607 Click Mainteance Under Asset Management Finalization
@@ -71,9 +75,7 @@ Feature: Asset Management
     And User_607 Click Reverse Under Asset Management Finalization
     And User_607 Check Reverse Screen open without any Error under Asset Management Finalization
     
-    @1083617
-    Scenario: Create asset management finalization trasaction with repossession type as “insurnace claim” On 01/1/2020
-		 Given navigate to IIS application and login with valid credentials
+   
 		 
 		 
 		 

@@ -20,3 +20,6 @@ Given navigate to MTS application and login with valid credentials
 @LoginIIS
 Scenario: To Test the login functionality of IIS application
 Given navigate to IIS application and login with valid credentials
+@LoginIISparam
+Scenario: To Test the login functionality of IIS param application
+Given navigate to IIS param application and login with valid credentials
