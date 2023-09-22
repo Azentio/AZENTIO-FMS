@@ -1238,5 +1238,419 @@ public class IIS_PageObjects_609 {
 	private WebElement IIS_AdvancePrincipalSettlement_Approve_ApproveBtn_609;
 	public WebElement IIS_AdvancePrincipalSettlement_Approve_ApproveBtn_609() {
 		return IIS_AdvancePrincipalSettlement_Approve_ApproveBtn_609;
+	}
+	
+	
+	//*****Limit Management*****//
+	
+	@FindBy(xpath = "//td[text()='Limit Management']")
+	private WebElement IIS_LimitManagement_609;
+	public WebElement IIS_LimitManagement_609() {
+		return IIS_LimitManagement_609;
 	}	
+	
+	@FindBy(xpath = "//td[text()='Authorization Limit']")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_609() {
+		return IIS_LimitManagement_AuthorizationLimit_609;
+	}	
+	
+	@FindBy(xpath = "//a[@id='M06MT']//span[text()='Maintenance']")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_609() {
+		return IIS_LimitManagement_AuthorizationLimit_Maintenance_609;
+	}
+	
+	@FindBy(xpath = "//a[@id='infoBarSearchButton_M06MT']")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_SearchBtn_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_SearchBtn_609() {
+		return IIS_LimitManagement_AuthorizationLimit_Maintenance_SearchBtn_609;
+	}
+	
+	@FindBy(xpath = "//a[@id='addNewGridRec_M06MT']")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_NewBtn_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_NewBtn_609() {
+		return IIS_LimitManagement_AuthorizationLimit_Maintenance_NewBtn_609;
+	}
+	
+	@FindBy(xpath = "//span[@id='spanLookup_userid_M06MT']/span")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_UserIDSearch_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_UserIDSearch_609() {
+		return IIS_LimitManagement_AuthorizationLimit_Maintenance_UserIDSearch_609;
+	}
+	
+//	@FindBy(xpath = "//input[@id='limitAuthorizationListTbl_Id_M06MT_gs_trsusrlimitvo.USER_ID']")
+//	private WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_UserID_609;
+//	public WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_UserID_609() {
+//		return IIS_LimitManagement_AuthorizationLimit_Maintenance_UserID_609;
+//	}
+//	//table[@id='limitAuthorizationListTbl_Id_M06MT']//td[text()='VIJAYK']
+	
+	@FindBy(xpath = "//input[@id='authorizationlimit_M06MT']")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_AuthorizationLimit_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_AuthorizationLimit_609() {
+		return IIS_LimitManagement_AuthorizationLimit_Maintenance_AuthorizationLimit_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='percentage_M06MT']")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_Percentage_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_Percentage_609() {
+		return IIS_LimitManagement_AuthorizationLimit_Maintenance_Percentage_609;
+	}
+	
+	@FindBy(xpath = "//span[contains(text(),' Save ')]")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_Savebtn_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_Savebtn_609() {
+		return IIS_LimitManagement_AuthorizationLimit_Savebtn_609;
+	}
+	
+	@FindBy(xpath = "//a[@id='M06P']//span[text()='Approve']")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_Approve_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_Approve_609() {
+		return IIS_LimitManagement_AuthorizationLimit_Approve_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='limitAuthorizationListTbl_Id_M06P_gs_trsusrlimitvo.USER_ID']")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_Approve_UserID_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_Approve_UserID_609() {
+		return IIS_LimitManagement_AuthorizationLimit_Approve_UserID_609;
+	}
+	//table[@id='limitAuthorizationListTbl_Id_M06P']//td[text()='900768']
+	
+	
+	@FindBy(xpath = "//div[@id='limitAuthorizationToolBar_M06P']/a/span")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_Approve_ApproveBtn_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_Approve_ApproveBtn_609() {
+		return IIS_LimitManagement_AuthorizationLimit_Approve_ApproveBtn_609;
+	}
+	
+	@FindBy(xpath = "//a[@id='M06UP']//span[text()='Update After Approve']")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_609() {
+		return IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='limitAuthorizationListTbl_Id_M06UP_gs_trsusrlimitvo.USER_ID']")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_UserID_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_UserID_609() {
+		return IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_UserID_609;
+	}
+	//table[@id='limitAuthorizationListTbl_Id_M06UP']//td[text()='VIJAYK']
+	
+	
+	
+	@FindBy(xpath = "//button[@id='LimitAuthorization_updateAfterApprove_btn_M06UP']/span[contains(text(),' Update ')]")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_UpdateBtn_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_UpdateBtn_609() {
+		return IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_UpdateBtn_609;
+	}
+	
+	
+	@FindBy(xpath = "//input[@id='limitexceedcreate_M06UP']")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_LimitsSelect_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_LimitsSelect_609() {
+		return IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_LimitsSelect_609;
+	}
+	
+	@FindBy(xpath = "//td[@id='search_limitAuthorizationListTbl_Id_M06MT']//span")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_ListSearch_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_ListSearch_609() {
+		return IIS_LimitManagement_AuthorizationLimit_Maintenance_ListSearch_609;
+	}
+	
+	@FindBy(xpath = "//div[@id='fbox_limitAuthorizationListTbl_Id_M06MT']/table/tbody/tr[3]/td[2]/select")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_Sortby_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_Sortby_609() {
+		return IIS_LimitManagement_AuthorizationLimit_Maintenance_Sortby_609;
+	}
+	
+	// User ID , Authorization Limit , Status
+	
+	@FindBy(xpath = "//div[@id='fbox_limitAuthorizationListTbl_Id_M06MT']/table/tbody/tr[3]/td[4]/input")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_SortbyDecision_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_SortbyDecision_609() {
+		return IIS_LimitManagement_AuthorizationLimit_Maintenance_SortbyDecision_609;
+	}
+	
+	//Approved
+	
+	@FindBy(xpath = "//a[@id='fbox_limitAuthorizationListTbl_Id_M06MT_search']/span")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_Find_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_Find_609() {
+		return IIS_LimitManagement_AuthorizationLimit_Maintenance_Find_609;
+	}
+	
+	@FindBy(xpath = "//td[@id='next_limitAuthorizationListTbl_Id_M06MT_pager']//span")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_PageNext_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_PageNext_609() {
+		return IIS_LimitManagement_AuthorizationLimit_Maintenance_PageNext_609;
+	}
+	
+	@FindBy(xpath = "//td[@id='prev_limitAuthorizationListTbl_Id_M06MT_pager']//span")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_PagePrev_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_PagePrev_609() {
+		return IIS_LimitManagement_AuthorizationLimit_Maintenance_PagePrev_609;
+	}
+	
+	@FindBy(xpath = "//td[@id='last_limitAuthorizationListTbl_Id_M06MT_pager']//span")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_PageLast_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_PageLast_609() {
+		return IIS_LimitManagement_AuthorizationLimit_Maintenance_PageLast_609;
+	}
+	
+	@FindBy(xpath = "//td[@id='first_limitAuthorizationListTbl_Id_M06MT_pager']//span")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_PageFirst_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_PageFirst_609() {
+		return IIS_LimitManagement_AuthorizationLimit_Maintenance_PageFirst_609;
+	}
+	
+	
+	@FindBy(xpath = "//li[@id='limitAuthorizationMainTab2_M06UP']//span[text()='Limit Details']")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_LimitDetailsTab_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_LimitDetailsTab_609() {
+		return IIS_LimitManagement_AuthorizationLimit_Maintenance_LimitDetailsTab_609;
+	}
+	
+	@FindBy(xpath = "//td[@id='add_LimitAuthorizationLimitDetails_M06UP']//span")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_LimitDetailsTab_Addicon_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_LimitDetailsTab_Addicon_609() {
+		return IIS_LimitManagement_AuthorizationLimit_Maintenance_LimitDetailsTab_Addicon_609;
+	}
+	
+	
+	@FindBy(xpath = "//td[@id='td_LimitAuthorizationLimitDetails_M06UP_1_trsusrlimitdetvo.INTRADAY_LIMIT']/div/input")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_LimitDetailsTab_IntraDayLimit_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_Maintenance_LimitDetailsTab_IntraDayLimit_609() {
+		return IIS_LimitManagement_AuthorizationLimit_Maintenance_LimitDetailsTab_IntraDayLimit_609;
+	}
+	
+	@FindBy(xpath = "//a[@id='T022VR']//span[text()='Verify']")
+	private WebElement IIS_InvestmentDealWithoutTradeDeal_Verify_609;
+	public WebElement IIS_InvestmentDealWithoutTradeDeal_Verify_609(){
+		return IIS_InvestmentDealWithoutTradeDeal_Verify_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='investmentDealsGridTbl_Id_T022VR_gs_trsdealVO.SERIAL_NO']")
+	private WebElement IIS_InvestmentDealWithoutTradeDeal_Verify_Userid_609;
+	public WebElement IIS_InvestmentDealWithoutTradeDeal_Verify_Userid_609(){
+		return IIS_InvestmentDealWithoutTradeDeal_Verify_Userid_609;
+	}
+	
+////************************************ IIS Parameter *********************************************////
+	
+	@FindBy(xpath = "//td[text()='Parameters']")
+	private WebElement Parameters_609;
+	public WebElement Parameters_609(){
+		return Parameters_609;
+	}
+	
+	@FindBy(xpath = "//td[text()='Product Class']")
+	private WebElement Parameters_ProductClass_609;
+	public WebElement Parameters_ProductClass_609(){
+		return Parameters_ProductClass_609;
+	}
+	
+	@FindBy(xpath = "//a[@id='M003MT']//span[text()='Maintenance']")
+	private WebElement Parameters_ProductClass_Maintenance_609;
+	public WebElement Parameters_ProductClass_Maintenance_609(){
+		return Parameters_ProductClass_Maintenance_609;
+	}
+	
+	@FindBy(xpath = "//a[@id='infoBarSearchButton_M003MT']")
+	private WebElement Parameters_ProductClass_Maintenance_SearchBtn_609;
+	public WebElement Parameters_ProductClass_Maintenance_SearchBtn_609(){
+		return Parameters_ProductClass_Maintenance_SearchBtn_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='iISProductClassListGridTbl_Id_M003MT_gs_trsctrlclassVO.CLASS']")
+	private WebElement Parameters_ProductClass_Maintenance_Class_609;
+	public WebElement Parameters_ProductClass_Maintenance_Class_609(){
+		return Parameters_ProductClass_Maintenance_Class_609;
+	}
+	
+	@FindBy(xpath = "//li[@id='iisProductClassGeneralInformationProfitCalculation_M003MT']//span[text()='Profit Calculation']")
+	private WebElement Parameters_ProductClass_Maintenance_ProfitCalculation_609;
+	public WebElement Parameters_ProductClass_Maintenance_ProfitCalculation_609(){
+		return Parameters_ProductClass_Maintenance_ProfitCalculation_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='iisProductClassAllowBuyBackYN_M003MT']")
+	private WebElement Parameters_ProductClass_Maintenance_ProfitCalculation_BuyBack_609;
+	public WebElement Parameters_ProductClass_Maintenance_ProfitCalculation_BuyBack_609(){
+		return Parameters_ProductClass_Maintenance_ProfitCalculation_BuyBack_609;
+	}
+	
+	@FindBy(xpath = "//select[@id='validationbasedon_M06UP']")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_Basedonvalue_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_Basedonvalue_609() {
+		return IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_Basedonvalue_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='txnlimitamount_M06UP']")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_Limit_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_Limit_609() {
+		return IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_Limit_609;
+	}
+	
+	@FindBy(xpath = "//select[@id='validationtype_M06UP']")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_ValidationType_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_ValidationType_609() {
+		return IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_ValidationType_609;
+	}
+	
+	@FindBy(xpath = "//li[@id='iisProductClassAdditionalInformation02_M003MT']/a/span")
+	private WebElement Parameters_ProductClass_Maintenance_AdditionalInformation2_609;
+	public WebElement Parameters_ProductClass_Maintenance_AdditionalInformation2_609(){
+		return Parameters_ProductClass_Maintenance_AdditionalInformation2_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='iisProductClassLockPeriodPercentage_M003MT']")
+	private WebElement Parameters_ProductClass_Maintenance_AdditionalInformation2_DealTenure_609;
+	public WebElement Parameters_ProductClass_Maintenance_AdditionalInformation2_DealTenure_609(){
+		return Parameters_ProductClass_Maintenance_AdditionalInformation2_DealTenure_609;
+	}
+	
+	@FindBy(xpath = "//li[@id='limitAuthorizationMainTab2_M06UP']/a/span")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_LimitsDetailsTab_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_LimitsDetailsTab_609() {
+		return IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_LimitsDetailsTab_609;
+	}
+	
+	@FindBy(xpath = "")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_LimitsDetailsTab_Addicon_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_LimitsDetailsTab_Addicon_609() {
+		return IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_LimitsDetailsTab_Addicon_609;
+	}
+	
+	@FindBy(xpath = "")
+	private WebElement IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_LimitsDetailsTab_Value_609;
+	public WebElement IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_LimitsDetailsTab_Value_609() {
+		return IIS_LimitManagement_AuthorizationLimit_UpdateAfterApprove_LimitsDetailsTab_Value_609;
+	}
+	
+	
+	
+	@FindBy(xpath = "//select[@name='iisproductclassCO.trsclassVO.CALCULATE_PROFIT']")
+	private WebElement Parameters_ProductClass_Maintenance_ProfitCalculation_CalculateProfit_609;
+	public WebElement Parameters_ProductClass_Maintenance_ProfitCalculation_CalculateProfit_609(){
+		return Parameters_ProductClass_Maintenance_ProfitCalculation_CalculateProfit_609;
+	}
+	//Diminishing Returns
+	
+	@FindBy(xpath = "//select[@name='iisproductclassCO.trsclassVO.PROFIT_DIST_METHOD']")
+	private WebElement Parameters_ProductClass_Maintenance_ProfitCalculation_ProfitDistributionMethod_609;
+	public WebElement Parameters_ProductClass_Maintenance_ProfitCalculation_ProfitDistributionMethod_609(){
+		return Parameters_ProductClass_Maintenance_ProfitCalculation_ProfitDistributionMethod_609;
+	}
+	//Straight Line
+	
+	
+	@FindBy(xpath = "//li[@id='iisProductClassAdditionalInformationAllocationOthers_M003MT']/a/span")
+	private WebElement Parameters_ProductClass_Maintenance_AdditionalInformation2_AllocationOthers_609;
+	public WebElement Parameters_ProductClass_Maintenance_AdditionalInformation2_AllocationOthers_609(){
+		return Parameters_ProductClass_Maintenance_AdditionalInformation2_AllocationOthers_609;
+	}
+	
+	@FindBy(xpath = "//label[@id='lbl_iisProductClassProjectFinanceDeal_M003MT']")
+	private WebElement Parameters_ProductClass_Maintenance_AdditionalInformation2_AllocationOthers_ProjectFinancedeal_609;
+	public WebElement Parameters_ProductClass_Maintenance_AdditionalInformation2_AllocationOthers_ProjectFinancedeal_609(){
+		return Parameters_ProductClass_Maintenance_AdditionalInformation2_AllocationOthers_ProjectFinancedeal_609;
+	}
+	
+	@FindBy(xpath = "//select[@id='trsclassVOAppName_M003MT']")
+	private WebElement Parameters_ProductClass_Maintenance_Application_609;
+	public WebElement Parameters_ProductClass_Maintenance_Application_609(){
+		return Parameters_ProductClass_Maintenance_Application_609;
+	}
+	//Islamic Invest 
+	
+	@FindBy(xpath = "//span[@id='spanLookup_iisProductClassCategory_M003MT']/span")
+	private WebElement Parameters_ProductClass_Maintenance_CategorySearch_609;
+	public WebElement Parameters_ProductClass_Maintenance_CategorySearch_609(){
+		return Parameters_ProductClass_Maintenance_CategorySearch_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='gridtab_iisProductClassCategory_M003MT_gs_CATEGORY_CODE']")
+	private WebElement Parameters_ProductClass_Maintenance_Category_609;
+	public WebElement Parameters_ProductClass_Maintenance_Category_609(){
+		return Parameters_ProductClass_Maintenance_Category_609;
+	}
+	//table[@id='gridtab_iisProductClassCategory_M003MT']//td[text()='3']
+	
+	@FindBy(xpath = "//input[@id='iisProductClassBriefDescription_M003MT']")
+	private WebElement Parameters_ProductClass_Maintenance_BriefDescription_609;
+	public WebElement Parameters_ProductClass_Maintenance_BriefDescription_609(){
+		return Parameters_ProductClass_Maintenance_BriefDescription_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='iisProductClassLongDescription_M003MT']")
+	private WebElement Parameters_ProductClass_Maintenance_LongDescription_609;
+	public WebElement Parameters_ProductClass_Maintenance_LongDescription_609(){
+		return Parameters_ProductClass_Maintenance_LongDescription_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='iisProductClassCode_M003MT']")
+	private WebElement Parameters_ProductClass_Maintenance_ProductclassCode_609;
+	public WebElement Parameters_ProductClass_Maintenance_ProductclassCode_609(){
+		return Parameters_ProductClass_Maintenance_ProductclassCode_609;
+	}
+	
+	@FindBy(xpath = "//input[@name='iisproductclassCO.trsclassVO.EXPOSURE_LIMIT']")
+	private WebElement Parameters_ProductClass_Maintenance_ProfitCalculation_ExposureLimit_609;
+	public WebElement Parameters_ProductClass_Maintenance_ProfitCalculation_ExposureLimit_609(){
+		return Parameters_ProductClass_Maintenance_ProfitCalculation_ExposureLimit_609;
+	}
+	
+	@FindBy(xpath = "//input[@name='iisproductclassCO.trsclassVO.PROFIT_UPFRONT']")
+	private WebElement Parameters_ProductClass_Maintenance_ProfitCalculation_ProfitUpfront_609;
+	public WebElement Parameters_ProductClass_Maintenance_ProfitCalculation_ProfitUpfront_609(){
+		return Parameters_ProductClass_Maintenance_ProfitCalculation_ProfitUpfront_609;
+	}
+	
+	
+	
+	
+	@FindBy(xpath = "//li[@id='iisProductClassAdditionalInformation_M003MT']/a/span")
+	private WebElement Parameters_ProductClass_Maintenance_AdditionalInformationTab_609;
+	public WebElement Parameters_ProductClass_Maintenance_AdditionalInformationTab_609(){
+		return Parameters_ProductClass_Maintenance_AdditionalInformationTab_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='iisProductClassVATApplicable_M003MT']")
+	private WebElement Parameters_ProductClass_Maintenance_AdditionalInformationTab_VatApplicable_609;
+	public WebElement Parameters_ProductClass_Maintenance_AdditionalInformationTab_VatApplicable_609(){
+		return Parameters_ProductClass_Maintenance_AdditionalInformationTab_VatApplicable_609;
+	}
+	
+	
+	@FindBy(xpath = "//span[@id='spanLookup_iisProductClassVatCode_M003MT']/span")
+	private WebElement Parameters_ProductClass_Maintenance_AdditionalInformationTab_VatCodeSearch_609;
+	public WebElement Parameters_ProductClass_Maintenance_AdditionalInformationTab_VatCodeSearch_609(){
+		return Parameters_ProductClass_Maintenance_AdditionalInformationTab_VatCodeSearch_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='gridtab_iisProductClassVatCode_M003MT_gs_VAT_CODE']")
+	private WebElement Parameters_ProductClass_Maintenance_AdditionalInformationTab_VatCode_609;
+	public WebElement Parameters_ProductClass_Maintenance_AdditionalInformationTab_VatCode_609(){
+		return Parameters_ProductClass_Maintenance_AdditionalInformationTab_VatCode_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='iisProductClassIncludeVatInInstallment_M003MT']")
+	private WebElement Parameters_ProductClass_Maintenance_AdditionalInformationTab_IncludeVatinSettlement_609;
+	public WebElement Parameters_ProductClass_Maintenance_AdditionalInformationTab_IncludeVatinSettlement_609(){
+		return Parameters_ProductClass_Maintenance_AdditionalInformationTab_IncludeVatinSettlement_609;
+	}
+	
+	@FindBy(xpath = "//select[@id='iisProductClassVatPercentageOn_M003MT']")
+	private WebElement Parameters_ProductClass_Maintenance_AdditionalInformationTab_VatPercentageon_609;
+	public WebElement Parameters_ProductClass_Maintenance_AdditionalInformationTab_VatPercentageon_609(){
+		return Parameters_ProductClass_Maintenance_AdditionalInformationTab_VatPercentageon_609;
+	}
+	//Settled Profit
+	
+	@FindBy(xpath = "//label[@id='iisProductClassMaintFormId_M003MT_Save_key']")
+	private WebElement Parameters_ProductClass_Maintenance_Save_609;
+	public WebElement Parameters_ProductClass_Maintenance_Save_609(){
+		return Parameters_ProductClass_Maintenance_Save_609;
+	}
 }

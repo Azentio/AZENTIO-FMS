@@ -910,7 +910,18 @@ public class FMS_PageObjects_609 {
 	}
 	
 	
+	@FindBy(xpath = "//input[@id='_popup_path_sol_confirm_ok']")
+	private WebElement FMS_ConfirmOk_609;
+	public WebElement FMS_ConfirmOk_609(){
+		return FMS_ConfirmOk_609;
+	}
 	
+	
+	@FindBy(xpath = "//input[@id='_popup_path_sol_ok']")
+	private WebElement FMS_Ok_609;
+	public WebElement FMS_Ok_609(){
+		return FMS_Ok_609;
+	}
 	
 	
 	
@@ -1991,7 +2002,137 @@ public class FMS_PageObjects_609 {
 		return DrawDownRequest_Save_609;
 	}
 	
+	///*********************************************** ITFC ***************************************************************///
 	
-    
+	@FindBy(xpath = "//td[text()='Johns request']")
+	private WebElement Johnsrequest_609;
+	public WebElement Johnsrequest_609() {
+		return Johnsrequest_609;
+	}
+	
+	@FindBy(xpath = "//td[text()='Joh reqs']")
+	private WebElement Johnsrequest_Johreqs_609;
+	public WebElement Johnsrequest_Johreqs_609() {
+		return Johnsrequest_Johreqs_609;
+	}
+	
+	@FindBy(xpath = "//div[@id='_selenuim333RF00']//td[text()='Request For Financing']")
+	private WebElement Johnsrequest_Johreqs_RequestForFinancing_609;
+	public WebElement Johnsrequest_Johreqs_RequestForFinancing_609() {
+		return Johnsrequest_Johreqs_RequestForFinancing_609;
+	}
+	
+	@FindBy(xpath = "//div[@id='_selenuim333RF00MT']//span[text()='Maintenance']")
+	private WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_609;
+	public WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_609() {
+		return Johnsrequest_Johreqs_RequestForFinancing_Maintenance_609;
+	}
+	
+	@FindBy(xpath = "//select[@id='requestFinancingApplicationFor_333RF00MT']")
+	private WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_ReasonForSubmission_609;
+	public WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_ReasonForSubmission_609() {
+		return Johnsrequest_Johreqs_RequestForFinancing_Maintenance_ReasonForSubmission_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='requestFinancingInfoCompletionDate_333RF00MT']")
+	private WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_Date_609;
+	public WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_Date_609() {
+		return Johnsrequest_Johreqs_RequestForFinancing_Maintenance_Date_609;
+	}
+	
+	@FindBy(xpath = "//span[@id='spanLookup_requestFinanacingCif_333RF00MT']/span")
+	private WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerSearch_609;
+	public WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerSearch_609() {
+		return Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerSearch_609;
+	}
+	
+	@FindBy(xpath = "//td[@id='pagerid_requestFinanacingCif_333RF00MT_left']/table//td[@id='refresh_gridtab_requestFinanacingCif_333RF00MT']//span")
+	private WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerClear_609;
+	public WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerClear_609() {
+		return Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerClear_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='gridtab_requestFinanacingCif_333RF00MT_gs_cifVO.CIF_NO']")
+	private WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_Customer_609;
+	public WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_Customer_609() {
+		return Johnsrequest_Johreqs_RequestForFinancing_Maintenance_Customer_609;
+	}
+	
+	@FindBy(xpath = "//span[@id='spanLookup_requestFinancingFacilityType_333RF00MT']/span")
+	private WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_FacilityTypeSearch_609;
+	public WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_FacilityTypeSearch_609() {
+		return Johnsrequest_Johreqs_RequestForFinancing_Maintenance_FacilityTypeSearch_609;
+	}
+	
+	@FindBy(xpath = "//input[@id='gridtab_requestFinancingFacilityType_333RF00MT_gs_CODE']")
+	private WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_FacilityType_609;
+	public WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_FacilityType_609() {
+		return Johnsrequest_Johreqs_RequestForFinancing_Maintenance_FacilityType_609;
+	}
+	
+	@FindBy(xpath = "//select[@id='requestFinancingHistorywithITFC_333RF00MT']")
+	private WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_HistorywithITFC_609;
+	public WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_HistorywithITFC_609() {
+		return Johnsrequest_Johreqs_RequestForFinancing_Maintenance_HistorywithITFC_609;
+	}
+	//label[@id='requestFinancingFormId_333RF00MT_history_with_itfc_key']/span[text()='*']
+	
+	
+	
+	@FindBy(xpath = "//input[@id='requestFinancingFacilityTotalvalue_333RF00MT']")
+	private WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_TotalLimit_609;
+	public WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_TotalLimit_609() {
+		return Johnsrequest_Johreqs_RequestForFinancing_Maintenance_TotalLimit_609;
+	}
+	
+	@FindBy(xpath = "//li[@id='rerquestFinancingFundLimitDetailsTabs_333RF00MT']/a/span")
+	private WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_Fundingtab_609;
+	public WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_Fundingtab_609() {
+		return Johnsrequest_Johreqs_RequestForFinancing_Maintenance_Fundingtab_609;
+	}
+	
+	@FindBy(xpath = "//label[@id='requestFinancingFormId_333RF00MT_mudarib_perc_key']")
+	private WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_Fundingtab_MudaribShare_609;
+	public WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_Fundingtab_MudaribShare_609() {
+		return Johnsrequest_Johreqs_RequestForFinancing_Maintenance_Fundingtab_MudaribShare_609;
+	}
+	
+	@FindBy(xpath = "//li[@id='customerGradingRecommendationsTab_333RF00MT']/a/span")
+	private WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerGradingRecommendationstab_609;
+	public WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerGradingRecommendationstab_609() {
+		return Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerGradingRecommendationstab_609;
+	}
+	
+	@FindBy(xpath = "//div[@id='jqgh_RequestFinancingOfficerAssignedGridId_333RF00MT_fmsApplOfficerAssignedVO.USER_ID']")
+	private WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerGradingRecommendationstab_UserId_609;
+	public WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerGradingRecommendationstab_UserId_609() {
+		return Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerGradingRecommendationstab_UserId_609;
+	}
+	
+	@FindBy(xpath = "//div[@id='jqgh_RequestFinancingOfficerAssignedGridId_333RF00MT_userDesc']")
+	private WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerGradingRecommendationstab_UserName_609;
+	public WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerGradingRecommendationstab_UserName_609() {
+		return Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerGradingRecommendationstab_UserName_609;
+	}
+	
+	@FindBy(xpath = "//td[@id='add_RequestFinancingOfficerAssignedGridId_333RF00MT']/div/span")
+	private WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerGradingRecommendationstab_Addicon_609;
+	public WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerGradingRecommendationstab_Addicon_609() {
+		return Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerGradingRecommendationstab_Addicon_609;
+	}
+	
+	@FindBy(xpath = "//td[@id='del_RequestFinancingOfficerAssignedGridId_333RF00MT']/div/span")
+	private WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerGradingRecommendationstab_Deleteicon_609;
+	public WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerGradingRecommendationstab_Deleteicon_609() {
+		return Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerGradingRecommendationstab_Deleteicon_609;
+	}
+	
+	@FindBy(xpath = "//table[@id='RequestFinancingOfficerAssignedGridId_333RF00MT']//table/tbody/tr/td/div/span/span")
+	private WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerGradingRecommendationstab_UserIdSearch_609;
+	public WebElement Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerGradingRecommendationstab_UserIdSearch_609() {
+		return Johnsrequest_Johreqs_RequestForFinancing_Maintenance_CustomerGradingRecommendationstab_UserIdSearch_609;
+	}
+		
+	//  (//td[@tdlabel='User Id' and text()='120524'])[3]
 }
 
