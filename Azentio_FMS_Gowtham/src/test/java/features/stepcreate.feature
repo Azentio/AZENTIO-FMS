@@ -5,4 +5,7 @@ Feature: Title of your feature
 
   @tag1
   Scenario: Title of your scenario
-    And User update test data for test case no 555521
+   And User_607 Click Additional Information In Mainteance Under Product Class
+  And User_607 Click limit In Additional Information In Mainteance Under Product Class
+  And User_607 Check Promotion Type Field In limit In Additional Information In Mainteance Under Product Class
+  And User_607 Check Insurance Type Field In limit In Additional Information In Mainteance Under Product Class

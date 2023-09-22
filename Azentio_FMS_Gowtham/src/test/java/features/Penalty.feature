@@ -69,7 +69,18 @@ Feature: Penalty
     Scenario: Check two new fields added under list fields window in the template maintenance screen
     Given navigate to IIS param application and login with valid credentials
     And User_607 Click Parameters under Menu In IISparam
-    
+    And User_607 Click Templates Under parameters
+    And User_607 Click Transaction Template Under Templates Under parameters
+    And User_607 Click Mainteance Under Transaction Template
+    And User_607 Click Add button In Transaction Template Tab In Mainteance Under Transaction Template
+    And User_607 Click Formula button In First Row In Transaction Template Tab In Mainteance Under Transaction Template
+    And User_607 Click Add button In Apply Formula Popup In First Row In Transaction Template Tab
+    And User_607 Click List Of Field In First Row In Apply Formula Popup 
+    And User_607 Click Drop Down In List Of Field In First Row In Apply Formula Popup
+    And User_607 Check Additional Accrued Penalty is in the DropDown
+    And User_607 Click List Of Field In First Row In Apply Formula Popup 
+    And User_607 Click Drop Down In List Of Field In First Row In Apply Formula Popup
+    And User_607 Check Waved Additional accrued Penalty is in the DropDown
     
     
     

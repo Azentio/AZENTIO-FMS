@@ -156,8 +156,8 @@ public class Penalty {
 	@Given("User_607 Click Additional Information two In Mainteance Under Product Class")
 	public void user_click_additional_information_two_in_mainteance_under_product_class() throws Throwable {
 		Thread.sleep(4000);
-		waitHelper.waitForElementwithFluentwait(driver, Penalty_Obj.ClickAdditional_Information_In_Mainteance_UnderProductClass_607());
-		Penalty_Obj.ClickAdditional_Information_In_Mainteance_UnderProductClass_607().click();
+		waitHelper.waitForElementwithFluentwait(driver, Penalty_Obj.ClickAdditional_InformationTwo_In_Mainteance_UnderProductClass_607());
+		Penalty_Obj.ClickAdditional_InformationTwo_In_Mainteance_UnderProductClass_607().click();
 	}
 	
 	@Given("User_607 Click Settlement In Additional In formation Tab In Mainteance Under Product Class")
@@ -190,6 +190,79 @@ public class Penalty {
 	public void user_select_product_class_repayment_apportionment_in_repayment_apportionment_in_settlement_in_additional_information_tab_in_mainteance_under_product_class() {
 		waitHelper.waitForElementwithFluentwait(driver, Penalty_Obj.SelectProductClassRepaymentApportionment_InRepaymentApportionment_InSettlementInAdditional_InformationTab__In_Mainteance_UnderProductClass_607());
 	    DropDownHelper.SelectUsingVisibleText(Penalty_Obj.SelectProductClassRepaymentApportionment_InRepaymentApportionment_InSettlementInAdditional_InformationTab__In_Mainteance_UnderProductClass_607(), testData.get("Repayment Apportionment"));
+	}
+	
+	
+	
+	//555528
+	
+	@Given("User_607 Click Templates Under parameters")
+	public void user_click_templates_under_parameters() {
+		waitHelper.waitForElementwithFluentwait(driver, Penalty_Obj.ClickTemplates_Under_parameters_607());
+		Penalty_Obj.ClickTemplates_Under_parameters_607().click();
+	}
+
+	@Given("User_607 Click Transaction Template Under Templates Under parameters")
+	public void user_click_transaction_template_under_templates_under_parameters() {
+		waitHelper.waitForElementwithFluentwait(driver, Penalty_Obj.ClickTransactionTemplate_UnderTemplates_Under_parameters_607());
+		Penalty_Obj.ClickTransactionTemplate_UnderTemplates_Under_parameters_607().click();
+	    
+	}
+
+	@Given("User_607 Click Mainteance Under Transaction Template")
+	public void user_click_mainteance_under_transaction_template() {
+		waitHelper.waitForElementwithFluentwait(driver, Penalty_Obj.Click_Mainteance_UnderTransactionTemplate_607());
+		Penalty_Obj.Click_Mainteance_UnderTransactionTemplate_607().click();
+	    
+	}
+
+	@Given("User_607 Click Add button In Transaction Template Tab In Mainteance Under Transaction Template")
+	public void user_click_add_button_in_transaction_template_tab_in_mainteance_under_transaction_template() {
+		waitHelper.waitForElementwithFluentwait(driver, Penalty_Obj.ClickAdd_BtnIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate_607());
+		Penalty_Obj.ClickAdd_BtnIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate_607().click();
+	    
+	}
+
+	@Given("User_607 Click Formula button In First Row In Transaction Template Tab In Mainteance Under Transaction Template")
+	public void user_click_formula_button_in_first_row_in_transaction_template_tab_in_mainteance_under_transaction_template() {
+		waitHelper.waitForElementwithFluentwait(driver, Penalty_Obj.ClickFirstRowRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate_607());
+		Penalty_Obj.ClickFirstRowRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate_607().click();
+		
+		JavascriptHelper.scrollIntoViewAndClick(Penalty_Obj.Click_FormulaBtn_InFirstRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate_607());
+	    
+	}
+
+	@Given("User_607 Click Add button In Apply Formula Popup In First Row In Transaction Template Tab")
+	public void user_click_add_button_in_apply_formula_popup_in_first_row_in_transaction_template_tab() {
+		waitHelper.waitForElementwithFluentwait(driver, Penalty_Obj.ClickAddBtn_InApplyFormulaPopup_InFirstRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate_607());
+		Penalty_Obj.ClickAddBtn_InApplyFormulaPopup_InFirstRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate_607().click();
+	}
+
+	@Given("User_607 Click List Of Field In First Row In Apply Formula Popup")
+	public void user_click_list_of_field_in_first_row_in_apply_formula_popup() {
+		waitHelper.waitForElementwithFluentwait(driver, Penalty_Obj.ClickListOfFieldIn_FirstRow_InApplyFormulaPopup_InFirstRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate_607());
+		Penalty_Obj.ClickListOfFieldIn_FirstRow_InApplyFormulaPopup_InFirstRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate_607().click();
+	    
+	}
+
+	@Given("User_607 Click Drop Down In List Of Field In First Row In Apply Formula Popup")
+	public void user_click_drop_down_in_list_of_field_in_first_row_in_apply_formula_popup() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Penalty_Obj.ClickDropDown_InListOfFieldIn_FirstRow_InApplyFormulaPopup_InFirstRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate());
+		Penalty_Obj.ClickDropDown_InListOfFieldIn_FirstRow_InApplyFormulaPopup_InFirstRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate().click();
+	    
+	}
+
+	@Given("User_607 Check Additional Accrued Penalty is in the DropDown")
+	public void user_check_additional_accrued_penalty_is_in_the_drop_down() {
+		waitHelper.waitForElementwithFluentwait(driver, Penalty_Obj.ClickDropDown_InListOfFieldIn_FirstRow_InApplyFormulaPopup_InFirstRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate());
+		DropDownHelper.SelectUsingVisibleText(Penalty_Obj.ClickDropDown_InListOfFieldIn_FirstRow_InApplyFormulaPopup_InFirstRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate(), "Additional Accrued Penalty");
+		
+	}
+
+	@Given("User_607 Check Waved Additional accrued Penalty is in the DropDown")
+	public void user_check_waved_additional_accrued_penalty_is_in_the_drop_down() {
+		waitHelper.waitForElementwithFluentwait(driver, Penalty_Obj.ClickDropDown_InListOfFieldIn_FirstRow_InApplyFormulaPopup_InFirstRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate());
+		DropDownHelper.SelectUsingVisibleText(Penalty_Obj.ClickDropDown_InListOfFieldIn_FirstRow_InApplyFormulaPopup_InFirstRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate(), "Waived Additional Accrued Penalty");
 	}
 	
 	

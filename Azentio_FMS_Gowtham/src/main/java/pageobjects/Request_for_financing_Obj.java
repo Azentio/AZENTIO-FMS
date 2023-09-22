@@ -1966,4 +1966,95 @@ public class Request_for_financing_Obj {
 			}
 			
 			
+			//584038
+			
+			@FindBy(xpath = "//*[@id='requestForFinance_modification_reason_btn_RFFRF00MT']")
+			private WebElement Modification_ReasonBtn_in_mainteance_under_RequestForFinancing;
+			public WebElement Modification_ReasonBtn_in_mainteance_under_RequestForFinancing_607(){
+				return Modification_ReasonBtn_in_mainteance_under_RequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='add_reguestFinancingModificationRejectReasonGrid_RFFRF00MT']/div/span")
+			private WebElement click_AddBtnIn_Modification_Reason_popup;
+			public WebElement click_AddBtnIn_Modification_Reason_popup_607(){
+				return click_AddBtnIn_Modification_Reason_popup;
+			}
+			
+			@FindBy(xpath = "//*[@id='td_reguestFinancingModificationRejectReasonGrid_RFFRF00MT_1_rn']")
+			private WebElement SelectFirstRow_In_AddBtnIn_Modification_Reason_popup;
+			public WebElement SelectFirstRow_In_AddBtnIn_Modification_Reason_popup_607(){
+				return SelectFirstRow_In_AddBtnIn_Modification_Reason_popup;
+			}
+			
+			@FindBy(xpath = "//*[@id='td_reguestFinancingModificationRejectReasonGrid_RFFRF00MT_1_fmsRequestFinancingModifyReasonVO.TRIGGER_TYPE']/select")
+			private WebElement SelectDropDownInFirstRow_In_AddBtnIn_Modification_Reason_popup;
+			public WebElement SelectDropDownInFirstRow_In_AddBtnIn_Modification_Reason_popup_607(){
+				return SelectDropDownInFirstRow_In_AddBtnIn_Modification_Reason_popup;
+			}
+			
+			@FindBy(xpath = "//*[@id='td_reguestFinancingModificationRejectReasonGrid_RFFRF00MT_1_fmsRequestFinancingModifyReasonVO.DETAILS']/textarea")
+			private WebElement EnterDetailsInFirstRow_In_AddBtnIn_Modification_Reason_popup;
+			public WebElement EnterDetailsInFirstRow_In_AddBtnIn_Modification_Reason_popup_607(){
+				return EnterDetailsInFirstRow_In_AddBtnIn_Modification_Reason_popup;
+			}
+			
+			@FindBy(xpath = "//span[text()='Ok']")
+			private WebElement ClickOkBtnInFirstRow_In_AddBtnIn_Modification_Reason_popup;
+			public WebElement ClickOkBtnInFirstRow_In_AddBtnIn_Modification_Reason_popup_607(){
+				return ClickOkBtnInFirstRow_In_AddBtnIn_Modification_Reason_popup;
+			}
+			
+			@FindBy(xpath = "//*[@id='customerGradingRecommendationsTab_RFFRF00P1']")
+			private WebElement ClickCustomerGradingRecommendationsTabInApprovelev1_UnderRequestForFinancing;
+			public WebElement ClickCustomerGradingRecommendationsTabInApprovelev1_UnderRequestForFinancing_607(){
+				return ClickCustomerGradingRecommendationsTabInApprovelev1_UnderRequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='requestDecisionForward_1_RFFRF00P1']")
+			private WebElement SelectDecisionInCustomerGradingRecommendationsTabInApprovelev1_UnderRequestForFinancing;
+			public WebElement SelectDecisionInCustomerGradingRecommendationsTabInApprovelev1_UnderRequestForFinancing_607(){
+				return SelectDecisionInCustomerGradingRecommendationsTabInApprovelev1_UnderRequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='requestFinancingFormId_RFFRF00P1_approve_key']")
+			private WebElement ClickApproveBtnInApprovelev1_UnderRequestForFinancing;
+			public WebElement ClickApproveBtnInApprovelev1_UnderRequestForFinancing_607(){
+				return ClickApproveBtnInApprovelev1_UnderRequestForFinancing;
+			}
+			
+			@FindBy(xpath = "//*[@id='add_reguestFinancingRejectionReasonGrid_RFFRF00P1']/div/span")
+			private WebElement ClickAddBtn_InRejectionReasonPopup;
+			public WebElement ClickAddBtn_InRejectionReasonPopup_607(){
+				return ClickAddBtn_InRejectionReasonPopup;
+			}
+			
+			@FindBy(xpath = "//*[@id='td_reguestFinancingRejectionReasonGrid_RFFRF00P1_1_rn']")
+			private WebElement Click_FirstRowIn_RejectionReasonPopup;
+			public WebElement Click_FirstRowIn_RejectionReasonPopup_607(){
+				return Click_FirstRowIn_RejectionReasonPopup;
+			}
+			
+			@FindBy(xpath = "//*[@id='td_reguestFinancingRejectionReasonGrid_RFFRF00P1_1_fmsRequestFinancingRejectionDetailsVO.REASON_CODE']/select")
+			private WebElement SelectReasonDropDown_InRejectionReasonPopup;
+			public WebElement SelectReasonDropDown_InRejectionReasonPopup_607(){
+				return SelectReasonDropDown_InRejectionReasonPopup;
+			}
+			
+			@FindBy(xpath = "//*[@id='td_reguestFinancingRejectionReasonGrid_RFFRF00P1_1_fmsRequestFinancingRejectionDetailsVO.DETAILS']/textarea")
+			private WebElement WriteReason_InRejectionReasonPopup;
+			public WebElement WriteReason_InRejectionReasonPopup_607(){
+				return WriteReason_InRejectionReasonPopup;
+			}
+			
+			@FindBy(xpath = "//span[text()='Ok']")
+			private WebElement ClickOkBtn_InRejectionReasonPopup;
+			public WebElement ClickOkBtn_InRejectionReasonPopup_607(){
+				return ClickOkBtn_InRejectionReasonPopup;
+			}
+			
+			
+			
+			
+			
+			
 }

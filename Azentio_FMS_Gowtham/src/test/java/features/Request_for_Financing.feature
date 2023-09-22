@@ -84,9 +84,9 @@ Feature: Title of your feature
    
     @636958
     Scenario: TSR - EWB180031
-     Given navigate to FMS application2 and login with valid credentials
-     And User update test data for test case no 636958
-     And User update test data for test case no 1265139
+    Given navigate to FMS application2 and login with valid credentials
+    And User update test data for test case no 636958
+    And User update test data for test case no 1265139
 		And User_607 Click Request under menu Options
 		And User_607 Click Request Financing under Request
 		And Click Request for financing
@@ -376,9 +376,9 @@ Feature: Title of your feature
 		And Enter Facility Reference In Mainteance under Facility Closure Request
 		
 		
-		 @748962_2
-   Scenario: TSR - NIZ180070:
-   Given navigate to FMS application2 and login with valid credentials
+		@748962_2
+    Scenario: TSR - NIZ180070:
+    Given navigate to FMS application2 and login with valid credentials
     And User_607 update test data for test case no 748962
     And Click Wifak Application first
     And Click Wifak Application Second
@@ -406,11 +406,95 @@ Feature: Title of your feature
 		And Enter Facility Reference In Mainteance under Facility Closure Request
 		
 		
-		
-		
-		
-		
+		@638574
+		Scenario: TSR - ITFCI180023
+		Given navigate to FMS application2 and login with valid credentials
+		And User update test data for test case no 1265139
+		And User_607 Click Request under menu Options
+		And User_607 Click Request Financing under Request
+		And Click Request for financing
+    And Goto maintenace
+    And click the reason for submission search box
+    And click the customer search box
+    And click the facility type details
+    And Enter the facility type code under facility type
+    And Enter the total limit under global limit
+    And Click the Disbursement Sublimit under maintenance screen
+    And Add the limits under Disbursement Sublimit
+    And Add the product class values in product searchbox
+    And Add all the Above limit values
+    And Save all the values when limits are add
+    And Confirm the popup menu when all the limits are saved
+    And Click the final save popup message
+    And Click the validate button when all the values are saved
+    And Confirm the validate popup menu
+    And Click the final validate popup
+    And Click the Approve level1 screen under request for financing
+    And Search the value in approve1
+    And Select the record in approve1
+	  And User_607 Forward the record in Approve level1
+	  And User_607 Click Approve button in Approve lev1 under Request For Financing
+	  And User_607 Click Approval Committee Rcommendations under Request For Financing
+	  And User_607 Select record In Approval Committee Recommendations under Request For Financing
+	  And User_607 Click credit Committee Recommendations Tab In Approval Committee Recommendations under Request For Financing
+	  And User_607 Click RecommendationsArrow In credit Committee Recommendations Tab In Approval Committee Recommendations
+	  And User_607 Click Add In RecommendationsArrow In Approval Committee Recommendations
+	  And User_607 Select Approve In First Line In RecommendationsArrow In Approval Committee Recommendations
+	  And User_607 Click Recommebd button In Approval Committee Recommendations under Request For Financing
    
+   
+   
+    @584038
+    Scenario: TSR - ITFCI170514
+    Given navigate to FMS application2 and login with valid credentials
+		And User update test data for test case no 584038
+		And Click request under menu 
+    And Click request financing
+    And Click request for financing under request financing
+    And Goto maintenace under request for financing under request financing
+    And click the reason for submission search box
+    And User_607 Existing Facility No In Mainteance under Request For Financing
+		And User_607 Change Total limit In Mainteance under Request For Financing
+		And User_607 Enter the Modification reason In Mainteance under Request For Financing
+		And User_607 Click Save button In Mainteance under Request For Financing
+		And User_607 Click Validate button In Mainteance under Request For Financing
+	
+		@584038_2
+   	Scenario: TSR - ITFCI170514
+    Given navigate to FMS application2 and login with valid credentials
+    And User update test data for test case no 584038
+   	And Click request under menu 
+    And Click request financing
+    And Click request for financing under request financing
+    And User_607 Click Approve Level1 under Request For Financing
+		And User_607 Select Record In Approve Level1 under Request For Financing
+    And User_607 Click Customer Grading Recommendations Tab In Approve lev1 Under Request For Financing
+    And User_607 Select Decision In Customer Grading Recommendations Tab In Approve lev1 Under Request For Financing
+    And User_607 Click Approve button in Approve lev1 under Request For Financing under request
+    And User_607 Enter the Reason for rejecting the record
+    And User_607 Get Sucess message code
+    And Goto maintenace under request for financing under request financing
+    And click the reason for submission for Modify Rejected Request
+    And User_607 Enter Modify reject request no in Existing Facility No In Mainteance under Request For Financing
+		And User_607 Change Total limit In Mainteance under Request For Financing
+		And User_607 Enter the Modification reason In Mainteance under Request For Financing
+		And User_607 Click Save button In Mainteance under Request For Financing
+		And User_607 Click Validate button In Mainteance under Request For Financing
+		And User_607 Click Approve Level1 under Request For Financing
+		And User_607 Select Record In Approve Level1 under Request For Financing
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
    
    
    

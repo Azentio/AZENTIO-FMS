@@ -5,10 +5,6 @@ Feature: Title of your feature
 
   @tag1
   Scenario: Title of your scenario
-   And User_607 get the test data for test ID AT_AM_007
-   And User_607 get the test data for test ID AT_AM_008
-   And User_607 get the test data for test ID AT_AM_009
-   And User_607 get the test data for test ID AT_AM_010
-  
+   And User_607 Enter Modify reject request no in Existing Facility No In Mainteance under Request For Financing
 
    

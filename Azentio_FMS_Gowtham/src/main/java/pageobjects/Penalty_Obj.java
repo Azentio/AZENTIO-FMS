@@ -86,9 +86,9 @@ public class Penalty_Obj {
 	}
 	
 	@FindBy (xpath = "//span[text()='Additional Information (2)']")
-	private WebElement ClickAdditional_Information_In_Mainteance_UnderProductClass;
-	public WebElement ClickAdditional_Information_In_Mainteance_UnderProductClass_607() {
-		return ClickAdditional_Information_In_Mainteance_UnderProductClass;
+	private WebElement ClickAdditional_InformationTwo_In_Mainteance_UnderProductClass;
+	public WebElement ClickAdditional_InformationTwo_In_Mainteance_UnderProductClass_607() {
+		return ClickAdditional_InformationTwo_In_Mainteance_UnderProductClass;
 	}
 	
 	@FindBy (xpath = "//*[@id='iisProductClassAdditionalInformationSettlement_M003MT']")
@@ -121,8 +121,60 @@ public class Penalty_Obj {
 		return SelectProductClassRepaymentApportionment_InRepaymentApportionment_InSettlementInAdditional_InformationTab__In_Mainteance_UnderProductClass;
 	}
 	
+	//555528
+	@FindBy (xpath = "//td[text()='Templates']")
+	private WebElement ClickTemplates_Under_parameters;
+	public WebElement ClickTemplates_Under_parameters_607() {
+		return ClickTemplates_Under_parameters;
+	}
 	
+	@FindBy (xpath = "//td[text()='Transaction Template'][1]")
+	private WebElement ClickTransactionTemplate_UnderTemplates_Under_parameters;
+	public WebElement ClickTransactionTemplate_UnderTemplates_Under_parameters_607() {
+		return ClickTransactionTemplate_UnderTemplates_Under_parameters;
+	}
 	
+	@FindBy (xpath = "//*[@id='M015M']")
+	private WebElement Click_Mainteance_UnderTransactionTemplate;
+	public WebElement Click_Mainteance_UnderTransactionTemplate_607() {
+		return Click_Mainteance_UnderTransactionTemplate;
+	}
+	
+	@FindBy (xpath = "//*[@id=\"add_trxTemplateDetGridTbl_Id_M015M\"]/div/span")
+	private WebElement ClickAdd_BtnIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate;
+	public WebElement ClickAdd_BtnIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate_607() {
+		return ClickAdd_BtnIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate;
+	}
+	
+	@FindBy (xpath = "//*[@id='td_trxTemplateDetGridTbl_Id_M015M_1_trxTemplateDetVO.LINE_NO']")
+	private WebElement ClickFirstRowRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate;
+	public WebElement ClickFirstRowRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate_607() {
+		return ClickFirstRowRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate;
+	}
+	
+	@FindBy (xpath = "//*[@id='td_trxTemplateDetGridTbl_Id_M015M_1_AMT_FORMULA']/input")
+	private WebElement Click_FormulaBtn_InFirstRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate;
+	public WebElement Click_FormulaBtn_InFirstRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate_607() {
+		return Click_FormulaBtn_InFirstRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate;
+	}
+	
+	@FindBy (xpath = "//*[@id='add_trxTemplateFormulaGridTbl_Id_M015M']")
+	private WebElement ClickAddBtn_InApplyFormulaPopup_InFirstRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate;
+	public WebElement ClickAddBtn_InApplyFormulaPopup_InFirstRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate_607() {
+		return ClickAddBtn_InApplyFormulaPopup_InFirstRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate;
+	}
+	
+	@FindBy (xpath = "//*[@id=\"td_trxTemplateFormulaGridTbl_Id_M015M_1_trxTemplateField\"]")
+	private WebElement ClickListOfFieldIn_FirstRow_InApplyFormulaPopup_InFirstRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate;
+	public WebElement ClickListOfFieldIn_FirstRow_InApplyFormulaPopup_InFirstRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate_607() {
+		return ClickListOfFieldIn_FirstRow_InApplyFormulaPopup_InFirstRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate;
+	}
+	
+	@FindBy (xpath = "//*[@id=\"td_trxTemplateFormulaGridTbl_Id_M015M_1_trxTemplateField\"]/select")
+	private WebElement ClickDropDown_InListOfFieldIn_FirstRow_InApplyFormulaPopup_InFirstRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate;
+	public WebElement ClickDropDown_InListOfFieldIn_FirstRow_InApplyFormulaPopup_InFirstRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate() {
+		return ClickDropDown_InListOfFieldIn_FirstRow_InApplyFormulaPopup_InFirstRowIn_TransactionTemplateTab_InMainteance_UnderTransactionTemplate;
+	}
 	
 	
 	

@@ -9,13 +9,13 @@ import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
 @CucumberOptions(features = {
-		"src/test/java/features/Penalty.feature"}, 
+		"src/test/java/features/IIS_Parameter.feature"}, 
 		glue = "stepdefinitions",
 		// monochrome=false, //to make steps in color
 		plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"rerun:ReRunScenarios/FailedReRun.txt" }
 //, dryRun = true //to check compilation errors
-		, tags = "@555527"
+		, tags = "@572311"
 )
 public class TestApplication extends AbstractTestNGCucumberTests {
 	/*

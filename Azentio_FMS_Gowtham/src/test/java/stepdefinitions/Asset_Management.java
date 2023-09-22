@@ -59,12 +59,7 @@ public class Asset_Management {
 		testData = AssetManagement.getTestdata("DS_AT_AM_010");
     }
 	
-	
-	
-	
-	
-	
-	
+
 	
 	
 	
@@ -96,7 +91,6 @@ public class Asset_Management {
 	public void user_click_search_in_mainteance_under_product_class_under_parameters_ii_sparam() {
 		waitHelper.waitForElementwithFluentwait(driver, Asset_Management_Obj.ClickSearch_InmainteanceUnder_ProductClass_underParameters_IISparam_607());
 		Asset_Management_Obj.ClickSearch_InmainteanceUnder_ProductClass_underParameters_IISparam_607().click();
-	    
 	}
 
 	@And("User_607 Search Record In mainteance Under Product Class under Parameters IISparam")

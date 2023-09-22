@@ -626,8 +626,15 @@ public class Request_for_financing_steps {
 		// Request_for_financing_Obj.SelectUsingVisibleText(Request_for_financing_Obj.reasonforsubmisson(),
 		// "New Request");
 		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.reasonforsubmisson(),testData5.get("Reason For Submission"));
-		//DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.reasonforsubmisson(),"New Request");
+//		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.reasonforsubmisson(),"Modify Rejected Request");
 	}
+	
+	@And("^click the reason for submission for Modify Rejected Request$")
+	public void click_the_reason_for_submission_for_Modify_Rejected_Request() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.reasonforsubmisson());
+		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.reasonforsubmisson(),testData5.get("Reason For Submission2"));
+	}
+	
 
 	@And("^click the customer search box$")
 	public void click_the_customer_search_box() throws Throwable {
@@ -665,24 +672,25 @@ public class Request_for_financing_steps {
 
 	@And("^Enter the total limit under global limit$")
 	public void enter_the_total_limit_under_global_limit() throws Throwable {
-
 		for (int i = 0; i <= 300; i++) {
 			try {
 				JavascriptHelper.scrollIntoView(Request_for_financing_Obj.totallimitsearchbox());
+				break;
 			} catch (Exception e) {
 				if (i == 300) {
 					Assert.fail(e.getMessage());
 				}
 			}
 		}
-		Request_for_financing_Obj.totallimitsearchbox().sendKeys(testData5.get("Total Limit"));
-		Request_for_financing_Obj.facilitytypetouch().click();
-
+		Thread.sleep(3000);
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.totallimitsearchbox());
+		Request_for_financing_Obj.totallimitsearchbox().sendKeys(testData5.get("Total Limit"),Keys.TAB);
+	//	Request_for_financing_Obj.facilitytypetouch().click();
 	}
 
 	@And("^Click the Disbursement Sublimit under maintenance screen$")
 	public void click_the_disbursement_sublimit_under_maintenance_screen() throws Throwable {
-
+		
 		for (int i = 0; i <= 1000; i++) {
 			try {
 				JavascriptHelper.scrollIntoView(Request_for_financing_Obj.disbursementsublimit());
@@ -2147,6 +2155,11 @@ public class Request_for_financing_steps {
 	
 	//570417
 	
+	@Given("User update test data for test case no 584038")
+	public void user_update_test_data_for_test_case_no_584038() {
+		testData5 = fmsTransactionsExcelData5.getTestdata("AT_RF_109");
+	}
+	
 	@Given("User update test data for test case no 570417")
 	public void user_update_test_data_for_test_case_no_570417() {
 		testData5 = fmsTransactionsExcelData5.getTestdata("AT_FM_023");
@@ -2162,7 +2175,8 @@ public class Request_for_financing_steps {
 	public void user_existing_facility_no_in_mainteance_under_request_for_financing() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Existing_Facility_No_InMainteance_under_RequestForFinancing_607());
 		Request_for_financing_Obj.Existing_Facility_No_InMainteance_under_RequestForFinancing_607().click();
-		Request_for_financing_Obj.Existing_Facility_No_InMainteance_under_RequestForFinancing_607().sendKeys(testData5.get("Existing Facility No"));
+		//Request_for_financing_Obj.Existing_Facility_No_InMainteance_under_RequestForFinancing_607().sendKeys(testData5.get("Existing Facility No"));
+		Request_for_financing_Obj.Existing_Facility_No_InMainteance_under_RequestForFinancing_607().sendKeys("1768");
 		Request_for_financing_Obj.Existing_Facility_No_InMainteance_under_RequestForFinancing_607().sendKeys(Keys.TAB);
 	   
 		
@@ -2254,9 +2268,7 @@ public class Request_for_financing_steps {
 		
 		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmsavepopupokbutton());
 		Request_for_financing_Obj.confirmsavepopupokbutton().click();
-		
 		//waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_okOn_save_pop());
-		
 		try {
 			for (int i = 0; i < 700; i++) {
 				Request_for_financing_Obj.Click_okOn_save_pop().click();
@@ -2264,9 +2276,8 @@ public class Request_for_financing_steps {
 			}
 		} catch (Exception e) {
 		}
-	   
-		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.CloseTab());
-		Request_for_financing_Obj.CloseTab().click();
+//		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.CloseTab());
+//		Request_for_financing_Obj.CloseTab().click();
 		try {
 			for (int i = 0; i < 300; i++) {
 				if(Request_for_financing_Obj.confirmsavepopupokbutton().isDisplayed()) {
@@ -2275,7 +2286,6 @@ public class Request_for_financing_steps {
 			}
 		} catch (Exception e) {
 		}
-		
 	}
 
 	@Given("User_607 Click Approve Level1 under Request For Financing")
@@ -2645,7 +2655,6 @@ public class Request_for_financing_steps {
 			break;
 		}
     	
-    	
     
     	for (int i = 0; i < 2000; i++) {
 			try {
@@ -2710,11 +2719,95 @@ public class Request_for_financing_steps {
 	}
 	
 	
+//	@584038
 	
+	@Given("User_607 Enter the Modification reason In Mainteance under Request For Financing")
+	public void user_enter_the_modification_reason_in_mainteance_under_request_for_financing() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Modification_ReasonBtn_in_mainteance_under_RequestForFinancing_607());
+		Request_for_financing_Obj.Modification_ReasonBtn_in_mainteance_under_RequestForFinancing_607().click();
+		
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.click_AddBtnIn_Modification_Reason_popup_607());
+		Request_for_financing_Obj.click_AddBtnIn_Modification_Reason_popup_607().click();
+		
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.SelectFirstRow_In_AddBtnIn_Modification_Reason_popup_607());
+		Request_for_financing_Obj.SelectFirstRow_In_AddBtnIn_Modification_Reason_popup_607().click();
+		
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.SelectDropDownInFirstRow_In_AddBtnIn_Modification_Reason_popup_607());
+		DropDownHelper.SelectUsingVisibleValue(Request_for_financing_Obj.SelectDropDownInFirstRow_In_AddBtnIn_Modification_Reason_popup_607(), testData5.get("Modification Reason DropDown"));
+		
+		Request_for_financing_Obj.EnterDetailsInFirstRow_In_AddBtnIn_Modification_Reason_popup_607().sendKeys(testData5.get("Modification Reason Details"));
+		
+		Request_for_financing_Obj.ClickOkBtnInFirstRow_In_AddBtnIn_Modification_Reason_popup_607().click();
+		
+	}
 
 	
+	@Given("User_607 Click Customer Grading Recommendations Tab In Approve lev1 Under Request For Financing")
+	public void user_click_customer_grading_recommendations_tab_in_approve_lev1_under_request_for_financing() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.ClickCustomerGradingRecommendationsTabInApprovelev1_UnderRequestForFinancing_607());
+		Request_for_financing_Obj.ClickCustomerGradingRecommendationsTabInApprovelev1_UnderRequestForFinancing_607().click();
+	}
+
+	@Given("User_607 Select Decision In Customer Grading Recommendations Tab In Approve lev1 Under Request For Financing")
+	public void user_select_decision_in_customer_grading_recommendations_tab_in_approve_lev1_under_request_for_financing() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.SelectDecisionInCustomerGradingRecommendationsTabInApprovelev1_UnderRequestForFinancing_607());
+	    DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.SelectDecisionInCustomerGradingRecommendationsTabInApprovelev1_UnderRequestForFinancing_607(), testData5.get("Decision in approve level1"));
+	}
 	
+	@Given("User_607 Enter the Reason for rejecting the record")
+	public void user_enter_the_reason_for_rejecting_the_record() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.ClickAddBtn_InRejectionReasonPopup_607());
+		Request_for_financing_Obj.ClickAddBtn_InRejectionReasonPopup_607().click();
+		
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Click_FirstRowIn_RejectionReasonPopup_607());
+		Request_for_financing_Obj.Click_FirstRowIn_RejectionReasonPopup_607().click();
+		
+		DropDownHelper.SelectUsingVisibleText(Request_for_financing_Obj.SelectReasonDropDown_InRejectionReasonPopup_607(), testData5.get("Reason for Rejecting DropDown"));
+		
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.WriteReason_InRejectionReasonPopup_607());
+		Request_for_financing_Obj.WriteReason_InRejectionReasonPopup_607().sendKeys(testData5.get("Write Reason for Rejecting"));
+		
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.ClickOkBtn_InRejectionReasonPopup_607());
+		Request_for_financing_Obj.ClickOkBtn_InRejectionReasonPopup_607().click();
+	}
 	
+
+	@Given("User_607 Cilck ok in Confirm and success the popup")
+	public void user_cilck_ok_in_confirm_and_success_the_popup() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.confirmsavepopupokbutton());
+		Request_for_financing_Obj.confirmsavepopupokbutton().click();
+	    
+	}
+	
+	@Given("User_607 Click Approve button in Approve lev1 under Request For Financing under request")
+	public void user_click_approve_button_in_approve_lev1_under_request_for_financing_under_request() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.ClickApproveBtn_inApproveLev1_underRequestForFinancing_607());
+		Request_for_financing_Obj.ClickApproveBtn_inApproveLev1_underRequestForFinancing_607().click();
+		
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.ButtonConfirmOk());
+    	Request_for_financing_Obj.ButtonConfirmOk().click();
+	}
+	
+	StringBuffer ModifiyRejectReq = new StringBuffer();
+	@Given("User_607 Get Sucess message code")
+	public void user_get_sucess_message_code() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.limitDetailsValidateSuccessMsg());
+		
+		String SuccessMsg = Request_for_financing_Obj.limitDetailsValidateSuccessMsg().getText();
+		String substring = SuccessMsg.substring(23, 27);
+		ModifiyRejectReq.append(substring);
+		System.err.println("Reference Number: " + ModifiyRejectReq);
+		Request_for_financing_Obj.Success_Popup().click();
+	}
+	
+	@Given("User_607 Enter Modify reject request no in Existing Facility No In Mainteance under Request For Financing")
+	public void user_enter_modify_reject_request_no_in_existing_facility_no_in_mainteance_under_request_for_financing() {
+		waitHelper.waitForElementwithFluentwait(driver, Request_for_financing_Obj.Existing_Facility_No_InMainteance_under_RequestForFinancing_607());
+		Request_for_financing_Obj.Existing_Facility_No_InMainteance_under_RequestForFinancing_607().click();
+		//Request_for_financing_Obj.Existing_Facility_No_InMainteance_under_RequestForFinancing_607().sendKeys(testData5.get("Existing Facility No"));
+		Request_for_financing_Obj.Existing_Facility_No_InMainteance_under_RequestForFinancing_607().sendKeys(ModifiyRejectReq,Keys.TAB);
+	//	Request_for_financing_Obj.Existing_Facility_No_InMainteance_under_RequestForFinancing_607().sendKeys(Keys.TAB);
+	}
 	
 	
 	
