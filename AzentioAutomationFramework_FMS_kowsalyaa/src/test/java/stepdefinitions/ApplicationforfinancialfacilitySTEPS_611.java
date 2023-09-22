@@ -124,8 +124,8 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
     public void click_the_first_wifak_appliaction() throws Throwable {
 		waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.wifakapplication1_611());
     	wifakapplicationobj_611.wifakapplication1_611().click();
-    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.wifakapplication1_611());
-    	wifakapplicationobj_611.wifakapplication1_611().click();
+//    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.wifakapplication1_611());
+//    	wifakapplicationobj_611.wifakapplication1_611().click();
     }
 
     @And("^User_611 Click the second Wifak Application$")
@@ -313,25 +313,25 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
     	} 
 	}
  // Clear cache step
- 	@And("User_611 clear the caches in FMS Application")
- 	public void user_clear_the_caches_in_fms_application() throws Throwable {
- 		waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.FMSCoreTechDetailsIcon_611());
- 		wifakapplicationobj_611.FMSCoreTechDetailsIcon_611().click();
- 		
- 		waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.FMSCoreClearCacheBtn_611());
- 		wifakapplicationobj_611.FMSCoreClearCacheBtn_611().click();
- 		
- 		for (int i = 0; i < 2000; i++) {
- 			try {
- 				wifakapplicationobj_611.SuccessPopupOkBtn_611().click();
- 		    	break;
- 			} catch (Exception e) {
- 				if (i==1999) {
- 					Assert.fail(e.getMessage());
- 				}
- 			}
- 		}
- 	}
+// 	@And("User_611 clear the caches in FMS Application")
+// 	public void user_clear_the_caches_in_fms_application() throws Throwable {
+// 		waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.FMSCoreTechDetailsIcon_611());
+// 		wifakapplicationobj_611.FMSCoreTechDetailsIcon_611().click();
+// 		
+// 		waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.FMSCoreClearCacheBtn_611());
+// 		wifakapplicationobj_611.FMSCoreClearCacheBtn_611().click();
+// 		
+// 		for (int i = 0; i < 2000; i++) {
+// 			try {
+// 				wifakapplicationobj_611.SuccessPopupOkBtn_611().click();
+// 		    	break;
+// 			} catch (Exception e) {
+// 				if (i==1999) {
+// 					Assert.fail(e.getMessage());
+// 				}
+// 			}
+// 		}
+// 	}
 
     
     @And("^User_611 Click the limit details tab$")
