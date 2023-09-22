@@ -2,49 +2,50 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-04T17:21:59 IST" name="Default suite" finished-at="2023-08-04T17:25:00 IST" duration-ms="180980">
+  <suite started-at="2023-09-21T18:42:22 IST" name="Default suite" finished-at="2023-09-21T18:44:26 IST" duration-ms="123706">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@8458f04]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@606e4010]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-08-04T17:21:59 IST" name="Default test" finished-at="2023-08-04T17:25:00 IST" duration-ms="180980">
+    <test started-at="2023-09-21T18:42:22 IST" name="Default test" finished-at="2023-09-21T18:44:26 IST" duration-ms="123706">
       <class name="Runner.TestApplication">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@8458f04]" started-at="2023-08-04T17:21:59 IST" name="setUpClass" finished-at="2023-08-04T17:22:00 IST" duration-ms="1573" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@606e4010]" started-at="2023-09-21T18:42:22 IST" name="setUpClass" finished-at="2023-09-21T18:42:23 IST" duration-ms="1163" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@8458f04]" started-at="2023-08-04T17:22:00 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-08-04T17:24:17 IST" duration-ms="136887" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@606e4010]" started-at="2023-09-21T18:42:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-09-21T18:44:01 IST" duration-ms="97323" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["BMOI150254 - schedule with Straight Line method"]]>
+                <![CDATA["Check and verify the new flag" Allow to settle penalty" added in settlement screen"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[Testing the Functionality of Financial facility Application]"]]>
+                <![CDATA["Optional[Testing the functionality of Settlement feature]"]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.NumberFormatException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[For input string: ""]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NumberFormatException: For input string: ""
-at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
-at java.base/java.lang.Integer.parseInt(Integer.java:670)
-at java.base/java.lang.Integer.parseInt(Integer.java:778)
-at stepdefinitions.ApplicationForFacility_482.user_482_click_create_schedule_button_under_wifak_application(ApplicationForFacility_482.java:2664)
-at ✽.User_482 Click Create schedule Button Under WIFAK Application(file:///C:/Users/ININDC00482/git/FMS_Ajith/AzentioAutomationFramework_FMS_Ajith/src/test/java/features/ApplicationForFinancialFacility_482.feature:155)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at stepdefinitions.Penalty_482.user_482_verify_settlement_charge_details_tab_disabled(Penalty_482.java:125)
+at ✽.User_482 Verify Settlement charge Details Tab disabled(file:///C:/Users/ININDC00482/git/FMS_Ajith/AzentioAutomationFramework_FMS_Ajith/src/test/java/features_IIS/Settlement.feature:90)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NumberFormatException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@8458f04]" started-at="2023-08-04T17:24:17 IST" name="tearDownClass" finished-at="2023-08-04T17:25:00 IST" duration-ms="42428" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@606e4010]" started-at="2023-09-21T18:44:01 IST" name="tearDownClass" finished-at="2023-09-21T18:44:26 IST" duration-ms="25139" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

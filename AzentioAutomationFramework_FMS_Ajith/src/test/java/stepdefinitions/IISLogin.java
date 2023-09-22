@@ -10,7 +10,6 @@ import org.openqa.selenium.WebDriver;
 import dataProvider.ExcelData;
 import helper.ClicksAndActionsHelper;
 import helper.WaitHelper;
-import pageobjects.CommonElements.FMSCommonWebElements;
 import pageobjects.CommonElements.IISCommonElements;
 
 public class IISLogin {	
@@ -52,6 +51,30 @@ public class IISLogin {
 		iisCommonWebElements.iisLoginButon().click();
 //		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.fmsContinueButton());
 //		iisCommonWebElements.fmsContinueButton().click();
+		iisCommonWebElements.iisCompanyCode().sendKeys(iisLoginTestData.get("CompanyCode"));
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisCompanyAndBranchLogin());
+		clicksAndActionHelper.moveToElement(iisCommonWebElements.iisCompanyAndBranchLogin());
+		clicksAndActionHelper.clickOnElement(iisCommonWebElements.iisCompanyAndBranchLogin());
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisBranchCode());
+		iisCommonWebElements.iisBranchCode().click();
+		for (int i = 0; i <= 10; i++) {
+			iisCommonWebElements.iisBranchCode().sendKeys(Keys.DELETE);
+		}
+		iisCommonWebElements.iisBranchCode().sendKeys(iisLoginTestData.get("BranchCode"));
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisCompanyAndBranchLogin());
+		iisCommonWebElements.iisCompanyAndBranchLogin().click();
+		for (int i = 0; i <= 50; i++) {
+
+			String headOffice = iisCommonWebElements.iisBranchCodeValidation().getAttribute("prevvalue");
+
+			if (!(headOffice.isBlank())) {
+				break;
+			}
+
+		}
+		
+		waitHelper.waitForElementwithFluentwait(driver, iisCommonWebElements.iisContinueButton());
+		iisCommonWebElements.iisContinueButton().click();
 		for (int i = 0; i <500; i++) {
 			try {
 				if (iisCommonWebElements.iis_UserAlreadyLoginPopUp().isDisplayed()) {

@@ -19,6 +19,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageobjects.iisParam.IncidentalChargesObj_482;
+import pageobjects.iisParam.PenaltyObj_482;
 import resources.BaseClass;
 
 public class IIS_IncidentalChargesSteps_482 {
@@ -32,11 +33,12 @@ public class IIS_IncidentalChargesSteps_482 {
 	Selenium_Actions selenium_Actions = new Selenium_Actions(driver);
 	Actions actions = new Actions(driver);
 	IISLogin login = new IISLogin(driver);
-	
 	IncidentalChargesObj_482 incidentalChargesObj = new IncidentalChargesObj_482(driver);
-	
+	PenaltyObj_482 penaltyObj = new PenaltyObj_482(driver);
 	String path = System.getProperty("user.dir") +"\\TestData\\IISTestData.xlsx";
 	ExcelData iisIncidentalChargesExcelData  = new ExcelData(path,"IncidentalChargesTestData","DataSet ID");
+	ExcelData penaltyExcelData = new ExcelData(path,"PenaltyTestData","DataSet ID");
+	ExcelData settlementExcelData  = new ExcelData(path,"Settlement","DataSet ID");
 	ExcelData testExecution = new ExcelData(path,"TestExecution","TestCaseID");
 	Map<String, String> testExecutionData;
 	
@@ -54,12 +56,32 @@ public class IIS_IncidentalChargesSteps_482 {
 		testData = iisIncidentalChargesExcelData.getTestdata("DS_Test");
     }
 	
+	@And("User_482 get the test data for test case AT_SETLMNT_185")
+	public void user_get_the_test_data_for_test_case_at_setlmnt_185() {
+		testExecutionData = testExecution.getTestdata("AT_SETLMNT_185");
+		testData = settlementExcelData.getTestdata(testExecutionData.get("Data Set ID"));
+	}
+	@And("User_482 get the test data for test case AT_SETLMNT_186")
+	public void user_get_the_test_data_for_test_case_at_setlmnt_186() {
+		testExecutionData = testExecution.getTestdata("AT_SETLMNT_186");
+		testData = settlementExcelData.getTestdata(testExecutionData.get("Data Set ID"));
+	}
+	
 	@And("User_482 get the test data for test case AT_IC_019")
 	public void user_482_get_the_test_data_for_test_case_at_ic_019() {
 		testExecutionData = testExecution.getTestdata("AT_IC_019");
 		testData = iisIncidentalChargesExcelData.getTestdata(testExecutionData.get("Data Set ID"));
 	}
-	
+	@And("User_482 get the test data for test case AT_PNLT_020")
+	public void user_482_get_the_test_data_for_test_case_at_pnlt_020() {
+		testExecutionData = testExecution.getTestdata("AT_PNLT_020");
+		testData = penaltyExcelData.getTestdata(testExecutionData.get("Data Set ID"));
+	}
+	@And("User_482 get the test data for test case AT_PNLT_019")
+	public void user_get_the_test_data_for_test_case_at_pnlt_019() {
+		testExecutionData = testExecution.getTestdata("AT_PNLT_019");
+		testData = penaltyExcelData.getTestdata(testExecutionData.get("Data Set ID"));
+	}
 	
 	
 	// Clear cache step
@@ -148,7 +170,7 @@ public class IIS_IncidentalChargesSteps_482 {
 	@And("User_482 enter the category in maintenance under Investment Deals Combined without Trade Deal")
 	public void user_enter_the_category_in_maintenance_under_investment_deals_combined_without_trade_deal() throws Throwable {
 		waitHelper.waitForElementwithFluentwait(driver, incidentalChargesObj.IISInvestmentDealWithoutTradeDealMainCategoryInput_482());
-		incidentalChargesObj.IISInvestmentDealWithoutTradeDealMainCategoryInput_482().sendKeys(testData.get("Charge Code"),Keys.TAB);
+		incidentalChargesObj.IISInvestmentDealWithoutTradeDealMainCategoryInput_482().sendKeys(testData.get("Category"),Keys.TAB);
 //		incidentalChargesObj.IISInvestmentDealWithoutTradeDealMainCategoryInput_482().sendKeys("3",Keys.TAB);
 		for(int i = 0; i <= 500; i++) {
     		try {
@@ -180,6 +202,17 @@ public class IIS_IncidentalChargesSteps_482 {
 
 	@And("User_482 enter the amount in maintenance under Investment Deals Combined without Trade Deal")
 	public void user_enter_the_amount_in_maintenance_under_investment_deals_combined_without_trade_deal() throws Throwable {
+		for (int i = 0; i <200; i++) {
+			try {
+				
+				if(!(incidentalChargesObj.IIS_investment_deal_without_trade_deal_main_Deal_Currency_Validation().getAttribute("prevvalue").isBlank())
+						||!incidentalChargesObj.IIS_investment_deal_without_trade_deal_main_Deal_Currency_Validation().getAttribute("prevvalue").isEmpty()) {
+					break;
+				}
+			} catch (Exception e) {
+				
+			}
+		}
 		waitHelper.waitForElementwithFluentwait(driver, incidentalChargesObj.IISInvestmentDealWithoutTradeDealMainAmountInput_482());
 		incidentalChargesObj.IISInvestmentDealWithoutTradeDealMainAmountInput_482().sendKeys(testData.get("Amount"),Keys.TAB);
 //		incidentalChargesObj.IISInvestmentDealWithoutTradeDealMainAmountInput_482().sendKeys("10000",Keys.TAB);
@@ -205,6 +238,17 @@ public class IIS_IncidentalChargesSteps_482 {
 				
 			}
     	}
+
+		for (int i = 0; i <2500; i++) {
+			try {
+				if(!incidentalChargesObj.IIS_investment_deal_without_trade_deal_ContributorAmountValidation_482().getAttribute("prevvalue").isBlank()
+						||!incidentalChargesObj.IIS_investment_deal_without_trade_deal_ContributorAmountValidation_482().getAttribute("prevvalue").isEmpty()) {
+					break;
+				}
+			} catch (Exception e) {
+				
+			}
+		}
 	}
 
 	@And("User_482 double click the Contributor details row in maintenance under Investment Deals Combined without Trade Deal")
@@ -310,14 +354,6 @@ public class IIS_IncidentalChargesSteps_482 {
 	
 	@And("User_482 click the save button in maintenance under Investment Deals Combined without Trade Deal")
 	public void user_click_the_save_button_in_maintenance_under_investment_deals_combined_without_trade_deal() throws Throwable {
-//		for (int i = 0; i <= 300; i++) {
-//			try {
-//				javaScriptHelper.scrollIntoView(incidentalChargesObj.IISInvestmentDealWithoutTradeDealMainSaveBtn_482());
-//				break;
-//			} catch (Exception e) {
-//
-//			}
-//		}
 		
 		for (int i = 0; i <= 300; i++) {
 			try {
@@ -335,14 +371,12 @@ public class IIS_IncidentalChargesSteps_482 {
 	}
 	@And("User_482 click Confirmation yes")
 	public void user_482_click_confirmation_yes() {
-		for (int i = 0; i <2000; i++) {
+		for (int i = 0; i <5000; i++) {
 			try {
 				incidentalChargesObj.IIS_ConfirmPopupYesBtn_482().click();
 				break;
 			} catch (Exception e) {
-				if (i==1999) {
-					Assert.fail(e.getMessage());
-				}
+				
 			}
 		}
 
@@ -355,12 +389,9 @@ public class IIS_IncidentalChargesSteps_482 {
 				incidentalChargesObj.IIS_InformationPopupOkBtn_482().click();
 				break;
 			} catch (Exception e) {
-				try {
-					incidentalChargesObj.IIS_InformationPopupOkBtn_482().click();
-				} catch (Exception e2) {
-					
+				if (i==1999) {
+					Assert.fail(e.getMessage());
 				}
-				
 			}
 		}		
 	}
@@ -463,6 +494,24 @@ public class IIS_IncidentalChargesSteps_482 {
 		String dealNbr = incidentalChargesObj.IIS_InformationPopupTextMsg_482().getText().substring(18, 22);
     	System.err.println("Reference Number: "+dealNbr);    	
     	iisIncidentalChargesExcelData.updateTestData(testData.get("DataSet ID"),"Deal Nbr", dealNbr);
+		for (int i = 0; i <= 2000; i++) {
+			try {
+				incidentalChargesObj.IIS_InformationPopupOkBtn_482().click();
+				break;
+			} catch (Exception e) {
+	
+			}
+		}		
+	}
+	@And("User_482 Store Deal Created for Settlement")
+	public void user_482_store_deal_created_for_settlement() {
+		waitHelper.waitForElementwithFluentwait(driver, incidentalChargesObj.IIS_InformationPopupTextMsg_482());
+		String text = incidentalChargesObj.IIS_InformationPopupTextMsg_482().getText();
+		System.err.println("Text Message: "+text);
+		String dealNbr = incidentalChargesObj.IIS_InformationPopupTextMsg_482().getText().substring(18, 22);
+    	System.err.println("Reference Number: "+dealNbr); 
+    	System.err.println(testData.get("DataSet ID"));
+    	settlementExcelData.updateTestData(testData.get("DataSet ID"),"Deal Nbr", dealNbr);
 		for (int i = 0; i <= 2000; i++) {
 			try {
 				incidentalChargesObj.IIS_InformationPopupOkBtn_482().click();
@@ -909,6 +958,13 @@ public class IIS_IncidentalChargesSteps_482 {
 	public void user_verify_the_immediate_payment_for_incidental_charges() {
 	    
 	    
+	}
+	
+	@And("User_482 Search Settlement nbr")
+	public void user_482_search_settlement_nbr() {
+		selenium_Actions.getWaitHelper().waitForElementwithFluentwait(driver,penaltyObj.iis_Settlement_SearchDealNo());
+		penaltyObj.iis_Settlement_SearchDealNo().click();
+		penaltyObj.iis_Settlement_SearchDealNo().sendKeys(testData.get("Deal Nbr"),Keys.TAB);
 	}
 	
 	

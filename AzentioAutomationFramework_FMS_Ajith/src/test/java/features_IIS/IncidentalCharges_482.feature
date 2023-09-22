@@ -1,7 +1,7 @@
 Feature: To check the Incidental Charges Feature
 
 @AT_IC_010
-Scenario: Checking the Deal Incidental charges Functionality fro Reversal
+Scenario: Checking the Deal Incidental charges Functionality for Reversal
 Given navigate to IIS application and login with valid credentials
 And User_608 get the test data for test case AT_IC_010
 And User_608 clear the caches in IIS Application

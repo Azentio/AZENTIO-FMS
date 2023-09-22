@@ -51,6 +51,17 @@ public class ExcelReader {
 		}
 
 	}
+	public int getRowCountUsingIndex(int index) {
+		if (index == -1)
+			return 0;
+		else {
+			sheet = workbook.getSheetAt(index);
+			int number = sheet.getLastRowNum() + 1;
+			//System.out.println(number);
+			return number;
+		}
+
+	}
 
 	// returns the data from a cell
 	public String getCellData(String sheetName, String colName, int rowNum) {
@@ -435,6 +446,19 @@ public class ExcelReader {
 		return row.getLastCellNum();
 
 	}
+	
+	public int getColumnCountUsingIndex(int index) {
+		
+
+		sheet = workbook.getSheetAt(index);
+		row = sheet.getRow(0);
+
+		if (row == null)
+			return -1;
+
+		return row.getLastCellNum();
+
+	}
 
 	// String sheetName, String testCaseName,String keyword ,String URL,String
 	// message
@@ -470,5 +494,14 @@ public class ExcelReader {
 		return -1;
 
 	}
+	public int getNoOfSheets() {
+		return workbook.getNumberOfSheets();
+
+	}
+	public String getSheetName(int index) {
+		return workbook.getSheetName(index);
+
+	}
+
 
 }

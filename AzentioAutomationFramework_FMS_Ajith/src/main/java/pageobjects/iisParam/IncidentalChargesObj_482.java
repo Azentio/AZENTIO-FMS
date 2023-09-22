@@ -52,10 +52,22 @@ public class IncidentalChargesObj_482 {
 		return IIS_investment_deal_without_trade_deal_main_category_input;
 	}
 	
+	@FindBy(xpath = "//td[@id='td_ContributorDetailsGridTbl_Id_T022MT_1_trsdetVO.AMOUNT']//input")
+	private WebElement IIS_investment_deal_without_trade_deal_ContributorAmountValidation_482;
+	public WebElement IIS_investment_deal_without_trade_deal_ContributorAmountValidation_482(){
+		return IIS_investment_deal_without_trade_deal_ContributorAmountValidation_482;
+	}
+	
 	@FindBy(xpath = "//input[@id='lookuptxt_investmentDeals_CLASS_T022MT']")
 	private WebElement IIS_investment_deal_without_trade_deal_main_product_class_input;
 	public WebElement IISInvestmentDealWithoutTradeDealMainProductClassInput_482(){
 		return IIS_investment_deal_without_trade_deal_main_product_class_input;
+	}
+	
+	@FindBy(xpath = "//input[@id='dealCyDescription_T022MT']")
+	private WebElement IIS_investment_deal_without_trade_deal_main_Deal_Currency_Validation;
+	public WebElement IIS_investment_deal_without_trade_deal_main_Deal_Currency_Validation(){
+		return IIS_investment_deal_without_trade_deal_main_Deal_Currency_Validation;
 	}
 	
 	@FindBy(xpath = "//input[@id='trsdealVO_DD_DEAL_AMOUNT_T022MT']")
@@ -290,7 +302,7 @@ public class IncidentalChargesObj_482 {
 		return IIS_information_popup_text_msg;
 	}	
 	//info ok
-	@FindBy(xpath = "//input[@id='_popup_path_sol_ok']")
+	@FindBy(xpath = "//div[contains(text(),'INFORMATION')]/parent::div/parent::div//input")
 	private WebElement IIS_information_popup_ok_btn;
 	public WebElement IIS_InformationPopupOkBtn_482(){
 		return IIS_information_popup_ok_btn;

@@ -4,4 +4,4 @@ Feature: Title of your feature
 
   @tag1
   Scenario: Title of your scenario
-And User_482 Click Automatic Allocation Button
+And User_482 Click Allow to settle penalty

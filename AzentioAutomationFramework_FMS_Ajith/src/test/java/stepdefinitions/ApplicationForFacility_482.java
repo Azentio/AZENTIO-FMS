@@ -10,7 +10,6 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Random;
 
-import org.jsoup.Connection.Base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
