@@ -287,7 +287,7 @@ And User_611 search the code under Collateral Type approve screen
 And User_611 double click on the searched result under Collateral Type approve screen
 When User_611 clicks on the Approve button under Collateral Type approve screen
 
-@640874_Param
+ @640874_FMSCore
 Scenario: TSR - RIDB180131
 Given navigate to FMS application and login with valid credentials
 And User_611 get the test data for test case AT_RF_041_Core

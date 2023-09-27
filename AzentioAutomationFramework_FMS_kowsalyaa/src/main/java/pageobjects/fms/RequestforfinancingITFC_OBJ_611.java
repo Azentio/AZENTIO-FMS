@@ -146,11 +146,114 @@ public class RequestforfinancingITFC_OBJ_611 {
 		return RequestforFinancing_Fundcode;
 	}
 	@FindBy(xpath="//td[@id='td_RequestFinancingfundlimitsLimitDetailsGrid_333RF00MT_1_fmsApplFundLimitDetVO.ALLOCATED_AMOUNT_FACILITY_CY']")
-	private WebElement RequestforFinancing_Validationamtbtn ; 
-	public WebElement RequestforFinancing_Validationamtbtn_611() {
-		return RequestforFinancing_Validationamtbtn;
+	private WebElement RequestforFinancing_Validationamtvalue ; 
+	public WebElement RequestforFinancing_Validationamtvalue_611() {
+		return RequestforFinancing_Validationamtvalue;
 	}
-
+	@FindBy(xpath="//input[@id='_popup_path_sol_ok']")
+	private WebElement Requestforfinancing_Validationpopupmsg ; 
+	public WebElement Requestforfinancing_Validationpopupmsg_611() {
+		return Requestforfinancing_Validationpopupmsg;
+	}
+	
+	//468169
+	
+	@FindBy(xpath="//span[text()='Commodities and Security Components']")
+	private WebElement RequestforFinancing_CommoditiesandSecurityComponents ; 
+	public WebElement RequestforFinancing_CommoditiesandSecurityComponents_611() {
+		return RequestforFinancing_CommoditiesandSecurityComponents;
+	}
+	@FindBy(xpath="//th[text()='Provider']")
+	private WebElement RequestforFinancing_Providertab ; 
+	public WebElement RequestforFinancing_Providertab_611() {
+		return RequestforFinancing_Providertab;
+	}
+	@FindBy(xpath="//div[@id='jqgh_fmsSecurityComponentsDetailsGrid_333RF00MT_fmsSecuComponentsVO.FIXED_AMOUNT']")
+	private WebElement RequestforFinancing_FixedAmounttab ; 
+	public WebElement RequestforFinancing_FixedAmounttab_611() {
+		return RequestforFinancing_FixedAmounttab;
+	}
+	@FindBy(xpath="//div[@id='jqgh_fmsSecurityComponentsDetailsGrid_333RF00MT_fmsSecuComponentsVO.COST_BEARING_PARTY']")
+	private WebElement RequestforFinancing_Costbearingparty ; 
+	public WebElement RequestforFinancing_Costbearingparty_611() {
+		return RequestforFinancing_Costbearingparty;
+	}
+	
+	//569548
+	
+	@FindBy(xpath = "//td[text()='Parameters']")
+	private WebElement IIS_parameter_feature;
+	public WebElement IISParameterFeature_611() {
+		return IIS_parameter_feature;
+	}
+	
+	@FindBy(xpath = "//td[text()='Product Class']")
+	private WebElement IIS_parameter_product_class_module;
+	public WebElement IISParameterProductClassModule_611() {
+		return IIS_parameter_product_class_module;
+	}
+	
+	@FindBy(xpath = "//a[@id='M003MT']")
+	private WebElement IIS_product_class_maintanance;
+	public WebElement IISProductClassMaintanance_611() {
+		return IIS_product_class_maintanance;
+	}
+	
+	@FindBy(xpath = "//a[@id='infoBarSearchButton_M003MT']")
+	private WebElement IIS_product_class_main_search_btn;
+	public WebElement IISProductClassMainSearchBtn_611() {
+		return IIS_product_class_main_search_btn;
+	}
+	
+	@FindBy(xpath = "//input[@id='iISProductClassListGridTbl_Id_M003MT_gs_trsctrlclassVO.CLASS']")
+	private WebElement IIS_product_class_main_search_class;
+	public WebElement IISProductClassMainSearchClass_611() {
+		return IIS_product_class_main_search_class;
+	}
+	
+	@FindBy(xpath = "//td[text()='Ijara']")
+	private WebElement IIS_product_class_main_search_row_label;
+	public WebElement IISProductClassMainSearchRowLabel_611() {
+		return IIS_product_class_main_search_row_label;
+	}
+	
+	@FindBy(xpath = "//td[@id='td_iISProductClassListGridTbl_Id_M003MT_1_trsctrlclassVO.CLASS']")
+	private WebElement IIS_product_class_main_searched_row;
+	public WebElement IISProductClassMainSearchedRow_611() {
+		return IIS_product_class_main_searched_row;
+	}
+	@FindBy(xpath = "//a[@id='infoBarSearchButton_M003MT']")
+	private WebElement IIS_product_class_maintenance_search_btn;
+	public WebElement IISProductClassMaintenanceSearchBtn_611() {
+		return IIS_product_class_maintenance_search_btn;
+	}
+	@FindBy(xpath = "//td[@id='td_iISProductClassListGridTbl_Id_M003MT_1_trsctrlclassVO.CLASS']")
+	private WebElement IIS_product_class_main_searchgrid_row;
+	public WebElement IISProductClassMainSearchgridRow_611() {
+		return IIS_product_class_main_searchgrid_row;
+	}
+	@FindBy(xpath = "//input[@id='iISProductClassListGridTbl_Id_M003MT_gs_trsctrlclassVO.CLASS']")
+	private WebElement IIS_product_class_main_searchgrid_class_input;
+	public WebElement IISProductClassMainSearchgridClassInput_611() {
+		return IIS_product_class_main_searchgrid_class_input;
+	}
+	@FindBy(xpath = "//td[@id='td_iISProductClassListGridTbl_Id_M003MT_1_trsctrlclassVO.CLASS']")
+	private WebElement IIS_product_class_main_search_result_row;
+	public WebElement IISProductClassMainSearchResultRow_611() {
+		return IIS_product_class_main_search_result_row;
+	}
+	@FindBy(xpath = "//span[text()='Profit Calculation']")
+	private WebElement IIS_product_class_Profitcalculation;
+	public WebElement IISProductClassprofitcalculation_611() {
+		return IIS_product_class_Profitcalculation;
+	}
+	@FindBy(xpath = "//select[@id='iisProductClassFasAssetValueBasedOn_M003MT']")
+	private WebElement IIS_product_class_DefaultAcquistionValue;
+	public WebElement IIS_product_class_DefaultAcquistionValue_611() {
+		return IIS_product_class_DefaultAcquistionValue;
+	}
+    //Net Asset Value
+	//Capitalized Value
 
 
 
