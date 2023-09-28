@@ -1,10 +1,6 @@
 package tests;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-
-import dataProvider.ConfigFileReader;
+import java.util.Random;
 
 public class BrowserLaunch  {
 public static void main(String[] args) throws InterruptedException {
@@ -35,9 +31,17 @@ public static void main(String[] args) throws InterruptedException {
 //	}
 	
 	
+	Random r = new Random();
+//	int low = 10;
+//	int high = 1000;
+//	int result = r.nextInt(high-low) + low;
+//	System.out.println(result);
 	
-	
-	
+	int low = 10;
+	int high = 1000;
+	int result = r.nextInt(high-low) + low;
+	String code = String.valueOf(result);
+	System.out.println(code);
 	
 }
 }
