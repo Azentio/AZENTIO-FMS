@@ -33,7 +33,7 @@ import resources.BaseClass;
 
 public class IIS_StepDefinition_609 extends BaseClass {
 	WebDriver driver = BaseClass.driver;
-	int Application_Ref, Menu_Ref, Sads_Code, ProductclassCode;
+	int Application_Ref, Menu_Ref, Sads_Code, ProductclassCode, Rand, RegisterNo , YieldCode;
 	String Brief_Name, Long_Name;
 	String user, userid = null;
 	ConfigFileReader configFileReader = new ConfigFileReader();
@@ -147,10 +147,25 @@ public class IIS_StepDefinition_609 extends BaseClass {
 	public void user_609_get_the_test_data_set_id_for_AT_IISPRM_036() throws Throwable {
 		testData = iisParametersExcelData.getTestdata("AT_IISPRM_036_D1");
 	}
-	
+
 	@And("^User_609 get the test data set id for AT_IISPRM_037$")
 	public void user_609_get_the_test_data_set_id_for_AT_IISPRM_037() throws Throwable {
 		testData = iisParametersExcelData.getTestdata("AT_IISPRM_037_D1");
+	}
+
+	@And("^User_609 get the test data set id for AT_IISPRM_070$")
+	public void user_609_get_the_test_data_set_id_for_AT_IISPRM_070() throws Throwable {
+		testData = iisParametersExcelData.getTestdata("AT_IISPRM_070_D1");
+	}
+
+	@And("^User_609 get the test data set id for AT_IISPRM_071$")
+	public void user_609_get_the_test_data_set_id_for_AT_IISPRM_071() throws Throwable {
+		testData = iisParametersExcelData.getTestdata("AT_IISPRM_071_D1");
+	}
+
+	@And("^User_609 get the test data set id for AT_IISPRM_072$")
+	public void user_609_get_the_test_data_set_id_for_AT_IISPRM_072() throws Throwable {
+		testData = iisParametersExcelData.getTestdata("AT_IISPRM_072_D1");
 	}
 
 	// **IncidentalCharges**//
@@ -423,12 +438,14 @@ public class IIS_StepDefinition_609 extends BaseClass {
 		IIS_PageObjects_609.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ContributorDetails_NostroSearch_609()
 				.click();
 
+		Thread.sleep(2000);
 		waitHelper.waitForElementwithFluentwait(driver,
 				IIS_PageObjects_609.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ContributorDetails_Nostro_609());
 		IIS_PageObjects_609.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ContributorDetails_Nostro_609().click();
 		IIS_PageObjects_609.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ContributorDetails_Nostro_609()
 				.sendKeys(testData.get("Nostro GL"), Keys.ENTER);
 
+		Thread.sleep(2000);
 		// (//table[@id='gridtab_nostro_sl_T022MT']/tbody/tr/td[text()='101101'])[1]
 		String xpath = "(//table[@id='gridtab_nostro_sl_T022MT']/tbody/tr/td[text()='" + testData.get("Nostro GL")
 				+ "'])[1]";
@@ -437,7 +454,6 @@ public class IIS_StepDefinition_609 extends BaseClass {
 				WebElement Code = driver.findElement(By.xpath(xpath));
 				if (Code.isDisplayed()) {
 					clicksAndActionHelper.doubleClick(Code);
-					Thread.sleep(2000);
 					break;
 				}
 			} catch (Exception e) {
@@ -457,6 +473,7 @@ public class IIS_StepDefinition_609 extends BaseClass {
 				Assert.fail(e.getMessage());
 			}
 		}
+		Thread.sleep(2000);
 	}
 
 	@And("User_609 select the maturity account in Contributor tab under maintenance in Investment Deals Combined without Trade Deal")
@@ -468,12 +485,14 @@ public class IIS_StepDefinition_609 extends BaseClass {
 		IIS_PageObjects_609.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ContributorDetails_MaturitySearch_609()
 				.click();
 
+		Thread.sleep(2000);
 		waitHelper.waitForElementwithFluentwait(driver,
 				IIS_PageObjects_609.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ContributorDetails_Maturity_609());
 		IIS_PageObjects_609.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ContributorDetails_Maturity_609().click();
 		IIS_PageObjects_609.IIS_InvestmentDealWithoutTradeDeal_Maintenance_ContributorDetails_Maturity_609()
 				.sendKeys(testData.get("Maturity GL"), Keys.ENTER);
 
+		Thread.sleep(2000);
 		// table[@id='gridtab_matr_ac_sl_T022MT']/tbody/tr/td[text()='411001']
 		String xpath = "(//table[@id='gridtab_matr_ac_sl_T022MT']/tbody/tr/td[text()='" + testData.get("Maturity GL")
 				+ "'])[1]";
@@ -482,7 +501,7 @@ public class IIS_StepDefinition_609 extends BaseClass {
 				WebElement Code = driver.findElement(By.xpath(xpath));
 				if (Code.isDisplayed()) {
 					clicksAndActionHelper.doubleClick(Code);
-					Thread.sleep(2000);
+
 					break;
 				}
 			} catch (Exception e) {
@@ -491,6 +510,7 @@ public class IIS_StepDefinition_609 extends BaseClass {
 				}
 			}
 		}
+		Thread.sleep(2000);
 		for (int i = 0; i <= 500; i++) {
 			try {
 				if (!(IIS_PageObjects_609
@@ -3270,7 +3290,7 @@ public class IIS_StepDefinition_609 extends BaseClass {
 				IIS_PageObjects_609.Parameters_ProductClass_Maintenance_CategorySearch_609());
 		clicksAndActionHelper
 				.clickOnElement(IIS_PageObjects_609.Parameters_ProductClass_Maintenance_CategorySearch_609());
-		
+
 		Thread.sleep(2000);
 		waitHelper.waitForElementwithFluentwait(driver,
 				IIS_PageObjects_609.Parameters_ProductClass_Maintenance_Category_609());
@@ -3308,7 +3328,8 @@ public class IIS_StepDefinition_609 extends BaseClass {
 		IIS_PageObjects_609.Parameters_ProductClass_Maintenance_ProductclassCode_609()
 				.sendKeys(String.valueOf(ProductclassCode), Keys.TAB);
 		Thread.sleep(2000);
-		iisParametersExcelData.updateTestData(testData.get("DataSet ID"), "Product Class Code", String.valueOf(ProductclassCode));
+		iisParametersExcelData.updateTestData(testData.get("DataSet ID"), "Product Class Code",
+				String.valueOf(ProductclassCode));
 	}
 
 	@And("User_609 Enter the Brief Description in Product Class under Parameters")
@@ -3316,7 +3337,7 @@ public class IIS_StepDefinition_609 extends BaseClass {
 		waitHelper.waitForElementwithFluentwait(driver,
 				IIS_PageObjects_609.Parameters_ProductClass_Maintenance_BriefDescription_609());
 		IIS_PageObjects_609.Parameters_ProductClass_Maintenance_BriefDescription_609()
-				.sendKeys(testData.get("Brief Description")+String.valueOf(ProductclassCode), Keys.TAB);
+				.sendKeys(testData.get("Brief Description") + String.valueOf(ProductclassCode), Keys.TAB);
 		Thread.sleep(2000);
 	}
 
@@ -3325,7 +3346,7 @@ public class IIS_StepDefinition_609 extends BaseClass {
 		waitHelper.waitForElementwithFluentwait(driver,
 				IIS_PageObjects_609.Parameters_ProductClass_Maintenance_LongDescription_609());
 		IIS_PageObjects_609.Parameters_ProductClass_Maintenance_LongDescription_609()
-				.sendKeys(testData.get("Long Description")+String.valueOf(ProductclassCode), Keys.TAB);
+				.sendKeys(testData.get("Long Description") + String.valueOf(ProductclassCode), Keys.TAB);
 		Thread.sleep(2000);
 	}
 
@@ -3433,4 +3454,1275 @@ public class IIS_StepDefinition_609 extends BaseClass {
 		IIS_PageObjects_609.IIS_Ok_609().click();
 		Thread.sleep(2000);
 	}
+
+	/// *** Third Party Details ***///
+	@And("User_609 Click on the Third Party Details submenu in iis")
+	public void User_609_Click_on_the_Third_Party_Details_submenu_in_iis() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.Parameters_ThirdPartyDetails_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.Parameters_ThirdPartyDetails_609());
+	}
+
+	@And("User_609 Click on the Maintenance screen in Third Party Details under Parameters")
+	public void User_609_Click_on_the_Maintenance_screen_in_Third_Party_Details_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_609());
+	}
+
+	@And("User_609 Enter the Short Name in Third Party Details under Parameters")
+	public void User_609_Enter_the_Short_Name_in_Third_Party_Details_under_Parameters() throws Throwable {
+		Random random = new Random();
+		Rand = random.nextInt(8) + 1;
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_ShortName_609());
+		IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_ShortName_609()
+				.sendKeys(testData.get("Brief Description") + String.valueOf(Rand), Keys.TAB);
+	}
+
+	@And("User_609 Enter the Long Name in Third Party Details under Parameters")
+	public void User_609_Enter_the_Long_Name_in_Third_Party_Details_under_Parameters() throws Throwable {
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_LongName_609());
+		IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_LongName_609()
+				.sendKeys(testData.get("Long Description"), Keys.TAB);
+	}
+
+	@And("User_609 Click on the Save Button in Third Party Details under Parameters")
+	public void User_609_Click_on_the_Save_Button_in_Third_Party_Details_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_SaveBtn_609());
+		clicksAndActionHelper
+				.clickOnElement(IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_SaveBtn_609());
+
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_ConfirmOk_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.IIS_ConfirmOk_609());
+
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_Ok_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.IIS_Ok_609());
+		Thread.sleep(2000);
+	}
+
+	@And("User_609 Click on the Search Button in Third Party Details under Parameters")
+	public void User_609_Click_on_the_Search_Button_in_Third_Party_Details_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_SearchBtn_609());
+		clicksAndActionHelper
+				.clickOnElement(IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_SearchBtn_609());
+		Thread.sleep(2000);
+	}
+
+	@And("User_609 Select the Record in Third Party Details under Parameters")
+	public void User_609_Select_the_Record_in_Third_Party_Details_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_Briefname_609());
+
+		IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_Briefname_609().clear();
+
+		IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_Briefname_609()
+				.sendKeys(testData.get("Brief Description") + String.valueOf(Rand), Keys.ENTER);
+		Thread.sleep(2000);
+
+		// table[@id='thirdPartyAddressListGridTbl_Id_M067MT']//td[text()='mvd']
+		String xpath = "//table[@id='thirdPartyAddressListGridTbl_Id_M067MT']//td[text()='"
+				+ testData.get("Brief Description") + String.valueOf(Rand) + "']";
+
+		for (int i = 0; i < 200; i++) {
+			try {
+				WebElement Code = driver.findElement(By.xpath(xpath));
+				if (Code.isDisplayed()) {
+					clicksAndActionHelper.doubleClick(Code);
+					break;
+				}
+			} catch (Exception e) {
+				if (i == 199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		Thread.sleep(2000);
+	}
+
+	@And("User_609 Update the Record in Third Party Details under Parameters")
+	public void User_609_Update_the_Record_in_Third_Party_Details_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_ShortName_609());
+		clicksAndActionHelper
+				.clickOnElement(IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_ShortName_609());
+		IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_ShortName_609().clear();
+		Thread.sleep(2000);
+		IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_ShortName_609().sendKeys(Keys.TAB);
+		IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_ShortName_609()
+				.sendKeys(testData.get("Brief Description") + String.valueOf(Rand), Keys.TAB);
+	}
+
+	@And("User_609 Click on the Delete Button in Third Party Details under Parameters")
+	public void User_609_Click_on_the_Delete_Button_in_Third_Party_Details_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_DeleteBtn_609());
+		clicksAndActionHelper
+				.clickOnElement(IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_DeleteBtn_609());
+
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_ConfirmOk_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.IIS_ConfirmOk_609());
+
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_Ok_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.IIS_Ok_609());
+
+	}
+
+	@Then("User_609 Validate the List screen is Displaying in Third Party Details under Parameters")
+	public void User_609_Validate_the_List_screen_is_Displaying_in_Third_Party_Details_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.Parameters_ThirdPartyDetails_List_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_ThirdPartyDetails_List_609().isDisplayed()) {
+				Assert.assertEquals(true, IIS_PageObjects_609.Parameters_ThirdPartyDetails_List_609().isDisplayed());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Approve screen is Displaying in Third Party Details under Parameters")
+	public void User_609_Validate_the_Approve_screen_is_Displaying_in_Third_Party_Details_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.Parameters_ThirdPartyDetails_Approve_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_ThirdPartyDetails_Approve_609().isDisplayed()) {
+				Assert.assertEquals(true, IIS_PageObjects_609.Parameters_ThirdPartyDetails_Approve_609().isDisplayed());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Reject screen is Displaying in Third Party Details under Parameters")
+	public void User_609_Validate_the_Reject_screen_is_Displaying_in_Third_Party_Details_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.Parameters_ThirdPartyDetails_Reject_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_ThirdPartyDetails_Reject_609().isDisplayed()) {
+				Assert.assertEquals(true, IIS_PageObjects_609.Parameters_ThirdPartyDetails_Reject_609().isDisplayed());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Update After Approve screen is Displaying in Third Party Details under Parameters")
+	public void User_609_Validate_the_Update_After_Approve_screen_is_Displaying_in_Third_Party_Details_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_ThirdPartyDetails_UpdateAfterApprove_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_ThirdPartyDetails_UpdateAfterApprove_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_ThirdPartyDetails_UpdateAfterApprove_609().isDisplayed());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Grid list shows Company code in Third Party Details under Parameters")
+	public void User_609_Validate_the_Grid_list_shows_Company_code_in_Third_Party_Details_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_Companycode_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_Companycode_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_Companycode_609().isDisplayed());
+
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Grid list shows code in Third Party Details under Parameters")
+	public void User_609_Validate_the_Grid_list_shows_code_in_Third_Party_Details_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_Code_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_Code_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_Code_609().isDisplayed());
+				clicksAndActionHelper
+						.clickOnElement(IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_Code_609());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
+	@Then("User_609 Validate the Grid list shows Brief name in Third Party Details under Parameters")
+	public void User_609_Validate_the_Grid_list_shows_Brief_name_in_Third_Party_Details_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_Briefname_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_Briefname_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_Briefname_609().isDisplayed());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
+	@Then("User_609 Validate the Grid list shows Long name in Third Party Details under Parameters")
+	public void User_609_Validate_the_Grid_list_shows_Long_name_in_Third_Party_Details_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_Companycode_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_Longname_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_Longname_609().isDisplayed());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Next Page Button working properly in Third Party Details under Parameters")
+	public void User_609_Validate_the_Next_Page_Button_working_properly_in_Third_Party_Details_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_NextPage_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_NextPage_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_NextPage_609().isDisplayed());
+				clicksAndActionHelper
+						.clickOnElement(IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_NextPage_609());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Last Page Button working properly in Third Party Details under Parameters")
+	public void User_609_Validate_the_Last_Page_Button_working_properly_in_Third_Party_Details_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_LastPage_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_LastPage_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_LastPage_609().isDisplayed());
+				clicksAndActionHelper
+						.clickOnElement(IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_LastPage_609());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Prev Page Button working properly in Third Party Details under Parameters")
+	public void User_609_Validate_the_Prev_Page_Button_working_properly_in_Third_Party_Details_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_PrevPage_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_PrevPage_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_PrevPage_609().isDisplayed());
+				clicksAndActionHelper
+						.clickOnElement(IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_PrevPage_609());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the First Page Button working properly in Third Party Details under Parameters")
+	public void User_609_Validate_the_First_Page_Button_working_properly_in_Third_Party_Details_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_FirstPage_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_FirstPage_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_FirstPage_609().isDisplayed());
+				clicksAndActionHelper
+						.clickOnElement(IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_FirstPage_609());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Sorting Functionality working properly in Third Party Details under Parameters")
+	public void User_609_Validate_the_Sorting_Functionality_working_properly_in_Third_Party_Details_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_RecordSearchIcon_609());
+		clicksAndActionHelper
+				.clickOnElement(IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_RecordSearchIcon_609());
+		Thread.sleep(1000);
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_FindBasedOn_609());
+		dropDownHelper.SelectUsingVisibleText(
+				IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_FindBasedOn_609(),
+				testData.get("Find Based On"));
+		Thread.sleep(1000);
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_FindBy_609());
+		dropDownHelper.SelectUsingVisibleText(IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_FindBy_609(),
+				testData.get("Find By"));
+		Thread.sleep(1000);
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_FindByValue_609());
+		IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_FindByValue_609()
+				.sendKeys(testData.get("Find By Value"), Keys.ENTER);
+		Thread.sleep(1000);
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_Find_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.Parameters_ThirdPartyDetails_Maintenance_Find_609());
+		Thread.sleep(2000);
+	}
+
+	/// *** Yield Roster ***///
+
+	@And("User_609 Click on the Yield under Parameters menu in iis")
+	public void User_609_Click_on_the_Yield_under_Parameters_menu_in_iis() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.Parameters_Yield_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.Parameters_Yield_609());
+	}
+
+	@And("User_609 Click on the Yield Roster submenu in iis")
+	public void User_609_Click_on_the_Yield_Roster_submenu_in_iis() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.Parameters_Yield_YieldRoster_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRoster_609());
+	}
+
+	@And("User_609 Click on the Maintenance screen in Yield Roster under Parameters")
+	public void User_609_Click_on_the_Maintenance_screen_in_Yield_Roster_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_609());
+	}
+
+	@And("User_609 Enter the Code in Yield Roster under Parameters")
+	public void User_609_Enter_the_Code_in_Yield_Roster_under_Parameters() throws Throwable {
+		Random random = new Random();
+		YieldCode = random.nextInt(5000)-500 + 5000;
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_YieldRosterCode_609());
+		IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_YieldRosterCode_609()
+				.sendKeys(String.valueOf(YieldCode), Keys.TAB);
+		iisParametersExcelData.updateTestData(testData.get("DataSet ID"), "Code", String.valueOf(YieldCode));
+	}
+	
+	@And("User_609 Enter the Brief Name in Yield Roster under Parameters")
+	public void User_609_Enter_the_Brief_Name_in_Yield_Roster_under_Parameters() throws Throwable {
+		Random random = new Random();
+		Rand = random.nextInt(8) + 1;
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_BriefNameEng_609());
+		IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_BriefNameEng_609()
+				.sendKeys(testData.get("Brief Description") + String.valueOf(Rand), Keys.TAB);
+	}
+
+	@And("User_609 Enter the Long Name in Yield Roster under Parameters")
+	public void User_609_Enter_the_Long_Name_in_Yield_Roster_under_Parameters() throws Throwable {
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_LongNameEng_609());
+		IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_LongNameEng_609()
+				.sendKeys(testData.get("Long Description"), Keys.TAB);
+	}
+
+	@And("User_609 Click on the Save Button in Yield Roster under Parameters")
+	public void User_609_Click_on_the_Save_Button_in_Yield_Roster_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_SaveBtn_609());
+		clicksAndActionHelper
+				.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_SaveBtn_609());
+
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_ConfirmOk_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.IIS_ConfirmOk_609());
+
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_Ok_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.IIS_Ok_609());
+		Thread.sleep(2000);
+	}
+
+	@And("User_609 Click on the Search Button in Yield Roster under Parameters")
+	public void User_609_Click_on_the_Search_Button_in_Yield_Roster_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_SearchBtn_609());
+		clicksAndActionHelper
+				.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_SearchBtn_609());
+		Thread.sleep(2000);
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_ClearSearch_609());
+		clicksAndActionHelper
+				.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_ClearSearch_609());
+		Thread.sleep(2000);
+	}
+
+	@And("User_609 Select the Record in Yield Roster under Parameters")
+	public void User_609_Select_the_Record_in_Yield_Roster_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_Code_609());
+		IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_Code_609().clear();
+
+		IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_Code_609()
+				.sendKeys(testData.get("Brief Description") + String.valueOf(Rand), Keys.ENTER);
+		Thread.sleep(2000);
+
+		// table[@id='trsYieldRosterListGridTbl_Id_M026MT']//td[text()='101']
+		String xpath = "//table[@id='trsYieldRosterListGridTbl_Id_M026MT']//td[text()='"
+				+ testData.get("Brief Description") + String.valueOf(Rand) + "']";
+
+		for (int i = 0; i < 200; i++) {
+			try {
+				WebElement Code = driver.findElement(By.xpath(xpath));
+				if (Code.isDisplayed()) {
+					clicksAndActionHelper.doubleClick(Code);
+					break;
+				}
+			} catch (Exception e) {
+				if (i == 199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		Thread.sleep(2000);
+	}
+
+	@And("User_609 Update the Record in Yield Roster under Parameters")
+	public void User_609_Update_the_Record_in_Yield_Roster_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_BriefNameEng_609());
+
+		IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_BriefNameEng_609().clear();
+		Thread.sleep(2000);
+		IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_BriefNameEng_609().sendKeys(Keys.TAB);
+		IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_BriefNameEng_609()
+				.sendKeys(testData.get("Brief Description") + String.valueOf(Rand), Keys.TAB);
+	}
+
+	@And("User_609 Click on the Delete Button in Yield Roster under Parameters")
+	public void User_609_Click_on_the_Delete_Button_in_Yield_Roster_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_DeleteBtn_609());
+		clicksAndActionHelper
+				.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_DeleteBtn_609());
+
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_ConfirmOk_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.IIS_ConfirmOk_609());
+
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_Ok_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.IIS_Ok_609());
+		Thread.sleep(2000);
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_ClearSearch_609());
+		clicksAndActionHelper
+				.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_ClearSearch_609());
+		Thread.sleep(2000);
+
+	}
+
+	@Then("User_609 Validate the List screen is Displaying in Yield Roster under Parameters")
+	public void User_609_Validate_the_List_screen_is_Displaying_in_Yield_Roster_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.Parameters_Yield_YieldRoster_List_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRoster_List_609().isDisplayed()) {
+				Assert.assertEquals(true, IIS_PageObjects_609.Parameters_Yield_YieldRoster_List_609().isDisplayed());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Approve screen is Displaying in Yield Roster under Parameters")
+	public void User_609_Validate_the_Approve_screen_is_Displaying_in_Yield_Roster_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.Parameters_Yield_YieldRoster_Approve_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRoster_Approve_609().isDisplayed()) {
+				Assert.assertEquals(true, IIS_PageObjects_609.Parameters_Yield_YieldRoster_Approve_609().isDisplayed());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Reject screen is Displaying in Yield Roster under Parameters")
+	public void User_609_Validate_the_Reject_screen_is_Displaying_in_Yield_Roster_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.Parameters_Yield_YieldRoster_Reject_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRoster_Reject_609().isDisplayed()) {
+				Assert.assertEquals(true, IIS_PageObjects_609.Parameters_Yield_YieldRoster_Reject_609().isDisplayed());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Update After Approve screen is Displaying in Yield Roster under Parameters")
+	public void User_609_Validate_the_Update_After_Approve_screen_is_Displaying_in_Yield_Roster_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_UpdateAfterApprove_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRoster_UpdateAfterApprove_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_Yield_YieldRoster_UpdateAfterApprove_609().isDisplayed());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Grid list shows code in Yield Roster under Parameters")
+	public void User_609_Validate_the_Grid_list_shows_code_in_Yield_Roster_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_Code_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_Code_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_Code_609().isDisplayed());
+				clicksAndActionHelper
+						.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_Code_609());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
+	@Then("User_609 Validate the Grid list shows Brief name in Yield Roster under Parameters")
+	public void User_609_Validate_the_Grid_list_shows_Brief_name_in_Yield_Roster_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_Briefname_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_Briefname_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_Briefname_609().isDisplayed());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
+	@Then("User_609 Validate the Grid list shows Long name in Yield Roster under Parameters")
+	public void User_609_Validate_the_Grid_list_shows_Long_name_in_Yield_Roster_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_Longname_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_Longname_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_Longname_609().isDisplayed());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Grid list shows Brief name in Arab in Yield Roster under Parameters")
+	public void User_609_Validate_the_Grid_list_shows_Brief_name_in_Arab_in_Yield_Roster_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_BriefnameArab_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_BriefnameArab_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_BriefnameArab_609().isDisplayed());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
+	@Then("User_609 Validate the Grid list shows Long name in Arab in Yield Roster under Parameters")
+	public void User_609_Validate_the_Grid_list_shows_Long_name_in_Arab_in_Yield_Roster_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_LongnameArab_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_LongnameArab_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_LongnameArab_609().isDisplayed());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Next Page Button working properly in Yield Roster under Parameters")
+	public void User_609_Validate_the_Next_Page_Button_working_properly_in_Yield_Roster_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_NextPage_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_NextPage_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_NextPage_609().isDisplayed());
+				clicksAndActionHelper
+						.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_NextPage_609());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Last Page Button working properly in Yield Roster under Parameters")
+	public void User_609_Validate_the_Last_Page_Button_working_properly_in_Yield_Roster_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_LastPage_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_LastPage_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_LastPage_609().isDisplayed());
+				clicksAndActionHelper
+						.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_LastPage_609());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Prev Page Button working properly in Yield Roster under Parameters")
+	public void User_609_Validate_the_Prev_Page_Button_working_properly_in_Yield_Roster_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_PrevPage_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_PrevPage_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_PrevPage_609().isDisplayed());
+				clicksAndActionHelper
+						.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_PrevPage_609());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the First Page Button working properly in Yield Roster under Parameters")
+	public void User_609_Validate_the_First_Page_Button_working_properly_in_Yield_Roster_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_FirstPage_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_FirstPage_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_FirstPage_609().isDisplayed());
+				clicksAndActionHelper
+						.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_FirstPage_609());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Sorting Functionality working properly in Yield Roster under Parameters")
+	public void User_609_Validate_the_Sorting_Functionality_working_properly_in_Yield_Roster_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_RecordSearchIcon_609());
+		clicksAndActionHelper
+				.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_RecordSearchIcon_609());
+		Thread.sleep(2000);
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_FindBasedOn_609());
+		dropDownHelper.SelectUsingVisibleText(
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_FindBasedOn_609(),
+				testData.get("Find Based On"));
+		Thread.sleep(2000);
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_FindBy_609());
+		dropDownHelper.SelectUsingVisibleText(IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_FindBy_609(),
+				testData.get("Find By"));
+		Thread.sleep(1000);
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_FindByValue_609());
+		IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_FindByValue_609()
+				.sendKeys(testData.get("Find By Value"), Keys.ENTER);
+		Thread.sleep(1000);
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_Find_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRoster_Maintenance_Find_609());
+		Thread.sleep(1000);
+
+	}
+
+	/// **** Yield Register ****///
+
+	@And("User_609 Click on the Yield Register submenu in iis")
+	public void User_609_Click_on_the_Yield_Register_submenu_in_iis() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.Parameters_Yield_YieldRegister_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRegister_609());
+	}
+
+	@And("User_609 Click on the Maintenance screen in Yield Register under Parameters")
+	public void User_609_Click_on_the_Maintenance_screen_in_Yield_Register_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_609());
+	}
+
+	@And("User_609 Enter the Register Number in Yield Register under Parameters")
+	public void User_609_Enter_the_Register_Number_in_Yield_Roster_under_Parameters() throws Throwable {
+		Random random = new Random();
+		RegisterNo = random.nextInt(2000 - 1) + 1000;
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_RegisterNo_609());
+		IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_RegisterNo_609()
+				.sendKeys(String.valueOf(RegisterNo), Keys.TAB);
+	}
+
+	@And("User_609 Select the Party Type in Yield Roster under Parameters")
+	public void User_609_Select_the_Party_Type_in_Yield_Roster_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_PartyType_609());
+		dropDownHelper.SelectUsingVisibleText(
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_PartyType_609(),
+				testData.get("Party Type"));
+	}
+
+	@And("User_609 Select the Product Type in Yield Roster under Parameters")
+	public void User_609_Select_the_Product_Type_in_Yield_Roster_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_ProductType_609());
+		dropDownHelper.SelectUsingVisibleText(
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_ProductType_609(),
+				testData.get("Product Type"));
+	}
+
+	@And("User_609 Select the Product Class in Yield Roster under Parameters")
+	public void User_609_Select_the_Product_Class_in_Yield_Roster_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_ProductClassSearch_609());
+		clicksAndActionHelper.clickOnElement(
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_ProductClassSearch_609());
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_ProductClass_609());
+		IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_ProductClass_609()
+				.sendKeys(testData.get("Product Class"), Keys.ENTER);
+		Thread.sleep(2000);
+
+		// table[@id='gridtab_YieldRegister_product_class_M026MT']//td[text()='308']
+		String xpath = "//table[@id='gridtab_YieldRegister_product_class_M026MT']//td[text()='"
+				+ testData.get("Product Class") + "']";
+
+		for (int i = 0; i < 200; i++) {
+			try {
+				WebElement Code = driver.findElement(By.xpath(xpath));
+				if (Code.isDisplayed()) {
+					clicksAndActionHelper.doubleClick(Code);
+					break;
+				}
+			} catch (Exception e) {
+				if (i == 199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		Thread.sleep(2000);
+	}
+
+	@And("User_609 Enter the Brief Name in Yield Register under Parameters")
+	public void User_609_Enter_the_Brief_Name_in_Yield_Register_under_Parameters() throws Throwable {
+		Random random = new Random();
+		Rand = random.nextInt(8) + 1;
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_BriefNameEng_609());
+		IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_BriefNameEng_609()
+				.sendKeys(testData.get("Brief Description") + String.valueOf(Rand), Keys.TAB);
+	}
+
+	@And("User_609 Enter the Long Name in Yield Register under Parameters")
+	public void User_609_Enter_the_Long_Name_in_Yield_Register_under_Parameters() throws Throwable {
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_LongNameEng_609());
+		IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_LongNameEng_609()
+				.sendKeys(testData.get("Long Description"), Keys.TAB);
+	}
+
+	@And("User_609 Click on the Save Button in Yield Register under Parameters")
+	public void User_609_Click_on_the_Save_Button_in_Yield_Register_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_SaveBtn_609());
+		clicksAndActionHelper
+				.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_SaveBtn_609());
+
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_ConfirmOk_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.IIS_ConfirmOk_609());
+
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_Ok_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.IIS_Ok_609());
+		Thread.sleep(2000);
+	}
+
+//	@And("User_609 Click on the Approve screen in Yield Register under Parameters")
+//	public void User_609_Click_on_the_Approve_screen_in_Yield_Register_under_Parameters() throws Throwable {
+//		waitHelper.waitForElementwithFluentwait(driver,
+//				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Approve_609());
+//		clicksAndActionHelper
+//				.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRegister_Approve_609());
+//	}
+//	
+//	@And("User_609 Click on the Approve Button in Approve screen  in Yield Register under Parameters")
+//	public void User_609_Click_on_the_Approve_Button_in_Approve_screen_in_Yield_Register_under_Parameters() throws Throwable {
+//		waitHelper.waitForElementwithFluentwait(driver,
+//				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Approve_ApproveBtn_609());
+//		clicksAndActionHelper
+//				.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRegister_Approve_ApproveBtn_609());
+//	}
+//	
+//	@And("User_609 Click on the Suspend screen in Yield Register under Parameters")
+//	public void User_609_Click_on_the_Suspend_screen_in_Yield_Register_under_Parameters() throws Throwable {
+//		waitHelper.waitForElementwithFluentwait(driver,
+//				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Suspend_SuspendBtn_609());
+//		clicksAndActionHelper
+//				.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRegister_Suspend_SuspendBtn_609());
+//	}
+//	
+//	@And("User_609 Click on the Suspend Button in Suspend screen in Yield Register under Parameters")
+//	public void User_609_Click_on_the_Suspend_Button_in_Suspend_screen_in_Yield_Register_under_Parameters() throws Throwable {
+//		waitHelper.waitForElementwithFluentwait(driver,
+//				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Suspend_609());
+//		clicksAndActionHelper
+//				.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRegister_Suspend_609());
+//	}
+//	
+//	@And("User_609 Click on the Reactivate Button in Reactivate screen in Yield Register under Parameters")
+//	public void User_609_Click_on_the_Reactivate_Button_in_Reactivate_screen_in_Yield_Register_under_Parameters() throws Throwable {
+//		waitHelper.waitForElementwithFluentwait(driver,
+//				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Reactivate_ReactivateBtn_609());
+//		clicksAndActionHelper
+//				.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRegister_Reactivate_ReactivateBtn_609());
+//	}
+//	
+//	@And("User_609 Click on the Reactivate screen in Yield Register under Parameters")
+//	public void User_609_Click_on_the_Reactivate_screen_in_Yield_Register_under_Parameters() throws Throwable {
+//		waitHelper.waitForElementwithFluentwait(driver,
+//				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Reactivate_609());
+//		clicksAndActionHelper
+//				.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRegister_Reactivate_609());
+//	}
+//	
+//	@And("User_609 Click on the Reactivate screen in Yield Register under Parameters")
+//	public void User_609_Click_on_the_Reactivate_screen_in_Yield_Register_under_Parameters() throws Throwable {
+//		waitHelper.waitForElementwithFluentwait(driver,
+//				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Reactivate_609());
+//		clicksAndActionHelper
+//				.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRegister_Reactivate_609());
+//	}
+	
+	@And("User_609 Click on the Search Button in Yield Register under Parameters")
+	public void User_609_Click_on_the_Search_Button_in_Yield_Register_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_SearchBtn_609());
+		clicksAndActionHelper
+				.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_SearchBtn_609());
+		Thread.sleep(2000);
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_ClearSearch_609());
+		clicksAndActionHelper
+				.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_ClearSearch_609());
+		Thread.sleep(2000);
+	}
+
+	@And("User_609 Select the Record in Yield Register under Parameters")
+	public void User_609_Select_the_Record_in_Yield_Register_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_Code_609());
+		IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_Code_609().clear();
+
+		IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_Code_609().sendKeys(String.valueOf(RegisterNo),
+				Keys.ENTER);
+		Thread.sleep(2000);
+
+		// table[@id='trsYieldRegisterListGridTbl_Id_M026MT']//td[text()='101']
+		String xpath = "//table[@id='trsYieldRegisterListGridTbl_Id_M026MT']//td[text()='" + String.valueOf(RegisterNo)
+				+ "']";
+
+		for (int i = 0; i < 200; i++) {
+			try {
+				WebElement Code = driver.findElement(By.xpath(xpath));
+				if (Code.isDisplayed()) {
+					clicksAndActionHelper.doubleClick(Code);
+					break;
+				}
+			} catch (Exception e) {
+				if (i == 199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		Thread.sleep(4000);
+	}
+
+	@And("User_609 Click on the Add icon in Yield Register under Parameters")
+	public void User_609_Click_on_the_Add_icon_in_Yield_Register_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_Addicon_609());
+		clicksAndActionHelper
+				.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_Addicon_609());
+
+		Thread.sleep(2000);
+		// table[@id='trsYieldRegisterAllPartiesGrid_Id_M026MT']/tbody/tr[2]/td[7]
+		String xpath = "//table[@id='trsYieldRegisterAllPartiesGrid_Id_M026MT']/tbody/tr[2]/td[7]";
+
+		for (int i = 0; i < 200; i++) {
+			try {
+				WebElement Code = driver.findElement(By.xpath(xpath));
+				if (Code.isDisplayed()) {
+					clicksAndActionHelper.clickOnElement(Code);
+					break;
+				}
+			} catch (Exception e) {
+				if (i == 199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		Thread.sleep(2000);
+	}
+
+	@And("User_609 Select the Currency Type in Yield Register under Parameters")
+	public void User_609_Select_the_Currency_Type_in_Yield_Register_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_CurrencyType_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_CurrencyType_609());
+		dropDownHelper.SelectUsingVisibleText(
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_CurrencyType_609(),
+				testData.get("Currency Type"));
+		Thread.sleep(2000);
+	}
+
+	@And("User_609 Enter the Period Number in Yield Register under Parameters")
+	public void User_609_Enter_the_Period_Number_in_Yield_Register_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_PeriodNo_609());
+		IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_PeriodNo_609()
+				.sendKeys(testData.get("Period Number"),Keys.TAB);
+		Thread.sleep(2000);
+	}
+	
+	@And("User_609 Select the Period Type in Yield Register under Parameters")
+	public void User_609_Select_the_Period_Type_in_Yield_Register_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_PeriodType_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_PeriodType_609());
+		dropDownHelper.SelectUsingVisibleText(
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_PeriodType_609(),
+				testData.get("Period Type"));
+		Thread.sleep(2000);
+	}
+
+	@And("User_609 Select the Yield Roster Code in Yield Register under Parameters")
+	public void User_609_Select_the_Yield_Roster_Code_in_Yield_Register_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_YieldRosterCode_609());
+		IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_YieldRosterCode_609().sendKeys(testData.get("Yield Roster code"));
+		Thread.sleep(2000);
+	}
+
+	@And("User_609 Select the Modarib Rate Roster Code in Yield Register under Parameters")
+	public void User_609_Select_the_Modarib_Rate_Roster_Code_in_Yield_Register_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_ModaribRateRosterCode_609());
+		IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_ModaribRateRosterCode_609()
+				.sendKeys(testData.get("Modarib Rate Roster Code"));
+		Thread.sleep(2000);
+	}
+
+	@And("User_609 Enter the From Date in Yield Register under Parameters")
+	public void User_609_Enter_the_From_Date_in_Yield_Register_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_Fromdate_609());
+		IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_Fromdate_609()
+				.sendKeys(testData.get("From Date"),Keys.ENTER);
+		Thread.sleep(2000);
+	}
+	
+	@And("User_609 Enter the To Date in Yield Register under Parameters")
+	public void User_609_Enter_the_To_Date_in_Yield_Register_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_Todate_609());
+		IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_Todate_609()
+				.sendKeys(testData.get("To Date"),Keys.ENTER);
+		Thread.sleep(2000);
+	}
+	@And("User_609 Update the Record in Yield Register under Parameters")
+	public void User_609_Update_the_Record_in_Yield_Register_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_BriefNameEng_609());
+
+		IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_BriefNameEng_609().clear();
+		Thread.sleep(2000);
+		IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_BriefNameEng_609().sendKeys(Keys.TAB);
+		IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_BriefNameEng_609()
+				.sendKeys(testData.get("Brief Description") + String.valueOf(Rand), Keys.TAB);
+	}
+
+	@And("User_609 Click on the Delete Button in Yield Register under Parameters")
+	public void User_609_Click_on_the_Delete_Button_in_Yield_Register_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_DeleteBtn_609());
+		clicksAndActionHelper
+				.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_DeleteBtn_609());
+
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_ConfirmOk_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.IIS_ConfirmOk_609());
+
+		waitHelper.waitForElementwithFluentwait(driver, IIS_PageObjects_609.IIS_Ok_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.IIS_Ok_609());
+		Thread.sleep(2000);
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_ClearSearch_609());
+		clicksAndActionHelper
+				.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_ClearSearch_609());
+		Thread.sleep(2000);
+
+	}
+
+	@Then("User_609 Validate the Approve screen is Displaying in Yield Register under Parameters")
+	public void User_609_Validate_the_Approve_screen_is_Displaying_in_Yield_Register_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Approve_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRegister_Approve_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_Yield_YieldRegister_Approve_609().isDisplayed());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Suspend screen is Displaying in Yield Register under Parameters")
+	public void User_609_Validate_the_Suspend_screen_is_Displaying_in_Yield_Register_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Suspend_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRegister_Suspend_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_Yield_YieldRegister_Suspend_609().isDisplayed());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Reactivate screen is Displaying in Yield Register under Parameters")
+	public void User_609_Validate_the_Reactivate_screen_is_Displaying_in_Yield_Register_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Reactivate_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRegister_Reactivate_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_Yield_YieldRegister_Reactivate_609().isDisplayed());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Grid list shows code in Yield Register under Parameters")
+	public void User_609_Validate_the_Grid_list_shows_code_in_Yield_Register_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_Code_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_Code_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_Code_609().isDisplayed());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
+	@Then("User_609 Validate the Grid list shows Brief name in Yield Register under Parameters")
+	public void User_609_Validate_the_Grid_list_shows_Brief_name_in_Yield_Register_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_Briefname_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_Briefname_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_Briefname_609().isDisplayed());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
+	@Then("User_609 Validate the Grid list shows Product Type in Yield Register under Parameters")
+	public void User_609_Validate_the_Grid_list_shows_Product_Type_in_Yield_Register_under_Parameters() throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_ProductTypeGridlist_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_ProductTypeGridlist_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_ProductTypeGridlist_609().isDisplayed());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Grid list shows Product Class in Yield Register under Parameters")
+	public void User_609_Validate_the_Grid_list_shows_Product_Class_in_Yield_Register_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_ProductClassGridlist_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_ProductClassGridlist_609().isDisplayed()) {
+				Assert.assertEquals(true, IIS_PageObjects_609
+						.Parameters_Yield_YieldRegister_Maintenance_ProductClassGridlist_609().isDisplayed());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
+	@Then("User_609 Validate the Grid list shows Status in Yield Register under Parameters")
+	public void User_609_Validate_the_Grid_list_Status_in_Yield_Register_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_Status_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_Status_609().isDisplayed()) {
+				Assert.assertEquals(true, IIS_PageObjects_609
+						.Parameters_Yield_YieldRegister_Maintenance_Status_609().isDisplayed());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Next Page Button working properly in Yield Register under Parameters")
+	public void User_609_Validate_the_Next_Page_Button_working_properly_in_Yield_Register_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_NextPage_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_NextPage_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_NextPage_609().isDisplayed());
+				clicksAndActionHelper
+						.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_NextPage_609());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Last Page Button working properly in Yield Register under Parameters")
+	public void User_609_Validate_the_Last_Page_Button_working_properly_in_Yield_Register_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_LastPage_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_LastPage_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_LastPage_609().isDisplayed());
+				clicksAndActionHelper
+						.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_LastPage_609());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Prev Page Button working properly in Yield Register under Parameters")
+	public void User_609_Validate_the_Prev_Page_Button_working_properly_in_Yield_Register_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_PrevPage_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_PrevPage_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_PrevPage_609().isDisplayed());
+				clicksAndActionHelper
+						.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_PrevPage_609());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the First Page Button working properly in Yield Register under Parameters")
+	public void User_609_Validate_the_First_Page_Button_working_properly_in_Yield_Register_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_FirstPage_609());
+		try {
+			if (IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_FirstPage_609().isDisplayed()) {
+				Assert.assertEquals(true,
+						IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_FirstPage_609().isDisplayed());
+				clicksAndActionHelper
+						.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_FirstPage_609());
+			}
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Then("User_609 Validate the Sorting Functionality working properly in Yield Register under Parameters")
+	public void User_609_Validate_the_Sorting_Functionality_working_properly_in_Yield_Register_under_Parameters()
+			throws Throwable {
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_RecordSearchIcon_609());
+		clicksAndActionHelper
+				.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_RecordSearchIcon_609());
+		Thread.sleep(2000);
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_FindBasedOn_609());
+		dropDownHelper.SelectUsingVisibleText(
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_FindBasedOn_609(),
+				testData.get("Find Based On"));
+		Thread.sleep(2000);
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_FindBy_609());
+		dropDownHelper.SelectUsingVisibleText(
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_FindBy_609(), testData.get("Find By"));
+		Thread.sleep(1000);
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_FindByValue_609());
+		IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_FindByValue_609()
+				.sendKeys(testData.get("Find By Value"), Keys.ENTER);
+		Thread.sleep(1000);
+
+		waitHelper.waitForElementwithFluentwait(driver,
+				IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_Find_609());
+		clicksAndActionHelper.clickOnElement(IIS_PageObjects_609.Parameters_Yield_YieldRegister_Maintenance_Find_609());
+		Thread.sleep(1000);
+
+	}
+
 }

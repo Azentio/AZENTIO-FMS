@@ -17,7 +17,7 @@ And User_609 Enter the Yield in Investment Deals Combined without Trade Deal
 And User_609 Click the Contributor Details tab in Maintenance under Investment Deals Combined without Trade Deal
 And User_609 Double Click the Contributor Details row in maintenance under Investment Deals Combined without Trade Deal
 And User_609 Select the Nostro in Contributor Details tab under Investment Deals Combined without Trade Deal
-And User_609 select the maturity account in Contributor tab under maintenance in Investment Deals Combined without Trade Deal
+#And User_609 select the maturity account in Contributor tab under maintenance in Investment Deals Combined without Trade Deal
 And User_609 Click the Ok button in Contributor Details tab in Investment Deals Combined without Trade Deal
 And User_609 Click the Save button in Investment Deals Combined without Trade Deal
 And User_609 Click the Repayment Plan Button in Investment Deals Combined without Trade Deal
@@ -53,7 +53,7 @@ And User_609 Enter the Amount in Investment Deals Combined without Trade Deal
 And User_609 Click the Contributor Details tab in Maintenance under Investment Deals Combined without Trade Deal
 And User_609 Double Click the Contributor Details row in maintenance under Investment Deals Combined without Trade Deal
 And User_609 Select the Nostro in Contributor Details tab under Investment Deals Combined without Trade Deal
-And User_609 select the maturity account in Contributor tab under maintenance in Investment Deals Combined without Trade Deal
+#And User_609 select the maturity account in Contributor tab under maintenance in Investment Deals Combined without Trade Deal
 And User_609 Click the Ok button in Contributor Details tab in Investment Deals Combined without Trade Deal
 And User_609 Click the Save button in Investment Deals Combined without Trade Deal
 And User_609 Click the Repayment Plan Button in Investment Deals Combined without Trade Deal
