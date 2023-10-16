@@ -25,6 +25,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageobjects.fms.ApplicationforfinancialfacilityOBJ_611;
+import pageobjects.fms.WIFAK_ApplicationObj;
 import resources.BaseClass;
 
 public class ApplicationforfinancialfacilitySTEPS_611 {
@@ -127,6 +128,7 @@ public class ApplicationforfinancialfacilitySTEPS_611 {
 //    	waithelper.waitForElementwithFluentwait(driver, wifakapplicationobj_611.wifakapplication1_611());
 //    	wifakapplicationobj_611.wifakapplication1_611().click();
     }
+	
 
     @And("^User_611 Click the second Wifak Application$")
     public void click_the_second_wifak_appliaction() throws Throwable {

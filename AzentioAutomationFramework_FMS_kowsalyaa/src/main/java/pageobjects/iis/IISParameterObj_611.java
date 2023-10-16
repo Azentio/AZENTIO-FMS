@@ -64,7 +64,7 @@ public class IISParameterObj_611 {
 	}
 	@FindBy(xpath = "//input[@id='penaltyListGridTbl_Id_M068MT_gs_trspenaltyVO.PENALTY_CODE']")
 	private WebElement IISparam_penalty_maintenance_penaltycode;
-	public WebElement IISparam_penalty_maintenance_penaltycode_611() {
+	public WebElement IISparam_penalty_maintenance_gridpenaltycode_611() {
 		return IISparam_penalty_maintenance_penaltycode;
 	}
 	@FindBy(xpath = "//div[text()='Updated Successfully']")
@@ -182,10 +182,157 @@ public class IISParameterObj_611 {
 	public WebElement IISparam_penalty_maintenance_closetabbtn_611() {
 		return IISparam_penalty_maintenance_closetabbtn;
 	}
+	@FindBy(xpath = "//span[@id='spanLookup_penaltyChargesCode_M068MT']")
+	private WebElement IISparam_penalty_chargescodesearchbox;
+	public WebElement IISparam_penalty_chargescodesearchbox_611() {
+		return IISparam_penalty_chargescodesearchbox;
+	}
+	@FindBy(xpath = "//tr[@id='1']")
+	private WebElement IISparam_penalty_chargescodes_doubletap;
+	public WebElement IISparam_penalty_chargescodes_doubletap_611() {
+		return IISparam_penalty_chargescodes_doubletap;
+	}
+	
+	//@721485
+	
+	@FindBy(xpath = "//td[text()='Product Class']")
+	private WebElement IISparam_Productclass;
+	public WebElement IISparam_Productclass_611() {
+		return IISparam_Productclass;
+	}
+	@FindBy(xpath = "//a[@id='M003MT']")
+	private WebElement IISparam_Productclass_Maintenance;
+	public WebElement IISparam_Productclass_Maintenance_611() {
+		return IISparam_Productclass_Maintenance;
+	}
+	@FindBy(xpath = "//input[@id='lookuptxt_iisProductClassCategory_M003MT']")
+	private WebElement IISparam_PC_Maintenance_Category;
+	public WebElement IISparam_PC_Maintenance_Category_611() {
+		return IISparam_PC_Maintenance_Category;
+	}
+	@FindBy(xpath = "//input[@id='iisProductClassBriefDescription_M003MT']")
+	private WebElement IISparam_PC_Maintenance_briefdiscription;
+	public WebElement IISparam_PC_Maintenance_briefdiscription_611() {
+		return IISparam_PC_Maintenance_briefdiscription;
+	}
+	@FindBy(xpath = "//input[@id='iisProductClassLongDescription_M003MT']")
+	private WebElement IISparam_PC_Maintenance_longdiscription;
+	public WebElement IISparam_PC_Maintenance_longdiscription_611() {
+		return IISparam_PC_Maintenance_longdiscription;
+	}
+	@FindBy(xpath = "//li[@id='iisProductClassGeneralInformationProfitCalculation_M003MT']")
+	private WebElement IISparam_PC_Maintenance_profitcalculation;
+	public WebElement IISparam_PC_Maintenance_profitcalculation_611() {
+		return IISparam_PC_Maintenance_profitcalculation;
+	}
+	@FindBy(xpath = "//input[@id='iisProductClassExposureLimit_M003MT']")
+	private WebElement IISparam_PC_Profitcal_Exposurelimit;
+	public WebElement IISparam_PC_Profitcal_Exposurelimit_611() {
+		return IISparam_PC_Profitcal_Exposurelimit;
+	}
+	@FindBy(xpath = "//li[@id='iisProductClassGeneralInformationDescription_M003MT']")
+	private WebElement IISparam_PC_Maintenance_Discription;
+	public WebElement IISparam_PC_Maintenance_Discription_611() {
+		return IISparam_PC_Maintenance_Discription;
+	}
+	@FindBy(xpath = "//label[@id='iisProductClassMaintFormId_M003MT_Save_key']")
+	private WebElement IISparam_PC_Maintenance_Savebtn;
+	public WebElement IISparam_PC_Maintenance_Savebtn_611() {
+		return IISparam_PC_Maintenance_Savebtn;
+	}
+	@FindBy(xpath = "//input[@id='iISProductClassListGridTbl_Id_M003MT_gs_trsctrlclassVO.CLASS']")
+	private WebElement IISparam_PC_Maintenance_Classcode;
+	public WebElement IISparam_PC_Maintenance_Classcode_611() {
+		return IISparam_PC_Maintenance_Classcode;
+	}
+	@FindBy(xpath = "//td[@id='td_iISProductClassListGridTbl_Id_M003MT_1_trsctrlclassVO.CLASS']")
+	private WebElement IISparam_PC_Maintenance_Retrivedatadoubleclick;
+	public WebElement IISparam_PC_Maintenance_Retrivedatadoubleclick_611() {
+		return IISparam_PC_Maintenance_Retrivedatadoubleclick;
+	}
+	@FindBy(xpath = "//button[@id='iISProductClassMaint_del_M003MT']")
+	private WebElement IISparam_PC_Maintenance_delbtn;
+	public WebElement IISparam_PC_Maintenance_delbtn_611() {
+		return IISparam_PC_Maintenance_delbtn;
+	}
+	@FindBy(xpath = "//a[@id='infoBarSearchButton_M003MT']")
+	private WebElement IISparam_PC_Maintenance_gridsearchbtn;
+	public WebElement IISparam_PC_Maintenance_gridsearchbtn_611() {
+		return IISparam_PC_Maintenance_gridsearchbtn;
+	}
+	@FindBy(xpath = "//td[@id='td_iISProductClassListGridTbl_Id_M003MT_1_trsclassVO.BRIEF_NAME_ENG']")
+	private WebElement IISparam_PC_Maintenance_gridbriefnamedata;
+	public WebElement IISparam_PC_Maintenance_gridbriefnamedata_611() {
+		return IISparam_PC_Maintenance_gridbriefnamedata;
+	}
+	@FindBy(xpath = "//td[@id='td_iISProductClassListGridTbl_Id_M003MT_1_trsclassVO.CATEGORY']")
+	private WebElement IISparam_PC_Maintenance_gridcategorydata;
+	public WebElement IISparam_PC_Maintenance_gridcategorydata_611() {
+		return IISparam_PC_Maintenance_gridcategorydata;
+	}
+	@FindBy(xpath = "//td[@id='td_iISProductClassListGridTbl_Id_M003MT_1_trscategoryVO.DESC_ENG']")
+	private WebElement IISparam_PC_Maintenance_gridcategorydiscription;
+	public WebElement IISparam_PC_Maintenance_gridcategorydiscription_611() {
+		return IISparam_PC_Maintenance_gridcategorydiscription;
+	}
+	@FindBy(xpath = "//a[@id='M003P']")
+	private WebElement IISparam_PC_Maintenance_Approvemenu;
+	public WebElement IISparam_PC_Maintenance_Approvemenu_611() {
+		return IISparam_PC_Maintenance_Approvemenu;
+	}
+	@FindBy(xpath = "//a[@id='M003L']")
+	private WebElement IISparam_PC_Maintenance_Listmenu;
+	public WebElement IISparam_PC_Maintenance_Listmenu_611() {
+		return IISparam_PC_Maintenance_Listmenu;
+	}
+	@FindBy(xpath = "//a[@id='M003D']")
+	private WebElement IISparam_PC_Maintenance_Duplicatemenu;
+	public WebElement IISparam_PC_Maintenance_Duplicatemenu_611() {
+		return IISparam_PC_Maintenance_Duplicatemenu;
+	}
+	@FindBy(xpath = "//td[@id='search_iISProductClassListGridTbl_Id_M003MT']")
+	private WebElement IISparam_PC_Maintenance_sortingsearchbtn;
+	public WebElement IISparam_PC_Maintenance_sortingsearchbtn_611() {
+		return IISparam_PC_Maintenance_sortingsearchbtn;
+	}
+	@FindBy(xpath = "//*[@id=\"fbox_iISProductClassListGridTbl_Id_M003MT\"]/table/tbody/tr[3]/td[2]")
+	private WebElement IISparam_PC_Maintenance_sortingtab;
+	public WebElement IISparam_PC_Maintenance_sortingtab_611() {
+		return IISparam_PC_Maintenance_sortingtab; //Class //Brief Name //Category //Category Description
+	}
+	@FindBy(xpath = "//*[@id=\"searchhdfbox_iISProductClassListGridTbl_Id_M003MT\"]/a")
+	private WebElement IISparam_PC_Maintenance_sortingclosebtn;
+	public WebElement IISparam_PC_Maintenance_sortingclosebtn_611() {
+		return IISparam_PC_Maintenance_sortingclosebtn; 
+	}
+	@FindBy(xpath = "//td[@id='first_iISProductClassListGridTbl_Id_M003MT_pager']")
+	private WebElement IISparam_PC_Maintenance_Firstbtn;
+	public WebElement IISparam_PC_Maintenance_Firstbtn_611() {
+		return IISparam_PC_Maintenance_Firstbtn; 
+	}
+	@FindBy(xpath = "//td[@id='prev_iISProductClassListGridTbl_Id_M003MT_pager']")
+	private WebElement IISparam_PC_Maintenance_previousbtn;
+	public WebElement IISparam_PC_Maintenance_previousbtn_611() {
+		return IISparam_PC_Maintenance_previousbtn; 
+	}
+	@FindBy(xpath = "//td[@id='next_iISProductClassListGridTbl_Id_M003MT_pager']")
+	private WebElement IISparam_PC_Maintenance_nextbtn;
+	public WebElement IISparam_PC_Maintenance_nextbtn() {
+		return IISparam_PC_Maintenance_nextbtn; 
+	}
+	@FindBy(xpath = "//td[@id='last_iISProductClassListGridTbl_Id_M003MT_pager']")
+	private WebElement IISparam_PC_Maintenance_lastbtn;
+	public WebElement IISparam_PC_Maintenance_lastbtn_611() {
+		return IISparam_PC_Maintenance_lastbtn; 
+	}
+	@FindBy(xpath = "//*[@id=\"mainTabs\"]/ul/li/table/tbody/tr/td[2]/span")
+	private WebElement IISparam_PC_Maintenance_tabclosebtn;
+	public WebElement IISparam_PC_Maintenance_tabclosebtn_611() {
+		return IISparam_PC_Maintenance_tabclosebtn; 
+	}
 
 
 
 
-
-
+	
 }

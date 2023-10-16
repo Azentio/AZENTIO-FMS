@@ -2113,7 +2113,7 @@ public class AccrualDealSteps_611 {
 		}
 
 		@And("User_611 click the created batch option under Batch process menu")
-		public void user_click_the_created_batch_option_under_batch_process_menu() throws Throwable {
+		public void user_click_the_created_batch_option_under_batch_process_menu() throws Throwable  {
 			Thread.sleep(5000);
 			String newBatch = testData.get("Brief Name");
 			System.err.println("Brief Name: "+newBatch);
@@ -2501,4 +2501,9 @@ public class AccrualDealSteps_611 {
 		
 
 		}
+		
+			
+		
+		    
+		
 }
