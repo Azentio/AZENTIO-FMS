@@ -1,0 +1,10 @@
+file:src/test/java/features_IIS/ProductType.feature:6
+file:src/test/java/features_IIS/ProductSubCategory.feature:4
+file:src/test/java/features_IIS/IISSettlementPolicy.feature:5
+file:src/test/java/features_IIS/IISAdvance%20Payment.feature:5
+file:src/test/java/features_IIS/IISTargetMaintenance.feature:4
+file:src/test/java/features_IIS/IncidentalCharges_482.feature:4:23:64
+file:src/test/java/features_IIS/IISControlRecord.feature:4
+file:src/test/java/features_IIS/IISProductClass.feature:4:21:40:66:76
+file:src/test/java/features/FacilitiesManagement_482.feature:19:58:89:196:277:308:316:369:404:515
+file:src/test/java/features_IIS/RepaymentPlan.feature:8

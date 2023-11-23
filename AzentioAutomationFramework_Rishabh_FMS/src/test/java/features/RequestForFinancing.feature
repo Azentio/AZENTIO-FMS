@@ -1,0 +1,632 @@
+Feature: Testing the Functionality of Request for financing
+@AT_RF_008
+Scenario: MFI190234 - Request for Financing & Application --->Limit Details-->Repayment Plan, Maturity dates not changing properly
+Given navigate to FMS application and login with valid credentials
+And User_482 Click on REQUEST FOR FINANCIN under FMS application
+And User_482 click the Request For Financing Sub Menu under REQUEST FOR FINANCIN
+And User_482 Click on Maintenance under Request For Financing Sub Menu in REQUEST FOR FINANCIN
+And User get the system date
+And User_482 Update Test data set for AT_RF_008
+And User Select New Request in Reason For Submission under Maintenance screen in REQUEST FOR FINANCIN
+And User Search the CIF Number in Customer under Maintenance screen in REQUEST FOR FINANCIN
+And User Search the Facility Type under Maintenance screen in REQUEST FOR FINANCIN
+And User Enter the value in Total Limit under Maintenance screen in REQUEST FOR FINANCIN
+And User Click on Disbursement or Sublimit under Maintenance screen in REQUEST FOR FINANCIN
+And User Click on Add button in Disbursement or Sublimit under Maintenance screen in REQUEST FOR FINANCIN
+And User Search Product Class in Limit Details Pop up Menu
+And User Enter the Margin value in New Tab Field in Limit Details Pop up Menu
+And User Click on Add button in Limit Details Pop up
+And User Click on Save button under Maintenance screen in REQUEST FOR FINANCIN
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User Get the Code in Success Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 click search icon in Maintenance screen Request for financing
+And User Search code in Maintenance screen Request for financing
+And User Select searched record in Maintenance screen Request for financing
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User Click on Disbursement or Sublimit under Maintenance screen in REQUEST FOR FINANCIN
+And User select sublimit details in Maintenance screen Request for financing
+And User click repayment plan in Maintenance screen Request for financing
+And User enter no of payments in repayment plan
+And User_482 Click on Ok button in Success Pop up Menu
+And User enter pay every in repayment plan
+And User Validate the Maturity Date in repayment plan
+
+@AT_RF_025_01
+Scenario: Uncheck issue facility offer in facility type under fms param
+Given navigate to FMS param application and login with valid credentials
+And User_482 click parameter Menu
+And User_482 click Facility Type
+And User_482 click update after approve screen in Facility type
+And User_482 Search facility type code in Update after approve screen Facility type
+And User_482 select the searched facility type in Update after approve screen Facility type
+And User_482 click facility details tab in searched record Update after approve screen Facility type
+And User_482 click STP Facility Requirements
+And User_482 check Customer Grading Checkbox
+And User_482 Check Overwrite Grading
+And User_482 check Committee Approval CheckBox
+And User_482 check Credit authorization
+And User_482 check Credit Review CheckBox
+And User_482 Uncheck Issue Facility Offer CheckBox
+And User_482 check Client Response CheckBox
+And User_482 check Document Validation CheckBox
+And User_482 check Final Approval CheckBox
+And User_482 check Create Active Facility If Within Limits CheckBox
+And User_482 check Automatically Approve Facility If Within Limits CheckBox
+And User_482 click update button in Update after approve screen Facility type
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 click approve screen in Facility type
+And User_482 search code in approve screen Facility type 
+And User_482 select searched code in approve screen Facility type
+And User_482 click approve button in approve screen Facility type
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
+
+@AT_RF_025
+Scenario: TSR - FIBSI180216
+Given navigate to FMS application and login with valid credentials
+And User_482 click Technical details
+And User_482 click clear caches
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 Click on WIFAK Application Main Menu
+And User_482 Click on WIFAK Application Sub Menu
+And User_482 Click Application for financial facilities 
+And User_482 Click Maintenance screen in WIFAK Application sub menu
+And User_482 update test data set for AT_RF_025
+And User_482 Select Application For field in Maintenace Screen under WIRAK Application
+And User_482 enter the CIF No in main info tab under WIRAK Application
+And User_482 enter the facility type in main info tab under WIRAK Application
+And User_482 enter the country of financing in main info tab under WIRAK Application
+And User_482 enter facility rating in main info tab under WIRAK Application
+And User_482 clicks on the additional details tab under WIRAK Application	
+And User_482 Enter total value under additional details tab in WIFAK Application
+And User_482 Enter offer Expiration in Additional details under WIFAK Application
+And User_482 click Limit Details tab in WIFAK Application
+And User_482 click add icon in limit details under WIFAK Application
+And User_482 select the product class in limit details under WIFAK Application
+And User_482 check clean checkbox options in limit details under WIFAK Application
+And User_482 click add icon in limit details popup under WIFAK Application
+And User_482 click document details tab under WIFAK Application
+And User_482 enter solicitor name to select from look up in document details under WIFAK Application 
+And User_482 enter Estimator name to select from look up in document details under WIFAK Application
+And User_482 click Maininformation tab in WIFAK Application
+And User_482 click save button in Main Info tab under WIFAK Application
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Get the Code in Success Pop up Menu under WIFAK Application
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 click Validate button in Main Info tab under WIFAK Application
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 Click close icon in sent alert under WIFAK Application
+And User_482 update test data set for AT_RF_025
+And User_482 Click Approve Level 1 screen in application for financial facilities under WIFAK Application
+And User_482 Search code in Approve Level 1 screen in Application for financial facilities
+And User_482 Select searched record in Approve level 1 screen Application for financial facilities
+And User_482 Select Decision in Approve level 1 under WIFAK Application
+And User_482 click submit button in approve level 1 under WIFAK Application
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 Click Approve Level 2 screen in application for financial facilities under WIFAK Application
+And User_482 Search code in Approve Level 2 screen in Application for financial facilities
+And User_482 Select searched record in Approve level 2 screen Application for financial facilities
+And User_482 Select Decision in Approve level 2 under WIFAK Application
+And User_482 click submit button in approve level 2 under WIFAK Application
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 Click Approve Level 3 screen in application for financial facilities under WIFAK Application
+And User_482 Search code in Approve Level 3 screen in Application for financial facilities
+And User_482 Select searched record in Approve level 3 screen Application for financial facilities
+And User_482 Select Decision in Approve level 3 under WIFAK Application
+And User_482 click submit button in approve level 3 under WIFAK Application
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 Click close icon in sent alert under WIFAK Application
+And User_482 Click Issue Facility Offer Sub Menu Under WIFAK Application
+And User_482 Search code in Issue Facility Offer screen Under WIFAK Application
+And User_482 Select searched record in Issue Facility Offer screen Under WIFAK Application
+And User_482 Click Issue Offer button in Issue Facility Offer screen Under WIFAK Application
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 Validate the system is printing the offer letter automatically at the level of issue facility offer
+
+@AT_RF_026
+Scenario: TSR - FIBSI180177
+Given navigate to FMS application and login with valid credentials
+And User_482 Click Collateral Management
+And User_482 Click Update After Approve Screen In Collateral Management
+And User_482 Update test data set id for AT_RF_026 
+And User_482 Click Clear in grid view
+And User_482 Search Code in Update After Approve Under Collateral Management
+And User_482 Select first record in Update After Approve Collaterl Management
+And User_482 Change Approve Coverage Value
+And User_482 Select Country In Collateral Management
+And User_482 Click Save button In Update After Approve Collateral Management
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Get the Code in Success Pop up Menu under Collateral Management
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 Click Approve Screen In Collateral Management
+And User_482 Update test data set id for AT_RF_026 
+And User_482 Search code in Approve Screen Under Collateral Management
+And User_482 Select searched record in Approve Screen Under Collateral Management
+And User_482 Click Approve Button in Approve Screen Under Collateral Management 
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 Click Maintenance Screen In Collateral Management
+And User_482 click search icon in Maintenance screen under Collateral Management
+And User_482 Search code in Maintenance Screen Under Collateral Management
+And User_482 Select searched record in Maintenance Screen Under Collateral Management
+And User_482 Click Audit button In Maintenance Screen Under Collateral Management
+And User_482 Click last Button in Audit details View
+And User_482 Validate Audit Details Updated Properly
+
+@AT_RF_064_01
+Scenario: TSR - AIB180044
+Given navigate to FMS param application and login with valid credentials
+And User Click FMS parameter Main Menu
+And User click purpose of Financing Main Menu
+And User Click the Maintenance Screen In purpose of Financing
+And User enter the code in Maintenance Screen under purpose of Financing sub menu
+And User enter additional number in Maintenance Screen under purpose of Financing sub menu
+And User enter description in Maintenance Screen under purpose of Financing sub menu 
+And User click product class option in Maintenance Screen under purpose of Financing sub menu
+And User click add icon in product class option
+And User User add product class code in product class option
+And User click save button in Maintenance Screen under purpose of Financing sub menu
+And User click ok button in Waring popup 
+And User click ok button in Information Pop up
+And User click approve Screen in purpose of Financing sub menu
+And User search code in approve screen purpose of Financing
+And User Select searched record in approve screen purpose of Financing
+And User click approve button in selected record purpose of Financing
+And User click ok button in Waring popup
+And User click ok button in Information Pop up
+
+@AT_RF_064_02
+Scenario: Validate Purpose of Financing Record refelected in Application
+Given navigate to FMS application and login with valid credentials
+And User_482 Click on REQUEST FOR FINANCIN under FMS application
+And User_482 click the Request For Financing Sub Menu under REQUEST FOR FINANCIN
+And User_482 Click on Maintenance under Request For Financing Sub Menu in REQUEST FOR FINANCIN
+And User get the system date
+And User_482 Update Test data set for AT_RF_064
+And User Select New Request in Reason For Submission under Maintenance screen in REQUEST FOR FINANCIN
+And User Search the CIF Number in Customer under Maintenance screen in REQUEST FOR FINANCIN
+And User Search the Facility Type under Maintenance screen in REQUEST FOR FINANCIN
+And User Enter the value in Total Limit under Maintenance screen in REQUEST FOR FINANCIN
+And User Click on Disbursement or Sublimit under Maintenance screen in REQUEST FOR FINANCIN
+And User Click on Add button in Disbursement or Sublimit under Maintenance screen in REQUEST FOR FINANCIN
+And User Search Product Class in Limit Details Pop up Menu
+And User Validate the created purpose of financing record reflected in application 
+@AT_RF_068
+Scenario: TSR - SUPT170524
+Given navigate to FMS application and login with valid credentials
+And User_482 Click on REQUEST FOR FINANCIN under FMS application
+And User_482 click the Request For Financing Sub Menu under REQUEST FOR FINANCIN
+And User_482 Click on Maintenance under Request For Financing Sub Menu in REQUEST FOR FINANCIN
+And User_482 click search icon in Maintenance screen Request for financing
+And User Click and search final approval record in maintenance screen
+And User Select searched record in Maintenance screen Request for financing
+And User Click on Disbursement or Sublimit under Maintenance screen in REQUEST FOR FINANCIN
+And Open Disburment or Sublimit record
+And User Validate Down payment percentage In Limit details contains decimal value
+And User Validate Down payment Amount In Limit details contains decimal value
+And User Validate Total facility Value In Limit details contains decimal value
+And User Validate Down payment to Vendor percentage In Limit details contains decimal value
+And User Validate Down payment to Vendor In Limit details contains decimal value
+And User Validate Total Down payment percentage In Limit details contains decimal value
+And User Validate Total Down payment Value In Limit details contains decimal value
+And User Validate floor rate percentage key In Limit details contains decimal value
+And User Validate sub limit lower limit percentage key In Limit details contains decimal value
+And User Validate sub limit lower limit amount key In Limit details contains decimal value
+And User Validate Amounts Utilized In Limit details contains decimal value
+And User Validate Amounts Current Outstanding In Limit details contains decimal value
+And User Validate Amounts Un Utilized In Limit details contains decimal value
+And User Validate Amounts In Limit details contains decimal value
+And User Validate New Global Limit In Limit details contains decimal value
+And User Validate Total Global Limit In Limit details contains decimal value
+And User Validate Margin New Value In Limit details contains decimal value
+And User Validate Margin Approved In Limit details contains decimal value
+And User Validate Total Existing In Limit details contains decimal value
+And User Validate Total New In Limit details contains decimal value
+And User Validate Total Approved In Limit details contains decimal value
+And User Validate CV Value In Limit details contains decimal value
+# blocked , weight field does not allow decimal value
+@AT_RF_121
+Scenario: MFI190058 - Grade Evaluation Factors weight--System is not taking one figure with decimal value
+Given navigate to FMS param application and login with valid credentials
+And User Click FMS parameter Main Menu
+And User Click Grade Evaluation Factors Sub Menu
+And User_482 Update Test data set for AT_RF_121 
+And User Click Maintenance Screen In Grade Evaluation Factor
+And User Validate Weight field should accept decimal value
+#blocked due all user able to display the record
+@AT_RF_120
+Scenario: MFI190065 - Request for financing - Facility Application is not flowing to Approval Committee
+Given navigate to FMS application and login with valid credentials
+And User_482 Click on REQUEST FOR FINANCIN under FMS application
+And User_482 click the Request For Financing Sub Menu under REQUEST FOR FINANCIN
+And User_482 Click on Maintenance under Request For Financing Sub Menu in REQUEST FOR FINANCIN
+And User Select New Request in Reason For Submission under Maintenance screen in REQUEST FOR FINANCIN
+And User Search the CIF Number in Customer under Maintenance screen in REQUEST FOR FINANCIN
+And User Search the Facility Type under Maintenance screen in REQUEST FOR FINANCIN
+And User Enter the value in Total Limit under Maintenance screen in REQUEST FOR FINANCIN
+And User Click on Disbursement or Sublimit under Maintenance screen in REQUEST FOR FINANCIN
+And User Click on Add button in Disbursement or Sublimit under Maintenance screen in REQUEST FOR FINANCIN
+And User Search Product Class in Limit Details Pop up Menu
+And User Enter the Margin value in New Tab Field in Limit Details Pop up Menu
+And User Click on Add button in Limit Details Pop up
+And User Click on Save button under Maintenance screen in REQUEST FOR FINANCIN
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
+And User Click on Validate button under Maintenance screen in REQUEST FOR FINANCIN
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User Click on Yes button in Confirm Pop up Menu
+And User Get the Code in Success Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
+And User Click on Approve Level 1 under REQUEST FOR FINANCIN
+And User Search the Code in Approve Level 1 under REQUEST FOR FINANCIN
+And User Select the Searched Code in Approve Level 1 under REQUEST FOR FINANCIN
+And User Click on Customer Grading and Recommendations in Approve Level 1 under REQUEST FOR FINANCIN
+And User Select the Decision Field as Forward and Approval Committee in Customer Grading and Recommendations under Approve Level 1
+And User Select the Approval Committee as Investment Committee in Customer Grading and Recommendations under Approve Level 1
+And User Click on Approve button in Customer Grading and Recommendations under Approve Level 1
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
+And User Click on Approval Committee Recommendations under Request For Financing Sub Menu in REQUEST FOR FINANCIN
+
+@AT_RF_119_01
+Scenario: Uncheck the approval committe check box in facility type 
+Given navigate to FMS param application and login with valid credentials
+And User Click FMS parameter Main Menu
+And User Click Facility Type Sub Menu
+And User click update after approve Sub Menu
+And User Search facility type in Facility Type Sub Menu
+And User Select Searched Facility type record
+And User click facilty details tab
+And User click STP facility Requirements
+And User un check committe approval 
+And User click update button in facility type record
+And User click approve submenu in facility type
+And User Search facility type in Approve screen Facility type
+And User Select Searched in Approve screen Facility type
+And User click approve button in Approve screen Facility type
+
+@AT_RF_119_02
+Scenario: TSR-BTII170105
+Given User Launch the CSM  Application
+And User click request Main Menu
+And User click request application Sub Menu
+And User click Baj Application
+And User click Maintenace screen in Baj Application
+And User Enter CIF No in Baj Application Maintenace screen
+And User Enter facility type in Baj Application Maintenace screen
+And User Enter the Country of Financing in Baj Application Maintenace screen
+And User Validate Baj Application Record
+And User navigate to Approve screen in Baj Application
+And User Search the created record in maintenance screen
+And User Select the created record in maintenance screen
+And User click approve button in approve screen 
+And User click Request Management sub menu
+And User navigate management process batch 
+And User Search the created record in management process batch
+And User Select the created record in management process batch
+And User click process button in management process batch
+And User click ok button in sucess pop up
+
+ #blocked test case
+@AT_RF_119_03
+Scenario: User approve the faciliy application in FMS application ,record created in csm application
+#Given navigate to FMS application and login with valid credentials
+#And User click Baj Application Menu
+#And User click Application in Baj Application Menu
+#And User click Application for financial facilities in Application Sub menu
+#And User click Maintenance Screen In Application Sub menu
+#And User search and select the facility record created in CSM application
+#And User Enter the additional reference number in Maintenance Screen under Application Sub menu
+#And User click Validate button in Maintenance Screen under Application Sub menu
+#And User click ok button in warning popup in Maintenance Screen under Application Sub menu
+#And User click yes button in do you want to proceed option under post approval pop up screen
+#And User Store application facility request number in Sucess pop up
+#And User click ok button in sucess pop up under Maintenance Screen Application
+#And User click approval level 1 in Application for financial facilities under Baj application
+#And User search and select the facility application in approval level 1 screen under baj application
+#And User Select Decision as forward in Approve level 1 recommendation under financial facility application record
+#And User click submit button in Approve level 1 under financial facility application record
+#And User click ok button in warning popup in Approve level 1 under financial facility application record
+#And User click yes button in do you want to proceed option in Approve level 1 under financial facility application record
+#And User click ok button in Sucess pop up under approval level 1 under Baj application
+#And User click approval level 2 in Application for financial facilities under Baj application
+#And User search and select the facility application in approval level 2 screen under baj application
+#And User Select Decision as forward in Approve level 2 recommendation under financial facility application record
+#And User click submit button in Approve level 2 under financial facility application record
+#And User click ok button in warning popup in Approve level 2 under financial facility application record
+#And User click yes button in do you want to proceed option in Approve level 2 under financial facility application record
+#And User click ok button in Sucess pop up under approval level 2 under Baj application
+#And User click approval level 3in Application for financial facilities under Baj application
+#And User search and select the facility application in approval level 3 screen under baj application
+#And User Select Decision as forward in Approve level 3 recommendation under financial facility application record
+#And User click submit button in Approve level 3 under financial facility application record
+#And User click ok button in warning popup in Approve level 3 under financial facility application record
+#And User click yes button in do you want to proceed option in Approve level 3 under financial facility application record
+#And User click ok button in Sucess pop up under approval level 3 under Baj application
+#And User click approval committee recommendations screen under Baj application
+#And User search and select the facility application in approval committee recommendations screen under Baj application
+#And User click additional details tab in selected facility application under approval committee recommendation Baj application
+#And User Validate BM recommendation screen in selected facility application under approval committee recommendation Baj application
+
+@AT_RF_164
+Scenario: To check the new modification @ FMS Modification in Request for Financing Screen.
+Given navigate to FMS application and login with valid credentials
+And User_482 Click on WIFAK Application Main Menu
+And User_482 Click on WIFAK Application Sub Menu
+And User_482 Click Application for financial facilities 
+And User_482 Click Maintenance screen in WIFAK Application sub menu
+And User_482 update Test data set for AT_RF_164
+And User_482 Select Application For field in Maintenace Screen under WIRAK Application
+And User_482 enter the CIF No in main info tab under WIRAK Application
+And User_482 enter the facility type in main info tab under WIRAK Application
+And User_482 enter the country of financing in main info tab under WIRAK Application
+And User_482 clicks on the additional details tab under WIRAK Application	
+And User_482 Enter total value under additional details tab in WIFAK Application
+And User_482 click Limit Details tab in WIFAK Application
+And User_482 click add icon in limit details under WIFAK Application
+And User_482 select the product class in limit details under WIFAK Application
+And User_482 select the floating rate in limit details under WIFAK Application
+And User_482 enter the floating rate periodicity in limit details under WIFAK Application
+And User_482 select the floating rate periodicity type in limit details under WIFAK Application
+
+@AT_RF_166
+Scenario: To check the new modification @ FMS Modification in Request for Financing Screen.
+Given navigate to FMS application and login with valid credentials
+And User_482 Click on WIFAK Application Main Menu
+And User_482 Click on WIFAK Application Sub Menu
+And User_482 Click Application for financial facilities 
+And User_482 Click Maintenance screen in WIFAK Application sub menu
+And User_482 update Test data set for AT_RF_166
+And User_482 Select Application For field in Maintenace Screen under WIRAK Application
+And User_482 enter the CIF No in main info tab under WIRAK Application
+And User_482 enter the facility type in main info tab under WIRAK Application
+And User_482 enter the country of financing in main info tab under WIRAK Application
+And User_482 enter facility rating in main info tab under WIRAK Application
+And User_482 clicks on the additional details tab under WIRAK Application	
+And User_482 Enter total value under additional details tab in WIFAK Application
+And User_482 Enter offer Expiration in Additional details under WIFAK Application
+And User_482 click Limit Details tab in WIFAK Application
+And User_482 click add icon in limit details under WIFAK Application
+And User_482 select the product class in limit details under WIFAK Application
+And User_482 select the floating rate in limit details under WIFAK Application
+And User_482 enter the floating rate periodicity in limit details under WIFAK Application
+And User_482 select the floating rate periodicity type in limit details under WIFAK Application Approve screen
+And User_482 click add icon in limit details popup under WIFAK Application
+And User_482 click document details tab under WIFAK Application
+And User_482 enter solicitor name to select from look up in document details under WIFAK Application 
+And User_482 enter Estimator name to select from look up in document details under WIFAK Application
+And User_482 click Maininformation tab in WIFAK Application
+And User_482 click save button in Main Info tab under WIFAK Application
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Get the Code in Success Pop up Menu under WIFAK Application
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 click Validate button in Main Info tab under WIFAK Application
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Confirm Pop up Menu
+And User_482 Click on Ok button in Success Pop up Menu
+And User_482 Click close icon in sent alert under WIFAK Application
+And User_482 Click Approve Level 1 screen in application for financial facilities under WIFAK Application
+And User_482 Search code in Approve Level 1 screen in Application for financial facilities
+And User_482 Select searched record in Approve level 1 screen Application for financial facilities
+And User_482 click Limit Details in Approve level 1 under WIFAK Application
+And User_482 open product class record in Limit details Approve level 1 under WIFAK Application
+And User_482 validate Floating rate code in Limit details popup Approve level 1 under WIFAK Application
+And User_482 Validate Floating rate name in Limit details popup Approve level 1 under WIFAK Application
+
+
+@AT_RF_001
+Scenario: To check the Civil ID Expiration Issue
+Given navigate to FMS application and login with valid credentials
+And User_482 update Test data set for AT_RF_001
+And User_482 click on the system date
+And user_482 change the running date
+And user_482 close the change running date
+And User_482 Click on WIFAK Application Main Menu
+And User_482 Click on WIFAK Application Sub Menu
+And User_482 Click Application for financial facilities 
+And User_482 Click Maintenance screen in WIFAK Application sub menu
+And User_482 Select Application For field in Maintenace Screen under WIRAK Application
+And User_482 enter the CIF No in main info tab under WIRAK Application
+And User_482 user checks validation for the Civil ID Expiry Date on inputting the CIF
+
+
+@AT_RF_002	
+Scenario: MFI190242 - Request for Financing, Post Validation of application unable to change/add/delete the charge code
+Given navigate to FMS application and login with valid credentials
+And User_482 update Test data set for AT_RF_002
+And User_482 click on the system date
+And user_482 change the running date
+And user_482 close the change running date
+And User_482 click on Request screen module under menu 
+And User_482 click on Request for finance under Request screen
+And User_482 click on Sub Request for finance under Request screen 
+And User_482 click on maintenance under Sub Reuest for finance
+And User_482 click on the search button
+And User_482 click on the code
+And User_482 enter the code
+And User_482 double click on the retrived record 
+And User_482 click on Disbursement tab
+And User_482 click on the product class rec
+And User_482 click on the Fees Charge button
+And User_482 click on the code under charge details
+And User_482 enter the new charge code under charge details
+And User_482 click on the Ok under charge details
+And user_482 click on the validate button
+And User_482 click on the confirm ok button 
+And User_482 click on the cofirm yes button
+And User_483 click on the ok button
+#And User_482 click on the search button
+And User_482 click on the code
+And User_482 enter the code
+And User_482 double click on the retrived record 
+And User_482 click on Disbursement tab
+And User_482 click on the product class rec
+And User_482 click on the Fees Charge button
+And user_482 validate the charge code is changed or not
+
+
+@AT_RF_110
+Scenario: TSR - ITFCI170564 
+Given navigate to FMS application and login with valid credentials
+And User_482 update Test data set for AT_RF_110
+#And User_482 click Technical details
+#And User_482 click clear caches
+And User_482 click on the Johns Request module and after johns sub module
+And User_482 click on the Request For finnancing under sub Johns Request
+And User_482 click on the maintenance under Request For finnancing
+And User_482 select the new request from the request for submission drop down
+And User_482 click on info completion date
+And User_482 enter the infor completion date 
+And User_482 click on the customer 
+And User_482 enter the customer code 
+And User_482 click on the Facility type
+And User_482 enter the Facility type 
+And User_482 select the History with ITFC
+And User_482 click on the total limit 
+And User_482 enter the total limit
+And User_482 click on the commodities and security component tab
+And User_482 click on add button under commodities and security component tab
+And User_482 click on the category under approve commmodities
+And User_482 enter the category under approve commmodities 
+And User_482 click on the sub category code under approve commmodities
+And User_482 enter the sub category code under approve commmodities
+And User_482 click on commodities code
+And User_482 enter on commodities code
+And User_482 click on expected perc
+And User_482 enter on expected perc
+And User_482 click on the Source Destination tab
+And User_482 click on the add  button under specific country
+And User_482 click on the country code new rec
+And User_482 enter the Country code
+And User_482 click on the expected perc under specific country
+And User_482 enter expected per under specific country
+And User_482 click on Disbursement tab
+And User_482 click on add icon btn under disbursement
+And User_482 click on product class
+And User_482 enter the product class code
+And User_482 click on the add button
+And User_482 select the newly added product class rec
+And User_482 click on the pricing details tab
+And User_482 click on add button under pricing details tab
+And User_482 click on the markup spreadsheet perc under pricing details tab
+And User_482 enter the markup spreadsheet perc under pricing details tab
+And User_482 click on the floor perc under pricing details tab
+And User_482 enter the floor perc under pricing details tab
+And User_482 click on the cap perc under pricing details tab
+And User_482 enter the cap perc under pricing details tab
+And User_483 click on the ohk button under pricing details tab  
+And User_482 click on the funding tab
+And User_482 click on the add icon btn under funding 
+And User_482 click on the new fund rec 
+And User_482 enter the fund code 
+And User_482 click on condition tab 
+And User_482 click on Signing Agreemen days
+And User_482 enter Signing Agreemen days
+And User_482 click on Effectiveness days
+And User_482 enter the Effectiveness days
+And User_482 click on the First Disbursement Days
+And User_482 enter the Disbursement Days
+And User_482 click on the Utilization days
+And User_482 enter the Full Utilization days
+And User_482 save the request 
+And User_482 validate the request
+And User_482 Confirm validate the request
+And User_482 fetch the Request code from the pop up
+And User_482 close the screen
+And User_482 click on the aprrove 1 tab under maintenence
+And User_482 click on the search button under Approve level one
+And User_482 click on clear button under search
+And User_482 click on the code under Approve level one
+And User_482 enter the code under Approve level one
+And User_482 selects the record
+And User_482 double click on the retrived record under Approve level one
+And User_482 click on Customer Grading Tab
+And User_482 select the approve from the approve level one dropdown
+And User_482 click on the Approve btn under under Approve level one
+
+@AT_RF_108
+
+Scenario: TSR - ITFCI170394
+Given navigate to FMS application and login with valid credentials
+And User_482 update Test data set for AT_RF_110
+And User_482 click on the Johns Request module and after johns sub module
+And User_482 click on the facilty managment screen under johns sub module 
+And User_482 click on the maintenance under facility managment screen 
+And User_482 click on the search button under facility managment screen 
+And User_482 click on the code feild under facility managment screen 
+And User_482 enter the facility code
+And User_482 double click on the the retrieved rec
+And User_482 click on the additonal tab under facilty managment screen 
+And User_482 click on the commodities and security component screen 
+And User_482 validate is the system is defaulting Coverage Type and Required Coverage perc from Application to Facility
+
+
+@AT_RF_123
+
+Scenario: MFI190095 - Issue in Document Checklist in Both Request for financing and Application for financing facility screen
+Given navigate to FMS application and login with valid credentials
+And User_482 update Test data set for AT_RF_123
+And User_482 click on the Johns Request module and after johns sub module
+And User_482 click on the Request For finnancing under sub Johns Request
+And User_482 click on the maintenance under Request For finnancing
+And User_482 select the new request from the request for submission drop down
+And User_482 click on info completion date
+And User_482 enter the infor completion date 
+And User_482 click on the customer 
+And User_482 enter the customer code 
+And User_482 click on the Facility type
+And User_482 enter the Facility type 
+And User_482 select the History with ITFC
+And User_482 click on the total limit 
+And User_482 enter the total limit
+And User_482 click on Disbursement tab
+And User_482 click on add icon btn under disbursement
+And User_482 click on product class
+And User_482 enter the product class code
+And User_482 click on the add button
+And User_482 select the newly added product class rec
+And User_482 click on the pricing details tab
+And User_482 click on add button under pricing details tab
+And User_482 click on the markup spreadsheet perc under pricing details tab
+And User_482 enter the markup spreadsheet perc under pricing details tab
+And User_482 click on the floor perc under pricing details tab
+And User_482 enter the floor perc under pricing details tab
+And User_482 click on the cap perc under pricing details tab
+And User_482 enter the cap perc under pricing details tab
+And User_483 click on the ohk button under pricing details tab  
+And User_482 save the request 
+And User_482 fetch the Request code from the save pop up 
+And User_482 click on the document checklist button 
+And User_482 check System should display the documents successfully
+And User_482 click on the ok button document checklist
+And User_482 close the screen
+And User_482 Click on WIFAK Application Main Menu
+And User_482 Click on WIFAK Application Sub Menu
+And User_482 Click Application for financial facilities 
+And User_482 Click Maintenance screen in WIFAK Application sub menu
+And User_482 update Test data set for AT_RF_166
+And User_482 Select Application For field in Maintenace Screen under WIRAK Application
+And User_482 enter the CIF No in main info tab under WIRAK Application
+And User_482 enter the facility type in main info tab under WIRAK Application
+And User_482 enter the country of financing in main info tab under WIRAK Application
+And User_482 enter facility rating in main info tab under WIRAK Application
+And User_482 clicks on the additional details tab under WIRAK Application	
+And User_482 Enter total value under additional details tab in WIFAK Application
+And User_482 Enter offer Expiration in Additional details under WIFAK Application
+And User_482 click Limit Details tab in WIFAK Application
+And User_482 click add icon in limit details under WIFAK Application
+And User_482 select the product class in limit details under WIFAK Application
+And User_482 select the floating rate in limit details under WIFAK Application
+And User_482 enter the floating rate periodicity in limit details under WIFAK Application
+And User_482 select the floating rate periodicity type in limit details under WIFAK Application Approve screen
+And User_482 click add icon in limit details popup under WIFAK Application
+And User_482 click document details Btn under WIFAK Application
+And User_482 check System should display the documents successfully
