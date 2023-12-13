@@ -523,3 +523,12 @@ Feature: To Test the Financial facilities in FMS Application
     And user_611 clicks the Purpose of financing to retrive the value
     
     
+    
+ 
+    
+    
+  
+    
+    
+    
+    
